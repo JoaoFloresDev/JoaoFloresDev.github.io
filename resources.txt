@@ -1,0 +1,702 @@
+// Entradas ---------------------------------------------------
+final List<CardImageItem> entradas = [
+
+  CardImageItem(image:"assets/entradas/1010 - GARI.png",
+                text:"Gari",
+                price:15.90, 
+                description:"Picles de gengibre.\nPorção 100g"
+  ),
+
+  CardImageItem(image:"assets/entradas/1020 - SUNOMONO.png",
+                text:"Sunomono",
+                price:13.90, 
+                description:"Picles de pepino japonês com gergelim.\nPorção 200g"),
+
+  CardImageItem(image:"assets/entradas/1060 - TOFU.png",
+                text:"Tofu",
+                price: 13.90, 
+                description:"Queijo de soja.\nPorção 170g"),
+
+  CardImageItem(image:"assets/entradas/1030_1040 - SHIMEJI_SHITAKE.png",
+                text:"Shimeji",
+                price:19.90, 
+                description:"Cogumelo pequeno, lula e cebolinha.\nPorção 100g"),
+
+  CardImageItem(image:"assets/entradas/1030_1040 - SHIMEJI_SHITAKE.png",
+                text:"Shitake",
+                price:19.90,
+                description:"Cogumelo grande, lula e cebolinha.\nPorção 100g"),
+
+  CardImageItem(image:"assets/entradas/1070 - GUIOZA.png",
+                text:"Guioza",
+                price:23.90,
+                description:"Mini pastéis de carne, gengibre, repolho e alho.\n6 unidades",
+                optionsItem: [
+                  OptionsItem(price: 23.90,
+                              description: "Guioza Assada"),
+
+                  OptionsItem(price: 23.90,
+                              description: "Guioza Frita")
+                ]),
+
+
+  CardImageItem(image:"assets/entradas/1080 - HARUMAKI_CARNE.png",
+                text:"Harumaki Carne",
+                price:7.90, 
+                description:"Rolinho primavera de carne. \n1 unidade"),
+
+  CardImageItem(image:"assets/entradas/1090 - HARUMAKI_QUEIJO.png",
+                text:"Harumaki Queijo",
+                price:6.90, 
+                description:"Rolinho primavera de queijo.\n1 unidade"),
+
+  CardImageItem(image:"assets/entradas/1100 - KAKIAGUE.png",
+                text:"Kakiaghe",
+                price:13.90, 
+                description:"Legumes ralados e empanados.\n1 unidade"),
+
+  CardImageItem(image:"assets/entradas/1110 - TEMPURA_LEGUMES.png",
+                text:"Tempura Legumes",
+                price:29.90, 
+                description:"Cenoura, abóbora, batata-doce e couve-flor, fatiados e empanados.\n8 unidades"),
+
+  CardImageItem(image:"assets/entradas/1120 - TEMPURA_ESPECIAL.png",
+                text:"Tempura Especial",
+                price:69.90, 
+                description:"Empanados de camarões e legumes.\n2 unidades camarões e 4 unidades legumes"),
+
+  CardImageItem(image:"assets/entradas/1130 - CEVICHE.png",
+                text:"Ceviche",
+                price:29.90, 
+                description:"Salada de cebola roxa, cenoura e tomate com cubos de tilápia.\nPorção 300g"),
+
+  CardImageItem(image:"assets/entradas/1140 - CARPACCIO.png",
+                text:"Carpaccio",
+                price:26.90,
+                description:"Tilápia, mostarda, alcaparras e parmesão.\nPorção 180g")
+]; 
+
+// Sushis Hossomaki  --------------------------------------------------------------
+final List<CardImageItem> sushisHossomaki = [
+
+  CardImageItem(image:"assets/entradas/3060 - SKIN.png",
+              text:"Niguiri",
+              price:4.90,
+              description:"Bolinho de arroz com fatia do fruto do mar.\n1 unidade",
+              optionsItem: [
+                  OptionsItem(price: 4.90,
+                              description: "Camarão"),
+
+                  OptionsItem(price: 4.90,
+                              description: "Salmão"),
+
+                  OptionsItem(price: 4.90,
+                              description: "Skin"),
+
+                  OptionsItem(price: 4.90,
+                              description: "Kani-Kama"),
+              ]),
+
+CardImageItem(image:"assets/entradas/2010 - SAKKEMAKI.png",
+              text:"Sakemaki",
+              price:15.90, 
+              description:"Sushi enrolado com alga por fora. Salmão.\n8 unidades"),
+
+CardImageItem(image:"assets/entradas/2030 - KANIMAKI.png",
+              text:"Kanimaki",
+              price:15.90, 
+              description:"Sushi enrolado com alga por fora. Kani e pepino.\n8 unidades"),
+
+CardImageItem(image:"assets/entradas/2040 - KAPAMAKI.png",
+              text:"Kappamaki",
+              price:15.90, 
+              description:"Sushi enrolado com alga por fora. Pepino.\n8 unidades"),
+];
+
+// Sashimis -------------------------------
+final List<CardImageItem> sashimis = [
+  
+CardImageItem(image:"assets/entradas/5010 - SALMAO.png",
+              text:"Sashimi Salmão",
+              price:29.90,
+              description:"Delicadas fatias do peixe fresco. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\n8 unidades"),
+
+CardImageItem(image:"assets/entradas/5030 - CAMARAO.png",
+              text:"Sashimi Camarão",
+              price:15.90,
+              description:"Delicadas peças de camarões frescos. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/5040 - PREGO.png",
+              text:"Sashimi Prego",
+              price:29.90,
+              description:"Delicadas fatias do peixe fresco. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\n8 unidades"),
+
+CardImageItem(image:"assets/entradas/5050 - KANI.png",
+              text:"Sashimi Kani",
+              price:9.90,
+              description:"Delicadas fatias de kani. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\n3 unidades"),
+
+CardImageItem(image:"assets/entradas/5070 - TILAPIA.png",
+              text:"Sashimi Tilápia",
+              price:22.90,
+              description:"Delicadas fatias de tilápia fresca. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\nPorção 150g"),
+
+CardImageItem(image:"assets/entradas/5080 - TILAPIA_PICANTE.png",
+              text:"Sashimi Tilápia Picante",
+              price:22.90,
+              description:"Delicadas fatias de tilápia fresca. Os cortes são feitos na hora de seu pedido, com um toque de arte o prato recebe um arranjo.\nPorção 150g"),
+];
+
+// Sushis Uramaki ---------------------------------
+final List<CardImageItem> sushisUramaki = [
+  CardImageItem(image:"assets/entradas/2120 - CALIFORNIA.png",
+                text:"Califórnia Roll",
+                price:15.90,
+                description:"Sushi enrolado com arroz por fora. Kani, pepino e manga.\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2110 - SKIM.png",
+                text:"Skin Roll",
+                price:15.90,
+                description:"Sushi enrolado com arroz por fora. Pele de salmão grelhada, Tabasco®, cream cheese e molho tarê.\nTabasco® é marca registrada da McIlhenny Company®\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2130 - SHITAKE.png",
+              text:"Shitake Roll",
+              price:15.90,
+              description:"Sushi enrolado com arroz por fora. Shitake, pepino, cream cheese, Tabasco® e molho tarê. Tabasco® é marca registrada da McIlhenny Company\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2140 - TOMATO.png",
+                text:"Tomato Roll",
+                price:15.90,
+                description:"Sushi enrolado com arroz por fora. Tomate seco, cream cheese, pepino, Tabasco® e alho frito.\nTabasco® é marca registrada da McIlhenny Company®\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2150 - HOT_DRAGON.png",
+              text:"Hot Dragon",
+              price:15.90,
+              description:"Sushi enrolado com arroz por fora. Camarão frito, pepino, cream cheese, Tabasco® e molho tarê.\nTabasco® é marca registrada da McIlhenny Company®\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2160 - PHILADELPHIA.png",
+                text:"Philadelphia Roll",
+                price:15.90,
+                description:"Sushi enrolado com arroz por fora. Salmão, pepino, e cream cheese.\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2170 - SALMON.png",
+                text:"Salmão Roll",
+                price:15.90,
+                description:"Salmão grelhado, cream cheese e patê de alho.\n4 unidades"),
+
+  CardImageItem(image:"assets/entradas/2180 - NUTELLA.png",
+                text:"Nutella Roll",
+                price:15.90,
+                description:"Morango, creem cheese e Nutella®.\nNutella é marca registrada da Ferrero®\n4 unidades"),
+];
+
+// Sushis Especiais -----------------------------------------
+final List<CardImageItem> sushisEspeciais = [
+
+CardImageItem(image:"assets/entradas/2310 - PEPER.png",
+              text:"Peper Roll",
+              price:17.90,
+              description:"Sushi para encantar e despertar o paladar. Salmão, cream cheese e geleia de pimenta.\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/2360 - JOE.png",
+              text:"Joe",
+              price:0,
+              description:"Sushi para encantar e despertar o paladar. Envolto de salmão.\n4 unidades",
+              optionsItem: [
+                            OptionsItem(description: "Joe Geleia de pimenta",price: 29.90),
+                            OptionsItem(description: "Joe Patê de salmão",price: 29.90),
+                            OptionsItem(description: "Joe Biquinho",price: 29.90),
+                            ]
+              ),
+
+CardImageItem(image:"assets/entradas/2320 - PHILADELPHIA.png",
+              text:"Hot Philadelphia",
+              price:19.90,
+              description:"Sushi para encantar e despertar o paladar. Arroz, salmão, cream cheese, molho tarê e Tabasco®. Empanado.\nTabasco® é marca registrada da McIlhenny Company®\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/2380 - SALMAOCHILI.png",
+              text:"Salmão Chilli",
+              price:17.90,
+              description:"Sushi para encantar e despertar o paladar. Salmão, cream cheese e geleia de pimenta tailandesa.\n4 unidades"),
+
+CardImageItem(image: "assets/entradas/2340 - HOT_ROLL.png",
+              text: "Hot Roll",
+              price:29.90,
+              description: "Sushi para encantar e despertar o paladar. Salmão, kani, cream cheese, molho tarê e Tabasco®. Empanado.\nTabasco® é marca registrada da McIlhenny Company®.\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/2400 - PANKO.png",
+              text:"Panko",
+              price:19.90,
+              description:"Sushi para encantar e despertar o paladar. Arroz com salmão, cream cheese e molho tarê. Empanado.\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/2350 - FLAMBADO.png",
+              text:"Sushi Flambado",
+              price:34.90,
+              description:"Sushi para encantar e despertar o paladar. Enrolado com salmão, shitake, cream cheese, molho tarê e Tabasco®. Flambado.\nTabasco® é marca registrada da McIlhenny Company®.\n4 unidades"),
+
+CardImageItem(image:"assets/entradas/2410 - MASSARICADO.png",
+              text:"Sushi Massaricado",
+              price:29.90,
+              description:"Sushi para encantar e despertar o paladar. Sashimi salmão, cream cheese e geleia de pimenta. Massaricado.\n6 unidades"),
+];
+
+// Temakis -----------------------------------------
+final List<CardImageItem> temakis = [
+
+CardImageItem(image:"assets/entradas/4010 - SALMAO.png",
+              text:"Temaki Salmão",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nPatê de salmão, cream cheese e cebolinha.\n1 unidade"),
+
+CardImageItem(image:"assets/entradas/4030 - CAMARAO.png",
+              text:"Temaki Camarão",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nCamarão pequeno empanado, pepino, cream cheese e molho tarê.\n1 unidade"),
+
+CardImageItem(image:"assets/entradas/4050 - SKIN.png",
+              text:"Temaki Skin",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nPele de salmão grelhado com cream cheese e molho tarê"),
+
+CardImageItem(image:"assets/entradas/4060 - TOMATO.png",
+              text:"Temaki Tomato",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nTomate seco, pepino, cream cheese e alho frito.\n1 unidade"),
+
+CardImageItem(image:"assets/entradas/4070 - SHITAKE.png",
+              text:"Temaki Shitake",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nCogumelo, pepino, cream cheese, gergelim e molho tarê.\n1 unidade"),
+
+CardImageItem(image:"assets/entradas/4040 - EMPANADO.png",
+              text:"Temaki Frito",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nPatê de salmão, cream cheese e molho tarê.\n1 unidade"),
+
+CardImageItem(image:"assets/entradas/4080 - CALIFORNIA.png",
+              text:"Temaki Califórnia",
+              price:23.90,
+              description:"Sushi em formato de cone, com recheio envolto em folha de alga.\nKani, manga, pepino e gergelim.\n1 unidade"),
+];
+
+// Pratos Quentes -----------------------------------------------------
+final List<CardImageItem> pratosQuentes = [
+
+CardImageItem(image:"assets/entradas/8280 - FILE_LEGUMES.png",
+              text:"Filé Mignon com Legumes",
+              price:0,
+              description:"Filé em tiras com couve-flor, brócolis, cenoura, pimentão, repolho e cebola ao molho shogayaki.",
+              optionsItem: [
+                  OptionsItem(price: 47.90,
+                              description: "1 Pessoa"),
+
+                  OptionsItem(price: 85.90,
+                              description: "2 Pessoas"),
+              ],
+              selectableItem: [
+                SelectableItem(description: "Gohan: arroz branco japonês",price: 0),
+                SelectableItem(description: "Yakimeshi: arroz com ovo, bacon, presunto, ervilha e cenoura.",price: 0),
+                ],
+              ),
+
+CardImageItem(image:"assets/entradas/8130 - TEPPAN_SALMAO.png",
+              text:"Teppan Yaki",
+              price: 0,
+              description:"Missoshiru, repolho, cebola, cenoura, couve-flor, brócolis e bacon na manteiga com filé grelhado.\nVegetariano: sem bacon e sem filé.",
+              
+              optionsItem: [
+                  OptionsItem(price: 32.90,
+                              description: "Vegetariano • 1 Pessoa"),
+
+                  OptionsItem(price: 59.90,
+                              description: "Vegetariano • 2 Pessoas"),
+
+                  OptionsItem(price: 39.90,
+                              description: "Frango • 1 Pessoa"),
+
+                  OptionsItem(price: 71.90,
+                              description: "Frango • 2 Pessoas"),
+
+                  OptionsItem(price: 47.90,
+                              description: "Filé Mignon • 1 Pessoa"),
+
+                  OptionsItem(price: 85.90,
+                              description: "Filé Mignon • 2 Pessoas"),
+
+                  OptionsItem(price: 59.90,
+                              description: "Salmão • 1 Pessoa"),
+
+                  OptionsItem(price: 107.90,
+                              description: "Salmão • 2 Pessoas"),
+              ],
+              selectableItem: [
+                SelectableItem(description: "Gohan: arroz branco japonês",price: 0),
+                SelectableItem(description: "Yakimeshi: arroz com ovo, bacon, presunto, ervilha e cenoura.",price: 0),
+                ],
+              ),
+
+CardImageItem(image:"assets/entradas/8220 - YAKISSOBA_MISTO.png",
+              text:"Yakissoba",
+              price:0, 
+              description:"Macarrão com repolho, cenoura, cebola, brócolis e couve-flor ao molho.\n\nMisto: Filé mignon e frango.\nEspecial: camarão, frango e filé mignon.",
+              optionsItem: [
+                  OptionsItem(price: 23.90,
+                              description: "Vegetariano • 1 Pessoa"),
+
+                  OptionsItem(price: 42.90,
+                              description: "Vegetariano • 2 Pessoas"),
+
+                  OptionsItem(price: 26.90,
+                              description: "Frango • 1 Pessoa"),
+
+                  OptionsItem(price: 47.90,
+                              description: "Frango • 2 Pessoas"),
+
+                  OptionsItem(price: 29.90,
+                              description: "Misto • 1 Pessoa"),
+                  
+                  OptionsItem(price: 53.90,
+                              description: "Misto • 2 Pessoas"),
+
+                  OptionsItem(price: 31.90,
+                              description: "Filé Mignon • 1 Pessoa"),
+
+                  OptionsItem(price: 56.90,
+                              description: "Filé Mignon • 2 Pessoas"),
+
+                  OptionsItem(price: 41.90,
+                              description: "Especial • 1 Pessoa"),
+
+                  OptionsItem(price: 74.90,
+                              description: "Especial • 2 Pessoas"),
+
+                  OptionsItem(price: 59.90,
+                              description: "Frutos do mar • 1 Pessoa"),
+
+                  OptionsItem(price: 107.90,
+                              description: "Frutos do mar • 2 Pessoas"),
+              ],
+              selectableItem: [
+                SelectableItem(price: 0, description: "Molho Tariyake (tradicional)"),
+                SelectableItem(price: 0, description: "Molho Shogayaki")
+              ],
+
+              ),
+
+CardImageItem(image:"assets/entradas/8180 - FRANGO_XADREZ.png",
+              text:"Frango Xadrez",
+              price: 0,
+              description:"Frango com repolho, cenoura, cebola, brócolis, couve-flor e amendoim ao molho teriyake.",
+              optionsItem: [
+                  OptionsItem(price: 29.90,
+                              description: "1 Pessoa"),
+
+                  OptionsItem(price: 53.90,
+                              description: "2 Pessoas"),
+              ],
+              selectableItem: [
+                SelectableItem(price: 0, description: "Gohan: arroz branco japonês"),
+                SelectableItem(price: 0, description: "Yakimeshi: arroz com ovo, bacon, presunto, ervilha e cenoura.")
+              ],
+              ),
+
+CardImageItem(image:"assets/entradas/8050 - TEISHOKU_SALMAO.png",
+              text:"Teishoku",
+              price: 0,
+              description:"Entradas Sunomono, Kakiague e Missoshiru, 2 Niguiri Zushi e 5 Sashimi Salmão. Prato quente de Salmão, Yakiniku de filé mignon ou Shimeji.\n\nServe 1 pessoa.",
+              optionsItem: [
+                  OptionsItem(price: 59.90,
+                              description: "Salmão"),
+                  
+                  OptionsItem(price: 49.90,
+                              description: "Yakiniku"),
+
+                  OptionsItem(price: 44.90,
+                              description: "Shimeji"),
+              ],
+              selectableItem: [
+                SelectableItem(price: 0, description: "Gohan: arroz branco japonês"),
+                SelectableItem(price: 0, description: "yakimeshi: arroz com ovo, bacon, presunto, ervilha e cenoura")
+              ],
+              ),
+
+CardImageItem(image:"assets/entradas/8300 - RISOTO.png",
+              text:"Risoto Especial",
+              price:71.90,
+              description:"Risoto com camarão pequeno, lula, mexilhão e cogumelo ao molho rose.\n\nServe 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/8320_8360 - PEIXE_TELHA.png",
+              text:"Peixe na Telha",
+              price: 0,
+              description:"Filé de peixe ao molho rose.\nAcompanha arroz, fritas e salada.\n\nServe até 3 pessoas",
+              optionsItem: [
+                  OptionsItem(price: 94.90,
+                              description: "Tilápia"),
+                  
+                  OptionsItem(price: 129.90,
+                              description: "Salmão"),
+              ]
+              ),
+
+CardImageItem(image:"assets/entradas/8010 - MISSOSHIRU.png",
+              text:"Missoshiru",
+              price:6.90,
+              description:"Sopa de soja com Tofu e cebolinha.\n\nPorção 1 pessoa."),
+
+CardImageItem(image:"assets/entradas/8020 - GOHAN.png",
+              text:"Gohan",
+              price:7.90,
+              description:"Arroz branco japonês.\n\nPorção 1 pessoa."),
+
+CardImageItem(image:"assets/entradas/8030 - YAKIMESHI.png",
+              text:"Yakimeshi",
+              price:9.90,
+              description:"Arroz com ovo, bacon, presunto, ervilha e cenoura.\n\nPorção 1 pessoa."),
+];
+
+// Porções ***************************************************************
+final List<CardImageItem> porcoes = [
+CardImageItem(image:"assets/entradas/7010 - CAMARAO_7_BARBAS.png",
+              text:"Porção Camarão 7 Barbas",
+              price:59.90,
+              description:"Porção de camarões 7 barbas.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/7020 - CAMARAO_ROSA.png",
+              text:"Porção Camarão Rosa",
+              price:139.90,
+              description:"Porção de camarões rosa grandes.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas, contém 6 unidades."),
+
+CardImageItem(image:"assets/entradas/7050 - SALMAO.png",
+              text:"Porção Isca de Salmão",
+              price:99.90,
+              description:"Porção de iscas de salmão.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/7060 - ISCA_TILAPIA.png",
+              text:"Porção Isca de Tilápia",
+              price:59.90,
+              description:"Porção de iscas de tilápia.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/7030 - ANEIS_LULA.png",
+              text:"Porção Anéis de Lula Empanados",
+              price:0,
+              description:"Porção de anéis de lula empanados ou no azeite ao alho.\nAcompanhamento: arroz, fritas e salada.",
+              optionsItem: [
+                  OptionsItem(price: 69.90,
+                              description: "Anéis de Lula epanados"),
+                  
+                  OptionsItem(price: 69.90,
+                              description: "Anéis de Lula ao azeite"),
+              ]
+              ),
+
+CardImageItem(image:"assets/entradas/7070 - ISCA_FILE.png",
+              text:"Porção Filé Mignon",
+              price:59.90,
+              description:"Porção de filé mignon ao alho e óleo.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/7080 - ISCA_FRANGO.png",
+              text:"Porção de Frango",
+              price:41.90,
+              description:"Porção de frango ao alho e óleo.\nAcompanhamento: arroz, fritas e salada.\n\nPorção serve até 2 pessoas."),
+
+CardImageItem(image:"assets/entradas/7100 - BATATA.png",
+              text:"Porção Batata Palito",
+              price:15.90,
+              description:"Porção de batata palito.\n\nPorção 400g."),
+];
+
+final List<GourmetRestaurants> listPromotions = [];
+
+final List<CardImageItem> combo = [
+  CardImageItem(image:"assets/entradas/6020 - COMBINADO_SIMPLES.png",
+                text:"Combinado Simples",
+                price:63.90,
+                description:"Simples para 1 Pessoa (22 un),\n2 un Philadelphia Roll\n2 un Califórnia Roll\n4 un Sakemaki\n4 un Kanimaki\n2 un Niguiri Zushi\n8 un Sashimi Salmão\n\nSimples para 2 Pessoas (44 un),\n4 un Philadelphia Roll\n4 un Califórnia Roll\n8 un Sakemaki\n8 un Kanimaki\n4 un Niguiri Zushi\n16 un Sashimi Salmão",
+                optionsItem: [
+                      OptionsItem(price: 63.90,
+                                  description: "1 Pessoa"),
+                      
+                      OptionsItem(price: 114.90,
+                                  description: "2 Pessoas"),
+                  ]
+                ),
+
+  CardImageItem(image:"assets/entradas/6030 - COMBINADO_ESPECIAL.png",
+                text:"Combinado Especial",
+                price:71.90,
+                description:"Especial para 1 Pessoa (23 un),\n1 un Temaki Salmão pequeno\n8 un Sashimi Salmão\n2 un Niguiri Zushi\n4 un Sakemaki\n4 un Kanimaki\n2 un Hot Roll\n2 un Joe\n\nEspecial para 2 Pessoas (46 un),\n2 un Temaki Salmão pequeno\n16 un Sashimi Salmão\n4 un Niguiri Zushi\n8 un Sakemaki\n8 un Kanimaki\n4 un Hot Roll\n4 un Joe",
+                optionsItem: [
+                      OptionsItem(price: 71.90,
+                                  description: "1 Pessoa"),
+                      
+                      OptionsItem(price: 129.90,
+                                  description: "2 Pessoas"),
+                  ]
+                ),
+
+  CardImageItem(image:"assets/entradas/6010 - EXECUTIVO_SALMAO.png",
+                text:"Combinado Executivo Salmão",
+                price: 0,
+                description:"Executivo para 1 Pessoa (20 un),\n4 un Niguiri Zushi\n8 un Sakemaki\n8 un Sashimi\n\nExecutivo para 2 Pessoas (40 un),\n8 un Niguiri Zushi\n16 un Sakemaki\n16 un Sashimi",
+                optionsItem: [
+                      OptionsItem(price: 63.90,
+                                  description: "1 Pessoa"),
+                      
+                      OptionsItem(price: 114.90,
+                                  description: "2 Pessoas"),
+                  ]
+                ),
+
+  CardImageItem(image:"assets/entradas/6040 - SETTO.png",
+                text:"Combinado Sushi Setto",
+                price: 0,
+                description:"Setto para 1 Pessoa (17 un),\n5 un Sashimi Salmão\n2 un Philadelphia Roll\n2 un Califórnia Roll\n4 un Kanimaki\n4 un Sakemaki\nYakissoba Misto Mini\n\nSetto para 2 Pessoas (34 un),\n10 un Sashimi Salmão\n4 un Philadelphia Roll\n4 un Califórnia Roll\n8 un Kanimaki\n8 un Sakemaki\nYakissoba Misto 1 Pessoa",
+                optionsItem: [
+                      OptionsItem(price: 39.90,
+                                  description: "1 Pessoa"),
+                      
+                      OptionsItem(price: 71.90,
+                                  description: "2 Pessoas"),
+                  ]
+                ),
+
+  CardImageItem(image:"assets/entradas/6050 - MIX_ESPECIAL.png",
+                text:"Combinado Mix Especial",
+                price: 0,
+                description:"Mix para 1 Pessoa (17 un),\n4 un Joe\n4 un Hot Dragon\n4 un Hot Roll\n5 un Sashimi Salmão\n\nMix para 2 Pessoas (34 un),\n8 un Joe\n8 un Hot Dragon\n8 un Hot Roll\n10 un Sashimi Salmão",
+                optionsItem: [
+                      OptionsItem(price: 71.90,
+                                  description: "1 Pessoa"),
+                      
+                      OptionsItem(price: 129.90,
+                                  description: "2 Pessoas"),
+                  ]
+                ),
+];
+
+final List<CardImageItem> promotions = [
+CardImageItem(image: "assets/entradas/RODIZIO_CLASSICO.PNG",
+              text: "Rodízio Clássico",
+              price:0,
+              description:
+              "Rodízio Clássico para 1 Pessoa\n\n4 un Sashimi Salmão\n1 un Niguiri Salmão\n1 un Niguiri Skin\n2 un Sakemaki\n2 un kanimaki\n2 un Philadelphia Roll\n2 un Skin Roll\n2 un Panko\n2 un Hot Roll\n150g Yakissoba Frango\n60g Shimeji\n1 un Rolinho (queijo)\n1 un Guioza Frito\n3 un Tilápia Empanada\n\nDelivery Clássico para 2 Pessoas\n\n8 un Sashimi Salmão\n2 un Niguiri Salmão\n2 un Niguiri Skin\n4 un Sakemaki\n4 un kanimaki\n4 un Philadelphia Roll\n4 un Skin Roll\n4 un Panko\n4 un Hot Roll\n300g Yakissoba Frango\n120g Shimeji\n2 un Rolinho (queijo)\n2 un Guioza Frito\n6 un Tilápia Empanada\n\nObservações:\nFoto ilustrativa para 2 pessoas\nNão há troca nos itens",
+              optionsItem: [
+                  OptionsItem(price: 59.90,
+                              description: "1 Pessoa"),
+                  
+                  OptionsItem(price: 99.90,
+                              description: "2 Pessoas"),
+              ]
+              ),
+
+CardImageItem(image: "assets/entradas/RODIZIO_PREMIUM.PNG",
+              text:"Rodízio Premium",
+              price:0,
+              description: "Rodízio Premium para 1 Pessoa\n\n4 un Sashimi Salmão\n1 un Niguiri Salmão\n1 un Niguiri Skin\n1 un Niguiri Camarão\n2 un Sakemaki\n2 un kanimaki\n2 un Philadelphia Roll\n1 un Chilli\n1 un Temaki Salmão\n1 un Joe\n2 un Skin Roll\n2 un Panko\n2 un Hot Roll\n150g Yakissoba Frango\n60g Shimeji\n1 un Rolinho (queijo)\n1 un Guioza Frito\n3 un Tilápia Empanada\n\nDelivery Premium para 2 Pessoas\n\n8 un Sashimi Salmão\n2 un Niguiri Salmão\n2 un Niguiri Skin\n2 un Niguiri Camarão\n4 un Sakemaki\n4 un kanimaki\n4 un Philadélphia Roll\n2 un Chilli\n2 un Temaki Salmão\n2 un Joe\n4 un Skin Roll\n4 un Panko\n4 un Hot Roll\n300g Yakissoba Frango\n120g Shimeji\n2 un Rolinho (queijo)\n2 un Guioza Frito\n6 un Tilápia Empanada\nObservações:\nFoto ilustrativa para 2 pessoas\nNão há troca nos itens",
+              optionsItem: [
+                  OptionsItem(price: 79.90,
+                              description: "1 Pessoa"),
+                  
+                  OptionsItem(price: 149.90,
+                              description: "2 Pessoas"),
+              ]
+              ),
+];
+
+final List<CardImageItem> drinks = [
+  CardImageItem(image: 'assets/entradas/suco.jpg', 
+                text: 'Sucos Naturais', 
+                price: 0, 
+                description: 'Sucos naturais diversos sabores, selecione sua preferência',
+                optionsItem: [
+                  OptionsItem(price: 7.90,
+                              description: "Abacaxi com Água • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Abacaxi com Hortelã • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Abacaxi com Soda • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Acerola com Água • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Acerola com Laranja • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Laranja • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Maracujá com Água • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Maracujá com Leite • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Melão com Água • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Melão com Leite • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Morango com Água • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Morango com Leite • 400ml"),
+                  
+                  OptionsItem(price: 7.90,
+                              description: "Morango com Laranja • 400ml"),
+                  
+                  OptionsItem(price: 6.90,
+                              description: "Del Valle Uva • 290ml"),
+                ],
+                ),
+
+  CardImageItem(image: 'assets/entradas/refrigerante.jpg', 
+                text: 'Refrigerantes', 
+                price: 0,
+                description: 'Selecione sua preferência',
+                optionsItem: [
+                    OptionsItem(price: 4.90,
+                                description: "Coca-Cola • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Coca-Cola Zero • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Guaraná Antarctica • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Guaraná Antarctica Zero • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Fanta Laranja • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Tônica • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Soda • 350ml"),
+                    
+                    OptionsItem(price: 4.90,
+                                description: "Schweppes Citrus • 350ml"),
+                    
+                    OptionsItem(price: 6.90,
+                                description: "Coca-Cola  • 600ml"),
+                    
+                    OptionsItem(price: 6.90,
+                                description: "H2OH! • 500ml"),
+                ],
+                ),
+                
+    CardImageItem(image: 'assets/entradas/agua.jpg', 
+                text: 'Água', 
+                price: 0, 
+                description: 'Selecione sua preferência',
+                optionsItem: [
+                  OptionsItem(price: 3.90, description: "Água sem gás • 500ml"),
+                  OptionsItem(price: 4.90, description: "Água com gás • 500ml")
+                  ],
+                ),
+];
