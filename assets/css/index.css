@@ -114,14 +114,24 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    background-color: #5b19b7;
+    background-color: #8b0000;
     right: 0;
     bottom: 0;
     z-index: 20;
 }
 
+
+/* -------------- */
+
+.bg-danger2 {
+    background-color: #8b0000;
+}
+
+
+/* -------------- */
+
 .fab button.main:before {
-    content: '⏚';
+    content: 'Cart';
 }
 
 .fab ul {
@@ -170,13 +180,13 @@ body {
 .fab button.main:active,
 .fab button.main:focus {
     outline: none;
-    background-color: #7716ff;
+    background-color: #8b0000;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .5);
 }
 
 .fab button.main:active:before,
 .fab button.main:focus:before {
-    content: '⏚';
+    content: 'Cart';
 }
 
 .fab button.main:active+ul,
