@@ -131,7 +131,7 @@ body {
 /* -------------- */
 
 .fab button.main:before {
-    content: 'Cart';
+    content: '';
 }
 
 .fab ul {
@@ -186,7 +186,7 @@ body {
 
 .fab button.main:active:before,
 .fab button.main:focus:before {
-    content: 'Cart';
+    content: '';
 }
 
 .fab button.main:active+ul,
