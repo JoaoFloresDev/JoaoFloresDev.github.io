@@ -457,3 +457,58 @@
     margin-bottom: 0px;
     background-size: 100%
 }
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("http://www.ghadaalsamman.com/new/images/bg.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    margin: 0;
+}
+
+.marquee {
+    display: block;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+}
+
+#btn1 {
+    background-image: url("http://www.ghadaalsamman.com/new/images/enter.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    bottom: 10px;
+    display: block;
+    height: 53px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+}
+
+.button {
+    padding: 5px;
+}
+
+.container {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+}
+
+.main {
+    height: 100%;
+    padding: 0 20px;
+}
+
+@media screen and (max-width:500px) {
+    #btn1 {
+        background-size: 100% auto;
+    }
+}
