@@ -447,3 +447,8 @@
 #profile-grid .img-rounded {
     border-radius: 4px 4px 0 0;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
