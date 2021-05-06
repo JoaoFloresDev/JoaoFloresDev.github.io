@@ -1,238 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Kenji Sushi Bar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
-    <link href="assets/css/bootstrapTheme.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-    <!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
 
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/kenjiIcon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/kenjiIcon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/kenjiIcon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/kenjiIcon.png">
-    <link rel="shortcut icon" href="assets/ico/kenjiIcon.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="appcliente">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>appcliente</title>
+  <link rel="manifest" href="manifest.json">
 </head>
-
 <body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
 
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger2">
-        <div class="container">
-            <a class="navbar-brand" href="#">Kenji Sushi Bar</a>
-        </div>
-    </nav>
-    <br><br><br>
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing ?? reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
 
-    <h6>
-        <!-- <small> -->
-        <p class="text-secondary text-center">Delivery apenas para área urbana de Lençóis Paulista</p>
-        <!-- </small> -->
-    </h6>
-    <h5>
-        <!-- <small> -->
-        <p class="text-success text-center">Restaurante aberto</p>
-        <!-- </small> -->
-    </h5>
-
-    <div id="demo">
-        <div id="owl-demo1" class="owl-one owl-carousel">
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail1()"><img src="assets/teste2.png" class="rounded"></div>
-        </div>
-    </div>
-
-    <br>
-
-    <div id="demo">
-        <div id="owl-demo2" class="owl-two owl-carousel">
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail2()"><img src="assets/teste.png" class="rounded"></div>
-        </div>
-    </div>
-
-    <br>
-
-    <div id="demo">
-        <div id="owl-demo3" class="owl-two owl-carousel">
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-            <div class="item " onclick=" relocate_detail3()"><img src="assets/teste3.png" class="rounded"></div>
-        </div>
-    </div>
-    <br>
-    <div class="text-center">
-        <div class="item rounded mx-auto d-block img-fluid " alt="Responsive image" onclick=" relocate_detail3()"><img src="assets/img/RODIZIO_CLASSICO.PNG" class="rounded"></div>
-    </div>
-    <br>
-    <div class="text-center">
-        <div class="item rounded mx-auto d-block img-fluid " alt="Responsive image" onclick=" relocate_detail3()"><img src="assets/img/RODIZIO_CLASSICO.PNG" class="rounded"></div>
-    </div>
-
-    <br>
-    <br>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="assets/js/index.js"></script>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
-    <div class="fab fas img123">
-        <button class="main" onclick=" relocate_cart()">
-            <img src="assets/shopping-cart.png" class="img123">
-  			</button>
-    </div>
-
-    <script src="assets/js/jquery-1.9.1.min.js"></script>
-    <script src="owl-carousel/owl.carousel.js"></script>
-
-    <style>
-        #owl-demo1 .item {
-            background: #42bdc2;
-            padding: 0px 0px;
-            margin: 5px;
-            color: #FFF;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        #owl-demo2 .item {
-            background: #42bdc2;
-            padding: 0px 0px;
-            margin: 5px;
-            color: #FFF;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            text-align: center;
-        }
-        
-        #owl-demo3 .item {
-            background: #42bdc2;
-            padding: 0px 0px;
-            margin: 5px;
-            color: #FFF;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            text-align: center;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function() {
-
-            var owl = $("#owl-demo1");
-            var owl2 = $("#owl-demo2");
-            var owl3 = $("#owl-demo3");
-
-            owl.owlCarousel({
-
-                itemsCustom: [
-                    [0, 2],
-                    [450, 4],
-                    [600, 7],
-                    [700, 9],
-                    [1000, 10],
-                    [1200, 12],
-                    [1400, 13],
-                    [1600, 15]
-                ],
-                navigation: true
-
-            });
-
-            owl2.owlCarousel({
-
-                itemsCustom: [
-                    [0, 2],
-                    [450, 4],
-                    [600, 7],
-                    [700, 9],
-                    [1000, 10],
-                    [1200, 12],
-                    [1400, 13],
-                    [1600, 15]
-                ],
-                navigation: true
-
-            });
-
-            owl3.owlCarousel({
-
-                itemsCustom: [
-                    [0, 2],
-                    [450, 4],
-                    [600, 7],
-                    [700, 9],
-                    [1000, 10],
-                    [1200, 12],
-                    [1400, 13],
-                    [1600, 15]
-                ],
-                navigation: true
-
-            });
-        });
-    </script>
-
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="assets/js/application.js"></script>
-
-
-    <script>
-        function relocate_cart() {
-            location.href = "Cart.html";
-        }
-
-        function relocate_detail1() {
-            location.href = "ProductDetails1.html";
-        }
-
-        function relocate_detail2() {
-            location.href = "ProductDetails1.html";
-        }
-
-        function relocate_detail3() {
-            location.href = "ProductDetails1.html";
-        }
-    </script>
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
 </body>
-
 </html>
