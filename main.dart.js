@@ -66935,7 +66935,7 @@ case 2:return P.W(null,r)}})
 return P.X($async$aF,r)},
 I:function(a,b){var s=this,r=null,q=B.p3(r,L.e7(C.es,r,r),24,new B.abs(b),r),p=L.az(s.a.d,2,r,r,A.aF(r,r,r,r,r,r,r,r,r,r,r,14,r,C.a8,r,r,!0,r,r,r,r,r,r,r,r),r,r),o=C.d.aI(s.e,2),n=t.a
 p=E.Cw(H.b([T.It(T.iO(C.ai,M.h5(C.u,!0,r,R.mt(!1,!0,T.e3(H.b([L.az("R$ "+H.dR(o,".",","),r,r,r,A.aF(r,r,C.j,r,r,r,r,r,r,r,r,12,r,C.a8,r,r,!0,r,r,r,r,r,r,r,r),r,r)],n),C.aj,C.bc,C.a1),r,!0,r,r,r,r,r,r,r,r,r,r,r,C.a3,r),C.r,C.a3,0,r,r,r,r,C.b0)),new P.K(60,60)),T.aE(r,r,10)],n),!1,!0,5,q,p)
-q=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(s.a.c,r,r,C.cX,r,150)),r,r,r,r,new V.T(35,8,35,0),r,r)],n),C.av,r,r)
+q=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(s.a.c,r,r,C.cX,250,r)),r,r,r,r,new V.T(35,8,35,0),r,r)],n),C.av,r,r)
 o=C.d.aI(s.e,2)
 return M.I4(p,r,new T.aQ(new V.T(10,0,10,0),B.mD(H.b([q,T.hm(C.aU,H.b([new T.ce(C.Y,r,r,K.eG(C.W,H.b([L.az("R$ "+H.dR(o,".",","),r,r,r,A.aF(r,r,C.k,r,r,r,r,r,r,r,r,20,r,C.aA,r,r,!0,r,r,r,r,r,r,r,r),r,r),Z.dW(C.u,!1,r,C.r,C.aG,0,2,!1,r,r,4,r,r,8,r,4,r,r,r,r,new B.abt(),C.L,C.f6,r,r,C.ax)],n)),r),new T.ce(C.Y,r,r,K.eG(C.aP,H.b([T.aE(Z.dW(C.u,!1,new T.aQ(new V.T(5,5,5,5),L.e7(C.et,C.bu.h(0,700),21),r),C.r,C.aG,0,4,!0,C.j,r,4,r,r,8,r,4,r,r,r,r,new B.abu(s),C.L,new X.cf(C.q),r,r,C.ax),r,30),L.az(C.f.j(s.d),r,r,r,A.aF(r,r,C.k,r,r,r,r,r,r,r,r,20,r,C.a8,r,r,!0,r,r,r,r,r,r,r,r),r,r),T.aE(Z.dW(C.u,!1,new T.aQ(new V.T(5,5,5,5),L.e7(C.er,C.bu.h(0,700),21),r),C.r,C.aG,0,4,!0,C.j,r,4,r,r,8,r,4,r,r,r,r,new B.abv(s),C.L,new X.cf(C.q),r,r,C.ax),r,30)],n)),r)],n),C.av,r,r),T.aE(r,5,r),M.aP(r,L.az("Descri\xe7\xe3o",2,r,r,A.aF(r,r,r,r,r,r,r,r,r,r,r,18,r,C.aI,r,r,!0,r,r,r,r,r,r,r,r),r,r),r,r,r,r,new V.T(10,0,0,0),r,r),T.aE(r,10,r),M.aP(r,L.az(s.a.f,r,r,r,A.aF(r,r,r,r,r,r,r,r,r,r,r,18,r,C.z,r,r,!0,r,r,r,r,r,r,r,r),r,r),r,r,r,r,new V.T(10,0,0,0),r,r),T.aE(r,20,r)],n),r,r,C.n,!1),r),M.aP(r,D.ahh(new T.ce(C.e6,r,r,K.eG(C.bc,H.b([L.az("Adicionar ao carrinho",r,r,r,A.aF(r,r,C.j,r,r,r,r,r,r,r,r,20,r,C.aI,r,r,!0,r,r,r,r,r,r,r,r),r,r)],n)),r),K.aj(b).x,s.gKB(s)),r,r,r,50,r,r,r),r,r)}}
 B.abx.prototype={
@@ -67014,7 +67014,7 @@ aN:function(){this.bk()
 this.x=this.a.r},
 I:function(a,b){var s,r,q,p=this,o=null,n=B.p3(o,L.e7(C.es,o,o),24,new V.ab5(b),o),m=L.az(p.a.d,2,o,o,A.aF(o,o,o,o,o,o,o,o,o,o,o,14,o,C.a8,o,o,!0,o,o,o,o,o,o,o,o),o,o),l=C.d.aI(p.e,2),k=t.a
 m=E.Cw(H.b([T.It(T.iO(C.ai,M.h5(C.u,!0,o,R.mt(!1,!0,T.e3(H.b([L.az("R$ "+H.dR(l,".",","),o,o,o,A.aF(o,o,C.j,o,o,o,o,o,o,o,o,12,o,C.a8,o,o,!0,o,o,o,o,o,o,o,o),o,o)],k),C.aj,C.bc,C.a1),o,!0,o,o,o,o,o,o,o,o,o,o,o,C.a3,o),C.r,C.a3,0,o,o,o,o,C.b0)),new P.K(60,60)),T.aE(o,o,10)],k),!1,!0,5,n,m)
-n=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(p.a.c,o,o,C.cX,o,150)),o,o,o,o,new V.T(35,8,35,0),o,o)],k),C.av,o,o)
+n=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(p.a.c,o,o,C.cX,250,o)),o,o,o,o,new V.T(35,8,35,0),o,o)],k),C.av,o,o)
 l=C.d.aI(p.e,2)
 l=T.hm(C.aU,H.b([new T.ce(C.Y,o,o,K.eG(C.W,H.b([L.az("R$ "+H.dR(l,".",","),o,o,o,A.aF(o,o,C.k,o,o,o,o,o,o,o,o,20,o,C.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o),Z.dW(C.u,!1,o,C.r,C.aG,0,2,!1,o,o,4,o,o,8,o,4,o,o,o,o,new V.ab6(),C.L,C.f6,o,o,C.ax)],k)),o)],k),C.av,o,o)
 s=T.aE(o,5,o)
@@ -67114,7 +67114,7 @@ r.y=s
 s[0].c=!0},
 I:function(a,b){var s,r,q,p,o,n=this,m=null,l=B.p3(m,L.e7(C.es,m,m),24,new N.abi(b),m),k=L.az(n.a.d,2,m,m,A.aF(m,m,m,m,m,m,m,m,m,m,m,14,m,C.a8,m,m,!0,m,m,m,m,m,m,m,m),m,m),j=C.d.aI(n.e,2),i=t.a
 k=E.Cw(H.b([T.It(T.iO(C.ai,M.h5(C.u,!0,m,R.mt(!1,!0,T.e3(H.b([L.az("R$ "+H.dR(j,".",","),m,m,m,A.aF(m,m,C.j,m,m,m,m,m,m,m,m,12,m,C.a8,m,m,!0,m,m,m,m,m,m,m,m),m,m)],i),C.aj,C.bc,C.a1),m,!0,m,m,m,m,m,m,m,m,m,m,m,C.a3,m),C.r,C.a3,0,m,m,m,m,C.b0)),new P.K(60,60)),T.aE(m,m,10)],i),!1,!0,5,l,k)
-l=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(n.a.c,m,m,C.cX,m,150)),m,m,m,m,new V.T(35,8,35,0),m,m)],i),C.av,m,m)
+l=T.hm(C.aU,H.b([M.aP(C.Y,T.iO(K.eE(20),U.vn(n.a.c,m,m,C.cX,250,m)),m,m,m,m,new V.T(35,8,35,0),m,m)],i),C.av,m,m)
 j=C.d.aI(n.e,2)
 j=T.hm(C.aU,H.b([new T.ce(C.Y,m,m,K.eG(C.W,H.b([L.az("R$ "+H.dR(j,".",","),m,m,m,A.aF(m,m,C.k,m,m,m,m,m,m,m,m,20,m,C.aA,m,m,!0,m,m,m,m,m,m,m,m),m,m),Z.dW(C.u,!1,m,C.r,C.aG,0,2,!1,m,m,4,m,m,8,m,4,m,m,m,m,new N.abj(),C.L,C.f6,m,m,C.ax)],i)),m)],i),C.av,m,m)
 s=T.aE(m,5,m)
