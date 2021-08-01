@@ -79,7 +79,7 @@
                             <i class="fa-paw"></i>
                         </div>
                         <div class="service-list-col2">
-                            <h3>branding &amp; identity</h3>
+                            <h3>iOS &amp; identity</h3>
                             <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
                         </div>
                     </div>
@@ -176,10 +176,9 @@
             <div class="portfolioFilter">
                 <ul class="Portfolio-nav wow fadeIn delay-02s">
                     <li><a href="#" data-filter="*" class="current">All</a></li>
-                    <li><a href="#" data-filter=".branding">Branding</a></li>
-                    <li><a href="#" data-filter=".webdesign">Web design</a></li>
-                    <li><a href="#" data-filter=".printdesign">Print design</a></li>
-                    <li><a href="#" data-filter=".photography">Photography</a></li>
+                    <li><a href="#" data-filter=".iOS">iOS</a></li>
+                    <li><a href="#" data-filter=".webdesign">Android</a></li>
+                    <li><a href="#" data-filter=".printdesign">web</a></li>
                 </ul>
             </div>
 
@@ -188,32 +187,17 @@
             <div class=" Portfolio-box printdesign">
                 <a href="#"><img src="img/Portfolio-pic1.jpg" alt=""></a>
                 <h3>Foto Album</h3>
-                <p>Print Design</p>
+                <p>web</p>
             </div>
             <div class="Portfolio-box webdesign">
                 <a href="#"><img src="img/Portfolio-pic2.jpg" alt=""></a>
                 <h3>Luca Theme</h3>
-                <p>Web Design</p>
+                <p>Android</p>
             </div>
-            <div class=" Portfolio-box branding">
+            <div class=" Portfolio-box iOS">
                 <a href="#"><img src="img/Portfolio-pic3.jpg" alt=""></a>
                 <h3>Uni Sans</h3>
-                <p>Branding</p>
-            </div>
-            <div class=" Portfolio-box photography">
-                <a href="#"><img src="img/Portfolio-pic4.jpg" alt=""></a>
-                <h3>Vinyl Record</h3>
-                <p>Photography</p>
-            </div>
-            <div class=" Portfolio-box branding">
-                <a href="#"><img src="img/Portfolio-pic5.jpg" alt=""></a>
-                <h3>Hipster</h3>
-                <p>Branding</p>
-            </div>
-            <div class=" Portfolio-box photography">
-                <a href="#"><img src="img/Portfolio-pic6.jpg" alt=""></a>
-                <h3>Windmills</h3>
-                <p>Photography</p>
+                <p>iOS</p>
             </div>
         </div>
     </section>
@@ -342,12 +326,6 @@
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top - 102
                 }, 1500, 'easeInOutExpo');
-                /*
-                if you don't want to use the easing effects:
-                $('html, body').stop().animate({
-                	scrollTop: $($anchor.attr('href')).offset().top
-                }, 1000);
-                */
                 if ($(window).width() < 768) {
                     $('.main-nav').hide();
                 }
