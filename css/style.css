@@ -415,10 +415,10 @@ p {
 .Portfolio-box {
     text-align: center;
     margin-bottom: 30px;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     overflow: hidden;
-    float: left;
+    float: center;
     padding: 0;
 }
 
