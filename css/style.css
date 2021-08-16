@@ -415,7 +415,7 @@ p {
 .Portfolio-box {
     text-align: center;
     margin-bottom: 30px;
-    height: 300px;
+    height: 350px;
     width: 300px;
     overflow: hidden;
     float: center;
@@ -540,8 +540,8 @@ img {
 }
 
 .c-logo-part {
-    background: #7cc576;
-    padding: 25px 0;
+    background: #bdbdbd;
+    padding: 5px 0;
     filter: alpha(opacity=60);
 }
 
