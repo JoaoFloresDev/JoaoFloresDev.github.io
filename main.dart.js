@@ -64928,7 +64928,7 @@ return new V.kX(s.c,s.d,s.f,s.r,null)},
 $S:139}
 Y.ER.prototype={
 G:function(a,b){var s=C.j4.h(0,900)
-return new S.vC(new Y.uH(null),"Kenji Sushi Bar2",X.ald(C.dZ.h(0,700),null,s),!1,null)}}
+return new S.vC(new Y.uH(null),"Kenji Sushi Bar",X.ald(C.dZ.h(0,700),null,s),!1,null)}}
 Y.uH.prototype={
 an:function(){var s=new Y.L5(H.b([],t.vN),H.b([],t.e),C.l)
 s.f=$.ahw()
