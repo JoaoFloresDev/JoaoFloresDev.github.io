@@ -3,19 +3,19 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "322dfa94430cc69aa45ce83495f46466",
+  "version.json": "21b60d415374031526ebe304809a0f7a",
 "splash/teste.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "splash/img/teste.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "splash/favicon.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "splash/style.css": "aa856a66153fa64eb260bc3bde1f88c2",
-"index.html": "49acb826983c98b09f7d2a73066b8917",
-"/": "7760a44cfc7b0dc7857d0a6899ba1f1a",
-"main.dart.js": "68793772dfc695c6f28c1260282199fd",
-"web/index.html": "7760a44cfc7b0dc7857d0a6899ba1f1a",
+"index.html": "0acd1a06a4eaefe656b0a2404aaec25e",
+"/": "294172116aabe772f48f8a56c6761af7",
+"main.dart.js": "30a056805426586fbdc94786f322e959",
+"web/index.html": "294172116aabe772f48f8a56c6761af7",
 "web/icons/Icon-192.png": "170d89a50bcdc41aeb24e45a23a5378b",
 "web/icons/Icon-512.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "web/manifest.json": "0f86af74cd342d8ff8561668da747ec9",
-"pubspec.lock": "4ace21db7ee0cc599a9eb3187193869c",
+"pubspec.lock": "4249db4f2e39b387e382fdbe00a1f9f7",
 "README.md": "4b903d7ce00e79d5f9748941d475b443",
 "favicon.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "pubspec.yaml": "66a153d59787a89979a24e0477c136f0",
@@ -25,13 +25,13 @@ const RESOURCES = {
 "icons/Icon-512.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
 "manifest.json": "39c1686d37b5ec719b32f20c17dd9d57",
 "lib/main.dart": "486d758024205cbd505432a1107cff0b",
-".dart_tool/package_config.json": "5e032d90516cea04f574285560109de0",
-".dart_tool/package_config_subset": "6f389c0e258f18fd5135f72c88b9a9d7",
-".dart_tool/version": "fe036b55ded21d38e2b6cc58ff9930a1",
+".dart_tool/package_config.json": "647ef0c809cc16f2ebbfe88f859adf52",
+".dart_tool/package_config_subset": "ef26d4f87af7e604f400509ec9d21393",
+".dart_tool/version": "5d36c29483386600ea4bf8921a417a46",
 "assets/AssetManifest.json": "73e89e312be91c3d35b072fb96fb596d",
-"assets/NOTICES": "321b15e08c6d986d6b027297b5082883",
+"assets/NOTICES": "b9e43d3b2f32828941fb861685236df0",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/assets/entradas/8030%2520-%2520YAKIMESHI.png": "cb5cc426835c3f797c4edf62d97dc77a",
 "assets/assets/entradas/2360%2520-%2520JOE.png": "d30f73eb2cccdcdb1e7c9edb0232b5dd",
 "assets/assets/entradas/1060%2520-%2520TOFU.png": "fb5502f5c1a8c4e2aad6a379fc490c95",
@@ -129,7 +129,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
