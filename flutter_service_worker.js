@@ -10,7 +10,7 @@ const RESOURCES = {
 "splash/style.css": "aa856a66153fa64eb260bc3bde1f88c2",
 "index.html": "0acd1a06a4eaefe656b0a2404aaec25e",
 "/": "294172116aabe772f48f8a56c6761af7",
-"main.dart.js": "0c360361c7c4ad649f3dd9ac5f74effc",
+"main.dart.js": "0586112f80f76f5db73528497db6f82d",
 "web/index.html": "294172116aabe772f48f8a56c6761af7",
 "web/icons/Icon-192.png": "170d89a50bcdc41aeb24e45a23a5378b",
 "web/icons/Icon-512.png": "15bb4e92cff9e9b91d35f77d68cf49c4",
@@ -107,11 +107,7 @@ const RESOURCES = {
 "assets/assets/entradas/7060%2520-%2520ISCA_TILAPIA.png": "c5028461000c599e34bc9c13a4b8ee0e",
 "assets/assets/entradas/8300%2520-%2520RISOTO.png": "1ef1a7e8d0ef661a1fbc62bed8a2199e",
 "assets/assets/entradas/2110%2520-%2520SKIM.png": "c9506878aaf5b81b305ac0ded38bf73c",
-"assets/assets/entradas/1080%2520-%2520HARUMAKI_CARNE.png": "1266422f45e50e952e01f0aa6a6ad1b2",
-"canvaskit/canvaskit.js": "43fa9e17039a625450b6aba93baf521e",
-"canvaskit/profiling/canvaskit.js": "f3bfccc993a1e0bfdd3440af60d99df4",
-"canvaskit/profiling/canvaskit.wasm": "a9610cf39260f60fbe7524a785c66101",
-"canvaskit/canvaskit.wasm": "04ed3c745ff1dee16504be01f9623498"
+"assets/assets/entradas/1080%2520-%2520HARUMAKI_CARNE.png": "1266422f45e50e952e01f0aa6a6ad1b2"
 };
 
 // The application shell files that are downloaded before a service worker can
