@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^secrets$ secrets.html [L]
+
