@@ -577,7 +577,7 @@ img {
 
 .c-logo-part {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    padding: 20px 0;
+    padding: 0px 0;
     text-align: center;
 }
 
@@ -588,12 +588,14 @@ img {
 }
 
 .appstore-link:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     opacity: 1;
 }
 
 .appstore-link img {
     display: block;
+    height: 120px;
+    width: auto;
 }
 
 @media only screen and (max-width: 767px) {
