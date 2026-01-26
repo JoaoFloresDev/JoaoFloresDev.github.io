@@ -37,6 +37,9 @@
 <body>
   <header class="header" id="header">
     <!--header-start-->
+    <div class="header-top-email">
+      <a href="#" onclick="copyEmail(event)"><i class="fa-envelope"></i> contact@gambitstudiotech.com</a>
+    </div>
     <div class="container">
       <figure class="logo animated fadeInDown delay-07s">
         <a href="#"><img src="img/logo.png" alt=""></a>
@@ -45,7 +48,7 @@
       <ul class="we-create animated fadeInUp delay-1s">
         <li>We are a digital agency passionate about creating excellent applications</li>
       </ul>
-      <a class="link animated fadeInUp delay-1s servicelink" href="#contact">Get Started</a>
+      <a class="link animated fadeInUp delay-1s servicelink" href="#Portfolio">Get Started</a>
     </div>
   </header>
   <!--header-end-->
@@ -53,12 +56,8 @@
   <div class="c-logo-part">
     <!--c-logo-part-start-->
     <div class="container">
-      <ul>
-        <li>
-          <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955?l=pt"
-            target="_blank"><img src="img/AppStore.png" alt=""></a>
-        </li>
-      </ul>
+      <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955?l=pt"
+        target="_blank" class="appstore-link"><img src="img/AppStore.png" alt="App Store"></a>
     </div>
   </div>
 
@@ -66,7 +65,7 @@
     <!--main-nav-start-->
     <div class="container">
       <ul class="main-nav">
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#header">Home</a></li>
         <li class="small-logo">
           <a href="#header"><img src="img/small-logo.png" alt=""></a>
         </li>
@@ -76,29 +75,6 @@
     </div>
   </nav>
   <!--main-nav-end-->
-
-  <section class="business-talking">
-    <!--business-talking-start-->
-    <div class="container">
-      <h2>Get in touch</h2>
-    </div>
-  </section>
-  <!--business-talking-end-->
-  <div class="container">
-    <section class="main-section contact" id="contact">
-      <div class="row">
-        <div class="col-lg-6 col-sm-5 wow fadeInLeft delay-05s">
-          <a href="https://www.facebook.com/GambitStudioTech" target="_blank"><img src="img/facebook.png" alt=""></a>
-        </div>
-        <div class="col-lg-6 col-sm-7 wow fadeInLeft">
-          <div class="contact-info-box email clearfix">
-            <h3><i class="fa-pencil"></i>email:</h3>
-            <span>contact@gambitstudiotech.com</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
 
   <section class="main-section paddind" id="Portfolio">
     <h2>Our Apps</h2>
@@ -268,6 +244,19 @@
       <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955?l=pt" target="_blank"><img src="img/facebook.png" alt=""></a>
   </li> -->
   <script type="text/javascript">
+    function copyEmail(event) {
+      event.preventDefault();
+      var email = 'contact@gambitstudiotech.com';
+      navigator.clipboard.writeText(email).then(function() {
+        var link = event.target.closest('a');
+        var originalText = link.innerHTML;
+        link.innerHTML = '<i class="fa-check"></i> Email copied!';
+        setTimeout(function() {
+          link.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+
     $(document).ready(function (e) {
       $('#test').scrollToFixed();
       $('.res-nav_click').click(function () {
