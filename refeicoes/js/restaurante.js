@@ -23,6 +23,9 @@ const tabHistorico = document.getElementById('tab-historico');
 // Scanner
 const readerDiv = document.getElementById('reader');
 const scanStatus = document.getElementById('scan-status');
+const cameraError = document.getElementById('camera-error');
+const cameraErrorMsg = document.getElementById('camera-error-msg');
+const btnPermitirCamera = document.getElementById('btn-permitir-camera');
 
 // Modal de resultado
 const scanResult = document.getElementById('scan-result');
@@ -165,6 +168,10 @@ tabs.forEach(tab => {
 function startScanner() {
     if (isScanning || !readerDiv) return;
 
+    // Esconder erro anterior
+    if (cameraError) cameraError.classList.add('hidden');
+    scanStatus.classList.add('hidden');
+
     html5QrCode = new Html5Qrcode("reader");
 
     const config = {
@@ -180,12 +187,55 @@ function startScanner() {
         onScanFailure
     ).then(() => {
         isScanning = true;
+        if (cameraError) cameraError.classList.add('hidden');
     }).catch((err) => {
         console.error('Erro ao iniciar scanner:', err);
-        scanStatus.textContent = 'Erro ao acessar câmera. Verifique as permissões.';
-        scanStatus.classList.remove('hidden', 'alert-info');
-        scanStatus.classList.add('alert-danger');
+        showCameraError(err.message || 'Erro ao acessar câmera. Verifique as permissões.');
     });
+}
+
+// Mostrar erro da câmera com botão
+function showCameraError(message) {
+    if (cameraError && cameraErrorMsg) {
+        cameraErrorMsg.textContent = message;
+        cameraError.classList.remove('hidden');
+    }
+    scanStatus.classList.add('hidden');
+}
+
+// Solicitar permissão da câmera
+async function requestCameraPermission() {
+    try {
+        // Solicitar permissão diretamente
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+
+        // Parar o stream (só queríamos a permissão)
+        stream.getTracks().forEach(track => track.stop());
+
+        // Esconder erro
+        if (cameraError) cameraError.classList.add('hidden');
+
+        // Tentar iniciar o scanner novamente
+        startScanner();
+    } catch (err) {
+        console.error('Erro ao solicitar permissão:', err);
+
+        let mensagem = 'Permissão negada. ';
+        if (err.name === 'NotAllowedError') {
+            mensagem += 'Vá em Configurações do navegador e permita o acesso à câmera.';
+        } else if (err.name === 'NotFoundError') {
+            mensagem += 'Nenhuma câmera encontrada no dispositivo.';
+        } else {
+            mensagem += err.message || 'Tente novamente.';
+        }
+
+        showCameraError(mensagem);
+    }
+}
+
+// Event listener para o botão de permitir câmera
+if (btnPermitirCamera) {
+    btnPermitirCamera.addEventListener('click', requestCameraPermission);
 }
 
 // Parar scanner
