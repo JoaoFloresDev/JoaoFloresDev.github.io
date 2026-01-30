@@ -722,6 +722,55 @@ body {
     .stat-card .label {
         font-size: 0.7rem;
     }
+
+    /* Navbar responsiva */
+    .navbar {
+        padding: 10px 12px;
+        margin: -16px -16px 16px -16px;
+    }
+
+    .navbar-back {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+        gap: 4px;
+    }
+
+    .navbar-back svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .navbar-title {
+        font-size: 0.95rem;
+        gap: 6px;
+    }
+
+    .navbar-title .icon {
+        font-size: 1.1rem;
+    }
+
+    .navbar-spacer {
+        width: 60px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Telas muito pequenas - esconde texto do voltar */
+    .navbar-back span {
+        display: none;
+    }
+
+    .navbar-back {
+        padding: 8px;
+    }
+
+    .navbar-title {
+        font-size: 0.85rem;
+    }
+
+    .navbar-spacer {
+        width: 40px;
+    }
 }
 
 /* ========================================
