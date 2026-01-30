@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Administrador - Refeições</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container container-wide">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="login-container">
+            <a href="../" class="back-link">
+                ← Voltar
+            </a>
+
+            <div class="login-logo">
+                <div class="icon">⚙️</div>
+                <h1>Administrador</h1>
+                <p class="subtitle">Painel de controle do sistema</p>
+            </div>
+
+            <div class="card">
+                <form id="login-form">
+                    <div id="login-error" class="alert alert-danger hidden"></div>
+
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input
+                            type="text"
+                            id="login"
+                            class="form-control"
+                            placeholder="Digite seu login"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            class="form-control"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-warning">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tela Principal do ADM -->
+        <div id="main-screen" class="hidden">
+            <div class="user-bar">
+                <div class="user-info">
+                    ⚙️ <span id="admin-name">Administrador</span>
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    Sair
+                </button>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" data-tab="funcionarios">
+                    👤 Funcionários
+                </button>
+                <button class="tab" data-tab="restaurantes">
+                    🍴 Restaurantes
+                </button>
+                <button class="tab" data-tab="relatorios">
+                    📊 Relatórios
+                </button>
+            </div>
+
+            <!-- Tab: Funcionários -->
+            <div id="tab-funcionarios" class="tab-content">
+                <div class="card">
+                    <div class="card-header">Cadastrar Funcionário</div>
+                    <form id="form-funcionario">
+                        <div id="funcionario-success" class="alert alert-success hidden">
+                            Funcionário cadastrado com sucesso!
+                        </div>
+                        <div id="funcionario-error" class="alert alert-danger hidden"></div>
+
+                        <div class="form-group">
+                            <label for="func-nome">Nome</label>
+                            <input type="text" id="func-nome" class="form-control" placeholder="Nome completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="func-login">Login</label>
+                            <input type="text" id="func-login" class="form-control" placeholder="Login de acesso" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="func-senha">Senha</label>
+                            <input type="password" id="func-senha" class="form-control" placeholder="Senha" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Cadastrar Funcionário
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Lista de Funcionários</div>
+                    <div id="lista-funcionarios">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Restaurantes -->
+            <div id="tab-restaurantes" class="tab-content hidden">
+                <div class="card">
+                    <div class="card-header">Cadastrar Restaurante</div>
+                    <form id="form-restaurante">
+                        <div id="restaurante-success" class="alert alert-success hidden">
+                            Restaurante cadastrado com sucesso!
+                        </div>
+                        <div id="restaurante-error" class="alert alert-danger hidden"></div>
+
+                        <div class="form-group">
+                            <label for="rest-nome">Nome do Restaurante</label>
+                            <input type="text" id="rest-nome" class="form-control" placeholder="Ex: Restaurante Central" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mb-3">
+                            Cadastrar Restaurante
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Cadastrar Usuário do Restaurante</div>
+                    <form id="form-usuario-restaurante">
+                        <div id="usuario-rest-success" class="alert alert-success hidden">
+                            Usuário cadastrado com sucesso!
+                        </div>
+                        <div id="usuario-rest-error" class="alert alert-danger hidden"></div>
+
+                        <div class="form-group">
+                            <label for="user-rest-restaurante">Restaurante</label>
+                            <select id="user-rest-restaurante" class="form-control" required>
+                                <option value="">Selecione um restaurante</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-rest-nome">Nome</label>
+                            <input type="text" id="user-rest-nome" class="form-control" placeholder="Nome do usuário" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-rest-login">Login</label>
+                            <input type="text" id="user-rest-login" class="form-control" placeholder="Login de acesso" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-rest-senha">Senha</label>
+                            <input type="password" id="user-rest-senha" class="form-control" placeholder="Senha" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Cadastrar Usuário
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Lista de Restaurantes</div>
+                    <div id="lista-restaurantes">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Relatórios -->
+            <div id="tab-relatorios" class="tab-content hidden">
+                <div class="card">
+                    <div class="card-header">Resumo Geral</div>
+
+                    <div class="form-group">
+                        <label for="relatorio-data">Data</label>
+                        <input type="date" id="relatorio-data" class="form-control">
+                    </div>
+
+                    <div class="stats-grid mt-2">
+                        <div class="stat-card">
+                            <div class="number" id="rel-total">0</div>
+                            <div class="label">Total</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number" id="rel-cafe">0</div>
+                            <div class="label">Café</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number" id="rel-almoco">0</div>
+                            <div class="label">Almoço</div>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="number" id="rel-janta">0</div>
+                            <div class="label">Janta</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number" id="rel-funcionarios">0</div>
+                            <div class="label">Funcionários</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="number" id="rel-restaurantes">0</div>
+                            <div class="label">Restaurantes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Refeições por Restaurante</div>
+                    <div id="relatorio-por-restaurante">
+                        <div class="empty-state">
+                            <p>Selecione uma data para ver o relatório</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- App Script -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/adm.js"></script>
+</body>
+</html>

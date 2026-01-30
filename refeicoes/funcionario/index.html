@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Funcionário - Refeições</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="login-container">
+            <a href="../" class="back-link">
+                ← Voltar
+            </a>
+
+            <div class="login-logo">
+                <div class="icon">👤</div>
+                <h1>Funcionário</h1>
+                <p class="subtitle">Acesse sua conta para ver seu QR Code</p>
+            </div>
+
+            <div class="card">
+                <form id="login-form">
+                    <div id="login-error" class="alert alert-danger hidden"></div>
+
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input
+                            type="text"
+                            id="login"
+                            class="form-control"
+                            placeholder="Digite seu login"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            class="form-control"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tela do QR Code -->
+        <div id="qr-screen" class="hidden">
+            <div class="user-bar">
+                <div class="user-info">
+                    👤 <span id="user-name">Nome do Usuário</span>
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    Sair
+                </button>
+            </div>
+
+            <div class="qr-container">
+                <h2 id="greeting">Bom dia!</h2>
+                <div class="meal-type" id="meal-type">Café da manhã</div>
+
+                <div class="qr-code">
+                    <div id="qrcode"></div>
+                </div>
+
+                <div class="qr-info">
+                    <div class="name" id="qr-user-name">Nome do Funcionário</div>
+                    <div id="qr-date">Data</div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <p class="text-center" style="color: #7f8c8d; font-size: 0.9rem;">
+                    Apresente este QR Code no restaurante para registrar sua refeição.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- App Script -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/funcionario.js"></script>
+</body>
+</html>

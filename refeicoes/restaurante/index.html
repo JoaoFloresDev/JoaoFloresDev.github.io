@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Restaurante - Refeições</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #reader {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #reader video {
+            width: 100% !important;
+            border-radius: 8px;
+        }
+        #reader__scan_region {
+            min-height: 250px;
+        }
+        #reader__dashboard {
+            padding: 10px !important;
+        }
+        #reader__dashboard_section_swaplink {
+            text-decoration: none !important;
+            color: var(--secondary-color) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-wide">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="login-container">
+            <a href="../" class="back-link">
+                ← Voltar
+            </a>
+
+            <div class="login-logo">
+                <div class="icon">🍴</div>
+                <h1>Restaurante</h1>
+                <p class="subtitle">Acesse para escanear QR Codes</p>
+            </div>
+
+            <div class="card">
+                <form id="login-form">
+                    <div id="login-error" class="alert alert-danger hidden"></div>
+
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input
+                            type="text"
+                            id="login"
+                            class="form-control"
+                            placeholder="Digite seu login"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            class="form-control"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tela Principal do Restaurante -->
+        <div id="main-screen" class="hidden">
+            <div class="user-bar">
+                <div class="user-info">
+                    🍴 <span id="restaurant-name">Restaurante</span>
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    Sair
+                </button>
+            </div>
+
+            <!-- Estatísticas do Dia -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number" id="stat-cafe">0</div>
+                    <div class="label">Café</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="stat-almoco">0</div>
+                    <div class="label">Almoço</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="stat-janta">0</div>
+                    <div class="label">Janta</div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" data-tab="scanner">
+                    📷 Scanner
+                </button>
+                <button class="tab" data-tab="historico">
+                    📋 Histórico
+                </button>
+            </div>
+
+            <!-- Tab: Scanner -->
+            <div id="tab-scanner" class="tab-content">
+                <div class="card">
+                    <div class="card-header">Escanear QR Code</div>
+                    <div id="reader"></div>
+                    <div id="scan-status" class="alert alert-info mt-2 hidden">
+                        Aguardando QR Code...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Histórico -->
+            <div id="tab-historico" class="tab-content hidden">
+                <div class="card mb-2">
+                    <div class="card-header">Refeições de Hoje</div>
+                    <div id="historico-list">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Resultado do Scan -->
+        <div id="scan-result" class="scan-result">
+            <div class="scan-result-content">
+                <div class="scan-result-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <h3 id="result-title">Refeição Registrada!</h3>
+                <p id="result-message">Nome do Funcionário - Almoço</p>
+                <button id="close-result" class="btn btn-primary">
+                    Continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- App Script -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/restaurante.js"></script>
+</body>
+</html>
