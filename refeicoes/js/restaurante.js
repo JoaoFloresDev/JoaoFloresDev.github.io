@@ -293,7 +293,7 @@ async function onScanSuccess(decodedText) {
         // Mostrar modal de sucesso
         showScanResult(
             'Refeição Registrada!',
-            `${funcionarioNome} - ${getNomeRefeicao(tipo)}`
+            `${funcionarioNome} (${login}) - ${getNomeRefeicao(tipo)}`
         );
 
         // Atualizar estatísticas
