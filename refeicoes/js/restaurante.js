@@ -27,11 +27,24 @@ const cameraError = document.getElementById('camera-error');
 const cameraErrorMsg = document.getElementById('camera-error-msg');
 const btnPermitirCamera = document.getElementById('btn-permitir-camera');
 
+// Modal de confirmação
+const scanConfirm = document.getElementById('scan-confirm');
+const confirmName = document.getElementById('confirm-name');
+const confirmId = document.getElementById('confirm-id');
+const checkCafe = document.getElementById('check-cafe');
+const checkAlmoco = document.getElementById('check-almoco');
+const checkJanta = document.getElementById('check-janta');
+const cancelConfirm = document.getElementById('cancel-confirm');
+const submitConfirm = document.getElementById('submit-confirm');
+
 // Modal de resultado
 const scanResult = document.getElementById('scan-result');
 const resultTitle = document.getElementById('result-title');
 const resultMessage = document.getElementById('result-message');
 const closeResult = document.getElementById('close-result');
+
+// Dados do funcionário escaneado (temporário)
+let scannedEmployee = null;
 
 // Histórico
 const historicoList = document.getElementById('historico-list');
@@ -276,28 +289,16 @@ async function onScanSuccess(decodedText) {
             funcionarioNome = funcSnapshot.docs[0].data().nome;
         }
 
-        // Registrar refeição no Firestore
-        const refeicaoData = {
-            funcionarioId: login,
-            funcionarioNome,
-            tipo,
-            data,
-            horaEscaneamento: new Date().toISOString(),
-            restauranteId: currentUser.restauranteId,
-            restauranteNome: currentUser.restauranteNome,
-            escaneadoPor: currentUser.nome
+        // Guardar dados do funcionário escaneado
+        scannedEmployee = {
+            login,
+            nome: funcionarioNome,
+            tipoOriginal: tipo,
+            data
         };
 
-        await db.collection('refeicoes').add(refeicaoData);
-
-        // Mostrar modal de sucesso
-        showScanResult(
-            'Refeição Registrada!',
-            `${funcionarioNome} (${login}) - ${getNomeRefeicao(tipo)}`
-        );
-
-        // Atualizar estatísticas
-        loadStats();
+        // Mostrar modal de confirmação
+        showConfirmModal(funcionarioNome, login, tipo);
 
     } catch (error) {
         console.error('Erro ao processar QR:', error);
@@ -307,6 +308,94 @@ async function onScanSuccess(decodedText) {
         );
     }
 }
+
+// Mostrar modal de confirmação
+function showConfirmModal(nome, login, tipoSugerido) {
+    confirmName.textContent = nome;
+    confirmId.textContent = `ID: ${login}`;
+
+    // Resetar checkboxes
+    checkCafe.checked = false;
+    checkAlmoco.checked = false;
+    checkJanta.checked = false;
+
+    // Pré-selecionar baseado no tipo sugerido pelo QR
+    if (tipoSugerido === 'cafe') checkCafe.checked = true;
+    else if (tipoSugerido === 'almoco') checkAlmoco.checked = true;
+    else if (tipoSugerido === 'janta') checkJanta.checked = true;
+
+    scanConfirm.classList.add('active');
+}
+
+// Cancelar confirmação
+cancelConfirm.addEventListener('click', () => {
+    scanConfirm.classList.remove('active');
+    scannedEmployee = null;
+
+    // Retomar scanner
+    if (html5QrCode && isScanning) {
+        html5QrCode.resume();
+    }
+});
+
+// Confirmar e registrar refeições
+submitConfirm.addEventListener('click', async () => {
+    if (!scannedEmployee) return;
+
+    const refeicoesSelecionadas = [];
+    if (checkCafe.checked) refeicoesSelecionadas.push('cafe');
+    if (checkAlmoco.checked) refeicoesSelecionadas.push('almoco');
+    if (checkJanta.checked) refeicoesSelecionadas.push('janta');
+
+    if (refeicoesSelecionadas.length === 0) {
+        alert('Selecione pelo menos uma refeição');
+        return;
+    }
+
+    try {
+        // Registrar cada refeição selecionada
+        for (const tipo of refeicoesSelecionadas) {
+            const refeicaoData = {
+                funcionarioId: scannedEmployee.login,
+                funcionarioNome: scannedEmployee.nome,
+                tipo,
+                data: scannedEmployee.data,
+                horaEscaneamento: new Date().toISOString(),
+                restauranteId: currentUser.restauranteId,
+                restauranteNome: currentUser.restauranteNome,
+                escaneadoPor: currentUser.nome
+            };
+
+            await db.collection('refeicoes').add(refeicaoData);
+        }
+
+        // Fechar modal de confirmação
+        scanConfirm.classList.remove('active');
+
+        // Montar mensagem de sucesso
+        const refeicoesNomes = refeicoesSelecionadas.map(t => getNomeRefeicao(t)).join(', ');
+
+        // Mostrar modal de sucesso
+        showScanResult(
+            'Refeição Registrada!',
+            `${scannedEmployee.nome} (${scannedEmployee.login}) - ${refeicoesNomes}`
+        );
+
+        // Atualizar estatísticas
+        loadStats();
+
+        // Limpar dados temporários
+        scannedEmployee = null;
+
+    } catch (error) {
+        console.error('Erro ao registrar refeições:', error);
+        scanConfirm.classList.remove('active');
+        showScanResult(
+            'Erro',
+            'Erro ao registrar refeições. Tente novamente.'
+        );
+    }
+});
 
 // Falha ao escanear (silenciosa)
 function onScanFailure(error) {
