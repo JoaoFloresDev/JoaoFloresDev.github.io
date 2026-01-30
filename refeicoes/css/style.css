@@ -71,6 +71,62 @@ body {
 }
 
 /* ========================================
+   Navbar (Barra de Navegação)
+   ======================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 12px 16px;
+    margin: -20px -20px 20px -20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-sm);
+    transition: background 0.2s;
+}
+
+.navbar-back:hover {
+    background: var(--light-color);
+}
+
+.navbar-back svg {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-title .icon {
+    font-size: 1.3rem;
+}
+
+.navbar-spacer {
+    width: 80px;
+}
+
+/* ========================================
    Cards
    ======================================== */
 

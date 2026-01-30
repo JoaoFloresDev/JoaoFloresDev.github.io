@@ -26,6 +26,7 @@ const scanStatus = document.getElementById('scan-status');
 const cameraError = document.getElementById('camera-error');
 const cameraErrorMsg = document.getElementById('camera-error-msg');
 const btnPermitirCamera = document.getElementById('btn-permitir-camera');
+const cameraLoading = document.getElementById('camera-loading');
 
 // Modal de confirmação
 const scanConfirm = document.getElementById('scan-confirm');
@@ -181,8 +182,9 @@ tabs.forEach(tab => {
 function startScanner() {
     if (isScanning || !readerDiv) return;
 
-    // Esconder erro anterior
+    // Esconder erro anterior e mostrar loading
     if (cameraError) cameraError.classList.add('hidden');
+    if (cameraLoading) cameraLoading.classList.remove('hidden');
     scanStatus.classList.add('hidden');
 
     html5QrCode = new Html5Qrcode("reader");
@@ -200,9 +202,11 @@ function startScanner() {
         onScanFailure
     ).then(() => {
         isScanning = true;
+        if (cameraLoading) cameraLoading.classList.add('hidden');
         if (cameraError) cameraError.classList.add('hidden');
     }).catch((err) => {
         console.error('Erro ao iniciar scanner:', err);
+        if (cameraLoading) cameraLoading.classList.add('hidden');
         showCameraError(err.message || 'Erro ao acessar câmera. Verifique as permissões.');
     });
 }
@@ -218,6 +222,10 @@ function showCameraError(message) {
 
 // Solicitar permissão da câmera
 async function requestCameraPermission() {
+    // Mostrar loading
+    if (cameraError) cameraError.classList.add('hidden');
+    if (cameraLoading) cameraLoading.classList.remove('hidden');
+
     try {
         // Solicitar permissão diretamente
         const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
@@ -225,13 +233,11 @@ async function requestCameraPermission() {
         // Parar o stream (só queríamos a permissão)
         stream.getTracks().forEach(track => track.stop());
 
-        // Esconder erro
-        if (cameraError) cameraError.classList.add('hidden');
-
         // Tentar iniciar o scanner novamente
         startScanner();
     } catch (err) {
         console.error('Erro ao solicitar permissão:', err);
+        if (cameraLoading) cameraLoading.classList.add('hidden');
 
         let mensagem = 'Permissão negada. ';
         if (err.name === 'NotAllowedError') {

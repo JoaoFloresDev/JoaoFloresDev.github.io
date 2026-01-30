@@ -32,13 +32,21 @@
     <div class="container container-wide">
         <!-- Tela de Login -->
         <div id="login-screen" class="login-container">
-            <a href="../" class="back-link">
-                ← Voltar
-            </a>
+            <nav class="navbar">
+                <a href="../" class="navbar-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Voltar
+                </a>
+                <div class="navbar-title">
+                    <span class="icon">🍴</span>
+                    Restaurante
+                </div>
+                <div class="navbar-spacer"></div>
+            </nav>
 
             <div class="login-logo">
-                <div class="icon">🍴</div>
-                <h1>Restaurante</h1>
                 <p class="subtitle">Acesse para escanear QR Codes</p>
             </div>
 
@@ -120,6 +128,13 @@
             <div id="tab-scanner" class="tab-content">
                 <div class="card">
                     <div class="card-header">Escanear QR Code</div>
+
+                    <!-- Loading da câmera -->
+                    <div id="camera-loading" style="text-align: center; padding: 40px 20px;">
+                        <div class="spinner" style="margin: 0 auto 15px auto;"></div>
+                        <p style="color: #7f8c8d;">Iniciando câmera...</p>
+                    </div>
+
                     <div id="reader"></div>
                     <div id="scan-status" class="alert alert-info mt-2 hidden">
                         Aguardando QR Code...
