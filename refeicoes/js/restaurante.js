@@ -207,18 +207,28 @@ async function onScanSuccess(decodedText) {
     }
 
     try {
-        // Parse dos dados do QR (formato: id|nome|refeicao|data)
+        // Parse dos dados do QR (formato: login|refeicao|data)
         const parts = decodedText.split('|');
 
-        if (parts.length < 4) {
+        if (parts.length < 3) {
             throw new Error('QR Code inválido');
         }
 
-        const [funcionarioId, funcionarioNome, tipo, data] = parts;
+        const [login, tipo, data] = parts;
+
+        // Buscar nome do funcionário pelo login
+        let funcionarioNome = login;
+        const funcSnapshot = await db.collection('funcionarios')
+            .where('login', '==', login)
+            .get();
+
+        if (!funcSnapshot.empty) {
+            funcionarioNome = funcSnapshot.docs[0].data().nome;
+        }
 
         // Registrar refeição no Firestore
         const refeicaoData = {
-            funcionarioId,
+            funcionarioId: login,
             funcionarioNome,
             tipo,
             data,

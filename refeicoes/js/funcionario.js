@@ -88,22 +88,20 @@ function generateQRCode(user) {
     const refeicao = getTipoRefeicao();
     const data = getDataHoje();
 
-    // Dados do QR Code (formato compacto: id|nome|refeicao|data)
-    const qrData = `${user.id}|${user.nome}|${refeicao.tipo}|${data}`;
+    // Dados do QR Code bem simples (só ASCII, sem acentos)
+    const qrData = user.login + '|' + refeicao.tipo + '|' + data;
 
     // Limpar QR anterior
     qrcodeDiv.innerHTML = '';
 
-    // Usar API externa para gerar QR Code (mais confiável)
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-
-    const img = document.createElement('img');
-    img.src = qrUrl;
-    img.alt = 'QR Code';
-    img.style.width = '200px';
-    img.style.height = '200px';
-
-    qrcodeDiv.appendChild(img);
+    // Criar QR Code
+    try {
+        new QRCode(qrcodeDiv, qrData);
+    } catch (e) {
+        console.error('Erro QR:', e);
+        // Mostrar dados em texto como fallback
+        qrcodeDiv.innerHTML = '<div style="padding:15px;background:#f8f9fa;border-radius:8px;text-align:center;border:2px dashed #dee2e6;"><strong>Código:</strong><br>' + qrData + '</div>';
+    }
 }
 
 // Handler do formulário de login
