@@ -4,8 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2c3e50">
+    <meta name="description" content="Sistema de Gestão de Refeições Corporativas">
+
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Refeições">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
     <title>Refeições</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .install-banner {
+            display: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .install-banner.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .install-banner p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .install-banner .btn-install {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .install-banner .btn-install:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .install-banner .btn-dismiss {
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-left: 10px;
+        }
+
+        .install-banner .btn-dismiss:hover {
+            color: white;
+        }
+
+        /* iOS Instructions Modal */
+        .ios-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .ios-modal.show {
+            display: flex;
+        }
+
+        .ios-modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 320px;
+            text-align: center;
+        }
+
+        .ios-modal-content h3 {
+            margin: 0 0 16px 0;
+            color: #2c3e50;
+        }
+
+        .ios-modal-content .step {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ios-modal-content .step:last-of-type {
+            border-bottom: none;
+        }
+
+        .ios-modal-content .step-icon {
+            font-size: 24px;
+            margin-right: 12px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .ios-modal-content .step-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .ios-modal-content .btn-close-modal {
+            margin-top: 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,6 +161,17 @@
                 <div class="icon">🍽️</div>
                 <h1>Refeições</h1>
                 <p class="subtitle">Sistema de Gestão de Refeições</p>
+            </div>
+
+            <!-- Banner de Instalação -->
+            <div id="install-banner" class="install-banner">
+                <p>📲 Instale o app na sua tela inicial!</p>
+                <button id="btn-install" class="btn-install">
+                    Instalar App
+                </button>
+                <button id="btn-dismiss" class="btn-dismiss">
+                    Agora não
+                </button>
             </div>
 
             <div class="card">
@@ -41,5 +199,113 @@
             </p>
         </div>
     </div>
+
+    <!-- Modal de Instruções iOS -->
+    <div id="ios-modal" class="ios-modal">
+        <div class="ios-modal-content">
+            <h3>📲 Instalar no iPhone</h3>
+            <div class="step">
+                <span class="step-icon">📤</span>
+                <span class="step-text">Toque no botão <strong>Compartilhar</strong> na barra inferior</span>
+            </div>
+            <div class="step">
+                <span class="step-icon">➕</span>
+                <span class="step-text">Role e toque em <strong>"Adicionar à Tela de Início"</strong></span>
+            </div>
+            <div class="step">
+                <span class="step-icon">✅</span>
+                <span class="step-text">Toque em <strong>"Adicionar"</strong> no canto superior direito</span>
+            </div>
+            <button id="btn-close-ios" class="btn-close-modal">
+                Entendi
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // PWA Install Prompt
+        let deferredPrompt;
+        const installBanner = document.getElementById('install-banner');
+        const btnInstall = document.getElementById('btn-install');
+        const btnDismiss = document.getElementById('btn-dismiss');
+        const iosModal = document.getElementById('ios-modal');
+        const btnCloseIos = document.getElementById('btn-close-ios');
+
+        // Detectar se é iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+        // Detectar se já está instalado como PWA
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                           window.navigator.standalone === true;
+
+        // Verificar se já foi dispensado
+        const wasDismissed = localStorage.getItem('pwa-install-dismissed');
+
+        // Para Android/Chrome - capturar o evento beforeinstallprompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+
+            if (!isStandalone && !wasDismissed) {
+                installBanner.classList.add('show');
+            }
+        });
+
+        // Para iOS - mostrar banner com instruções
+        if (isIOS && !isStandalone && !wasDismissed) {
+            installBanner.classList.add('show');
+        }
+
+        // Botão de instalar
+        btnInstall.addEventListener('click', async () => {
+            if (isIOS) {
+                // Mostrar modal com instruções para iOS
+                iosModal.classList.add('show');
+            } else if (deferredPrompt) {
+                // Mostrar prompt de instalação nativo
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+
+                if (outcome === 'accepted') {
+                    installBanner.classList.remove('show');
+                }
+
+                deferredPrompt = null;
+            }
+        });
+
+        // Botão dispensar
+        btnDismiss.addEventListener('click', () => {
+            installBanner.classList.remove('show');
+            localStorage.setItem('pwa-install-dismissed', 'true');
+        });
+
+        // Fechar modal iOS
+        btnCloseIos.addEventListener('click', () => {
+            iosModal.classList.remove('show');
+            installBanner.classList.remove('show');
+            localStorage.setItem('pwa-install-dismissed', 'true');
+        });
+
+        // Fechar modal ao clicar fora
+        iosModal.addEventListener('click', (e) => {
+            if (e.target === iosModal) {
+                iosModal.classList.remove('show');
+            }
+        });
+
+        // Detectar quando o app é instalado
+        window.addEventListener('appinstalled', () => {
+            installBanner.classList.remove('show');
+            deferredPrompt = null;
+        });
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then((reg) => console.log('Service Worker registrado'))
+                .catch((err) => console.log('Erro ao registrar SW:', err));
+        }
+    </script>
 </body>
 </html>
