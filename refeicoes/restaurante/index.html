@@ -122,6 +122,9 @@
                 <button class="tab" data-tab="historico">
                     📋 Histórico
                 </button>
+                <button class="tab" data-tab="painel">
+                    📊 Painel
+                </button>
             </div>
 
             <!-- Tab: Scanner -->
@@ -156,6 +159,63 @@
                 <div class="card mb-2">
                     <div class="card-header">Refeições de Hoje</div>
                     <div id="historico-list">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Painel -->
+            <div id="tab-painel" class="tab-content hidden">
+                <!-- Seletor de Data -->
+                <div class="card mb-2">
+                    <div class="card-header">Selecionar Data</div>
+                    <input type="date" id="painel-data" class="form-control" style="font-size: 1rem;">
+                </div>
+
+                <!-- Estatísticas do Dia Selecionado -->
+                <div class="stats-grid mb-2">
+                    <div class="stat-card">
+                        <div class="number" id="painel-stat-cafe">0</div>
+                        <div class="label">☕ Café</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" id="painel-stat-almoco">0</div>
+                        <div class="label">🍽️ Almoço</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number" id="painel-stat-janta">0</div>
+                        <div class="label">🌙 Janta</div>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="card mb-2">
+                    <div class="card-header">Filtrar por Refeição</div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="todos">
+                            Todos
+                        </button>
+                        <button class="filter-btn" data-filter="cafe">
+                            ☕ Café
+                        </button>
+                        <button class="filter-btn" data-filter="almoco">
+                            🍽️ Almoço
+                        </button>
+                        <button class="filter-btn" data-filter="janta">
+                            🌙 Janta
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista de Pedidos -->
+                <div class="card">
+                    <div class="card-header">
+                        Pedidos do Dia
+                        <span id="painel-total" style="float: right; font-weight: normal; color: #7f8c8d;">(0 registros)</span>
+                    </div>
+                    <div id="painel-list">
                         <div class="loading">
                             <div class="spinner"></div>
                         </div>

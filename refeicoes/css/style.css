@@ -420,6 +420,39 @@ body {
 }
 
 /* ========================================
+   Filtros
+   ======================================== */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 10px 16px;
+    border: 2px solid var(--light-color);
+    border-radius: 25px;
+    background: var(--white);
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.filter-btn.active {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* ========================================
    Estatísticas
    ======================================== */
 

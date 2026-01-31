@@ -19,6 +19,20 @@ const statJanta = document.getElementById('stat-janta');
 const tabs = document.querySelectorAll('.tab');
 const tabScanner = document.getElementById('tab-scanner');
 const tabHistorico = document.getElementById('tab-historico');
+const tabPainel = document.getElementById('tab-painel');
+
+// Painel
+const painelData = document.getElementById('painel-data');
+const painelStatCafe = document.getElementById('painel-stat-cafe');
+const painelStatAlmoco = document.getElementById('painel-stat-almoco');
+const painelStatJanta = document.getElementById('painel-stat-janta');
+const painelTotal = document.getElementById('painel-total');
+const painelList = document.getElementById('painel-list');
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+// Variáveis do painel
+let painelRefeicoes = [];
+let painelFiltroAtual = 'todos';
 
 // Scanner
 const readerDiv = document.getElementById('reader');
@@ -164,16 +178,23 @@ tabs.forEach(tab => {
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
-        // Mostrar/esconder conteúdo
+        // Esconder todas as tabs
+        tabScanner.classList.add('hidden');
+        tabHistorico.classList.add('hidden');
+        if (tabPainel) tabPainel.classList.add('hidden');
+
+        // Mostrar tab selecionada
         if (tabName === 'scanner') {
             tabScanner.classList.remove('hidden');
-            tabHistorico.classList.add('hidden');
             startScanner();
-        } else {
-            tabScanner.classList.add('hidden');
+        } else if (tabName === 'historico') {
             tabHistorico.classList.remove('hidden');
             stopScanner();
             loadHistorico();
+        } else if (tabName === 'painel') {
+            tabPainel.classList.remove('hidden');
+            stopScanner();
+            initPainel();
         }
     });
 });
@@ -531,4 +552,146 @@ function getBadgeClass(tipo) {
         'janta': 'badge-janta'
     };
     return classes[tipo] || '';
+}
+
+// ========================================
+// PAINEL
+// ========================================
+
+// Inicializar painel
+function initPainel() {
+    if (!painelData) return;
+
+    // Definir data atual no seletor
+    painelData.value = getDataHoje();
+
+    // Carregar dados
+    loadPainelData();
+}
+
+// Event listener para mudança de data
+if (painelData) {
+    painelData.addEventListener('change', loadPainelData);
+}
+
+// Event listeners para filtros
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Atualizar botão ativo
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Aplicar filtro
+        painelFiltroAtual = btn.dataset.filter;
+        renderPainelList();
+    });
+});
+
+// Carregar dados do painel
+async function loadPainelData() {
+    if (!currentUser || !painelData) return;
+
+    const dataSelecionada = painelData.value;
+
+    painelList.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+
+    try {
+        const snapshot = await db.collection('refeicoes')
+            .where('restauranteId', '==', currentUser.restauranteId)
+            .where('data', '==', dataSelecionada)
+            .orderBy('horaEscaneamento', 'desc')
+            .get();
+
+        // Armazenar refeições
+        painelRefeicoes = [];
+        snapshot.forEach(doc => {
+            painelRefeicoes.push({ id: doc.id, ...doc.data() });
+        });
+
+        // Atualizar estatísticas
+        updatePainelStats();
+
+        // Renderizar lista
+        renderPainelList();
+
+    } catch (error) {
+        console.error('Erro ao carregar dados do painel:', error);
+        painelList.innerHTML = `
+            <div class="alert alert-danger">
+                Erro ao carregar dados
+            </div>
+        `;
+    }
+}
+
+// Atualizar estatísticas do painel
+function updatePainelStats() {
+    let cafe = 0, almoco = 0, janta = 0;
+
+    painelRefeicoes.forEach(ref => {
+        if (ref.tipo === 'cafe') cafe++;
+        else if (ref.tipo === 'almoco') almoco++;
+        else if (ref.tipo === 'janta') janta++;
+    });
+
+    if (painelStatCafe) painelStatCafe.textContent = cafe;
+    if (painelStatAlmoco) painelStatAlmoco.textContent = almoco;
+    if (painelStatJanta) painelStatJanta.textContent = janta;
+}
+
+// Renderizar lista do painel
+function renderPainelList() {
+    // Filtrar refeições
+    let refeicoesFiltradas = painelRefeicoes;
+
+    if (painelFiltroAtual !== 'todos') {
+        refeicoesFiltradas = painelRefeicoes.filter(ref => ref.tipo === painelFiltroAtual);
+    }
+
+    // Atualizar total
+    if (painelTotal) {
+        painelTotal.textContent = `(${refeicoesFiltradas.length} registros)`;
+    }
+
+    // Verificar se está vazio
+    if (refeicoesFiltradas.length === 0) {
+        const dataFormatada = formatarDataExibicao(painelData.value);
+        painelList.innerHTML = `
+            <div class="empty-state">
+                <div class="icon">📊</div>
+                <p>Nenhum registro encontrado${painelFiltroAtual !== 'todos' ? ' para este filtro' : ''}</p>
+                <small style="color: #95a5a6;">${dataFormatada}</small>
+            </div>
+        `;
+        return;
+    }
+
+    // Renderizar lista
+    let html = '<ul class="list">';
+
+    refeicoesFiltradas.forEach(ref => {
+        const hora = formatarHora(new Date(ref.horaEscaneamento));
+        const badgeClass = getBadgeClass(ref.tipo);
+
+        html += `
+            <li class="list-item">
+                <div class="list-item-info">
+                    <div class="name">${ref.funcionarioNome}</div>
+                    <div class="details">ID: ${ref.funcionarioId} • ${hora}</div>
+                </div>
+                <span class="list-item-badge ${badgeClass}">
+                    ${getNomeRefeicao(ref.tipo)}
+                </span>
+            </li>
+        `;
+    });
+
+    html += '</ul>';
+    painelList.innerHTML = html;
+}
+
+// Formatar data para exibição
+function formatarDataExibicao(dataStr) {
+    const [ano, mes, dia] = dataStr.split('-');
+    return `${dia}/${mes}/${ano}`;
 }
