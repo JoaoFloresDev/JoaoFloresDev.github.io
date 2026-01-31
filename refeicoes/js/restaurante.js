@@ -14,6 +14,7 @@ const restaurantName = document.getElementById('restaurant-name');
 const statCafe = document.getElementById('stat-cafe');
 const statAlmoco = document.getElementById('stat-almoco');
 const statJanta = document.getElementById('stat-janta');
+const statTotal = document.getElementById('stat-total');
 
 // Tabs
 const tabs = document.querySelectorAll('.tab');
@@ -470,6 +471,7 @@ async function loadStats() {
         statCafe.textContent = cafe;
         statAlmoco.textContent = almoco;
         statJanta.textContent = janta;
+        if (statTotal) statTotal.textContent = cafe + almoco + janta;
 
     } catch (error) {
         console.error('Erro ao carregar estatísticas:', error);

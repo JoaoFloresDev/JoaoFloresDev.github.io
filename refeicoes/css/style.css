@@ -456,11 +456,28 @@ body {
    Estatísticas
    ======================================== */
 
+.stats-section {
+    margin-bottom: 20px;
+}
+
+.stats-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin-bottom: 20px;
+}
+
+.stats-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .stat-card {
@@ -484,6 +501,15 @@ body {
     font-size: 0.8rem;
     color: #7f8c8d;
     margin-top: 4px;
+}
+
+.stat-card-total {
+    background: rgba(52, 152, 219, 0.1);
+    border-color: rgba(52, 152, 219, 0.3);
+}
+
+.stat-card-total .number {
+    color: var(--primary-color);
 }
 
 /* ========================================
@@ -757,8 +783,12 @@ body {
     }
 
     .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
+    }
+
+    .stats-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stat-card {
