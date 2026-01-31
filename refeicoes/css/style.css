@@ -245,6 +245,38 @@ body {
     gap: 16px;
 }
 
+/* Botão de ícone */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-icon-danger {
+    color: #e74c3c;
+}
+
+.btn-icon-danger:hover {
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.btn-icon-danger:active {
+    background: rgba(231, 76, 60, 0.2);
+}
+
 /* ========================================
    Formulários
    ======================================== */
