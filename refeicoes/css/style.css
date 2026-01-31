@@ -80,11 +80,18 @@ body {
     justify-content: space-between;
     background: var(--white);
     padding: 12px 16px;
-    margin: -20px -20px 20px -20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
+}
+
+/* Espaçamento para compensar navbar fixa */
+.login-container,
+#main-screen {
+    padding-top: 60px;
 }
 
 .navbar-back {
@@ -726,7 +733,11 @@ body {
     /* Navbar responsiva */
     .navbar {
         padding: 10px 12px;
-        margin: -16px -16px 16px -16px;
+    }
+
+    .login-container,
+    #main-screen {
+        padding-top: 50px;
     }
 
     .navbar-back {
