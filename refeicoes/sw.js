@@ -1,5 +1,5 @@
 // Service Worker para PWA - Refeições
-const CACHE_NAME = 'refeicoes-v1';
+const CACHE_NAME = 'refeicoes-v2';
 
 // Arquivos para cache inicial
 const STATIC_ASSETS = [
@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/refeicoes/index.html',
   '/refeicoes/css/style.css',
   '/refeicoes/manifest.json',
-  '/refeicoes/icons/icon.svg'
+  '/refeicoes/icon.png'
 ];
 
 // Instalação - cachear arquivos estáticos
