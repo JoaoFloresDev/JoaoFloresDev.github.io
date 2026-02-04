@@ -1,9 +1,16 @@
+rubens.filho@fazendavertente.com.br
+
+Luiz.Oliveira@fazendavertente.com.br
+
+daniel.anelli@fazendavertente.com.br
+
+gabriel.tome@fazendavertente.com.br
+
+
 # Proposta Comercial
 ## Sistema de Gestão de Refeições Corporativas
 
-Este documento apresenta a proposta técnica e comercial para o desenvolvimento do **Sistema de Gestão de Refeições Corporativas**, uma solução web completa para controle e registro de refeições (café da manhã, almoço e jantar) de funcionários em ambiente corporativo.
-
-O sistema foi projetado para operar em **condições adversas de conectividade**, sendo ideal para trabalhadores em áreas rurais ou com infraestrutura de internet limitada.
+Este documento apresenta a proposta técnica e comercial para o desenvolvimento do **Sistema de Gestão de Refeições Corporativas**, uma solução web completa para controle e registro de refeições (café da manhã, almoço e jantar) de funcionários.
 
 ---
 
@@ -13,7 +20,12 @@ O sistema foi projetado para operar em **condições adversas de conectividade**
 
 Desenvolver uma plataforma web que permita:
 
-- **Funcionários**: Gerar QR Codes dinâmicos para identificação no momento das refeições, agendamento de janta, histórico de registros e agendamentos
+- **Funcionários**: 
+- Gerar QR Codes dinâmicos para identificação no momento das refeições
+- Agendamento de janta
+- Histórico de registros
+- Agendamentos futuros
+
 - **Restaurantes**: Escanear QR Codes e registrar refeições consumidas, analisar relatórios, conferir jantas agendadas
 - **Administradores**: Gerenciar funcionários, restaurantes, exportar relatório e visualizar relatórios consolidados
 
