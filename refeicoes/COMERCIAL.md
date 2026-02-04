@@ -11,33 +11,30 @@ Este documento apresenta a proposta técnica e comercial para o desenvolvimento 
 
 Desenvolver uma plataforma web que permita:
 
-- **Funcionários**: 
-- Gerar QR code com identificação do funcionário
-- Agendamento de janta
-- Histórico de registros
-- Agendamentos futuros
+- **Funcionários**:
+  - Gerar QR code com identificação do funcionário
+  - Agendamento de janta
+  - Histórico de registros
+  - Agendamentos futuros
 
-- **Restaurantes**: 
-- Escanear QR Codes 
-- Validação ao apresentar QR code na janta se ela foi agendada
-- Registrar refeições consumidas
-- Relatório de refeições por dia
-- Agendamento de janta após ler QR code de funcionário
-- Conferir jantas agendadas
+- **Restaurantes**:
+  - Escanear QR Codes
+  - Validação de QR code e jantas agendadas
+  - Registrar refeições consumidas
+  - Relatório de refeições por dia
+  - Agendamento de janta
+  - Conferir jantas agendadas
 
-- **Administradores**: 
-- Gerenciar funcionários
-- Restaurantes
-- Exportar relatório 
-- Visualizar relatórios consolidados
-- Cadastro de funcionários e terceirizados
-- Cadastro de restaurantes
-- Lista de funcionários cadastrados
-- Gerar imagem ou pdf com QR de um funcionário
-- Gerar imagem ou pdf com ticket valido para almoço, vinculado a um funcionário
-- Limitar o número de refeições por funcionário
-- Lista de restaurantes cadastrados
-
+- **Administradores**:
+  - Gerenciar funcionários
+  - Gerenciar restaurantes
+  - Exportar relatório
+  - Visualizar relatórios consolidados
+  - Cadastro de funcionários e terceirizados
+  - Cadastro de restaurantes
+  - Gerar imagem ou pdf com QR de um funcionário
+  - Gerar imagem ou pdf com ticket válido para almoço, vinculado a um funcionário
+  - Limitar o número de refeições por funcionário
 
 ---
 
@@ -55,7 +52,7 @@ Uma POC funcional foi desenvolvida para demonstrar a viabilidade técnica da sol
 |--------|------------------------------|
 | **Funcionário** | Login, geração de QR Code dinâmico por período |
 | **Restaurante** | Login, scanner de QR Code, registro de refeições, estatísticas do dia, painel histórico |
-| **Administrador** | Login, cadastro de funcionários, cadastro de restaurantes, relatórios, exportar  |
+| **Administrador** | Login, cadastro de funcionários, cadastro de restaurantes, relatórios, exportar |
 
 ### 2.3 Dados de Teste
 
@@ -67,7 +64,7 @@ A POC opera com dados simulados para demonstração:
 | Restaurante | op1, op2 | 123 |
 | Administrador | admin | admin |
 
-### 2.5 Propósito da POC
+### 2.4 Propósito da POC
 
 A POC serve para:
 1. Validar a experiência do usuário (UX)
@@ -77,7 +74,7 @@ A POC serve para:
 
 ---
 
-### 4.2 Compatibilidade
+## 3. Compatibilidade
 
 | Dispositivo | Requisito Mínimo |
 |-------------|------------------|
@@ -88,7 +85,7 @@ A POC serve para:
 
 ---
 
-## 5. Arquitetura Técnica
+## 4. Arquitetura Técnica
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -110,9 +107,9 @@ A POC serve para:
 
 ---
 
-## 7. Investimento 
+## 5. Investimento
 
-## 7.1 Desenvolvimento
+### 5.1 Desenvolvimento
 
 | Módulo | Valor |
 |--------|-------|
@@ -129,30 +126,25 @@ A POC serve para:
 - Treinamento remoto
 - Documentação técnica
 
-## 7.2 Site e hospedagem
-- Primeiro ano aproximadamente 200 reais/ano
-- Demais anos 600/ano
+### 5.2 Site e Hospedagem
 
-## 7.3 Nuvem e banco de dados
-- GB de armazenamento
-    No-cost up to 5 GB
-    Then $0.026/GB
+- Primeiro ano: aproximadamente R$ 200/ano
+- Demais anos: aproximadamente R$ 600/ano
 
-- GB de download
-    No-cost up to 1 GB/day
-    Then $0.12/GB
+### 5.3 Nuvem e Banco de Dados
 
-- Operações de upload
-    No-cost up to 20K/day
-    Then $0.05/10K
+| Recurso | Gratuito | Excedente |
+|---------|----------|-----------|
+| Armazenamento | Até 5 GB | R$ 0,13/GB |
+| Download | Até 1 GB/dia | R$ 0,60/GB |
+| Operações de upload | Até 20 mil/dia | R$ 0,25/10 mil |
+| Operações de download | Até 50 mil/dia | R$ 0,02/10 mil |
 
-- Operações de download
-    No-cost up to 50K/day
-    Then $0.004/10K
+*Valores convertidos aproximadamente de USD para BRL (cotação 1 USD = 5 BRL)*
 
 ---
 
-## 9. Cronograma de Entrega
+## 6. Cronograma de Entrega
 
 | Marco | Entregável | Prazo |
 |-------|------------|-------|
@@ -166,9 +158,9 @@ A POC serve para:
 
 ---
 
-## 10. Suporte e Manutenção
+## 7. Suporte e Manutenção
 
-### 10.1 Período de Garantia
+### 7.1 Período de Garantia
 
 **Incluído:** 30 dias após entrega final
 
@@ -177,33 +169,24 @@ A POC serve para:
 - Suporte por WhatsApp
 - Tempo de resposta: até 12 horas úteis
 
-### 10.2 Suporte Continuado - R$ 0,15 por refeição
+### 7.2 Suporte Continuado - R$ 0,15 por refeição
+
 - Atualizações de segurança
 - Correção de bugs
 - 3h semanais realizando testes
-- Tempo para iniciar um chamado 48h em dias uteis
+- Tempo para iniciar um chamado: 48h em dias úteis
 
 ---
 
-## 11. Termos e Condições
+## 8. Termos e Condições
 
-### 11.1 Propriedade Intelectual
+### 8.1 Propriedade Intelectual
 
 - O **código-fonte** será entregue ao cliente após pagamento integral
 - O cliente terá **direito de uso ilimitado** do sistema
 - Bibliotecas de terceiros seguem suas respectivas licenças (MIT, Apache, etc.)
 
-### 11.2 Confidencialidade
+### 8.2 Confidencialidade
 
 - Todas as informações do projeto serão tratadas como confidenciais
 - Dados de funcionários e refeições não serão compartilhados
-
----
-
-## 12. Próximos Passos
-
-### Para Aprovar Esta Proposta:
-
-1. **Revisar** todos os requisitos e valores
-2. **Esclarecer** dúvidas em reunião
-3. **Efetuar** pagamento inicial (40%)
