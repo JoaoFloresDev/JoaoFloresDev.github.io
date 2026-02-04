@@ -1,12 +1,3 @@
-rubens.filho@fazendavertente.com.br
-
-Luiz.Oliveira@fazendavertente.com.br
-
-daniel.anelli@fazendavertente.com.br
-
-gabriel.tome@fazendavertente.com.br
-
-
 # Proposta Comercial
 ## Sistema de Gestão de Refeições Corporativas
 
@@ -21,13 +12,32 @@ Este documento apresenta a proposta técnica e comercial para o desenvolvimento 
 Desenvolver uma plataforma web que permita:
 
 - **Funcionários**: 
-- Gerar QR Codes dinâmicos para identificação no momento das refeições
+- Gerar QR code com identificação do funcionário
 - Agendamento de janta
 - Histórico de registros
 - Agendamentos futuros
 
-- **Restaurantes**: Escanear QR Codes e registrar refeições consumidas, analisar relatórios, conferir jantas agendadas
-- **Administradores**: Gerenciar funcionários, restaurantes, exportar relatório e visualizar relatórios consolidados
+- **Restaurantes**: 
+- Escanear QR Codes 
+- Validação ao apresentar QR code na janta se ela foi agendada
+- Registrar refeições consumidas
+- Relatório de refeições por dia
+- Agendamento de janta após ler QR code de funcionário
+- Conferir jantas agendadas
+
+- **Administradores**: 
+- Gerenciar funcionários
+- Restaurantes
+- Exportar relatório 
+- Visualizar relatórios consolidados
+- Cadastro de funcionários e terceirizados
+- Cadastro de restaurantes
+- Lista de funcionários cadastrados
+- Gerar imagem ou pdf com QR de um funcionário
+- Gerar imagem ou pdf com ticket valido para almoço, vinculado a um funcionário
+- Limitar o número de refeições por funcionário
+- Lista de restaurantes cadastrados
+
 
 ---
 
@@ -61,7 +71,7 @@ A POC opera com dados simulados para demonstração:
 
 A POC serve para:
 1. Validar a experiência do usuário (UX)
-2. Demonstrar o fluxo operacional completo
+2. Demonstrar o fluxo operacional
 3. Coletar feedback antes do desenvolvimento final
 4. Alinhar expectativas visuais e funcionais
 
@@ -100,7 +110,9 @@ A POC serve para:
 
 ---
 
-## 7. Investimento - Desenvolvimento
+## 7. Investimento 
+
+## 7.1 Desenvolvimento
 
 | Módulo | Valor |
 |--------|-------|
@@ -117,54 +129,11 @@ A POC serve para:
 - Treinamento remoto
 - Documentação técnica
 
----
-
-## 9. Cronograma de Entrega
-
-```
-Semana 1-2:  [████████████████████] Módulo Funcionário
-Semana 2-4:  [████████████████████] Módulo Restaurante
-Semana 4-6:  [████████████████████] Módulo Administrador
-Semana 6-7:  [████████████████████] Integração + Testes
-Semana 7:    [████████████████████] Deploy + Treinamento
-```
-
-**Prazo Total:** 7 semanas (35 dias úteis)
-
-### 9.2 Marcos de Entrega
-
-| Marco | Entregável | Prazo |
-|-------|------------|-------|
-| M1 | Módulo Funcionário funcional | Semana 2 |
-| M2 | Módulo Restaurante funcional | Semana 4 |
-| M3 | Módulo Administrador funcional | Semana 6 |
-| M4 | Sistema integrado + testes | Semana 7 |
-| M5 | Deploy em produção | Semana 7 |
-
----
-
-## 10. Suporte e Manutenção
-
-### 10.1 Período de Garantia
-
-**Incluído:** 30 dias após entrega final
-
-- Correção de bugs reportados
-- Ajustes menores de interface
-- Suporte por WhatsApp
-- Tempo de resposta: até 12 horas úteis
-
-### 10.2 Suporte Continuado - 0,15 por refeição
-- Atualizações de segurança
-- Correção de bugs
-- 3h semanais realizando testes
-Tempo para iniciar um chamado 48h em dias uteis
-
-### Site e hospedagem
+## 7.2 Site e hospedagem
 - Primeiro ano aproximadamente 200 reais/ano
 - Demais anos 600/ano
 
-### Nuvem e banco de dados
+## 7.3 Nuvem e banco de dados
 - GB de armazenamento
     No-cost up to 5 GB
     Then $0.026/GB
@@ -183,6 +152,39 @@ Tempo para iniciar um chamado 48h em dias uteis
 
 ---
 
+## 9. Cronograma de Entrega
+
+| Marco | Entregável | Prazo |
+|-------|------------|-------|
+| M1 | Módulo Funcionário funcional | Semana 2 |
+| M2 | Módulo Restaurante funcional | Semana 4 |
+| M3 | Módulo Administrador funcional | Semana 6 |
+| M4 | Sistema integrado + testes | Semana 7 |
+| M5 | Deploy em produção | Semana 7 |
+
+**Prazo Total:** 7 semanas (35 dias úteis)
+
+---
+
+## 10. Suporte e Manutenção
+
+### 10.1 Período de Garantia
+
+**Incluído:** 30 dias após entrega final
+
+- Correção de bugs reportados
+- Ajustes menores de interface
+- Suporte por WhatsApp
+- Tempo de resposta: até 12 horas úteis
+
+### 10.2 Suporte Continuado - R$ 0,15 por refeição
+- Atualizações de segurança
+- Correção de bugs
+- 3h semanais realizando testes
+- Tempo para iniciar um chamado 48h em dias uteis
+
+---
+
 ## 11. Termos e Condições
 
 ### 11.1 Propriedade Intelectual
@@ -195,13 +197,6 @@ Tempo para iniciar um chamado 48h em dias uteis
 
 - Todas as informações do projeto serão tratadas como confidenciais
 - Dados de funcionários e refeições não serão compartilhados
-
-### 11.3 Garantias
-
-**O desenvolvedor garante:**
-- Funcionamento conforme especificado neste documento
-- Código livre de vulnerabilidades conhecidas
-- Compatibilidade com navegadores especificados
 
 ---
 
