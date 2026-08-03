@@ -156,7 +156,24 @@ section { padding: clamp(64px, 9vw, 110px) 0; position: relative; }
 .section-head p { color: var(--muted); font-size: 1.05rem; }
 
 /* ---------------- Filters ---------------- */
-.filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 38px; }
+.filters-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 38px; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip .count { font-size: 0.74rem; font-weight: 600; opacity: 0.65; margin-left: 6px; }
+.app-search {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 999px; padding: 9px 16px;
+  color: var(--faint); transition: border-color .18s ease, background .18s ease;
+  min-width: 220px;
+}
+.app-search:focus-within { border-color: var(--border-2); background: var(--surface-2); color: var(--muted); }
+.app-search input {
+  background: none; border: 0; outline: 0;
+  color: var(--text); font-family: var(--font-body); font-size: 0.9rem;
+  width: 100%;
+}
+.app-search input::placeholder { color: var(--faint); }
+.app-search input::-webkit-search-cancel-button { -webkit-appearance: none; }
 .chip {
   font-family: var(--font-body); font-weight: 500; font-size: 0.88rem;
   color: var(--muted); background: var(--surface); border: 1px solid var(--border);
@@ -167,7 +184,7 @@ section { padding: clamp(64px, 9vw, 110px) 0; position: relative; }
 .chip.active { color: #0a0a14; background: var(--grad); border-color: transparent; font-weight: 600; }
 
 /* ---------------- App grid ---------------- */
-.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; grid-auto-flow: dense; }
 .app-card {
   position: relative;
   display: flex; flex-direction: column;
@@ -198,6 +215,27 @@ section { padding: clamp(64px, 9vw, 110px) 0; position: relative; }
 .app-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.87rem; color: var(--text); }
 .app-link svg { transition: transform .2s ease; }
 .app-card:hover .app-link svg { transform: translateX(3px); }
+
+/* Per-app ambient glow: blurred copy of the icon behind the card top */
+.card-glow {
+  position: absolute; top: -30px; left: -30px; width: 150px; height: 150px;
+  filter: blur(46px) saturate(1.4); opacity: 0; border-radius: 50%;
+  transition: opacity .35s ease; pointer-events: none; z-index: 0 !important;
+}
+.app-card:hover .card-glow { opacity: 0.45; }
+
+/* Featured cards: wider, richer */
+@media (min-width: 640px) {
+  .app-card.featured { grid-column: span 2; }
+  .app-card.featured .app-icon { width: 76px; height: 76px; border-radius: 18px; }
+  .app-card.featured .app-title { font-size: 1.18rem; }
+  .app-card.featured .app-desc { -webkit-line-clamp: 3; font-size: 0.95rem; }
+}
+.app-card.featured { border-color: var(--border-2); background: var(--surface-2); }
+
+/* Empty state */
+.apps-empty { text-align: center; padding: 56px 0 16px; color: var(--muted); }
+.apps-empty p { margin-bottom: 18px; font-size: 1.02rem; }
 
 /* ---------------- About ---------------- */
 .about { }

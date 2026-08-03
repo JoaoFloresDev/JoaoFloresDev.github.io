@@ -69,18 +69,24 @@
         <h2>Every app we've shipped</h2>
         <p>From a photo vault disguised as a calculator to step trackers and stoic journals — browse by what you need.</p>
       </div>
-      <div class="filters reveal">
-        <button class="chip active" data-filter="all">All apps</button>
-        <button class="chip" data-filter="privacy">Privacy &amp; Utilities</button>
-        <button class="chip" data-filter="health">Health &amp; Fitness</button>
-        <button class="chip" data-filter="productivity">Productivity</button>
-        <button class="chip" data-filter="games">Games</button>
-        <button class="chip" data-filter="creative">Photo &amp; Creative</button>
-        <button class="chip" data-filter="lifestyle">Lifestyle</button>
-        <button class="chip" data-filter="finance">Finance</button>
+      <div class="filters-bar reveal">
+        <div class="filters">
+          <button class="chip active" data-filter="all">All apps</button>
+          <button class="chip" data-filter="privacy">Privacy &amp; Utilities</button>
+          <button class="chip" data-filter="health">Health &amp; Fitness</button>
+          <button class="chip" data-filter="productivity">Productivity</button>
+          <button class="chip" data-filter="games">Games</button>
+          <button class="chip" data-filter="creative">Photo &amp; Creative</button>
+          <button class="chip" data-filter="lifestyle">Lifestyle</button>
+          <button class="chip" data-filter="finance">Finance</button>
+        </div>
+        <label class="app-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="app-search-input" placeholder="Search apps…" autocomplete="off" aria-label="Search apps">
+        </label>
       </div>
       <div class="app-grid">
-      <a class="app-card reveal" data-group="privacy" href="https://apps.apple.com/us/app/secret-calculator-vault-photo/id1479873340?uo=4" target="_blank" rel="noopener">
+      <a class="app-card featured reveal" data-group="privacy" href="https://apps.apple.com/us/app/secret-calculator-vault-photo/id1479873340?uo=4" target="_blank" rel="noopener">
         <span class="badge-pop">Popular</span>
         <div class="app-top">
           <img class="app-icon" src="img/apps/1479873340.jpg" alt="Secret Calculator Vault Photo icon" loading="lazy" width="62" height="62">
@@ -95,7 +101,7 @@
           <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
-      <a class="app-card reveal" data-group="creative" href="https://apps.apple.com/us/app/iphotos-photo-collage-editor/id1517929511?uo=4" target="_blank" rel="noopener">
+      <a class="app-card featured reveal" data-group="creative" href="https://apps.apple.com/us/app/iphotos-photo-collage-editor/id1517929511?uo=4" target="_blank" rel="noopener">
         <span class="badge-pop">Popular</span>
         <div class="app-top">
           <img class="app-icon" src="img/apps/1517929511.jpg" alt="iPhotos • Photo Collage editor icon" loading="lazy" width="62" height="62">
@@ -380,6 +386,10 @@
           <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
+      </div>
+      <div class="apps-empty" id="apps-empty" hidden>
+        <p>No apps match your search.</p>
+        <button class="btn btn-ghost" id="apps-reset">Clear filters</button>
       </div>
     </div>
   </section>
