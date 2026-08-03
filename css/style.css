@@ -1161,3 +1161,97 @@ img {
         display: none;
     }
 }
+
+
+/* Dark theme — whole site
+---------------------------------*/
+
+body {
+    background: #0b0b10;
+    color: #a5a5b8;
+}
+
+h2 {
+    color: #f1f1f6;
+}
+
+h3 {
+    color: #f1f1f6;
+}
+
+h6 {
+    color: #8d8da0;
+}
+
+/* Nav bar */
+.main-nav-outer {
+    background: #0e0e15;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8);
+}
+
+.main-nav li a {
+    color: #ececf2;
+}
+
+.main-nav li a:hover {
+    color: #7cc576;
+}
+
+.small-logo img,
+.res-nav_click {
+    filter: invert(1);
+}
+
+@media (max-width: 767px) {
+    .main-nav {
+        background: #0e0e15;
+    }
+}
+
+/* Our Apps cards */
+.gs-app-card {
+    background: #14141c;
+    border-color: rgba(255, 255, 255, 0.09);
+}
+
+.gs-app-card:hover {
+    border-color: #7cc576;
+    box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.85);
+}
+
+.gs-app-card h3 {
+    color: #f1f1f6;
+}
+
+.gs-app-card p {
+    color: #9a9aae;
+}
+
+.gs-app-icon {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.7);
+}
+
+.gs-app-meta {
+    color: #c9c9d6;
+}
+
+/* Products section */
+.main-section.alabaster {
+    background: #0e0e15;
+}
+
+.featured-box-col1 i {
+    color: #7cc576;
+}
+
+.service-list-col1 i {
+    color: #ececf2;
+}
+
+/* Generic light leftovers */
+.Portfolio-nav li a {
+    background: #14141c;
+    color: #ececf2;
+}

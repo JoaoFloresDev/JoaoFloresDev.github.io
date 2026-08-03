@@ -79,16 +79,6 @@
   <section class="main-section paddind" id="Portfolio">
     <h2>Our Apps</h2>
     <h6>20 apps on the App Store &mdash; browse by what you need.</h6>
-    <ul class="Portfolio-nav gs-filter">
-      <li><a href="#" class="current" data-filter="all">All Apps</a></li>
-      <li><a href="#" data-filter="privacy">Privacy &amp; Utilities</a></li>
-      <li><a href="#" data-filter="health">Health &amp; Fitness</a></li>
-      <li><a href="#" data-filter="productivity">Productivity</a></li>
-      <li><a href="#" data-filter="games">Games</a></li>
-      <li><a href="#" data-filter="creative">Photo &amp; Creative</a></li>
-      <li><a href="#" data-filter="lifestyle">Lifestyle</a></li>
-      <li><a href="#" data-filter="finance">Finance</a></li>
-    </ul>
     <div class="gs-apps-grid">
       <a class="gs-app-card" data-group="privacy" href="https://apps.apple.com/us/app/secret-calculator-vault-photo/id1479873340" target="_blank" rel="noopener">
         <img class="gs-app-icon" src="img/apps/1479873340.jpg" alt="Secret Calculator Vault Photo icon" loading="lazy" width="84" height="84">
@@ -211,23 +201,6 @@
         <span class="gs-badge-new">New</span>
       </a>
     </div>
-    <script>
-    (function () {
-      var links = document.querySelectorAll(".gs-filter a");
-      var cards = document.querySelectorAll(".gs-app-card");
-      links.forEach(function (link) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          links.forEach(function (l) { l.classList.remove("current"); });
-          link.classList.add("current");
-          var f = link.getAttribute("data-filter");
-          cards.forEach(function (card) {
-            card.style.display = (f === "all" || card.getAttribute("data-group") === f) ? "" : "none";
-          });
-        });
-      });
-    })();
-    </script>
   </section>
   <!--main-section-end-->
 
