@@ -1,461 +1,383 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gambit Studio — iOS apps, crafted with intent</title>
-  <meta name="description" content="Gambit Studio is an independent iOS studio building 20 focused apps across privacy, health, productivity, games and more — crafted with intent.">
-  <meta name="theme-color" content="#08080f">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="img/brand/logo.png">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gambit Studio">
-  <meta property="og:description" content="iOS apps, crafted with intent.">
-  <meta property="og:image" content="img/brand/og-image.png">
-  <meta property="og:url" content="https://gambitstudiotech.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!doctype html>
+<html>
 
-  <!-- ===== NAV ===== -->
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top">
-        <img src="img/brand/logo.png" alt="Gambit Studio logo">
-        <span>Gambit Studio</span>
-      </a>
-      <nav class="nav-links">
-        <a class="link" href="#apps">Apps</a>
-        <a class="link" href="#studio">Studio</a>
-        <a class="link" href="#contact">Contact</a>
-        <a class="btn btn-primary" href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955" target="_blank" rel="noopener">App Store</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <title>Gambit Studio</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
+    rel='stylesheet' type='text/css'>
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+  <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+  <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/wow.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+
+</head>
+
+<body>
+  <header class="header" id="header">
+    <!--header-start-->
+    <div class="header-top-email">
+      <a href="#" onclick="copyEmail(event)"><i class="fa-envelope"></i> contact@gambitstudiotech.com</a>
+    </div>
+    <div class="container">
+      <figure class="logo animated fadeInDown delay-07s">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+      </figure>
+      <h1 class="animated fadeInDown delay-07s">Welcome to Gambit Studio</h1>
+      <ul class="we-create animated fadeInUp delay-1s">
+        <li>We are a digital agency passionate about creating excellent applications</li>
+      </ul>
+      <a class="link animated fadeInUp delay-1s servicelink" href="#Portfolio">Get Started</a>
     </div>
   </header>
+  <!--header-end-->
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="top">
-    <div class="hero-bg"></div>
-    <div class="wrap hero-content">
-      <span class="eyebrow"><span class="dot"></span> Independent iOS studio</span>
-      <h1>We build iOS apps<br>people actually <span class="grad-text">keep</span>.</h1>
-      <p class="lead">Gambit Studio is a one-person-at-heart studio shipping 20 focused apps across privacy, health, productivity, games and more — each one small, sharp, and made with intent.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#apps">Explore the apps</a>
-        <a class="btn btn-ghost" href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955" target="_blank" rel="noopener">View on the App Store</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="num grad-text">20</div><div class="label">Apps shipped</div></div>
-        <div class="stat"><div class="num grad-text">7</div><div class="label">Categories</div></div>
-        <div class="stat"><div class="num grad-text">1.4k+</div><div class="label">Ratings worldwide</div></div>
+  <div class="c-logo-part">
+    <!--c-logo-part-start-->
+    <div class="container">
+      <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955?l=pt"
+        target="_blank" class="appstore-link"><img src="img/AppStore.png" alt="App Store"></a>
+    </div>
+  </div>
+
+  <nav class="main-nav-outer" id="test">
+    <!--main-nav-start-->
+    <div class="container">
+      <ul class="main-nav">
+        <li><a href="#header">Home</a></li>
+        <li class="small-logo">
+          <a href="#header"><img src="img/small-logo.png" alt=""></a>
+        </li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+      </ul>
+      <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+  </nav>
+  <!--main-nav-end-->
+
+  <section class="main-section paddind" id="Portfolio">
+    <h2>Our Apps</h2>
+    <h6>20 apps on the App Store &mdash; browse by what you need.</h6>
+    <ul class="Portfolio-nav gs-filter">
+      <li><a href="#" class="current" data-filter="all">All Apps</a></li>
+      <li><a href="#" data-filter="privacy">Privacy &amp; Utilities</a></li>
+      <li><a href="#" data-filter="health">Health &amp; Fitness</a></li>
+      <li><a href="#" data-filter="productivity">Productivity</a></li>
+      <li><a href="#" data-filter="games">Games</a></li>
+      <li><a href="#" data-filter="creative">Photo &amp; Creative</a></li>
+      <li><a href="#" data-filter="lifestyle">Lifestyle</a></li>
+      <li><a href="#" data-filter="finance">Finance</a></li>
+    </ul>
+    <div class="gs-apps-grid">
+      <a class="gs-app-card" data-group="privacy" href="https://apps.apple.com/us/app/secret-calculator-vault-photo/id1479873340" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1479873340.jpg" alt="Secret Calculator Vault Photo icon" loading="lazy" width="84" height="84">
+        <h3>Secret Calculator Vault Photo</h3>
+        <p>Hide private photos and videos behind a fully working calculator.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.4</span>
+      </a>
+      <a class="gs-app-card" data-group="creative" href="https://apps.apple.com/us/app/iphotos-photo-collage-editor/id1517929511" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1517929511.jpg" alt="iPhotos &bull; Photo Collage Editor icon" loading="lazy" width="84" height="84">
+        <h3>iPhotos &bull; Photo Collage Editor</h3>
+        <p>Craft beautiful photo collages and quick edits in seconds.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.0</span>
+      </a>
+      <a class="gs-app-card" data-group="creative" href="https://apps.apple.com/us/app/neon-glow-draw-light-art-3d/id1502280869" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1502280869.jpg" alt="Neon Glow Draw: Light Art 3D icon" loading="lazy" width="84" height="84">
+        <h3>Neon Glow Draw: Light Art 3D</h3>
+        <p>Paint with light and turn every stroke into glowing neon art.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.4</span>
+      </a>
+      <a class="gs-app-card" data-group="games" href="https://apps.apple.com/us/app/truco-marcador-conta-tento/id1486427751" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1486427751.jpg" alt="Truco Marcador &bull; Conta Tento icon" loading="lazy" width="84" height="84">
+        <h3>Truco Marcador &bull; Conta Tento</h3>
+        <p>The fastest, cleanest way to score your Truco matches.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</span>
+      </a>
+      <a class="gs-app-card" data-group="productivity" href="https://apps.apple.com/us/app/cronos-task-and-time-manager/id1510650044" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1510650044.jpg" alt="Cronos &bull; Task and Time Manager icon" loading="lazy" width="84" height="84">
+        <h3>Cronos &bull; Task and Time Manager</h3>
+        <p>Plan tasks and master your time with a calm, focused planner.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="games" href="https://apps.apple.com/us/app/sueca-games-never-have/id1491372792" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1491372792.jpg" alt="Sueca Games &bull; Never Have icon" loading="lazy" width="84" height="84">
+        <h3>Sueca Games &bull; Never Have</h3>
+        <p>Party games and Sueca scoring for nights with friends.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="privacy" href="https://apps.apple.com/us/app/cloak-app-lock-blocker/id6755939574" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6755939574.jpg" alt="Cloak: App Lock &amp; Blocker icon" loading="lazy" width="84" height="84">
+        <h3>Cloak: App Lock &amp; Blocker</h3>
+        <p>Lock apps and block distractions to guard your focus and privacy.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 3.7</span>
+      </a>
+      <a class="gs-app-card" data-group="health" href="https://apps.apple.com/us/app/blw-baby-led-weaning-tracker/id6758321287" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6758321287.jpg" alt="BLW Baby Led Weaning Tracker icon" loading="lazy" width="84" height="84">
+        <h3>BLW Baby Led Weaning Tracker</h3>
+        <p>Track first foods and reactions on your baby-led weaning journey.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="finance" href="https://apps.apple.com/us/app/my-expenses-personal-finances/id6502218501" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6502218501.jpg" alt="My Expenses: Personal Finances icon" loading="lazy" width="84" height="84">
+        <h3>My Expenses: Personal Finances</h3>
+        <p>Track spending and take back control of your personal finances.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="health" href="https://apps.apple.com/us/app/walk-steps-calorie-tracker/id6756285965" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6756285965.jpg" alt="Walk: Steps &amp; Calorie Tracker icon" loading="lazy" width="84" height="84">
+        <h3>Walk: Steps &amp; Calorie Tracker</h3>
+        <p>Count steps, distance and calories as you move through the day.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="lifestyle" href="https://apps.apple.com/us/app/philos-philosophy-stoicism/id6771598930" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6771598930.jpg" alt="Philos: Philosophy &amp; Stoicism icon" loading="lazy" width="84" height="84">
+        <h3>Philos: Philosophy &amp; Stoicism</h3>
+        <p>Daily stoic wisdom and reflections to steady your mind.</p>
+        <span class="gs-app-meta"><span class="gs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</span>
+      </a>
+      <a class="gs-app-card" data-group="games" href="https://apps.apple.com/us/app/rocket-pocket-aim-launch/id1479692515" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1479692515.jpg" alt="Rocket Pocket: Aim &amp; Launch icon" loading="lazy" width="84" height="84">
+        <h3>Rocket Pocket: Aim &amp; Launch</h3>
+        <p>Aim, launch and blast through a pocket-sized arcade challenge.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="lifestyle" href="https://apps.apple.com/us/app/hair-schedule-care-routine/id6771595616" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6771595616.jpg" alt="Hair Schedule: Care Routine icon" loading="lazy" width="84" height="84">
+        <h3>Hair Schedule: Care Routine</h3>
+        <p>Build and follow a hair-care routine that actually sticks.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="health" href="https://apps.apple.com/us/app/my-way-sa%C3%BAde-e-alimenta%C3%A7%C3%A3o/id1512222153" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1512222153.jpg" alt="My Way - Sa&uacute;de e Alimenta&ccedil;&atilde;o icon" loading="lazy" width="84" height="84">
+        <h3>My Way - Sa&uacute;de e Alimenta&ccedil;&atilde;o</h3>
+        <p>Healthy eating and lifestyle guidance, your way.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="productivity" href="https://apps.apple.com/us/app/college-attendance-control/id1508371263" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/1508371263.jpg" alt="College &bull; Attendance Control icon" loading="lazy" width="84" height="84">
+        <h3>College &bull; Attendance Control</h3>
+        <p>Never miss a class &mdash; track attendance and absences with ease.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="health" href="https://apps.apple.com/us/app/peptide-log-injection-diary/id6772795048" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6772795048.jpg" alt="Peptide Log: Injection Diary icon" loading="lazy" width="84" height="84">
+        <h3>Peptide Log: Injection Diary</h3>
+        <p>Log peptide protocols and injections in a clean daily diary.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="lifestyle" href="https://apps.apple.com/us/app/bible-pills-verses-prayer/id6761505951" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6761505951.jpg" alt="Bible Pills: Verses &amp; Prayer icon" loading="lazy" width="84" height="84">
+        <h3>Bible Pills: Verses &amp; Prayer</h3>
+        <p>Bite-size verses and prayers to keep faith close each day.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="health" href="https://apps.apple.com/us/app/sunrise-alarm-wake-up-clock/id6758740138" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6758740138.jpg" alt="Sunrise Alarm: Wake Up Clock icon" loading="lazy" width="84" height="84">
+        <h3>Sunrise Alarm: Wake Up Clock</h3>
+        <p>Wake up gently with a sunrise alarm built for better mornings.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="productivity" href="https://apps.apple.com/us/app/english-for-devs-devlingo/id6759974641" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6759974641.jpg" alt="English for Devs - Devlingo icon" loading="lazy" width="84" height="84">
+        <h3>English for Devs - Devlingo</h3>
+        <p>Learn the English developers actually use, one lesson at a time.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+      <a class="gs-app-card" data-group="privacy" href="https://apps.apple.com/us/app/safedoc-pdf-scanner-vault/id6767075189" target="_blank" rel="noopener">
+        <img class="gs-app-icon" src="img/apps/6767075189.jpg" alt="SafeDoc: PDF Scanner &amp; Vault icon" loading="lazy" width="84" height="84">
+        <h3>SafeDoc: PDF Scanner &amp; Vault</h3>
+        <p>Scan, sign and lock documents in a private, encrypted vault.</p>
+        <span class="gs-badge-new">New</span>
+      </a>
+    </div>
+    <script>
+    (function () {
+      var links = document.querySelectorAll(".gs-filter a");
+      var cards = document.querySelectorAll(".gs-app-card");
+      links.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          links.forEach(function (l) { l.classList.remove("current"); });
+          link.classList.add("current");
+          var f = link.getAttribute("data-filter");
+          cards.forEach(function (card) {
+            card.style.display = (f === "all" || card.getAttribute("data-group") === f) ? "" : "none";
+          });
+        });
+      });
+    })();
+    </script>
+  </section>
+  <!--main-section-end-->
+
+  <section class="main-section alabaster">
+    <!--main-section alabaster-start-->
+    <div class="container" id="service">
+      <div class="row">
+        <br />
+        <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+          <img src="img/iphone.png" alt="">
+        </figure>
+        <div class="col-lg-7 col-sm-8 featured-work">
+          <h2>Gambit Studio Products</h2>
+          <P class="padding-b">We focus on native iOS development, with over 200k active users
+            monthly, always seeking to deliver excellent products on Apple platforms.</P>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-02s">
+              <i class="fa-magic"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-02s">
+              <h3>State-of-the-art Tech</h3>
+              <p>We use the latest available technologies, such as augmented reality, health data,
+                optimized storage and animations.</p>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-04s">
+              <i class="fa-gift"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-04s">
+              <h3>User-Focused Design</h3>
+              <p>We implement design thinking processes and focus on customer feedback, seeking constant
+                evolution of our products. This way, we provide intuitive and beautiful solutions.</p>
+            </div>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-col1 wow fadeInRight delay-06s">
+              <i class="fa-dashboard"></i>
+            </div>
+            <div class="featured-box-col2 wow fadeInRight delay-06s">
+              <h3>24/7 Support</h3>
+              <p>We offer constant support for our applications, always seeking to provide the best experience
+                for our users.</p>
+            </div>
+          </div>
+          <a class="Learn-More" href="#">Learn More</a>
+        </div>
       </div>
     </div>
   </section>
+  <!--main-section alabaster-end-->
 
-  <!-- ===== APPS ===== -->
-  <section class="apps" id="apps">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="kicker">The catalog</span>
-        <h2>Every app we've shipped</h2>
-        <p>From a photo vault disguised as a calculator to step trackers and stoic journals — browse by what you need.</p>
-      </div>
-      <div class="filters-bar reveal">
-        <div class="filters">
-          <button class="chip active" data-filter="all">All apps</button>
-          <button class="chip" data-filter="privacy">Privacy &amp; Utilities</button>
-          <button class="chip" data-filter="health">Health &amp; Fitness</button>
-          <button class="chip" data-filter="productivity">Productivity</button>
-          <button class="chip" data-filter="games">Games</button>
-          <button class="chip" data-filter="creative">Photo &amp; Creative</button>
-          <button class="chip" data-filter="lifestyle">Lifestyle</button>
-          <button class="chip" data-filter="finance">Finance</button>
-        </div>
-        <label class="app-search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input type="search" id="app-search-input" placeholder="Search apps…" autocomplete="off" aria-label="Search apps">
-        </label>
-      </div>
-      <div class="app-grid">
-      <a class="app-card featured reveal" data-group="privacy" href="https://apps.apple.com/us/app/secret-calculator-vault-photo/id1479873340?uo=4" target="_blank" rel="noopener">
-        <span class="badge-pop">Popular</span>
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1479873340.jpg" alt="Secret Calculator Vault Photo icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Secret Calculator Vault Photo</div>
-            <div class="app-genre">Photo &amp; Video</div>
-          </div>
-        </div>
-        <p class="app-desc">Hide private photos and videos behind a fully working calculator.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★☆</span> 4.4</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card featured reveal" data-group="creative" href="https://apps.apple.com/us/app/iphotos-photo-collage-editor/id1517929511?uo=4" target="_blank" rel="noopener">
-        <span class="badge-pop">Popular</span>
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1517929511.jpg" alt="iPhotos • Photo Collage editor icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">iPhotos • Photo Collage editor</div>
-            <div class="app-genre">Photo &amp; Video</div>
-          </div>
-        </div>
-        <p class="app-desc">Craft beautiful photo collages and quick edits in seconds.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★☆</span> 4.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="creative" href="https://apps.apple.com/us/app/neon-glow-draw-light-art-3d/id1502280869?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1502280869.jpg" alt="Neon Glow Draw: Light Art 3D icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Neon Glow Draw: Light Art 3D</div>
-            <div class="app-genre">Graphics &amp; Design</div>
-          </div>
-        </div>
-        <p class="app-desc">Paint with light and turn every stroke into glowing neon art.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★☆</span> 4.4</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="games" href="https://apps.apple.com/us/app/truco-marcador-conta-tento/id1486427751?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1486427751.jpg" alt="Truco Marcador • Conta Tento icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Truco Marcador • Conta Tento</div>
-            <div class="app-genre">Games</div>
-          </div>
-        </div>
-        <p class="app-desc">The fastest, cleanest way to score your Truco matches.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 4.8</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="productivity" href="https://apps.apple.com/us/app/cronos-task-and-time-manager/id1510650044?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1510650044.jpg" alt="Cronos • Task and Time Manager icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Cronos • Task and Time Manager</div>
-            <div class="app-genre">Productivity</div>
-          </div>
-        </div>
-        <p class="app-desc">Plan tasks and master your time with a calm, focused planner.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="games" href="https://apps.apple.com/us/app/sueca-games-never-have/id1491372792?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1491372792.jpg" alt="Sueca Games • Never Have icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Sueca Games • Never Have</div>
-            <div class="app-genre">Games</div>
-          </div>
-        </div>
-        <p class="app-desc">Party games and Sueca scoring for nights with friends.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="privacy" href="https://apps.apple.com/us/app/cloak-app-lock-blocker/id6755939574?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6755939574.jpg" alt="Cloak: App Lock &amp; Blocker icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Cloak: App Lock &amp; Blocker</div>
-            <div class="app-genre">Utilities</div>
-          </div>
-        </div>
-        <p class="app-desc">Lock apps and block distractions to guard your focus and privacy.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★☆</span> 3.7</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="health" href="https://apps.apple.com/us/app/blw-baby-led-weaning-tracker/id6758321287?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6758321287.jpg" alt="BLW Baby Led Weaning Tracker icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">BLW Baby Led Weaning Tracker</div>
-            <div class="app-genre">Health &amp; Fitness</div>
-          </div>
-        </div>
-        <p class="app-desc">Track first foods and reactions on your baby-led weaning journey.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="finance" href="https://apps.apple.com/us/app/my-expenses-personal-finances/id6502218501?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6502218501.jpg" alt="My Expenses: Personal Finances icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">My Expenses: Personal Finances</div>
-            <div class="app-genre">Finance</div>
-          </div>
-        </div>
-        <p class="app-desc">Track spending and take back control of your personal finances.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="health" href="https://apps.apple.com/us/app/walk-steps-calorie-tracker/id6756285965?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6756285965.jpg" alt="Walk: Steps &amp; Calorie Tracker icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Walk: Steps &amp; Calorie Tracker</div>
-            <div class="app-genre">Sports</div>
-          </div>
-        </div>
-        <p class="app-desc">Count steps, distance and calories as you move through the day.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="lifestyle" href="https://apps.apple.com/us/app/philos-philosophy-stoicism/id6771598930?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6771598930.jpg" alt="Philos: Philosophy &amp; Stoicism icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Philos: Philosophy &amp; Stoicism</div>
-            <div class="app-genre">Lifestyle</div>
-          </div>
-        </div>
-        <p class="app-desc">Daily stoic wisdom and reflections to steady your mind.</p>
-        <div class="app-foot">
-          <span class="app-meta"><span class="stars">★★★★★</span> 5.0</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="games" href="https://apps.apple.com/us/app/rocket-pocket-aim-launch/id1479692515?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1479692515.jpg" alt="Rocket Pocket: Aim &amp; Launch icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Rocket Pocket: Aim &amp; Launch</div>
-            <div class="app-genre">Games</div>
-          </div>
-        </div>
-        <p class="app-desc">Aim, launch and blast through a pocket-sized arcade challenge.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="lifestyle" href="https://apps.apple.com/us/app/hair-schedule-care-routine/id6771595616?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6771595616.jpg" alt="Hair Schedule: Care Routine icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Hair Schedule: Care Routine</div>
-            <div class="app-genre">Lifestyle</div>
-          </div>
-        </div>
-        <p class="app-desc">Build and follow a hair-care routine that actually sticks.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="health" href="https://apps.apple.com/us/app/my-way-sa%C3%BAde-e-alimenta%C3%A7%C3%A3o/id1512222153?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1512222153.jpg" alt="My Way - Saúde e Alimentação icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">My Way - Saúde e Alimentação</div>
-            <div class="app-genre">Health &amp; Fitness</div>
-          </div>
-        </div>
-        <p class="app-desc">Healthy eating and lifestyle guidance, your way.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="productivity" href="https://apps.apple.com/us/app/college-attendance-control/id1508371263?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/1508371263.jpg" alt="College • Attendance Control icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">College • Attendance Control</div>
-            <div class="app-genre">Education</div>
-          </div>
-        </div>
-        <p class="app-desc">Never miss a class — track attendance and absences with ease.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="health" href="https://apps.apple.com/us/app/peptide-log-injection-diary/id6772795048?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6772795048.jpg" alt="Peptide Log: Injection Diary icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Peptide Log: Injection Diary</div>
-            <div class="app-genre">Health &amp; Fitness</div>
-          </div>
-        </div>
-        <p class="app-desc">Log peptide protocols and injections in a clean daily diary.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="lifestyle" href="https://apps.apple.com/us/app/bible-pills-verses-prayer/id6761505951?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6761505951.jpg" alt="Bible Pills: Verses &amp; Prayer icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Bible Pills: Verses &amp; Prayer</div>
-            <div class="app-genre">Lifestyle</div>
-          </div>
-        </div>
-        <p class="app-desc">Bite-size verses and prayers to keep faith close each day.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="health" href="https://apps.apple.com/us/app/sunrise-alarm-wake-up-clock/id6758740138?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6758740138.jpg" alt="Sunrise Alarm: Wake Up Clock icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">Sunrise Alarm: Wake Up Clock</div>
-            <div class="app-genre">Health &amp; Fitness</div>
-          </div>
-        </div>
-        <p class="app-desc">Wake up gently with a sunrise alarm built for better mornings.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="productivity" href="https://apps.apple.com/us/app/english-for-devs-devlingo/id6759974641?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6759974641.jpg" alt="English for Devs - Devlingo icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">English for Devs - Devlingo</div>
-            <div class="app-genre">Developer Tools</div>
-          </div>
-        </div>
-        <p class="app-desc">Learn the English developers actually use, one lesson at a time.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="app-card reveal" data-group="privacy" href="https://apps.apple.com/us/app/safedoc-pdf-scanner-vault/id6767075189?uo=4" target="_blank" rel="noopener">
-        
-        <div class="app-top">
-          <img class="app-icon" src="img/apps/6767075189.jpg" alt="SafeDoc: PDF Scanner &amp; Vault icon" loading="lazy" width="62" height="62">
-          <div>
-            <div class="app-title">SafeDoc: PDF Scanner &amp; Vault</div>
-            <div class="app-genre">Utilities</div>
-          </div>
-        </div>
-        <p class="app-desc">Scan, sign and lock documents in a private, encrypted vault.</p>
-        <div class="app-foot">
-          <span class="badge-new">New</span>
-          <span class="app-link">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      </div>
-      <div class="apps-empty" id="apps-empty" hidden>
-        <p>No apps match your search.</p>
-        <button class="btn btn-ghost" id="apps-reset">Clear filters</button>
-      </div>
-    </div>
-  </section>
+  <!-- <li>
+      <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955?l=pt" target="_blank"><img src="img/facebook.png" alt=""></a>
+  </li> -->
+  <script type="text/javascript">
+    function copyEmail(event) {
+      event.preventDefault();
+      var email = 'contact@gambitstudiotech.com';
+      navigator.clipboard.writeText(email).then(function() {
+        var link = event.target.closest('a');
+        var originalText = link.innerHTML;
+        link.innerHTML = '<i class="fa-check"></i> Email copied!';
+        setTimeout(function() {
+          link.innerHTML = originalText;
+        }, 2000);
+      });
+    }
 
-  <!-- ===== STUDIO ===== -->
-  <section class="about" id="studio">
-    <div class="wrap about-grid">
-      <div class="reveal">
-        <span class="kicker" style="color:var(--cyan);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;">The studio</span>
-        <h2>Small apps, played like a gambit.</h2>
-        <p>A gambit is a calculated move — give up something small to gain the advantage. That's how we build: tightly scoped apps that do one thing well, ship fast, and earn their place on your home screen.</p>
-        <p>Every Gambit Studio app is designed, coded, localized and supported in-house, with a focus on privacy, clarity and craft.</p>
-        <div class="about-values">
-          <div class="value"><span class="vi">⚡</span><span class="vt"><strong>Fast &amp; focused</strong><span>No bloat. Each app solves one real problem.</span></span></div>
-          <div class="value"><span class="vi">🔒</span><span class="vt"><strong>Privacy first</strong><span>Your data stays yours — on-device wherever possible.</span></span></div>
-          <div class="value"><span class="vi">🌍</span><span class="vt"><strong>Localized worldwide</strong><span>Built for people in dozens of languages and regions.</span></span></div>
-        </div>
-      </div>
-      <div class="about-visual reveal">
-        <img src="img/brand/hero-bg.png" alt="Gambit Studio">
-      </div>
-    </div>
-  </section>
+    $(document).ready(function (e) {
+      $('#test').scrollToFixed();
+      $('.res-nav_click').click(function () {
+        $('.main-nav').slideToggle();
+        return false
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-band" id="contact">
-    <div class="wrap">
-      <div class="cta-inner reveal">
-        <h2>Have an idea, feedback, or a bug?</h2>
-        <p>We read everything. Reach out and we'll get back to you — support for every app lives right here.</p>
-        <a class="btn btn-primary" href="mailto:joaofcosta1998@gmail.com">Get in touch</a>
-      </div>
-    </div>
-  </section>
+      });
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site">
-    <div class="wrap">
-      <div class="foot-grid">
-        <div class="foot-brand">
-          <a class="brand" href="#top"><img src="img/brand/logo.png" alt="Gambit Studio logo"><span>Gambit Studio</span></a>
-          <p>iOS apps, crafted with intent. Designed and built by João Victor Flores da Costa.</p>
-        </div>
-        <div class="foot-col">
-          <h4>Explore</h4>
-          <a href="#apps">All apps</a>
-          <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955" target="_blank" rel="noopener">App Store profile</a>
-          <a href="#studio">The studio</a>
-        </div>
-        <div class="foot-col">
-          <h4>Legal &amp; support</h4>
-          <a href="mailto:joaofcosta1998@gmail.com">Support</a>
-          <a href="https://drive.google.com/file/d/147xkp4cekrxhrBYZnzV-J4PzCSqkix7t/view?usp=sharing" target="_blank" rel="noopener">Privacy Policy</a>
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use</a>
-        </div>
-      </div>
-      <div class="foot-bottom">
-        <span>&copy; <span id="year">2026</span> Gambit Studio. All rights reserved.</span>
-        <div class="socials">
-          <a href="https://apps.apple.com/us/developer/joao-victor-flores-da-costa/id1469303955" target="_blank" rel="noopener">App Store</a>
-          <a href="mailto:joaofcosta1998@gmail.com">Email</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    });
+  </script>
 
-  <script src="js/main.js"></script>
+  <script>
+    wow = new WOW({
+      animateClass: 'animated',
+      offset: 100
+    });
+    wow.init();
+  </script>
+
+
+  <script type="text/javascript">
+    $(window).load(function () {
+
+      $('.main-nav li a, .servicelink').bind('click', function (event) {
+        var $anchor = $(this);
+
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 102
+        }, 1500, 'easeInOutExpo');
+        if ($(window).width() < 768) {
+          $('.main-nav').hide();
+        }
+        event.preventDefault();
+      });
+    })
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+
+
+      var $container = $('.portfolioContainer'),
+        $body = $('body'),
+        colW = 375,
+        columns = null;
+
+
+      $container.isotope({
+        resizable: true,
+        masonry: {
+          columnWidth: colW
+        }
+      });
+
+      $(window).smartresize(function () {
+        // check if columns has changed
+        var currentColumns = Math.floor(($body.width() - 30) / colW);
+        if (currentColumns !== columns) {
+          // set new column count
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container.width(columns * colW)
+            .isotope('reLayout');
+        }
+
+      }).smartresize(); // trigger resize to set container width
+      $('.portfolioFilter a').click(function () {
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+          filter: selector,
+        });
+        return false;
+      });
+
+    });
+  </script>
+
 </body>
+
 </html>
