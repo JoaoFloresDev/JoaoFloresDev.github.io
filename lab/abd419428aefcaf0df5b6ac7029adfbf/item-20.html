@@ -48,6 +48,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
 .shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
 .shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
 .st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
 .st.run{background:rgba(13,150,104,.16);color:var(--ok)}
 .st.appr{background:rgba(201,147,10,.16);color:#c9930a}
@@ -113,7 +114,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 15:12 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — A/B de arte nova + ORDEM dos prints RODANDO (29 idiomas)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 27/09 (ASC/git): experimento 9570de85 APPROVED, startDate 29/08, endDate 27/11 — rodando.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:25 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — A/B de arte nova + ORDEM dos prints RODANDO (29 idiomas)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 27/09 (ASC/git): experimento 9570de85 APPROVED, startDate 29/08, endDate 27/11 — rodando.
 
 APROVADO e JA RODANDO desde 28-29/08 (startDate preenchido; a API recusa novo Start dizendo &#x27;already running&#x27;). Cuidado ao ler o estado: o campo &#x27;started&#x27; vem NULO mesmo com o teste no ar — o que vale e o startDate. Nada a fazer ate ter numero; resultado (lift/confianca) so aparece no web UI da ASC. Experimento &#x27;Panorama v3 ordem 2026-08-28&#x27; (id 9570de85-a8a3-4601-a2c6-2a56c6936a0d) em WAITING_FOR_REVIEW, submetido 29/08 via API (reviewSubmission a6326fc3). Trafego 50%. Arte nova do ChatGPT (fundo azul limpo, phones inteiros com margem, 1 hero por print) + headline verb-split por codigo em 29 locales, APP_IPHONE_67 + 65 (+5,5&quot; em pt-BR/en-US) = 180 sets / 900 PNGs, verificados por checksum 2x (upload+60s e +1h: 180/180 limpos). 3 tratamentos so mudando a ORDEM: A velocidade-primeiro (lancar/donut/relatorio/calendario/barras), B insight-primeiro (donut/lancar/relatorio/calendario/barras), C calendario-primeiro (calendario/lancar/donut/relatorio/barras). Sem control dedicado — a ASC compara com a pagina atual (arte antiga). QUANDO APROVAR: (1) re-verificar checksums ANTES do Start (LEARNINGS #35): `python3 tools/upload_experiment.py . --verify` na pasta do experimento; (2) PATCH /v2/appStoreVersionExperiments/{id} {started:true}. Pasta: Apps/recovery/flutter/Controle-de-gastos/ppo-pipeline/experiments/2026-08-28_ppo-01_panorama-v3-ordering/. Preview: http://localhost:8765/?app=meus-gastos-ppo-panorama-v3-ordem-2026-08-28
 
