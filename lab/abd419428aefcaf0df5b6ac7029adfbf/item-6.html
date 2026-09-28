@@ -114,10 +114,110 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:31 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Criar os apps novos na App Store Connect e conferir o Paid Apps Agreement</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): GET /v1/apps (22 apps) em 28/09 continua sem nenhum bundle contractiontimer, impostor, moonphases ou simuladocnh. Os 4 ainda precisam ser criados na web. Item mantido.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:42 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Rotina do lab: 23 itens de rotina na fila do orchestrator (10 checkpoints ASO sem baseline, 5 rating-first, 6 gaps de analytics, 1 ASO parado, 1 LEARNINGS duplicado)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (wo.py list): 10 checkpoints ASO vencidos (blw, philos_app, stepsSwiftUI, AirDraw, PeptideCalc, SuecaDrink, TrucoMarcador, Foguetineo, DevLingoRepo, Cronogram-Capilar), 5 rating-first (BLW, Hair, Meus Gastos, Sunrise, Walk), 6 gaps de analytics (BLW, College, Meus Gastos ×2, WTMP, Peptide), 1 ASO parado (College) e 2026-09-08_learnings-dup-lab — todos [0/1]. Nenhuma das 38 iterações em disco tem metrics/d00_baseline.json, então nenhum checkpoint é mensurável: os 6 itens &#x27;Checkpoint D.. vencido&#x27; que estavam aqui foram arquivados e o scan.py deixou de promovê-los a item (só conta no resumo) até a iteração ter baseline. Os work orders continuam na fila (`python3 _GambitStudio/orchestrator/wo.py list`, `/lab-orchestrate &lt;id&gt;`). Este é o ÚNICO item de rotina (id routine-summary; o scan atualiza os números e preserva a nota).
+
+Consertos pendentes fora do scan: âncora live_date no meta.json do Walk (iter-03) e ativação do painel (firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total).
 
 ---
 
-Verificado 27/09 (ASC/git): GET /v1/apps (22 apps) em 27/09 não tem nenhum bundle contractiontimer/impostor/moonphases/simuladocnh — os 4 ainda precisam ser criados na web.
+Verificado 27/09 (ASC/git): wo.py list em 27/09: 10 checkpoints ASO vencidos (blw, philos_app, stepsSwiftUI, AirDraw, PeptideCalc, SuecaDrink, TrucoMarcador, Foguetineo, DevLingoRepo, Cronogram-Capilar), 5 rating-first (BLW, Hair, Meus Gastos, Sunrise, Walk), 5 analytics-gap (BLW, College, Meus Gastos, WTMP, Peptide), 1 ASO parado (College) e 2026-09-08_learnings-dup-lab — todos [0/1]. LEARNINGS.md continua com &#x27;## 85.&#x27; nas linhas 1035 e 1133 e &#x27;## 87.&#x27; nas linhas 1080 e 1139. meta.json do Walk (iter-03) segue sem live_date. firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total (o conserto do item de ativação não entrou). Os 14 itens de checkpoint individuais que estavam aqui viraram este resumo (RULES: rotina é linha de resumo, não item por achado).
 
-A API não cria app (POST /v1/apps é bloqueado), então é na web: appstoreconnect.apple.com/apps → + → Novo app, plataforma iOS, idioma principal Português (Brasil), SKU igual ao final do bundle. 1) Contrações — nome &#x27;Contador de Contrações: Onira&#x27;, bundle com.gambitstudio.contractiontimer, SKU contractiontimer, categoria Medicina. 2) Impostor — nome &#x27;Quem é o Impostor? Jogo BR&#x27;, bundle com.gambitstudio.impostor, SKU impostor, categoria Jogos (subcategorias Palavras e Família), secundária Entretenimento. 3) Fases da Lua — nome &#x27;Fases da Lua, Calendário: Jaci&#x27;, bundle com.gambitstudio.moonphases, SKU moonphases, categoria Previsão do tempo, secundária Estilo de vida. 4) Simulado CNH — nome &#x27;Simulado Detran e CNH: Seta&#x27;, bundle com.gambitstudio.simuladocnh, SKU simuladocnh, categoria Educação, secundária Referência; em Preço e disponibilidade deixar SÓ Brasil. Também: em Negócios → Acordos, confirmar que o Paid Apps Agreement está ativo — sem ele as assinaturas não saem de &#x27;Metadados ausentes&#x27;. Me avise quando criar que eu subo metadata, assinaturas e prints por API.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+---
+
+[Fila do orchestrator: 17 item(ns) de rotina esperando]
+Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido aqui em vez de virar um item por achado.
+
+---
+
+[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1113)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
+
+---
+
+[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1130), #87 (linhas 1077 e 1136)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
+
+---
+
+[LEARNINGS com numeração duplicada: #85 (linhas 1035 e 1133), #87 (linhas 1080 e 1139)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+ATENÇÃO — a âncora está errada e o checkpoint mediria a janela errada. A cadência do meta.json do Walk conta de 2026-08-18 (dia do PATCH), mas o texto só chegou na loja com a 7.3.0, que ficou READY_FOR_SALE em 2026-08-31T02:59Z (= 30/08 23:59 BRT). O próprio meta diz: &#x27;Entra no ar quando a 7.3.0 for submetida/aprovada&#x27;. Com D0 real = 2026-08-30, o D7 cai em 06/09 e o D14 em 13/09 — nenhum dos dois venceu. Rodar o D14 hoje leria 12 dias PRÉ-live como se fossem pós-live. Ação: reancorar o meta.json (live_date 2026-08-30 + checkpoints 06/09, 13/09, 20/09, 27/09) ANTES de rodar o checkpoint. Walk está em Apps/intermediate/ (supervisionado), por isso a correção ficou proposta e não aplicada. Work order: /lab-orchestrate 2026-08-31_aso-checkpoint-stepsswiftui
+
+---
+
+[O número de ativação do painel está errado em 5 apps — e ele é quem manda a prioridade de produto]
+Fui conferir por que tanto app aparece com &#x27;ativação crítica&#x27; e a causa é uma só: o evento `core_action` foi instrumentado no mutirão de 27-28/08 e, na maioria dos apps, ele só existe na versão MAIS NOVA. Só que a taxa é calculada dividindo pelos usuários novos dos 28 dias inteiros — gente que está em versão antiga e não tem como logar o evento. Os números certos, conferidos commit a commit e tag a tag: Neon aparece 11,1% e é ~58% (o evento só entrou na release/25, que tem 19 dos 99 novos; e `draw_stroke`, que existe em todas as versões, dá 68 de 99). BLW aparece 11,5% e é 27% (`food_log_saved` existe desde a 1.4.0: 71 de 260). iPhotos aparece 20,2% e é 40% (`photo_saved`: 74 de 183). DevLingo aparece 4% e é ~17%, com n=6 — direcional, não conclusão. Meus Gastos aparece sem ativação porque o `core_action` não está em NENHUMA versão publicada, nem na 45.3.2. E o WTMP nem está na loja (0 downloads no mês), então os 34 usuários dele são build interno, não gente de verdade. Por que isso te custa dinheiro: com o número errado, o painel manda &#x27;atacar ativação antes de trazer mais gente&#x27; em quatro apps onde a ativação não é o gargalo — e desvia do que é (retenção D1). A correção é no `firebase_snapshot.py`: dividir pela base das versões que TÊM o evento, e não pelo total. É trabalho meu, de uma sessão. Me fala pra eu fazer.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-05, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-18_iter-01-text-en-US-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
+
+---
+
+[Checkpoint D7 vencido — 2026-08-25_iter-02-text-keywords]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D7 vencido — 2026-09-02_iter-02-text-en-US-keywords]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D7 vencido — 2026-09-04_feature-paywall-export]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-11, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-12, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-25_iter-01-text-en-US-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-14, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-25_iter-02-text-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-19, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-18_iter-01-text-en-US-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 8d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-25_iter-01-text-en-US-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-21, 2d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
+
+---
+
+[Checkpoint D14 vencido — 2026-09-02_iter-02-text-en-US-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 10d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
