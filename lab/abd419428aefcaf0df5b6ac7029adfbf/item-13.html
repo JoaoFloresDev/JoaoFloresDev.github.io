@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>College</title><style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.tiles{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;margin:14px 0 6px;padding-bottom:4px}
+a.tile{display:block;flex:0 0 auto;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(11,83,214,.13);color:var(--acc)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}.fs .fb i.ga{background:#8b5cf6}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{display:flex;gap:8px;margin:10px 0 4px}
+.rc{flex:1;background:rgba(125,125,125,.09);border-radius:9px;padding:6px 9px}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt{margin-top:11px;background:var(--hl);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:#fff;font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+</style></head>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 14:13 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>College — College: aprovar o conserto do &#x27;3 fotos&#x27; + decidir os prints novos em inglês; reler os cliques do carrossel (venceu 21/09); e as 3 alavancas de tráfego</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 27/09 (ASC/git): PhotosCarouselView.swift:126 ainda tem &quot;\(imagePaths.count) fotos&quot; fixo em português (conserto não aplicado); 1.8.0 na loja desde 13/09; nenhum registro de releitura do carrossel em 21/09 no done — a data passou, virou tarefa.
+
+---
+
+[Prints novos em inglês prontos para passar no GPT; decidir o conserto do &quot;3 fotos&quot;]
+5 prints 1320x2868 do app real (simulador, dados de exemplo) em Apps/intermediate/CollegeSchoolControl/store-screenshots/2026-09-14_novos/en-US/. Nada subiu na ASC. Bug achado: PhotosCarouselView.swift:126 escreve &quot;N fotos&quot; fixo em português em todos os idiomas (as traduções photo/photos já existem). O conserto é 1 linha e espera o seu ok. No print 4, o destaque cobre esse texto.
+
+---
+
+[College é o melhor produto do lab e está morrendo de falta de tráfego — três alavancas, todas do mesmo app]
+Fui atrás de qual app os dados mandam priorizar e é esse, com folga. O que ele tem que nenhum outro tem: 72% de ativação real (234 dos 324 que abriram marcaram uma falta — o painel dizia 39,7% porque olhava um evento que só existe na versão nova), e retenção D7 de 21,3% com 230 pessoas na conta, o único do lab acima da referência (8-14%). Melhor: a curva dele SOBE de D3 (11,3%) pra D7 (21,3%) e ainda está em 18,7% no D14, com picos exatamente de 7 em 7 dias — é aluno voltando no mesmo dia da semana. Isso é retenção que estabiliza, o padrão mais raro e mais valioso que existe. E a página converte 10,4% de quem vê, a melhor do conjunto junto com o Hair. O problema é um só: os downloads caíram 40,8% no mês. Quem vê instala, quem instala fica — só que cada vez menos gente vê. É o caso mais claro de ASO/Apple Ads do lab, e é o único app onde investir aquisição não é encher balde furado. Duas alavancas de graça no mesmo app: (1) o anúncio está praticamente desligado — 319 interstitials em 28 dias pra 358 usuários ativos, menos de 1 por pessoa no mês, o que dá uns 2 a 3 dólares. A causa está no código: precisa de 3 aberturas de matéria pra 1 anúncio, com 2 minutos de intervalo, e o gatilho só existe em 2 telas. (2) o pedido de avaliação está no momento errado — ele dispara quando a pessoa CADASTRA a primeira matéria, que é configuração, não benefício. Resultado: das 109 que viram o convite, 50 responderam &#x27;Nem tanto&#x27; e 45 fecharam; sobraram 14 que chegaram na loja. Num app com 4,73 de média, 46% de &#x27;nem tanto&#x27; não é o app sendo ruim, é a pergunta chegando antes de o app ter servido pra alguma coisa. Mover o gatilho pra depois de algumas faltas marcadas ao longo de semanas devolve avaliação de graça. Atualização 11/09: a alavanca (2) está resolvida no código (commit 55b6eab). Não existe mais pergunta antes: o prompt nativo sai ao marcar uma falta com folga, espalhado por 2+ semanas. Entra na próxima versão.
+
+Atualização 11/09 (noite): a alavanca (1) não existe mais, porque o João tirou o AdMob do College. A única compra (NoAds.College) passou a ser o Premium vitalício, que libera as fotos. Os US$ 40 dos últimos 30 dias vieram dessa compra quando ela ainda removia anúncios, então vale acompanhar se a compra continua sendo feita agora que o motivo mudou.
+
+---
+
+[Carrossel &#x27;Conheça também&#x27;: reler os cliques em 21/09, com uma semana de uso real]
+Leitura de 14/09 no GA4 (property 549965903), eventos other_app_shown e other_app_tapped:
+
+- 11 e 12/09: 8 cliques, todos de um único iPhone 12 no Brasil, com impressões também num simulador. Foi teste antes da loja, não conta.
+- 14/09, primeiro dia com a 1.8.0 chegando aos usuários: cerca de 60 pessoas viram o carrossel e 1 clicou (iPhone 16 Pro Max, Brasil). Cerca de 1,6%, mas com n=60 e o dia ainda incompleto, é só direção.
+
+O GA4 não guardava QUAL app foi tocado: o parâmetro &#x27;app&#x27; não estava registrado. Registrei a dimensão personalizada &#x27;Promoted app&#x27; em 14/09. Não vale pro passado, só daqui pra frente.
+
+Em 21/09: taxa de clique por pessoa (quem tocou ÷ quem viu), cliques por app e, se tiver volume, instalações vindas do College nos apps promovidos.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
