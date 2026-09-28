@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Lab</title><style>
+<title>WTMP</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,104 +114,10 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:25 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Rotina do lab: fila do orchestrator (22 itens de rotina: 10 checkpoints ASO, 5 rating-first, 5 gaps de analytics, 1 ASO parado, LEARNINGS #85/#87 duplicados) + 2 consertos pendentes (âncora do meta.json do Walk, ativação do painel)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 27/09 (ASC/git): wo.py list em 27/09: 10 checkpoints ASO vencidos (blw, philos_app, stepsSwiftUI, AirDraw, PeptideCalc, SuecaDrink, TrucoMarcador, Foguetineo, DevLingoRepo, Cronogram-Capilar), 5 rating-first (BLW, Hair, Meus Gastos, Sunrise, Walk), 5 analytics-gap (BLW, College, Meus Gastos, WTMP, Peptide), 1 ASO parado (College) e 2026-09-08_learnings-dup-lab — todos [0/1]. LEARNINGS.md continua com &#x27;## 85.&#x27; nas linhas 1035 e 1133 e &#x27;## 87.&#x27; nas linhas 1080 e 1139. meta.json do Walk (iter-03) segue sem live_date. firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total (o conserto do item de ativação não entrou). Os 14 itens de checkpoint individuais que estavam aqui viraram este resumo (RULES: rotina é linha de resumo, não item por achado).
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:31 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>WTMP — Teste A/B dos prints originais (os recusados) APROVADO e RODANDO — 39 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): experimento 69441ef2 &#x27;Original prints (rejected set)&#x27; está APPROVED com startDate 28/09 04:34 PDT, endDate 27/12, tráfego 50% — a review aprovou e o teste já está no ar (startDate preenchido = rodando, LEARNINGS #39b; o campo &#x27;started&#x27; vem nulo). A conferência de checksums pré-Start não se aplica mais, o Start já aconteceu. Resultado (lift/confiança) só no web UI da ASC. Nada a fazer até ter número.
 
 ---
 
-[Fila do orchestrator: 17 item(ns) de rotina esperando]
-Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido aqui em vez de virar um item por achado.
+Verificado 27/09 (ASC/git): experimento 69441ef2 &#x27;Original prints (rejected set)&#x27; em WAITING_FOR_REVIEW (submission ef0c7c24, 27/09 23:56 UTC).
 
----
-
-[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1113)]
-Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
-
----
-
-[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1130), #87 (linhas 1077 e 1136)]
-Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
-
----
-
-[LEARNINGS com numeração duplicada: #85 (linhas 1035 e 1133), #87 (linhas 1080 e 1139)]
-Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
-
----
-
-[Checkpoint D14 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
-ATENÇÃO — a âncora está errada e o checkpoint mediria a janela errada. A cadência do meta.json do Walk conta de 2026-08-18 (dia do PATCH), mas o texto só chegou na loja com a 7.3.0, que ficou READY_FOR_SALE em 2026-08-31T02:59Z (= 30/08 23:59 BRT). O próprio meta diz: &#x27;Entra no ar quando a 7.3.0 for submetida/aprovada&#x27;. Com D0 real = 2026-08-30, o D7 cai em 06/09 e o D14 em 13/09 — nenhum dos dois venceu. Rodar o D14 hoje leria 12 dias PRÉ-live como se fossem pós-live. Ação: reancorar o meta.json (live_date 2026-08-30 + checkpoints 06/09, 13/09, 20/09, 27/09) ANTES de rodar o checkpoint. Walk está em Apps/intermediate/ (supervisionado), por isso a correção ficou proposta e não aplicada. Work order: /lab-orchestrate 2026-08-31_aso-checkpoint-stepsswiftui
-
----
-
-[O número de ativação do painel está errado em 5 apps — e ele é quem manda a prioridade de produto]
-Fui conferir por que tanto app aparece com &#x27;ativação crítica&#x27; e a causa é uma só: o evento `core_action` foi instrumentado no mutirão de 27-28/08 e, na maioria dos apps, ele só existe na versão MAIS NOVA. Só que a taxa é calculada dividindo pelos usuários novos dos 28 dias inteiros — gente que está em versão antiga e não tem como logar o evento. Os números certos, conferidos commit a commit e tag a tag: Neon aparece 11,1% e é ~58% (o evento só entrou na release/25, que tem 19 dos 99 novos; e `draw_stroke`, que existe em todas as versões, dá 68 de 99). BLW aparece 11,5% e é 27% (`food_log_saved` existe desde a 1.4.0: 71 de 260). iPhotos aparece 20,2% e é 40% (`photo_saved`: 74 de 183). DevLingo aparece 4% e é ~17%, com n=6 — direcional, não conclusão. Meus Gastos aparece sem ativação porque o `core_action` não está em NENHUMA versão publicada, nem na 45.3.2. E o WTMP nem está na loja (0 downloads no mês), então os 34 usuários dele são build interno, não gente de verdade. Por que isso te custa dinheiro: com o número errado, o painel manda &#x27;atacar ativação antes de trazer mais gente&#x27; em quatro apps onde a ativação não é o gargalo — e desvia do que é (retenção D1). A correção é no `firebase_snapshot.py`: dividir pela base das versões que TÊM o evento, e não pelo total. É trabalho meu, de uma sessão. Me fala pra eu fazer.
-
----
-
-[Checkpoint D14 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
-Rodar o checkpoint D14 da iteração (venceu 2026-09-05, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
-
----
-
-[Checkpoint D21 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
-Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
-
----
-
-[Checkpoint D21 vencido — 2026-08-18_iter-01-text-en-US-keywords]
-Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
-
----
-
-[Checkpoint D7 vencido — 2026-08-25_iter-02-text-keywords]
-Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
-
----
-
-[Checkpoint D7 vencido — 2026-09-02_iter-02-text-en-US-keywords]
-Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
-
----
-
-[Checkpoint D7 vencido — 2026-09-04_feature-paywall-export]
-Rodar o checkpoint D7 da iteração (venceu 2026-09-11, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
-
----
-
-[Checkpoint D21 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
-Rodar o checkpoint D21 da iteração (venceu 2026-09-12, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
-
----
-
-[Checkpoint D14 vencido — 2026-08-25_iter-01-text-en-US-keywords]
-Rodar o checkpoint D14 da iteração (venceu 2026-09-14, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
-
----
-
-[Checkpoint D28 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
-Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
-
----
-
-[Checkpoint D14 vencido — 2026-08-25_iter-02-text-keywords]
-Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
-
----
-
-[Checkpoint D28 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
-Rodar o checkpoint D28 da iteração (venceu 2026-09-19, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
-
----
-
-[Checkpoint D28 vencido — 2026-08-18_iter-01-text-en-US-keywords]
-Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 8d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
-
----
-
-[Checkpoint D21 vencido — 2026-08-25_iter-01-text-en-US-keywords]
-Rodar o checkpoint D21 da iteração (venceu 2026-09-21, 2d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
-
----
-
-[Checkpoint D14 vencido — 2026-09-02_iter-02-text-en-US-keywords]
-Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 10d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+Experimento &#x27;Original prints (rejected set)&#x27; submetido em 27/09 (exp 69441ef2, submission ef0c7c24). Tratamento = os prints originais (ladrão de balaclava com selfie, REC/CAUGHT, &#x27;Looks off — but it isn&#x27;t&#x27; + Recording) nos 39 idiomas; en/pt/es são os PNGs originais do git, os outros 36 foram re-renderizados com a ferramenta original e traduzidos. O slot 3 (Bloqueio de Apps com logos do Instagram/WhatsApp) virou o print atual da foto do intruso, como você escolheu. Controle = a página atual. Risco: é a mesma arte que a Apple apontou no 2.5.14, então a review do experimento pode recusar. Quando aprovar, eu confiro os checksums de novo e dou o Start. Pasta: Apps/intermediate/WTMP/ppo-pipeline/experiments/2026-09-27_ppo-01_original-prints.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

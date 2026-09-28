@@ -114,39 +114,110 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:25 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Releases pendentes: BLW, Walk, Hair e DevLingo ainda vendem o pré-prompt com o crash do &#x27;sim&#x27;; iPhotos/BLW sem Crashlytics; philos sem analytics na loja; PeptideCalc precisa travar o Firebase antes do archive</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 27/09 (ASC/git): versões na loja (ASC): BLW 1.5.3 (28/08), Walk 7.3.0 (07/08), Hair Schedule 1.1.0 (25/08), DevLingo 1.9.0 (02/09), PeptideCalc 1.1.3 (04/09), philos 1.0.3 (02/09) — todas anteriores aos commits de 11/09 que tiraram o pré-prompt, então o quadro abaixo continua. College 1.8.0 (na loja desde 13/09, build 29 com o commit 55b6eab) JÁ saiu sem o pré-prompt — sai da lista. Crashlytics: continua ausente no pubspec do blw e no Podfile do iPhotosEditor. philos: ios/Runner/GoogleService-Info.plist ainda untracked (git status). PeptideCalc: project.yml ainda com Firebase from: &quot;12.18.0&quot; (sem exactVersion nem -ObjC). Walk: rating-first continua na fila do orchestrator (5 ratings / 200 downloads em 15/09).
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 16:31 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Rotina do lab: 23 itens de rotina na fila do orchestrator (10 checkpoints ASO sem baseline, 5 rating-first, 6 gaps de analytics, 1 ASO parado, 1 LEARNINGS duplicado)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (wo.py list): 10 checkpoints ASO vencidos (blw, philos_app, stepsSwiftUI, AirDraw, PeptideCalc, SuecaDrink, TrucoMarcador, Foguetineo, DevLingoRepo, Cronogram-Capilar), 5 rating-first (BLW, Hair, Meus Gastos, Sunrise, Walk), 6 gaps de analytics (BLW, College, Meus Gastos ×2, WTMP, Peptide), 1 ASO parado (College) e 2026-09-08_learnings-dup-lab — todos [0/1]. Nenhuma das 38 iterações em disco tem metrics/d00_baseline.json, então nenhum checkpoint é mensurável: os 6 itens &#x27;Checkpoint D.. vencido&#x27; que estavam aqui foram arquivados e o scan.py deixou de promovê-los a item (só conta no resumo) até a iteração ter baseline. Os work orders continuam na fila (`python3 _GambitStudio/orchestrator/wo.py list`, `/lab-orchestrate &lt;id&gt;`). Este é o ÚNICO item de rotina (id routine-summary; o scan atualiza os números e preserva a nota).
+
+Consertos pendentes fora do scan: âncora live_date no meta.json do Walk (iter-03) e ativação do painel (firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total).
 
 ---
 
-[Publicar o pedido de avaliação novo: está no código desde 11/09, mas as versões na loja ainda têm o pré-prompt]
-Levantamento de 27/09. BLW 1.5.3 (na loja): em 60 dias, 561 pessoas abriram o app, 138 viram o &#x27;Está curtindo?&#x27;, 31 disseram sim e só 27 chegaram ao pedido da Apple. Resultado: 7 avaliações no mundo, e 1 no Brasil, porque só ~5% das instalações do BLW são brasileiras (a loja mostra a avaliação de cada país separada). Walk 7.3.0 e Hair 1.1.0 estão na mesma situação e ainda usam o kit com o bug que fechava o app no &#x27;sim&#x27; (LEARNINGS #85). A troca pelo pedido nativo no momento certo já foi commitada em 11/09 em todos, mas só vale com versão nova. Decisão sua: pedir release de BLW, Walk e Hair (e College) quando quiser. Observação: o painel conta avaliações só em us/br/es/mx; o Cloak tem 108 no mundo e o painel mostra 28.
+Verificado 27/09 (ASC/git): wo.py list em 27/09: 10 checkpoints ASO vencidos (blw, philos_app, stepsSwiftUI, AirDraw, PeptideCalc, SuecaDrink, TrucoMarcador, Foguetineo, DevLingoRepo, Cronogram-Capilar), 5 rating-first (BLW, Hair, Meus Gastos, Sunrise, Walk), 5 analytics-gap (BLW, College, Meus Gastos, WTMP, Peptide), 1 ASO parado (College) e 2026-09-08_learnings-dup-lab — todos [0/1]. LEARNINGS.md continua com &#x27;## 85.&#x27; nas linhas 1035 e 1133 e &#x27;## 87.&#x27; nas linhas 1080 e 1139. meta.json do Walk (iter-03) segue sem live_date. firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total (o conserto do item de ativação não entrou). Os 14 itens de checkpoint individuais que estavam aqui viraram este resumo (RULES: rotina é linha de resumo, não item por achado).
 
 ---
 
-[4 apps na loja ainda crasham no &#x27;sim&#x27; da avaliação — a próxima versão de cada um já sai sem a pergunta]
-Na versão publicada, o bug do kit (desde 19/08) fecha o app logo depois de a pessoa responder &#x27;sim&#x27; no sheet de avaliação. Afetados, com as ocorrências em 30 dias: Walk (3), Hair Schedule (2) e PeptideCalc (1). O College e o DevLingo têm o mesmo sheet na loja. Em 11/09 o sheet saiu do código de todos eles, e com ele o crash: Walk 90a5268 (branch dev), Hair Schedule e913134 (version-1), College 55b6eab, DevLingo fcd2681, PeptideCalc 6458969. Hair Schedule: versão 1.2.0 já criada na ASC (12/09), falta build. Falta só release: me diz por quais quer começar e eu faço bump, archive e envio. Atualização 12/09 (GA4): no Hair Schedule 1.1.0 já são 7 crashes em 6 dias no &#x27;sim&#x27; do modal (Colômbia, Brasil x4, Rep. Dominicana, Rússia), um por dia — é o app onde a release mais urgente.
+[Fila do orchestrator: 17 item(ns) de rotina esperando]
+Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido aqui em vez de virar um item por achado.
 
 ---
 
-[iPhotos e BLW não conseguem reportar crash nenhum (o College já foi resolvido)]
-iPhotos (460 usuários ativos) e BLW (294) não têm Crashlytics — o College (376) recebeu hoje e já está reportando. O painel dizia &#x27;100% crash-free&#x27; pros três, e isso era cegueira, não saúde: eles não sabem dizer se estão crashando. Somando com DevLingo, Philos e AppLock, são mais de 1.100 usuários sem nenhuma visibilidade. Já corrigi o painel pra mostrar &#x27;sem dados&#x27; em vez do verde falso, mas colocar Crashlytics neles é mudança de código + release em cada um. O College é o mais urgente: são 36 pessoas que responderam &#x27;sim&#x27; na avaliação com o kit que matava o app, e não existe registro de nenhum desses crashes. Me diz se quero que eu instrumente e em qual ordem.
+[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1113)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
 
 ---
 
-[PeptideCalc: travar o Firebase em 12.18.0 antes do próximo archive — a 12.19 crasha em iPhone real]
-Achado na QA do Hair Schedule 1.2.0 (12/09): o Firebase 12.19.x descarta a category APMMeasurement+SBT quando o target não tem -ObjC e o app morre com &#x27;unrecognized selector fetchSBT&#x27; 1-3 min depois de abrir (firebase-ios-sdk #16634, fix prometido na 12.19.2). O PeptideCalc tem o mesmo quadro: project.yml com Firebase from: 12.18.0, Package.resolved de 11/09 já em GoogleAppMeasurement 12.19.0, sem -ObjC. Nenhuma versão com isso foi pra loja ainda. Fix: exactVersion 12.18.0 no project.yml (feito no Hair Schedule) ou -ObjC. Não precisa de nada seu além de lembrar disso quando pedir release do PeptideCalc.
+[LEARNINGS com numeração duplicada: #85 (linhas 1032 e 1130), #87 (linhas 1077 e 1136)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
 
 ---
 
-[philos já tem stream de analytics — o que falta agora é publicar uma versão com ele]
-Atualizando o que eu tinha escrito aqui: a cota de projetos do Google não é mais o bloqueio. O philos foi instrumentado hoje de madrugada dentro de um projeto que já existia, e o stream dele está de pé (Philos, property 552891433, dividida com a Sueca). O motivo que eu tinha dado pra não dividir projeto — &#x27;as ferramentas do lab assumem um projeto por app&#x27; — deixou de valer: a leitura passou a ser por stream, então dois apps no mesmo projeto não se misturam mais. O que falta é concreto e é seu: a versão publicada (1.0.3, de 03/09) não tem os eventos, e o plist novo ainda está sem commit. Enquanto não sair build novo, o GA4 do philos fica em zero — e zero ali significa &#x27;ainda não mediu&#x27;, não &#x27;app morto&#x27;. São 70 instalações no mês, é o 3º maior do recovery: vale a versão.
+[LEARNINGS com numeração duplicada: #85 (linhas 1035 e 1133), #87 (linhas 1080 e 1139)]
+Duas sessões escreveram o mesmo número; renumerar o mais novo antes que algo o referencie. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_learnings-dup-lab`.
 
 ---
 
-[4 ratings com 171 downloads — abaixo do piso de 25]
-RULES rating-first: sem massa de avaliação, mexer em keyword não converte. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-08-31_rating-first-walk-steps-calorie-tracker`. Atualização 11/09: o Walk ganhou o pedido nativo direto na meta diária batida (commit 90a5268, branch dev). Entra na próxima versão; sem release, a massa de ratings não se move.
+[Checkpoint D14 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+ATENÇÃO — a âncora está errada e o checkpoint mediria a janela errada. A cadência do meta.json do Walk conta de 2026-08-18 (dia do PATCH), mas o texto só chegou na loja com a 7.3.0, que ficou READY_FOR_SALE em 2026-08-31T02:59Z (= 30/08 23:59 BRT). O próprio meta diz: &#x27;Entra no ar quando a 7.3.0 for submetida/aprovada&#x27;. Com D0 real = 2026-08-30, o D7 cai em 06/09 e o D14 em 13/09 — nenhum dos dois venceu. Rodar o D14 hoje leria 12 dias PRÉ-live como se fossem pós-live. Ação: reancorar o meta.json (live_date 2026-08-30 + checkpoints 06/09, 13/09, 20/09, 27/09) ANTES de rodar o checkpoint. Walk está em Apps/intermediate/ (supervisionado), por isso a correção ficou proposta e não aplicada. Work order: /lab-orchestrate 2026-08-31_aso-checkpoint-stepsswiftui
 
 ---
 
-[Auditoria 27/09 — o crash do &#x27;sim&#x27; medido na loja, 28d]
-Hair 1.1.0: crash-free 94,6% (25 de 461), rating_gate_yes 27 = app_exception 27. Walk 7.3.0: 96,2% (13 de 341), 12 = 13. Peptide 1.1.3: 85,4% (6 de 40), 5 = 6. Correspondência 1:1 nos três; 44 pessoas caíram no instante de avaliar — e os três têm 1 / 5 / 0 ratings. Ordem sugerida: Hair (1.2.0 já aberta) → Walk (7.4.0 com prompt nativo 90a5268 + revamp + ASO US/GB/DE) → Peptide só quando houver alavanca (KILL, 37 inst/mês). Crashlytics em iPhotos e BLW na carona do próximo release de cada um. Relatório: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/REPORT.md</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+[O número de ativação do painel está errado em 5 apps — e ele é quem manda a prioridade de produto]
+Fui conferir por que tanto app aparece com &#x27;ativação crítica&#x27; e a causa é uma só: o evento `core_action` foi instrumentado no mutirão de 27-28/08 e, na maioria dos apps, ele só existe na versão MAIS NOVA. Só que a taxa é calculada dividindo pelos usuários novos dos 28 dias inteiros — gente que está em versão antiga e não tem como logar o evento. Os números certos, conferidos commit a commit e tag a tag: Neon aparece 11,1% e é ~58% (o evento só entrou na release/25, que tem 19 dos 99 novos; e `draw_stroke`, que existe em todas as versões, dá 68 de 99). BLW aparece 11,5% e é 27% (`food_log_saved` existe desde a 1.4.0: 71 de 260). iPhotos aparece 20,2% e é 40% (`photo_saved`: 74 de 183). DevLingo aparece 4% e é ~17%, com n=6 — direcional, não conclusão. Meus Gastos aparece sem ativação porque o `core_action` não está em NENHUMA versão publicada, nem na 45.3.2. E o WTMP nem está na loja (0 downloads no mês), então os 34 usuários dele são build interno, não gente de verdade. Por que isso te custa dinheiro: com o número errado, o painel manda &#x27;atacar ativação antes de trazer mais gente&#x27; em quatro apps onde a ativação não é o gargalo — e desvia do que é (retenção D1). A correção é no `firebase_snapshot.py`: dividir pela base das versões que TÊM o evento, e não pelo total. É trabalho meu, de uma sessão. Me fala pra eu fazer.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-05, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-18_iter-01-text-en-US-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-08, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
+
+---
+
+[Checkpoint D7 vencido — 2026-08-25_iter-02-text-keywords]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D7 vencido — 2026-09-02_iter-02-text-en-US-keywords]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-09, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D7 vencido — 2026-09-04_feature-paywall-export]
+Rodar o checkpoint D7 da iteração (venceu 2026-09-11, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-12, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-25_iter-01-text-en-US-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-14, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-18_iter-03-text-pt-BR-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-stepsswiftui`.
+
+---
+
+[Checkpoint D14 vencido — 2026-08-25_iter-02-text-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-19_iter-05-text-pt-BR-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-19, 0d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-05_aso-checkpoint-blw`.
+
+---
+
+[Checkpoint D28 vencido — 2026-08-18_iter-01-text-en-US-keywords]
+Rodar o checkpoint D28 da iteração (venceu 2026-09-15, 8d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-08_aso-checkpoint-philos-app`.
+
+---
+
+[Checkpoint D21 vencido — 2026-08-25_iter-01-text-en-US-keywords]
+Rodar o checkpoint D21 da iteração (venceu 2026-09-21, 2d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-14_aso-checkpoint-cronogram-capilar`.
+
+---
+
+[Checkpoint D14 vencido — 2026-09-02_iter-02-text-en-US-keywords]
+Rodar o checkpoint D14 da iteração (venceu 2026-09-16, 10d de atraso) e decidir a próxima ação. Detectado pelo scan do orchestrator. Executar com `/lab-orchestrate 2026-09-09_aso-checkpoint-airdraw`.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
