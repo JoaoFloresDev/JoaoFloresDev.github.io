@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Meus Gastos</title><style>
+<title>Lab</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,31 +114,6 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 08:56 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — Iteração de ASO iter-04 nos 29 idiomas da loja, alvo alemão — composição pronta, falta relatório e deploy</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">DECISÃO DO JOÃO 01/10: tirar &#x27;casal&#x27; + &#x27;compartilhados&#x27; do pt-BR. Custo aceito: 40 posições rankeadas caem, TODAS MISMATCH (query de casal que o app não entrega). Razão: BR é o único locale com massa de avaliação (18) e rating é o gargalo #1 — install de intenção frustrada desinstala e avalia mal.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:03 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Rotina do lab: 25 item(ns) de rotina na fila do orchestrator (16 checkpoint(s) ASO, 6 rating-first, 3 gap(s) de analytics)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Checkpoint de iteração sem metrics/d00_baseline.json fica só aqui — sem baseline não é mensurável. Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido num item só em vez de virar um item por achado.
 
-Pedido do João 30/09: &#x27;/start-aso-pipeline, todos os idiomas da loja, pode ser agressivo, foca no alemão&#x27;.
-
-DOIS GATES DO PIPELINE REPROVARAM E FORAM SOBRESCRITOS POR ELE NESTA CONVERSA:
-- Piso de tráfego (&gt;=100 instalações 1*/30d no país-alvo): DE 25 · BR 45 · US 9. Reprovado nos três.
-- Rating-first (&lt;25 avaliações na store-alvo): DE tem 2 avaliações. Reprovado.
-Consequência registrada no meta.json: o resultado NÃO será estatisticamente mensurável. results.final sai sem intervalo de confiança; a leitura vai ser direcional.
-
-ESCALA REAL (Sales Report 1*, 90d, total 439 instalações): pt-BR 161 (37%) · de-DE 64 (15%: DE 46, AT 11, CH 7) · fr-FR 27 · ja 27 · en-US 19 · en-GB 17 · tr 17 · it 12 · ar-SA 10 · es-MX 10 · id 10 · vi 9 · es-ES 8.
-
-ESCOPO: 13 locales (todas as localizations que o app tem). Tier A com pesquisa Astro completa = de-DE (alvo), pt-BR, fr-FR, ja, en-US, es-ES. Tier B mais leve = tr, it, ar-SA, es-MX, id, zh-Hans, ko.
-
-DEFEITOS JÁ IDENTIFICADOS NO TEXTO LIVE (corrigir nesta iteração):
-- de-DE name &#x27;Ausgaben - Haushaltsbuch&#x27; usa 24 de 30 chars — 6 chars do campo de maior peso parados.
-- en-US keywords gastam um slot com &#x27;managemen&#x27; (palavra truncada, não indexa nada).
-- pt-BR subtitle ainda promete &#x27;Finanças do casal&#x27; — a iter-03 provou no source que o app não tem split nem modo casal.
-- en-GB não tem localization: GB/IE/LK/GH/KH/NP (17 instalações/90d) caem no listing primário, que é pt-BR. Veem português.
-
-DEPLOY AUTORIZADO por você 30/09 (&#x27;pode criar uma nova versao do app depois e cria o relatorio da aso&#x27;):
-cobre relatório + PATCH do texto + criação da versão iOS editável. NÃO cobre archive, submissão pra review nem Apple Ads.
-Quarentena: o PPO 9570de85 fica rodando; override registrado no meta.json pela regra &#x27;versão nova ganha de PPO rodando&#x27; (04/09).
-
-O QUE SOBRA DE BLOQUEIO:
-1. Não existe versão iOS editável (45.3.1 READY_FOR_SALE, appInfo READY_FOR_DISTRIBUTION). Keyword/name/subtitle novos exigem POST de versão + build + App Review — não é PATCH de texto.
-2. Quarentena de 14 dias: o PPO 9570de85 está RODANDO até 27/11. O aso-deployer recusa deploy com experimento ativo sem override. A auditoria de 27/09 já recomendava parar esse PPO (não tem impressão pra dar resposta).
-
-Pasta: Apps/intermediate/Controle-de-gastos/aso-pipeline/iterations/2026-09-30_iter-04-text-de-DE-name-subtitle-keywords</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+Consertos pendentes fora do scan: âncora live_date no meta.json do Walk (iter-03) e ativação do painel (firebase_snapshot.py linha 297 ainda calcula activation = core_action / first_open total).</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
