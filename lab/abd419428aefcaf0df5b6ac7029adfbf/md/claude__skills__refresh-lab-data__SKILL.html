@@ -1,7 +1,11 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>SKILL.md</title><style>
+<title>SKILL.md</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -113,5 +117,81 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+
+/* ---------- camada de acabamento (01/10/2026) ----------
+   Tipografia com duas vozes (display para títulos e números, texto para leitura),
+   neutros com viés do azul da marca em vez de cinza puro, e profundidade por
+   sombra em vez de só borda. Nada aqui renomeia classe: é uma camada por cima. */
+:root{
+  --f-disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-text:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --bg:#f3f5f9; --card:#ffffff; --tx:#10131a; --mut:#5a6377; --acc:#1552d8;
+  --bd:#dde2ea; --bd-soft:#e8ecf3; --ok:#0a8f58; --down:#d02f2f; --warn:#b45309;
+  --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
+  --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
+  --rad:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0b0d12; --card:#161a22; --tx:#eef1f7; --mut:#9aa5b8; --acc:#7aa6ff;
+  --bd:#272d39; --bd-soft:#1f242e; --ok:#43d08d; --down:#ff7070; --warn:#e5a645;
+  --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
+}}
+body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1{font-family:var(--f-disp);font-size:27px;font-weight:800;letter-spacing:-.02em;
+  text-wrap:balance;margin:0 0 2px}
+h1 .mark{display:inline-block;width:28px;height:28px;vertical-align:-5px;margin-right:11px;
+  background-size:contain;background-repeat:no-repeat;background-position:center}
+h2{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);border-top:1px solid var(--bd-soft);
+  padding-top:22px;margin:32px 0 14px}
+h3{font-family:var(--f-disp);letter-spacing:-.01em}
+.sub{font-size:13px;color:var(--mut)}
+code,.mono{font-family:var(--f-mono);font-size:12.5px}
+.card,table.t,a.tile,.row,.fcard,#md{box-shadow:var(--sh);border-color:var(--bd-soft)}
+.card,a.tile,.row,.fcard{border-radius:var(--rad);
+  transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
+a.tile:hover,a.row:hover,.fcard:hover{box-shadow:var(--sh-up);border-color:var(--bd);
+  transform:translateY(-1px)}
+/* big numbers: the first thing anyone reads on the page */
+.tiles{gap:12px;margin:18px 0 4px;padding-bottom:10px}
+a.tile{padding:13px 17px;min-width:148px}
+.tile .tl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--mut)}
+.tile .tv{font-family:var(--f-disp);font-size:25px;font-weight:800;letter-spacing:-.025em;
+  margin-top:3px}
+.tile .ts{font-size:11.5px;color:var(--mut)}
+/* tables read as data, not as prose */
+table.t{border-radius:var(--rad);font-variant-numeric:tabular-nums}
+table.t th{font-family:var(--f-disp);font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--bd-soft);border-bottom:1px solid var(--bd)}
+table.t td{padding:9px 13px;border-bottom:1px solid var(--bd-soft)}
+table.t tbody tr:hover td,table.t tr:hover td{background:rgba(125,140,170,.06)}
+.twrap{border-radius:var(--rad)}
+/* buttons */
+.btn{font-family:var(--f-disp);font-weight:600;font-size:13.5px;padding:9px 18px;
+  border-radius:999px;box-shadow:var(--sh);transition:all .16s ease}
+.btn:hover{border-color:var(--acc);box-shadow:var(--sh-up);transform:translateY(-1px)}
+.pill,.st{font-family:var(--f-disp);font-weight:600;font-size:11.5px;letter-spacing:.02em}
+/* status colours carry meaning, so keep them out of the accent */
+.st.run,.st.appr{background:rgba(10,143,88,.14);color:var(--ok)}
+.st.crit{background:rgba(208,47,47,.14);color:var(--down)}
+.st.rev,.st.draft{background:rgba(180,83,9,.14);color:var(--warn)}
+/* the lanes strip and any scroller get a thin, rounded bar */
+.tiles,.hrow,.twrap{scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.tiles::-webkit-scrollbar,.hrow::-webkit-scrollbar,.twrap::-webkit-scrollbar{height:9px}
+.tiles::-webkit-scrollbar-track,.hrow::-webkit-scrollbar-track,
+.twrap::-webkit-scrollbar-track{background:transparent}
+.tiles::-webkit-scrollbar-thumb,.hrow::-webkit-scrollbar-thumb,
+.twrap::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
+  border:3px solid transparent;background-clip:content-box}
+.tiles::-webkit-scrollbar-thumb:hover,.hrow::-webkit-scrollbar-thumb:hover,
+.twrap::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+.hrow{background:transparent;border:0;padding:0;border-radius:0}
+.hcol{flex:0 0 clamp(280px,26vw,360px);min-width:0}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);
+  outline-offset:2px;border-radius:8px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 15:21 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/.claude/skills/refresh-lab-data/SKILL.md</code></p><div id="md"></div><script>const RAW="---\nname: refresh-lab-data\ndescription: Atualiza os dados do Lab Hub/Dashboard sob demanda \u2014 roda a coleta completa (ASC Sales Reports, analytics de loja, reviews, GA4/Firebase, testes A/B) via pull_data.py e carimba o updated do now.json. Use quando o Jo\u00e3o disser \"/refresh-lab-data\", \"atualiza os dados\", \"atualiza o dashboard\", \"puxa os dados novos do lab\". Substitui o antigo bot\u00e3o \"Atualizar dados\" do site (removido 2026-08-18).\n---\n\n# Refresh Lab Data\n\nAtualiza o `dashboard.json` que alimenta o Lab Hub (`[Lab Hub local]` \u2014 home, /funil, /vendas, /ab-tests) e o Lab Dashboard.\n\n## Passos\n\n1. Rodar a coleta (demora ~2 min; rodar em foreground com timeout generoso):\n\n```bash\ncd _GambitStudio/tools/lab-dashboard && /usr/bin/python3 pull_data.py --days 30\n```\n\n2. Rodar o snapshot do Firebase/GA4 \u2014 alimenta a p\u00e1gina `/firebase` do hub (~2 min; **depois** do passo 1, porque l\u00ea o `dashboard.json` pra cruzar com a loja):\n\n```bash\n/usr/bin/python3 _GambitStudio/scripts/analytics/firebase_snapshot.py --days 28\n```\n\n3. Carimbar o `updated` do now.json (mesmo comportamento do antigo bot\u00e3o do site):\n\n```bash\n/usr/bin/python3 -c \"\nimport json, datetime\np = '_GambitStudio/now.json'\nd = json.load(open(p))\nd['updated'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')\njson.dump(d, open(p, 'w'), ensure_ascii=False, indent=1)\n\"\n```\n\n4. Confirmar que os dois JSONs foram regenerados (campo `generated_at` recente):\n\n```bash\n/usr/bin/python3 -c \"\nimport json\nbase = '_GambitStudio/tools/lab-dashboard/data/'\nd = json.load(open(base + 'dashboard.json'))\nprint('dashboard:', d.get('generated_at'), '\u00b7', len(d.get('apps', [])), 'apps')\nf = json.load(open(base + 'firebase.json'))\nprint('firebase: ', f.get('generated_at'), '\u00b7', len(f.get('apps', [])), 'apps medidos,',\n      len(f.get('untracked', [])), 'sem tracking')\n\"\n```\n\n5. Publicar o site (export est\u00e1tico do hub na pasta com hash do GitHub Pages \u2014 o Jo\u00e3o acompanha de fora do Mac por l\u00e1):\n\n```bash\nbash _GambitStudio/tools/lab-hub/publish_site.sh\n```\n\nImprime a URL final e o c\u00f3digo HTTP. Se o export abortar por \"vazamento\" ou \"link quebrado\", a pasta publicada anterior fica intacta \u2014 corrigir o `export_static.py` antes de repetir. NUNCA colar a URL/hash em arquivo do repo do site nem em mensagem de commit.\n\n## Relato\n\nResponder curto: hor\u00e1rio da coleta, n\u00ba de apps, e 1-2 destaques se saltarem (queda/alta forte de downloads, review nova ruim). O Jo\u00e3o confere o resto no site.\n\n## Se a coleta falhar\n\n- `firebase_snapshot.py` sem property nenhuma: ele agora **aborta sem gravar** (property vazia \u00e9 leitura que falhou, n\u00e3o lab sem telemetria). Causa: a service account `ga-admin` perdeu acesso \u00e0 conta GA [conta GA] (key em `keys/ga_admin_sa.json`) ou est\u00e1 em 401/429 por concorr\u00eancia \u2014 conferir com `ga4_pull.py properties` e repetir.\n- `firebase_snapshot.py` saindo com **exit 2** e \"property compartilhada sendo lida SEM filtro de stream\": \u00e9 o guarda do LEARNINGS #81. Um projeto Firebase passou a hospedar mais de um app e o agrupamento n\u00e3o isolou por `streamId` \u2014 snapshot N\u00c3O \u00e9 gravado de prop\u00f3sito (n\u00famero somando dois apps \u00e9 pior que n\u00famero velho). Rodar `python3 scripts/analytics/test_stream_isolation.py` pra ver o que quebrou.\n- Ver stderr do `pull_data.py` \u2014 causas comuns: JWT ASC expirado (regenera sozinho), rede, relat\u00f3rio ONGOING ainda n\u00e3o provisionado pela Apple (ignora, entra sozinho).\n- N\u00c3O deixar o `dashboard.json` truncado: o script escreve at\u00f4mico; se falhou no meio, o arquivo antigo continua v\u00e1lido \u2014 s\u00f3 reportar o erro.\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 15:35 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/.claude/skills/refresh-lab-data/SKILL.md</code></p><div id="md"></div><script>const RAW="---\nname: refresh-lab-data\ndescription: Atualiza os dados do Lab Hub/Dashboard sob demanda \u2014 roda a coleta completa (ASC Sales Reports, analytics de loja, reviews, GA4/Firebase, testes A/B) via pull_data.py e carimba o updated do now.json. Use quando o Jo\u00e3o disser \"/refresh-lab-data\", \"atualiza os dados\", \"atualiza o dashboard\", \"puxa os dados novos do lab\". Substitui o antigo bot\u00e3o \"Atualizar dados\" do site (removido 2026-08-18).\n---\n\n# Refresh Lab Data\n\nAtualiza o `dashboard.json` que alimenta o Lab Hub (`[Lab Hub local]` \u2014 home, /funil, /vendas, /ab-tests) e o Lab Dashboard.\n\n## Passos\n\n1. Rodar a coleta (demora ~2 min; rodar em foreground com timeout generoso):\n\n```bash\ncd _GambitStudio/tools/lab-dashboard && /usr/bin/python3 pull_data.py --days 30\n```\n\n2. Rodar o snapshot do Firebase/GA4 \u2014 alimenta a p\u00e1gina `/firebase` do hub (~2 min; **depois** do passo 1, porque l\u00ea o `dashboard.json` pra cruzar com a loja):\n\n```bash\n/usr/bin/python3 _GambitStudio/scripts/analytics/firebase_snapshot.py --days 28\n```\n\n3. Carimbar o `updated` do now.json (mesmo comportamento do antigo bot\u00e3o do site):\n\n```bash\n/usr/bin/python3 -c \"\nimport json, datetime\np = '_GambitStudio/now.json'\nd = json.load(open(p))\nd['updated'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')\njson.dump(d, open(p, 'w'), ensure_ascii=False, indent=1)\n\"\n```\n\n4. Confirmar que os dois JSONs foram regenerados (campo `generated_at` recente):\n\n```bash\n/usr/bin/python3 -c \"\nimport json\nbase = '_GambitStudio/tools/lab-dashboard/data/'\nd = json.load(open(base + 'dashboard.json'))\nprint('dashboard:', d.get('generated_at'), '\u00b7', len(d.get('apps', [])), 'apps')\nf = json.load(open(base + 'firebase.json'))\nprint('firebase: ', f.get('generated_at'), '\u00b7', len(f.get('apps', [])), 'apps medidos,',\n      len(f.get('untracked', [])), 'sem tracking')\n\"\n```\n\n5. Publicar o site (export est\u00e1tico do hub na pasta com hash do GitHub Pages \u2014 o Jo\u00e3o acompanha de fora do Mac por l\u00e1):\n\n```bash\nbash _GambitStudio/tools/lab-hub/publish_site.sh\n```\n\nImprime a URL final e o c\u00f3digo HTTP. Se o export abortar por \"vazamento\" ou \"link quebrado\", a pasta publicada anterior fica intacta \u2014 corrigir o `export_static.py` antes de repetir. NUNCA colar a URL/hash em arquivo do repo do site nem em mensagem de commit.\n\n## Relato\n\nResponder curto: hor\u00e1rio da coleta, n\u00ba de apps, e 1-2 destaques se saltarem (queda/alta forte de downloads, review nova ruim). O Jo\u00e3o confere o resto no site.\n\n## Se a coleta falhar\n\n- `firebase_snapshot.py` sem property nenhuma: ele agora **aborta sem gravar** (property vazia \u00e9 leitura que falhou, n\u00e3o lab sem telemetria). Causa: a service account `ga-admin` perdeu acesso \u00e0 conta GA [conta GA] (key em `keys/ga_admin_sa.json`) ou est\u00e1 em 401/429 por concorr\u00eancia \u2014 conferir com `ga4_pull.py properties` e repetir.\n- `firebase_snapshot.py` saindo com **exit 2** e \"property compartilhada sendo lida SEM filtro de stream\": \u00e9 o guarda do LEARNINGS #81. Um projeto Firebase passou a hospedar mais de um app e o agrupamento n\u00e3o isolou por `streamId` \u2014 snapshot N\u00c3O \u00e9 gravado de prop\u00f3sito (n\u00famero somando dois apps \u00e9 pior que n\u00famero velho). Rodar `python3 scripts/analytics/test_stream_isolation.py` pra ver o que quebrou.\n- Ver stderr do `pull_data.py` \u2014 causas comuns: JWT ASC expirado (regenera sozinho), rede, relat\u00f3rio ONGOING ainda n\u00e3o provisionado pela Apple (ignora, entra sozinho).\n- N\u00c3O deixar o `dashboard.json` truncado: o script escreve at\u00f4mico; se falhou no meio, o arquivo antigo continua v\u00e1lido \u2014 s\u00f3 reportar o erro.\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
