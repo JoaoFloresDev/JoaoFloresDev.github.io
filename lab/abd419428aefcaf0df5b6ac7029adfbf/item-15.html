@@ -130,12 +130,16 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
   --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
   --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
+  --cegtint:rgba(154,68,8,.085); --cegline:rgba(154,68,8,.55);
+  --ceghot:rgba(154,68,8,.16); --cegsurf:#fff; --cegbd:#cbd3e0; --cegdim:#b06a2c;
   --rad:14px;
 }
 @media(prefers-color-scheme:dark){:root{
   --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#8ab4ff;
   --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
   --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
+  --cegtint:rgba(255,187,85,.1); --cegline:rgba(255,187,85,.55);
+  --ceghot:rgba(255,187,85,.2); --cegsurf:#1b212c; --cegbd:#414b5c; --cegdim:#c89155;
 }}
 body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -214,6 +218,59 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
 .st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
 .st.d-congelar{background:rgba(125,140,170,.12);color:var(--mut)}
+/* "Sem dado nenhum": o número de instalações não medidas é o maior elemento do
+   card, porque é a única coisa que difere entre eles — o motivo e a correção são
+   os mesmos nos sete e ficam numa faixa só, acima da grade. */
+.cegfix{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;
+  padding:11px 15px;border-radius:var(--rad);font-size:13px;color:var(--tx);
+  border:1px solid var(--cegline);
+  background:linear-gradient(100deg,var(--cegtint),rgba(125,125,125,0) 72%),var(--card)}
+.cegfix b{font-family:var(--f-disp);font-weight:700}
+.cegtag{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--warn);background:var(--cegtint);
+  border:1px solid var(--cegline);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.cegarrow{color:var(--warn);font-weight:700}
+.cegdo{color:var(--mut)}
+.cegos{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));
+  margin:13px 0 2px;align-items:stretch}
+.ceg{position:relative;display:flex;flex-direction:column;overflow:hidden;
+  padding:13px 16px 15px 19px;border-radius:var(--rad);
+  border:1px solid var(--cegbd);box-shadow:var(--sh);
+  background:linear-gradient(165deg,var(--cegtint) 0,rgba(125,125,125,0) 62%),var(--cegsurf)}
+.ceg::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--cegline),rgba(125,125,125,.05))}
+/* o maior é o que decide: ele carrega o laranja cheio, os outros ficam um tom
+   abaixo pra a diferença de tamanho aparecer antes de o número ser lido */
+.ceg.hot{border-color:var(--cegline);
+  background:linear-gradient(165deg,var(--ceghot) 0,rgba(125,125,125,0) 66%),var(--cegsurf);
+  box-shadow:var(--sh),0 0 0 1px var(--cegtint)}
+.ceg.hot::before{background:linear-gradient(180deg,var(--warn),var(--cegline) 55%,
+  rgba(125,125,125,.05))}
+.ceg.hot .cegn{color:var(--warn)}
+.ceg.hot .cegbar span{background:linear-gradient(90deg,var(--warn),var(--cegline))}
+.cegh{display:flex;align-items:center;gap:7px;min-width:0}
+.cegh b{font-family:var(--f-disp);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
+  line-height:1.3;min-width:0;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.cegh b a{color:var(--tx)}.cegh b a:hover{color:var(--acc)}
+.cegh .st{margin-left:auto;flex:none;align-self:flex-start}
+.cegn{display:flex;align-items:baseline;gap:8px;font-family:var(--f-disp);font-size:40px;
+  font-weight:800;letter-spacing:-.04em;line-height:1;margin-top:auto;padding-top:16px;
+  color:var(--cegdim);font-variant-numeric:tabular-nums}
+.cegn i{font-family:var(--f-text);font-style:normal;font-size:11px;font-weight:600;
+  letter-spacing:0;color:var(--mut);margin-left:auto;white-space:nowrap}
+.cegbar{height:4px;border-radius:999px;background:rgba(125,140,170,.16);margin-top:11px;
+  overflow:hidden}
+.cegbar span{display:block;height:100%;border-radius:999px;background:var(--cegdim);
+  opacity:.75}
+.cegu{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--mut);margin-top:7px}
+.cegw{margin-top:11px;padding-top:10px;border-top:1px solid var(--bd-soft);
+  font-size:12.5px;color:var(--tx)}
+.cega{margin-top:3px;font-size:12.5px;color:var(--mut);line-height:1.5}
+.cegz{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px;margin:15px 0 0;font-size:12.5px}
+.cegz>span:first-child{color:var(--mut)}
+.cegz .pill{font-size:11.5px;color:var(--mut);background:rgba(125,140,170,.1)}
 .dapp .prlist{margin-top:6px}
 .dcall{color:var(--tx)!important;font-weight:600}
 .fcard[id]{scroll-margin-top:18px}
@@ -396,7 +453,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:50 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Calc+ (Secret Calculator) — A/B de ORDEM aprovado e RODANDO (50% do trafego)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): experimento 7be3e3be APPROVED, startDate 28/08, endDate 26/11, tráfego 50% — continua rodando. Item mantido.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 17:00 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Calc+ (Secret Calculator) — A/B de ORDEM aprovado e RODANDO (50% do trafego)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): experimento 7be3e3be APPROVED, startDate 28/08, endDate 26/11, tráfego 50% — continua rodando. Item mantido.
 
 ---
 
