@@ -296,6 +296,8 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .gap b{font-size:13.5px}
 .gapn{font-size:12.5px;color:var(--tx);font-variant-numeric:tabular-nums}
 .gapw{flex-basis:100%;font-size:11.5px;color:var(--mut)}
+.gap.ok{background:rgba(10,143,88,.08);border-color:rgba(10,143,88,.22)}
+.gap.ok .gapt{color:var(--ok)}
 .hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
   text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
   vertical-align:2px}
@@ -338,7 +340,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:35 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Meus Gastos — ASO iter-04: esperando a 45.4.0 ficar no ar pra começar a medir (D0 = dia do READY_FOR_SALE)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto está staged na 45.4.0, não no ar. D0 NÃO é o dia do PATCH (01/10) — é o dia em que a 45.4.0 ficar READY_FOR_SALE. Enquanto isso o público vê a 45.3.1.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:38 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Meus Gastos — ASO iter-04: esperando a 45.4.0 ficar no ar pra começar a medir (D0 = dia do READY_FOR_SALE)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto está staged na 45.4.0, não no ar. D0 NÃO é o dia do PATCH (01/10) — é o dia em que a 45.4.0 ficar READY_FOR_SALE. Enquanto isso o público vê a 45.3.1.
 
 Quando ela ficar no ar, nessa ordem: pull_analytics.py d0 --iter &lt;dir&gt; --live-at &lt;dia&gt; --write-meta (grava metrics/d00_baseline.json), só então status vira live, e os checkpoints D7/14/21/28 contam de live_at.
 

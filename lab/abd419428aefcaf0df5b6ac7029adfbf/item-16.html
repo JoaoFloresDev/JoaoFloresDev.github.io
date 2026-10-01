@@ -296,6 +296,8 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .gap b{font-size:13.5px}
 .gapn{font-size:12.5px;color:var(--tx);font-variant-numeric:tabular-nums}
 .gapw{flex-basis:100%;font-size:11.5px;color:var(--mut)}
+.gap.ok{background:rgba(10,143,88,.08);border-color:rgba(10,143,88,.22)}
+.gap.ok .gapt{color:var(--ok)}
 .hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
   text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
   vertical-align:2px}
@@ -338,7 +340,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:35 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Meus Gastos — 45.4.0 do Meus Gastos: 3 coisas suas antes de enviar — whatsNew (29 idiomas), texto promocional (16) e pergunta de redes sociais do age rating</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">01/10 tarde — o check novo de listing (reforma do ASO) leu a 45.4.0 real e confirmou o que falta pra submeter:
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:38 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Meus Gastos — 45.4.0 do Meus Gastos: 3 coisas suas antes de enviar — whatsNew (29 idiomas), texto promocional (16) e pergunta de redes sociais do age rating</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">01/10 tarde — o check novo de listing (reforma do ASO) leu a 45.4.0 real e confirmou o que falta pra submeter:
 1. **whatsNew vazio nos 29 idiomas** — a Apple recusa o envio.
 2. **Texto promocional**: existia em 16 idiomas na 45.3.1 e não foi herdado; 14 deles repetem &#x27;100% grátis&#x27;. Restaurar literal reintroduz o risco 2.3.1. Lista em aso-pipeline/iterations/2026-09-30_iter-04-.../research/promotional_text_not_inherited.json (pl e ru são os 2 limpos).
 3. **Age rating → pergunta de redes sociais (socialMedia) sem resposta** — campo novo de set/2026, bloqueia a submissão. O app não tem rede social; a resposta provável é &#x27;não&#x27;, mas é declaração sua (App Information → Age Rating na ASC).
