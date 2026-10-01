@@ -69,7 +69,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
 @media(max-width:520px){.fgrid{grid-template-columns:1fr}}
 .fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
-.fcard .fh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fcard .fh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
 .fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
 .fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
 .fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -227,11 +227,16 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fdet>summary:hover{color:var(--acc)}
 .fdet table.t{font-size:12.5px}
 .fdet table.t td,.fdet table.t th{padding:6px 10px}
-.fgrid.one{grid-template-columns:1fr!important;gap:0}
-.fgrid.one>.fcard{border:0;border-radius:0;box-shadow:none;background:transparent;
-  padding:22px 0 24px;border-bottom:1px solid var(--bd)}
-.fgrid.one>.fcard:last-child{border-bottom:0}
-.fgrid.one>.fcard:first-child{padding-top:4px}
+.fgrid.one{grid-template-columns:1fr!important;gap:14px}
+.fgrid.one>.fcard{border:1px solid var(--bd-soft);border-radius:var(--rad);
+  box-shadow:none;background:var(--card);padding:0;overflow:hidden}
+/* a faixa do topo separa um app do outro melhor que uma linha fina entre eles */
+.fgrid.one>.fcard>.fh{background:var(--bd-soft);margin:0;padding:12px 16px;
+  border-bottom:1px solid var(--bd)}
+.fgrid.one>.fcard>.fmeta{padding:9px 16px 0}
+.fgrid.one>.fcard>.fcols{padding:14px 16px 4px}
+.fgrid.one>.fcard>.fdet{margin:0;padding:12px 16px 14px;border-top:1px solid var(--bd-soft);
+  background:var(--bg)}
 .fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;
   align-items:start}
 @media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
@@ -272,8 +277,6 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .legend .lg1{color:var(--mut)}.legend .lg2{color:var(--warn)}.legend .lg3{color:var(--warn)}
 .thin{font-size:10.5px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
   padding:1px 7px;cursor:help;white-space:nowrap}
-.thinnote{font-size:11.5px;color:var(--mut);background:var(--bd-soft);border-radius:9px;
-  padding:7px 10px;margin:0 0 10px}
 .sbx{font-size:12px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
   padding:1px 8px;cursor:help;white-space:nowrap}
 .sbxnote{font-size:11.5px;color:var(--warn);background:rgba(180,83,9,.10);
@@ -307,7 +310,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(21,82,216,.18),var(--sh-up)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:22 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">ACHADO NOVO (01/10) QUE MUDA O CONTEXTO DESTA APROVAÇÃO: fechei a iter-01 do iPhotos com número real pela primeira vez. Veredito do script: PIOROU — instalações novas no US caíram de 88 pra 57 na janela de 30 dias antes/depois (RR 0,65, IC [0,46-0,90], o IC inteiro abaixo de 1), enquanto os OUTROS países subiram (RR 1,33 [0,98-1,80]). MAS o próprio script marca NÃO ISOLÁVEL: houve mudança de algoritmo da App Store no US em 27/07, dentro da janela, e não havia apps-controle elegíveis. Então isso não prova que o texto fez mal — prova que não dá pra dobrar a aposta às cegas.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:24 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">ACHADO NOVO (01/10) QUE MUDA O CONTEXTO DESTA APROVAÇÃO: fechei a iter-01 do iPhotos com número real pela primeira vez. Veredito do script: PIOROU — instalações novas no US caíram de 88 pra 57 na janela de 30 dias antes/depois (RR 0,65, IC [0,46-0,90], o IC inteiro abaixo de 1), enquanto os OUTROS países subiram (RR 1,33 [0,98-1,80]). MAS o próprio script marca NÃO ISOLÁVEL: houve mudança de algoritmo da App Store no US em 27/07, dentro da janela, e não havia apps-controle elegíveis. Então isso não prova que o texto fez mal — prova que não dá pra dobrar a aposta às cegas.
 
 Isso dá razão à sua restrição de não mexer no americano: a iter-02 congelou o subtitle do en-US e troca UM token (pictures -&gt; post, 0 posições perdidas). Se eu tivesse recomposto o en-US, estaria apostando em cima de uma queda de 35% sem saber a causa.
 
