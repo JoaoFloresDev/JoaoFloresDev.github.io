@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>SKILL.md</title><style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.tiles{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;margin:14px 0 6px;padding-bottom:4px}
+a.tile{display:block;flex:0 0 auto;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(11,83,214,.13);color:var(--acc)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}.fs .fb i.ga{background:#8b5cf6}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{display:flex;gap:8px;margin:10px 0 4px}
+.rc{flex:1;background:rgba(125,125,125,.09);border-radius:9px;padding:6px 9px}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt{margin-top:11px;background:var(--hl);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:#fff;font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+</style></head>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 10:18 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/.claude/skills/lab-orchestrate/SKILL.md</code></p><div id="md"></div><script>const RAW="---\nname: lab-orchestrate\ndescription: Executa uma tarefa GRANDE ou VAGA at\u00e9 o fim \u2014 decomp\u00f5e em work order com crit\u00e9rio de pronto por item, roda em ondas dimensionadas pelo trabalho (sem cap \u2014 Jo\u00e3o 02/09), revisa cada retorno contra o crit\u00e9rio (item s\u00f3 fecha com evid\u00eancia verific\u00e1vel) e faz loop at\u00e9 a fila zerar. Tamb\u00e9m executa os work orders que o scan do lab enfileirou sozinho. Use quando o Jo\u00e3o pedir algo amplo (\"pesquisa os apps de editor de foto do mercado e aplica no meu app\", \"melhora o iPhotos\"), quando disser \"roda a fila / o que tem pra fazer\", ou passar um id de work order.\n---\n\n# Lab Orchestrate\n\nDecompor e delegar \u00e9 o comportamento esperado aqui \u2014 a regra que exigia pedido expl\u00edcito\npra fan-out caiu em 2026-08-31. O teto de 4 subagentes simult\u00e2neos foi DELETADO pelo Jo\u00e3o (02/09, \"deleta qualquer regra de limita\u00e7\u00e3o de tokens\"; o hook `limit-parallel-agents.sh` est\u00e1 desativado) \u2014 a onda se dimensiona pelo trabalho: unidades independentes rodam juntas, dependentes esperam a anterior. O que continua valendo \u00e9 o limite F\u00cdSICO da m\u00e1quina: 2 simuladores (fila `tools/sim-pool`, RULES 12/09) e disco em builds paralelos (`-clonedSourcePackagesDirPath` compartilhado + `COMPILER_INDEX_STORE_ENABLE=NO`, LEARNINGS #91).\n\n## O problema que isto resolve\n\nTarefa vaga n\u00e3o tem crit\u00e9rio de pronto. Sem crit\u00e9rio, quem executa faz o que cabe no\ncontexto e declara feito \u2014 o \"faz um pouco e para\". A corre\u00e7\u00e3o n\u00e3o \u00e9 esfor\u00e7o, \u00e9\nestrutura: **o crit\u00e9rio de pronto de cada peda\u00e7o \u00e9 escrito ANTES de executar, e o\nestado mora em disco, n\u00e3o na mem\u00f3ria da sess\u00e3o.**\n\n```bash\nWO=_GambitStudio/orchestrator/wo.py\npython3 $WO list                  # a fila\npython3 $WO show <id>             # itens, crit\u00e9rios, evid\u00eancias\npython3 $WO wave <id>             # o que pode rodar em paralelo agora (sem cap por default; --cap N s\u00f3 quando um recurso f\u00edsico obriga)\n```\n\n## Fase 1 \u2014 Decompor (no seu contexto, \u00e9 o c\u00e9rebro)\n\nSe veio um id de work order, pule para a Fase 2. Se veio uma tarefa em linguagem\nnatural:\n\n1. **Reformule o pedido como um resultado observ\u00e1vel.** \"Pesquisa os editores de foto e\n   aplica no meu app\" n\u00e3o \u00e9 execut\u00e1vel; \"o iPhotos ganha as 3 features table-stake que\n   todos os l\u00edderes t\u00eam e que ele n\u00e3o tem, e cada uma compila e roda\" \u00e9.\n2. **Quebre em itens independentes**, cada um com:\n   - `task` \u2014 o que fazer, espec\u00edfico o bastante pra um agente executar sem explorar.\n   - `done_when` \u2014 **como se PROVA que acabou**. Tem que ser verific\u00e1vel por comando ou\n     por arquivo: \"`preflight.py` sai 0\", \"`GAPS.md` existe com as 5 se\u00e7\u00f5es\", \"o build\n     passa e a tela aparece no simulador\". *\"Pesquisa feita\", \"c\u00f3digo melhorado\" e\n     \"revisado\" n\u00e3o s\u00e3o crit\u00e9rios* \u2014 se voc\u00ea n\u00e3o sabe qual comando prova, o item ainda\n     est\u00e1 vago demais.\n   - `agent` \u2014 o subagente do lab que faz isso (`competitor-scout`, `screen-builder`,\n     `aso-checkpoint`, `polish-reviewer`, `analytics-instrumentor`\u2026) ou vazio pra inline.\n   - `depends_on` \u2014 ids dos itens que precisam fechar antes.\n3. **Grave**: `wo.py new` + um `wo.py add` por item. A partir daqui o estado \u00e9 o arquivo.\n4. Mostre a decomposi\u00e7\u00e3o ao Jo\u00e3o em 5-10 linhas e **siga** \u2014 n\u00e3o pe\u00e7a aprova\u00e7\u00e3o\n   (autonomia total, RULES). Se um item for irrevers\u00edvel ou tocar a loja, marque-o como\n   dependente de aprova\u00e7\u00e3o no `notes` e deixe-o por \u00faltimo.\n\nRegra de tamanho: item que n\u00e3o cabe num brief denso de subagente est\u00e1 grande demais \u2014\nquebre. Item cujo `done_when` depende de opini\u00e3o est\u00e1 mal formulado \u2014 reescreva.\n\n## Fase 2 \u2014 Executar em ondas\n\nRepita at\u00e9 n\u00e3o sobrar item execut\u00e1vel:\n\n1. `wo.py wave <id>` \u2192 todos os itens sem depend\u00eancia aberta (sem teto imposto \u2014 o default do `wo.py` \u00e9 sem cap; `--cap N` existe como op\u00e7\u00e3o s\u00f3 quando um recurso f\u00edsico obriga, ex. itens que disputam simulador).\n2. Para cada um: `wo.py set <id> <item> --status doing` e dispare o subagente **numa s\u00f3\n   mensagem com todas as chamadas** (\u00e9 o que faz rodarem em paralelo). Brief denso: todos\n   os paths, assinaturas, paleta, e **o `done_when` literal dentro do prompt** \u2014 o agente\n   precisa saber contra o que ser\u00e1 medido.\n3. **O tamanho da onda \u00e9 o trabalho, n\u00e3o um n\u00famero** (Jo\u00e3o 02/09). Os \u00fanicos limites s\u00e3o f\u00edsicos: 2 simuladores \u2014 todo agente pede pela fila `tools/sim-pool` (RULES 12/09) \u2014 e disco em builds paralelos (checkout de pacotes compartilhado + `COMPILER_INDEX_STORE_ENABLE=NO`, `df -h /` antes de >5 builds \u2014 LEARNINGS #91). Itens que disputam esses recursos v\u00e3o em ondas; o resto roda junto.\n4. Voc\u00ea ret\u00e9m s\u00f3 o retorno compacto de cada agente. N\u00e3o releia os arquivos que ele\n   escreveu, exceto se a verifica\u00e7\u00e3o apontar pra eles.\n\n## Fase 3 \u2014 Revisar (\u00e9 aqui que o loop fecha)\n\nPara cada item que voltou, **verifique o `done_when` voc\u00ea mesmo** \u2014 rode o comando, abra\no arquivo, confira o n\u00famero. O relato do agente n\u00e3o \u00e9 evid\u00eancia; o comando \u00e9.\n\n- Passou \u2192 `wo.py set <id> <item> --status done --evidence \"<o comando e o resultado>\"`.\n  O `wo.py` **recusa** fechar sem evid\u00eancia: se voc\u00ea n\u00e3o tem o que escrever ali, o item\n  n\u00e3o est\u00e1 pronto.\n- N\u00e3o passou \u2192 `--status todo --notes \"faltou X\"`. Ele volta pra pr\u00f3xima onda com a nota\n  no brief. Na 3\u00aa tentativa o `wo.py` bloqueia sozinho e escala.\n- Imposs\u00edvel (falta chave, gate humano, decis\u00e3o do Jo\u00e3o) \u2192 `--status blocked --notes\n  \"<o que destrava>\"` e siga. Um item bloqueado nunca justifica parar os outros.\n\nDepois de cada onda, uma linha de progresso pro Jo\u00e3o: `[k/n] \u00b7 o que fechou \u00b7 o que\nvoltou \u00b7 o que bloqueou`. Sem narrar o meio.\n\n## Fase 4 \u2014 Fechar\n\n`wo.py close <id>` (recusa se sobrou item aberto). Ent\u00e3o, no mesmo turno:\n- `now.json`: entrada em `done` com o resultado; remova os itens `do` que este work order\n  resolveu; nunca deixe item stale.\n- Se apareceu bug/regra nova: `LEARNINGS.md`. Se virou regra do lab: `RULES.md`.\n- Se o trabalho gerou um or\u00e1culo novo (\"SEMPRE verificar X\"), escreva o check em\n  `scripts/verify/` \u2014 learning sem check \u00e9 lembrete (LEARNINGS #62).\n- Commit no repo certo.\n\n## Quando o contexto acabar no meio\n\nN\u00e3o tem problema: o estado est\u00e1 no JSON. A sess\u00e3o seguinte roda `wo.py show <id>`, v\u00ea o\nque est\u00e1 `doing`/`todo` e continua. **\u00c9 por isso que o estado n\u00e3o pode viver s\u00f3 no seu\ncontexto** \u2014 o modo de falha que esta skill existe pra corrigir \u00e9 exatamente esse.\n\n## Fila de rotina\n\n`orchestrator/scan.py` roda por launchd e enfileira o trabalho rotineiro vencido\n(checkpoint ASO, PPO parado, rating-first, reviews, gap de analytics). \"Roda a fila\" /\n\"o que tem pra fazer\" \u2192 `wo.py list`, pegue o de menor urg\u00eancia num\u00e9rica e execute como\nacima. O scan **detecta e enfileira; nunca executa** \u2014 e nada que toque a App Store sai\nsem o Jo\u00e3o dizer.\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
