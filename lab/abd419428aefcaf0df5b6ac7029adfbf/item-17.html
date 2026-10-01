@@ -114,7 +114,22 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:12 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — 45.4.0 do Meus Gastos: escrever o whatsNew e decidir o texto promocional — sem isso a versão não pode ser enviada</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto novo de ASO (29 idiomas) já está dentro da versão 45.4.0 e conferido. Ele NÃO chega a ninguém enquanto a 45.4.0 não for enviada e aprovada. Faltam duas coisas suas, e as duas são texto:
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:13 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — 45.4.0 do Meus Gastos: build iOS TRAVADO no verify-analytics (2 eventos) — decidir; depois whatsNew e texto promocional</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">**01/10 — pedido de archive da 45.4.0 iOS NÃO executado.** O gate obrigatório do lab (`verify-analytics.py --strict`, RULES) reprovou o source e eu não ajusto código de app `intermediate` sem seu aval. Faltam 2 eventos canônicos:
+1. `feature_used` — declarado em lib/services/AnalyticsService.dart:59 (`featureUsed`) e NUNCA chamado em tela nenhuma (LEARNINGS #55: declarar não é logar).
+2. `post_purchase_shown` — canônico obrigatório em app com paywall desde 28/09; o app é Flutter e não tem tela pós-compra (PaywallKit é só Swift), então não existe onde logar.
+
+Contexto: a 45.3.1 (no ar) foi arquivada com 4 eventos faltando + 3 fora da taxonomia; o HEAD de hoje já corrigiu 5 desses 7. O que sobra é só isso.
+
+Decida uma das três:
+(a) Autoriza instrumentar: `featureUsed(name, source:)` nos pontos de uso (orçamento, recorrentes, export, widget, gráficos) + tela/evento pós-compra no fluxo do ProModal. Aí eu arquivo na sequência (bump 45.4.0+42, archive local Xcode 26, upload, anexar à 45.4.0).
+(b) Manda arquivar assim mesmo (override do gate, registrado no meta.json da iter-04).
+(c) Ajustar o verificador do lab pra não exigir `post_purchase_shown` em app Flutter sem tela pós-compra — ainda sobra o `feature_used`.
+
+Tudo o resto está pronto pro archive: preflight code/perms LIBERADO, repo limpo, último build iOS na ASC = 14 (45.3.1), build do Mac = 41 (45.4.0) → próximo iOS = 42. Diff além do texto (quarentena da iter-04): shell desktop macOS (DesktopSidebar/DesktopShortcuts/MainFlutterWindow/entitlements), ReviewPrompt nativo no aha (sem pré-prompt, #88), eventos canônicos no AnalyticsService, l10n (3 categorias sem tradução), WidgetBridge que não derruba o boot, modo de captura de prints do Mac (debug-only).
+
+---
+
+O texto novo de ASO (29 idiomas) já está dentro da versão 45.4.0 e conferido. Ele NÃO chega a ninguém enquanto a 45.4.0 não for enviada e aprovada. Faltam duas coisas suas, e as duas são texto:
 
 1. **whatsNew está vazio nos 29 idiomas.** A Apple exige a partir da 1.0.1 — a submissão trava sem ele. Eu não escrevi porque texto de loja é seu (/release-notes-style).
 
