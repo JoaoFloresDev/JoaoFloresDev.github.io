@@ -235,7 +235,20 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
   align-items:start}
 @media(max-width:1100px){.fdetcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.fdetcols{grid-template-columns:1fr}}
-.fdetcols>div{min-width:0}
+.fdetcols>div{min-width:0;display:flex;flex-direction:column;gap:14px}
+.rawbox{background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;
+  padding:11px 13px;min-width:0}
+.rawbox h4,.rawbox h3.team{margin:0 0 8px;font-family:var(--f-disp);font-size:10.5px;
+  font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.rawbox h3.team .chain{text-transform:none;letter-spacing:0;font-size:11px}
+.rawbox table.t{border:0;box-shadow:none;background:transparent}
+.rawbox table.t th{background:transparent;border-bottom:1px solid var(--bd)}
+.rawbox table.t td{border-bottom:1px solid var(--bd-soft)}
+.rawbox .twrap{border-radius:0}
+.rawbox .ascgrid{margin-bottom:0}
+.rawbox .ascgrid>div{background:var(--card)}
+.fdet{margin-top:14px;border-top:1px solid var(--bd);padding-top:12px}
+.fdet[open]>summary{margin-bottom:12px;color:var(--acc)}
 .t .thsub{font-size:9.5px;font-weight:600;letter-spacing:.03em;color:var(--mut);
   text-transform:none}
 .legend{display:grid;gap:8px 18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -280,7 +293,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(21,82,216,.18),var(--sh-up)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:13 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — Primeiro veredito por script de uma iteração de ASO: a iter-03 (keywords pt-BR/de-DE de 25/08) &#x27;não é do texto&#x27; — gravar no meta real?</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O smoke da reforma fechou a iter-03 numa CÓPIA, pela primeira vez com número:
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:14 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — Primeiro veredito por script de uma iteração de ASO: a iter-03 (keywords pt-BR/de-DE de 25/08) &#x27;não é do texto&#x27; — gravar no meta real?</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O smoke da reforma fechou a iter-03 numa CÓPIA, pela primeira vez com número:
 - País-alvo (BR+DE): 76 → 68 instalações novas em 30 dias. RR 0,895, IC95 [0,645; 1,241] — dentro do ruído.
 - Outros países: 67 → 115. RR 1,716, IC [1,27; 2,32] — cresceram, mas não por causa do texto (o texto só mudou em pt-BR e de-DE).
 - Sem app-controle quieto no lab nessa janela (0 controles), então a leitura se apoia em alvo × outros países.
