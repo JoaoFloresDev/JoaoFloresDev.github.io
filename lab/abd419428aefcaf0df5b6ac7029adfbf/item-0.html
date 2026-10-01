@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>iPhotos</title><style>
+<title>Lab</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,18 +114,4 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 08:51 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — ASO iter-02 nos 13 idiomas RODANDO (trava arrancada) — estágio 3 de 6, fit termo a termo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Você mandou arrancar a trava do piso de tráfego: &quot;pode arrancar essa trava, isso é tentando renascer o app&quot;. Registrado em meta.json &gt; floor_override, com as suas palavras e o número que a regra reprovava (59 instalações 1F/30d no US, piso 100).
-
-E você estava certo na leitura: o gargalo medido é IMPRESSÃO (34.724 em 36 dias, 92% vindo de busca; 193/dia no US), não conversão de página (CVR de página 51% no US, 35% no mundo — excelente). A alavanca de impressão É ranking de busca, que é exatamente o que o texto endereça. A regra de piso fala de mensurabilidade, não de qual é a ação certa — meu relatório anterior confundiu as duas coisas.
-
-O QUE MUDA NA MEDIÇÃO: sem tráfego pro IC, o checkpoint D7/14/28 vai ler POSIÇÃO no Astro + impressões na ASC, não lift de instalação com intervalo de confiança. Fechar com results.final de RR/IC seria inventar número.
-
-ESCOPO: 13 locales (en-US, es-ES, es-MX, pt-BR, pt-PT, fr-FR, de-DE, it, ja, ko, ru, tr, zh-Hans), campos subtitle + keywords, name intocado.
-
-DOIS ACHADOS JÁ NA PREPARAÇÃO:
-1. Campo de keywords metade vazio no CJK: ja usa 51 de 100 chars, ko 48, zh-Hans 38. É orçamento de indexação parado — e ja recebe 822 impressões com 0,36% de tap, ko 265 com 0%. tr recebe 1.627 impressões (mais que o pt-BR) e converte 0,55% em tap, o que costuma ser o app aparecendo em busca de intenção errada.
-2. NÃO existe versão editável: só a 1.9.0 READY_FOR_SALE e um único appInfo. keywords e subtitle são version-scoped, então essa iteração exige a 1.9.1 COM BUILD, indo a review — não é PATCH direto como a iter-01 (que pegou a 1.9.0 ainda em WAITING_FOR_REVIEW). Pela quarentena, esse build tem que ser SÓ TEXTO: sem feature, sem print novo, sem idioma novo.
-
-PRÓXIMO PASSO SEU: quando a cadeia terminar eu te mando a proposta campo a campo nos 13 locales pra você aprovar. O deploy (criar a 1.9.1, subir build, submeter) só acontece com seu pedido — iPhotos é intermediate e nada chega na loja sem você pedir.
-
-Iteração: Apps/intermediate/iPhotosEditor/aso-pipeline/iterations/2026-09-30_iter-02-text-keywords</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 08:51 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Preço de todos os apps: 8 dos 12 apps mexíveis cobram abaixo do piso, e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Auditoria lida da ASC API em 01/10: 23 assinaturas e 8 compras únicas de 22 apps, com preço em 10 territórios. Três padrões: (1) preço abaixo do piso do lab em 8 apps — o extremo é o Sunrise, semanal US$ 0,29 e anual US$ 2,99; (2) trial no plano errado, nos dois planos, ou de 3 dias no anual (a pior célula medida: 24% de conversão); (3) nenhuma precificação por país — convertido em dólar, BR/MX/IN pagam ACIMA do americano. 90,8% da receita está nos dois congelados (Calc+ e Cloak), então mexer no resto custa pouco. Proposta do relatório: começar pelo BLW (maior receita fora dos congelados, tem os 4 erros juntos). Decidir: aplica os preços novos? Em que ordem? Subir preço preserva quem já assina.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/precos-2026-10/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
