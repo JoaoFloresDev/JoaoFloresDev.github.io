@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>iPhotos</title><style>
+<title>Lab</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,22 +114,4 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 10:04 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A cadeia de ASO rodou inteira nos 13 idiomas da loja e a versão está montada. O que JÁ está feito:
-- Versão 1.10.0 criada na ASC (PREPARE_FOR_SUBMISSION), build 34 anexado e VALID, 13 localizations herdadas.
-- Archive local com Xcode 26.1 assinado pela ASC key; preflight do bundle em 11 checks, 0 falha, 0 aviso.
-- Os 13 campos compostos e revisados: nenhuma duplicata entre name/subtitle/keywords, nenhuma marca de concorrente, nenhum acento nos locales latinos, nada acima do limite.
-
-O QUE FALTA, E É SEU: aprovar o texto. Metadata da ASC é sua decisão (regra de 08/09), e o relatório existe pra isso. Depois do seu ok eu aplico por PATCH nos 13 locales, escrevo o whatsNew (os 13 estão vazios e é obrigatório pra submeter) e submeto.
-
-RELATÓRIO: aso-pipeline/iterations/2026-09-30_iter-02-text-keywords/research/keyword_candidates.md (249 linhas, padrão GOLD)
-
-O QUE MUDA: name intocado nos 13. Keywords mudam nos 13; subtitle muda em 3 (es-MX, de-DE, zh-Hans). O ganho barato foi higiene: ru e tr fecham em 100/100 chars, ja 51→63, ko 48→87, zh-Hans 38→60.
-
-AS 3 DECISÕES QUE SÃO SUAS:
-1. O app está 100% em INGLÊS nos 13 idiomas da loja (ja: 822 impressões → 3 taps → 0 instalação → 0 avaliação; ko: 265 → 0 taps). Tradução entra nesta 1.10.0 ou fica pra depois? É a alavanca maior que a keyword.
-2. O subtitle do de-DE tirou `collage` do campo de peso 3x apostando que `Fotocollage` no nome indexa por substring — hipótese medida em CJK, não em alemão. O D7 vigia `karussell collage` #22. Mantém ou reverte?
-3. `네컷` no ko é o PARTIAL de maior risco (fragmento de `인생네컷`, que é cabine fotográfica). Cortar custa 3 chars e nenhuma posição.
-
-MELHORES NÚMEROS A COBRAR NO D28: `grelha de fotos` #1-5 no pt-PT (SERP com mediana de 1 avaliação), `scroll` DOMINATE nos 5 latinos, `kaydirmali` #3-10 no tr, `全景图拆分` #3-10 (1 app no índice), `投稿` #16 → #1-3 no ja.
-
-LIMITAÇÃO, DITA DE FRENTE: com a trava do piso arrancada, o checkpoint mede POSIÇÃO no Astro + impressões na ASC, não lift de instalação com intervalo de confiança — 153 instalações novas/30d no mundo (US 59) não dão significância. D7-D28 contam do dia em que a 1.10.0 ficar no ar.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 10:04 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Preço de todos os apps: 8 dos 12 apps mexíveis cobram abaixo do piso, e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Auditoria lida da ASC API em 01/10: 23 assinaturas e 8 compras únicas de 22 apps, com preço em 10 territórios. Três padrões: (1) preço abaixo do piso do lab em 8 apps — o extremo é o Sunrise, semanal US$ 0,29 e anual US$ 2,99; (2) trial no plano errado, nos dois planos, ou de 3 dias no anual (a pior célula medida: 24% de conversão); (3) nenhuma precificação por país — convertido em dólar, BR/MX/IN pagam ACIMA do americano. 90,8% da receita está nos dois congelados (Calc+ e Cloak), então mexer no resto custa pouco. Proposta do relatório: começar pelo BLW (maior receita fora dos congelados, tem os 4 erros juntos). Decidir: aplica os preços novos? Em que ordem? Subir preço preserva quem já assina.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/precos-2026-10/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

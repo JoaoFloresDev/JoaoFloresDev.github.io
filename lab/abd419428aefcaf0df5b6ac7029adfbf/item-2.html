@@ -114,22 +114,22 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 10:04 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — O app está 100% em INGLÊS nos 13 idiomas da loja — é a alavanca maior que a keyword, e cabe na mesma 1.10.0</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Achado enquanto o inventário de fit era construído, verificado por mim no source:
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 10:04 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A cadeia de ASO rodou inteira nos 13 idiomas da loja e a versão está montada. O que JÁ está feito:
+- Versão 1.10.0 criada na ASC (PREPARE_FOR_SUBMISSION), build 34 anexado e VALID, 13 localizations herdadas.
+- Archive local com Xcode 26.1 assinado pela ASC key; preflight do bundle em 11 checks, 0 falha, 0 aviso.
+- Os 13 campos compostos e revisados: nenhuma duplicata entre name/subtitle/keywords, nenhuma marca de concorrente, nenhum acento nos locales latinos, nada acima do limite.
 
-Os 9 arquivos Main.strings localizados (ja, ko, zh-Hans, ru, tr, it, fr, pt-BR, es-419) têm 49 strings cada e ZERO caractere non-ASCII — são exports nunca traduzidos. No ja.lproj está literalmente &quot;Gallery&quot; = &quot;Gallery&quot;. E o código novo (Composer, Editor, Home) tem ~112 strings de UI em inglês cravadas no fonte, nenhuma com NSLocalizedString.
+O QUE FALTA, E É SEU: aprovar o texto. Metadata da ASC é sua decisão (regra de 08/09), e o relatório existe pra isso. Depois do seu ok eu aplico por PATCH nos 13 locales, escrevo o whatsNew (os 13 estão vazios e é obrigatório pra submeter) e submeto.
 
-A loja está em 13 idiomas desde 31/08. O app, em 1.
+RELATÓRIO: aso-pipeline/iterations/2026-09-30_iter-02-text-keywords/research/keyword_candidates.md (249 linhas, padrão GOLD)
 
-O FUNIL FECHA COM ISSO (36 dias, App Analytics):
-- jp: 822 impressões → 3 taps → 0 instalações → 0 avaliações
-- kr: 265 impressões → 0 taps → 0 instalações → 0 avaliações
-- cn: 294 impressões → 9 taps → 1 instalação → 0 avaliações
-- it: 307 impressões → 9 taps → 2 instalações → 0 avaliações
-- tr: 1.627 impressões (mais que o pt-BR) → 9 taps → 1 instalação
-it, ja, ko e zh-Hans estão com ZERO avaliação um mês depois do listing nascer. A pessoa busca em japonês, cai numa página em japonês e instala um app que não fala a língua dela.
+O QUE MUDA: name intocado nos 13. Keywords mudam nos 13; subtitle muda em 3 (es-MX, de-DE, zh-Hans). O ganho barato foi higiene: ru e tr fecham em 100/100 chars, ja 51→63, ko 48→87, zh-Hans 38→60.
 
-TAMANHO DO TRABALHO: ~112 strings de código + 49 de storyboard, × 12 idiomas. É uma leva de agentes, não um mês. O lab já tem o translate-xcstrings.py, mas este app usa .strings (não .xcstrings), então precisa de um passo de conversão ou de um script próprio.
+AS 3 DECISÕES QUE SÃO SUAS:
+1. O app está 100% em INGLÊS nos 13 idiomas da loja (ja: 822 impressões → 3 taps → 0 instalação → 0 avaliação; ko: 265 → 0 taps). Tradução entra nesta 1.10.0 ou fica pra depois? É a alavanca maior que a keyword.
+2. O subtitle do de-DE tirou `collage` do campo de peso 3x apostando que `Fotocollage` no nome indexa por substring — hipótese medida em CJK, não em alemão. O D7 vigia `karussell collage` #22. Mantém ou reverte?
+3. `네컷` no ko é o PARTIAL de maior risco (fragmento de `인생네컷`, que é cabine fotográfica). Cortar custa 3 chars e nenhuma posição.
 
-A DECISÃO É SUA: entra na 1.10.0 junto do revamp do grid e do ASO novo, ou fica pra depois? Eu recomendo entrar — a iteração de ASO vai trazer impressão pros stores onde o app não fala a língua, e sem tradução essa impressão virou tap perdido em agosto e setembro.
+MELHORES NÚMEROS A COBRAR NO D28: `grelha de fotos` #1-5 no pt-PT (SERP com mediana de 1 avaliação), `scroll` DOMINATE nos 5 latinos, `kaydirmali` #3-10 no tr, `全景图拆分` #3-10 (1 app no índice), `投稿` #16 → #1-3 no ja.
 
-DOIS PASSIVOS MENORES no mesmo caminho, e uma correção minha: (1) a NSPhotoLibraryAddUsageDescription in-app ainda diz &quot;The sticker/s will be saved in your photo library&quot; — string legada sem feature por trás, fix de uma linha. (2) 14 arquivos LaunchScreen.strings localizados carregam &quot;Linkin Studios&quot; (o estúdio do template CodeCanyon original), mas apontam pro objeto IxV-gZ-9jO, que não existe mais no storyboard — o iOS ignora e a splash mostra &quot;Gambit Studio&quot; corretamente; é lixo a apagar, não bug. (3) CORREÇÃO: eu tinha dito que a description da loja promete sticker creator, image library e export de sticker. Está errado — conferi na ASC e são zero ocorrências nos 13 locales. Esse erro veio de um snapshot de 25/08 na pasta current/, anterior à iter-01, que já reescreveu a description. A description no ar é honesta; já ressincronizei a pasta.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+LIMITAÇÃO, DITA DE FRENTE: com a trava do piso arrancada, o checkpoint mede POSIÇÃO no Astro + impressões na ASC, não lift de instalação com intervalo de confiança — 153 instalações novas/30d no mundo (US 59) não dão significância. D7-D28 contam do dia em que a 1.10.0 ficar no ar.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
