@@ -6,8 +6,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
-@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#2b3340;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#ccd6e6;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
 .wrap{width:min(1680px,94vw);margin:0 auto;padding:28px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:20px;margin-top:30px}section,.twrap{min-width:0}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
 h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
@@ -56,7 +56,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
 .st.run{background:rgba(13,150,104,.16);color:var(--ok)}
 .st.appr{background:rgba(201,147,10,.16);color:#c9930a}
-.st.rev{background:rgba(11,83,214,.13);color:var(--acc)}
+.st.rev{background:rgba(125,140,170,.14);color:var(--mut)}
 .st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
 .st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
 .st.crit{background:rgba(200,34,34,.15);color:var(--down)}
@@ -75,7 +75,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fs .fb{flex:1;height:13px}
 .fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
-.fs .fb i.alt{background:var(--ok)}.fs .fb i.ga{background:#8b5cf6}
+.fs .fb i.alt{background:var(--ok)}
 .fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
 .fs.tot .fl,.fs.tot .fn{font-weight:700}
 .leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
@@ -100,7 +100,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
 .dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
 .prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
-.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:#fff;font-weight:700;font-size:13px}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:var(--card);font-weight:700;font-size:13px}
 .prc{flex:1;min-width:0}
 .prt{font-size:15px;font-weight:600;margin-bottom:3px}
 .prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
@@ -126,7 +126,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --f-disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
   --f-text:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --bg:#eef1f7; --card:#ffffff; --tx:#0a0d14; --mut:#4b5567; --acc:#1246c8;
+  --bg:#eef1f7; --card:#ffffff; --tx:#0a0d14; --mut:#4b5567; --acc:#2b3340;
   --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
   --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
   --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
@@ -135,7 +135,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --rad:14px;
 }
 @media(prefers-color-scheme:dark){:root{
-  --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#8ab4ff;
+  --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
   --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
   --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
   --cegtint:rgba(255,187,85,.1); --cegline:rgba(255,187,85,.55);
@@ -213,7 +213,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .dah{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
 .dah b{font-family:var(--f-disp);font-size:14.5px;font-weight:700}
 .drank{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
-  border-radius:6px;background:var(--acc);color:#fff;font-size:11.5px;font-weight:700;flex:none}
+  border-radius:6px;background:var(--acc);color:var(--card);font-size:11.5px;font-weight:700;flex:none}
 .st.d-dobrar{background:rgba(10,143,88,.16);color:var(--ok)}
 .st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
 .st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
@@ -306,7 +306,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
     color-mix(in srgb, var(--acc) 45%, transparent), transparent)}
 .fgrid.one>.fcard>.fh{background:transparent;margin:0;padding:15px 18px 12px;
   border-bottom:1px solid var(--bd-soft)}
-.fgrid.one>.fcard>.fmeta{padding:10px 18px 0}
+.fgrid.one>.fcard>.fstats{padding:12px 18px 0}
 .fgrid.one>.fcard>.fcols{padding:16px 18px 6px}
 .fgrid.one>.fcard>.fdet{margin:0;padding:13px 18px 16px;border-top:1px solid var(--bd-soft);
   background:color-mix(in srgb, #000 4%, transparent)}
@@ -328,8 +328,8 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fb{height:9px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
 .fb i{display:block;height:100%;border-radius:999px}
 /* retenção com leitura imediata */
-.rrow{display:grid;gap:9px;grid-template-columns:repeat(3,1fr);margin-top:12px}
-.rc{background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;padding:9px 11px}
+.rrow{display:grid;gap:9px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0}
+.rc{min-width:0;background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;padding:9px 11px}
 /* o rótulo é legenda; quem salta é o número, na cor da régua */
 .rc b{display:block;font-family:var(--f-disp);font-size:10px;font-weight:700;
   letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0}
@@ -347,6 +347,29 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 @media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
 .fcol{min-width:0}
 .fcol>.fnds{margin-top:0}
+/* Régua de contexto do app: instalações, ativos, novos, crash-free. Antes isso
+   era uma linha de texto corrido ("187 downloads/30d · WATCH · crash-free
+   100%") que ninguém comparava entre cards; como números rotulados, dá pra
+   varrer a coluna de cima a baixo. */
+.fstats{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline}
+.fst{display:flex;align-items:baseline;gap:7px;min-width:0}
+.fstl{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut)}
+.fst b{font-family:var(--f-disp);font-size:15px;font-weight:700;letter-spacing:-.015em;
+  font-variant-numeric:tabular-nums}
+.fstd{font-size:12px;font-weight:600}
+.st.vd{background:rgba(125,140,170,.14);color:var(--mut)}
+.fh .noasc{font-size:11.5px;font-weight:400;color:var(--warn)}
+/* Cada metade do card diz o que é antes de mostrar número. */
+.fgrp{margin-bottom:16px}
+.fgrp:last-child{margin-bottom:0}
+.fgl{display:block;font-family:var(--f-disp);font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
+  padding-bottom:7px;margin-bottom:10px;border-bottom:1px solid var(--bd-soft)}
+.fcol>.fgrp>.fnds{margin-top:0}
+.fcols{position:relative}
+@media(min-width:821px){.fcols::before{content:"";position:absolute;top:0;bottom:0;
+  left:50%;width:1px;background:var(--bd-soft)}}
 .fdet .ascgrid{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
 .fdetcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
   align-items:start}
@@ -366,7 +389,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .rawbox .ascgrid b{font-size:14px}
 .srct{float:right;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 7px;
   border-radius:999px;background:var(--bd);color:var(--mut);text-transform:uppercase}
-.s-asc{background:rgba(21,82,216,.14);color:var(--acc)}
+.s-asc{background:rgba(125,140,170,.16);color:var(--tx)}
 .s-firebase{background:rgba(180,83,9,.14);color:var(--warn)}
 .noasc{background:rgba(180,83,9,.14);color:var(--warn);border-radius:999px;padding:1px 8px;
   font-size:10.5px;font-weight:600}
@@ -421,7 +444,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .ascgrid span{display:block;font-size:10px;color:var(--mut);text-transform:uppercase;
   letter-spacing:.04em}
 .ascgrid b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
-.fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(21,82,216,.18),var(--sh-up)}
+.fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(125,140,170,.3),var(--sh-up)}
 /* ---------- acabamento: luz e profundidade (01/10) ----------
    Gradiente é usado onde tem função: a luz no topo dá direção à página, a barra
    do funil ganha volume, e o cabeçalho de cada app se separa do conteúdo. Fundo
@@ -443,8 +466,6 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   color-mix(in srgb, var(--acc) 5%, var(--card)))}
 .fb i,.fs .fb i{background:linear-gradient(90deg,
   color-mix(in srgb, var(--acc) 85%, transparent), var(--acc))}
-.fb i.ga{background:linear-gradient(90deg,
-  color-mix(in srgb, #7c5cff 80%, transparent), #7c5cff)}
 .fgrid.one>.fcard>.fh{background:linear-gradient(180deg,
   color-mix(in srgb, var(--acc) 7%, var(--card)), var(--bd-soft))}
 .ascgrid b,.tile .tv{background:linear-gradient(180deg, var(--tx), color-mix(in srgb, var(--tx) 72%, var(--mut)));
@@ -453,4 +474,4 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 17:00 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/reports/lab-audit-2026-08-22.md</code></p><div id="md"></div><script>const RAW="# Auditoria do lab vs boas pr\u00e1ticas indie \u2014 2026-08-22\n\nVarredura web (RevenueCat SoSA 2026, Adapty 2026, ASO World/AppFollow/Phiture 2026, UXCam/Adjust/Pushwoosh retention, Apple/SwiftLee ratings, Applyra/AppLaunchFlow indie playbooks, GA4 Data API docs) cruzada com RULES/COMMANDS/spec/agents/skills do `_GambitStudio`. Veredito geral: **o lab est\u00e1 acima da m\u00e9dia indie em ASO de texto, prints, ratings e release; o buraco era medir o p\u00f3s-install** (ativa\u00e7\u00e3o/reten\u00e7\u00e3o/funil) \u2014 que em 2026 virou sinal de ranking da Apple. Corrigido nesta sess\u00e3o.\n\n## 1. O que j\u00e1 est\u00e1 certo (n\u00e3o mexer)\n| \u00c1rea | Pr\u00e1tica 2026 | Lab |\n|---|---|---|\n| Keyword strategy | long-tail, inten\u00e7\u00e3o > volume, sem duplicar name/subtitle/KW, 2\u00ba set no D7-14 | `aso-ranking-playbook` \u00a74, cadeia de 9 agentes, `keywords_round2` |\n| Prints | 3 primeiros convertem na SERP, benef\u00edcio em texto grande, 1\u00ba print = killer feature | RULES \"Screenshots\", `code-driven-prints` |\n| Ratings | prompt nativo s\u00f3 ap\u00f3s momento de valor, pr\u00e9-gate, responder reviews (70% dos autores revisam a nota ap\u00f3s resposta) | `RatingGate`, `review-responder`, regra rating-first (<25) |\n| Launch | seg-qua, 5 reviews em 72h, ASA discovery semana 1, n\u00e3o mexer name/subtitle no 1\u00ba m\u00eas | create-ios-app Fase 7 |\n| Release | CI (Xcode mais novo), PrivacyInfo, compliance | LEARNINGS #0/#22/#29 |\n| Portfolio | \"portfolio mode pra descobrir, focus mode pra escalar\" | `kill_or_scale.py`, dashboard |\n| Deploy verificado | deliver mente por omiss\u00e3o | `deploy-verifier` |\n\n## 2. Gaps encontrados \u2192 o que foi feito\n| # | Gap | Evid\u00eancia | A\u00e7\u00e3o (feita hoje) |\n|---|---|---|---|\n| 1 | **Analytics n\u00e3o era obrigat\u00f3rio** \u2014 `create-ios-app` e `mandatory-features.md` n\u00e3o citavam Firebase; eventos ad hoc e nomes divergentes entre apps (`paywall_view` vs `paywall_shown`, `onboarding_step` vs `_step_viewed`); nenhum app loga um evento de ATIVA\u00c7\u00c3O | invent\u00e1rio GA4 de 8 apps via dashboard | `analytics/event-taxonomy.md` (can\u00f4nico, com `core_action` = aha), \u00a79 em `mandatory-features`, passo em Fase 3/5 do create, `analytics-instrumentor` implementa |\n| 2 | **Reten\u00e7\u00e3o/ativa\u00e7\u00e3o nunca eram lidas** \u2014 s\u00f3 downloads/receita/ranking | Apple 2026: reten\u00e7\u00e3o + engajamento s\u00e3o sinais de busca (paper mar/2026); D1>35%/D7>15% \"healthy\"; crash >2% derruba visibilidade | `ga4_pull.py` (cohorts, funil, engagement, vers\u00f5es), skill `/firebase-insights` + `analytics-extractor/analyst`, `aso-checkpoint` agora l\u00ea D1/D7 + crash, `kill_or_scale.py --property` pondera reten\u00e7\u00e3o |\n| 3 | **Legendas dos prints sem keyword** \u2014 headline verb-split puro | Apple OCR-indexa texto dos prints desde jun/2025; \"keyword-aware captions\" sobem ranking | regra em `code-driven-prints` e `panorama-prompter`: cada print carrega 1 termo-alvo dos campos ASO |\n| 4 | **Custom Product Pages ignoradas** | CPP rankeia org\u00e2nico desde jul/2025 (keyword-linked, 70/app); s\u00f3 31% dos apps usam; CR 42\u219256% nos adotantes | `aso-serp-analyst` + `aso-reporter` prop\u00f5em CPP por cluster de inten\u00e7\u00e3o divergente da default page |\n| 5 | **Coer\u00eancia sem\u00e2ntica** \u2014 composer otimizava tokens, n\u00e3o frase | Apple usa relev\u00e2ncia LLM: listing \"keyword-stuffed\" perde pra listing semanticamente alinhado | regra em `aso-field-composer` |\n| 6 | **Sem playbook de monetiza\u00e7\u00e3o** pros apps que T\u00caM paywall (Cloak, BLW, AirDraw, iPhotos) | Adapty 2026: testes visuais/copy t\u00eam a MENOR taxa de vit\u00f3ria (34,6%); localiza\u00e7\u00e3o/estrutura de trial/dura\u00e7\u00e3o de plano ganham (58-62%); 90% dos trials no Day 0; trial PREJUDICA LTV em Productivity/Graphics; desconto s\u00f3 p\u00f3s-dismiss | `aso/reference/monetization-playbook.md` + \u00a74 do `analytics-analyst` |\n| 7 | **\"Feito recentemente\" ileg\u00edvel** no Lab Hub | pedido do Jo\u00e3o | clamp 3 linhas |\n\n## 3. Decis\u00f5es pro Jo\u00e3o (n\u00e3o mudei sozinho)\n1. **OnboardingKit: step de micro-compromisso** (escolha de objetivo / slider / mini-quiz antes do \u00faltimo step). Dado: micro-commitments antes do paywall/CTA sobem convers\u00e3o; multi-page 12,4% vs single 9,1%. Hoje o kit \u00e9 pager de 3 features. Vale virar op\u00e7\u00e3o do kit?\n2. **Trial do Cloak (7d anual) e BLW** \u2014 Adapty 2026: em Productivity/Lifestyle/Graphics, comprador direto tem LTV maior que trial; RevenueCat: trials 17-32d convertem 42% vs 25% os <4d. Dados conflitam \u2192 testar estrutura de trial (A/B), N\u00c3O copy. Quer rodar?\n3. **CPP piloto**: 1 Custom Product Page por app SCALE (Calc+, Cloak) ligada ao cluster de keyword n\u00ba 2. Cria\u00e7\u00e3o \u00e9 API-settable (`appCustomProductPages`); prints podem reaproveitar os do PPO perdedor.\n4. **Apps gr\u00e1tis na v1** continua sendo a regra (RULES). Nota: dados 2026 dizem que 44,5% das compras e 90% dos trials acontecem no Day 0 \u2014 se um dia um app for monetizar, o paywall no onboarding (soft, com \"continuar gr\u00e1tis\") \u00e9 o default a testar, n\u00e3o \"premium na v2\".\n\n## 4. Benchmarks adotados pelo lab (agora nos agentes)\n- iOS medianas: D1 25-27% \u00b7 D7 8-14% \u00b7 D30 4-8%. Forte: D1 30-40 / D7 10-15 / D30 5-8. Productivity D1 40-50 / D7 22-28 / D30 12-18; Health 35-45 / 15-22 / 8-12; ferramentas \"use-once\" estruturalmente mais baixas \u2014 julgar pelo job do app.\n- Antes de pagar aquisi\u00e7\u00e3o: D1 > 40%, D7 > 20%, D30 > 10%.\n- Ativa\u00e7\u00e3o (core_action na 1\u00aa sess\u00e3o) = m\u00e9trica mais preditiva de D30.\n- Loja: tap\u2192install iOS m\u00e9dia 33,4%, top quartil 42-56%. Crash-free \u2265 99,5%.\n- Subscription: install\u2192pago D35 mediana 1,9-2,6% (top 8,5%); paywall\u2192trial 5-15%; trial\u2192pago 18-50%; churn 1\u00aa renova\u00e7\u00e3o weekly 30-50%, monthly 15-40%; anual 35% churn no m\u00eas 1.\n- Amostra: n\u00b7p e n\u00b7(1-p) \u2265 10 pra confiar num percentual (Wilson); < 100 novos users = s\u00f3 instrumenta\u00e7\u00e3o \u00e9 acion\u00e1vel.\n\n## 5. Fontes\nRevenueCat [SoSA 2026](https://www.revenuecat.com/blog/growth/subscription-app-trends-benchmarks-2026) \u00b7 Adapty [paywall 2026](https://adapty.io/blog/high-performing-paywall-2026/) \u00b7 ASO World [ranking 2026](https://asoworld.com/insight/app-store-ranking-in-2026-why-retention-and-engagement-now-matter-more-than-keywords/) \u00b7 [AppFollow ASO news](https://appfollow.io/blog/aso-news) \u00b7 UXCam [retention benchmarks](https://uxcam.com/blog/mobile-app-retention-benchmarks/) \u00b7 [Adjust via getpanto](https://www.getpanto.ai/blog/mobile-app-retention-statistics) \u00b7 Applyra [ASO indie](https://www.applyra.io/blog/complete-aso-guide-indie-developers) \u00b7 [AppLaunchFlow](https://www.applaunchflow.com/blog/app-launch-strategy-2026) \u00b7 Superwall [multi-page](https://superwall.com/blog/new-postmulti-page-onboarding-paywalls-convert-37-better-than-single-page-heres-why) \u00b7 SwiftLee [SKStoreReviewController](https://www.avanderlee.com/swift/skstorereviewcontroller-app-ratings/) \u00b7 BrandBastion [replies](https://blog.brandbastion.com/impact-of-replying-to-app-reviews/) \u00b7 Amplitude [retention curve](https://amplitude.com/explore/analytics/retention-curve) \u00b7 Sequoia [Retention](https://articles.sequoiacap.com/retention) \u00b7 GA4 [Data API advanced](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced) \u00b7 dev.to [GA4 mobile](https://dev.to/dainyjose/mastering-ga4-for-mobile-apps-from-events-to-business-insights-3n5l) \u00b7 Artisan [15 metrics](https://www.artisangrowthstrategies.com/blog/essential-mobile-app-analytics-user-behavior-metrics-guide) \u00b7 RevenueCat [portfolio vs single](https://www.revenuecat.com/blog/growth/app-portfolio-vs-single-app/)\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 17:12 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/reports/lab-audit-2026-08-22.md</code></p><div id="md"></div><script>const RAW="# Auditoria do lab vs boas pr\u00e1ticas indie \u2014 2026-08-22\n\nVarredura web (RevenueCat SoSA 2026, Adapty 2026, ASO World/AppFollow/Phiture 2026, UXCam/Adjust/Pushwoosh retention, Apple/SwiftLee ratings, Applyra/AppLaunchFlow indie playbooks, GA4 Data API docs) cruzada com RULES/COMMANDS/spec/agents/skills do `_GambitStudio`. Veredito geral: **o lab est\u00e1 acima da m\u00e9dia indie em ASO de texto, prints, ratings e release; o buraco era medir o p\u00f3s-install** (ativa\u00e7\u00e3o/reten\u00e7\u00e3o/funil) \u2014 que em 2026 virou sinal de ranking da Apple. Corrigido nesta sess\u00e3o.\n\n## 1. O que j\u00e1 est\u00e1 certo (n\u00e3o mexer)\n| \u00c1rea | Pr\u00e1tica 2026 | Lab |\n|---|---|---|\n| Keyword strategy | long-tail, inten\u00e7\u00e3o > volume, sem duplicar name/subtitle/KW, 2\u00ba set no D7-14 | `aso-ranking-playbook` \u00a74, cadeia de 9 agentes, `keywords_round2` |\n| Prints | 3 primeiros convertem na SERP, benef\u00edcio em texto grande, 1\u00ba print = killer feature | RULES \"Screenshots\", `code-driven-prints` |\n| Ratings | prompt nativo s\u00f3 ap\u00f3s momento de valor, pr\u00e9-gate, responder reviews (70% dos autores revisam a nota ap\u00f3s resposta) | `RatingGate`, `review-responder`, regra rating-first (<25) |\n| Launch | seg-qua, 5 reviews em 72h, ASA discovery semana 1, n\u00e3o mexer name/subtitle no 1\u00ba m\u00eas | create-ios-app Fase 7 |\n| Release | CI (Xcode mais novo), PrivacyInfo, compliance | LEARNINGS #0/#22/#29 |\n| Portfolio | \"portfolio mode pra descobrir, focus mode pra escalar\" | `kill_or_scale.py`, dashboard |\n| Deploy verificado | deliver mente por omiss\u00e3o | `deploy-verifier` |\n\n## 2. Gaps encontrados \u2192 o que foi feito\n| # | Gap | Evid\u00eancia | A\u00e7\u00e3o (feita hoje) |\n|---|---|---|---|\n| 1 | **Analytics n\u00e3o era obrigat\u00f3rio** \u2014 `create-ios-app` e `mandatory-features.md` n\u00e3o citavam Firebase; eventos ad hoc e nomes divergentes entre apps (`paywall_view` vs `paywall_shown`, `onboarding_step` vs `_step_viewed`); nenhum app loga um evento de ATIVA\u00c7\u00c3O | invent\u00e1rio GA4 de 8 apps via dashboard | `analytics/event-taxonomy.md` (can\u00f4nico, com `core_action` = aha), \u00a79 em `mandatory-features`, passo em Fase 3/5 do create, `analytics-instrumentor` implementa |\n| 2 | **Reten\u00e7\u00e3o/ativa\u00e7\u00e3o nunca eram lidas** \u2014 s\u00f3 downloads/receita/ranking | Apple 2026: reten\u00e7\u00e3o + engajamento s\u00e3o sinais de busca (paper mar/2026); D1>35%/D7>15% \"healthy\"; crash >2% derruba visibilidade | `ga4_pull.py` (cohorts, funil, engagement, vers\u00f5es), skill `/firebase-insights` + `analytics-extractor/analyst`, `aso-checkpoint` agora l\u00ea D1/D7 + crash, `kill_or_scale.py --property` pondera reten\u00e7\u00e3o |\n| 3 | **Legendas dos prints sem keyword** \u2014 headline verb-split puro | Apple OCR-indexa texto dos prints desde jun/2025; \"keyword-aware captions\" sobem ranking | regra em `code-driven-prints` e `panorama-prompter`: cada print carrega 1 termo-alvo dos campos ASO |\n| 4 | **Custom Product Pages ignoradas** | CPP rankeia org\u00e2nico desde jul/2025 (keyword-linked, 70/app); s\u00f3 31% dos apps usam; CR 42\u219256% nos adotantes | `aso-serp-analyst` + `aso-reporter` prop\u00f5em CPP por cluster de inten\u00e7\u00e3o divergente da default page |\n| 5 | **Coer\u00eancia sem\u00e2ntica** \u2014 composer otimizava tokens, n\u00e3o frase | Apple usa relev\u00e2ncia LLM: listing \"keyword-stuffed\" perde pra listing semanticamente alinhado | regra em `aso-field-composer` |\n| 6 | **Sem playbook de monetiza\u00e7\u00e3o** pros apps que T\u00caM paywall (Cloak, BLW, AirDraw, iPhotos) | Adapty 2026: testes visuais/copy t\u00eam a MENOR taxa de vit\u00f3ria (34,6%); localiza\u00e7\u00e3o/estrutura de trial/dura\u00e7\u00e3o de plano ganham (58-62%); 90% dos trials no Day 0; trial PREJUDICA LTV em Productivity/Graphics; desconto s\u00f3 p\u00f3s-dismiss | `aso/reference/monetization-playbook.md` + \u00a74 do `analytics-analyst` |\n| 7 | **\"Feito recentemente\" ileg\u00edvel** no Lab Hub | pedido do Jo\u00e3o | clamp 3 linhas |\n\n## 3. Decis\u00f5es pro Jo\u00e3o (n\u00e3o mudei sozinho)\n1. **OnboardingKit: step de micro-compromisso** (escolha de objetivo / slider / mini-quiz antes do \u00faltimo step). Dado: micro-commitments antes do paywall/CTA sobem convers\u00e3o; multi-page 12,4% vs single 9,1%. Hoje o kit \u00e9 pager de 3 features. Vale virar op\u00e7\u00e3o do kit?\n2. **Trial do Cloak (7d anual) e BLW** \u2014 Adapty 2026: em Productivity/Lifestyle/Graphics, comprador direto tem LTV maior que trial; RevenueCat: trials 17-32d convertem 42% vs 25% os <4d. Dados conflitam \u2192 testar estrutura de trial (A/B), N\u00c3O copy. Quer rodar?\n3. **CPP piloto**: 1 Custom Product Page por app SCALE (Calc+, Cloak) ligada ao cluster de keyword n\u00ba 2. Cria\u00e7\u00e3o \u00e9 API-settable (`appCustomProductPages`); prints podem reaproveitar os do PPO perdedor.\n4. **Apps gr\u00e1tis na v1** continua sendo a regra (RULES). Nota: dados 2026 dizem que 44,5% das compras e 90% dos trials acontecem no Day 0 \u2014 se um dia um app for monetizar, o paywall no onboarding (soft, com \"continuar gr\u00e1tis\") \u00e9 o default a testar, n\u00e3o \"premium na v2\".\n\n## 4. Benchmarks adotados pelo lab (agora nos agentes)\n- iOS medianas: D1 25-27% \u00b7 D7 8-14% \u00b7 D30 4-8%. Forte: D1 30-40 / D7 10-15 / D30 5-8. Productivity D1 40-50 / D7 22-28 / D30 12-18; Health 35-45 / 15-22 / 8-12; ferramentas \"use-once\" estruturalmente mais baixas \u2014 julgar pelo job do app.\n- Antes de pagar aquisi\u00e7\u00e3o: D1 > 40%, D7 > 20%, D30 > 10%.\n- Ativa\u00e7\u00e3o (core_action na 1\u00aa sess\u00e3o) = m\u00e9trica mais preditiva de D30.\n- Loja: tap\u2192install iOS m\u00e9dia 33,4%, top quartil 42-56%. Crash-free \u2265 99,5%.\n- Subscription: install\u2192pago D35 mediana 1,9-2,6% (top 8,5%); paywall\u2192trial 5-15%; trial\u2192pago 18-50%; churn 1\u00aa renova\u00e7\u00e3o weekly 30-50%, monthly 15-40%; anual 35% churn no m\u00eas 1.\n- Amostra: n\u00b7p e n\u00b7(1-p) \u2265 10 pra confiar num percentual (Wilson); < 100 novos users = s\u00f3 instrumenta\u00e7\u00e3o \u00e9 acion\u00e1vel.\n\n## 5. Fontes\nRevenueCat [SoSA 2026](https://www.revenuecat.com/blog/growth/subscription-app-trends-benchmarks-2026) \u00b7 Adapty [paywall 2026](https://adapty.io/blog/high-performing-paywall-2026/) \u00b7 ASO World [ranking 2026](https://asoworld.com/insight/app-store-ranking-in-2026-why-retention-and-engagement-now-matter-more-than-keywords/) \u00b7 [AppFollow ASO news](https://appfollow.io/blog/aso-news) \u00b7 UXCam [retention benchmarks](https://uxcam.com/blog/mobile-app-retention-benchmarks/) \u00b7 [Adjust via getpanto](https://www.getpanto.ai/blog/mobile-app-retention-statistics) \u00b7 Applyra [ASO indie](https://www.applyra.io/blog/complete-aso-guide-indie-developers) \u00b7 [AppLaunchFlow](https://www.applaunchflow.com/blog/app-launch-strategy-2026) \u00b7 Superwall [multi-page](https://superwall.com/blog/new-postmulti-page-onboarding-paywalls-convert-37-better-than-single-page-heres-why) \u00b7 SwiftLee [SKStoreReviewController](https://www.avanderlee.com/swift/skstorereviewcontroller-app-ratings/) \u00b7 BrandBastion [replies](https://blog.brandbastion.com/impact-of-replying-to-app-reviews/) \u00b7 Amplitude [retention curve](https://amplitude.com/explore/analytics/retention-curve) \u00b7 Sequoia [Retention](https://articles.sequoiacap.com/retention) \u00b7 GA4 [Data API advanced](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced) \u00b7 dev.to [GA4 mobile](https://dev.to/dainyjose/mastering-ga4-for-mobile-apps-from-events-to-business-insights-3n5l) \u00b7 Artisan [15 metrics](https://www.artisangrowthstrategies.com/blog/essential-mobile-app-analytics-user-behavior-metrics-guide) \u00b7 RevenueCat [portfolio vs single](https://www.revenuecat.com/blog/growth/app-portfolio-vs-single-app/)\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
