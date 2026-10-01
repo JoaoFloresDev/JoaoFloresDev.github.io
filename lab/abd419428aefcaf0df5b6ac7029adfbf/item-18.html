@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Meus Gastos</title><style>
+<title>Lab</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,10 +114,12 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:13 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — ASO iter-04: esperando a 45.4.0 ficar no ar pra começar a medir (D0 = dia do READY_FOR_SALE)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto está staged na 45.4.0, não no ar. D0 NÃO é o dia do PATCH (01/10) — é o dia em que a 45.4.0 ficar READY_FOR_SALE. Enquanto isso o público vê a 45.3.1.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:47 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Reforma profunda da camada de ASO — work order em execução (onda 1: 5 pesquisas em paralelo)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pedido do João 01/10: &#x27;melhorar a aso pipeline com dados da internet, análise profunda, bem quebrado, várias verificações, análise de mercado, que gere resultado&#x27;.
 
-Quando ela ficar no ar, nessa ordem: pull_analytics.py d0 --iter &lt;dir&gt; --live-at &lt;dia&gt; --write-meta (grava metrics/d00_baseline.json), só então status vira live, e os checkpoints D7/14/21/28 contam de live_at.
+Work order: 2026-10-01_reforma-profunda-da-camada-de-aso-pesqui (orchestrator/wo.py show). 14 itens em 4 ondas:
+ONDA 1 (rodando): R1 algoritmo App Store 2026 · R2 fontes de volume além do Astro + protótipo Apple Ads API · R3 conversão/benchmarks + 5 líderes lidos · R4 auditoria interna (&gt;=20 falhas com evidência) · R5 frameworks de processo + análise de mercado.
+ONDA 2: D1 desenho (achado → mudança → arquivo → done_when).
+ONDA 3: I1 checks determinísticos de description/marca/consistência · I2 2ª fonte de volume no extractor · I3 modo app-pequeno (medir por posição) · I4 agente aso-conversion-auditor · I5 market_snapshot.py (diff de concorrentes) · I6 detector aso_unmeasured no scan + página no Hub.
+ONDA 4: I7 agentes/skill/playbooks com eval · I8 smoke antes/depois na iter-04 do Meus Gastos.
 
-Janela de quarentena a respeitar depois do live: nada de começar/parar PPO nem soltar release de feature até live_at + 14 dias, senão o resultado fica ilegível. O PPO 9570de85 segue rodando até 27/11 por decisão sua (versão nova ganha de A/B rodando) — override já registrado.
-
-Expectativa calibrada: com 25 instalações/30d na Alemanha não dá sinal estatístico. A leitura primária é POSIÇÃO no Astro (quantos dos 11 termos alemães DOMINATE chegam ao alvo), não download.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+Resultado observável no fim: aso/reference/*-2026.md (4 docs), reports/2026-10-01_aso-layer-audit/{FAILURES,DESIGN,BEFORE_AFTER}.md, scripts novos com testes, evals passando.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
