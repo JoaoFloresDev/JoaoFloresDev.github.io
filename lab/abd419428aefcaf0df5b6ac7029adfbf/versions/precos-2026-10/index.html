@@ -531,6 +531,76 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </div>
 </section>
 
+<h2>De onde vêm os preços sugeridos</h2>
+<div class=card>
+<p>O sugerido de cada plano é a <b>mediana de mercado da categoria daquele app</b>, não uma régua
+do lab — o lab nunca escreveu uma. Quando a categoria do app não tem número publicado, o relatório
+usa a mediana geral e diz qual categoria medida está servindo de proxy.</p>
+
+<div class=scroll>
+<table>
+<thead><tr><th>Categoria medida</th><th class=num>Semanal</th><th class=num>Mensal</th>
+<th class=num>Anual</th><th>Serve de referência para</th></tr></thead>
+<tbody>
+<tr><td>Health &amp; Fitness</td><td class=num>US$ 4,99</td><td class=num>US$ 9,70</td>
+<td class=num>US$ 39,99</td><td class=small>Walk, Hair Schedule, Sunrise, BLW (hábito)</td></tr>
+<tr><td>Education</td><td class=num>US$ 5,99</td><td class=num>US$ 8,38</td>
+<td class=num>US$ 44,99</td><td class=small>Devlingo, Controle de faltas</td></tr>
+<tr><td>Gaming</td><td class=num>US$ 4,99</td><td class=num>US$ 4,99</td>
+<td class=num>US$ 20,55</td><td class=small>Neon, Sueca, Truco</td></tr>
+<tr><td>Business</td><td class=num>US$ 6,15</td><td class=num>US$ 7,58</td>
+<td class=num>US$ 37,50</td><td class=small>—</td></tr>
+<tr><td><b>Mediana geral</b> (75 mil apps)</td><td class=num>US$ 4,99</td>
+<td class=num>US$ 6,68<br><span class=small>mais comum: US$ 9,99</span></td>
+<td class=num>US$ 29,99</td><td class=small>iPhotos, Meus Gastos, Cronos</td></tr>
+<tr><td>Utilities: faixa de maior LTV medida</td><td class=num>US$ 4,99-5,99</td>
+<td class=num>—</td><td class=num>—</td><td class=small>Calc+, Cloak</td></tr>
+</tbody></table>
+</div>
+
+<h4>Três coisas que a pesquisa derruba</h4>
+<p><b>Preço mais alto converte MAIS, não menos.</b> Apps na faixa cara convertem 2,7% de download
+para pagante em D35, contra 1,5% dos baratos (Airbridge, 75&nbsp;mil apps). O medo de que subir o
+preço derrube a conversão não aparece no dado — o que aparece é o contrário.</p>
+<p><b>As duas fontes discordam, e isso importa.</b> A mediana anual é US$&nbsp;29,99 na Airbridge e
+US$&nbsp;38,42 na RevenueCat; a semanal, US$&nbsp;4,99 contra US$&nbsp;7,48. Amostras diferentes
+medindo a mesma coisa. Este relatório usa a mais conservadora (Airbridge, por categoria) — mesmo
+assim quase todo app do lab fica muito abaixo.</p>
+<p><b>O anual segura gente, o mensal não.</b> Assinante anual retém 44,1% em 12&nbsp;meses; mensal,
+17,5%. É o argumento para o anual existir mesmo quando o herói é o plano curto.</p>
+
+<h4>Preço por país: a conta certa é poder de compra, não câmbio</h4>
+<p>Converter o preço pelo dólar do dia é o erro mais comum. Para uma base de US$&nbsp;19,99, o
+câmbio diz ₹&nbsp;1.660 na Índia e R$&nbsp;98 no Brasil; o preço ajustado por paridade de poder de
+compra é <b>₹&nbsp;499 e R$&nbsp;39</b> — 0,26× e 0,38× do preço americano. É por isso que a
+equalização automática da Apple, que todos os apps do lab usam, faz o brasileiro e o indiano pagarem
+<i>acima</i> do americano em dólares.</p>
+<ol class=plan>
+<li><b>Alvo por mercado:</b> emergentes entre 20% e 40% do Tier 1 (BR ≈ 0,40×, MX ≈ 0,45×,
+IN ≈ 0,25×). Europa é o inverso: cobra 29-39% <i>acima</i> da América do Norte.</li>
+<li><b>Fórmula:</b> preço local = (PPP do país ÷ PPP dos EUA) × preço base, com os dados de PPP do
+OECD ou do Banco Mundial, atualizados uma vez por ano.</li>
+<li><b>Arredondar para o costume local:</b> Índia e Brasil terminam em 99 (₹&nbsp;499, R$&nbsp;39,90),
+Japão em centenas redondas (¥&nbsp;500), Turquia em dezenas por causa da inflação.</li>
+<li><b>Teto de churn:</b> quando a assinatura passa de 1-2% da renda discricionária mensal do
+usuário local, o cancelamento dispara. É esse limite que o preço por país está respeitando.</li>
+<li><b>Manutenção:</b> revisar todos os preços localizados por trimestre, com conferência mensal nos
+mercados de inflação alta, e sempre depois de a Apple mexer em imposto ou em faixa de preço.</li>
+</ol>
+<p class=small>Na prática isso é uma chamada de API por território: o <code>POST</code> de preço muda
+<b>só os EUA</b>, e os outros 174 mercados ficam no preço antigo até alguém equalizar. O script
+<code>scripts/asc/set_subscription_price.py</code> faz os dois passos.</p>
+
+<h4>Fontes</h4>
+<ul class=small>
+<li><a href="https://www.airbridge.io/en/blog/subscription-app-pricing-by-category-2026-benchmark">Airbridge — Subscription App Pricing by Category: 2026 Benchmarks</a> (75&nbsp;mil apps, &gt;US$&nbsp;10&nbsp;bi): medianas por categoria e por plano, conversão por faixa de preço, retenção anual vs mensal</li>
+<li><a href="https://www.revenuecat.com/state-of-subscription-apps">RevenueCat — State of Subscription Apps 2026</a> (115&nbsp;mil apps): mediana global US$&nbsp;7,48/12,99/38,42, mediana por região, Europa 29-39% acima da América do Norte</li>
+<li><a href="https://adapty.io/state-of-in-app-subscriptions/">Adapty — State of In-App Subscriptions 2026</a>: faixa de maior LTV em Utilities (semanal US$&nbsp;4,99-5,99 com trial de 3 dias)</li>
+<li><a href="https://pricepush.app/blog/localized-pricing-for-mobile-apps-complete-guide">PricePush — Localized Pricing for Mobile Apps</a> e <a href="https://pricepush.app/glossary/purchasing-power-parity">PPP explicado</a>: fórmula, exemplo ₹&nbsp;499 / R$&nbsp;39, arredondamento por país, cadência de revisão</li>
+<li>Playbook do lab: <code>aso/reference/monetization-playbook.md</code> (trial por plano-herói, 2 planos &gt; 3, ordem dos experimentos)</li>
+</ul>
+</div>
+
 <h2>Apps sem nenhum produto pago</h2>
 <div class=card>
 <p class=small>Nada a precificar hoje — a decisão aqui é de produto (se e quando monetizar), não de preço.</p>
