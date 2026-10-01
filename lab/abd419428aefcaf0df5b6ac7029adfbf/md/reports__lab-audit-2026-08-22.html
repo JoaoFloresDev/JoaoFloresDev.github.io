@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>lab-audit-2026-08-22.md</title><style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+.wrap{width:min(1680px,94vw);margin:0 auto;padding:28px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:22px;margin-top:34px}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.tiles{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;margin:14px 0 6px;padding-bottom:4px}
+a.tile{display:block;flex:0 0 auto;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(11,83,214,.13);color:var(--acc)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}.fs .fb i.ga{background:#8b5cf6}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{display:flex;gap:8px;margin:10px 0 4px}
+.rc{flex:1;background:rgba(125,125,125,.09);border-radius:9px;padding:6px 9px}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt{margin-top:11px;background:var(--hl);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:#fff;font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+</style></head>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 12:37 · fonte: Lab Hub local</p><p class="sub"><a href="../index.html">← hub</a> · <code>_GambitStudio/reports/lab-audit-2026-08-22.md</code></p><div id="md"></div><script>const RAW="# Auditoria do lab vs boas pr\u00e1ticas indie \u2014 2026-08-22\n\nVarredura web (RevenueCat SoSA 2026, Adapty 2026, ASO World/AppFollow/Phiture 2026, UXCam/Adjust/Pushwoosh retention, Apple/SwiftLee ratings, Applyra/AppLaunchFlow indie playbooks, GA4 Data API docs) cruzada com RULES/COMMANDS/spec/agents/skills do `_GambitStudio`. Veredito geral: **o lab est\u00e1 acima da m\u00e9dia indie em ASO de texto, prints, ratings e release; o buraco era medir o p\u00f3s-install** (ativa\u00e7\u00e3o/reten\u00e7\u00e3o/funil) \u2014 que em 2026 virou sinal de ranking da Apple. Corrigido nesta sess\u00e3o.\n\n## 1. O que j\u00e1 est\u00e1 certo (n\u00e3o mexer)\n| \u00c1rea | Pr\u00e1tica 2026 | Lab |\n|---|---|---|\n| Keyword strategy | long-tail, inten\u00e7\u00e3o > volume, sem duplicar name/subtitle/KW, 2\u00ba set no D7-14 | `aso-ranking-playbook` \u00a74, cadeia de 9 agentes, `keywords_round2` |\n| Prints | 3 primeiros convertem na SERP, benef\u00edcio em texto grande, 1\u00ba print = killer feature | RULES \"Screenshots\", `code-driven-prints` |\n| Ratings | prompt nativo s\u00f3 ap\u00f3s momento de valor, pr\u00e9-gate, responder reviews (70% dos autores revisam a nota ap\u00f3s resposta) | `RatingGate`, `review-responder`, regra rating-first (<25) |\n| Launch | seg-qua, 5 reviews em 72h, ASA discovery semana 1, n\u00e3o mexer name/subtitle no 1\u00ba m\u00eas | create-ios-app Fase 7 |\n| Release | CI (Xcode mais novo), PrivacyInfo, compliance | LEARNINGS #0/#22/#29 |\n| Portfolio | \"portfolio mode pra descobrir, focus mode pra escalar\" | `kill_or_scale.py`, dashboard |\n| Deploy verificado | deliver mente por omiss\u00e3o | `deploy-verifier` |\n\n## 2. Gaps encontrados \u2192 o que foi feito\n| # | Gap | Evid\u00eancia | A\u00e7\u00e3o (feita hoje) |\n|---|---|---|---|\n| 1 | **Analytics n\u00e3o era obrigat\u00f3rio** \u2014 `create-ios-app` e `mandatory-features.md` n\u00e3o citavam Firebase; eventos ad hoc e nomes divergentes entre apps (`paywall_view` vs `paywall_shown`, `onboarding_step` vs `_step_viewed`); nenhum app loga um evento de ATIVA\u00c7\u00c3O | invent\u00e1rio GA4 de 8 apps via dashboard | `analytics/event-taxonomy.md` (can\u00f4nico, com `core_action` = aha), \u00a79 em `mandatory-features`, passo em Fase 3/5 do create, `analytics-instrumentor` implementa |\n| 2 | **Reten\u00e7\u00e3o/ativa\u00e7\u00e3o nunca eram lidas** \u2014 s\u00f3 downloads/receita/ranking | Apple 2026: reten\u00e7\u00e3o + engajamento s\u00e3o sinais de busca (paper mar/2026); D1>35%/D7>15% \"healthy\"; crash >2% derruba visibilidade | `ga4_pull.py` (cohorts, funil, engagement, vers\u00f5es), skill `/firebase-insights` + `analytics-extractor/analyst`, `aso-checkpoint` agora l\u00ea D1/D7 + crash, `kill_or_scale.py --property` pondera reten\u00e7\u00e3o |\n| 3 | **Legendas dos prints sem keyword** \u2014 headline verb-split puro | Apple OCR-indexa texto dos prints desde jun/2025; \"keyword-aware captions\" sobem ranking | regra em `code-driven-prints` e `panorama-prompter`: cada print carrega 1 termo-alvo dos campos ASO |\n| 4 | **Custom Product Pages ignoradas** | CPP rankeia org\u00e2nico desde jul/2025 (keyword-linked, 70/app); s\u00f3 31% dos apps usam; CR 42\u219256% nos adotantes | `aso-serp-analyst` + `aso-reporter` prop\u00f5em CPP por cluster de inten\u00e7\u00e3o divergente da default page |\n| 5 | **Coer\u00eancia sem\u00e2ntica** \u2014 composer otimizava tokens, n\u00e3o frase | Apple usa relev\u00e2ncia LLM: listing \"keyword-stuffed\" perde pra listing semanticamente alinhado | regra em `aso-field-composer` |\n| 6 | **Sem playbook de monetiza\u00e7\u00e3o** pros apps que T\u00caM paywall (Cloak, BLW, AirDraw, iPhotos) | Adapty 2026: testes visuais/copy t\u00eam a MENOR taxa de vit\u00f3ria (34,6%); localiza\u00e7\u00e3o/estrutura de trial/dura\u00e7\u00e3o de plano ganham (58-62%); 90% dos trials no Day 0; trial PREJUDICA LTV em Productivity/Graphics; desconto s\u00f3 p\u00f3s-dismiss | `aso/reference/monetization-playbook.md` + \u00a74 do `analytics-analyst` |\n| 7 | **\"Feito recentemente\" ileg\u00edvel** no Lab Hub | pedido do Jo\u00e3o | clamp 3 linhas |\n\n## 3. Decis\u00f5es pro Jo\u00e3o (n\u00e3o mudei sozinho)\n1. **OnboardingKit: step de micro-compromisso** (escolha de objetivo / slider / mini-quiz antes do \u00faltimo step). Dado: micro-commitments antes do paywall/CTA sobem convers\u00e3o; multi-page 12,4% vs single 9,1%. Hoje o kit \u00e9 pager de 3 features. Vale virar op\u00e7\u00e3o do kit?\n2. **Trial do Cloak (7d anual) e BLW** \u2014 Adapty 2026: em Productivity/Lifestyle/Graphics, comprador direto tem LTV maior que trial; RevenueCat: trials 17-32d convertem 42% vs 25% os <4d. Dados conflitam \u2192 testar estrutura de trial (A/B), N\u00c3O copy. Quer rodar?\n3. **CPP piloto**: 1 Custom Product Page por app SCALE (Calc+, Cloak) ligada ao cluster de keyword n\u00ba 2. Cria\u00e7\u00e3o \u00e9 API-settable (`appCustomProductPages`); prints podem reaproveitar os do PPO perdedor.\n4. **Apps gr\u00e1tis na v1** continua sendo a regra (RULES). Nota: dados 2026 dizem que 44,5% das compras e 90% dos trials acontecem no Day 0 \u2014 se um dia um app for monetizar, o paywall no onboarding (soft, com \"continuar gr\u00e1tis\") \u00e9 o default a testar, n\u00e3o \"premium na v2\".\n\n## 4. Benchmarks adotados pelo lab (agora nos agentes)\n- iOS medianas: D1 25-27% \u00b7 D7 8-14% \u00b7 D30 4-8%. Forte: D1 30-40 / D7 10-15 / D30 5-8. Productivity D1 40-50 / D7 22-28 / D30 12-18; Health 35-45 / 15-22 / 8-12; ferramentas \"use-once\" estruturalmente mais baixas \u2014 julgar pelo job do app.\n- Antes de pagar aquisi\u00e7\u00e3o: D1 > 40%, D7 > 20%, D30 > 10%.\n- Ativa\u00e7\u00e3o (core_action na 1\u00aa sess\u00e3o) = m\u00e9trica mais preditiva de D30.\n- Loja: tap\u2192install iOS m\u00e9dia 33,4%, top quartil 42-56%. Crash-free \u2265 99,5%.\n- Subscription: install\u2192pago D35 mediana 1,9-2,6% (top 8,5%); paywall\u2192trial 5-15%; trial\u2192pago 18-50%; churn 1\u00aa renova\u00e7\u00e3o weekly 30-50%, monthly 15-40%; anual 35% churn no m\u00eas 1.\n- Amostra: n\u00b7p e n\u00b7(1-p) \u2265 10 pra confiar num percentual (Wilson); < 100 novos users = s\u00f3 instrumenta\u00e7\u00e3o \u00e9 acion\u00e1vel.\n\n## 5. Fontes\nRevenueCat [SoSA 2026](https://www.revenuecat.com/blog/growth/subscription-app-trends-benchmarks-2026) \u00b7 Adapty [paywall 2026](https://adapty.io/blog/high-performing-paywall-2026/) \u00b7 ASO World [ranking 2026](https://asoworld.com/insight/app-store-ranking-in-2026-why-retention-and-engagement-now-matter-more-than-keywords/) \u00b7 [AppFollow ASO news](https://appfollow.io/blog/aso-news) \u00b7 UXCam [retention benchmarks](https://uxcam.com/blog/mobile-app-retention-benchmarks/) \u00b7 [Adjust via getpanto](https://www.getpanto.ai/blog/mobile-app-retention-statistics) \u00b7 Applyra [ASO indie](https://www.applyra.io/blog/complete-aso-guide-indie-developers) \u00b7 [AppLaunchFlow](https://www.applaunchflow.com/blog/app-launch-strategy-2026) \u00b7 Superwall [multi-page](https://superwall.com/blog/new-postmulti-page-onboarding-paywalls-convert-37-better-than-single-page-heres-why) \u00b7 SwiftLee [SKStoreReviewController](https://www.avanderlee.com/swift/skstorereviewcontroller-app-ratings/) \u00b7 BrandBastion [replies](https://blog.brandbastion.com/impact-of-replying-to-app-reviews/) \u00b7 Amplitude [retention curve](https://amplitude.com/explore/analytics/retention-curve) \u00b7 Sequoia [Retention](https://articles.sequoiacap.com/retention) \u00b7 GA4 [Data API advanced](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced) \u00b7 dev.to [GA4 mobile](https://dev.to/dainyjose/mastering-ga4-for-mobile-apps-from-events-to-business-insights-3n5l) \u00b7 Artisan [15 metrics](https://www.artisangrowthstrategies.com/blog/essential-mobile-app-analytics-user-behavior-metrics-guide) \u00b7 RevenueCat [portfolio vs single](https://www.revenuecat.com/blog/growth/app-portfolio-vs-single-app/)\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

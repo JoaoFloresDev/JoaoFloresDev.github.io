@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lab</title><style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+.wrap{width:min(1680px,94vw);margin:0 auto;padding:28px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:22px;margin-top:34px}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.tiles{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;margin:14px 0 6px;padding-bottom:4px}
+a.tile{display:block;flex:0 0 auto;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(11,83,214,.13);color:var(--acc)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 168px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}.fs .fb i.ga{background:#8b5cf6}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{display:flex;gap:8px;margin:10px 0 4px}
+.rc{flex:1;background:rgba(125,125,125,.09);border-radius:9px;padding:6px 9px}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt{margin-top:11px;background:var(--hl);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:#fff;font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+</style></head>
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 12:37 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Versões rejeitadas paradas: Calc+ 1.5.0 (iOS), Sueca 42.0.0 (rejeitada 2x), SafeDoc 1.1.0, Bible 1.2.2 e Truco 52 — cada uma com a decisão descrita; o motivo oficial só vem pelo e-mail da Apple</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): nada mudou: Calc+ 1.5.0 DEVELOPER_REJECTED (loja na 1.4.0), Sueca 42.0.0 REJECTED (loja na 41.0.0), SafeDoc 1.1.0 REJECTED (loja na 1.0), Bible 1.2.2 REJECTED (loja na 1.2.0), Truco 52 REJECTED (loja na 51). Nenhuma reenviada, nenhuma versão nova criada. Item mantido.
+
+---
+
+Verificado 27/09 (ASC/git): estados na ASC: Calc+ iOS 1.5.0 DEVELOPER_REJECTED com build 224 anexado (loja na 1.4.0/build 200); Sueca 42.0.0 REJECTED — o reenvio de 06/09 04:44 (submission c42ad5bc, build 44) terminou em UNRESOLVED_ISSUES, ou seja, foi rejeitada de novo; SafeDoc 1.1.0 REJECTED (submission 3761fdd2); Bible 1.2.2 REJECTED (submission 15b9f19f); Truco 52 REJECTED (submission f36a6ce7), Truco 51 segue no ar. Cronos 1.2.0 saiu da lista: aprovada, e hoje a loja já está na 1.4.0. PPO de ordem v2 da Sueca continua bloqueado (o experimento 8ab8e4bd anterior está STOPPED desde 02/09). Conector do Gmail no claude.ai continua sem autorização (a sessão de hoje ainda não consegue ler o e-mail).
+
+---
+
+[6 versões rejeitadas — e a mais cara é a do Calc+, que está com a loja parada há 11 meses]
+SafeDoc 1.1.0, Cronos 1.2.0, Bible 1.2.2, Sueca 42.0.0 (lote de 02-03/09), Truco 52 (04/09) — e agora achei a sexta, que estava fora do radar e vale mais que as cinco juntas: a Calc+ 1.5.0. Ela está DEVELOPER_REJECTED com o build 224 anexado, subido em 10/08 e ainda VALID. Enquanto isso a loja roda a 1.4.0 com o build 200 de 08/10/2025: onze meses sem release no app que é 62% da receita do lab. Não é uma versão esquecida há um ano — é uma retomada que travou há um mês, e o commit da tag é &#x27;banner ads back, direct paywall, backup modal restore&#x27;, ou seja, o que está preso ali é justamente trabalho de receita (paywall direto e restore de backup). A Apple não expõe o Resolution Center por API, confirmei de novo hoje. Em ASC → Calc+ → versão 1.5.0 → banner vermelho do Resolution Center → me manda o texto (ou só o número da guideline) que eu corrijo. Se for pra ler um só, leia esse. Nos outros cinco a dedução já reduziu o espaço de busca: na Sueca a suspeita é o conteúdo dos baralhos novos contra o age rating (declara álcool e NÃO declara conteúdo sexual); no SafeDoc, o disfarce de calculadora ou duplicidade com o Cloak.
+
+---
+
+[O e-mail da Apple é o único canal do motivo da rejeição — sem ele eu deduzo]
+Sondei a API inteira: não existe endpoint de Resolution Center (404 em todos). O estado que a API dá é só &#x27;rejeitada&#x27;, nunca o porquê. Hoje isso me custou horas de dedução em 4 apps. Duas saídas, e a segunda é permanente: (a) colar o texto agora, em ASC → app → versão rejeitada → banner vermelho; (b) autorizar o conector do Gmail no claude.ai, e aí eu leio a rejeição na hora em que ela chega, inclusive de madrugada.
+
+---
+
+[Campanha recovery: 5 no ar, 5 rejeitadas — as 5 travam a meta]
+NO AR: Neon 27/28, Peptide 1.1.2 (metadata GLP-1), DevLingo 1.9.0 (streak), philos 1.0.3, Foguetinho 12.0.1. REJEITADAS e paradas: Sueca 42.0.0, SafeDoc 1.1.0, Cronos 1.2.0, Bible 1.2.2 e Truco 52 (a 51 do Truco segue no ar; o que travou foi a atualização) — sem o texto do Resolution Center não dá pra corrigir sem chutar, e re-submeter no escuro é o que a Apple trata como má-fé. A Sueca é a que mais custa: era o app mais perto da meta e leva baralhos + prints + keywords parados.
+
+---
+
+[1.2.2 rejeitada — tirei as marcas de concorrente das keywords; a causa segue PROVÁVEL, não confirmada]
+O que apurei: as keywords do Bible citavam nomes de apps concorrentes (youversion, abide, glorify, manna) em inglês, português e espanhol. Isso é proibido pela Apple e é o único fator que é exclusivo do Bible no lote — philos e DevLingo saíram na mesma noite com a mesma novidade e foram APROVADOS, então a novidade não é a causa. Removi as quatro marcas dos três idiomas e conferi lendo de volta. Mas mantenho como PROVÁVEL e não confirmada, por honestidade: essas keywords estão lá desde maio e passaram por duas revisões da Apple sem problema. Há também um bug real de câmera sem permissão declarada, que crasha o app — só que ele existe igual no philos, que foi aprovado, então é defeito a corrigir e não explicação da rejeição. A próxima versão leva as duas correções, e aí acerta em qualquer um dos dois cenários.
+
+---
+
+[SafeDoc: minha recomendação é cofre de DOCUMENTOS — a virada pra &#x27;calculadora disfarçada&#x27; é o que reprovou]
+Você tinha deixado essa decisão em aberto e agora ela tem evidência. Entre a versão aprovada em maio e a rejeitada em setembro, NENHUMA linha de código do app mudou — só a listagem. E o que mudou nela foi virar &#x27;Calculadora Cofre Documentos&#x27;, com o primeiro print sendo uma calculadora e a descrição abrindo com &#x27;parece uma calculadora comum&#x27;. Isso cria dois problemas ao mesmo tempo: fica quase idêntico ao Calc+ (mesma conta, mesmo molde de nome, trocando só foto por documento), e promete uma interface disfarçada que o app não entrega — instalação nova abre num teclado de PIN comum e o ícone é uma pasta, não uma calculadora; o visual de calculadora é uma opção desligada, enterrada nos ajustes. Minha recomendação: manter o SafeDoc como cofre de documentos, que é o que ele de fato é (scanner, OCR, ferramentas de PDF — nenhum outro app seu tem isso) e é o posicionamento que JÁ passou na review em maio. A calculadora vira um item da descrição, nunca o nome nem o primeiro print. A metadata já foi corrigida nessa direção; hoje terminei os dois idiomas que tinham ficado pra trás (francês e italiano ainda vendiam a interface &#x27;escondida&#x27;).
+
+---
+
+[Truco: achei o motivo provável da rejeição — e é uma faixa bege no iPad, medida em pixels]
+Ontem eu disse que não dava pra saber sem o texto da Apple. Dava — só não estava olhando o lugar certo. Como a listagem da 51 aprovada e da 52 rejeitada é idêntica, a única variável era o binário.
+
+A imagem do tabuleiro está configurada pra caber dentro da moldura sem cortar. No iPhone a proporção bate; **no iPad sobra fundo dos dois lados — 180 pixels de faixa bege**. Isso já existia na 51 e passou. O que mudou é onde o conteúdo novo caiu: a 52 empurrou o **botão HISTÓRICO** pra dentro dessa faixa, fora da madeira. E as notas ao revisor da 52 (a 51 não tinha nenhuma) mandam ele exatamente pra lá — &#x27;toque no botão HISTÓRICO no canto inferior direito&#x27;. O revisor de iPad foi procurar o botão que o texto prometia e achou pendurado no vazio.
+
+Chamo de provável e não de certo porque o defeito é antigo e a 51 passou com ele — o que a 52 fez foi colocar coisa nova ali e apontar o dedo. Já está corrigido, com um verificador que mede as faixas: 180 pixels viram 0 no iPad e continuam 0 no iPhone.
+
+**Não submeti.** Duas razões: o teto de envios da noite já foi (Sueca e Cronos), e publicar a 52 encerra a janela de medição limpa da mudança de palavras-chave de 01/09, cujo resultado sai em 09/09. A ordem certa é medir primeiro, publicar depois.
+
+---
+
+[Decidir: o Truco declara &#x27;sem álcool&#x27; e mostra cerveja — subir a faixa etária ou tirar a cerveja]
+Não mexi sozinho porque as duas saídas são válidas e uma delas custa alcance, que é justamente o que o mês mede. O fato: a classificação etária do app diz que não há referência a álcool, e o app tem uma animação de brinde com duas canecas de cerveja em tela cheia a cada reinício de partida, mais um banner fixo divulgando &#x27;Sueca Drink — Jogos para beber&#x27;. É exatamente o tipo de incoerência que reprovou a Sueca semana passada. Saída A: declarar o álcool. É honesto e resolve de vez, mas o app sai de 4+ pra 12+ e perde alguma vitrine. Saída B: tirar a animação de cerveja e trocar o banner por outra chamada. Mantém 4+ e ainda resolve, mas você perde o canal de divulgação cruzada pra Sueca. Minha recomendação é a B, porque a cerveja é decorativa e o alcance de um app 4+ vale mais que uma animação — mas o banner é divulgação sua, então a chamada é sua. Não é urgente: o app está no ar com isso há anos e passou por várias revisões. Vira urgente na hora em que a 52 voltar pra fila, porque aí um revisor olha o app inteiro de novo.
+
+---
+
+[PPO de ORDEM v2 agendado — sobe quando a 42.0.0 aprovar com os prints novos]
+Depende da 42.0.0 aprovar. Como ela foi REJEITADA em 03/09, o PPO está bloqueado até a correção passar. Prints e tratamentos já prontos na pasta ppo-pipeline do app.
+
+---
+
+[Auditoria 27/09 — o que cada rejeitada prende]
+Sueca 42.0.0: analytics (GA4 vê 1,6% = 4 de 274 usuários; a loja roda a 41.0.0 sem Firebase), keywords pt-BR da iter-02, prints novos e o prompt de review ao sair da partida — fix = PATCH do ageRatingDeclaration do appInfo editável (sexualContentOrNudity coerente com o baralho 18+) e re-submeter (decisão nº 13). Truco 52: es-MX de 34 → 89 chars (índice de AR/UY) + faixa do iPad já corrigida (decisão nº 16; álcool antes). Bible 1.2.2 e SafeDoc 1.1.0: 32 e 6 inst/mês — só com alavanca (decisão nº 17). Calc+ 1.5.0: congelado, sem ação. Relatório: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/REPORT.md</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
