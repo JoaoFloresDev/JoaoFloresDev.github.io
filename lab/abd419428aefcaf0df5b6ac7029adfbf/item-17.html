@@ -192,9 +192,17 @@ table.t tbody tr:hover td,table.t tr:hover td{background:rgba(125,140,170,.06)}
 .hcol{flex:0 0 clamp(280px,26vw,360px);min-width:0}
 a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);
   outline-offset:2px;border-radius:8px}
+.dirlist,.prlist{margin:10px 0 0;padding-left:18px;list-style:none}
+.dirlist>li,.prlist>li{position:relative;margin:0 0 7px;font-size:13.5px;line-height:1.5;
+  color:var(--tx)}
+.prlist>li{color:var(--mut);font-size:13px;margin-bottom:5px}
+.dirlist>li::before,.prlist>li::before{content:"";position:absolute;left:-14px;top:.62em;
+  width:5px;height:5px;border-radius:50%;background:var(--acc);opacity:.75}
+.prlist>li::before{background:var(--mut);opacity:.5}
+.dirp{display:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 15:35 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — ASO iter-04: esperando a 45.4.0 ficar no ar pra começar a medir (D0 = dia do READY_FOR_SALE)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto está staged na 45.4.0, não no ar. D0 NÃO é o dia do PATCH (01/10) — é o dia em que a 45.4.0 ficar READY_FOR_SALE. Enquanto isso o público vê a 45.3.1.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 15:37 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Meus Gastos — ASO iter-04: esperando a 45.4.0 ficar no ar pra começar a medir (D0 = dia do READY_FOR_SALE)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O texto está staged na 45.4.0, não no ar. D0 NÃO é o dia do PATCH (01/10) — é o dia em que a 45.4.0 ficar READY_FOR_SALE. Enquanto isso o público vê a 45.3.1.
 
 Quando ela ficar no ar, nessa ordem: pull_analytics.py d0 --iter &lt;dir&gt; --live-at &lt;dia&gt; --write-meta (grava metrics/d00_baseline.json), só então status vira live, e os checkpoints D7/14/21/28 contam de live_at.
 
