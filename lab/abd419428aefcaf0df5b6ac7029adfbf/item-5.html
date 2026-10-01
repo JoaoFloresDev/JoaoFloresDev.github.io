@@ -114,59 +114,26 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-09-28 22:47 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Versões rejeitadas paradas: Calc+ 1.5.0 (iOS), Sueca 42.0.0 (rejeitada 2x), SafeDoc 1.1.0, Bible 1.2.2 e Truco 52 — cada uma com a decisão descrita; o motivo oficial só vem pelo e-mail da Apple</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (ASC/git): nada mudou: Calc+ 1.5.0 DEVELOPER_REJECTED (loja na 1.4.0), Sueca 42.0.0 REJECTED (loja na 41.0.0), SafeDoc 1.1.0 REJECTED (loja na 1.0), Bible 1.2.2 REJECTED (loja na 1.2.0), Truco 52 REJECTED (loja na 51). Nenhuma reenviada, nenhuma versão nova criada. Item mantido.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 08:41 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pra retomar quando as versões do Hair Schedule 1.2.0 e do Sunrise 1.4.0 estiverem fechadas.
 
----
+PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
+1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
+2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
+3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
+4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
+Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
 
-Verificado 27/09 (ASC/git): estados na ASC: Calc+ iOS 1.5.0 DEVELOPER_REJECTED com build 224 anexado (loja na 1.4.0/build 200); Sueca 42.0.0 REJECTED — o reenvio de 06/09 04:44 (submission c42ad5bc, build 44) terminou em UNRESOLVED_ISSUES, ou seja, foi rejeitada de novo; SafeDoc 1.1.0 REJECTED (submission 3761fdd2); Bible 1.2.2 REJECTED (submission 15b9f19f); Truco 52 REJECTED (submission f36a6ce7), Truco 51 segue no ar. Cronos 1.2.0 saiu da lista: aprovada, e hoje a loja já está na 1.4.0. PPO de ordem v2 da Sueca continua bloqueado (o experimento 8ab8e4bd anterior está STOPPED desde 02/09). Conector do Gmail no claude.ai continua sem autorização (a sessão de hoje ainda não consegue ler o e-mail).
+SUNRISE (depois)
+- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
+- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
+- Também precisa de esquema de URL (sunrise://).
 
----
+OUTROS RECURSOS, POR PRIORIDADE
+1. Custom Product Pages com keyword (busca orgânica): maior alavanca parada. Candidata óbvia: Sueca (página &quot;jogo de beber&quot; x &quot;cartas pra festa&quot;).
+2. In-App Events + Nomination (acima).
+3. App Preview (vídeo): toca sozinho na busca; bom pra app visual (Neon, Sunrise).
+4. Promoted In-App Purchases: efeito pequeno; exige tratar PurchaseIntent no código. Por último.
 
-[6 versões rejeitadas — e a mais cara é a do Calc+, que está com a loja parada há 11 meses]
-SafeDoc 1.1.0, Cronos 1.2.0, Bible 1.2.2, Sueca 42.0.0 (lote de 02-03/09), Truco 52 (04/09) — e agora achei a sexta, que estava fora do radar e vale mais que as cinco juntas: a Calc+ 1.5.0. Ela está DEVELOPER_REJECTED com o build 224 anexado, subido em 10/08 e ainda VALID. Enquanto isso a loja roda a 1.4.0 com o build 200 de 08/10/2025: onze meses sem release no app que é 62% da receita do lab. Não é uma versão esquecida há um ano — é uma retomada que travou há um mês, e o commit da tag é &#x27;banner ads back, direct paywall, backup modal restore&#x27;, ou seja, o que está preso ali é justamente trabalho de receita (paywall direto e restore de backup). A Apple não expõe o Resolution Center por API, confirmei de novo hoje. Em ASC → Calc+ → versão 1.5.0 → banner vermelho do Resolution Center → me manda o texto (ou só o número da guideline) que eu corrijo. Se for pra ler um só, leia esse. Nos outros cinco a dedução já reduziu o espaço de busca: na Sueca a suspeita é o conteúdo dos baralhos novos contra o age rating (declara álcool e NÃO declara conteúdo sexual); no SafeDoc, o disfarce de calculadora ou duplicidade com o Cloak.
-
----
-
-[O e-mail da Apple é o único canal do motivo da rejeição — sem ele eu deduzo]
-Sondei a API inteira: não existe endpoint de Resolution Center (404 em todos). O estado que a API dá é só &#x27;rejeitada&#x27;, nunca o porquê. Hoje isso me custou horas de dedução em 4 apps. Duas saídas, e a segunda é permanente: (a) colar o texto agora, em ASC → app → versão rejeitada → banner vermelho; (b) autorizar o conector do Gmail no claude.ai, e aí eu leio a rejeição na hora em que ela chega, inclusive de madrugada.
-
----
-
-[Campanha recovery: 5 no ar, 5 rejeitadas — as 5 travam a meta]
-NO AR: Neon 27/28, Peptide 1.1.2 (metadata GLP-1), DevLingo 1.9.0 (streak), philos 1.0.3, Foguetinho 12.0.1. REJEITADAS e paradas: Sueca 42.0.0, SafeDoc 1.1.0, Cronos 1.2.0, Bible 1.2.2 e Truco 52 (a 51 do Truco segue no ar; o que travou foi a atualização) — sem o texto do Resolution Center não dá pra corrigir sem chutar, e re-submeter no escuro é o que a Apple trata como má-fé. A Sueca é a que mais custa: era o app mais perto da meta e leva baralhos + prints + keywords parados.
-
----
-
-[1.2.2 rejeitada — tirei as marcas de concorrente das keywords; a causa segue PROVÁVEL, não confirmada]
-O que apurei: as keywords do Bible citavam nomes de apps concorrentes (youversion, abide, glorify, manna) em inglês, português e espanhol. Isso é proibido pela Apple e é o único fator que é exclusivo do Bible no lote — philos e DevLingo saíram na mesma noite com a mesma novidade e foram APROVADOS, então a novidade não é a causa. Removi as quatro marcas dos três idiomas e conferi lendo de volta. Mas mantenho como PROVÁVEL e não confirmada, por honestidade: essas keywords estão lá desde maio e passaram por duas revisões da Apple sem problema. Há também um bug real de câmera sem permissão declarada, que crasha o app — só que ele existe igual no philos, que foi aprovado, então é defeito a corrigir e não explicação da rejeição. A próxima versão leva as duas correções, e aí acerta em qualquer um dos dois cenários.
-
----
-
-[SafeDoc: minha recomendação é cofre de DOCUMENTOS — a virada pra &#x27;calculadora disfarçada&#x27; é o que reprovou]
-Você tinha deixado essa decisão em aberto e agora ela tem evidência. Entre a versão aprovada em maio e a rejeitada em setembro, NENHUMA linha de código do app mudou — só a listagem. E o que mudou nela foi virar &#x27;Calculadora Cofre Documentos&#x27;, com o primeiro print sendo uma calculadora e a descrição abrindo com &#x27;parece uma calculadora comum&#x27;. Isso cria dois problemas ao mesmo tempo: fica quase idêntico ao Calc+ (mesma conta, mesmo molde de nome, trocando só foto por documento), e promete uma interface disfarçada que o app não entrega — instalação nova abre num teclado de PIN comum e o ícone é uma pasta, não uma calculadora; o visual de calculadora é uma opção desligada, enterrada nos ajustes. Minha recomendação: manter o SafeDoc como cofre de documentos, que é o que ele de fato é (scanner, OCR, ferramentas de PDF — nenhum outro app seu tem isso) e é o posicionamento que JÁ passou na review em maio. A calculadora vira um item da descrição, nunca o nome nem o primeiro print. A metadata já foi corrigida nessa direção; hoje terminei os dois idiomas que tinham ficado pra trás (francês e italiano ainda vendiam a interface &#x27;escondida&#x27;).
-
----
-
-[Truco: achei o motivo provável da rejeição — e é uma faixa bege no iPad, medida em pixels]
-Ontem eu disse que não dava pra saber sem o texto da Apple. Dava — só não estava olhando o lugar certo. Como a listagem da 51 aprovada e da 52 rejeitada é idêntica, a única variável era o binário.
-
-A imagem do tabuleiro está configurada pra caber dentro da moldura sem cortar. No iPhone a proporção bate; **no iPad sobra fundo dos dois lados — 180 pixels de faixa bege**. Isso já existia na 51 e passou. O que mudou é onde o conteúdo novo caiu: a 52 empurrou o **botão HISTÓRICO** pra dentro dessa faixa, fora da madeira. E as notas ao revisor da 52 (a 51 não tinha nenhuma) mandam ele exatamente pra lá — &#x27;toque no botão HISTÓRICO no canto inferior direito&#x27;. O revisor de iPad foi procurar o botão que o texto prometia e achou pendurado no vazio.
-
-Chamo de provável e não de certo porque o defeito é antigo e a 51 passou com ele — o que a 52 fez foi colocar coisa nova ali e apontar o dedo. Já está corrigido, com um verificador que mede as faixas: 180 pixels viram 0 no iPad e continuam 0 no iPhone.
-
-**Não submeti.** Duas razões: o teto de envios da noite já foi (Sueca e Cronos), e publicar a 52 encerra a janela de medição limpa da mudança de palavras-chave de 01/09, cujo resultado sai em 09/09. A ordem certa é medir primeiro, publicar depois.
-
----
-
-[Decidir: o Truco declara &#x27;sem álcool&#x27; e mostra cerveja — subir a faixa etária ou tirar a cerveja]
-Não mexi sozinho porque as duas saídas são válidas e uma delas custa alcance, que é justamente o que o mês mede. O fato: a classificação etária do app diz que não há referência a álcool, e o app tem uma animação de brinde com duas canecas de cerveja em tela cheia a cada reinício de partida, mais um banner fixo divulgando &#x27;Sueca Drink — Jogos para beber&#x27;. É exatamente o tipo de incoerência que reprovou a Sueca semana passada. Saída A: declarar o álcool. É honesto e resolve de vez, mas o app sai de 4+ pra 12+ e perde alguma vitrine. Saída B: tirar a animação de cerveja e trocar o banner por outra chamada. Mantém 4+ e ainda resolve, mas você perde o canal de divulgação cruzada pra Sueca. Minha recomendação é a B, porque a cerveja é decorativa e o alcance de um app 4+ vale mais que uma animação — mas o banner é divulgação sua, então a chamada é sua. Não é urgente: o app está no ar com isso há anos e passou por várias revisões. Vira urgente na hora em que a 52 voltar pra fila, porque aí um revisor olha o app inteiro de novo.
-
----
-
-[PPO de ORDEM v2 agendado — sobe quando a 42.0.0 aprovar com os prints novos]
-Depende da 42.0.0 aprovar. Como ela foi REJEITADA em 03/09, o PPO está bloqueado até a correção passar. Prints e tratamentos já prontos na pasta ppo-pipeline do app.
-
----
-
-[Auditoria 27/09 — o que cada rejeitada prende]
-Sueca 42.0.0: analytics (GA4 vê 1,6% = 4 de 274 usuários; a loja roda a 41.0.0 sem Firebase), keywords pt-BR da iter-02, prints novos e o prompt de review ao sair da partida — fix = PATCH do ageRatingDeclaration do appInfo editável (sexualContentOrNudity coerente com o baralho 18+) e re-submeter (decisão nº 13). Truco 52: es-MX de 34 → 89 chars (índice de AR/UY) + faixa do iPad já corrigida (decisão nº 16; álcool antes). Bible 1.2.2 e SafeDoc 1.1.0: 32 e 6 inst/mês — só com alavanca (decisão nº 17). Calc+ 1.5.0: congelado, sem ação. Relatório: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/REPORT.md</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+JÁ FEITO / ESTADO
+- Cronos: evento &quot;Cronos on iPad (1.4)&quot; pronto como rascunho (10 idiomas, imagens v2), travado por falta de deep link. Precisa de build com cronos://. Existe uma reviewSubmission vazia 1208dc63-6a3c-45c4-84c8-075fd811d05a pra reaproveitar.
+- Prints: basta subir o 6,9&quot;. Se tiver 6,5&quot; também, os dois precisam ser idênticos. Varredura de 27/09: Calc+ 1.4.0 (en-US, pt-BR, es-ES, es-MX) tem o 6,9&quot; com a arte de 2022 e o 6,5&quot; com a nova; Meus Gastos 45.3.1 pt-BR tem o 6,9&quot; antigo (dez/2024) e o 6,5&quot; novo. Não mexido, por decisão sua; corrigir quando decidir.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
