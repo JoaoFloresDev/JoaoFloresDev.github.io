@@ -150,10 +150,13 @@ h3{font-family:var(--f-disp);letter-spacing:-.01em}
 .sub{font-size:13px;color:var(--mut)}
 code,.mono{font-family:var(--f-mono);font-size:12.5px}
 .card,table.t,a.tile,.row,.fcard,#md{box-shadow:var(--sh);border-color:var(--bd-soft)}
-.card,a.tile,.row,.fcard{border-radius:var(--rad);
-  transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
-a.tile:hover,a.row:hover,.fcard:hover{box-shadow:var(--sh-up);border-color:var(--bd);
+.card,a.tile,.row,.fcard{border-radius:var(--rad)}
+a.tile,.row{transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
+a.tile:hover,a.row:hover{box-shadow:var(--sh-up);border-color:var(--bd);
   transform:translateY(-1px)}
+/* o card do app não se mexe: é área de leitura, não botão */
+.fcard{transition:none}
+.fcard:hover{box-shadow:var(--sh);border-color:var(--bd-soft);transform:none}
 /* big numbers: the first thing anyone reads on the page */
 .tiles{gap:12px;margin:18px 0 4px;padding-bottom:10px}
 a.tile{padding:13px 17px;min-width:148px}
@@ -224,7 +227,11 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fdet>summary:hover{color:var(--acc)}
 .fdet table.t{font-size:12.5px}
 .fdet table.t td,.fdet table.t th{padding:6px 10px}
-.fgrid.one{grid-template-columns:1fr!important}
+.fgrid.one{grid-template-columns:1fr!important;gap:0}
+.fgrid.one>.fcard{border:0;border-radius:0;box-shadow:none;background:transparent;
+  padding:22px 0 24px;border-bottom:1px solid var(--bd)}
+.fgrid.one>.fcard:last-child{border-bottom:0}
+.fgrid.one>.fcard:first-child{padding-top:4px}
 .fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;
   align-items:start}
 @media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
@@ -293,7 +300,7 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(21,82,216,.18),var(--sh-up)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:14 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">ACHADO NOVO (01/10) QUE MUDA O CONTEXTO DESTA APROVAÇÃO: fechei a iter-01 do iPhotos com número real pela primeira vez. Veredito do script: PIOROU — instalações novas no US caíram de 88 pra 57 na janela de 30 dias antes/depois (RR 0,65, IC [0,46-0,90], o IC inteiro abaixo de 1), enquanto os OUTROS países subiram (RR 1,33 [0,98-1,80]). MAS o próprio script marca NÃO ISOLÁVEL: houve mudança de algoritmo da App Store no US em 27/07, dentro da janela, e não havia apps-controle elegíveis. Então isso não prova que o texto fez mal — prova que não dá pra dobrar a aposta às cegas.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 16:15 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — iPhotos 1.10.0 PRONTA na ASC com build 34 — falta você aprovar o texto ASO dos 13 idiomas e eu aplico + submeto</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">ACHADO NOVO (01/10) QUE MUDA O CONTEXTO DESTA APROVAÇÃO: fechei a iter-01 do iPhotos com número real pela primeira vez. Veredito do script: PIOROU — instalações novas no US caíram de 88 pra 57 na janela de 30 dias antes/depois (RR 0,65, IC [0,46-0,90], o IC inteiro abaixo de 1), enquanto os OUTROS países subiram (RR 1,33 [0,98-1,80]). MAS o próprio script marca NÃO ISOLÁVEL: houve mudança de algoritmo da App Store no US em 27/07, dentro da janela, e não havia apps-controle elegíveis. Então isso não prova que o texto fez mal — prova que não dá pra dobrar a aposta às cegas.
 
 Isso dá razão à sua restrição de não mexer no americano: a iter-02 congelou o subtitle do en-US e troca UM token (pictures -&gt; post, 0 posições perdidas). Se eu tivesse recomposto o en-US, estaria apostando em cima de uma queda de 35% sem saber a causa.
 
