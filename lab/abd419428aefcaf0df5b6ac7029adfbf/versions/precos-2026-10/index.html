@@ -79,7 +79,7 @@ ol.plan{padding-left:22px} ol.plan li{margin-bottom:10px}
 Cada preço é comparado com o playbook de monetização do lab.</p>
 
 <div class=kpis>
-  <div class=kpi><b>8</b><span>apps com preço abaixo do piso (de 12 mexíveis)</span></div>
+  <div class=kpi><b>8</b><span>apps abaixo da referência de mercado (de 12 mexíveis)</span></div>
   <div class=kpi><b>30</b><span>problemas críticos de preço ou trial</span></div>
   <div class=kpi><b>14</b><span>apps sem nenhuma precificação por país</span></div>
   <div class=kpi><b>US$ 224.15</b><span>receita 30d fora dos congelados (10% do total)</span></div>
@@ -87,9 +87,13 @@ Cada preço é comparado com o playbook de monetização do lab.</p>
 
 <div class=card>
 <h4>O quadro em quatro frases</h4>
-<p><b>O lab inteiro cobra barato demais.</b> Dos 12 apps que podem ser mexidos, 8 têm pelo
-menos um plano abaixo do piso do lab. O caso extremo é o Sunrise: semanal a US$&nbsp;0,29 e anual a
-US$&nbsp;2,99 — 17× e 10× abaixo do piso do lab para cada plano.</p>
+<p><b>O lab inteiro cobra bem abaixo do mercado.</b> Dos 12 apps que podem ser mexidos,
+8 têm pelo menos um plano abaixo da referência de mercado — a mediana global é
+US$&nbsp;7,48 por semana, US$&nbsp;12,99 por mês e US$&nbsp;38,42 por ano (RevenueCat/Adapty 2026),
+e a configuração de maior LTV já medida, em Utilities, é semanal US$&nbsp;4,99-5,99 com 3&nbsp;dias de
+trial. Não é um piso que o lab tenha decretado: é o que o mercado cobra. O caso extremo era o
+Sunrise, a US$&nbsp;0,29 por semana e US$&nbsp;2,99 por ano — corrigido em 01/10 para
+US$&nbsp;1,99 e US$&nbsp;9,99 antes de a 1.4.0 sair da review.</p>
 <p><b>O trial quase nunca está no plano certo.</b> A regra é um trial só, no plano que carrega a receita:
 utilitário = semanal + 3 dias, hábito/saúde/educação = anual + 7 dias. Hoje há apps com trial nos dois
 planos (duplica o caminho grátis e mata a âncora), apps com 3 dias no anual — que é a pior célula já
@@ -157,8 +161,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99 — piso do lab é US$ 4.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 8.99 — piso do lab é US$ 29.99 (3.3× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99, 5.0× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 8.99, 3.3× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>trial nos dois planos — duplica o caminho grátis e tira a âncora &#x27;direto&#x27; do paywall (nenhuma fonte recomenda)</li>
 <li class="f-alta"><span class=sev>Alta</span>anual com trial de 3 dias — é a pior célula medida (24% conversão, 18,3% de 1ª renovação)</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.16× o preço americano (alvo 0.2×), MEX paga 1.22× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
@@ -187,9 +191,9 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>anual a US$ 12.99 — piso do lab é US$ 29.99 (2.3× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99 — piso do lab é US$ 9.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>semanal a US$ 1.99 — piso do lab é US$ 4.99 (2.5× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>anual a US$ 12.99, 2.3× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99, 5.0× abaixo de US$ 9.99 — a mediana global do mensal é US$ 12,99 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>semanal a US$ 1.99, 2.5× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>semanal (US$ 1.99) custa o mesmo ou mais que o mensal (US$ 1.99) — ninguém compra o semanal</li>
 <li class="f-alta"><span class=sev>Alta</span>o anual equivale a 6.5 semanas do semanal — quem fizer a conta nunca assina semanal (faixa saudável: 8-14 semanas)</li>
 <li class="f-alta"><span class=sev>Alta</span>anual com trial de 3 dias — é a pior célula medida (24% conversão, 18,3% de 1ª renovação)</li>
@@ -221,8 +225,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99 — piso do lab é US$ 4.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99 — piso do lab é US$ 29.99 (3.0× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99, 5.0× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99, 3.0× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>o plano-herói desta categoria é o anual e ele deveria carregar o trial de 7 dias — hoje o trial está no semanal</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
@@ -248,8 +252,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99 — piso do lab é US$ 9.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99 — piso do lab é US$ 29.99 (3.0× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99, 5.0× abaixo de US$ 9.99 — a mediana global do mensal é US$ 12,99 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99, 3.0× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>trial nos dois planos — duplica o caminho grátis e tira a âncora &#x27;direto&#x27; do paywall (nenhuma fonte recomenda)</li>
 <li class="f-alta"><span class=sev>Alta</span>anual com trial de 3 dias — é a pior célula medida (24% conversão, 18,3% de 1ª renovação)</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.05× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
@@ -277,8 +281,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99 — piso do lab é US$ 4.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99 — piso do lab é US$ 29.99 (3.0× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99, 5.0× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 9.99, 3.0× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>trial nos dois planos — duplica o caminho grátis e tira a âncora &#x27;direto&#x27; do paywall (nenhuma fonte recomenda)</li>
 <li class="f-alta"><span class=sev>Alta</span>anual com trial de 3 dias — é a pior célula medida (24% conversão, 18,3% de 1ª renovação)</li>
 <li class="f-media"><span class=sev>Média</span>o vitalício NoAds.DIA (US$ 7.99) é mais barato que o anual (US$ 9.99). O código carrega o produto mas não dá pra provar se alguma tela ainda o oferece — conferir no paywall: se oferece, canibaliza a assinatura; se não, tirar de venda na ASC</li>
@@ -307,8 +311,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99 — piso do lab é US$ 9.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 7.99 — piso do lab é US$ 29.99 (3.8× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 1.99, 5.0× abaixo de US$ 9.99 — a mediana global do mensal é US$ 12,99 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 7.99, 3.8× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>o plano-herói desta categoria é o anual e ele deveria carregar o trial de 7 dias — hoje não existe trial nenhum</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.05× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o mensal de US$ 1.99 para US$ 9.99 no Tier 1 (âncora de comparação).</li>
@@ -334,8 +338,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99 — piso do lab é US$ 4.99 (5.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 7.99 — piso do lab é US$ 29.99 (3.8× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.99, 5.0× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 7.99, 3.8× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>o plano-herói desta categoria é o anual e ele deveria carregar o trial de 7 dias — hoje o trial está no semanal</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
@@ -383,8 +387,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.29 — piso do lab é US$ 4.99 (17.2× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 2.99 — piso do lab é US$ 29.99 (10.0× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>semanal a US$ 0.29, 17.2× abaixo de US$ 4.99 — a faixa de maior LTV medida (Adapty, categoria Utilities) é US$ 4,99-5,99 e a mediana global do semanal é US$ 7,48 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 2.99, 10.0× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>o plano-herói desta categoria é o anual e ele deveria carregar o trial de 7 dias — hoje o trial está no semanal</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.28× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.27× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.29 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
@@ -477,8 +481,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 4.99 — piso do lab é US$ 9.99 (2.0× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 19.99 — piso do lab é US$ 29.99 (1.5× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 4.99, 2.0× abaixo de US$ 9.99 — a mediana global do mensal é US$ 12,99 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 19.99, 1.5× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li>
 <li class="f-baixa"><span class=sev>Baixa</span>o vitalício NoAds.Calc (US$ 19.99) está ativo na App Store Connect mas não é oferecido no app (só serve pra honrar quem comprou antes). Não canibaliza nada hoje; só continua no catálogo, aparecendo em relatórios e restore. Vale tirar de venda</li></ul></div>
     <div class="rec"><h4>Congelado — só preço</h4><ol><li>Subir o anual de US$ 19.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
@@ -505,8 +509,8 @@ no código. Preço puro, não — é mudança direta na ASC. Por isso os passos 
   </table>
   </div>
   <div class=cols>
-    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 3.99 — piso do lab é US$ 9.99 (2.5× o atual)</li>
-<li class="f-alta"><span class=sev>Alta</span>anual a US$ 19.99 — piso do lab é US$ 29.99 (1.5× o atual)</li>
+    <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 3.99, 2.5× abaixo de US$ 9.99 — a mediana global do mensal é US$ 12,99 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
+<li class="f-alta"><span class=sev>Alta</span>anual a US$ 19.99, 1.5× abaixo de US$ 29.99 — a mediana global do anual é US$ 38,42 (playbook §4 e §3b; preço alto rende ~3× o LTV do preço baixo)</li>
 <li class="f-alta"><span class=sev>Alta</span>semanal (US$ 4.99) custa o mesmo ou mais que o mensal (US$ 3.99) — ninguém compra o semanal</li>
 <li class="f-alta"><span class=sev>Alta</span>o anual equivale a 4.0 semanas do semanal — quem fizer a conta nunca assina semanal (faixa saudável: 8-14 semanas)</li>
 <li class="f-media"><span class=sev>Média</span>3 planos de assinatura — 2 convertem melhor que 3 (achado 12); nesta categoria o par é semanal + anual, então sobra o mensal</li>
