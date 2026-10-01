@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>iPhotos</title><style>
+<title>Lab</title><style>
 :root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#0b53d6;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#6ea3ff;--bd:#39404d;--hl:#2a2717}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
@@ -114,18 +114,12 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 @media(max-width:700px){.vrow b{min-width:0}}
 .fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:12 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>iPhotos — ASO iter-02 nos 13 idiomas RODANDO (trava arrancada) — estágio 3 de 6, fit termo a termo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Você mandou arrancar a trava do piso de tráfego: &quot;pode arrancar essa trava, isso é tentando renascer o app&quot;. Registrado em meta.json &gt; floor_override, com as suas palavras e o número que a regra reprovava (59 instalações 1F/30d no US, piso 100).
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 09:12 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1>Lab — Reforma profunda da camada de ASO — work order em execução (onda 1: 5 pesquisas em paralelo)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pedido do João 01/10: &#x27;melhorar a aso pipeline com dados da internet, análise profunda, bem quebrado, várias verificações, análise de mercado, que gere resultado&#x27;.
 
-E você estava certo na leitura: o gargalo medido é IMPRESSÃO (34.724 em 36 dias, 92% vindo de busca; 193/dia no US), não conversão de página (CVR de página 51% no US, 35% no mundo — excelente). A alavanca de impressão É ranking de busca, que é exatamente o que o texto endereça. A regra de piso fala de mensurabilidade, não de qual é a ação certa — meu relatório anterior confundiu as duas coisas.
+Work order: 2026-10-01_reforma-profunda-da-camada-de-aso-pesqui (orchestrator/wo.py show). 14 itens em 4 ondas:
+ONDA 1 (rodando): R1 algoritmo App Store 2026 · R2 fontes de volume além do Astro + protótipo Apple Ads API · R3 conversão/benchmarks + 5 líderes lidos · R4 auditoria interna (&gt;=20 falhas com evidência) · R5 frameworks de processo + análise de mercado.
+ONDA 2: D1 desenho (achado → mudança → arquivo → done_when).
+ONDA 3: I1 checks determinísticos de description/marca/consistência · I2 2ª fonte de volume no extractor · I3 modo app-pequeno (medir por posição) · I4 agente aso-conversion-auditor · I5 market_snapshot.py (diff de concorrentes) · I6 detector aso_unmeasured no scan + página no Hub.
+ONDA 4: I7 agentes/skill/playbooks com eval · I8 smoke antes/depois na iter-04 do Meus Gastos.
 
-O QUE MUDA NA MEDIÇÃO: sem tráfego pro IC, o checkpoint D7/14/28 vai ler POSIÇÃO no Astro + impressões na ASC, não lift de instalação com intervalo de confiança. Fechar com results.final de RR/IC seria inventar número.
-
-ESCOPO: 13 locales (en-US, es-ES, es-MX, pt-BR, pt-PT, fr-FR, de-DE, it, ja, ko, ru, tr, zh-Hans), campos subtitle + keywords, name intocado.
-
-DOIS ACHADOS JÁ NA PREPARAÇÃO:
-1. Campo de keywords metade vazio no CJK: ja usa 51 de 100 chars, ko 48, zh-Hans 38. É orçamento de indexação parado — e ja recebe 822 impressões com 0,36% de tap, ko 265 com 0%. tr recebe 1.627 impressões (mais que o pt-BR) e converte 0,55% em tap, o que costuma ser o app aparecendo em busca de intenção errada.
-2. NÃO existe versão editável: só a 1.9.0 READY_FOR_SALE e um único appInfo. keywords e subtitle são version-scoped, então essa iteração exige a 1.9.1 COM BUILD, indo a review — não é PATCH direto como a iter-01 (que pegou a 1.9.0 ainda em WAITING_FOR_REVIEW). Pela quarentena, esse build tem que ser SÓ TEXTO: sem feature, sem print novo, sem idioma novo.
-
-PRÓXIMO PASSO SEU: quando a cadeia terminar eu te mando a proposta campo a campo nos 13 locales pra você aprovar. O deploy (criar a 1.9.1, subir build, submeter) só acontece com seu pedido — iPhotos é intermediate e nada chega na loja sem você pedir.
-
-Iteração: Apps/intermediate/iPhotosEditor/aso-pipeline/iterations/2026-09-30_iter-02-text-keywords</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+Resultado observável no fim: aso/reference/*-2026.md (4 docs), reports/2026-10-01_aso-layer-audit/{FAILURES,DESIGN,BEFORE_AFTER}.md, scripts novos com testes, evals passando.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
