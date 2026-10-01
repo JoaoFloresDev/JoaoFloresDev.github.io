@@ -41,7 +41,7 @@ flex-wrap:wrap;margin-bottom:14px}
 .b-mid{background:var(--yellow-bg);color:var(--yellow)}
 .b-ok{background:var(--grey-bg);color:var(--sub)}
 .b-frozen{background:var(--grey-bg);color:var(--sub)}
-.app.frozen{opacity:.72}
+.app.frozen{border-left:3px solid var(--line)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
 @media(max-width:720px){.cols{grid-template-columns:1fr}h1{font-size:27px}}
 ul.findings{margin:0;padding:0;list-style:none}
@@ -64,7 +64,7 @@ letter-spacing:.04em;padding:1px 7px;border-radius:5px;margin-right:8px;vertical
 .tag{font-size:11px;background:var(--grey-bg);color:var(--sub);padding:1px 7px;border-radius:5px}
 tr.bad td:first-child{box-shadow:inset 3px 0 0 var(--red)}
 tr.warn td:first-child{box-shadow:inset 3px 0 0 var(--yellow)}
-tr.frozen{opacity:.6}
+tr.frozen td{color:var(--sub)}
 td.miss{color:var(--red)}
 a{color:var(--blue);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -108,7 +108,7 @@ preço errado ali custa pouco para consertar e é onde está todo o espaço de c
 <thead><tr><th>App</th><th>Categoria</th><th class=num>Semanal</th><th class=num>Mensal</th>
 <th class=num>Anual</th><th>Par que a categoria pede</th><th>Trial hoje</th>
 <th>Trial que deveria ter</th><th class=num>Receita 30d</th></tr></thead>
-<tbody><tr class=bad><td><a href="#app-6758321287">BLW Baby Led Weaning Tracker</a></td><td class=small>Kids / family (habit)</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 8.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 105.22</td></tr><tr class=bad><td><a href="#app-1517929511">iPhotos • Photo Collage editor</a></td><td class=small>Photo &amp; video</td><td class=num>US$ 1.99</td><td class=num>US$ 1.99</td><td class=num>US$ 12.99</td><td class=small>semanal + anual</td><td class=small>3d no anual</td><td class="small miss">sem trial</td><td class=num>US$ 64.28</td></tr><tr class=bad><td><a href="#app-6756285965">Walk: Steps &amp; Calorie Tracker</a></td><td class=small>Health &amp; fitness</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 9.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 25.36</td></tr><tr class=bad><td><a href="#app-6502218501">My Expenses: Personal Finances</a></td><td class=small>Finance / productivity</td><td class=num>—</td><td class=num>US$ 1.99</td><td class=num>US$ 9.99</td><td class=small>mensal + anual</td><td class=small>3d no mensal</td><td class="small miss">sem trial</td><td class=num>US$ 12.58</td></tr><tr class=bad><td><a href="#app-1502280869">Neon Glow Draw: Light Painting</a></td><td class=small>Entertainment / graphics</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 9.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">sem trial</td><td class=num>US$ 8.84</td></tr><tr class=bad><td><a href="#app-6759974641">English for Devs - Devlingo</a></td><td class=small>Education</td><td class=num>—</td><td class=num>US$ 1.99</td><td class=num>US$ 7.99</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small miss">7d no anual</td><td class=num>US$ 7.87</td></tr><tr class=bad><td><a href="#app-6771595616">Hair Schedule: Care Routine</a></td><td class=small>Health / habit</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 7.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1508371263">Controle de faltas e presença</a></td><td class=small>Education</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=bad><td><a href="#app-6758740138">Sunrise Alarm Clock: Wake Up</a></td><td class=small>Health / habit</td><td class=num>US$ 0.29</td><td class=num>—</td><td class=num>US$ 2.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1491372792">Sueca Games • Never Have</a></td><td class=small>Lifestyle / party</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>—</td><td class=small>—</td><td class="small ok">sem trial</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1486427751">Truco Marcador • Conta Tento</a></td><td class=small>Games</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>—</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1510650044">Cronos • Task and Time Manager</a></td><td class=small>Productivity</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=frozen><td><a href="#app-1479873340">Secret Calculator Vault Photo</a> <span class=tag>congelado</span></td><td class=small>Utilities / privacy</td><td class=num>—</td><td class=num>US$ 4.99</td><td class=num>US$ 19.99</td><td class=small>semanal + anual</td><td class=small>—</td><td class="small ok">sem trial</td><td class=num>US$ 1 411.09</td></tr><tr class=frozen><td><a href="#app-6755939574">Cloak: Hide &amp; Lock Apps Vault</a> <span class=tag>congelado</span></td><td class=small>Utilities / privacy</td><td class=num>US$ 4.99</td><td class=num>US$ 3.99</td><td class=num>US$ 19.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small ok">3d no semanal</td><td class=num>US$ 666.10</td></tr></tbody>
+<tbody><tr class=bad><td><a href="#app-6758321287">BLW Baby Led Weaning Tracker</a></td><td class=small>Kids / family (habit)</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 8.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 105.22</td></tr><tr class=bad><td><a href="#app-1517929511">iPhotos • Photo Collage editor</a></td><td class=small>Photo &amp; video</td><td class=num>US$ 1.99</td><td class=num>US$ 1.99</td><td class=num>US$ 12.99</td><td class=small>semanal + anual</td><td class=small>3d no anual</td><td class="small miss">sem trial</td><td class=num>US$ 64.28</td></tr><tr class=bad><td><a href="#app-6756285965">Walk: Steps &amp; Calorie Tracker</a></td><td class=small>Health &amp; fitness</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 9.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 25.36</td></tr><tr class=bad><td><a href="#app-6502218501">My Expenses: Personal Finances</a></td><td class=small>Finance / productivity</td><td class=num>—</td><td class=num>US$ 1.99</td><td class=num>US$ 9.99</td><td class=small>mensal + anual</td><td class=small>3d no mensal</td><td class="small miss">sem trial</td><td class=num>US$ 12.58</td></tr><tr class=bad><td><a href="#app-1502280869">Neon Glow Draw: Light Painting</a></td><td class=small>Entertainment / graphics</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 9.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">sem trial</td><td class=num>US$ 8.84</td></tr><tr class=bad><td><a href="#app-6759974641">English for Devs - Devlingo</a></td><td class=small>Education</td><td class=num>—</td><td class=num>US$ 1.99</td><td class=num>US$ 7.99</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small miss">7d no anual</td><td class=num>US$ 7.87</td></tr><tr class=bad><td><a href="#app-6771595616">Hair Schedule: Care Routine</a></td><td class=small>Health / habit</td><td class=num>US$ 0.99</td><td class=num>—</td><td class=num>US$ 7.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1508371263">Controle de faltas e presença</a></td><td class=small>Education</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=bad><td><a href="#app-6758740138">Sunrise Alarm Clock: Wake Up</a></td><td class=small>Health / habit</td><td class=num>US$ 0.29</td><td class=num>—</td><td class=num>US$ 2.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small miss">7d no anual</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1491372792">Sueca Games • Never Have</a></td><td class=small>Lifestyle / party</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>—</td><td class=small>—</td><td class="small ok">sem trial</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1486427751">Truco Marcador • Conta Tento</a></td><td class=small>Games</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>—</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=warn><td><a href="#app-1510650044">Cronos • Task and Time Manager</a></td><td class=small>Productivity</td><td class=num>—</td><td class=num>—</td><td class=num>—</td><td class=small>mensal + anual</td><td class=small>—</td><td class="small ok">—</td><td class=num>US$ 0.00</td></tr><tr class=frozen><td><a href="#app-1479873340">Secret Calculator Vault Photo</a> <span class=tag>congelado · preço ok</span></td><td class=small>Utilities / privacy</td><td class=num>—</td><td class=num>US$ 4.99</td><td class=num>US$ 19.99</td><td class=small>semanal + anual</td><td class=small>—</td><td class="small ok">sem trial</td><td class=num>US$ 1 411.09</td></tr><tr class=frozen><td><a href="#app-6755939574">Cloak: Hide &amp; Lock Apps Vault</a> <span class=tag>congelado · preço ok</span></td><td class=small>Utilities / privacy</td><td class=num>US$ 4.99</td><td class=num>US$ 3.99</td><td class=num>US$ 19.99</td><td class=small>semanal + anual</td><td class=small>3d no semanal</td><td class="small ok">3d no semanal</td><td class=num>US$ 666.10</td></tr></tbody>
 </table>
 <p class=small>Preços no Tier 1 (EUA). O par de planos não é o mesmo para todos: utilitário e
 saúde vivem de semanal+anual, mas Finance e Produtividade são 77% mensal e 91% da receita vem dali
@@ -119,17 +119,20 @@ por categoria; em vermelho quando não bate com o de hoje.</p>
 <h2>Por onde começar</h2>
 <div class=card>
 <ol class=plan>
-<li><b>Um app primeiro, não os doze.</b> O candidato é o <b>BLW</b>: é o de maior receita fora dos
-congelados (US$&nbsp;97 em 30&nbsp;dias), tem os quatro erros ao mesmo tempo (semanal a US$&nbsp;0,99,
-anual a US$&nbsp;8,99, trial nos dois planos e 3 dias no anual) e é categoria de hábito, onde a regra
-é mais firme. Arrumar ele dá a leitura que decide o resto.</li>
+<li><b>Dois caminhos, não um.</b> Nos <b>congelados</b> (preço liberado, release não), o passo
+isolado de maior valor é subir o anual de US$&nbsp;19,99 para US$&nbsp;39,99 — são os dois apps que
+faturam, e o anual deles custa hoje o mesmo que 4 a 5 meses do plano curto. Fora deles, o candidato é
+o <b>BLW</b>: maior receita do resto, com os quatro erros ao mesmo tempo (semanal a US$&nbsp;0,99,
+anual a US$&nbsp;8,99, trial nos dois planos e 3&nbsp;dias no anual) e categoria de hábito, onde a
+regra é mais firme.</li>
 <li><b>Subir preço não mexe em quem já assina.</b> Na App Store Connect, ao mudar o preço você escolhe
 preservar os assinantes atuais — eles continuam no preço antigo e só o novo assinante paga o novo valor.
 Não há churn forçado nem consentimento a pedir.</li>
 <li><b>Preço por país vale mais que o preço de Tier 1</b> em apps onde Brasil e México são a maior parte
 das vendas. É alteração só de preço, sem release.</li>
-<li><b>Mexer no trial exige release</b>, não só a API: o plano, a duração e o texto do paywall vivem no
-código. Preço puro, não — é mudança direta na ASC.</li>
+<li><b>Mexer no trial exige release</b>, não só a API: o plano, a duração e o texto do paywall vivem
+no código. Preço puro, não — é mudança direta na ASC. Por isso os passos marcados
+<span class="pill pill-warn">precisa de versão nova</span> não valem para Calc+ e Cloak.</li>
 <li><b>Medir pelo lugar certo:</b> trial→pago e renovação vêm dos relatórios de assinatura da ASC
 (<code>subscription_events.py</code>), não do GA4 — o Firebase não enxerga nada disso.</li>
 </ol>
@@ -161,8 +164,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.16× o preço americano (alvo 0.2×), MEX paga 1.22× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
 <li>Subir o anual de US$ 8.99 para US$ 34.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
-<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 34.99, isso é ~R$ 91 no Brasil, ~MX$ 317 no México e ~₹ 671 na Índia.</li></ol></div>
+<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 34.99 no Tier 1: Brasil R$ 60 → ~R$ 91; México MX$ 199 → ~MX$ 317; Índia ₹ 999 → ~₹ 671. Índia fica mais barato que hoje, e este app fatura de verdade: aí é teste, não aplicação direta — um mercado por vez, lendo o resultado antes do próximo.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-1517929511">
@@ -192,11 +195,11 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-alta"><span class=sev>Alta</span>anual com trial de 3 dias — é a pior célula medida (24% conversão, 18,3% de 1ª renovação)</li>
 <li class="f-media"><span class=sev>Média</span>3 planos de assinatura — 2 convertem melhor que 3 (achado 12); nesta categoria o par é semanal + anual, então sobra o mensal</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.05× o preço americano (alvo 0.2×), MEX paga 1.27× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
-    <div class="rec"><h4>Plano-herói: semanal, sem trial</h4><ol><li>Ficar com 2 planos (semanal + anual) e aposentar o mensal — 2 planos convertem melhor que 3. Produto aposentado para de ser oferecido; quem já assina continua.</li>
+    <div class="rec"><h4>Plano-herói: semanal, sem trial</h4><ol><li>Ficar com 2 planos (semanal + anual) e aposentar o mensal — 2 planos convertem melhor que 3. Tirar o produto de venda não exige build, mas confira como o paywall fica com um card a menos.</li>
 <li>Subir o semanal de US$ 1.99 para US$ 5.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
 <li>Subir o anual de US$ 12.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
-<li>Testar sem trial: nesta categoria o trial reduz o LTV.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o semanal a US$ 5.99, isso é ~R$ 16 no Brasil, ~MX$ 54 no México e ~₹ 115 na Índia.</li></ol></div>
+<li>Testar sem trial: nesta categoria o trial reduz o LTV.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o semanal a US$ 5.99 no Tier 1: Brasil R$ 13 → ~R$ 16; México MX$ 39 → ~MX$ 54; Índia ₹ 199 → ~₹ 115.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-6756285965">
@@ -222,8 +225,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
 <li>Subir o anual de US$ 9.99 para US$ 34.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
-<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 34.99, isso é ~R$ 91 no Brasil, ~MX$ 317 no México e ~₹ 671 na Índia.</li></ol></div>
+<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 34.99 no Tier 1: Brasil R$ 60 → ~R$ 91; México MX$ 199 → ~MX$ 317; Índia ₹ 999 → ~₹ 671.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-6502218501">
@@ -250,8 +253,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.05× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: mensal, sem trial</h4><ol><li>Subir o mensal de US$ 1.99 para US$ 12.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
 <li>Subir o anual de US$ 9.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
-<li>Testar sem trial: nesta categoria o trial reduz o LTV.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o mensal a US$ 12.99, isso é ~R$ 34 no Brasil, ~MX$ 118 no México e ~₹ 249 na Índia.</li></ol></div>
+<li>Testar sem trial: nesta categoria o trial reduz o LTV.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o mensal a US$ 12.99 no Tier 1: Brasil R$ 13 → ~R$ 34; México MX$ 39 → ~MX$ 118; Índia ₹ 199 → ~₹ 249.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-1502280869">
@@ -279,8 +282,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: semanal, sem trial</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
 <li>Subir o anual de US$ 9.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
-<li>Testar sem trial: nesta categoria o trial reduz o LTV.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o semanal a US$ 5.99, isso é ~R$ 16 no Brasil, ~MX$ 54 no México e ~₹ 115 na Índia.</li></ol></div>
+<li>Testar sem trial: nesta categoria o trial reduz o LTV.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o semanal a US$ 5.99 no Tier 1: Brasil R$ 7 → ~R$ 16; México MX$ 19 → ~MX$ 54; Índia ₹ 99 → ~₹ 115.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-6759974641">
@@ -306,8 +309,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.05× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o mensal de US$ 1.99 para US$ 9.99 no Tier 1 (âncora de comparação).</li>
 <li>Subir o anual de US$ 7.99 para US$ 34.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
-<li>Trial de 7 dias só no anual, e deixar o outro plano direto como âncora.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 34.99, isso é ~R$ 91 no Brasil, ~MX$ 317 no México e ~₹ 671 na Índia.</li></ol></div>
+<li>Trial de 7 dias só no anual, e deixar o outro plano direto como âncora.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 34.99 no Tier 1: Brasil R$ 50 → ~R$ 91; México MX$ 179 → ~MX$ 317; Índia ₹ 799 → ~₹ 671.</li></ol></div>
   </div>
 </section>
 <section class="app high" id="app-6771595616">
@@ -333,8 +336,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.34× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.99 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
 <li>Subir o anual de US$ 7.99 para US$ 34.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
-<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 34.99, isso é ~R$ 91 no Brasil, ~MX$ 317 no México e ~₹ 671 na Índia.</li></ol></div>
+<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 34.99 no Tier 1: Brasil R$ 50 → ~R$ 91; México MX$ 179 → ~MX$ 317; Índia ₹ 799 → ~₹ 671.</li></ol></div>
   </div>
 </section>
 <section class="app mid" id="app-1508371263">
@@ -355,7 +358,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
   <div class=cols>
     <div><h4>O que está errado</h4><ul class=findings><li class="f-media"><span class=sev>Média</span>só compra única (remover anúncios), sem assinatura — assinatura rende ~4,5× o LTV de uma compra única; o lifetime funciona ao LADO dela, não no lugar</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.37× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.17× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
-    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.</li>
+    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.<span class="pill pill-warn">precisa de versão nova</span></li>
 <li>Se continuar só lifetime: precificar por país (hoje o mercado emergente paga acima do americano).</li></ol></div>
   </div>
 </section>
@@ -382,8 +385,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.28× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.27× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
     <div class="rec"><h4>Plano-herói: anual com trial de 7d</h4><ol><li>Subir o semanal de US$ 0.29 para US$ 5.99 no Tier 1 (âncora de comparação).</li>
 <li>Subir o anual de US$ 2.99 para US$ 34.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
-<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 34.99, isso é ~R$ 91 no Brasil, ~MX$ 317 no México e ~₹ 671 na Índia.</li></ol></div>
+<li>Trial de 7 dias só no anual (tirar do semanal), e deixar o outro plano direto como âncora.<span class="pill pill-warn">precisa de versão nova</span></li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 34.99 no Tier 1: Brasil R$ 20 → ~R$ 91; México MX$ 69 → ~MX$ 317; Índia ₹ 299 → ~₹ 671.</li></ol></div>
   </div>
 </section>
 <section class="app mid" id="app-1491372792">
@@ -405,8 +408,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
   <div class=cols>
     <div><h4>O que está errado</h4><ul class=findings><li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.20× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li>
 <li class="f-media"><span class=sev>Média</span>produto sueca.pro.monthly preso em MISSING_METADATA — nunca vendeu</li></ul></div>
-    <div class="rec"><h4>Categoria sem plano-herói — e sem trial</h4><ol><li>Terminar ou apagar o produto sueca.pro.monthly: está sem período configurado e em MISSING_METADATA — nunca chegou a vender.</li>
-<li>Preço por país: alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano. Com o anual a US$ 39.99, isso é ~R$ 104 no Brasil, ~MX$ 362 no México e ~₹ 766 na Índia.</li></ol></div>
+    <div class="rec"><h4>Categoria sem plano-herói — e sem trial</h4><ol><li>Terminar ou apagar o produto sueca.pro.monthly: está sem período configurado e em MISSING_METADATA — nunca chegou a vender.</li></ol></div>
   </div>
 </section>
 <section class="app mid" id="app-1486427751">
@@ -427,7 +429,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
   <div class=cols>
     <div><h4>O que está errado</h4><ul class=findings><li class="f-media"><span class=sev>Média</span>só compra única (remover anúncios), sem assinatura — assinatura rende ~4,5× o LTV de uma compra única; o lifetime funciona ao LADO dela, não no lugar</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.20× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
-    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.</li>
+    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.<span class="pill pill-warn">precisa de versão nova</span></li>
 <li>Se continuar só lifetime: precificar por país (hoje o mercado emergente paga acima do americano).</li></ol></div>
   </div>
 </section>
@@ -449,7 +451,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
   <div class=cols>
     <div><h4>O que está errado</h4><ul class=findings><li class="f-media"><span class=sev>Média</span>só compra única (remover anúncios), sem assinatura — assinatura rende ~4,5× o LTV de uma compra única; o lifetime funciona ao LADO dela, não no lugar</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.20× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.24× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
-    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.</li>
+    <div class="rec"><h4>Sem assinatura — decisão de produto antes de preço</h4><ol><li>Hoje só existe compra única de remover anúncios. Antes de mexer em preço, decidir se o app ganha assinatura (vale ~4,5× o LTV de uma compra única) ou se o lifetime continua sendo tudo.<span class="pill pill-warn">precisa de versão nova</span></li>
 <li>Se continuar só lifetime: precificar por país (hoje o mercado emergente paga acima do americano).</li></ol></div>
   </div>
 </section>
@@ -459,7 +461,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
       <h3>Secret Calculator Vault Photo</h3>
       <p class=meta>Utilities / privacy · US$ 1 411.09 em 30 dias · 3078 instalações</p>
     </div>
-    <span class="badge b-frozen">Congelado</span>
+    <span class="badge b-frozen">Congelado — preço liberado</span>
   </header>
   <div class=scroll>
   <table class=prices>
@@ -474,7 +476,8 @@ código. Preço puro, não — é mudança direta na ASC.</li>
     <div><h4>O que está errado</h4><ul class=findings><li class="f-alta"><span class=sev>Alta</span>mensal a US$ 4.99 — piso do lab é US$ 9.99 (2.0× o atual)</li>
 <li class="f-alta"><span class=sev>Alta</span>anual a US$ 19.99 — piso do lab é US$ 29.99 (1.5× o atual)</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.10× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li></ul></div>
-    <div class="rec"><h4>Congelado — nenhuma ação</h4><p class=note>O app está congelado desde 27/09. Os números ficam aqui como referência; nada muda sem o João reabrir.</p></div>
+    <div class="rec"><h4>Congelado — só preço</h4><ol><li>Subir o anual de US$ 19.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o anual a US$ 39.99 no Tier 1: Brasil R$ 130 → ~R$ 104; México MX$ 399 → ~MX$ 362; Índia ₹ 1.999 → ~₹ 766. Brasil, México e Índia ficam mais baratos que hoje, e este app fatura de verdade: aí é teste, não aplicação direta — um mercado por vez, lendo o resultado antes do próximo.</li></ol><p class=note>Congelado: só os passos de preço entram. Ficou de fora por exigir versão nova: Criar o plano semanal a US$ 5.99 — é o par desta categoria e hoje ele não existe. E este app sozinho responde por uma fatia grande da receita do lab — um passo por vez, lendo o resultado antes do próximo.</p></div>
   </div>
 </section>
 <section class="app frozen" id="app-6755939574">
@@ -483,7 +486,7 @@ código. Preço puro, não — é mudança direta na ASC.</li>
       <h3>Cloak: Hide &amp; Lock Apps Vault</h3>
       <p class=meta>Utilities / privacy · US$ 666.10 em 30 dias · 3412 instalações</p>
     </div>
-    <span class="badge b-frozen">Congelado</span>
+    <span class="badge b-frozen">Congelado — preço liberado</span>
   </header>
   <div class=scroll>
   <table class=prices>
@@ -503,7 +506,10 @@ código. Preço puro, não — é mudança direta na ASC.</li>
 <li class="f-media"><span class=sev>Média</span>3 planos de assinatura — 2 convertem melhor que 3 (achado 12); nesta categoria o par é semanal + anual, então sobra o mensal</li>
 <li class="f-media"><span class=sev>Média</span>nenhuma precificação por país: BRA paga 1.25× o preço americano (alvo 0.5×), IND paga 1.04× o preço americano (alvo 0.2×), MEX paga 1.23× o preço americano (alvo 0.5×). Convertido em dólar pelo câmbio de 30/09, o preço da Apple por equalização sai ACIMA do americano nesses mercados</li>
 <li class="f-media"><span class=sev>Média</span>produto applocker.yearly.pro preso em MISSING_METADATA — nunca vendeu</li></ul></div>
-    <div class="rec"><h4>Congelado — nenhuma ação</h4><p class=note>O app está congelado desde 27/09. Os números ficam aqui como referência; nada muda sem o João reabrir.</p></div>
+    <div class="rec"><h4>Congelado — só preço</h4><ol><li>Ficar com 2 planos (semanal + anual) e aposentar o mensal — 2 planos convertem melhor que 3. Tirar o produto de venda não exige build, mas confira como o paywall fica com um card a menos.</li>
+<li>Subir o semanal de US$ 4.99 para US$ 5.99 no Tier 1 (é o plano-herói, o que carrega a receita).</li>
+<li>Subir o anual de US$ 19.99 para US$ 39.99 no Tier 1 (âncora de comparação).</li>
+<li>Preço por país (alvo BR/MX ≈ 0,5× e IN ≈ 0,2× do americano), tomando o semanal a US$ 5.99 no Tier 1: Brasil R$ 15 → ~R$ 16; México MX$ 49 → ~MX$ 54; Índia ₹ 249 → ~₹ 115. Índia fica mais barato que hoje, e este app fatura de verdade: aí é teste, não aplicação direta — um mercado por vez, lendo o resultado antes do próximo.</li></ol><p class=note>Congelado: só os passos de preço entram. Nenhum passo deste app dependia de release. E este app sozinho responde por uma fatia grande da receita do lab — um passo por vez, lendo o resultado antes do próximo.</p></div>
   </div>
 </section>
 
