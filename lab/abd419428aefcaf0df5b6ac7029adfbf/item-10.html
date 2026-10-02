@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Lab</title>
+<title>BLW</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -509,7 +509,11 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:08</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Rotina do lab: 10 item(ns) de rotina na fila do orchestrator (6 rating-first, 1 iteração ASO sem medição, 1 checkpoint(s) ASO, 1 meta ASO fora do schema, 1 gap(s) de analytics)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Checkpoint de iteração sem metrics/d00_baseline.json fica só aqui — sem baseline não é mensurável. Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido num item só em vez de virar um item por achado.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:11</span></div></header><div class="wrap"><p class="sub"></p><h1>BLW — Registrar `name` e `source` como custom dimensions no GA4 do BLW</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Os eventos novos já saem do app, mas os PARÂMETROS só aparecem em relatório depois de registrados: GA4 → Admin → Custom definitions → event-scoped, na property 548962650. Faltam `name` e `source` (do `feature_used`); `source` pode já existir, vindo do `paywall_shown`. `screen_name` é nativo, não precisa.
+
+Sem isso o evento conta, mas não dá pra saber QUAL feature foi usada.
+
+Posso fazer pela Admin API se você quiser — não fiz porque estava fora do que o gap pedia.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
