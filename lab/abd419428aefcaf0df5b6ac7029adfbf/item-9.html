@@ -489,15 +489,13 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:45</span></div></header><div class="wrap"><p class="sub"></p><h1>Meus Gastos — Paywall promete 3 benefícios Pro e só 1 existe — decidir antes da tela pós-compra (próxima versão)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Achado do release-runner lendo o source em 01/10 (ProModal.dart:294/299/304):
-- Backup na nuvem: única trava real (LoginRoute.dart:22-26).
-- Exportar Excel/PDF: NÃO é gateado — abre pra qualquer usuário. O paywall vende como Pro.
-- Sem anúncios: o app não tem SDK de anúncio nenhum (pubspec e código). Promete tirar o que não existe.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 16:12</span></div></header><div class="wrap"><p class="sub"></p><h1>Meus Gastos — Primeiro veredito por script de uma iteração de ASO: a iter-03 (keywords pt-BR/de-DE de 25/08) &#x27;não é do texto&#x27; — gravar no meta real?</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O smoke da reforma fechou a iter-03 numa CÓPIA, pela primeira vez com número:
+- País-alvo (BR+DE): 76 → 68 instalações novas em 30 dias. RR 0,895, IC95 [0,645; 1,241] — dentro do ruído.
+- Outros países: 67 → 115. RR 1,716, IC [1,27; 2,32] — cresceram, mas não por causa do texto (o texto só mudou em pt-BR e de-DE).
+- Sem app-controle quieto no lab nessa janela (0 controles), então a leitura se apoia em alvo × outros países.
+Leitura: a troca de keywords de agosto não moveu instalação no BR/DE. Com 25-45 instalações/mês por país, nenhum texto se separa do ruído — é o motivo do modo app-pequeno medir posição.
 
-Risco: 3.1.2 / 2.3.1 na review e reclamação de quem assina. Já estava assim na 45.3.1 (no ar) — não é regressão da 45.4.0, por isso o archive seguiu.
-
-Decidir uma: (a) travar o export pro Pro (vira benefício verdadeiro; mas export grátis é diferencial contra concorrentes e sustenta o `kostenlos` do alemão); (b) tirar export e anúncios do paywall e reescrever os benefícios em torno de backup/sync + o que vier.
-Depende disso: a tela pós-compra (post_purchase_shown está dispensado por waiver até 30/11 — vence e volta a travar o archive).</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Decisão: gravar esse results.final no meta.json real da iter-03 (app intermediate, por isso pergunto). Sim = 1 comando: pull_analytics.py final --iter &lt;iter-03&gt; --live-at 2026-08-28 --countries BR,DE --write-meta.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
