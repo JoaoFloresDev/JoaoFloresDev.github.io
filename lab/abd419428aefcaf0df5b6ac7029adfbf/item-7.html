@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Hair Schedule</title>
+<title>Meus Gastos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -509,7 +509,24 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:11</span></div></header><div class="wrap"><p class="sub"></p><h1>Hair Schedule — Hair Schedule 1.2.0 (build 8) em review da Apple</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">01/10: build 8 (paywall com o plano semanal pre-selecionado) VALID na ASC, archive local Xcode 26.1, tag release/8, whatsNew nos 39 idiomas, submissao 5fdaaf87 em WAITING_FOR_REVIEW (a do build 7, 92b9d1c0, foi cancelada). Subs semanal/anual ja APPROVED desde a 1.1.0. Nada manual pendente.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:40</span></div></header><div class="wrap"><p class="sub"></p><h1>Meus Gastos — Revisar a 45.4.0 do Meus Gastos — relatório com tudo que entrou + a análise de ASO dos 29 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os que vão com a versão: en-US, pt-BR, es-ES e es-MX — os outros 25 idiomas herdam o inglês) · **ASO** (a análise dos 29 locales no template GOLD; o &#x27;depois&#x27; dos 29 confere com a ASC).
+Link direto: https://claude.ai/artifact/EizrdTwvexCUiY17CjMs91
+
+O QUE ENTRA NA 45.4.0 (binário 45.4.0+42):
+1. Texto de ASO nos 29 idiomas. Keywords sem os termos que prometiam o que o app não faz (receita, carteira, poupança, banco) e sem 24 duplicatas; nome mudou em 2 idiomas, só ganhando palavra (alemão `Ausgaben Haushaltsbuch Budget`, japonês `家計簿(かけいぼ) - シンプル支出管理`); subtitle em 2 (alemão, coreano); japonês e chinês reconstruídos (2º e 6º países em impressão, keywords 51→99 e 47→89); `casal` fica no pt-BR por decisão sua.
+2. Descriptions corrigidas em 22 idiomas, só tirando o que era falso: o texto de chat colado no fim da description em inglês, &#x27;100% grátis&#x27; em 13 idiomas, promessa de notificação em 7, inglês solto no pt-BR.
+3. Funil de compra: cancelar a compra é registrado e não mostra mais erro (StoreKit 2); &#x27;iniciou compra&#x27; só conta quando a folha da Apple abre; toque sem resposta mostra mensagem em 32 idiomas.
+4. Analytics no padrão do lab: ativação só com gasto lançado pelo usuário, paywall com origem real, plano escolhido, valor e moeda da compra, fim do envio duplicado com nomes antigos, 19 parâmetros registrados no GA4.
+5. Pedido de avaliação nativo ao salvar um gasto, sem pré-pergunta; CFBundleIconName na raiz (sem ela o build nunca aparece na ASC).
+
+SEIS POSIÇÕES DO TOP 50 CAEM DE PROPÓSITO, todas de termos que o app não entrega: alemão `monatliche bilanz` #1, `konto ausgaben` #29, `haushaltskonto` #41; indonésio `tabungan bulanan` #28, `buku kas` #43; hindi `सेविंग्स` #6. Nenhuma posição de termo que o app entrega sai; o pt-BR mantém as 47.
+
+O QUE FALTA, E É SEU:
+1. whatsNew nos 29 idiomas (vazio — a Apple recusa o envio).
+2. Texto promocional: vazio nos 29 (16 perderam na herança; 14 desses diziam &#x27;100% grátis&#x27;).
+3. Age rating → pergunta de redes sociais (socialMedia) sem resposta.
+4. Testar no iPhone: abrir o paywall, iniciar compra e CANCELAR — não pode aparecer erro.
+5. Archive: você parou o anterior; a tag release/45.4.0 aponta pra antes das correções e tem que ser refeita. Depois anexar o build e enviar.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/meus-gastos-45-4-0/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

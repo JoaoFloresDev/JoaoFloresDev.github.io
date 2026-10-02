@@ -509,11 +509,22 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:11</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Pré-prompt de avaliação: o código já está limpo nos 4 apps, mas a LOJA ainda vende a versão com ele — falta release</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado no source em 02/10: `RatingGate` = **0 ocorrências** em BLW, Walk (stepsSwiftUI), Hair (Cronogram-Capilar) e DevLingo. A remoção de 11/09 está feita.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:40</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — 4 apps novos (Impostor, Fases da Lua, Contrações, Simulado CNH) parados desde 12/09 — nenhum existe na ASC</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Verificado 28/09 (git/ASC): as 4 pastas em Apps/recovery/ios (Impostor, MoonPhases, ContractionTimer, SimuladoCNH) NÃO têm repositório git (nenhum commit pra datar). O arquivo mais recente de cada uma é de 12/09: PaywallView.swift 22:36 em Impostor, MoonPhases e SimuladoCNH; Package.resolved 23:11 em ContractionTimer. São 16 dias sem nenhuma alteração em disco. Nenhum dos 4 existe na App Store Connect. Estado real: construção parada em 12/09 — o QA no simulador, as correções e os prints descritos abaixo não têm evidência de terem acontecido. Não há progresso a reportar; retomar exige uma sessão dedicada (e antes disso o item &#x27;Criar os apps novos na ASC&#x27;).
 
-O que sobra é release: as versões no ar (BLW 1.5.3, Walk 7.3.0, Hair 1.1.0) são anteriores à remoção, então o usuário ainda vê o pré-prompt e o crash do &#x27;sim&#x27; (LEARNINGS #85/#88). A Hair 1.2.0 já está em review e resolve esse app.
+---
 
-Separado disso: iPhotos e BLW seguem **sem Crashlytics** (0 referências no source) — crash-free deles é ausência de sensor, não 100% (LEARNINGS #86).</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Verificado 27/09 (ASC/git): as 4 pastas existem em Apps/recovery/ios (ContractionTimer, Impostor, MoonPhases, SimuladoCNH), ainda sem repositório git; nenhum dos 4 apps existe na ASC.
+
+
+[detalhe completo no relatório/arquivo citado acima]
+
+Verificado 28/09 (ASC/git): GET /v1/apps (22 apps) em 28/09 continua sem nenhum bundle contractiontimer, impostor, moonphases ou simuladocnh. Os 4 ainda precisam ser criados na web. Item mantido.
+
+---
+
+Verificado 27/09 (ASC/git): GET /v1/apps (22 apps) em 27/09 não tem nenhum bundle contractiontimer/impostor/moonphases/simuladocnh — os 4 ainda precisam ser criados na web.
+
+A API não cria app (POST /v1/apps é bloqueado), então é na web: appstoreconnect.apple.com/apps → + → Novo app, plataforma iOS, idioma principal Português (Brasil), SKU igual ao final do bundle. 1) Contrações — nome &#x27;Contador de Contrações: Onira&#x27;, bundle com.gambitstudio.contractiontimer, SKU contractiontimer, categoria Medicina. 2) Impostor — nome &#x27;Quem é o Impostor? Jogo BR&#x27;, bundle com.gambitstudio.impostor, SKU impostor, categoria Jogos (subcategorias Palavras e Família), secundária Entretenimento. 3) Fases da Lua — nome &#x27;Fases da Lua, Calendário: Jaci&#x27;, bundle com.gambitstudio.moonphases, SKU moonphases, categoria Previsão do tempo, secundária Estilo de vida. 4) Simulado CNH — nome &#x27;Simulado Detran e CNH: Seta&#x27;, bundle com.gambitstudio.simuladocnh, SKU simuladocnh, categoria Educação, secundária Referência; em Preço e disponibilidade deixar SÓ Brasil. Também: em Negócios → Acordos, confirmar que o Paid Apps Agreement está ativo — sem ele as assinaturas não saem de &#x27;Metadados ausentes&#x27;. Me avise quando criar que eu subo metadata, assinaturas e prints por API.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

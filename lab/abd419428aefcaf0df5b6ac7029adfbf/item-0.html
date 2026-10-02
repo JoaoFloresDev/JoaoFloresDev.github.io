@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Cloak</title>
+<title>Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -509,16 +509,11 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:11</span></div></header><div class="wrap"><p class="sub"></p><h1>Cloak — Subir o preço do Cloak pelo painel — a API não preserva o preço de quem já assina</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Tentei aplicar e REVERTI tudo. O preço de hoje está intacto (semanal US$ 4,99, anual US$ 19,99) e não há nada agendado.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:40</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Preço das assinaturas: 8 dos 12 apps mexíveis cobram abaixo da referência de mercado e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A auditoria inteira está na página **Seller → Preço das assinaturas**: hoje → sugerido nos três planos, trial, preço por país e o passo a passo por app.
 
-POR QUE PAROU: o `preserveCurrentPrice` do `POST /v1/subscriptionPrices` é **ignorado** — enviando `true` ou `false`, a resposta volta `preserved: false` nos dois casos. Ou seja, pela API o aumento atingiria também quem já assina. Os aumentos de 30/07 e 06/08 têm `preserved: true` porque foram feitos no painel.
+A referência é a mediana global 2026 (RevenueCat/Adapty: US$ 7,48 semanal · 12,99 mensal · 38,42 anual) e a mediana da categoria (Airbridge), com corte em 70% — não existe &#x27;piso do lab&#x27;, isso eu tinha inventado (LEARNINGS #109).
 
-O QUE FAZER (App Store Connect → Cloak → Assinaturas):
-1. `applock.pro.weekly` → Preços → US$ 4,99 → **5,99**, marcando **&quot;manter o preço atual para assinantes existentes&quot;**.
-2. `applock.pro.yearly` → US$ 19,99 → **39,99**, mesma marcação.
-3. Depois disso me avisa: eu ajusto Brasil, México e Índia por território, que é preço novo e não mexe com assinante.
-
-POR QUE O PASSO 3 IMPORTA: a tabela de Tier da Apple arredonda pra cima e soma imposto. Só subir o americano levaria o Brasil de R$ 14,99 para **R$ 39,90** (+166%) e a Índia de ₹ 249 para ₹ 599 — o oposto do que a análise pede. O alvo é BR R$ 12,50 e ₹ 145 no semanal; BR R$ 82,90, MX$ 325 e ₹ 959 no anual.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Preço muda na ASC sem release, inclusive em Cloak e Calc+. Trial mora no paywall e só muda com versão nova.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

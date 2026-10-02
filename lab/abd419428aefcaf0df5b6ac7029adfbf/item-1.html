@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Lab</title>
+<title>iPhotos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -509,11 +509,19 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:11</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Preço das assinaturas: 8 dos 12 apps mexíveis cobram abaixo da referência de mercado e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A auditoria inteira está na página **Seller → Preço das assinaturas**: hoje → sugerido nos três planos, trial, preço por país e o passo a passo por app.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:40</span></div></header><div class="wrap"><p class="sub"></p><h1>iPhotos — Revisar a 1.10.0 do iPhotos — relatório com tudo que entrou + a análise de ASO dos 13 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Link direto (modo escuro): https://claude.ai/artifact/LFaAmrdRXNWzkEUFB9Qazq
 
-A referência é a mediana global 2026 (RevenueCat/Adapty: US$ 7,48 semanal · 12,99 mensal · 38,42 anual) e a mediana da categoria (Airbridge), com corte em 70% — não existe &#x27;piso do lab&#x27;, isso eu tinha inventado (LEARNINGS #109).
+Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os 13 atuais) · **ASO** (a análise dos 13 locales no template GOLD).
 
-Preço muda na ASC sem release, inclusive em Cloak e Calc+. Trial mora no paywall e só muda com versão nova.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+O QUE ENTRA NA 1.10.0 (binário short version 30 / build 35):
+1. O app passa a falar os 13 idiomas da loja. Era 100% inglês: os 9 Main.strings localizados tinham 49 strings cada com ZERO caractere non-ASCII (exports nunca traduzidos) e o código novo tinha o inglês cravado. Agora são 402 literais virando 389 chaves, traduzidas em pt-BR, pt-PT, es-ES, es-MX, fr, de, it, ja, ko, ru, tr e zh-Hans, mais as 38 strings do storyboard em cada um. Vi renderizado no simulador em alemão e japonês antes de fechar.
+2. Um mês de trabalho que nunca saiu da máquina: o revamp do grid inteiro (13 commits de 31/08), os eventos canônicos de onboarding e a remoção do pré-prompt de avaliação.
+3. Duas correções de empacotamento: CFBundleIconName na raiz (sem ela o build é aceito e NUNCA materializa na ASC) e ITSAppUsesNonExemptEncryption.
+
+TRÊS BUGS QUE O INGLÊS ESCONDIA: não existia bundle de alemão, espanhol de Espanha nem português de Portugal (a loja vende nos três); o pt-BR estava fora do grupo de variantes do storyboard, então o Brasil já lia storyboard em inglês; e os cartões da Home cortavam texto.
+
+
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/iphotos-1-10-0/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
