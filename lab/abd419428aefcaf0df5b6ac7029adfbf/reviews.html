@@ -38,6 +38,14 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   padding:1px 8px;cursor:pointer;line-height:1.5}
 .iid:hover{color:var(--tx);border-color:var(--mut)}
 .iid.ok{color:var(--ok);border-color:var(--ok)}
+/* card que é link: o cartão inteiro abre o documento */
+a.card.lk{display:flex;flex-direction:column;color:var(--tx);text-decoration:none;
+  transition:border-color .16s ease,box-shadow .16s ease}
+a.card.lk:hover{border-color:var(--mut);box-shadow:var(--sh-up);text-decoration:none}
+a.card.lk>p{flex:1;margin:6px 0 10px}
+.lkmore{font-family:var(--f-disp);font-size:11px;font-weight:600;letter-spacing:.04em;
+  color:var(--mut)}
+a.card.lk:hover .lkmore{color:var(--tx)}
 a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
   font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
 a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
@@ -489,7 +497,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 16:12</span></div></header><div class="wrap"><p class="sub"></p><h1>Avaliações sem resposta</h1><h2>Secret Calculator Vault Photo · <a href="https://appstoreconnect.apple.com/apps/1479873340/distribution/reviews" target="_blank">responder na ASC ↗</a></h2><div class=rows><div class=card style="margin-bottom:8px"><b>★★★★★ Se esquecer a senha , como proceder ?</b><p style="color:var(--tx)">Bom</p><p>Humbert1 · BRA · 2026-09-29</p></div><div class=card style="margin-bottom:8px"><b>★★★☆☆ Como faz para acessar os aplicativos que foram ocultados dentro do app?</b><p style="color:var(--tx)">?</p><p>Lulis Lee · BRA · 2026-09-26</p></div><div class=card style="margin-bottom:8px"><b>★★★★★ Lindo</b><p style="color:var(--tx)">São</p><p>Lindo gesto · BRA · 2026-09-26</p></div><div class=card style="margin-bottom:8px"><b>★★★★★ Me gusta mucho</b><p style="color:var(--tx)">Exelente</p><p>Villegas34 · VEN · 2026-09-03</p></div></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 16:16</span></div></header><div class="wrap"><p class="sub"></p><h1>Avaliações sem resposta</h1><h2>Secret Calculator Vault Photo · <a href="https://appstoreconnect.apple.com/apps/1479873340/distribution/reviews" target="_blank">responder na ASC ↗</a></h2><div class=rows><div class=card style="margin-bottom:8px"><b>★★★★★ Se esquecer a senha , como proceder ?</b><p style="color:var(--tx)">Bom</p><p>Humbert1 · BRA · 2026-09-29</p></div><div class=card style="margin-bottom:8px"><b>★★★☆☆ Como faz para acessar os aplicativos que foram ocultados dentro do app?</b><p style="color:var(--tx)">?</p><p>Lulis Lee · BRA · 2026-09-26</p></div><div class=card style="margin-bottom:8px"><b>★★★★★ Lindo</b><p style="color:var(--tx)">São</p><p>Lindo gesto · BRA · 2026-09-26</p></div><div class=card style="margin-bottom:8px"><b>★★★★★ Me gusta mucho</b><p style="color:var(--tx)">Exelente</p><p>Villegas34 · VEN · 2026-09-03</p></div></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

@@ -144,7 +144,22 @@ body{display:block;height:auto}
 .vr .md h1{font-size:21px}.vr .md h2{font-size:18px;margin-top:24px}.vr .md h3{font-size:15px}
 .vr-end{padding-bottom:64px}
 </style>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script></head>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><style>
+/* Dark: same palette as the Lab Hub (tools/lab-hub/hub.py), so a report opened from
+   the site doesn't flash white. Follows the system, and data-theme forces either side. */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#0e1013;--panel:#1a1e25;--line:#39404d;--line-soft:#2a303b;
+  --ink:#f2f4f8;--sub:#aab3c2;--blue:#5b9bff;--blue-bg:#1d2a42;--shadow:rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--bg:#0e1013;--panel:#1a1e25;--line:#39404d;--line-soft:#2a303b;
+  --ink:#f2f4f8;--sub:#aab3c2;--blue:#5b9bff;--blue-bg:#1d2a42;--shadow:rgba(0,0,0,.5)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .topbar button:hover,
+  :root:not([data-theme="light"]) .topbar select:hover{background:var(--bg)}
+  :root:not([data-theme="light"]) .shot img,:root:not([data-theme="light"]) img{background:var(--bg)}}
+:root[data-theme="dark"] .topbar button:hover,:root[data-theme="dark"] .topbar select:hover{background:var(--bg)}
+:root[data-theme="dark"] img{background:var(--bg)}
+</style>
+</head>
 <body>
   <div class="topbar">
     <span class="wm">App Store Connect <span>· Preview</span></span>
