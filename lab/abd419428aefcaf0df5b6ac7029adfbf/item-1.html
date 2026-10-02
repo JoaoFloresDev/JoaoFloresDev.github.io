@@ -91,7 +91,6 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
 .fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
 .fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
-.nxt{margin-top:11px;background:var(--hl);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
 .nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
 .nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
 .fh .st{margin-left:8px}
@@ -130,8 +129,6 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
   --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
   --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
-  --cegtint:rgba(154,68,8,.085); --cegline:rgba(154,68,8,.55);
-  --ceghot:rgba(154,68,8,.16); --cegsurf:#fff; --cegbd:#cbd3e0; --cegdim:#b06a2c;
   --bar:#2563eb; --bar2:#60a5fa;
   --rad:14px;
 }
@@ -139,8 +136,6 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
   --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
   --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
-  --cegtint:rgba(255,187,85,.1); --cegline:rgba(255,187,85,.55);
-  --ceghot:rgba(255,187,85,.2); --cegsurf:#1b212c; --cegbd:#414b5c; --cegdim:#c89155;
   --bar:#5b9bff; --bar2:#9dc4ff;
 }}
 body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
@@ -220,59 +215,6 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
 .st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
 .st.d-congelar{background:rgba(125,140,170,.12);color:var(--mut)}
-/* "Sem dado nenhum": o número de instalações não medidas é o maior elemento do
-   card, porque é a única coisa que difere entre eles — o motivo e a correção são
-   os mesmos nos sete e ficam numa faixa só, acima da grade. */
-.cegfix{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;
-  padding:11px 15px;border-radius:var(--rad);font-size:13px;color:var(--tx);
-  border:1px solid var(--cegline);
-  background:linear-gradient(100deg,var(--cegtint),rgba(125,125,125,0) 72%),var(--card)}
-.cegfix b{font-family:var(--f-disp);font-weight:700}
-.cegtag{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
-  text-transform:uppercase;color:var(--warn);background:var(--cegtint);
-  border:1px solid var(--cegline);border-radius:999px;padding:2px 9px;white-space:nowrap}
-.cegarrow{color:var(--warn);font-weight:700}
-.cegdo{color:var(--mut)}
-.cegos{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));
-  margin:13px 0 2px;align-items:stretch}
-.ceg{position:relative;display:flex;flex-direction:column;overflow:hidden;
-  padding:13px 16px 15px 19px;border-radius:var(--rad);
-  border:1px solid var(--cegbd);box-shadow:var(--sh);
-  background:linear-gradient(165deg,var(--cegtint) 0,rgba(125,125,125,0) 62%),var(--cegsurf)}
-.ceg::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:linear-gradient(180deg,var(--cegline),rgba(125,125,125,.05))}
-/* o maior é o que decide: ele carrega o laranja cheio, os outros ficam um tom
-   abaixo pra a diferença de tamanho aparecer antes de o número ser lido */
-.ceg.hot{border-color:var(--cegline);
-  background:linear-gradient(165deg,var(--ceghot) 0,rgba(125,125,125,0) 66%),var(--cegsurf);
-  box-shadow:var(--sh),0 0 0 1px var(--cegtint)}
-.ceg.hot::before{background:linear-gradient(180deg,var(--warn),var(--cegline) 55%,
-  rgba(125,125,125,.05))}
-.ceg.hot .cegn{color:var(--warn)}
-.ceg.hot .cegbar span{background:linear-gradient(90deg,var(--warn),var(--cegline))}
-.cegh{display:flex;align-items:center;gap:7px;min-width:0}
-.cegh b{font-family:var(--f-disp);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
-  line-height:1.3;min-width:0;display:-webkit-box;-webkit-line-clamp:2;
-  -webkit-box-orient:vertical;overflow:hidden}
-.cegh b a{color:var(--tx)}.cegh b a:hover{color:var(--acc)}
-.cegh .st{margin-left:auto;flex:none;align-self:flex-start}
-.cegn{display:flex;align-items:baseline;gap:8px;font-family:var(--f-disp);font-size:40px;
-  font-weight:800;letter-spacing:-.04em;line-height:1;margin-top:auto;padding-top:16px;
-  color:var(--cegdim);font-variant-numeric:tabular-nums}
-.cegn i{font-family:var(--f-text);font-style:normal;font-size:11px;font-weight:600;
-  letter-spacing:0;color:var(--mut);margin-left:auto;white-space:nowrap}
-.cegbar{height:4px;border-radius:999px;background:rgba(125,140,170,.16);margin-top:11px;
-  overflow:hidden}
-.cegbar span{display:block;height:100%;border-radius:999px;background:var(--cegdim);
-  opacity:.75}
-.cegu{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--mut);margin-top:7px}
-.cegw{margin-top:11px;padding-top:10px;border-top:1px solid var(--bd-soft);
-  font-size:12.5px;color:var(--tx)}
-.cega{margin-top:3px;font-size:12.5px;color:var(--mut);line-height:1.5}
-.cegz{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px;margin:15px 0 0;font-size:12.5px}
-.cegz>span:first-child{color:var(--mut)}
-.cegz .pill{font-size:11.5px;color:var(--mut);background:rgba(125,140,170,.1)}
 .dapp .prlist{margin-top:6px}
 .dcall{color:var(--tx)!important;font-weight:600}
 .fcard[id]{scroll-margin-top:18px}
@@ -369,20 +311,31 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
   letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
   padding-bottom:7px;margin-bottom:10px;border-bottom:1px solid var(--bd-soft)}
 .fcol>.fgrp>.fnds{margin-top:0}
-/* A ação fecha a coluna: borda cheia na esquerda, não mais uma caixa igual. */
-.nxt{border-left:3px solid var(--warn)}
-.nxt .nxl{font-size:10px;letter-spacing:.09em}
-.nxt b{display:block;font-family:var(--f-disp);font-size:14px;margin-top:3px}
-/* Dívida de instrumentação é manutenção, não leitura de produto: entra fechada. */
-.instr{margin-top:14px;border-top:1px solid var(--bd-soft);padding-top:10px}
-.instr>summary{cursor:pointer;list-style:none;font-family:var(--f-disp);font-size:10.5px;
-  font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
-.instr>summary::-webkit-details-marker{display:none}
-.instr>summary::before{content:"› ";display:inline-block;transition:transform .15s ease;
-  margin-right:5px}
-.instr[open]>summary::before{transform:rotate(90deg)}
 .instrl{list-style:none;margin:9px 0 0;padding:0}
 .instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:3px 0 3px 14px;
+  position:relative;overflow-wrap:anywhere}
+/* Coluna de leitura: linhas rotuladas, sem caixa. As caixas coloridas (funil
+   verde, ação amarela) e o bloco expansível empilhavam quatro objetos de forma
+   diferente num espaço estreito; rótulo à esquerda e texto à direita, separados
+   por uma régua fina, lê de cima a baixo sem nada competindo (João, 02/10). */
+.rline{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;
+  padding:12px 0;border-top:1px solid var(--bd-soft)}
+.rline:first-child{border-top:0;padding-top:0}
+.rlab{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);padding-top:2px}
+.rbody{min-width:0}
+.rbody>b{display:block;font-family:var(--f-disp);font-size:14px;font-weight:700;
+  letter-spacing:-.01em;line-height:1.35}
+.rnum{display:block;margin-top:3px;font-size:12px;font-weight:600;color:var(--tx);
+  font-variant-numeric:tabular-nums}
+.rbody>p{margin:5px 0 0;font-size:12.5px;line-height:1.55;color:var(--mut)}
+.rline.act .rlab{color:var(--warn)}
+.rline.mut .rlab,.rline.mut .instrl li{color:var(--mut)}
+.rbody>.fnds{margin:0}
+@media(max-width:1180px){.rline{grid-template-columns:1fr;gap:6px}
+  .rline .rlab{padding-top:0}}
+.instrl{list-style:none;margin:0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:2px 0 2px 14px;
   position:relative;overflow-wrap:anywhere}
 .instrl li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;
   border-radius:50%;background:var(--bd)}
@@ -452,22 +405,6 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--
 .actvw{flex-basis:100%;font-size:11px;color:var(--mut)}
 .fover{font-size:10.5px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
   padding:1px 7px;cursor:help;white-space:nowrap}
-/* Callout do funil: rótulo em cima, veredito grande, número e explicação
-   embaixo. Em linha única, "Funil" e o veredito eram lidos como uma frase só e
-   o número do degrau sumia no meio do texto. */
-.gap{display:block;margin:0 0 12px;padding:11px 14px;border-radius:12px;
-  background:rgba(180,83,9,.10);border:1px solid rgba(180,83,9,.25);
-  border-left:3px solid var(--warn)}
-.gapt{display:block;font-family:var(--f-disp);font-size:10px;font-weight:800;
-  letter-spacing:.09em;text-transform:uppercase;color:var(--warn);margin-bottom:3px}
-.gap b{display:block;font-family:var(--f-disp);font-size:14.5px;font-weight:700;
-  letter-spacing:-.01em;line-height:1.3}
-.gapn{display:block;margin-top:4px;font-size:12px;font-weight:600;color:var(--tx);
-  font-variant-numeric:tabular-nums}
-.gapw{display:block;margin-top:7px;font-size:12.5px;line-height:1.55;color:var(--mut)}
-.gap.ok{background:rgba(10,143,88,.08);border-color:rgba(10,143,88,.22);
-  border-left-color:var(--ok)}
-.gap.ok .gapt{color:var(--ok)}
 .hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
   text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
   vertical-align:2px}
@@ -503,11 +440,9 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   color-mix(in srgb, var(--acc) 7%, var(--card)), var(--bd-soft))}
 .ascgrid b,.tile .tv{background:linear-gradient(180deg, var(--tx), color-mix(in srgb, var(--tx) 72%, var(--mut)));
   -webkit-background-clip:text;background-clip:text;color:transparent}
-.nxt{background:linear-gradient(135deg, color-mix(in srgb, var(--acc) 8%, var(--card)),
-  var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-02 02:56 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Lab — App novo de casais REPROVOU o gate de novo — decidir entre deixar morto, rodar o gate do nicho de GRUPO, ou pagar a dívida de honestidade do Modo Casal no Meus Gastos</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Gate rodado com dado de hoje (01/10), não com o de junho. Reprova nos 3 critérios. (a) 45 termos medidos no Astro: 43 deram pop 5 (piso de medição); o único que passa pop&gt;=6 e diff&lt;=20 é &#x27;dividir gastos&#x27; BR (pop 14/diff 15) e ele falha na INTENCAO — a SERP dele e Splitwise &#x27;com amigos&#x27; (6.720) + tricount &#x27;entre amigos&#x27; (4.468) + Splity &#x27;do Grupo&#x27;, zero apps de casal no top 15. (b) saturacao: US couples budget tem Monarch 112.044, EveryDollar 84.114, Goodbudget 13.470, Honeydue 10.239; ES &#x27;gastos en pareja&#x27; tem 12 apps de casal somando 9 avaliacoes com o #1 em ZERO; MX tem 9 apps todos em 0 e o #10 e o Instagram. (c) wedge de produto cresceu e esta medido, wedge de aquisicao nao existe.
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-02 03:04 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Lab — App novo de casais REPROVOU o gate de novo — decidir entre deixar morto, rodar o gate do nicho de GRUPO, ou pagar a dívida de honestidade do Modo Casal no Meus Gastos</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Gate rodado com dado de hoje (01/10), não com o de junho. Reprova nos 3 critérios. (a) 45 termos medidos no Astro: 43 deram pop 5 (piso de medição); o único que passa pop&gt;=6 e diff&lt;=20 é &#x27;dividir gastos&#x27; BR (pop 14/diff 15) e ele falha na INTENCAO — a SERP dele e Splitwise &#x27;com amigos&#x27; (6.720) + tricount &#x27;entre amigos&#x27; (4.468) + Splity &#x27;do Grupo&#x27;, zero apps de casal no top 15. (b) saturacao: US couples budget tem Monarch 112.044, EveryDollar 84.114, Goodbudget 13.470, Honeydue 10.239; ES &#x27;gastos en pareja&#x27; tem 12 apps de casal somando 9 avaliacoes com o #1 em ZERO; MX tem 9 apps todos em 0 e o #10 e o Instagram. (c) wedge de produto cresceu e esta medido, wedge de aquisicao nao existe.
 
 O argumento novo que junho nao tinha: ~25 devs ja rodaram essa aposta. NENHUM app couples-specific lancado depois de 2022 passou de 30 avaliacoes em nenhum dos 4 mercados. O lider de casal do BR (Junto$) tem 69 avaliacoes e esta abandonado ha 13 meses (+1 avaliacao em 3,5 meses). O gold rush ES/MX DOBROU desde junho (+10 entrantes) e o recorde do grupo em 12+ meses e 3 avaliacoes. O entrante mais rapido do BR (Coupe) estampa &#x27;+400 Casais&#x27; no proprio print.
 
