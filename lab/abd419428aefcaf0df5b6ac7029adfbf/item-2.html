@@ -489,24 +489,22 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Três regras duras do lab esperando a sua decisão (Liquid Glass, critério SCALE, Apple Ads)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">São três mudanças que alteram regra escrita no RULES.md. Enquanto você não decide, **o RULES manda** e tudo segue como está hoje.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:25</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pra retomar quando as versões do Hair Schedule 1.2.0 e do Sunrise 1.4.0 estiverem fechadas.
 
-**1. Liquid Glass — manter desligado ou migrar antes de abril/2027**
-Hoje todo app do lab nasce com `UIDesignRequiresCompatibility = YES`, que é o opt-out do redesign do iOS 26: o app mantém o visual clássico. As exceções que você pediu app a app são Walk, iPhotos, Cronos e College.
-O que força a decisão é o calendário, não conversão: a Apple diz que remove essa opção no **Xcode 27**, e a obrigatoriedade do SDK 27 chega por volta de **abril/2027**. Quando chegar, migra todo mundo de uma vez, no susto.
-Não há evidência pública de que o opt-out custe conversão, rating ou featuring — então não é uma decisão por dado, é por risco de prazo.
-A opção: **(a)** manter como está e migrar tudo em 2027, ou **(b)** começar pelos apps pagos, que são os que valem featuring (a Apple usa &quot;new technologies&quot; como critério).
+PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
+1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
+2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
+3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
+4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
+Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
 
-**2. SCALE — exigir três sinais em vez de um**
-Hoje o veredito SCALE sai com ≥ 20 instalações/dia **OU** run-rate ≥ US$ 300/mês. É fácil demais: um app com tráfego e sem retenção vira SCALE, e aí o lab investe em ASO num app que não segura usuário.
-A proposta é exigir os **três** juntos: D7 ≥ 7% (com n ≥ 30), ≥ 25 avaliações na loja-alvo, e paywall existindo. Sem paywall não há o que escalar. Quem não tiver os três vira WATCH, com a nota de qual sinal falta.
-Isso é proposta, não está aplicada — o `kill_or_scale.py` continua com o critério antigo.
+SUNRISE (depois)
+- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
+- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
+- Também precisa de esquema de URL (sunrise://).
 
-**3. Apple Ads como fase 0 das iterações de ASO**
-Antes de apostar numa keyword, gastar US$ 5-10/dia por 14 dias naquele termo e ver se ele converte de verdade. Sai caro em escala, então seria **só com o seu ok, app por app**, não automático.
-O ganho: hoje a aposta de keyword é medida 30 dias depois do deploy; com Apple Ads você sabe em duas semanas se o termo tem intenção de compra antes de mexer na loja.
 
-**Onde está o resto:** `reports/2026-09-27_lab-upgrade/REPORT.md` e, na mesma pasta, a auditoria contra a documentação da Anthropic. As decisões de preço, subs do Sunrise, PPO do Meus Gastos e AdMob estão no item da auditoria de alavancas, separado deste.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
