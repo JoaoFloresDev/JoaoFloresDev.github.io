@@ -38,6 +38,9 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   padding:1px 8px;cursor:pointer;line-height:1.5}
 .iid:hover{color:var(--tx);border-color:var(--mut)}
 .iid.ok{color:var(--ok);border-color:var(--ok)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
 /* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
    fluxo normal o ícone do lab caía numa linha só pra ele. */
 .rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
@@ -486,10 +489,24 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:10</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Upgrade do lab 27-28/09 — 3 decisões que mudam regra dura (Liquid Glass/Xcode 27, critério SCALE, Apple Ads fase 0)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Relatório: _GambitStudio/reports/2026-09-27_lab-upgrade/REPORT.md (mdview: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_lab-upgrade/REPORT.md). Auditoria contra a doc da Anthropic: anthropic-audit.md na mesma pasta.
-SEGUNDO DIA (seu diagnóstico &quot;genérico e fraco&quot;): ASO medido com dados (1 ganho real em 16; cadeia agora exige baseline/controle/quarentena/piso); prints com breakout por componente + gate visual lendo cada PNG (diagnóstico do Truco em prints_truco_diagnosis.md); qa-runner forçando ramos (o crash do &quot;gostando do app?&quot; não passa mais); agente product-designer na Fase 1 (JTBD, teardown real, momentos-assinatura); passo visual no polish-reviewer (14 critérios, antes/depois); um esquema de cor por app. Tudo provado no fixture Pomodoro (evals/e2e/work/), nada nos seus apps. Dívida do PaywallKit: vão de 40% no PurchaseScaffold.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Três regras duras do lab esperando a sua decisão (Liquid Glass, critério SCALE, Apple Ads)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">São três mudanças que alteram regra escrita no RULES.md. Enquanto você não decide, **o RULES manda** e tudo segue como está hoje.
 
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+**1. Liquid Glass — manter desligado ou migrar antes de abril/2027**
+Hoje todo app do lab nasce com `UIDesignRequiresCompatibility = YES`, que é o opt-out do redesign do iOS 26: o app mantém o visual clássico. As exceções que você pediu app a app são Walk, iPhotos, Cronos e College.
+O que força a decisão é o calendário, não conversão: a Apple diz que remove essa opção no **Xcode 27**, e a obrigatoriedade do SDK 27 chega por volta de **abril/2027**. Quando chegar, migra todo mundo de uma vez, no susto.
+Não há evidência pública de que o opt-out custe conversão, rating ou featuring — então não é uma decisão por dado, é por risco de prazo.
+A opção: **(a)** manter como está e migrar tudo em 2027, ou **(b)** começar pelos apps pagos, que são os que valem featuring (a Apple usa &quot;new technologies&quot; como critério).
+
+**2. SCALE — exigir três sinais em vez de um**
+Hoje o veredito SCALE sai com ≥ 20 instalações/dia **OU** run-rate ≥ US$ 300/mês. É fácil demais: um app com tráfego e sem retenção vira SCALE, e aí o lab investe em ASO num app que não segura usuário.
+A proposta é exigir os **três** juntos: D7 ≥ 7% (com n ≥ 30), ≥ 25 avaliações na loja-alvo, e paywall existindo. Sem paywall não há o que escalar. Quem não tiver os três vira WATCH, com a nota de qual sinal falta.
+Isso é proposta, não está aplicada — o `kill_or_scale.py` continua com o critério antigo.
+
+**3. Apple Ads como fase 0 das iterações de ASO**
+Antes de apostar numa keyword, gastar US$ 5-10/dia por 14 dias naquele termo e ver se ele converte de verdade. Sai caro em escala, então seria **só com o seu ok, app por app**, não automático.
+O ganho: hoje a aposta de keyword é medida 30 dias depois do deploy; com Apple Ads você sabe em duas semanas se o termo tem intenção de compra antes de mexer na loja.
+
+**Onde está o resto:** `reports/2026-09-27_lab-upgrade/REPORT.md` e, na mesma pasta, a auditoria contra a documentação da Anthropic. As decisões de preço, subs do Sunrise, PPO do Meus Gastos e AdMob estão no item da auditoria de alavancas, separado deste.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

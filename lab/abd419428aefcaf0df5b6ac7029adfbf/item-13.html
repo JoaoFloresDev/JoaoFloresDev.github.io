@@ -38,6 +38,9 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   padding:1px 8px;cursor:pointer;line-height:1.5}
 .iid:hover{color:var(--tx);border-color:var(--mut)}
 .iid.ok{color:var(--ok);border-color:var(--ok)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
 /* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
    fluxo normal o ícone do lab caía numa linha só pra ele. */
 .rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
@@ -486,7 +489,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:10</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Rotina do lab: 21 item(ns) de rotina na fila do orchestrator (8 checkpoint(s) ASO, 6 rating-first, 3 meta ASO fora do schema, 2 iteração ASO sem medição, 2 gap(s) de analytics)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Checkpoint de iteração sem metrics/d00_baseline.json fica só aqui — sem baseline não é mensurável. Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido num item só em vez de virar um item por achado.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Rotina do lab: 21 item(ns) de rotina na fila do orchestrator (8 checkpoint(s) ASO, 6 rating-first, 3 meta ASO fora do schema, 2 iteração ASO sem medição, 2 gap(s) de analytics)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Trabalho rotineiro detectado automaticamente (checkpoint ASO vencido, iteração aberta sem fechar, gap de instrumentação). Checkpoint de iteração sem metrics/d00_baseline.json fica só aqui — sem baseline não é mensurável. Ver com `python3 _GambitStudio/orchestrator/wo.py list` e executar com `/lab-orchestrate &lt;id&gt;`. Não urgente — por isso está resumido num item só em vez de virar um item por achado.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

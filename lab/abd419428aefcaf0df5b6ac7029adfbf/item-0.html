@@ -38,6 +38,9 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   padding:1px 8px;cursor:pointer;line-height:1.5}
 .iid:hover{color:var(--tx);border-color:var(--mut)}
 .iid.ok{color:var(--ok);border-color:var(--ok)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
 /* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
    fluxo normal o ícone do lab caía numa linha só pra ele. */
 .rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
@@ -486,11 +489,11 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:10</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Preço das assinaturas: 8 dos 12 apps mexíveis cobram abaixo da referência de mercado e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A auditoria inteira está na página **Seller → Preço das assinaturas**: hoje → sugerido nos três planos, trial, preço por país e o passo a passo por app.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Preço das assinaturas: 8 dos 12 apps mexíveis cobram abaixo da referência de mercado e o trial quase nunca está no plano certo</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A auditoria inteira está na página **Seller → Preço das assinaturas**: hoje → sugerido nos três planos, trial, preço por país e o passo a passo por app.
 
 A referência é a mediana global 2026 (RevenueCat/Adapty: US$ 7,48 semanal · 12,99 mensal · 38,42 anual) e a mediana da categoria (Airbridge), com corte em 70% — não existe &#x27;piso do lab&#x27;, isso eu tinha inventado (LEARNINGS #109).
 
-Preço muda na ASC sem release, inclusive em Cloak e Calc+. Trial mora no paywall e só muda com versão nova.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/precos-2026-10/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Preço muda na ASC sem release, inclusive em Cloak e Calc+. Trial mora no paywall e só muda com versão nova.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
