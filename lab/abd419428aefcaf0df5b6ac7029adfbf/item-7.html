@@ -507,34 +507,26 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   var(--card))}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-01 17:20 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md (mdview: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/aso_efficacy.md).
+<body><div class="wrap"><p class="sub" style="font-size:12px;margin:0 0 14px">Exportado em 2026-10-02 02:56 · fonte: Lab Hub local</p><p class="sub"><a href="index.html">← voltar</a></p><h1><span class=mark></span>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pra retomar quando as versões do Hair Schedule 1.2.0 e do Sunrise 1.4.0 estiverem fechadas.
 
-Relatório: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/REPORT.md
+PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
+1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
+2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
+3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
+4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
+Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
 
-Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
+SUNRISE (depois)
+- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
+- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
+- Também precisa de esquema de URL (sunrise://).
 
-Decisões (sim/não), com a recomendação:
-1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
-2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
-3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
-4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
-5. Hair 1.2.0 — reordenar prints (main, feature1, feature2; settings/onboarding fora dos slots 2-3) e deploy do es-MX + frizz→test? SIM aos dois.
-6. BLW — anual 8,99 → 14,99 pra novos assinantes? SIM, medir 4 semanas (+US$ 50 agora; break-even a −40% de conversão).
-7. Trial semanal — tirar o intro offer do weekly em BLW, Walk e Meus Gastos por 4 semanas? SIM (unidades a US$ 0 ≥ pagas em todo app com trial).
-8. Meus Gastos — parar o PPO v3 (9570de85)? SIM (542 semanas pra detectar +15%).
-9. Meus Gastos — publicar a 45.4.0 iOS com a ordem de prints que preferir + trial do mensal removido? SIM quando quiser (leva o analytics canônico).
-10. iPhotos — versão nova com ícone, subtítulo e 3 prints refeitos (propostas pra aprovar)? SIM (0,2% imp→PV com 450 ratings e ARPI 0,39).
-11. College — Pro anual R$ 19,90 com feature no lugar do Premium vitalício (0 vendas)? SIM, teto US$ 40-100.
-12. Walk — release 7.4.0 (kit corrigido + prompt nativo + revamp) e ASO US/GB/DE? SIM (13 crashes no &#x27;sim&#x27;, 5 ratings em 285 inst).
-13. Sueca — corrigir o age rating e re-submeter a 42.0.0? SIM (prende analytics, keywords, prints, review prompt).
-14. Sueca — ligar anúncio de verdade ou tirar o SDK AdMob? TIRAR se não ligar em 30 dias.
-15. AdMob↔Firebase — fazer o vínculo no console do AdMob (só você)? SIM, 15 min; sem isso a receita de anúncio não existe em fonte nenhuma.
-16. Truco — re-submeter a 52 levando o es-MX de 89 chars? SIM; antes decidir o álcool (recomendação: tirar a cerveja).
-17. Bible 1.2.2 e SafeDoc 1.1.0 — re-submeter agora? NÃO (32 e 6 inst/mês; só com alavanca).
-18. Peptide — release só pelo crash + pin do Firebase? NÃO agora (KILL; agrupar com versão que tenha alavanca).
-19. Promo text — eu escrevo as propostas (3 locales) pra Walk, Neon, Sueca, iPhotos, College e Meus Gastos? SIM (custo zero, sem review).
-20. Meta — descongelar o Calc+ ou abrir app novo no molde dele? Registro: é a única decisão que fecha os US$ 450-600 que faltam.
-21. Neon — conferir CVR v25 vs v28 no ASC web antes de mexer na página e subir a correção do botão gravar/Pro na próxima janela? SIM aos dois.
-22. WTMP — produto + paywall agora? NÃO (D7 1,1%; esperar o A/B em review).
+OUTROS RECURSOS, POR PRIORIDADE
+1. Custom Product Pages com keyword (busca orgânica): maior alavanca parada. Candidata óbvia: Sueca (página &quot;jogo de beber&quot; x &quot;cartas pra festa&quot;).
+2. In-App Events + Nomination (acima).
+3. App Preview (vídeo): toca sozinho na busca; bom pra app visual (Neon, Sunrise).
+4. Promoted In-App Purchases: efeito pequeno; exige tratar PurchaseIntent no código. Por último.
 
-Nada sobe sem você pedir; texto de loja é seu (proposta, não decisão); release só com alavanca real.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+JÁ FEITO / ESTADO
+- Cronos: evento &quot;Cronos on iPad (1.4)&quot; pronto como rascunho (10 idiomas, imagens v2), travado por falta de deep link. Precisa de build com cronos://. Existe uma reviewSubmission vazia 1208dc63-6a3c-45c4-84c8-075fd811d05a pra reaproveitar.
+- Prints: basta subir o 6,9&quot;. Se tiver 6,5&quot; também, os dois precisam ser idênticos. Varredura de 27/09: Calc+ 1.4.0 (en-US, pt-BR, es-ES, es-MX) tem o 6,9&quot; com a arte de 2022 e o 6,5&quot; com a nova; Meus Gastos 45.3.1 pt-BR tem o 6,9&quot; antigo (dez/2024) e o 6,5&quot; novo. Não mexido, por decisão sua; corrigir quando decidir.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
