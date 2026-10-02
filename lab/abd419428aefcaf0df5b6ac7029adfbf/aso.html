@@ -25,7 +25,7 @@ a.nav{font-family:var(--f-disp);font-size:13px;font-weight:600;color:var(--mut);
 a.nav:hover{color:var(--tx);background:var(--bd-soft);text-decoration:none}
 a.nav.on{color:var(--tx);background:var(--bd-soft)}
 .stamp{margin-left:auto;font-size:11.5px;color:var(--mut);white-space:nowrap}
-.ico.lab{display:block;background-color:transparent;background-size:contain;
+.ico.lab{display:inline-block;vertical-align:-5px;background-color:transparent;background-size:contain;
   background-repeat:no-repeat;background-position:center;border-radius:0}
 /* O quadro é a primeira coisa que o João lê e estava no mesmo fundo do resto da
    página; agora é um painel com fundo próprio (João, 02/10). */
@@ -33,6 +33,16 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   border:1px solid var(--bd-soft);box-shadow:var(--sh);
   background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
 .boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+.iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
+  padding:1px 8px;cursor:pointer;line-height:1.5}
+.iid:hover{color:var(--tx);border-color:var(--mut)}
+.iid.ok{color:var(--ok);border-color:var(--ok)}
+/* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
+   fluxo normal o ícone do lab caía numa linha só pra ele. */
+.rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
+.rhead .ico{margin-right:0;width:20px;height:20px}
+.rwhen{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--mut);margin-right:4px}
 .rows>.rowwrap>.row,.rows>.row{display:flex;flex-direction:column}
 .board .hcol>h2{margin-top:0;border-top:0;padding-top:0}
 @media(max-width:620px){.stamp{margin-left:0;flex-basis:100%}}
@@ -61,7 +71,7 @@ table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bott
 .rows{display:flex;flex-direction:column;gap:8px}
 .row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
 a.row:hover{border-color:var(--acc);text-decoration:none}
-.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
 .row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
 .hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
 .hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
@@ -476,7 +486,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav on" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 10:57</span></div></header><div class="wrap"><p class="sub">lido dos <code>meta.json</code> de cada iteração em 2026-10-02</p><h1>ASO — iterações</h1><div class=card style="margin:12px 0 2px"><p style="font-size:14.5px;color:var(--fg)"><b>11 de 41 iterações têm número calculado</b> e <b>0 ganharam</b> de forma verificável. O que os números dizem: 8× não dá pra saber · 2× não é do texto · 1× piorou. “Não dá pra saber” é n abaixo do piso de 30 instalações por janela — nesses apps o texto não move o suficiente pra sair do ruído, e insistir em ASO ali é gastar trabalho sem resposta.</p></div><div class=tiles><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Foram pro ar</div><div class="tv ">28 <span style='font-size:14px;color:var(--mut)'>de 41</span></div></div><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Com número</div><div class="tv ">11</div><div class=ts>resultado calculado</div></div><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Esperando você</div><div class="tv dn">7</div><div class=ts>texto pra aprovar</div></div></div>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav on" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:08</span></div></header><div class="wrap"><p class="sub">lido dos <code>meta.json</code> de cada iteração em 2026-10-02</p><h1>ASO — iterações</h1><div class=card style="margin:12px 0 2px"><p style="font-size:14.5px;color:var(--fg)"><b>11 de 41 iterações têm número calculado</b> e <b>0 ganharam</b> de forma verificável. O que os números dizem: 8× não dá pra saber · 2× não é do texto · 1× piorou. “Não dá pra saber” é n abaixo do piso de 30 instalações por janela — nesses apps o texto não move o suficiente pra sair do ruído, e insistir em ASO ali é gastar trabalho sem resposta.</p></div><div class=tiles><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Foram pro ar</div><div class="tv ">28 <span style='font-size:14px;color:var(--mut)'>de 41</span></div></div><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Com número</div><div class="tv ">11</div><div class=ts>resultado calculado</div></div><div class=tile style="background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:128px"><div class=tl>Esperando você</div><div class="tv dn">7</div><div class=ts>texto pra aprovar</div></div></div>
 <h2>Esperando você <span class="st appr" style="margin-left:8px">7</span></h2><p class="sub" style="margin:0 0 10px">Texto composto e conferido, à espera do seu aval — metadata da loja é sua decisão. Aprovou, eu aplico e submeto.</p><div class=twrap><table class=t><tr><th>App</th><th>Iteração</th><th>Parada desde</th><th></th></tr>
 <tr data-iter="TrucoMarcador/2026-09-06_iter-02-text"><td><b>TrucoMarcador</b></td><td>2026-09-06_iter-02-text</td><td><b style="color:var(--down)">26 dias</b></td><td style="text-align:right"><small style="color:var(--mut)">sem relatório</small></td></tr>
 <tr data-iter="CollegeSchoolControl/2026-09-11_iter-02-name-pt-BR-en-US"><td><b>CollegeSchoolControl</b></td><td>2026-09-11_iter-02-name-pt-BR-en-US</td><td><b style="color:var(--down)">21 dias</b></td><td style="text-align:right"><small style="color:var(--mut)">sem relatório</small></td></tr>
@@ -549,4 +559,22 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
 <tr data-app="soninho_ios"><td><b>soninho_ios</b></td><td>2</td><td>0</td><td>0</td><td>0</td><td>2026-09-28</td></tr>
 <tr data-app="stepsSwiftUI"><td><b>stepsSwiftUI</b></td><td>2</td><td>1</td><td>0</td><td>1</td><td>2026-08-18</td></tr>
 </table></div>
-<h3 style="margin:22px 0 8px">Como o número é calculado</h3><p>Uma iteração só conta como medida quando <code>pull_analytics.py final --write-meta</code> grava o <code>results.final</code> no <code>meta.json</code>. Veredito escrito à mão não conta. O script compara as instalações novas (Product Type 1*, nunca atualização) do país-alvo contra os outros países e contra a mediana de apps-controle na mesma janela; “ganhou” exige que o intervalo de confiança do alvo exclua 1,0 e fique acima do controle. Em app pequeno, o modo <code>small</code> troca instalação por posição dos termos-alvo contra termos intocados.</p></details></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+<h3 style="margin:22px 0 8px">Como o número é calculado</h3><p>Uma iteração só conta como medida quando <code>pull_analytics.py final --write-meta</code> grava o <code>results.final</code> no <code>meta.json</code>. Veredito escrito à mão não conta. O script compara as instalações novas (Product Type 1*, nunca atualização) do país-alvo contra os outros países e contra a mediana de apps-controle na mesma janela; “ganhou” exige que o intervalo de confiança do alvo exclua 1,0 e fique acima do controle. Em app pequeno, o modo <code>small</code> troca instalação por posição dos termos-alvo contra termos intocados.</p></details></div><script>
+// chip #N: copia a referência do item pra conversa. clipboard pode ser negado
+// (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".iid"); if(!b) return;
+  e.preventDefault();
+  var t=b.dataset.ref||b.textContent, done=function(ok){
+    var old=b.textContent; b.textContent=ok?"copiado":t; b.classList.toggle("ok",ok);
+    setTimeout(function(){b.textContent=t;b.classList.remove("ok");},1100);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});
+  } else {
+    var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); var ok=false; try{ok=document.execCommand("copy");}catch(err){}
+    document.body.removeChild(ta); done(ok);
+  }
+});
+</script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

@@ -25,7 +25,7 @@ a.nav{font-family:var(--f-disp);font-size:13px;font-weight:600;color:var(--mut);
 a.nav:hover{color:var(--tx);background:var(--bd-soft);text-decoration:none}
 a.nav.on{color:var(--tx);background:var(--bd-soft)}
 .stamp{margin-left:auto;font-size:11.5px;color:var(--mut);white-space:nowrap}
-.ico.lab{display:block;background-color:transparent;background-size:contain;
+.ico.lab{display:inline-block;vertical-align:-5px;background-color:transparent;background-size:contain;
   background-repeat:no-repeat;background-position:center;border-radius:0}
 /* O quadro é a primeira coisa que o João lê e estava no mesmo fundo do resto da
    página; agora é um painel com fundo próprio (João, 02/10). */
@@ -33,6 +33,16 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   border:1px solid var(--bd-soft);box-shadow:var(--sh);
   background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
 .boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+.iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
+  padding:1px 8px;cursor:pointer;line-height:1.5}
+.iid:hover{color:var(--tx);border-color:var(--mut)}
+.iid.ok{color:var(--ok);border-color:var(--ok)}
+/* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
+   fluxo normal o ícone do lab caía numa linha só pra ele. */
+.rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
+.rhead .ico{margin-right:0;width:20px;height:20px}
+.rwhen{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--mut);margin-right:4px}
 .rows>.rowwrap>.row,.rows>.row{display:flex;flex-direction:column}
 .board .hcol>h2{margin-top:0;border-top:0;padding-top:0}
 @media(max-width:620px){.stamp{margin-left:0;flex-basis:100%}}
@@ -61,7 +71,7 @@ table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bott
 .rows{display:flex;flex-direction:column;gap:8px}
 .row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
 a.row:hover{border-color:var(--acc);text-decoration:none}
-.row b{white-space:nowrap}.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
 .row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
 .hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
 .hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
@@ -476,19 +486,34 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 10:57</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Pra retomar quando as versões do Hair Schedule 1.2.0 e do Sunrise 1.4.0 estiverem fechadas.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 11:08</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md (mdview: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/aso_efficacy.md).
 
-PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
-1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
-2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
-3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
-4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
-Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
+Relatório: http://localhost:8768/view?path=_GambitStudio/reports/2026-09-27_results-audit/REPORT.md
 
-SUNRISE (depois)
-- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
-- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
-- Também precisa de esquema de URL (sunrise://).
+Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
 
+Decisões (sim/não), com a recomendação:
+1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
+2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
+3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
+4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
 
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+// chip #N: copia a referência do item pra conversa. clipboard pode ser negado
+// (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".iid"); if(!b) return;
+  e.preventDefault();
+  var t=b.dataset.ref||b.textContent, done=function(ok){
+    var old=b.textContent; b.textContent=ok?"copiado":t; b.classList.toggle("ok",ok);
+    setTimeout(function(){b.textContent=t;b.classList.remove("ok");},1100);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});
+  } else {
+    var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); var ok=false; try{ok=document.execCommand("copy");}catch(err){}
+    document.body.removeChild(ta); done(ok);
+  }
+});
+</script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
