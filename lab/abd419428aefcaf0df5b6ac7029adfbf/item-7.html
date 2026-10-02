@@ -33,6 +33,16 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   border:1px solid var(--bd-soft);box-shadow:var(--sh);
   background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
 .boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+/* Teto de altura no quadro: com 13 cards a coluna Fazer empurrava o resto da
+   home pra fora da tela. Cada coluna rola sozinha (João, 02/10). */
+.board .hcol>.rows{max-height:min(58vh,560px);overflow-y:auto;padding-right:6px;
+  scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.board .hcol>.rows::-webkit-scrollbar{width:9px}
+.board .hcol>.rows::-webkit-scrollbar-track{background:transparent}
+.board .hcol>.rows::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
+  border:3px solid transparent;background-clip:content-box}
+.board .hcol>.rows::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+.board .row{background:var(--cardup);border-color:var(--bdup);box-shadow:var(--sh)}
 .iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
   color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
   padding:1px 8px;cursor:pointer;line-height:1.5}
@@ -177,7 +187,8 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
   --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
   --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
-  --boardtop:#ffffff; --boardbot:#f3f6fb;
+  --cardup:#ffffff; --bdup:#b9c3d4;
+  --boardtop:#e9edf5; --boardbot:#e3e8f1;
   --bar:#2563eb; --bar2:#60a5fa;
   --rad:14px;
 }
@@ -185,7 +196,8 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
   --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
   --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
   --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
-  --boardtop:#161c26; --boardbot:#101620;
+  --cardup:#1d2430; --bdup:#3d4859;
+  --boardtop:#0d1218; --boardbot:#090d13;
   --bar:#5b9bff; --bar2:#9dc4ff;
 }}
 body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
@@ -497,7 +509,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 16:38</span></div></header><div class="wrap"><p class="sub"></p><h1>Hair Schedule — Hair Schedule 1.2.0 (build 8) em review da Apple</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">01/10: build 8 (paywall com o plano semanal pre-selecionado) VALID na ASC, archive local Xcode 26.1, tag release/8, whatsNew nos 39 idiomas, submissao 5fdaaf87 em WAITING_FOR_REVIEW (a do build 7, 92b9d1c0, foi cancelada). Subs semanal/anual ja APPROVED desde a 1.1.0. Nada manual pendente.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:04</span></div></header><div class="wrap"><p class="sub"></p><h1>Hair Schedule — Hair Schedule 1.2.0 (build 8) em review da Apple</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">01/10: build 8 (paywall com o plano semanal pre-selecionado) VALID na ASC, archive local Xcode 26.1, tag release/8, whatsNew nos 39 idiomas, submissao 5fdaaf87 em WAITING_FOR_REVIEW (a do build 7, 92b9d1c0, foi cancelada). Subs semanal/anual ja APPROVED desde a 1.1.0. Nada manual pendente.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
