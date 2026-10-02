@@ -107,7 +107,7 @@ a.tile:hover{border-color:var(--acc);text-decoration:none}
 .fnds{list-style:none;margin:10px 0 0;padding:0}
 .fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
 .fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
-.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.fnds li:before{background:var(--bd)}.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
 .nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
 .nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
 .fh .st{margin-left:8px}
@@ -464,7 +464,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 03:13</span></div></header><div class="wrap"><p class="sub"></p><h1>iPhotos — Revisar a 1.10.0 do iPhotos — relatório com tudo que entrou + a análise de ASO dos 13 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os 13 atuais) · **ASO** (a análise dos 13 locales no template GOLD).
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="aso.html">ASO</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 03:17</span></div></header><div class="wrap"><p class="sub"></p><h1>iPhotos — Revisar a 1.10.0 do iPhotos — relatório com tudo que entrou + a análise de ASO dos 13 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os 13 atuais) · **ASO** (a análise dos 13 locales no template GOLD).
 
 O QUE ENTRA NA 1.10.0 (binário short version 30 / build 35):
 1. O app passa a falar os 13 idiomas da loja. Era 100% inglês: os 9 Main.strings localizados tinham 49 strings cada com ZERO caractere non-ASCII (exports nunca traduzidos) e o código novo tinha o inglês cravado. Agora são 402 literais virando 389 chaves, traduzidas em pt-BR, pt-PT, es-ES, es-MX, fr, de, it, ja, ko, ru, tr e zh-Hans, mais as 38 strings do storyboard em cada um. Vi renderizado no simulador em alemão e japonês antes de fechar.
