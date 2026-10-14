@@ -553,22 +553,17 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 15:37</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Atualizado 14/10: as duas versões fecharam — Hair 1.2.0 e Sunrise 1.4.0 estão no ar (READY_FOR_SALE), então isto pode ser retomado. O plano abaixo mudou num ponto: a Hair 1.2.0 saiu com deep link `cronograma://tutorial/&lt;id&gt;` (e o link universal gambitstudiotech.com/app/tutorial/&lt;id&gt;, que depende do arquivo AASA no domínio), não com `hairschedule://scan` — hoje o evento só pode apontar pra um tutorial; abrir o scanner por link precisa de rota nova num próximo release. O Sunrise continua sem esquema de URL na tag release/1.4.0-b14.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 15:49</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Vídeos de propaganda pro TikTok/Instagram: piloto no Cloak já postado — falta a chave do Postiz e o orçamento</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Atualizado 14/10: os passos 1 e 2 andaram — o piloto ficou no Cloak, na conta @calculadorasecreta.app (TikTok + Instagram), com o 1º vídeo (cloak-02, gancho do banco) postado em 14/10; a leitura de 16/10 é o item #261. Log: Apps/important/AppLock/social/EXPERIMENTOS.md (perfil e foto em Apps/important/Calculator-/social/). Faltam os passos 3 (conta no Postiz + API key) e 4 (orçamento).
 
-PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
-1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
-2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
-3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
-4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
-Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
+Vídeos prontos pra assistir no botão &#x27;Relatório da versão&#x27; (página Vídeos TikTok): Cloak 01 e 02 aprovados, Cloak 03 e Calc+ 01 aguardando aprovação.
 
-SUNRISE (depois)
-- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
-- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
-- Também precisa de esquema de URL (sunrise://).
+Ferramentas de vídeo já instaladas e testadas no Mac (HyperFrames, Goldie, Postiz, ffmpeg). Plano completo no botão &quot;Abrir relatório&quot;.
 
-
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+PASSOS SEUS:
+1. Escolher o app do piloto: WTMP, Sunrise ou Walk.
+2. Criar a conta do TikTok (pessoal/criador, NÃO comercial: comercial não pode usar som em alta) e a do Instagram (Criador) desse app no celular e usar normal 7-14 dias.
+3. Criar conta no Postiz e me passar a API key.
+4. Aprovar ~US$ 45-110/mês.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/videos-tiktok/index.html" target="_blank">Relatório da versão</a><a class=btn href="md/reports__2026-10-14_github-tools-scan__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

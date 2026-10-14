@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Lab</title>
+<title>iPhotos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -553,21 +553,19 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 15:37</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Situação das 4 decisões em 14/10 (conferido na ASC): 1. Sunrise — semanal US$ 1,99 com trial de 3 dias no SEMANAL; anual US$ 9,99 → 12,99 a partir de 16/10 (não 14,99) — o trial no anual é o item #260. 2. Feito: a 1.4.0 está no ar. 3. Hair — sem como confirmar por API o que o premium destrava. 4. Hair — o trial continua no semanal (3 dias, 175 territórios); mover pro anual também é o item #260.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 15:49</span></div></header><div class="wrap"><p class="sub"></p><h1>iPhotos — Revisar a 1.10.0 do iPhotos — relatório com tudo que entrou + a análise de ASO dos 13 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Link direto (modo escuro): https://claude.ai/artifact/LFaAmrdRXNWzkEUFB9Qazq
 
-VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md.
+Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os 13 atuais) · **ASO** (a análise dos 13 locales no template GOLD).
 
-Relatório completo: botão &quot;Abrir relatório&quot; (reports/2026-09-27_results-audit/REPORT.md).
+O QUE ENTRA NA 1.10.0 (binário short version 30 / build 35):
+1. O app passa a falar os 13 idiomas da loja. Era 100% inglês: os 9 Main.strings localizados tinham 49 strings cada com ZERO caractere non-ASCII (exports nunca traduzidos) e o código novo tinha o inglês cravado. Agora são 402 literais virando 389 chaves, traduzidas em pt-BR, pt-PT, es-ES, es-MX, fr, de, it, ja, ko, ru, tr e zh-Hans, mais as 38 strings do storyboard em cada um. Vi renderizado no simulador em alemão e japonês antes de fechar.
+2. Um mês de trabalho que nunca saiu da máquina: o revamp do grid inteiro (13 commits de 31/08), os eventos canônicos de onboarding e a remoção do pré-prompt de avaliação.
+3. Duas correções de empacotamento: CFBundleIconName na raiz (sem ela o build é aceito e NUNCA materializa na ASC) e ITSAppUsesNonExemptEncryption.
 
-Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
+TRÊS BUGS QUE O INGLÊS ESCONDIA: não existia bundle de alemão, espanhol de Espanha nem português de Portugal (a loja vende nos três); o pt-BR estava fora do grupo de variantes do storyboard, então o Brasil já lia storyboard em inglês; e os cartões da Home cortavam texto.
 
-Decisões (sim/não), com a recomendação:
-1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
-2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
-3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
-4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
 
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="md/reports__2026-09-27_results-audit__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/iphotos-1-10-0/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

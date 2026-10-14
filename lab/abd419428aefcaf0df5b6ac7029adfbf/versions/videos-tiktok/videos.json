@@ -49,10 +49,12 @@
   "num": "04",
   "title": "Qual conta abre teu cofre? (sem narração)",
   "hook": "Isca de comentário, brutalista amarelo, só batida + efeitos",
-  "status": "wait",
+  "status": "rejeitado",
   "dur": 16,
   "cover_t": 1.4,
-  "ref": "CALC-04"
+  "ref": "CALC-04",
+  "status_at": "2026-10-14",
+  "status_note": "vídeo bom, mas a isca 'comenta a tua conta' pede a senha do usuário: esquisito. Refeito como CALC-11 com outro gancho"
  },
  {
   "slug": "cloak-04-desafio",
@@ -245,6 +247,36 @@
   "dur": 42,
   "cover_t": 3.0,
   "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM): intro muda cortada (entra no downbeat de 2,04 s, cheia desde o quadro 0), loop de 8 compassos [2,04-17,44 s] com crossfade de 50 ms, fade 1 s no fim, volume 0,3 sob a voz. A faixa é gerada por IA (Lyria): se o TikTok rotular, trocar por som leve/acústico em alta da Biblioteca Comercial, 15-20% sob a voz (nenhum som específico verificado como em alta).",
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-04-pronto-pra-comer",
+  "ref": "BLW-04",
+  "app": "BLW",
+  "num": "04",
+  "title": "Seu bebê está pronto pra comer?",
+  "hook": "Seu bebê tá pronto pra começar a comer?",
+  "dur": 36,
+  "cover_t": 2.05,
+  "sound": "Trilha do kit (_kit/music/pop_124.mp3, gerada por Lyria, ~125 BPM) cortada em 1,95 s, já cheia em ~0,1 s, 8 compassos (2,03-17,39 s) em loop no compasso com crossfade de 40 ms, fade de 0,5 s no fim, volume 0,3 sob a voz. Faixa é música gerada por IA (o vídeo não tem imagem de IA). No TikTok, se trocar: som leve/acústico da Biblioteca Comercial a 15-20% sob a voz.",
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "calcplus-11-uma-conta-abre",
+  "ref": "CALC-11",
+  "app": "Calc+",
+  "num": "11",
+  "title": "Uma conta abre minhas fotos (sem narração)",
+  "hook": "UMA CONTA ABRE MINHAS FOTOS.",
+  "dur": 16,
+  "cover_t": 1.65,
+  "sound": {
+   "suggestion": "faixa phonk/funk eletrônico instrumental 125-130 BPM da Commercial Music Library do TikTok (conferir no Creative Center > Músicas em alta, filtro Brasil, no dia de postar); sem trend verificada aqui",
+   "drop_at": 5.625,
+   "note": "alinhar o drop da faixa a 5.625 s (b12, toque no = e o cofre abre); se a faixa trocar a trilha, manter os SFX e baixar a beat.wav"
+  },
   "ai_label": false,
   "status": "wait"
  }
