@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>BLW</title>
+<title>Cloak</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -33,15 +33,12 @@ a.nav.on{color:var(--tx);background:var(--bd-soft)}
   border:1px solid var(--bd-soft);box-shadow:var(--sh);
   background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
 .boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
-/* Teto de altura no quadro: com 13 cards a coluna Fazer empurrava o resto da
-   home pra fora da tela. Cada coluna rola sozinha (João, 02/10). */
-.board .hcol>.rows{max-height:min(58vh,560px);overflow-y:auto;padding-right:6px;
-  scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
-.board .hcol>.rows::-webkit-scrollbar{width:9px}
-.board .hcol>.rows::-webkit-scrollbar-track{background:transparent}
-.board .hcol>.rows::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
-  border:3px solid transparent;background-clip:content-box}
-.board .hcol>.rows::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+/* Quadro expandido: as colunas quebram em grade (sem scroll horizontal) e cada
+   coluna mostra todos os cards, sem teto de altura (João, 14/10). */
+.board .hrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;
+  overflow:visible;padding:16px 18px 12px}
+.board .hcol{flex:none;min-width:0}.board .hcol:last-child{margin-right:0}
+.board .hcol>.rows{max-height:none;overflow:visible;padding-right:0}
 .board .row{background:var(--cardup);border-color:var(--bdup);box-shadow:var(--sh)}
 .iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
   color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
@@ -510,11 +507,13 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 02/10 17:50</span></div></header><div class="wrap"><p class="sub"></p><h1>BLW — Registrar `name` e `source` como custom dimensions no GA4 do BLW</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Os eventos novos já saem do app, mas os PARÂMETROS só aparecem em relatório depois de registrados: GA4 → Admin → Custom definitions → event-scoped, na property 548962650. Faltam `name` e `source` (do `feature_used`); `source` pode já existir, vindo do `paywall_shown`. `screen_name` é nativo, não precisa.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 14/10 00:39</span></div></header><div class="wrap"><p class="sub"></p><h1>Cloak — Ler o preço novo do semanal do Cloak — 18/10 (D14) e 03/11 (D30)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">O preço entra em 04/10. A leitura é do SEMANAL: trials iniciados, conversão trial→pago e cancelamentos, contra a baseline de 14 dias antes (40 trials · 3 conversões · 46 cancelamentos · US$ 111,89).
 
-Sem isso o evento conta, mas não dá pra saber QUAL feature foi usada.
+Por mercado, não agregado: EUA e Europa subiram ~20%, Brasil/México/Índia subiram na mesma proporção (a razão foi mantida).
 
-Posso fazer pela Admin API se você quiser — não fiz porque estava fora do que o gap pedia.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+`python3 scripts/asc/subscription_events.py --days 14 --app 6755939574`
+
+Depois dessa leitura é que o ANUAL sobe (19,99 → 39,99), uma variável por vez.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
