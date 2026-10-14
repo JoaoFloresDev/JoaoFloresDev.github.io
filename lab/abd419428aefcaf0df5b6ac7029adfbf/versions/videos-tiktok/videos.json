@@ -167,19 +167,6 @@
   "status": "wait"
  },
  {
-  "slug": "blw-01-banana-casca",
-  "ref": "BLW-01",
-  "app": "BLW",
-  "num": "01",
-  "title": "Banana: não tira toda a casca",
-  "hook": "Banana pro bebê de 6 meses? Não tira toda a casca.",
-  "dur": 15,
-  "cover_t": 3.0,
-  "sound": "trocar a trilha por um som acustico/ukulele alegre em alta na aba Sons do TikTok (busca 'ukulele happy' / 'cute morning'), com o drop alinhado em ~2.1 s, quando a voz diz 'Nao tira toda a casca'",
-  "ai_label": true,
-  "status": "wait"
- },
- {
   "slug": "blw-06-panqueca-banana-aveia",
   "ref": "BLW-06",
   "app": "BLW",
@@ -258,6 +245,19 @@
   "dur": 21,
   "cover_t": 2.0,
   "sound": "trilha original no projeto (kit pop_124, Lyria, aparada a partir de 1,95 s e estendida em loop de 4 compassos ate 21,5 s). Som em alta: escolher no TikTok Creative Center > Musicas em alta (BR) um pop leve/quiz e alinhar o drop com o carimbo PODE em 2,21 s (nao verificado por mim qual som esta em alta hoje)",
+  "ai_label": true,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-01-banana-casca",
+  "ref": "BLW-01",
+  "app": "BLW",
+  "num": "01",
+  "title": "Banana: não tira toda a casca",
+  "hook": "Banana pro bebê de 6 meses? Não tira toda a casca.",
+  "dur": 23,
+  "cover_t": 3.15,
+  "sound": "trocar a trilha por um som acustico/ukulele alegre em alta na aba Sons do TikTok (busca 'ukulele happy' / 'cute morning'), com o drop alinhado em ~2.2 s, quando a voz diz 'Nao tira toda a casca'",
   "ai_label": true,
   "status": "wait"
  }
