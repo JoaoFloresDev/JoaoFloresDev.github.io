@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vídeos TikTok</title>
+<style>
+  :root { --bg: #0d0d12; --card: #17171f; --line: #2a2a36; --tx: #f2f2f6; --mut: #9a9aac; --ok: #2eb878; --wait: #f1b73a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--tx); font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif; padding: 24px 16px 48px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 28px; letter-spacing: -0.02em; }
+  .sub { color: var(--mut); margin-top: 6px; }
+  .grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  video { width: 100%; aspect-ratio: 9 / 16; background: #000; display: block; }
+  .meta { padding: 14px 16px 16px; }
+  .app { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--mut); text-transform: uppercase; }
+  .title { font-size: 17px; font-weight: 700; margin-top: 4px; }
+  .hook { color: var(--mut); font-size: 14px; margin-top: 6px; }
+  .tag { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .tag.ok { color: var(--ok); background: rgba(46,184,120,0.12); }
+  .tag.wait { color: var(--wait); background: rgba(241,183,58,0.12); }
+  .dl { display: inline-block; margin-top: 10px; margin-left: 8px; font-size: 13px; color: var(--mut); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Vídeos TikTok / Reels</h1>
+  <p class="sub">1080×1920, narração voz Francisca, feitos em HyperFrames com as telas reais dos apps. Toque no vídeo para tocar com som.</p>
+  <div class="grid">
+    <div class="card">
+      <video controls playsinline preload="metadata" poster="cloak-01-apps-privados.jpg" src="cloak-01-apps-privados.mp4"></video>
+      <div class="meta"><div class="app">Cloak · 01</div><div class="title">Apps privados</div>
+        <div class="hook">“Emprestou o celular e foram direto no seu Instagram?” · 23 s</div>
+        <span class="tag ok">Aprovado</span><a class="dl" href="cloak-01-apps-privados.mp4" download>baixar</a></div>
+    </div>
+    <div class="card">
+      <video controls playsinline preload="metadata" poster="cloak-02-app-de-banco.jpg" src="cloak-02-app-de-banco.mp4"></video>
+      <div class="meta"><div class="app">Cloak · 02</div><div class="title">App de banco</div>
+        <div class="hook">“Roubaram seu celular desbloqueado?” · 21 s</div>
+        <span class="tag ok">Aprovado</span><a class="dl" href="cloak-02-app-de-banco.mp4" download>baixar</a></div>
+    </div>
+    <div class="card">
+      <video controls playsinline preload="metadata" poster="cloak-03-sem-x-com.jpg" src="cloak-03-sem-x-com.mp4"></video>
+      <div class="meta"><div class="app">Cloak · 03</div><div class="title">Sem Cloak × Com Cloak</div>
+        <div class="hook">“Nunca empreste seu celular sem fazer isso.” · 15 s</div>
+        <span class="tag wait">Aguardando aprovação</span><a class="dl" href="cloak-03-sem-x-com.mp4" download>baixar</a></div>
+    </div>
+    <div class="card">
+      <video controls playsinline preload="metadata" poster="calcplus-01-calculadora.jpg" src="calcplus-01-calculadora.mp4"></video>
+      <div class="meta"><div class="app">Calc+ · 01</div><div class="title">Isso NÃO é uma calculadora</div>
+        <div class="hook">Senha na calculadora abre o cofre + senha falsa · 16 s</div>
+        <span class="tag wait">Aguardando aprovação</span><a class="dl" href="calcplus-01-calculadora.mp4" download>baixar</a></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
