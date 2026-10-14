@@ -97,5 +97,49 @@
   "dur": 24,
   "cover_t": 0.8,
   "ref": "CLK-06"
+ },
+ {
+  "slug": "cloak-07-curto-texto",
+  "ref": "CLK-07",
+  "app": "Cloak",
+  "num": "07",
+  "title": "Ninguém acha esse app (8 s)",
+  "hook": "Curto: texto nativo, app some no 1º segundo",
+  "dur": 7,
+  "cover_t": 0.4,
+  "status": "wait"
+ },
+ {
+  "slug": "calcplus-05-curto-texto",
+  "ref": "CALC-05",
+  "app": "Calc+",
+  "num": "05",
+  "title": "Minha calculadora tem um segredo (8 s)",
+  "hook": "Curto: texto nativo, digita e abre o cofre",
+  "dur": 8,
+  "cover_t": 1.7,
+  "status": "wait"
+ },
+ {
+  "slug": "calcplus-06-curto-acao",
+  "ref": "CALC-06",
+  "app": "Calc+",
+  "num": "06",
+  "title": "É um cofre (7 s)",
+  "hook": "Curto: no meio da ação + senha falsa",
+  "dur": 7,
+  "cover_t": 0.0,
+  "status": "wait"
+ },
+ {
+  "slug": "calcplus-07-curto-pergunta",
+  "ref": "CALC-07",
+  "app": "Calc+",
+  "num": "07",
+  "title": "Qual desses guarda minhas fotos? (8 s)",
+  "hook": "Curto: pergunta/desafio sem voz no início",
+  "dur": 8,
+  "cover_t": 0.46,
+  "status": "wait"
  }
 ]
