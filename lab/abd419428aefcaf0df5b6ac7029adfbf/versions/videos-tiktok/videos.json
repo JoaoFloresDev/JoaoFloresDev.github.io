@@ -1,0 +1,47 @@
+[
+ {
+  "slug": "cloak-01-apps-privados",
+  "app": "Cloak",
+  "num": "01",
+  "title": "Apps privados",
+  "hook": "“Emprestou o celular e foram direto no seu Instagram?”",
+  "status": "ok",
+  "dur": 23
+ },
+ {
+  "slug": "cloak-02-app-de-banco",
+  "app": "Cloak",
+  "num": "02",
+  "title": "App de banco",
+  "hook": "“Roubaram seu celular desbloqueado?”",
+  "status": "ok",
+  "dur": 21
+ },
+ {
+  "slug": "cloak-03-sem-x-com",
+  "app": "Cloak",
+  "num": "03",
+  "title": "Sem Cloak × Com Cloak",
+  "hook": "“Nunca empreste seu celular sem fazer isso.”",
+  "status": "wait",
+  "dur": 15
+ },
+ {
+  "slug": "calcplus-01-calculadora",
+  "app": "Calc+",
+  "num": "01",
+  "title": "Isso NÃO é uma calculadora",
+  "hook": "Senha na calculadora abre o cofre + senha falsa",
+  "status": "wait",
+  "dur": 16
+ },
+ {
+  "slug": "calcplus-04-comenta",
+  "app": "Calc+",
+  "num": "04",
+  "title": "Qual conta abre teu cofre? (sem narração)",
+  "hook": "Isca de comentário, brutalista amarelo, só batida + efeitos",
+  "status": "wait",
+  "dur": 16
+ }
+]
