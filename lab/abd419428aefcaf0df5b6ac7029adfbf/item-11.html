@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Lab</title>
+<title>Meus Gastos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -507,13 +507,7 @@ a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, t
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 14/10 03:17</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Trial no anual: BLW e Meus Gastos precisam de release antes de mexer</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">A regra nova é trial de 3 dias no ANUAL, não no semanal — os dados de 60 dias dão US$ 22,34 por trial de anual contra US$ 3,33 no semanal (Cloak), e o semanal é quem tem churn (8%) e cancelamento.
-
-**O bloqueio é de código:** no BLW (`paywall_view.dart:437` e `:450`) e no Meus Gastos (`ProModal.dart:743`) o selo &quot;3 dias grátis&quot; é texto fixo em todo card de plano, sem consultar a loja. Tirar o trial na ASC faria o app anunciar teste num plano que cobra na hora — promessa falsa no paywall. O botão do BLW (`startTrialButton`) tem o mesmo problema.
-
-O conserto é o que o Neon já faz: desenhar o selo só se o produto tiver oferta introdutória. Entra no próximo release de cada um — o BLW já tem a instrumentação de analytics esperando release também.
-
-Falta conferir Walk, Hair e Sunrise: se lerem da loja como o Neon, dá pra fazer por API sem release.</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a></nav><span class=stamp>atualizado 14/10 03:32</span></div></header><div class="wrap"><p class="sub"></p><h1>Meus Gastos — PPO &quot;Estilo visual 2026-10-14&quot; do Meus Gastos em review na Apple (3 artes, mesmo texto)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Experimento ebdbfdb5 submetido em 14/10 (reviewSubmission cebd1904, WAITING_FOR_REVIEW). 3 tratamentos com as mesmas 5 telas, ordem e títulos; só muda a arte: A escuro com cidade, B claro pastel, C azul minimalista. 29 idiomas, 6,9&quot; e 6,5&quot; em todos + 5,5&quot; em en-US/pt-BR (900 prints, 180 sets verificados por checksum). iPad fora do teste. Quando aprovar: rodar tools/upload_experiment.py --verify (a ASC re-clona prints herdados horas depois, LEARNINGS #35) e então dar Start. Leitura como tendência: o gate de poder reprova (CR 0,46% em impressões únicas, tráfego dividido em 4). Pasta: Apps/intermediate/Controle-de-gastos/ppo-pipeline/experiments/2026-10-14_ppo-02_estilo-visual/</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
