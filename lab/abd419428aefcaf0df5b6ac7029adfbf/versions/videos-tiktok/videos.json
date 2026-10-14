@@ -163,5 +163,24 @@
   "dur": 9,
   "cover_t": 0.6,
   "status": "wait"
+ },
+ {
+  "slug": "cloak-12-trend-beok",
+  "ref": "CLK-12",
+  "app": "Cloak",
+  "num": "12",
+  "title": "Eu na rua à noite (trend Be OK)",
+  "hook": "Trend com pessoa (Veo) + dica da Central de Controle, sem voz",
+  "dur": 12,
+  "cover_t": 1.0,
+  "sound": {
+   "name": "Be OK",
+   "artist": "Ingrid Michaelson",
+   "start_s": 0.0,
+   "bpm": 125,
+   "note": "refrão 'I just wanna be OK' entrando no t=0; cortes do vídeo na grade de 125 BPM (0 · 1,92 · 3,84 · 5,76 · 7,68 · 9,60). BPM 125 (Songscription) vs ~133 medido = NÃO VERIFICADO; alinhar no editor do TikTok. Sem voz: volume do som ~80%, original ~30%. Exige conta pessoal/criador (não está na CML)."
+  },
+  "ai_label": true,
+  "status": "wait"
  }
 ]

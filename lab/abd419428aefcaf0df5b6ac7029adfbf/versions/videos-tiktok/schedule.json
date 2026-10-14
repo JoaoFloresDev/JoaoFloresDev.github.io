@@ -1,0 +1,85 @@
+{
+ "title": "Cronograma sugerido",
+ "start": "2026-10-15",
+ "time": "19h (horário de Brasília)",
+ "days": [
+  {
+   "date": "2026-10-15",
+   "cloak": "CLK-08",
+   "calc": "CALC-06",
+   "why_cloak": "curto, ação no 1º segundo",
+   "why_calc": "curto, ação no 1º segundo"
+  },
+  {
+   "date": "2026-10-16",
+   "cloak": "CLK-04",
+   "calc": "CALC-04",
+   "why_cloak": "desafio com loop (rewatch)",
+   "why_calc": "isca de comentário + loop"
+  },
+  {
+   "date": "2026-10-17",
+   "cloak": "CLK-07",
+   "calc": "CALC-05",
+   "why_cloak": "curto, texto nativo",
+   "why_calc": "curto, texto nativo"
+  },
+  {
+   "date": "2026-10-18",
+   "cloak": "CLK-12",
+   "calc": "CALC-07",
+   "why_cloak": "trend com pessoa (marcar IA)",
+   "why_calc": "curto, pergunta sem voz"
+  },
+  {
+   "date": "2026-10-19",
+   "cloak": "CLK-09",
+   "calc": "CALC-02",
+   "why_cloak": "curto, pergunta sem voz",
+   "why_calc": "alerta (RG)"
+  },
+  {
+   "date": "2026-10-20",
+   "cloak": "CLK-03",
+   "calc": "CALC-01",
+   "why_cloak": "comparação",
+   "why_calc": "o primeiro (controle)"
+  },
+  {
+   "date": "2026-10-21",
+   "cloak": "CLK-05",
+   "calc": "repost do Calc+ com MAIOR tempo médio (legenda nova)",
+   "why_cloak": "loop aberto (em casa)",
+   "why_calc": "repetir o vencedor"
+  },
+  {
+   "date": "2026-10-22",
+   "cloak": "CLK-02",
+   "calc": "repost do Calc+ com MAIOR tempo médio (legenda nova)",
+   "why_cloak": "medo: app de banco",
+   "why_calc": "repetir o vencedor"
+  },
+  {
+   "date": "2026-10-23",
+   "cloak": "CLK-06",
+   "calc": "repost do Calc+ com MAIOR tempo médio (legenda nova)",
+   "why_cloak": "lista editorial (salvável)",
+   "why_calc": "repetir o vencedor"
+  },
+  {
+   "date": "2026-10-24",
+   "cloak": "CLK-01",
+   "calc": "repost do Calc+ com MAIOR tempo médio (legenda nova)",
+   "why_cloak": "o primeiro (controle)",
+   "why_calc": "repetir o vencedor"
+  }
+ ],
+ "rules": [
+  "1 vídeo por dia em cada conta (uma conta do Cloak, uma do Calc+), no TikTok e no Instagram no mesmo dia, às 19h.",
+  "Pule os IDs que você já postou.",
+  "No TikTok: suba o vídeo, troque o som pelo som em alta sugerido (quando houver) e publique. No Instagram: use 'Testar Reels' pra mostrar a quem não te segue.",
+  "CLK-12 tem pessoa gerada por IA: marque 'Conteúdo gerado por IA' ao postar.",
+  "48 h depois de cada post, anote no TikTok (Análises do vídeo) o TEMPO MÉDIO assistido e a % que viu até o fim e me mande pelo ID. Ex.: 'CLK-08: 1,9 mil views, 5,2 s médio, 31% inteiro'.",
+  "No dia 8, o formato com maior tempo médio vira a base dos próximos vídeos; o pior sai da fila."
+ ]
+}
