@@ -167,25 +167,6 @@
   "status": "wait"
  },
  {
-  "slug": "cloak-12-trend-beok",
-  "ref": "CLK-12",
-  "app": "Cloak",
-  "num": "12",
-  "title": "Eu na rua à noite (trend Be OK)",
-  "hook": "Trend com pessoa (Veo) + dica da Central de Controle, sem voz",
-  "dur": 12,
-  "cover_t": 1.0,
-  "sound": {
-   "name": "Be OK",
-   "artist": "Ingrid Michaelson",
-   "start_s": 0.0,
-   "bpm": 125,
-   "note": "refrão 'I just wanna be OK' entrando no t=0; cortes do vídeo na grade de 125 BPM (0 · 1,92 · 3,84 · 5,76 · 7,68 · 9,60). BPM 125 (Songscription) vs ~133 medido = NÃO VERIFICADO; alinhar no editor do TikTok. Sem voz: volume do som ~80%, original ~30%. Exige conta pessoal/criador (não está na CML)."
-  },
-  "ai_label": true,
-  "status": "wait"
- },
- {
   "slug": "blw-01-banana-casca",
   "ref": "BLW-01",
   "app": "BLW",
@@ -251,19 +232,6 @@
   "status": "wait"
  },
  {
-  "slug": "blw-04-pronto-pra-comer",
-  "ref": "BLW-04",
-  "app": "BLW",
-  "num": "04",
-  "title": "Seu bebê está pronto pra comer?",
-  "hook": "Seu bebê tá pronto pra começar a comer?",
-  "dur": 36,
-  "cover_t": 2.05,
-  "sound": "Trilha do kit (_kit/music/pop_124.mp3, gerada por Lyria, ~125 BPM) cortada em 1,95 s, já cheia em ~0,1 s, 8 compassos (2,03-17,39 s) em loop no compasso com crossfade de 40 ms, fade de 0,5 s no fim, volume 0,3 sob a voz. Faixa é música gerada por IA (o vídeo não tem imagem de IA). No TikTok, se trocar: som leve/acústico da Biblioteca Comercial a 15-20% sob a voz.",
-  "ai_label": false,
-  "status": "wait"
- },
- {
   "slug": "calcplus-11-uma-conta-abre",
   "ref": "CALC-11",
   "app": "Calc+",
@@ -277,6 +245,19 @@
    "drop_at": 5.625,
    "note": "alinhar o drop da faixa a 5.625 s (b12, toque no = e o cofre abre); se a faixa trocar a trilha, manter os SFX e baixar a beat.wav"
   },
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-04-pronto-pra-comer",
+  "ref": "BLW-04",
+  "app": "BLW",
+  "num": "04",
+  "title": "Seu bebê está pronto pra comer?",
+  "hook": "Seu bebê tá pronto pra começar a comer?",
+  "dur": 36,
+  "cover_t": 2.05,
+  "sound": "Trilha do kit (_kit/music/pop_124.mp3, gerada por Lyria, ~125 BPM) cortada em 1,95 s, já cheia em ~0,1 s, 8 compassos (2,03-17,39 s) em loop no compasso com crossfade de 40 ms, fade de 0,5 s no fim, volume 0,3 sob a voz. Faixa é música gerada por IA (o vídeo não tem imagem de IA). No TikTok, se trocar: som leve/acústico da Biblioteca Comercial a 15-20% sob a voz.",
   "ai_label": false,
   "status": "wait"
  }
