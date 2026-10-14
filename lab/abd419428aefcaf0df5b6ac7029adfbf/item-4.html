@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>iPhotos</title>
+<title>Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -553,19 +553,17 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 13:22</span></div></header><div class="wrap"><p class="sub"></p><h1>iPhotos — Revisar a 1.10.0 do iPhotos — relatório com tudo que entrou + a análise de ASO dos 13 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Link direto (modo escuro): https://claude.ai/artifact/LFaAmrdRXNWzkEUFB9Qazq
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 13:41</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Vídeos de propaganda pro TikTok/Instagram: piloto no Cloak já postado — falta a chave do Postiz e o orçamento</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Atualizado 14/10: os passos 1 e 2 andaram — o piloto ficou no Cloak, na conta @calculadorasecreta.app (TikTok + Instagram), com o 1º vídeo (cloak-02, gancho do banco) postado em 14/10; a leitura de 16/10 é o item #261. Log: social/tiktok-calculadora-secreta/EXPERIMENTOS.md. Faltam os passos 3 (conta no Postiz + API key) e 4 (orçamento).
 
-Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os 13 atuais) · **ASO** (a análise dos 13 locales no template GOLD).
+Vídeos prontos pra assistir no botão &#x27;Relatório da versão&#x27; (página Vídeos TikTok): Cloak 01 e 02 aprovados, Cloak 03 e Calc+ 01 aguardando aprovação.
 
-O QUE ENTRA NA 1.10.0 (binário short version 30 / build 35):
-1. O app passa a falar os 13 idiomas da loja. Era 100% inglês: os 9 Main.strings localizados tinham 49 strings cada com ZERO caractere non-ASCII (exports nunca traduzidos) e o código novo tinha o inglês cravado. Agora são 402 literais virando 389 chaves, traduzidas em pt-BR, pt-PT, es-ES, es-MX, fr, de, it, ja, ko, ru, tr e zh-Hans, mais as 38 strings do storyboard em cada um. Vi renderizado no simulador em alemão e japonês antes de fechar.
-2. Um mês de trabalho que nunca saiu da máquina: o revamp do grid inteiro (13 commits de 31/08), os eventos canônicos de onboarding e a remoção do pré-prompt de avaliação.
-3. Duas correções de empacotamento: CFBundleIconName na raiz (sem ela o build é aceito e NUNCA materializa na ASC) e ITSAppUsesNonExemptEncryption.
+Ferramentas de vídeo já instaladas e testadas no Mac (HyperFrames, Goldie, Postiz, ffmpeg). Plano completo no botão &quot;Abrir relatório&quot;.
 
-TRÊS BUGS QUE O INGLÊS ESCONDIA: não existia bundle de alemão, espanhol de Espanha nem português de Portugal (a loja vende nos três); o pt-BR estava fora do grupo de variantes do storyboard, então o Brasil já lia storyboard em inglês; e os cartões da Home cortavam texto.
-
-
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/iphotos-1-10-0/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+PASSOS SEUS:
+1. Escolher o app do piloto: WTMP, Sunrise ou Walk.
+2. Criar a conta do TikTok (pessoal/criador, NÃO comercial: comercial não pode usar som em alta) e a do Instagram (Criador) desse app no celular e usar normal 7-14 dias.
+3. Criar conta no Postiz e me passar a API key.
+4. Aprovar ~US$ 45-110/mês.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/videos-tiktok/index.html" target="_blank">Relatório da versão</a><a class=btn href="md/reports__2026-10-14_github-tools-scan__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
