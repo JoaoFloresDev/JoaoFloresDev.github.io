@@ -221,5 +221,18 @@
   "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM) cortada em 1,8 s, já entra cheia em ~0,2 s, fade 0,4 s no fim. No TikTok, se trocar: som acústico/lo-fi suave em alta da Biblioteca Comercial, sem drop forte, entrando em 0 s, 15-20% sob a voz (nenhum som específico verificado como em alta).",
   "ai_label": true,
   "status": "wait"
+ },
+ {
+  "slug": "blw-06-panqueca-banana-aveia",
+  "ref": "BLW-06",
+  "app": "BLW",
+  "num": "06",
+  "title": "Panqueca de banana e aveia (1 ano+)",
+  "hook": "Panqueca de banana e aveia, sem açúcar",
+  "dur": 41,
+  "cover_t": 2.3,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, pop leve ~125 BPM) cortada no 1º tempo forte (2,035 s), loop de 4 compassos x4 + o final natural da faixa, fade 0,7 s; música gerada por IA (o TikTok pode rotular se mantida). No TikTok, trocar por som da Biblioteca Comercial no estilo receita: pop/acústico alegre e leve, 115-128 BPM, sem voz, volume ~70%, entrando em 0 s (nenhum som específico verificado como em alta hoje).",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
