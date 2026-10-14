@@ -1,0 +1,528 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>REPORT.md</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#2b3340;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#ccd6e6;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.6) blur(10px);
+  -webkit-backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--bd-soft)}
+.topin{width:min(1680px,94vw);margin:0 auto;display:flex;align-items:center;gap:10px 22px;
+  flex-wrap:wrap;padding:11px 0}
+a.brand{display:flex;align-items:center;gap:9px;font-family:var(--f-disp);font-size:15px;
+  font-weight:800;letter-spacing:-.015em;color:var(--tx);white-space:nowrap}
+a.brand:hover{text-decoration:none}
+a.brand .mark{width:21px;height:21px;background-size:contain;background-repeat:no-repeat;
+  background-position:center;flex:none}
+.navs{display:flex;gap:4px;flex-wrap:wrap;min-width:0}
+a.nav{font-family:var(--f-disp);font-size:13px;font-weight:600;color:var(--mut);
+  padding:5px 11px;border-radius:999px;white-space:nowrap}
+a.nav:hover{color:var(--tx);background:var(--bd-soft);text-decoration:none}
+a.nav.on{color:var(--tx);background:var(--bd-soft)}
+.stamp{margin-left:auto;font-size:11.5px;color:var(--mut);white-space:nowrap}
+.ico.lab{display:inline-block;vertical-align:-5px;background-color:transparent;background-size:contain;
+  background-repeat:no-repeat;background-position:center;border-radius:0}
+/* O quadro é a primeira coisa que o João lê e estava no mesmo fundo do resto da
+   página; agora é um painel com fundo próprio (João, 02/10). */
+.board{margin:18px 0 10px;padding:16px 18px 18px;border-radius:var(--rad);
+  border:1px solid var(--bd-soft);box-shadow:var(--sh);
+  background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
+.boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+/* Quadro expandido: as colunas quebram em grade (sem scroll horizontal) e cada
+   coluna mostra todos os cards, sem teto de altura (João, 14/10). */
+.board .hrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;
+  overflow:visible;padding:16px 18px 12px}
+.board .hcol{flex:none;min-width:0}.board .hcol:last-child{margin-right:0}
+.board .hcol>.rows{max-height:none;overflow:visible;padding-right:0}
+.board .row{background:var(--cardup);border-color:var(--bdup);box-shadow:var(--sh)}
+.iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
+  padding:1px 8px;cursor:pointer;line-height:1.5}
+.iid:hover{color:var(--tx);border-color:var(--mut)}
+.iid.ok{color:var(--ok);border-color:var(--ok)}
+/* card que é link: o cartão inteiro abre o documento */
+a.card.lk{display:flex;flex-direction:column;color:var(--tx);text-decoration:none;
+  transition:border-color .16s ease,box-shadow .16s ease}
+a.card.lk:hover{border-color:var(--mut);box-shadow:var(--sh-up);text-decoration:none}
+a.card.lk>p{flex:1;margin:6px 0 10px}
+.lkmore{font-family:var(--f-disp);font-size:11px;font-weight:600;letter-spacing:.04em;
+  color:var(--mut)}
+a.card.lk:hover .lkmore{color:var(--tx)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
+/* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
+   fluxo normal o ícone do lab caía numa linha só pra ele. */
+.rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
+.rhead .ico{margin-right:0;width:20px;height:20px}
+.rwhen{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--mut);margin-right:4px}
+.rows>.rowwrap>.row,.rows>.row{display:flex;flex-direction:column}
+.board .hcol>h2{margin-top:0;border-top:0;padding-top:0}
+@media(max-width:620px){.stamp{margin-left:0;flex-basis:100%}}
+.wrap{width:min(1680px,94vw);margin:0 auto;padding:24px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:20px;margin-top:30px}section,.twrap{min-width:0}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+.tiles{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));margin:14px 0 6px}
+a.tile{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(125,140,170,.14);color:var(--mut)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 188px;color:var(--tx)}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{margin:0}
+.rc{display:grid;grid-template-columns:34px 72px minmax(0,1fr);align-items:baseline;gap:10px;padding:7px 0;border-top:1px solid var(--bd-soft)}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li:before{background:var(--bd)}.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:var(--card);font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+
+/* ---------- camada de acabamento (01/10/2026) ----------
+   Tipografia com duas vozes (display para títulos e números, texto para leitura),
+   neutros com viés do azul da marca em vez de cinza puro, e profundidade por
+   sombra em vez de só borda. Nada aqui renomeia classe: é uma camada por cima. */
+:root{
+  --f-disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-text:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --bg:#eef1f7; --card:#ffffff; --tx:#0a0d14; --mut:#4b5567; --acc:#2b3340;
+  --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
+  --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
+  --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
+  --cardup:#ffffff; --bdup:#b9c3d4;
+  --boardtop:#e9edf5; --boardbot:#e3e8f1;
+  --bar:#2563eb; --bar2:#60a5fa;
+  --rad:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
+  --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
+  --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
+  --cardup:#1d2430; --bdup:#3d4859;
+  --boardtop:#0d1218; --boardbot:#090d13;
+  --bar:#5b9bff; --bar2:#9dc4ff;
+}}
+body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1{font-family:var(--f-disp);font-size:27px;font-weight:800;letter-spacing:-.02em;
+  text-wrap:balance;margin:0 0 2px}
+h1 .mark{display:inline-block;width:28px;height:28px;vertical-align:-5px;margin-right:11px;
+  background-size:contain;background-repeat:no-repeat;background-position:center}
+h2{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);border-top:1px solid var(--bd-soft);
+  padding-top:22px;margin:32px 0 14px}
+h3{font-family:var(--f-disp);letter-spacing:-.01em}
+.sub{font-size:13px;color:var(--mut)}
+code,.mono{font-family:var(--f-mono);font-size:12.5px}
+.card,table.t,a.tile,.row,.fcard,#md{box-shadow:var(--sh);border-color:var(--bd-soft)}
+.card,a.tile,.row,.fcard{border-radius:var(--rad)}
+a.tile,.row{transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
+a.tile:hover,a.row:hover{box-shadow:var(--sh-up);border-color:var(--bd);
+  transform:translateY(-1px)}
+/* O card do app é área de leitura, não botão: nada muda no hover. A regra antiga
+   trocava a sombra, e num card sem sombra isso aparecia como animação. */
+.fcard,.fcard:hover{transition:none!important;transform:none!important}
+/* big numbers: the first thing anyone reads on the page */
+.tiles{gap:12px;margin:18px 0 4px}
+a.tile{padding:13px 17px;min-width:148px}
+.tile .tl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--mut)}
+.tile .tv{font-family:var(--f-disp);font-size:25px;font-weight:800;letter-spacing:-.025em;
+  margin-top:3px}
+.tile .ts{font-size:11.5px;color:var(--mut)}
+.tile .tvd{font-family:var(--f-text);font-size:13px;font-weight:600;letter-spacing:0;white-space:nowrap}
+/* tables read as data, not as prose */
+table.t{border-radius:var(--rad);font-variant-numeric:tabular-nums}
+table.t th{font-family:var(--f-disp);font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--bd-soft);border-bottom:1px solid var(--bd)}
+table.t td{padding:9px 13px;border-bottom:1px solid var(--bd-soft)}
+table.t tbody tr:hover td,table.t tr:hover td{background:rgba(125,140,170,.06)}
+.twrap{border-radius:var(--rad)}
+/* buttons */
+.btn{font-family:var(--f-disp);font-weight:600;font-size:13.5px;padding:9px 18px;
+  border-radius:999px;box-shadow:var(--sh);transition:all .16s ease}
+.btn:hover{border-color:var(--acc);box-shadow:var(--sh-up);transform:translateY(-1px)}
+.pill,.st{font-family:var(--f-disp);font-weight:600;font-size:11.5px;letter-spacing:.02em}
+/* status colours carry meaning, so keep them out of the accent */
+.st.run,.st.appr{background:rgba(10,143,88,.14);color:var(--ok)}
+.st.crit{background:rgba(208,47,47,.14);color:var(--down)}
+.st.rev,.st.draft{background:rgba(180,83,9,.14);color:var(--warn)}
+/* the lanes strip and any scroller get a thin, rounded bar */
+.hrow,.twrap{scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.hrow::-webkit-scrollbar,.twrap::-webkit-scrollbar{height:9px}
+.hrow::-webkit-scrollbar-track,
+.twrap::-webkit-scrollbar-track{background:transparent}
+.hrow::-webkit-scrollbar-thumb,
+.twrap::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
+  border:3px solid transparent;background-clip:content-box}
+.hrow::-webkit-scrollbar-thumb:hover,
+.twrap::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+.hrow{background:transparent;border:0;padding:0;border-radius:0}
+.hcol{flex:0 0 clamp(280px,26vw,360px);min-width:0}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);
+  outline-offset:2px;border-radius:8px}
+.dirlist,.prlist{margin:10px 0 0;padding-left:18px;list-style:none}
+.dirlist>li,.prlist>li{position:relative;margin:0 0 7px;font-size:13.5px;line-height:1.5;
+  color:var(--tx)}
+.prlist>li{color:var(--mut);font-size:13px;margin-bottom:5px}
+.dirlist>li::before,.prlist>li::before{content:"";position:absolute;left:-14px;top:.62em;
+  width:5px;height:5px;border-radius:50%;background:var(--acc);opacity:.75}
+.prlist>li::before{background:var(--mut);opacity:.5}
+.dirp{display:none}
+.dapps{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  margin:14px 0 4px;align-items:start}
+.dapp{padding:14px 16px}
+.dah{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.dah b{font-family:var(--f-disp);font-size:14.5px;font-weight:700}
+.drank{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:6px;background:var(--acc);color:var(--card);font-size:11.5px;font-weight:700;flex:none}
+.st.d-dobrar{background:rgba(10,143,88,.16);color:var(--ok)}
+.st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
+.st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
+.st.d-congelar{background:rgba(125,140,170,.12);color:var(--mut)}
+.dapp .prlist{margin-top:6px}
+.dcall{color:var(--tx)!important;font-weight:600}
+.fcard[id]{scroll-margin-top:18px}
+.fdet{margin-top:10px;border-top:1px solid var(--bd-soft);padding-top:9px}
+.fdet>summary{cursor:pointer;list-style:none;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);
+  display:flex;align-items:center;gap:7px}
+.fdet>summary::-webkit-details-marker{display:none}
+.fdet>summary::before{content:"›";font-size:15px;transition:transform .15s}
+.fdet[open]>summary::before{transform:rotate(90deg)}
+.fdet>summary:hover{color:var(--acc)}
+.fdet table.t{font-size:12.5px}
+.fdet table.t td,.fdet table.t th{padding:6px 10px}
+.fgrid.one{grid-template-columns:1fr!important;gap:18px}
+/* Cada app é um painel com profundidade: a luz entra por cima, o corpo escurece
+   até a base e a borda clareia só na primeira linha. É o que separa um app do
+   outro sem precisar de moldura dura. */
+.fgrid.one>.fcard{position:relative;padding:0;overflow:hidden;border-radius:16px;
+  border:1px solid var(--bd-soft);
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 5%, var(--card)) 0%,
+    var(--card) 26%,
+    color-mix(in srgb, #000 7%, var(--card)) 100%);
+  box-shadow:0 1px 2px rgba(0,0,0,.05), 0 10px 26px -14px rgba(0,0,0,.28)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard{
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 9%, var(--card)) 0%,
+    var(--card) 30%,
+    #0a0c10 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -22px rgba(0,0,0,.9)}}
+.fgrid.one>.fcard::before{content:"";position:absolute;inset:0 0 auto;height:1px;
+  background:linear-gradient(90deg, transparent,
+    color-mix(in srgb, var(--acc) 45%, transparent), transparent)}
+.fgrid.one>.fcard>.fh{background:transparent;margin:0;padding:15px 18px 12px;
+  border-bottom:1px solid var(--bd-soft)}
+.fgrid.one>.fcard>.fstats{padding:12px 18px 0}
+.fgrid.one>.fcard>.fcols{padding:16px 18px 6px}
+.fgrid.one>.fcard>.fdet{margin:0;padding:13px 18px 16px;border-top:1px solid var(--bd-soft);
+  background:color-mix(in srgb, #000 4%, transparent)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard>.fdet{
+  background:rgba(0,0,0,.25)}}
+.fgrid.one>.fcard>.fh b{font-size:16px;letter-spacing:-.01em}
+.fgrid.one>.fcard>.fh>span{font-size:12.5px;color:var(--tx);opacity:.78;
+  font-variant-numeric:tabular-nums;font-weight:500}
+/* a luz no topo do painel, um pouco mais presente */
+.fgrid.one>.fcard::before{height:2px;
+  background:linear-gradient(90deg, transparent, var(--acc), transparent);opacity:.5}
+.fcard .fmeta{font-size:12px;color:var(--mut)}
+/* funil: rótulo legível, número com peso, barra com corpo */
+.fs{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:12px;
+  padding:5px 0}
+.fs .fl{font-size:12.5px;color:var(--tx)}
+.fs .fn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;min-width:74px;
+  text-align:right}
+.fb{height:9px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.fb i{display:block;height:100%;border-radius:999px}
+/* retenção com leitura imediata */
+.rrow{margin:0}
+.rc:first-child{border-top:0;padding-top:0}
+/* o rótulo é legenda; quem salta é o número, na cor da régua */
+.rc b{display:block;font-family:var(--f-disp);font-size:10px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0}
+.rc .rv{display:block;font-family:var(--f-disp);font-size:21px;font-weight:800;
+  letter-spacing:-.025em;line-height:1.15;margin:3px 0 2px;font-variant-numeric:tabular-nums}
+.rc>b{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.04em;
+  color:var(--mut)}
+.rc .rv{font-family:var(--f-disp);font-size:19px;font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums}
+.rc .rb{display:block;font-size:11.5px;color:var(--mut)}
+/* achados: mais ar e marcador claro */
+.fnds li{font-size:12.5px;line-height:1.5;padding:4px 0 4px 16px}
+.fnds li:before{width:6px;height:6px;top:.72em}
+/* o detalhe convida a abrir */
+.fdet>summary{font-size:11px;color:var(--acc);padding:3px 0}
+.fdet>summary:hover{opacity:.82}
+.fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;
+  align-items:start}
+@media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
+.fcol{min-width:0}
+.fcol>.fnds{margin-top:0}
+/* Régua de contexto do app: instalações, ativos, novos, crash-free. Antes isso
+   era uma linha de texto corrido ("187 downloads/30d · WATCH · crash-free
+   100%") que ninguém comparava entre cards; como números rotulados, dá pra
+   varrer a coluna de cima a baixo. */
+.fstats{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline}
+.fst{display:flex;align-items:baseline;gap:7px;min-width:0}
+.fstl{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut)}
+.fst b{font-family:var(--f-disp);font-size:15px;font-weight:700;letter-spacing:-.015em;
+  font-variant-numeric:tabular-nums}
+.fstd{font-size:12px;font-weight:600}
+.st.vd{background:rgba(125,140,170,.14);color:var(--mut)}
+.fh .noasc{font-size:11.5px;font-weight:400;color:var(--warn)}
+/* Cada metade do card diz o que é antes de mostrar número. */
+.fgrp{margin-bottom:16px}
+.fgrp:last-child{margin-bottom:0}
+.fgl{display:block;font-family:var(--f-disp);font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
+  padding-bottom:7px;margin-bottom:10px;border-bottom:1px solid var(--bd-soft)}
+.fcol>.fgrp>.fnds{margin-top:0}
+.instrl{list-style:none;margin:9px 0 0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:3px 0 3px 14px;
+  position:relative;overflow-wrap:anywhere}
+/* Coluna de leitura: linhas rotuladas, sem caixa. As caixas coloridas (funil
+   verde, ação amarela) e o bloco expansível empilhavam quatro objetos de forma
+   diferente num espaço estreito; rótulo à esquerda e texto à direita, separados
+   por uma régua fina, lê de cima a baixo sem nada competindo (João, 02/10). */
+.rline{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;
+  padding:12px 0;border-top:1px solid var(--bd-soft)}
+.rline:first-child{border-top:0;padding-top:0}
+.rlab{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);padding-top:2px}
+.rbody{min-width:0}
+.rbody>b{display:block;font-family:var(--f-disp);font-size:14px;font-weight:700;
+  letter-spacing:-.01em;line-height:1.35}
+.rnum{display:block;margin-top:3px;font-size:12px;font-weight:600;color:var(--tx);
+  font-variant-numeric:tabular-nums}
+.rbody>p{margin:5px 0 0;font-size:12.5px;line-height:1.55;color:var(--mut)}
+.rline.act .rlab{color:var(--tx)}
+.rline.mut .rlab,.rline.mut .instrl li{color:var(--mut)}
+.rbody>.fnds{margin:0}
+@media(max-width:1180px){.rline{grid-template-columns:1fr;gap:6px}
+  .rline .rlab{padding-top:0}}
+.instrl{list-style:none;margin:0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:2px 0 2px 14px;
+  position:relative;overflow-wrap:anywhere}
+.instrl li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;
+  border-radius:50%;background:var(--bd)}
+/* Os passos de loja vêm de outra fonte que os de dentro do app: barra em tom
+   mais surdo pra o olho ver onde a medição troca de sistema. */
+.fs .fb i.store{background:linear-gradient(90deg,
+  color-mix(in srgb, var(--bar) 45%, transparent),
+  color-mix(in srgb, var(--bar) 70%, transparent))}
+.fsub{display:block;font-size:10.5px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fsub.gap2{margin-top:14px}
+.lchip{font-size:10px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.fcols{position:relative}
+@media(min-width:821px){.fcols::before{content:"";position:absolute;top:0;bottom:0;
+  left:50%;width:1px;background:var(--bd-soft)}}
+.fdet .ascgrid{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+.fdetcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
+  align-items:start}
+@media(max-width:1100px){.fdetcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.fdetcols{grid-template-columns:1fr}}
+.fdetcols>div{min-width:0;display:flex;flex-direction:column;gap:14px}
+.rawbox{background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;
+  padding:11px 13px;min-width:0}
+.rawbox h4,.rawbox h3.team{margin:0 0 8px;font-family:var(--f-disp);font-size:10.5px;
+  font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.rawbox h3.team .chain{text-transform:none;letter-spacing:0;font-size:11px}
+.rawbox table.t{border:0;box-shadow:none;background:transparent}
+.rawbox table.t th{background:transparent;border-bottom:1px solid var(--bd)}
+.rawbox table.t td{border-bottom:1px solid var(--bd-soft)}
+.rawbox .twrap{border-radius:0}
+.rawbox .ascgrid{margin-bottom:0;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+.rawbox .ascgrid b{font-size:14px}
+.srct{float:right;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 7px;
+  border-radius:999px;background:var(--bd);color:var(--mut);text-transform:uppercase}
+.s-asc{background:rgba(125,140,170,.16);color:var(--tx)}
+.s-firebase{background:rgba(180,83,9,.14);color:var(--warn)}
+.noasc{background:rgba(180,83,9,.14);color:var(--warn);border-radius:999px;padding:1px 8px;
+  font-size:10.5px;font-weight:600}
+.convwhy{display:block;font-size:10.5px;color:var(--mut);margin-top:1px}
+.rawbox .rate{padding:1px 7px;border-radius:999px;font-size:12.5px}
+.featname{display:block;font-family:var(--f-mono);font-size:11.5px;margin-bottom:3px}
+.featbar{display:block;height:4px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.featbar i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg, color-mix(in srgb, var(--acc) 70%, transparent), var(--acc))}
+.legacyp{margin:8px 0 0;font-size:12px;color:var(--mut);line-height:1.7}
+.legacyp code{font-size:11px}
+.rawbox .ascgrid>div{background:var(--card)}
+.fdet{margin-top:14px;border-top:1px solid var(--bd);padding-top:12px}
+.fdet[open]>summary{margin-bottom:12px;color:var(--acc)}
+.t .thsub{font-size:9.5px;font-weight:600;letter-spacing:.03em;color:var(--mut);
+  text-transform:none}
+.t .rate{padding:1px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.t .rate.good{background:rgba(10,143,88,.16);color:var(--ok)}
+.t .rate.mid{background:rgba(180,83,9,.14);color:var(--warn)}
+.t .rate.low{background:rgba(208,47,47,.13);color:var(--down)}
+.thin{font-size:10.5px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.sbx{font-size:12px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 8px;cursor:help;white-space:nowrap}
+.sbxnote{font-size:11.5px;color:var(--warn);background:rgba(180,83,9,.10);
+  border:1px solid rgba(180,83,9,.25);border-radius:9px;padding:7px 10px;margin:0 0 10px}
+.actv{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;margin:0 0 10px;
+  padding:8px 11px;border-radius:10px;background:var(--bd-soft)}
+.actvt{font-family:var(--f-disp);font-size:10px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut)}
+.actv b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.actvw{flex-basis:100%;font-size:11px;color:var(--mut)}
+.fover{font-size:10.5px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
+  text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
+  vertical-align:2px}
+.ascspan{font-size:11px;color:var(--mut);margin:2px 0 7px}
+.ascgrid{display:grid;gap:7px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  margin-bottom:10px}
+.ascgrid>div{background:var(--bd-soft);border-radius:9px;padding:7px 10px;min-width:0}
+.ascgrid span{display:block;font-size:10px;color:var(--mut);text-transform:uppercase;
+  letter-spacing:.04em}
+.ascgrid b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(125,140,170,.3),var(--sh-up)}
+/* ---------- acabamento: luz e profundidade (01/10) ----------
+   Gradiente é usado onde tem função: a luz no topo dá direção à página, a barra
+   do funil ganha volume, e o cabeçalho de cada app se separa do conteúdo. Fundo
+   chapado em tudo o resto, para os números seguirem sendo o que salta. */
+body{background:
+  radial-gradient(1100px 420px at 12% -8%, color-mix(in srgb, var(--acc) 11%, transparent), transparent 70%),
+  radial-gradient(900px 360px at 88% -4%, color-mix(in srgb, var(--ok) 7%, transparent), transparent 72%),
+  var(--bg);
+  background-attachment:fixed}
+h1{background:linear-gradient(100deg, var(--tx) 30%, color-mix(in srgb, var(--acc) 72%, var(--tx)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .mark{-webkit-text-fill-color:initial;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA8CAYAAAAzF3kIAAAFaUlEQVR42u2bS4gcVRSGv1vdPT0zOEYXggY1kkgwohA0DoouDIpPCBpQSEQ3gg8Ek5WibhVEXAYhBHe6UBeKC0UhElSCEJPoQlATIj7wGWMYx8xM93SXm3PJT1Fdj+5b3bXIhaKq63Hr/vec85/HrYZ6Ngc07PgyYJedQ/aFWlRDcA0gBnrALcBPwDo7t9b2tWuRDbyZsTWAKXnmBQMTA3cDrwDP2rVWXSTRssGXba8JuP+AQ3Z8T1mAzQqANU1iHVMzbecBc8Cs3dcHloEzwD/2+0XgSWDVQM0CW+z507aPJwHQq+CKnFsLXAfcAFwDXAFcZEA9wDPAIvAN8Cew057ti8p27HhiqtlO/L4d2AucEFUrs3np9RO/t41bRR0wY1IAuAPYDdyVoPMVU1dn6qvXYgHjbLIaCZcQi8sobS+jMCMGbtZY7nHpc1lmux1IUy6WcXerdsS+3W9M5yWxaC+PA2492x8Ztw9/xOzsc+Bl4HBiQFWA3GPvnqoaXAu4Hpi237uBvxKkUAXAGLjN3jldZWTSFFdwYMBAQm9+4g6JqURVRCi+PVoxoCwp7rAxzFYFbq+8rCs+a1wgvxgwrpFCMIALgIOiMuOUYNK+t4WSoo8cLgd+sM5XxgxMAwI/qe8JJ0SjhmEbgD8mDE5NIgb+BTbb+GbybGoQuBVjyoPAJRL41iHrnwJOAZ8Yll6ZDqYE5NGaSE63ju2/tuyklPNviE6/IYlnv2Ly6A6hpjFwX1nH7/V5xwAjDw1uZcDA88jG37uvDNm0ZTaOy+z+UpFL6MjxcslQz99/3BLpXCk60eOX7OF3LeZ8pgIpqrQetpqLB7dU0On7SX8uxbwGOvMZA/iAXPtQOu0Hdtg75T1PyPmlEuq9BNyURzZOxKwuZEvgYFonaY+Yhh/YrkRVLa8/f88HgqFZJJmds/1TgQF66Z0GrhStcfL+h2QSlm3r5UixC8xr9JWmq7Ewki8LbJZrbkQHrX0cNYKIZJC+ZvOmVeQOmnTbdi0eYFo922+0cz3ARTkD6SSKPXHgkscxme2+DMxP8FfAzcCDwMfAgj0bZwimXXRtIpKXrhmgwqMCXBjQZyzSBHgHuBO4FPjS7u/I/X2xuV9l/HE0RB4Ysk3laFBfsvbIguu3RNLqbgC+kzzRlVl5+jQgwfSFPN4WFXUFpX4+8G1Kv3+blL1AXF5dNLbrq/YwgYjGiWQ22LlugWzAq+wCsNWqeFcDJ4H9wOu2vhHJBOY2H/a8GjiKUTexcUD5fxhzaZVdAPWSOpLCViFIZo1Jo4yde3fQFhcxM2y125PAOpvtkHa4KtHHsCXAaFRWd2KnHwWORbsSZs1nlR1ClQGz0qdVO94e0B96svGrSe8HNoPSq0gN4PvA1etOSiYwywSaZ9PHSmbdZbL5/aIVrUlUsPzLDwcGqcXj54skrVU1TzbzMrBQmb1PbE8Bm0IujzVKSnEa+NFmd6uBbAQaR9fKfydttaohIZebxAdA+1KKRqNsPis/UCARDyZBJ0x6I3AVsN4q3MeAW4ELTZJRIEnOAT+bNDdZxj8H/F6l3c0Av+UUjkItrKSd/2xUH1ekLdpeyaVRAVvHiVoMnP1MhdCfkcQpkxFVTOEuYRojfVHRzDHmSD7goSYrSllCyAXoEpUrlzKrTPizzDRQcRGATuJM5CM4jMJ7EwAUS8ZPxhi0QJYK0IO7FrjXjNqJA542d8CYJelJbL0Vn1uJckrPspATUl5J1Wsv+qeHpPGq1+Szrm/PykKSNrjE2a8Dk2wZTcgO1XUgrqptEuxk2WEzI3KJhHDqQDIuReOism4i2Uld2DM5jsLsXse/FVTiV84BPAewpu1/LVA2Mx2CXq4AAAAASUVORK5CYII=)}
+@media(prefers-color-scheme:dark){.brand .mark,.ico.lab{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAABICAYAAABIk43cAAAGkElEQVR42u2bWYgcVRSGv1PVjplo4sIQd4l7UB9iiINRERdQQUVRMIiCoBFFEDQRDb7og6KCby4ogiiiYlTwRSSBuDwEFCUIEgWTuKCoo7iPYybTXb8Pc2686XT19FbVndgHiqqp7q66/z3nnuU/d2AvEUmV6Hq1pBMkpexrEoBKOlbSBklfRfcq+xLQ1M9XSZrQrDzn9x6QtNyvk0EFYH4kdYdJsgZA1+o/qUp6UNJz/vdB4ZmDAiyVVPGztaJNSSN+/XAEsubXQcOftjOWStHmZ2Y1oFb32SiwEJgP7Oef7wD+MrM/w28k3QysBWZ8rGGiFgEZsDNMqJmpdLCSUjOr+YADsKXAWcAy4GTgSOAgYBRIAPnAJyX9DHwJfALc4qDSCCg+OakftAK0EE1Gf58n6SlJ29V7Cea8NVrXVrhm/SWJmdXcI64E7gBWxF+LTNmio+EjoyPN+V64dzCwAPi9VG1KuljSh9HsZ5JmIi30UjI/z0g6qdXQk3QT6F2bCyU9DawHxl2Dmc9+pZt3NBHzd1SAw9y6rBCw7v2qksaBzcCt0cdpQQAbmTvATe6grAjTTTxmrpL0t6TfJG2WtFHSr3VmVrRU/XxbIyfZlWZdo5nHyEngbGDMzJYBrwJVN6+yJPH3PSZpMZAVmjZKOlXSu+qfzPj5tVa0240HvkvSVGRSWZ8AB3Ne0TPAUVk1JumNBi9Tn8Gu70kFFAEd98wlmFCmwZCaj2U8T7tJGzG1Kuk64H3gRHdGlUJcfmcSYvuarsozv75ngMw2L6vKJO2QdHwjc07myHlTz5IeAh717CjkrIMm5uPbH7i5ET5rwXQf9pqy2iQxZ4BMOQG+BU4xs3/iWjeZA+i9OcXzoEri2j0GuDRYZ64Ze/FdlXQt8EjkiPYajs6PkDOroRlLSswsk7QE+NiZBEpK7HsJ1oB/3JS/DbiSOodkHk9fAA5wrapPa6/WhaOquqKuDuRCvcYS541u97p0Bhjpg+et+bjSLoqKYLEr3ZSzXTcj/mYh8IWzdwAfAN8B15TknAKRts3fe350rxNzrgFLzWyLpDRoNvUZuMOBvgGcb2YrgI8i0ygD6FvAmcDFwBa/V+1wKVSAJ3cj4zxTmucs+2XR/QWSfqpj9IpM5DfUVVUnSPqhi6wt/GZNfcjZL8yApBFn5S8vIT0Mad4vkg6POgIhTV0adQBmOnh2zRmVk3Y5KDObMTP5SzJ3VpdEcatI8zXgKTP7MRB5nqamZvYJcIH7kkqbbIj52OcDt+8RP+vaFeNzcLy9kOB1X3XLyuKxOODPgHOA1yPGshYxma0AvjCvAAjrdaJgAi34ga+jRpY1Ivmi6+slfdYBxzyRNIlRY8AhJdGh35nZzrwGlWd15pnQS94zWgm8AmxtcZlVm+W8C7zDRgkxdqrO5GgAWLOKVWpmO4B1wDpJB3pcXpQz1uBztiX9aGc2kJGWU6PZdRx6viNmNgm8m5MLZH4vAV5uBna6pIIbYCzipFsBrKiHa04syC2xGpEMiU/keuD5ZmD/YLZBTIGhJ4A9Gji03e0CDtg8PN0A/OoWGUiGz4G7gSvNbNpyWH9JmueL/+iobCqSXTjXzDaFZna7LRl3Ykd4iJrncXmzmVWbTmJw9ZLeKyGDClnRfd1s9ckjxr0vZc2K8nD/oxIyqDDjV0Sabv8h/zmuSrxZxcyqTTmoCNxGH0xScAYlYLmk0zy8JB0CloOresqpVqjUMLubgIlok0eR+XEFWOUDLGRyk7wZ8oT8L+DNaEBFa/dGSWMeUpJSwNaZ8jNRzCqa4D4EWFOkdpu6dD+/XVJdW5M0mde+KFKzsae8vwSWMeTFBwBPl5ST5+4KfbFDtqDTuLu61510a9WUvarYwuxGqyKJ8xDXp4FTgW88JcyKNmP8JWZmPzr7mBTsmQNbMQrc2UtnZS2acWhfTkt6FljVBZ/bTmP5e2BJo4Kk3fy5m3W8rgR6NTz7jELXbFT5jAIXRRlU2Hc0H3jcqZuivGawnCe8Hq1ETGQNeKe+/9op2FAyHcfs3t9m3bJ+yWIz+yaMlR7sJM+Ybf2N1IGzEjOcLFqrYQw7OqmOKi3mrWkfNZk0sKa0kNCzL8n/CmwlJ9lOJA36ZCQ+9jDWRsnQ7mBzPFnmXnlqgMFO+dizdjR7coMFH1LCowZ0O5ABp0v6IWc7wk4z277Hj/z/aMYGIG72kpbdCiwJPaK5CLehNx6CHYIdgh2CHYIdgh2CbUv+BfLxvASbQWLEAAAAAElFTkSuQmCC)}}
+h2{position:relative}
+h2::after{content:"";position:absolute;left:0;top:0;width:44px;height:2px;
+  background:linear-gradient(90deg, var(--acc), transparent)}
+h2:first-of-type::after,h1+h2::after,.sub+h2::after{display:none}
+a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, transparent),
+  color-mix(in srgb, var(--acc) 5%, var(--card)))}
+.fb i,.fs .fb i{background:linear-gradient(90deg,var(--bar),var(--bar2))}
+.fgrid.one>.fcard>.fh{background:linear-gradient(180deg,
+  color-mix(in srgb, var(--acc) 7%, var(--card)), var(--bd-soft))}
+.ascgrid b,.tile .tv{background:linear-gradient(180deg, var(--tx), color-mix(in srgb, var(--tx) 72%, var(--mut)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><header class=top><div class=topin><a class=brand href="../index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="../index.html">Agora</a><a class="nav" href="../business.html">Business Analysis</a><a class="nav" href="../vendas.html">Seller</a></nav><span class=stamp>atualizado 14/10 00:56</span></div></header><div class="wrap"><p class="sub"><code>_GambitStudio/reports/2026-10-14_github-tools-scan/REPORT.md</code></p><div id="md"></div><script>const RAW="# Varredura de repos p\u00fablicos no GitHub: skills e integra\u00e7\u00f5es \u00fateis pro lab\n\nData: 14/10/2026. Estrelas e datas de \u00faltimo push conferidas na API do GitHub nesse dia. Repo n\u00e3o confirmado est\u00e1 marcado como **N\u00c3O VERIFICADO**.\n\nQuatro frentes:\n1. Engenharia reversa\n2. Cole\u00e7\u00f5es de skills, marketing, design, pesquisa e infraestrutura de agentes\n3. V\u00eddeo pra TikTok/Instagram\n4. Ferramentas de dev iOS, App Store Connect e QA (**em andamento**, entra aqui quando voltar)\n\nContexto do lab usado pra julgar o encaixe:\n- MCPs j\u00e1 instalados: astro, github, gemini (imagem + v\u00eddeo Veo), sim-mcp.\n- Mac Intel (i7-9750H), Node 24, sem ffmpeg, 55 GB livres.\n\n---\n\n## 1. Engenharia reversa\n\n### 1a. O que voc\u00ea provavelmente ouviu falar\n\n**morluto/rea, \"Reverse Engineer Anything\"**: https://github.com/morluto/rea\n- Licen\u00e7a MIT, TypeScript. Criado em 14/04/2026, \u00faltimo push hoje.\n- Mostra ~213 mil estrelas. \u00c9 incomum pra um repo de 6 meses, ent\u00e3o o n\u00famero pode estar inflado. O pr\u00f3prio README avisa sobre c\u00f3pias falsas: instalar s\u00f3 desse repo, de rea.tools ou do pacote npm `rea-agents`.\n- A proposta bate quase palavra por palavra com o que te contaram: *\"Viu uma feature num app que quer no seu produto? Pe\u00e7a pro agente investigar, explicar como ela funciona, mostrar a evid\u00eancia e construir uma vers\u00e3o pro seu projeto.\"*\n- Instala com `npx rea-agents setup`: p\u00f5e um MCP e instru\u00e7\u00f5es no Claude Code, Codex, Cursor e outros.\n- Precisa de Node 22.19+ (ou 24.11+ / 26+). An\u00e1lise profunda de bin\u00e1rio roda via Hopper, Ghidra ou IDA. O Ghidra roda em macOS x64, ent\u00e3o funciona no Mac Intel.\n- **Cobertura de iOS limitada:** consegue inventariar um IPA (Info.plist, estrutura do bundle, bibliotecas linkadas), mas a doc n\u00e3o fala nada sobre descriptografar FairPlay. As melhores demos s\u00e3o de apps Electron/JS, APKs Android, .NET, jogos antigos e sites.\n\nSegundo candidato: **zhaoxuya520/reverse-skill** (~41,7 mil estrelas, MIT, \u00faltimo push 22/09/2026). \u00c9 um pacote de skills pra pentest autorizado, CTF e APK, voltado a pesquisa de seguran\u00e7a, n\u00e3o a construir feature.\n\n### 1b. Ferramentas verificadas\n\nFormato de cada linha: estrelas \u00b7 \u00faltimo push \u00b7 licen\u00e7a.\n\n**MCPs de engenharia reversa de bin\u00e1rio** (o Claude pilota um disassembler)\n\n| Repo | Dados | Observa\u00e7\u00e3o |\n|---|---|---|\n| LaurieWired/GhidraMCP | 11,2k \u00b7 10/10/2026 \u00b7 Apache-2.0 | Gr\u00e1tis; o Ghidra roda em Intel. S\u00f3 abre Mach-O j\u00e1 descriptografado |\n| clearbluejar/pyghidra-mcp | 444 \u00b7 10/10/2026 \u00b7 Apache-2.0 | Ghidra sem interface |\n| mrexodia/ida-pro-mcp | 12,8k \u00b7 26/09/2026 \u00b7 MIT | Precisa de licen\u00e7a paga do IDA Pro |\n| radareorg/radare2-mcp | 322 \u00b7 05/10/2026 \u00b7 MIT | Gr\u00e1tis, funciona em Intel |\n| fosdickio/binary_ninja_mcp | 454 \u00b7 GPL-3.0 | Binary Ninja \u00e9 pago |\n| mrphrazer/binary-ninja-headless-mcp | 257 \u00b7 19/09/2026 \u00b7 GPL-2.0 | Binary Ninja \u00e9 pago |\n| MxIris-Reverse-Engineering/HopperMCP | 162 \u00b7 13/04/2025 \u00b7 MIT | Comunit\u00e1rio; n\u00e3o achei MCP oficial do Hopper |\n| dflatline/HopperPyMCP | 83 \u00b7 09/2025 \u00b7 MIT | Comunit\u00e1rio |\n\n**Android** (s\u00f3 APK, n\u00e3o iOS)\n\n| Repo | Dados |\n|---|---|\n| zinja-coder/jadx-mcp-server | 801 \u00b7 09/10/2026 \u00b7 Apache-2.0 |\n| zinja-coder/apktool-mcp-server | 672 \u00b7 02/07/2026 \u00b7 Apache-2.0 |\n| SimoneAvogadro/android-reverse-engineering-skill | 8,1k \u00b7 12/10/2026 \u00b7 Apache-2.0 (skill do Claude Code) |\n\n**Inspe\u00e7\u00e3o em tempo de execu\u00e7\u00e3o** (enganchar num app rodando)\n\n| Repo | Dados | Observa\u00e7\u00e3o |\n|---|---|---|\n| dnakov/frida-mcp | 455 \u00b7 12/05/2025 \u00b7 MIT | Parado |\n| sensepost/objection | 9,4k \u00b7 17/09/2026 \u00b7 GPL-3.0 | No iOS exige jailbreak ou reassinar um IPA j\u00e1 descriptografado |\n| AloneMonkey/frida-ios-dump | 3,9k \u00b7 2023 | Descriptografa IPA; exige jailbreak |\n| ChiChou/bagbak | 1,5k | Descriptografa IPA; exige jailbreak; marcado como deprecated |\n| majd/ipatool | 11,7k \u00b7 11/10/2026 \u00b7 MIT | Baixa IPA da App Store, mas ele continua criptografado |\n\n**Outras skills de \"engenharia reversa\" pro Claude Code** (foco em seguran\u00e7a/CTF)\n- P4nda0s/reverse-skills: 2,3k, sem licen\u00e7a.\n- Masriyan/Claude-Code-CyberSecurity-Skill: 474.\n- Patr1ck-S/ios-reverse-engineering-skill: 9 estrelas, an\u00e1lise est\u00e1tica de IPA/Mach-O. Pequeno demais pra confiar.\n\n**Clonar UI ou site** (o outro sentido poss\u00edvel de \"engenharia reversa de app\")\n\n| Repo | Dados |\n|---|---|\n| abi/screenshot-to-code | 80,3k \u00b7 MIT, gera c\u00f3digo web (HTML/React), n\u00e3o SwiftUI |\n| firecrawl/open-lovable | 28,7k \u00b7 MIT, clona site pra React |\n| JCodesMore/ai-website-cloner-template | 36,7k \u00b7 MIT |\n| Jane-xiaoer/claude-skill-web-clone | 1,1k |\n| minosdevs/copycat-skill | 48 |\n\nTodos miram site. Nenhum reconstr\u00f3i app iOS nativo.\n\n**Capturar o tr\u00e1fego de rede de um app** (ver com que servidores fala e o que manda)\n- mitmproxy/mitmproxy: 45,5k, MIT.\n- snapspecter/mitmproxy-mcp: 126, 28/09/2026, MIT.\n- spectral-mcp/spectral: 121, MIT. Grava o tr\u00e1fego enquanto voc\u00ea usa o app e explica cada chamada de API.\n- ProxymanApp/Proxyman: proxy nativo de macOS que captura tr\u00e1fego de iOS. MCP do Proxyman **N\u00c3O VERIFICADO**.\n- No iOS, app com certificate pinning esconde o tr\u00e1fego, a n\u00e3o ser com jailbreak.\n\n**\"Conversar com qualquer repo\" e busca de c\u00f3digo** (usados no fluxo recomendado abaixo)\n- upstash/context7: 63k, MIT. Endpoint `mcp.context7.com` no ar.\n- DeepWiki MCP (Cognition): o endpoint remoto `mcp.deepwiki.com/mcp` responde. O repo `deepwiki/mcp` n\u00e3o existe; existe um wrapper comunit\u00e1rio, regenrek/deepwiki-mcp (1,4k).\n- idosal/git-mcp: 8,5k, Apache-2.0, \u00faltimo push 08/05/2026. `gitmcp.io` responde HTTP 200.\n- grep.app: o endpoint `mcp.grep.app` responde. S\u00f3 h\u00e1 um wrapper comunit\u00e1rio pequeno (ai-tools-all/grep_app_mcp, 78 estrelas); repo oficial **N\u00c3O VERIFICADO**.\n- Sourcegraph: o repo principal n\u00e3o \u00e9 mais p\u00fablico. MCP **N\u00c3O VERIFICADO**.\n- dkhamsing/open-source-ios-apps: 52,6k, CC0, atualizado hoje. Lista curada de apps iOS open source.\n- morluto/awesome-reverse-engineering: 433. Lista curada de ferramentas.\n\n### 1c. Engenharia reversa ajuda a construir features complexas nos nossos apps?\n\n**Pra concorrente iOS, quase nada.**\n1. **Criptografia.** Todo app da App Store sai criptografado pelo FairPlay da Apple. Ler o c\u00f3digo compilado exige descriptografar num iPhone com jailbreak, com ferramentas velhas ou abandonadas. Nos iPhones e iOS recentes, muitas vezes n\u00e3o existe jailbreak.\n2. **O que volta.** Mesmo descriptografado, Swift vira pseudoc\u00f3digo dif\u00edcil de ler. O disassembler n\u00e3o mostra a parte dif\u00edcil da feature: a escolha certa de APIs da Apple, os limiares ajustados, a l\u00f3gica de backend. L\u00f3gica de servidor nem est\u00e1 no app.\n3. **Risco jur\u00eddico.**\n   - Descriptografar FairPlay pode contar como burlar prote\u00e7\u00e3o contra c\u00f3pia (DMCA \u00a71201 nos EUA; leis parecidas em outros pa\u00edses).\n   - Os termos da Apple e a maioria das licen\u00e7as de app pro\u00edbem descompilar.\n   - Copiar c\u00f3digo descompilado \u00e9 viola\u00e7\u00e3o de copyright.\n   - Copiar feature de concorrente de perto demais d\u00e1 rejei\u00e7\u00e3o pelas guidelines 4.1 (imita\u00e7\u00e3o) e 4.3 (spam/app duplicado). J\u00e1 esbarramos em 4.3 antes.\n   - A vers\u00e3o segura \u00e9 **estudo de comportamento em sala limpa**: o que o app faz, quais frameworks da Apple linka (vis\u00edvel no Info.plist e na lista de bibliotecas), qual o formato das chamadas de rede. Depois, implementa\u00e7\u00e3o pr\u00f3pria.\n\n**Onde ajuda:**\n- APK Android (n\u00e3o \u00e9 criptografado).\n- Apps Electron e web.\n- Inspecionar os nossos pr\u00f3prios builds, por exemplo pra ver o que um SDK de terceiro faz de verdade.\n- mitmproxy num aparelho de teste pra ver o contorno da API de backend de um concorrente.\n\n### 1d. Fluxo recomendado no lugar\n1. **Dar nome \u00e0 feature dif\u00edcil e achar vers\u00f5es open source dela.** Buscar em dkhamsing/open-source-ios-apps e no grep.app c\u00f3digo que usa os frameworks certos (Vision, AVFoundation, Core ML, AlarmKit, HealthKit). Depois apontar o Claude pra esses repos via DeepWiki MCP ou GitMCP pra explicar a arquitetura. Aprender com c\u00f3digo de licen\u00e7a permissiva \u00e9 leg\u00edtimo.\n2. **Usar o material oficial da Apple:** sample code, c\u00f3digo das sess\u00f5es da WWDC e Context7 pra documenta\u00e7\u00e3o atualizada, pro agente n\u00e3o inventar API.\n3. **Ler paper pro algoritmo.** J\u00e1 fizemos isso na detec\u00e7\u00e3o de sono do Sunrise (actigrafia, Cole-Kripke): paper \u2192 prot\u00f3tipo com o agente \u2192 testes com dado simulado.\n4. **Estudar concorrente s\u00f3 pelo comportamento:** `competitor_intel.py` e `competitor-scout` (prints, reviews, brechas). Opcional: mitmproxy/Proxyman num aparelho de teste pra ver o formato da API. Opcional: ler o Info.plist e os frameworks linkados de um IPA baixado com `ipatool`. Sem descriptografar, sem copiar c\u00f3digo.\n5. **Se quiser testar o REA:** instalar com o Ghidra (gr\u00e1tis, roda em Intel) e usar em vers\u00f5es Android de concorrentes ou nos nossos pr\u00f3prios bin\u00e1rios. N\u00e3o montar plano de iOS em cima dele.\n\n---\n\n## 2. Cole\u00e7\u00f5es de skills, marketing, design, pesquisa e infraestrutura\n\nMais de 60 repos conferidos. Algumas contagens de estrelas parecem infladas (superpowers 299k, ECC 279k, taste-skill 96k, Agent-Reach 97k): julgar pelo conte\u00fado, n\u00e3o pelas estrelas.\n\n### 2.1 Cole\u00e7\u00f5es oficiais e curadas\n\n| Repo | Estrelas / \u00faltimo push / licen\u00e7a | Veredito |\n|---|---|---|\n| **anthropics/skills** | 181k / 09/10 / licen\u00e7a por skill (exemplos Apache-2.0, skills de documento source-available) | **Trazer o `skill-creator`**: faz benchmark de uma skill com vari\u00e2ncia e ajusta a descri\u00e7\u00e3o pra ela disparar de forma confi\u00e1vel. Fecha uma lacuna do lab: os `evals/` conferem o texto do prompt, mas n\u00e3o se a skill \u00e9 escolhida. Tamb\u00e9m `frontend-design` e `web-artifacts-builder` (Lab Hub, landing pages) e `mcp-builder` se formos embrulhar os scripts da ASC num MCP pr\u00f3prio. O resto \u00e9 ferramenta de documento que j\u00e1 temos. |\n| **anthropics/claude-plugins-official** | 38k / 13/10 / Apache-2.0 | **Trazer** `skill-creator`, `hookify` (escreve hook a partir de regra em texto, combina com os hooks de guarda do lab), `claude-md-management` (mant\u00e9m RULES/INDEX enxutos), `session-report`, `security-guidance`, e os plugins externos `firebase` e `context7`. Os plugins de language server, Laravel e Terraform n\u00e3o servem. |\n| **hesreallyhim/awesome-claude-code** | 56k / 14/10 / sem licen\u00e7a clara | Melhor \u00edndice curado pra garimpar ideia. Nada pra instalar direto. |\n| **punkpeye/awesome-mcp-servers** | 96k / 09/10 / MIT | Enorme e sem filtro. S\u00f3 pra consulta. |\n| **ComposioHQ/awesome-claude-skills** | 77k / 18/09 / nenhuma | Muita coisa depende dos conectores pagos da Composio. Pouco valor. |\n| **travisvn/awesome-claude-skills** | 15k / 28/04 | Ficando parado. Pular. |\n| **obra/superpowers** | 299k / 10/10 / MIT | M\u00e9todo completo de desenvolvimento (brainstorm, plano, teste primeiro, desenvolvimento por subagente). Sobrep\u00f5e `/lab-orchestrate` e `/develop-task`. Vale ler as skills `writing-skills` e verification-before-completion; n\u00e3o instalar tudo, porque competiria com os nossos coordenadores pelo disparo. |\n| **wshobson/agents** | 41k / 12/10 / MIT | Marketplace grande, voltado a backend e devops. N\u00e3o serve pro est\u00fadio. |\n| **VoltAgent/awesome-claude-code-subagents** | 26k / 11/10 / MIT | Personas gen\u00e9ricas de dev. N\u00e3o serve: nossos agentes j\u00e1 s\u00e3o especializados. |\n| **davila7/claude-code-templates** | 33k / 14/10 / MIT | CLI instalador + monitor de sess\u00e3o. Basicamente reempacota skills de outros. Pular. |\n\n### 2.2 Marketing, growth, ASO e an\u00fancios\n- **coreyhaines31/marketingskills** (55k, 14/10, MIT). O repo isolado mais rico pra n\u00f3s. Trazer: `paywalls`, `onboarding`, `pricing`, `offers`, `referrals`, `launch`, `copywriting`, `copy-editing`, `marketing-psychology`, `ab-testing`, `churn-prevention`, `customer-research`. A skill `aso` dele \u00e9 mais rasa que o nosso pipeline, e a maior parte das de SEO e vendas n\u00e3o serve.\n- **appeeky/aso-skills** (2,2k, 06/10, MIT). ~40 skills de ASO, mas os dados v\u00eam da API paga da Appeeky. Trazer s\u00f3 o m\u00e9todo: `in-app-events`, `custom-product-pages`, `seasonal-aso`, `rating-prompt-strategy`, `app-store-featured`, `paywall-optimization`, `subscription-lifecycle`, `app-rejection-recovery`, religados ao Astro e aos nossos scripts. O repo irm\u00e3o `appeeky/ua-skills` est\u00e1 **N\u00c3O VERIFICADO**.\n- **rshankras/claude-code-apple-skills** (796, 24/07, MIT). Ignorar as skills de build. Vale garimpar as pastas `product/`, `growth/`, `monetization/`, `legal/` e `release-review/`.\n- **appreply-co/mcp-appstore** (78, 11/10, MIT). MCP gr\u00e1tis que raspa App Store e Google Play: busca, detalhes, reviews, apps parecidos. Jeito r\u00e1pido de minerar review junto do `competitor_intel.py`.\n- **facundoolano/app-store-scraper** (1,4k, 07/2025, MIT). A biblioteca Node em que a maioria dos MCPs de App Store se apoia. \u00datil como depend\u00eancia se escrevermos o nosso minerador de reviews.\n- **appfigures/cli** (20, 09/10, Apache-2.0). CLI e MCP oficiais da Appfigures, com estimativa de download e receita. Exige plano pago.\n- **virusimmortal00/sensortower-mcp** (18, 10/2025). Comunit\u00e1rio, exige conta Sensor Tower. Baixa prioridade.\n- **AsoBeast/asobeast** (49, AGPL-3.0). Kit de ASO self-hosted. Novo demais pra confiar.\n- **MCPs de Apple Search Ads:** AppVisionOS/apple-search-ads-mcp (11 estrelas), Happygallo/apple-ads-mcp (7), imfaisii/apple-ads-mcp (2). Todos min\u00fasculos e de um autor s\u00f3. Nosso `scripts/apple-ads/` j\u00e1 cobre. N\u00e3o vale entregar as credenciais.\n- **An\u00fancios (Meta/TikTok/Google):** pipeboard-co/meta-ads-mcp (1,3k), googleads/google-ads-mcp (1k, oficial), AdsMCP/tiktok-ads-mcp-server (53). Pular: Meta Ads j\u00e1 foi descartado. **irinabuht12-oss/google-ads-meta-ads-mcp** (4,7k) \u00e9 um funil pro servi\u00e7o hospedado \"Ryze\" e pede login OAuth nas contas de an\u00fancio. Evitar.\n\n### 2.3 Design\n- **Wholiver/swiftui-design-skill** (207, 01/05, MIT). Seis regras contra SwiftUI com cara gen\u00e9rica de IA, mais orienta\u00e7\u00e3o de dire\u00e7\u00e3o de design. Encaixa bem no `screen-builder` e no `polish-reviewer`.\n- **gnurio/refactoring-ui-plugin** (445, 26/04, sem licen\u00e7a clara). Dez skills baseadas no livro Refactoring UI: hierarquia, espa\u00e7amento, cor, profundidade. Boa base pra pontuar screenshot no `spec/visual-review.md`. Ler o c\u00f3digo antes de usar, por causa da licen\u00e7a.\n- **Leonxlnx/taste-skill** (96k, 13/10, MIT) e **codeswithroh/tastemaker** (455). Dire\u00e7\u00e3o de arte voltada a web. S\u00f3 pra landing page ou pro hub.\n- **Figma:** o Dev Mode MCP oficial \u00e9 hospedado; o repo de docs **figma/mcp-server-guide** (2,1k) est\u00e1 verificado. **GLips/Figma-Context-MCP** (16k, MIT) \u00e9 a vers\u00e3o comunit\u00e1ria. S\u00f3 vale se desenh\u00e1ssemos no Figma, e o lab n\u00e3o desenha.\n- **ParthJadhav/app-store-screenshots** (7,3k, 09/10, MIT). Ferramenta de screenshot: os 18 estilos visuais e a biblioteca de t\u00edtulos valem leitura pro `print-copywriter`.\n- Gera\u00e7\u00e3o de \u00edcone: n\u00e3o achei repo p\u00fablico forte. O MCP do Gemini j\u00e1 cobre.\n\n### 2.4 Pesquisa e dados\n- **firecrawl/firecrawl-mcp-server** (7,6k, 14/10, MIT). Transforma site e central de ajuda de concorrente em texto limpo. Chave de API paga.\n- **apify/apify-mcp-server** (11k, 13/10, MIT). Acesso aos scrapers da Apify Store, inclusive de review da App Store, TikTok e Reddit. Paga por uso. Conferir o mantenedor de cada scraper antes de rodar.\n- **karanb192/reddit-mcp-buddy** (854, 17/08, MIT). Busca no Reddit sem login. A melhor ferramenta aqui pra pesquisa de dor do usu\u00e1rio (r/sleep, r/BabyLedWeaning e similares) pro `product-designer` e o `competitor-scout`.\n- **Panniantong/Agent-Reach** (97k, MIT). L\u00ea Twitter, Reddit e YouTube. Docs em chin\u00eas, e partes exigem os seus cookies de login. Cautela.\n- **googleanalytics/google-analytics-mcp** (3,5k, 02/10, Apache-2.0). MCP oficial do GA4, s\u00f3 leitura. Ganho marginal sobre o `ga4_pull.py`, e n\u00e3o conhece a nossa regra de isolamento por data stream (LEARNINGS #81): somaria apps que dividem a mesma property.\n- **PostHog/mcp** est\u00e1 ARQUIVADO.\n\n### 2.5 Comunidade e opera\u00e7\u00e3o de growth\n- **rokpiy/auto-commenter** (585) comenta no Reddit automaticamente. **nirholas/XActions** (591) automatiza o X. Os dois arriscam ban e marcar o est\u00fadio como spam. **N\u00e3o trazer.** Reddit s\u00f3 pra leitura.\n\n### 2.6 Infraestrutura de agentes\n- **ccusage/ccusage** (19k, 13/10; mudou de ryoppippi). Relat\u00f3rio de tokens e custo por dia e sess\u00e3o. Sobrep\u00f5e o nosso `agent_costs.py`; \u00fatil como segunda fonte pra conferir os n\u00fameros.\n- **edonadei/caliper** (211, 13/10, MIT). Roda o agente de verdade com e sem uma skill ou MCP e pontua se a skill foi escolhida e se funcionou. \u00c9 a camada de eval de comportamento que os nossos `evals/` ainda n\u00e3o t\u00eam.\n- **tripleyak/SkillForge** (909). Constr\u00f3i skill a partir de evid\u00eancia. Sobrep\u00f5e o `skill-creator`.\n- **thedotmack/claude-mem** (100k, Apache-2.0). Grava tudo o que o agente faz. Risco de privacidade, e a mem\u00f3ria do lab + LEARNINGS j\u00e1 cobrem. Pular.\n- **mksglu/context-mode** (28k, sem licen\u00e7a clara). Isola sa\u00edda grande de ferramenta pra economizar contexto. Pode ajudar com dumps grandes de ASC ou GA4. Testar num projeto primeiro.\n- **Sess\u00f5es em paralelo:** **smtg-ai/claude-squad** (8,6k, AGPL-3.0, tmux + git worktrees) e **johannesjo/parallel-code** (1k, MIT). Os dois batem com o LEARNINGS #93 (uma worktree por agente). **stravu/crystal** teve \u00faltimo push em 26/02 e virou Nimbalyst: parado. Conductor \u00e9 app de Mac de c\u00f3digo fechado; o repo est\u00e1 **N\u00c3O VERIFICADO**, e `gemini-cli-extensions/conductor` \u00e9 outra ferramenta. Lembrar do limite de 2 simuladores: sess\u00f5es em paralelo continuam passando pelo `simpool`.\n\n### 2.7 As 8 que eu traria, por impacto esperado\n1. **coreyhaines31/marketingskills** (`paywalls`, `onboarding`, `pricing`, `offers`, `churn-prevention`). Copiar pra `_GambitStudio/.claude/skills/` e fazer o `product-designer` e o trabalho com PaywallKit lerem. V\u00e3o direto na convers\u00e3o de trial pra pago e na receita.\n2. **reddit-mcp-buddy.** Adicionar ao MCP do lab, s\u00f3 leitura, e fazer o `competitor-scout` e o `product-designer` puxarem cita\u00e7\u00f5es de dor dos subreddits do nicho na Fase 0.5 do `/create-ios-app`.\n3. **appeeky/aso-skills** (s\u00f3 o m\u00e9todo). Portar `in-app-events`, `custom-product-pages`, `seasonal-aso` e `app-store-featured` como material de prompt do `aso-field-composer` e do `aso-listing-writer`, apontando pro Astro em vez da API paga. Alavancas de instala\u00e7\u00e3o que n\u00e3o usamos.\n4. **appreply-co/mcp-appstore.** Minera\u00e7\u00e3o gr\u00e1tis de review de concorrente em massa, ligada no `competitor-scout`. Alimenta a se\u00e7\u00e3o \"dores\" do `GAPS.md` sem gastar chamada do Astro.\n5. **`skill-creator` da Anthropic + `caliper`.** Rodar sobre os 20 agentes e skills pra medir se o certo \u00e9 escolhido e ajustar as descri\u00e7\u00f5es. Velocidade e qualidade no lab inteiro.\n6. **swiftui-design-skill + refactoring-ui-plugin.** Carregar no `screen-builder` e no passe visual do `polish-reviewer` como r\u00e9gua de pontua\u00e7\u00e3o. Ataca o problema do \"gen\u00e9rico e fraco\" (LEARNINGS #97).\n7. **claude-squad ou parallel-code.** Uma worktree por agente nas ondas de screen-builder e no trabalho multi-app, o que acaba com a colis\u00e3o no \u00edndice do git do #93.\n8. **Plugins oficiais `hookify` e `claude-md-management`.** Pra escrever hooks de guarda novos e manter RULES/INDEX/LEARNINGS-INDEX enxutos, o que reduz o contexto carregado em toda sess\u00e3o.\n\n### 2.8 Seguran\u00e7a\n- Skill e plugin de terceiro rodam com as nossas permiss\u00f5es. Muitos trazem script de instala\u00e7\u00e3o ou `npx skills add` (o taste-skill tem `install.sh`). Ler todo `SKILL.md` e script antes de copiar, travar num hash de commit e guardar a c\u00f3pia dentro do `_GambitStudio`. Nunca atualizar sozinho.\n- Hooks dentro de plugins rodam shell arbitr\u00e1rio. Conferir o `hooks.json` antes de habilitar.\n- N\u00e3o dar a `[chave]` da ASC, as chaves do Apple Ads nem a service account do GA pra nenhum MCP comunit\u00e1rio. Ficam nos nossos scripts. MCPs de Apple Search Ads de um autor s\u00f3 com 2-11 estrelas s\u00e3o o risco mais alto.\n- MCPs hospedados ou com OAuth (Ryze, Appeeky, Composio, Apify) mandam os nossos dados pra terceiros.\n- Ferramentas que usam os seus cookies de login (Agent-Reach, automa\u00e7\u00e3o do X) podem banir as suas contas.\n\nTamb\u00e9m procurei RevenueCat, PostHog e ferramentas de \u00edcone: nada que valha recomendar.\n\n---\n\n## 3. V\u00eddeo pra TikTok e Instagram\n\nAchei tr\u00eas repos que fazem o Claude Code criar v\u00eddeo. Os tr\u00eas est\u00e3o verificados, s\u00e3o MIT/Apache e rodam no Mac Intel. O caminho com mais evid\u00eancia de gerar instala\u00e7\u00e3o \u00e9 **slideshow sem rosto no TikTok postado como rascunho, mais demos curtas gravadas do app real**.\n\nOs tr\u00eas: Remotion com as skills oficiais, HeyGen HyperFrames (HTML pra v\u00eddeo, 62,9k estrelas) e digitalsamba/claude-code-video-toolkit. **O Remotion \u00e9 gr\u00e1tis pra n\u00f3s:** a licen\u00e7a cobre pessoa f\u00edsica e empresa de at\u00e9 3 funcion\u00e1rios, uso comercial inclu\u00eddo. Ponto de aten\u00e7\u00e3o: o Remotion 5.0 vai contar prestador de servi\u00e7o nesse tamanho.\n\n### 3.1 V\u00eddeo escrito em c\u00f3digo (o Claude escreve, renderiza local)\n\n| Repo | Estrelas / \u00faltimo | Licen\u00e7a | Observa\u00e7\u00e3o |\n|---|---|---|---|\n| **remotion-dev/remotion** | 63,9k / 13/10/2026 | Remotion License | React \u2192 MP4 via Chrome headless e ffmpeg. Gr\u00e1tis pra pessoa f\u00edsica e empresa de at\u00e9 3 funcion\u00e1rios, inclusive comercial; empresa maior paga. Tem bin\u00e1rio pra Mac Intel (`@remotion/compositor-darwin-x64` 4.0.535). Renderiza na CPU: lento no Intel, mas funciona. |\n| **remotion-dev/skills** | 5,1k / 12/10/2026 | (n\u00e3o informada) | Agent Skills oficiais (`npx skills add remotion-dev/skills`): `/remotion-best-practices`, `/remotion-create` e outras. |\n| **heygen-com/hyperframes** | 62,9k / 14/10/2026 | Apache-2.0 | \"Escreva HTML. Renderize v\u00eddeo. Feito pra agentes.\" Precisa de Node \u226522 e ffmpeg (Chrome headless via Puppeteer). Instala como plugin do Claude Code (`claude plugin install hyperframes@hyperframes`). 21 skills, entre elas `/product-launch-video`, `/embedded-captions`, `/music-to-video` e `/faceless-explainer`. O fluxo mais pr\u00f3ximo do nosso caso. |\n| **digitalsamba/claude-code-video-toolkit** | 2,2k / 12/10/2026 | MIT | Workspace de ponta a ponta (`/video`): roteiro, voz (Qwen3-TTS), imagem (FLUX), m\u00fasica, render. Roda os modelos de IA numa GPU na nuvem (Modal), o que serve pro Mac Intel. |\n| motion-canvas/motion-canvas | 19,3k / 07/2026 | MIT | Anima\u00e7\u00e3o em TypeScript; centrado no editor, sem skills de agente. |\n| Revideo, hoje **midrender/revideo** | 4,1k / 07/2026 | MIT | Fork do Motion Canvas. A URL antiga `redotvideo/revideo` redireciona. |\n| 3b1b/manim \u00b7 ManimCommunity/manim | 95k \u00b7 41,5k | MIT | S\u00f3 explicativo de matem\u00e1tica. Pouco valor aqui. |\n| **KyaniteLabs/kinocut** (ex-mcp-video) | 203 / 13/10/2026 | Apache-2.0 | MCP de edi\u00e7\u00e3o com ffmpeg e HyperFrames: cortes, legenda, reaproveitamento. |\n| samuelgursky/davinci-resolve-mcp | 3,5k / 14/10/2026 | MIT | Precisa do DaVinci Resolve **Studio**, que \u00e9 pago. |\n| burningion/video-editing-mcp | 292 / 10/2025 | nenhuma | Front-end do Video Jungle, SaaS pago. |\n| misbahsy/video-audio-mcp \u00b7 Kush36Agrawal/Video_Editor_MCP | 89 \u00b7 51 | MIT \u00b7 nenhuma | MCPs b\u00e1sicos de ffmpeg. Os dois parados (sem atividade desde mai/2025 e jan/2025). |\n| Automa\u00e7\u00e3o do CapCut | \u2014 | \u2014 | N\u00e3o achei API oficial nem repo cr\u00edvel. **N\u00c3O VERIFICADO.** |\n\n### 3.2 Geradores sem rosto (voz + v\u00eddeo de banco + legenda)\n\n| Repo | Estrelas / \u00faltimo | Licen\u00e7a | Observa\u00e7\u00e3o |\n|---|---|---|---|\n| harry0703/MoneyPrinterTurbo | 130,6k / 14/10/2026 | MIT | Tema entra, v\u00eddeo curto sai: roteiro por LLM, Edge TTS (gr\u00e1tis), v\u00eddeo do Pexels/Pixabay, legenda, postagem direta. Funciona s\u00f3 com CPU. |\n| FujiwaraChoki/MoneyPrinterV2 \u00b7 MoneyPrinter | 32,1k \u00b7 14,1k | AGPL \u00b7 MIT | Automa\u00e7\u00e3o \"ganhe dinheiro online\". |\n| gyoridavid/short-video-maker | 1,4k / **06/2025** (parado) | MIT | MCP + Remotion + Kokoro + Whisper + Pexels, em Docker (\u22653 GB RAM). **S\u00f3 vozes em ingl\u00eas.** |\n| RayVentura/ShortGPT | 8k / **02/2025** (parado) | MIT | Experimental. |\n\nTodos usam v\u00eddeo de banco e nunca mostram o app. \u00c9 o perfil que TikTok e Instagram agora rebaixam como \"n\u00e3o original\" (se\u00e7\u00e3o 3.6). **N\u00e3o recomendado** como trilha principal.\n\n### 3.3 APIs de v\u00eddeo e voz por IA (custos de sites que rastreiam pre\u00e7o, 2026)\n- **Veo 3.1** (API do Gemini, alcan\u00e7\u00e1vel pelo MCP do Gemini que j\u00e1 temos): padr\u00e3o US$ 0,40/s; **Fast US$ 0,10-0,12/s**; Lite US$ 0,05-0,08/s.\n- **Sora 2: n\u00e3o contar com ele.** V\u00e1rias fontes dizem que a OpenAI anunciou o fim em 24/03/2026 e que **a API foi descontinuada em 24/09/2026**.\n- **Kling:** ~US$ 0,06-0,42/s. **Runway:** Gen-4 Turbo US$ 0,05/s, Gen-4.5 US$ 0,12/s. **Hailuo 02:** ~US$ 0,40-0,48 por 5 s em 1080p. **Higgsfield:** pre\u00e7o de API p\u00fablico n\u00e3o encontrado (**N\u00c3O VERIFICADO**).\n- **ElevenLabs:** o repo local `elevenlabs/elevenlabs-mcp` est\u00e1 **arquivado**; foi substitu\u00eddo por um MCP hospedado em `https://api.elevenlabs.io/v1/mcp` (OAuth). Plano gr\u00e1tis de 10 mil cr\u00e9ditos/m\u00eas; pre\u00e7o dos planos pagos de mem\u00f3ria do agente, n\u00e3o conferido (~US$ 5-22/m\u00eas).\n- **Avatar / UGC:** API da HeyGen ~US$ 1/min com avatar padr\u00e3o e US$ 4-6/min com Avatar IV; planos web a partir de US$ 29/m\u00eas. Arcads ~**US$ 11 por v\u00eddeo pronto** (US$ 110 por 10). Captions: n\u00e3o conferido.\n\n### 3.4 Gravar o app real\n- **`xcrun simctl io <UDID> recordVideo`**, conduzido pelos fluxos do **Maestro** que j\u00e1 temos (tocam por accessibility id). D\u00e1 tomadas repet\u00edveis em todos os idiomas, com simulador do sim-pool.\n- **software-mansion-labs/goldie**: 2,5k estrelas, MIT, ativo em 06/10/2026. \"Previews e screenshots de App Store por agente.\" Reproduz fluxos no simulador (com driver pr\u00f3prio, o argent), p\u00f5e moldura do aparelho e t\u00edtulo, monta um **App Preview H.264 886\u00d71920 de 15-30 s** e confere contra as regras da loja. Vem com plugin do Claude Code. Precisa de Node \u226520 e ffmpeg.\n- **trunghaiy/appshot**: 48 estrelas, MIT, \u00faltimo em 06/2026. V\u00eddeos de preview baseados em Remotion com skills do Claude. Projeto pequeno.\n- RocketSim (comercial) grava toques e moldura.\n\n### 3.5 Postagem e agendamento\n- **gitroomhq/postiz-app**: 37,2k estrelas, AGPL-3.0, ativo. Pode rodar no nosso Mac. Tem **MCP hospedado em `api.postiz.com/mcp`** com 8 ferramentas (`schedulePostTool`, `integrationList`, \u2026) e o **gitroomhq/postiz-agent**, uma CLI (515 estrelas). \u00c9 o que o \"Larry\" usou pra ler analytics.\n- inovector/mixpost: 3,8k, MIT (edi\u00e7\u00e3o Lite), \u00faltimo 03/2026. Quais redes est\u00e3o na Lite vs. na Pro paga: **n\u00e3o conferido**.\n- **Upload-Post:** gr\u00e1tis at\u00e9 10 uploads/m\u00eas; US$ 24/m\u00eas ilimitado pra 5 perfis. **Ayrshare:** a partir de US$ 149/m\u00eas.\n- **n8n-io/n8n:** 207k, licen\u00e7a \"fair-code\". **czlonkowski/n8n-mcp:** 23k, MIT.\n- **API de postagem do TikTok:** post de cliente n\u00e3o auditado sai **for\u00e7ado como SELF_ONLY (privado)**, limitado a 5 usu\u00e1rios por 24 h, e a conta tem que ser privada. A auditoria leva 2-6 semanas. Contorno: **subir como rascunho** na caixa de entrada do TikTok, depois p\u00f4r um som em alta e publicar \u00e0 m\u00e3o. A API tamb\u00e9m n\u00e3o escolhe som. Postagem de carrossel de fotos \u00e9 suportada.\n- **Instagram Graph API:** s\u00f3 conta profissional, com a permiss\u00e3o `instagram_content_publish`. A revis\u00e3o da Meta s\u00f3 \u00e9 exigida pra usu\u00e1rios que **n\u00e3o** t\u00eam papel no seu app da Meta: as nossas pr\u00f3prias contas, com papel no app, pulam a revis\u00e3o. Limite de 50 posts por API em 24 h.\n\n### 3.6 O que gera instala\u00e7\u00e3o (evid\u00eancia)\n- **Slideshow (carrossel de fotos) \u00e9 o canal indie mais bem documentado.**\n  - \"Larry\", agente OpenClaw do Oliver Henry: carross\u00e9is de 6 slides, subidos como rascunho via Postiz, som posto \u00e0 m\u00e3o. Reportou 8 milh\u00f5es de views numa semana e US$ 714 de MRR. Autodeclarado; um post seguinte chamado \"\u2026Then It Broke\" n\u00e3o diz o que quebrou. O guia de quem pratica tamb\u00e9m aconselha 7-14 dias de uso normal de conta nova antes de postar automaticamente (n\u00e3o \u00e9 oficial).\n  - Stronger Mobile (estudo de caso da Shortimize): 725 posts em 295 dias, 98% dos melhores eram slideshows, ~700 mil usu\u00e1rios. A atribui\u00e7\u00e3o usu\u00e1rios \u2190 TikTok \u00e9 frouxa.\n- **Gancho, depois problema, depois a tela do app como revela\u00e7\u00e3o**, com o fundador ou um rosto identific\u00e1vel no slide 1. Ganha de b-roll de banco.\n- **As plataformas est\u00e3o punindo conte\u00fado n\u00e3o original.**\n  - Instagram (abril/2026): contas em que a maioria dos posts em 30 dias \u00e9 repost param de ser recomendadas.\n  - TikTok rebaixa clipe reciclado emendado com fade gen\u00e9rico. Tamb\u00e9m exige r\u00f3tulo em conte\u00fado realista de IA e detecta sozinho via C2PA.\n- **App Preview da App Store:** tem que ter 15-30 s e ser feito de captura real de tela do app. A trilha B e o Goldie geram isso.\n\n### 3.7 Pipeline recomendado pro est\u00fadio\n\n**Trilha A \u2014 slideshows, 80% do volume.** Pra cada app, o Claude escreve 10-20 \u00e2ngulos de gancho a partir dos termos de ASO e das dores nos reviews dos concorrentes. Renderiza 6 slides em 1080\u00d71920:\n1. Gancho\n2. Problema\n3. Agravamento\n4. Tela real do app (reaproveitando o GambitScreenshotKit ou os prints code-driven, renderizados com HyperFrames ou Remotion)\n5. Resultado\n6. Chamada pra baixar\n\nOpcional: imagem do Nano Banana no slide de gancho. O carrossel vai como rascunho pro TikTok e como carrossel ou Reel pro Instagram via Postiz (no nosso Mac, US$ 0) ou Upload-Post (US$ 24). **Passo manual: ~1 minuto por post**, p\u00f4r um som em alta e publicar pelo celular.\n\n**Trilha B \u2014 Reels de demo do app real, ~2 por app por m\u00eas.** Fluxo do Maestro \u2192 `simctl recordVideo` \u2192 `/product-launch-video` do HyperFrames ou template de Remotion. O template p\u00f5e moldura do aparelho, legenda animada, gancho no primeiro segundo e locu\u00e7\u00e3o em EN/PT/ES via MCP hospedado da ElevenLabs. A mesma fonte vira o App Preview pelo Goldie.\n\n**Trilha C \u2014 opcional.** 1-2 clipes de gancho por semana com Veo 3.1 Fast (por exemplo uma cena de \"celular roubado\" pro WTMP), marcados como IA.\n\n**Medi\u00e7\u00e3o:** um link por conta com token de campanha da App Store (`ct=`), lido no App Analytics. **Pular** geradores de v\u00eddeo de banco estilo MoneyPrinter e ferramentas de avatar at\u00e9 a trilha A mostrar sinal.\n\n**Custo mensal estimado: ~US$ 45-90.**\n\n| Item | Custo |\n|---|---|\n| Claude | j\u00e1 est\u00e1 no plano |\n| Remotion / HyperFrames / Postiz no nosso Mac | US$ 0 |\n| ElevenLabs | ~US$ 5-22 |\n| Imagens (~60 posts \u00d7 6, ~US$ 0,04 cada) | ~US$ 15 |\n| Veo Fast (20 clipes \u00d7 6 s \u00d7 US$ 0,12) | ~US$ 15 |\n| Upload-Post (opcional) | US$ 24 |\n\nArcads, se um dia entrar: ~US$ 110.\n\n### 3.8 Riscos principais\n1. **Trava de auditoria do TikTok.** Postagem direta fica privada at\u00e9 passar na auditoria: ficar no rascunho. Desconfiar de ferramenta que promete \"publicar sozinho\".\n2. **Rebaixamento de conte\u00fado em massa e n\u00e3o original.** Variar templates, ter sempre uma tela real do app em cada post, n\u00e3o repostar no Instagram o arquivo do TikTok com marca d'\u00e1gua e rotular conte\u00fado realista de IA.\n3. **Aquecimento e m\u00faltiplas contas.** Uma conta por grupo de apps, aquecida 7-14 dias, criada num celular de verdade. Muitas contas do mesmo aparelho ou IP \u00e9 causa comum de supress\u00e3o.\n4. **Limites do Mac Intel.** Render pesa na CPU (rodar em lote de madrugada exige pedido seu, j\u00e1 que a automa\u00e7\u00e3o noturna est\u00e1 desligada). O limite de 2 simuladores vale pra trilha B. Modelos de IA na nuvem, n\u00e3o local. Falta instalar o ffmpeg.\n5. **Estudos de caso autodeclarados.** Tratar views e instala\u00e7\u00f5es acima como dire\u00e7\u00e3o. Medir cada app pelo token de campanha antes de escalar.\n\n**Fontes:**\n- [LICENSE do Remotion](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md) \u00b7 [PR 3750 (mudan\u00e7as de licen\u00e7a do 5.0)](https://github.com/remotion-dev/remotion/pull/3750) \u00b7 [remotion-dev/skills](https://github.com/remotion-dev/skills)\n- [HyperFrames](https://github.com/heygen-com/hyperframes) \u00b7 [claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) \u00b7 [Goldie](https://github.com/software-mansion-labs/goldie) \u00b7 [appshot](https://github.com/trunghaiy/appshot) \u00b7 [kinocut](https://github.com/KyaniteLabs/kinocut)\n- [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) \u00b7 [short-video-maker](https://github.com/gyoridavid/short-video-maker) \u00b7 [ElevenLabs MCP (arquivado)](https://github.com/elevenlabs/elevenlabs-mcp)\n- [Docs do MCP do Postiz](https://docs.postiz.com/mcp/introduction) \u00b7 [postiz-agent](https://github.com/gitroomhq/postiz-agent)\n- [Refer\u00eancia da API Direct Post do TikTok](https://developers.tiktok.com/doc/content-posting-api-reference-direct-post) \u00b7 [bundle.social sobre aprova\u00e7\u00e3o da API do TikTok](https://bundle.social/blog/tiktok-api-approval) \u00b7 [Publica\u00e7\u00e3o de conte\u00fado no Instagram](https://developers.facebook.com/docs/instagram-platform/content-publishing)\n- [Pre\u00e7o do Veo 3.1 (benchlm)](https://benchlm.ai/media-pricing/veo) \u00b7 [Linha do tempo do fim do Sora (Zilliz)](https://zilliz.com/ai-faq/what-is-the-sora-shutdown-timeline) \u00b7 [Engadget sobre o Sora](https://engadget.com/ai/openai-is-shutting-down-its-sora-video-generation-app-211023358.html) \u00b7 [Pre\u00e7o do Kling (costbench)](https://costbench.com/software/ai-media-apis/kling-api/)\n- [Pre\u00e7o da HeyGen (diyai)](https://diyai.io/ai-tools/video-generation/heygen-pricing/) \u00b7 [Pre\u00e7o da Arcads (eesel)](https://www.eesel.ai/en/blog/arcads-ai-pricing) \u00b7 [Upload-Post vs Ayrshare](https://www.ayrshare.com/compare/upload-post-api-alternative/)\n- [Guia do Larry (stack-junkie)](https://www.stack-junkie.com/blog/how-to-automate-tiktok-marketing-with-openclaw-larry-skill-deep-dive) \u00b7 [Larry (gameplaydev)](https://gameplaydev.substack.com/p/how-his-openclaw-agent-larry-got) \u00b7 [Caso Stronger Mobile (Shortimize)](https://shortimize.com/blog/the-slideshow-strategy-that-generated-700000-users-in-275-days)\n- [Pol\u00edtica de originalidade do Instagram (PetaPixel)](https://petapixel.com/2026/04/30/new-instagram-policies-target-reposted-content/) \u00b7 [Pol\u00edtica de conte\u00fado de IA do TikTok (cinerads)](https://www.cinerads.com/blog/tiktok-ai-content-policy)\n\n---\n\n## 4. Dev iOS, App Store Connect e QA\n\nTodos os repos conferidos na API do GitHub hoje. Arquitetura dos bin\u00e1rios conferida pelos assets de release ou com `file`. Nosso Mac \u00e9 i7-9750H (x86_64) com Xcode 26.1.\n\n### 4.1 Build e simulador\n\n| Repo | Estrelas / \u00faltimo push / licen\u00e7a | O que faz | Instala\u00e7\u00e3o | Ressalvas |\n|---|---|---|---|---|\n| **getsentry/MobileBuildMCP** (\u00e9 o XcodeBuildMCP; `cameroncooke/` e `getsentry/XcodeBuildMCP` redirecionam pra c\u00e1) | 6476 / 09/10/2026 / MIT, v2.7.1 (23/09) | MCP + CLI: build, teste, rodar, logs, debugger, toque/swipe/snapshot de UI no simulador e no device | `brew tap getsentry/xcodebuildmcp && brew install mobilebuildmcp`, ou `npx -y mobilebuildmcp@latest mcp` | Ativo. A automa\u00e7\u00e3o de UI usa o cameroncooke/AXe, bin\u00e1rio **universal**: roda em Intel. Manda telemetria de erro pra Sentry (d\u00e1 pra desligar). Precisa de macOS 14.5+ e Xcode 16+. |\n| **mobile-next/mobile-mcp** | 9108 / 12/10/2026 / Apache-2.0, 1.0.10 | Mesmas ferramentas pra iOS e Android, simulador e device | `claude mcp add mobile-mcp -- npx -y @mobilenext/mobile-mcp@latest` | Ativo. O auxiliar `mobilecli` tem `macos-amd64`: Intel ok. |\n| **callstack/agent-device** | 4999 / 14/10/2026 / MIT, v0.21.27 | CLI + MCP pro agente conferir a pr\u00f3pria mudan\u00e7a no app rodando (iOS, Android, tvOS) | `npm i -g agent-device` | Ativo. Precisa de Node 22.12+. No iOS passa por um runner XCTest, pesado pra Mac fraco. |\n| joshuayoes/ios-simulator-mcp | 2191 / 13/08/2026 / MIT, v2.1.0 | MCP de simulador sobre idb | npx | Duplica o nosso sim-mcp (tamb\u00e9m idb). LEARNINGS #47: idb n\u00e3o enxerga iOS 26. |\n| appium/appium-mcp | 498 / 13/10/2026 / Apache-2.0 | Appium via MCP | npx | Ativo, mas o WebDriverAgent \u00e9 pesado. N\u00e3o vale com o Maestro j\u00e1 no lugar. |\n| mobile-dev-inc/maestro-mcp | 32 / **arquivado** 06/2025 | \u2014 | \u2014 | Morto. O suporte a MCP agora vem dentro da pr\u00f3pria CLI do Maestro (mobile-dev-inc/Maestro, 16k, cli-2.11.0 em 29/09). |\n| **`xcrun mcpbridge` do Xcode** (Apple, fora do GitHub) | vem no Xcode 26.3+ | ~20 ferramentas do Xcode via MCP (BuildProject, RunSomeTests, RenderPreview\u2026) | `claude mcp add xcode -- xcrun mcpbridge` | Nosso Xcode \u00e9 **26.1** e `xcrun -f mcpbridge` falha: precisa atualizar antes. \u00c0 parte, o agente Claude embutido no Xcode baixa um bin\u00e1rio s\u00f3 arm64 no Intel (\"Bad CPU type\"); existe contorno manual ([f\u00f3rum da Apple](https://developer.apple.com/forums/thread/840995)). N\u00e3o consegui confirmar se o mcpbridge roda em Intel. |\n| r-huijts/xcode-mcp-server (385, 02/2026) \u00b7 lapfelix/XcodeMCP (59, 02/2026) \u00b7 giginet/xcodeproj-mcp-server (133, 09/2026) | MIT/Apache | Wrappers do Xcode e edi\u00e7\u00e3o de pbxproj | \u2014 | Quase todos parados. N\u00e3o precisamos editar pbxproj: usamos xcodegen. |\n\n### 4.2 App Store Connect, an\u00fancios e monetiza\u00e7\u00e3o\n\n| Repo | Estrelas / push / licen\u00e7a | O que faz | Ressalvas |\n|---|---|---|---|\n| **rorkai/App-Store-Connect-CLI** (`asc`; `rudrankriyam/` redireciona pra c\u00e1) | 7826 / 13/10/2026 / MIT, 5.14.3 (13/10) | CLI em Go: builds, TestFlight, submiss\u00f5es, `review doctor`, `status --until review-done`, metadata, auditoria de keyword, plano/aplica\u00e7\u00e3o/matriz de screenshots, assinatura, pre\u00e7o | `brew install asc`. Tem bin\u00e1rio `macOS_amd64`: Intel ok. Telemetria local ligada por padr\u00e3o. Sobrep\u00f5e muito os nossos scripts Python. |\n| **rorkai/app-store-connect-cli-skills** | 1073 / 12/10/2026 / MIT | 26 skills: `asc-submission-health`, `asc-crash-triage`, `asc-ppp-pricing`, `asc-aso-audit`, `asc-shots-pipeline`, `asc-whats-new-writer`\u2026 | `asc install-skills`. Depende do `asc`. |\n| erayendes/app-store-connect-mcp (\"Heimdall\") | 52 / 13/10/2026 / MIT, v2.6.0 | API da ASC + App Store Server API como MCP (diz ter 890 ferramentas) | Novo, e 890 ferramentas \u00e9 contexto demais pra carregar. |\n| JoshuaRileyDev/app-store-connect-mcp-server | 331 / **arquivado** 09/2025 | \u2014 | Morto. |\n| AppVisionOS/apple-search-ads-mcp | 11 / 05/2026 / MIT | Campaign API v5 do Apple Ads, 74 ferramentas | Imaturo. Nossos scripts `apple-ads/` j\u00e1 cobrem. |\n| RevenueCat/ai-toolkit (s\u00f3 pra registro) | 73 / 01/10/2026 / MIT | Plugin + MCP hospedado em `mcp.revenuecat.ai` ([docs](https://www.revenuecat.com/docs/tools/mcp/setup)) | N\u00e3o se aplica: a regra do lab \u00e9 StoreKit 2 e nunca RevenueCat. |\n\n### 4.3 Skills de Swift/SwiftUI e docs da Apple\n\n| Repo | Estrelas / push | Observa\u00e7\u00e3o |\n|---|---|---|\n| **AvdLee/SwiftUI-Agent-Skill** | 3680 / 06/10, MIT | Ativo. Formato Agent Skills. |\n| **AvdLee/Swift-Concurrency-Agent-Skill** | 1679 / 14/09, MIT | Migra\u00e7\u00e3o pra Swift 6 e problemas de Sendable. |\n| AvdLee/Swift-Testing-, Core-Data-, Xcode-Build-Optimization-, Xcode-Di[redigido] | 470 / 315 / 1255 / 58, 14/09 | Build-Optimization e Di[redigido] servem bem pro Mac Intel lento (LEARNINGS #91 \u00e9 sobre disco cheio). |\n| **twostraws/SwiftUI-Agent-Skill** | 5874 / 07/10, MIT | Paul Hudson. Tamb\u00e9m: Swift-Concurrency (570), Swift-Testing (461), SwiftData (447). `twostraws/SwiftAgents` (1467, sem licen\u00e7a) \u00e9 um template de AGENTS.md. |\n| twostraws/Swift-Agent-Skills | 2863 / 04/09 | \u00cdndice curado de skills, n\u00e3o skills em si. |\n| Dimillian/Skills | 3997 / **29/03/2026** | 16 skills voltadas ao Codex (Liquid Glass, auditoria de performance de SwiftUI, ios-debugger-agent via XcodeBuildMCP). Ficando parado. |\n| **CharlesWiltgen/Axiom** | 1208 / 13/10, MIT | Plugin do Claude Code com 280 skills e 42 agentes, mais ferramentas: `xcsym` (simboliza\u00e7\u00e3o de crash de .ips/MetricKit), `xclog`, `xcui`, `xcprof`. O `xcsym` que vem pronto \u00e9 **s\u00f3 arm64** (conferido com `file`). No Intel tem que recompilar a partir do c\u00f3digo Go em `tools/`. |\n| NSHipster/sosumi.ai | 480 / 21/09, MIT | Docs da Apple, HIG e WWDC em Markdown. MCP hospedado em `https://sosumi.ai/mcp`, sem instalar nada. |\n| kimsungwhee/apple-docs-mcp | 1384 / 03/2026, \u00faltimo release 09/2025 | Funciona, mas desacelerando. |\n\n### 4.4 Crash e analytics\n- **firebase/firebase-tools** (4472, v15.33.0 em 08/10, MIT): o `firebase mcp` tem m\u00f3dulo `crashlytics` (`get_issue`, `update_issue`, eventos, relat\u00f3rios, notas), mais remoteconfig e messaging. N\u00e3o tem m\u00f3dulo de GA4. Instala com `npx firebase-tools mcp`.\n- **googleanalytics/google-analytics-mcp** (3451, 0.7.0 em 29/07, Apache-2.0, marcado experimental): `run_report`, `run_funnel_report`, `run_realtime_report`. Funciona com ADC, ent\u00e3o a service account ga-admin serve. Ressalva: **n\u00e3o tem trava de stream**, ent\u00e3o reintroduziria o bug do LEARNINGS #81 (property compartilhada somando v\u00e1rios apps).\n- getsentry/toolkit (o antigo `getsentry/sentry-mcp`, 928): s\u00f3 serve se adotarmos o Sentry. Hoje n\u00e3o usamos.\n\n### 4.5 Screenshots e \u00edcones\n\n| Repo | Estrelas / push | Observa\u00e7\u00e3o |\n|---|---|---|\n| ParthJadhav/app-store-screenshots | 7304 / 09/10, MIT | Skill que monta um editor de screenshot em Next.js: canvas conectado, 18 estilos, todos os tamanhos de export. \u00c9 o oposto da nossa regra de fidelidade code-driven. |\n| bitomule/Koubou | 210 / v0.21.0 em 12/10, MIT | YAML \u2192 screenshots, localizados a partir do xcstrings, render via Playwright. `pip install koubou`. |\n| hypersocialinc/shots | 243 / 04/2026, **sem licen\u00e7a** | Screenshots por GPT-Image. Sem licen\u00e7a, n\u00e3o d\u00e1 pra reaproveitar. |\n| Geradores de \u00edcone | \u2014 | Nada maduro: DaleXiao/icon-forge tem 1 estrela. O MCP do Gemini \u00e9 melhor. |\n\n### 4.6 App Review e privacidade\n\n| Repo | Estrelas / push / licen\u00e7a | Observa\u00e7\u00e3o |\n|---|---|---|\n| **RevylAI/greenlight** | 2444 / 05/08, v0.2.0, MIT | `greenlight preflight .` varre c\u00f3digo, privacy manifests, IPA e metadata da ASC contra as guidelines (24 regras de c\u00f3digo). Tem bin\u00e1rio `darwin_amd64`. O `verify` exige a nuvem paga da Revyl. |\n| **safaiyeh/app-store-review-skill** | 373 / v1.4.0 em 13/10, MIT | Confere o c\u00f3digo contra todas as guidelines, atualizado at\u00e9 a revis\u00e3o de 08/06/2026. `/plugin marketplace add safaiyeh/app-store-review-skill`. |\n| crasowas/app_privacy_manifest_fixer | 241 / 07/2025, MIT | Script shell que corrige privacy manifests, inclusive de SDK. Ficando parado. |\n| stelabouras/privacy-manifest (376, 2024) \u00b7 Wooder/ios_17_required_reason_api_scanner (647, 2024) | | Abandonados. |\n\n### 4.7 As 5 que eu traria\n1. **MobileBuildMCP (XcodeBuildMCP).** Troca o encanamento manual de `xcodebuild` + `DEVELOPER_DIR` por erro de build estruturado, execu\u00e7\u00e3o de teste, captura de log e LLDB numa ferramenta s\u00f3. A camada de UI (AXe) \u00e9 universal e enxerga a \u00e1rvore de acessibilidade, o que ajuda no iOS 26, onde o idb \u00e9 cego. Ressalva: apontar sempre pros UDIDs do sim-pool, nunca deixar ele bootar simulador pr\u00f3prio.\n2. **safaiyeh/app-store-review-skill + greenlight.** Fecham uma lacuna real. Nosso preflight s\u00f3 conhece as rejei\u00e7\u00f5es que j\u00e1 tomamos (2.5.14, 5.1.1, 4, permiss\u00f5es); esses conferem contra o conjunto inteiro e atual de guidelines. Rodar antes de todo archive e transformar achado novo em check do `preflight.py`. O greenlight sobrep\u00f5e em parte os nossos checks de privacidade e permiss\u00e3o.\n3. **Axiom.** A simboliza\u00e7\u00e3o de crash do `xcsym` e os agentes de auditoria de concorr\u00eancia e mem\u00f3ria cobrem diagn\u00f3stico de crash, que hoje n\u00e3o temos. Precisa recompilar as ferramentas Go pra x86_64. 280 skills \u00e9 muito: habilitar s\u00f3 as que servem.\n4. **Skills do AvdLee (SwiftUI + Concurrency + Xcode-Build-Optimization)**, com as do twostraws como alternativa. Baratas, mantidas, e fazem o `screen-builder` e o `polish-reviewer` produzirem SwiftUI mais moderno. A de Build-Optimization fala direto com o Mac Intel lento. N\u00e3o duplicam nada, mas as fatias do `spec/` continuam sendo a autoridade: conferir conflito com MVVM e com a regra das 600 linhas.\n5. **MCP do Firebase (Crashlytics).** Lemos GA4 mas n\u00e3o temos acesso ao Crashlytics: com ele um agente puxa os principais crashes por vers\u00e3o (o que o LEARNINGS #54 pede). Pular o MCP do GA: o nosso `ga4_pull.py` com a trava de stream \u00e9 mais seguro.\n\n**Duplicatas, quase tudo pular:**\n- CLI `asc` e as skills dele: ~80% igual \u00e0 nossa pilha Python da ASC. Vale pegar ideia do `asc review doctor`, do `asc-ppp-pricing` e do `asc-submission-health`, mas n\u00e3o migrar.\n- ios-simulator-mcp: mesma base idb do nosso sim-mcp.\n- MCP do Maestro: arquivado.\n- MCP de ASA e Heimdall: imaturos.\n- Geradores de screenshot: brigam com o nosso look da casa.\n- sosumi: um extra gr\u00e1tis e bom pra consultar documenta\u00e7\u00e3o.\n\n**Problemas com Intel:**\n- O agente Claude embutido no Xcode baixa arm64 no Intel.\n- As ferramentas prontas do Axiom s\u00e3o s\u00f3 arm64.\n- O mcpbridge exige Xcode 26.3+ (estamos no 26.1); n\u00e3o confirmei se roda em Intel.\n- Todo o resto que conferi tem bin\u00e1rio x86_64 ou universal, ou \u00e9 Node/Python.\n\nFontes: [InfoQ: agentic coding no Xcode 26.3](https://infoq.com/news/2026/02/xcode-26-3-agentic-coding) \u00b7 [Usando o MCP do Xcode com Claude Code](https://danielsaidi.com/blog/2026/04/30/using-xcode-mcp-with-claude-code) \u00b7 [F\u00f3rum da Apple: agente do Xcode no Intel](https://developer.apple.com/forums/thread/840995) \u00b7 [Setup do MCP da RevenueCat](https://www.revenuecat.com/docs/tools/mcp/setup)\n\n---\n\n## 5. Como seguimos\n\nOrdem por custo \u00d7 retorno. Tudo de terceiro entra lido, travado num commit e copiado pra dentro do `_GambitStudio`, sem chave do lab entregue a MCP comunit\u00e1rio.\n\n**Onda 1 \u2014 de gra\u00e7a, sem risco, ganho imediato no dev** (eu fa\u00e7o quando voc\u00ea der o ok)\n1. Context7 + DeepWiki/GitMCP + sosumi: documenta\u00e7\u00e3o atualizada e \"conversar com repo\" pra feature dif\u00edcil. Substituem a ideia da engenharia reversa.\n2. MobileBuildMCP, preso aos UDIDs do sim-pool.\n3. app-store-review-skill + greenlight no pr\u00e9-archive; achado novo vira check do `preflight.py`.\n4. Skills de SwiftUI/Concurrency/Build-Optimization do AvdLee e swiftui-design-skill no `screen-builder` e no `polish-reviewer`, conferidas contra o `spec/`.\n5. MCP do Firebase s\u00f3 com o m\u00f3dulo Crashlytics.\n\n**Onda 2 \u2014 convers\u00e3o e pesquisa**\n6. marketingskills (paywall, onboarding, pre\u00e7o, ofertas, churn) no `product-designer` e no PaywallKit.\n7. reddit-mcp-buddy + mcp-appstore no `competitor-scout` (dores reais e reviews em massa).\n8. M\u00e9todo das aso-skills (In-App Events, Custom Product Pages, sazonal, featuring) no `aso-field-composer` e no `aso-listing-writer`.\n\n**Onda 3 \u2014 v\u00eddeo (\u00e9 a que precisa de decis\u00e3o sua)**\n9. Piloto em 1 app: instalar ffmpeg + HyperFrames, gerar 10 slideshows e 2 demos do app real, App Preview com Goldie.\n10. Voc\u00ea cria a conta do TikTok/Instagram no celular e aquece 7-14 dias. Os posts v\u00e3o como rascunho; voc\u00ea p\u00f5e o som e publica (~1 min por post).\n11. Medir instala\u00e7\u00e3o por token de campanha em 30 dias antes de estender pros outros apps.\n\n**Fica de fora:** engenharia reversa de app iOS de concorrente, geradores de v\u00eddeo de banco (MoneyPrinter), automa\u00e7\u00e3o de postagem/coment\u00e1rio em Reddit/X, MCPs de ads de um autor s\u00f3, MCP oficial do GA4, CLI `asc` como substituto dos nossos scripts.\n\n**Decis\u00f5es suas:**\n- Qual app vai no piloto de v\u00eddeo. Candidatos com gancho visual forte: WTMP (antifurto), Sunrise (alarme), Walk.\n- Se topa US$ 45-90/m\u00eas no piloto de v\u00eddeo.\n- Se eu sigo com as ondas 1 e 2 direto.\n";</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.getElementById("md").innerHTML=window.marked?marked.parse(RAW):"<pre>"+RAW.replace(/</g,"&lt;")+"</pre>";</script></div><script>
+// chip #N: copia a referência do item pra conversa. clipboard pode ser negado
+// (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".iid"); if(!b) return;
+  e.preventDefault();
+  var t=b.dataset.ref||b.textContent, done=function(ok){
+    var old=b.textContent; b.textContent=ok?"copiado":t; b.classList.toggle("ok",ok);
+    setTimeout(function(){b.textContent=t;b.classList.remove("ok");},1100);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});
+  } else {
+    var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); var ok=false; try{ok=document.execCommand("copy");}catch(err){}
+    document.body.removeChild(ta); done(ok);
+  }
+});
+</script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
