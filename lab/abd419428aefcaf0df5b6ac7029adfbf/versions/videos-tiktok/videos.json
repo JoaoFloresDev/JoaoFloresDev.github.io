@@ -88,17 +88,6 @@
   "ref": "CALC-02"
  },
  {
-  "slug": "calcplus-03-pov",
-  "app": "Calc+",
-  "num": "03",
-  "title": "POV: me mostra aquela foto",
-  "hook": "Mini-cena nativa estilo slideshow, voz masculina (Antonio)",
-  "status": "wait",
-  "dur": 17,
-  "cover_t": 1.0,
-  "ref": "CALC-03"
- },
- {
   "slug": "cloak-06-lista",
   "app": "Cloak",
   "num": "06",
