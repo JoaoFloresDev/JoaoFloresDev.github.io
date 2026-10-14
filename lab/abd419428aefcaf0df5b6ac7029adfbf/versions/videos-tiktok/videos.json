@@ -6,7 +6,8 @@
   "title": "Apps privados",
   "hook": "“Emprestou o celular e foram direto no seu Instagram?”",
   "status": "ok",
-  "dur": 23
+  "dur": 23,
+  "cover_t": 2.9
  },
  {
   "slug": "cloak-02-app-de-banco",
@@ -15,7 +16,8 @@
   "title": "App de banco",
   "hook": "“Roubaram seu celular desbloqueado?”",
   "status": "ok",
-  "dur": 21
+  "dur": 21,
+  "cover_t": 4.5
  },
  {
   "slug": "cloak-03-sem-x-com",
@@ -24,7 +26,8 @@
   "title": "Sem Cloak × Com Cloak",
   "hook": "“Nunca empreste seu celular sem fazer isso.”",
   "status": "wait",
-  "dur": 15
+  "dur": 15,
+  "cover_t": 1.92
  },
  {
   "slug": "calcplus-01-calculadora",
@@ -33,7 +36,8 @@
   "title": "Isso NÃO é uma calculadora",
   "hook": "Senha na calculadora abre o cofre + senha falsa",
   "status": "wait",
-  "dur": 16
+  "dur": 16,
+  "cover_t": 1.2
  },
  {
   "slug": "calcplus-04-comenta",
@@ -42,7 +46,8 @@
   "title": "Qual conta abre teu cofre? (sem narração)",
   "hook": "Isca de comentário, brutalista amarelo, só batida + efeitos",
   "status": "wait",
-  "dur": 16
+  "dur": 16,
+  "cover_t": 1.4
  },
  {
   "slug": "cloak-04-desafio",
@@ -51,7 +56,8 @@
   "title": "Acha o app em 3 segundos",
   "hook": "Desafio com contagem + loop: “Tem um app escondido nesse celular”",
   "status": "wait",
-  "dur": 14
+  "dur": 14,
+  "cover_t": 0.7
  },
  {
   "slug": "cloak-05-em-casa",
@@ -60,7 +66,8 @@
   "title": "Só aparece em casa",
   "hook": "Loop aberto noturno: “Meu celular muda sozinho quando eu chego em casa”",
   "status": "wait",
-  "dur": 19
+  "dur": 19,
+  "cover_t": 0.6
  },
  {
   "slug": "calcplus-02-rg",
@@ -69,7 +76,8 @@
   "title": "Pare de deixar foto do RG na galeria",
   "hook": "Alerta vermelho/preto, carimbo EXPOSTO, documentos vão pro cofre",
   "status": "wait",
-  "dur": 19
+  "dur": 19,
+  "cover_t": 2.3
  },
  {
   "slug": "calcplus-03-pov",
@@ -78,7 +86,8 @@
   "title": "POV: me mostra aquela foto",
   "hook": "Mini-cena nativa estilo slideshow, voz masculina (Antonio)",
   "status": "wait",
-  "dur": 17
+  "dur": 17,
+  "cover_t": 1.0
  },
  {
   "slug": "cloak-06-lista",
@@ -87,6 +96,7 @@
   "title": "3 ajustes que todo iPhone devia ter",
   "hook": "Lista editorial creme/serifa, 2 dicas nativas + Cloak como nº 3",
   "status": "wait",
-  "dur": 24
+  "dur": 24,
+  "cover_t": 0.8
  }
 ]
