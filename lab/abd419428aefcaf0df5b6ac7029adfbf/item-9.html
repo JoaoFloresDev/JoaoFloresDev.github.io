@@ -553,21 +553,22 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 14:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Situação das 4 decisões em 14/10 (conferido na ASC): 1. Sunrise — semanal US$ 1,99 com trial de 3 dias no SEMANAL; anual US$ 9,99 → 12,99 a partir de 16/10 (não 14,99) — o trial no anual é o item #260. 2. Feito: a 1.4.0 está no ar. 3. Hair — sem como confirmar por API o que o premium destrava. 4. Hair — o trial continua no semanal (3 dias, 175 territórios); mover pro anual também é o item #260.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 14:26</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Recursos da App Store Connect pra usar nas próximas versões (evento, nomination, CPP)</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Atualizado 14/10: as duas versões fecharam — Hair 1.2.0 e Sunrise 1.4.0 estão no ar (READY_FOR_SALE), então isto pode ser retomado. O plano abaixo mudou num ponto: a Hair 1.2.0 saiu com deep link `cronograma://tutorial/&lt;id&gt;` (e o link universal gambitstudiotech.com/app/tutorial/&lt;id&gt;, que depende do arquivo AASA no domínio), não com `hairschedule://scan` — hoje o evento só pode apontar pra um tutorial; abrir o scanner por link precisa de rota nova num próximo release. O Sunrise continua sem esquema de URL na tag release/1.4.0-b14.
 
-VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md.
+PLANO DO PRIMEIRO TESTE — Hair Schedule 1.2.0
+1. No build: esquema de URL hairschedule:// no project.yml + .onOpenURL que abre o scanner de rótulo (a Apple só aceita evento com deep link pro conteúdo dentro do app; hoje o app não tem nenhum).
+2. Nomination (Featuring): mandar ANTES da review, assim que tiver a data prevista (a Apple recomenda semanas de antecedência). Script pronto: _GambitStudio/scripts/asc/nominate.py --app-id 6771595616 --type APP_ENHANCEMENTS --publish-start &lt;data&gt; --submit. Não é automático nos releases, só quando pedir.
+3. In-App Event &quot;Escaneie seus rótulos&quot; (badge Atualização importante, deep link hairschedule://scan, grátis). Alternativa: &quot;Monte sua prateleira em 7 dias&quot; (Desafio). Enviar o evento quando a versão estiver na loja, porque a Apple testa o link no app publicado.
+4. Anexar o evento à nomination (o formulário tem campo pra In-App Events): aumenta a chance de ir pra aba Hoje.
+Garantido com o evento aprovado: card na página do app + nome/descrição indexados na busca. Aba Hoje e coleções: escolha editorial.
 
-Relatório completo: botão &quot;Abrir relatório&quot; (reports/2026-09-27_results-audit/REPORT.md).
+SUNRISE (depois)
+- &quot;Novos desafios pra acordar&quot;: funciona, mas os desafios novos são Premium, então o evento aparece como &quot;Compra no app&quot;.
+- &quot;Fim do horário de verão sem sono&quot; (Europa 25/10, EUA 01/11): só vale com uma feature real, tipo adiantar o alarme 10 min por dia na semana anterior.
+- Também precisa de esquema de URL (sunrise://).
 
-Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
 
-Decisões (sim/não), com a recomendação:
-1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
-2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
-3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
-4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
-
-[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="md/reports__2026-09-27_results-audit__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){

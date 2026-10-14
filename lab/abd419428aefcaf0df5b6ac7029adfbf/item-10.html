@@ -553,13 +553,21 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 14:22</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Pré-prompt de avaliação: o código já está limpo, mas a LOJA ainda vende a versão com ele no BLW e no Walk — falta release</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Atualizado 14/10: a Hair 1.2.0 está no ar (READY_FOR_SALE) e o código da tag release/8 não tem RatingGate — esse app está resolvido. Faltam BLW (no ar: 1.5.3) e Walk (no ar: 7.3.0), as duas anteriores à remoção.
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 14/10 14:26</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Situação das 4 decisões em 14/10 (conferido na ASC): 1. Sunrise — semanal US$ 1,99 com trial de 3 dias no SEMANAL; anual US$ 9,99 → 12,99 a partir de 16/10 (não 14,99) — o trial no anual é o item #260. 2. Feito: a 1.4.0 está no ar. 3. Hair — sem como confirmar por API o que o premium destrava. 4. Hair — o trial continua no semanal (3 dias, 175 territórios); mover pro anual também é o item #260.
 
-Verificado no source em 02/10: `RatingGate` = **0 ocorrências** em BLW, Walk (stepsSwiftUI), Hair (Cronogram-Capilar) e DevLingo. A remoção de 11/09 está feita.
+VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md.
 
-O que sobra é release: nas versões no ar do BLW e do Walk o usuário ainda vê o pré-prompt e o crash do &#x27;sim&#x27; (LEARNINGS #85/#88).
+Relatório completo: botão &quot;Abrir relatório&quot; (reports/2026-09-27_results-audit/REPORT.md).
 
-Separado disso: iPhotos e BLW seguem **sem Crashlytics** (0 referências no source) — crash-free deles é ausência de sensor, não 100% (LEARNINGS #86).</p></div><div class=btns style="margin-top:16px"><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
+
+Decisões (sim/não), com a recomendação:
+1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
+2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
+3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
+4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
+
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="md/reports__2026-09-27_results-audit__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
