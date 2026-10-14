@@ -141,5 +141,27 @@
   "dur": 8,
   "cover_t": 0.46,
   "status": "wait"
+ },
+ {
+  "slug": "cloak-08-curto-acao",
+  "ref": "CLK-08",
+  "app": "Cloak",
+  "num": "08",
+  "title": "SUMIU. (8 s)",
+  "hook": "Curto: no meio da ação, app de banco some",
+  "dur": 8,
+  "cover_t": 0.9,
+  "status": "wait"
+ },
+ {
+  "slug": "cloak-09-curto-pergunta",
+  "ref": "CLK-09",
+  "app": "Cloak",
+  "num": "09",
+  "title": "Cadê o app do banco? (9 s)",
+  "hook": "Curto: pergunta + lupa, sem voz no início",
+  "dur": 9,
+  "cover_t": 0.6,
+  "status": "wait"
  }
 ]
