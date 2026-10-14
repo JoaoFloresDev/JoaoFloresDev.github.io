@@ -208,5 +208,18 @@
   "sound": "trilha original no projeto (kit pop_124, Lyria, aparada a partir de 1,95 s). Som em alta: escolher no TikTok Creative Center > Musicas em alta (BR) um pop leve/quiz e alinhar o drop com o carimbo PODE em 2,34 s (nao verificado por mim qual som esta em alta hoje)",
   "ai_label": true,
   "status": "wait"
+ },
+ {
+  "slug": "blw-03-o-que-e-blw",
+  "ref": "BLW-03",
+  "app": "BLW",
+  "num": "03",
+  "title": "O que é BLW em 3 regras",
+  "hook": "BLW não é jogar comida na mão do bebê.",
+  "dur": 18,
+  "cover_t": 2.2,
+  "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM) cortada em 1,8 s, já entra cheia em ~0,2 s, fade 0,4 s no fim. No TikTok, se trocar: som acústico/lo-fi suave em alta da Biblioteca Comercial, sem drop forte, entrando em 0 s, 15-20% sob a voz (nenhum som específico verificado como em alta).",
+  "ai_label": true,
+  "status": "wait"
  }
 ]
