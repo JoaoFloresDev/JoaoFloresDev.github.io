@@ -7,7 +7,8 @@
   "hook": "“Emprestou o celular e foram direto no seu Instagram?”",
   "status": "ok",
   "dur": 23,
-  "cover_t": 2.9
+  "cover_t": 2.9,
+  "ref": "CLK-01"
  },
  {
   "slug": "cloak-02-app-de-banco",
@@ -17,7 +18,8 @@
   "hook": "“Roubaram seu celular desbloqueado?”",
   "status": "ok",
   "dur": 21,
-  "cover_t": 4.5
+  "cover_t": 4.5,
+  "ref": "CLK-02"
  },
  {
   "slug": "cloak-03-sem-x-com",
@@ -27,7 +29,8 @@
   "hook": "“Nunca empreste seu celular sem fazer isso.”",
   "status": "wait",
   "dur": 15,
-  "cover_t": 1.92
+  "cover_t": 1.92,
+  "ref": "CLK-03"
  },
  {
   "slug": "calcplus-01-calculadora",
@@ -37,7 +40,8 @@
   "hook": "Senha na calculadora abre o cofre + senha falsa",
   "status": "wait",
   "dur": 16,
-  "cover_t": 1.2
+  "cover_t": 1.2,
+  "ref": "CALC-01"
  },
  {
   "slug": "calcplus-04-comenta",
@@ -47,7 +51,8 @@
   "hook": "Isca de comentário, brutalista amarelo, só batida + efeitos",
   "status": "wait",
   "dur": 16,
-  "cover_t": 1.4
+  "cover_t": 1.4,
+  "ref": "CALC-04"
  },
  {
   "slug": "cloak-04-desafio",
@@ -57,7 +62,8 @@
   "hook": "Desafio com contagem + loop: “Tem um app escondido nesse celular”",
   "status": "wait",
   "dur": 14,
-  "cover_t": 0.7
+  "cover_t": 0.7,
+  "ref": "CLK-04"
  },
  {
   "slug": "cloak-05-em-casa",
@@ -67,7 +73,8 @@
   "hook": "Loop aberto noturno: “Meu celular muda sozinho quando eu chego em casa”",
   "status": "wait",
   "dur": 19,
-  "cover_t": 0.6
+  "cover_t": 0.6,
+  "ref": "CLK-05"
  },
  {
   "slug": "calcplus-02-rg",
@@ -77,7 +84,8 @@
   "hook": "Alerta vermelho/preto, carimbo EXPOSTO, documentos vão pro cofre",
   "status": "wait",
   "dur": 19,
-  "cover_t": 2.3
+  "cover_t": 2.3,
+  "ref": "CALC-02"
  },
  {
   "slug": "calcplus-03-pov",
@@ -87,7 +95,8 @@
   "hook": "Mini-cena nativa estilo slideshow, voz masculina (Antonio)",
   "status": "wait",
   "dur": 17,
-  "cover_t": 1.0
+  "cover_t": 1.0,
+  "ref": "CALC-03"
  },
  {
   "slug": "cloak-06-lista",
@@ -97,6 +106,7 @@
   "hook": "Lista editorial creme/serifa, 2 dicas nativas + Cloak como nº 3",
   "status": "wait",
   "dur": 24,
-  "cover_t": 0.8
+  "cover_t": 0.8,
+  "ref": "CLK-06"
  }
 ]
