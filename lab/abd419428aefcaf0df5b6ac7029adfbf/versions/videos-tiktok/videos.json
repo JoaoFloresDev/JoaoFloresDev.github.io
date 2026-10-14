@@ -43,5 +43,32 @@
   "hook": "Isca de comentário, brutalista amarelo, só batida + efeitos",
   "status": "wait",
   "dur": 16
+ },
+ {
+  "slug": "cloak-04-desafio",
+  "app": "Cloak",
+  "num": "04",
+  "title": "Acha o app em 3 segundos",
+  "hook": "Desafio com contagem + loop: “Tem um app escondido nesse celular”",
+  "status": "wait",
+  "dur": 14
+ },
+ {
+  "slug": "cloak-05-em-casa",
+  "app": "Cloak",
+  "num": "05",
+  "title": "Só aparece em casa",
+  "hook": "Loop aberto noturno: “Meu celular muda sozinho quando eu chego em casa”",
+  "status": "wait",
+  "dur": 19
+ },
+ {
+  "slug": "calcplus-02-rg",
+  "app": "Calc+",
+  "num": "02",
+  "title": "Pare de deixar foto do RG na galeria",
+  "hook": "Alerta vermelho/preto, carimbo EXPOSTO, documentos vão pro cofre",
+  "status": "wait",
+  "dur": 19
  }
 ]
