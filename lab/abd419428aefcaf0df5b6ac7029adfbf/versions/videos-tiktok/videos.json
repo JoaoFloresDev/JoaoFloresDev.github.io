@@ -234,5 +234,18 @@
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, pop leve ~125 BPM) cortada no 1º tempo forte (2,035 s), loop de 4 compassos x4 + o final natural da faixa, fade 0,7 s; música gerada por IA (o TikTok pode rotular se mantida). No TikTok, trocar por som da Biblioteca Comercial no estilo receita: pop/acústico alegre e leve, 115-128 BPM, sem voz, volume ~70%, entrando em 0 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-05-o-que-muda-no-prato",
+  "ref": "BLW-05",
+  "app": "BLW",
+  "num": "05",
+  "title": "O que muda no prato, dos 6 meses aos 2 anos",
+  "hook": "O que muda no prato do bebê, dos seis meses até os dois anos?",
+  "dur": 42,
+  "cover_t": 3.0,
+  "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM): intro muda cortada (entra no downbeat de 2,04 s, cheia desde o quadro 0), loop de 8 compassos [2,04-17,44 s] com crossfade de 50 ms, fade 1 s no fim, volume 0,3 sob a voz. A faixa é gerada por IA (Lyria): se o TikTok rotular, trocar por som leve/acústico em alta da Biblioteca Comercial, 15-20% sob a voz (nenhum som específico verificado como em alta).",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
