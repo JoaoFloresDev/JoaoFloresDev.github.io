@@ -320,5 +320,31 @@
   "sound": "Sem áudio no projeto. No TikTok: som da Biblioteca Comercial pop/acústico alegre de receita, 120-128 BPM, sem voz, entrando em 0 s; os cortes seguem a grade de 0,48 s e o 1º corte forte é em 2,88 s (gancho -> ingredientes), depois troca de passo a cada 3,36 s (7,68 / 11,04 / 14,40 / 17,77 / 21,13 / 24,49 s), dica em 27,85 s e cartão final em 32,65 s",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-15-um-dia-8-meses",
+  "ref": "BLW-15",
+  "app": "BLW",
+  "num": "15",
+  "title": "Rotina alimentar aos 8 meses: o dia todo (sem áudio)",
+  "hook": "Rotina alimentar aos 8 meses",
+  "dur": 38,
+  "cover_t": 2.1,
+  "sound": "Sem áudio no projeto. No TikTok: pop leve/alegre da Biblioteca Comercial, 120-128 BPM, sem voz, entrando em 0 s; os cortes seguem a grade de 0,48 s (125 BPM) e o 1º corte forte é em 3,36 s (gancho → 'Café da manhã'), com trocas de refeição em 6,72 / 10,08 / 16,32 / 19,68 / 23,52 / 26,88 / 30,24 e cartão final em 34,56 s.",
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-10-sobrou-arroz-feijao",
+  "ref": "BLW-10",
+  "app": "BLW",
+  "num": "10",
+  "title": "Sobrou arroz e feijão? Bolinho assado (sem áudio)",
+  "hook": "Sobrou arroz e feijão?",
+  "dur": 35,
+  "cover_t": 2.4,
+  "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/funk leve e alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'FAZ ISSO' em 1,44 s (alinhar um tempo forte/drop ali) e a troca para 'Bolinho de arroz e feijão' em 3,84 s. Nenhum som específico verificado como em alta hoje.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
