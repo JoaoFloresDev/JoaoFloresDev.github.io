@@ -266,5 +266,18 @@
   "ai_label": true,
   "status": "publicado",
   "status_at": "2026-10-15"
+ },
+ {
+  "slug": "blw-13-mito-ou-verdade",
+  "ref": "BLW-13",
+  "app": "BLW",
+  "num": "13",
+  "title": "Mito ou verdade? 3 dúvidas da introdução alimentar (sem áudio)",
+  "hook": "Mito ou verdade?",
+  "dur": 37,
+  "cover_t": 1.7,
+  "sound": "Sem áudio no projeto. No TikTok: pop/trend animado 120-128 BPM, sem voz (o ritmo visual segue a grade de 0,48 s). 1º corte forte em 3,36 s (gancho -> rodada 1); carimbos batem em 7,20 s, 15,84 s e 24,49 s — escolher um som com drop/batida forte perto de 3,4 s, ou alinhar o início do som para que um tempo forte caia em 7,2 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
