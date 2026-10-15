@@ -279,5 +279,18 @@
   "sound": "Sem áudio no projeto. No TikTok: pop/trend animado 120-128 BPM, sem voz (o ritmo visual segue a grade de 0,48 s). 1º corte forte em 3,36 s (gancho -> rodada 1); carimbos batem em 7,20 s, 15,84 s e 24,49 s — escolher um som com drop/batida forte perto de 3,4 s, ou alinhar o início do som para que um tempo forte caia em 7,2 s.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-14-parece-mas-nao-e",
+  "ref": "BLW-14",
+  "app": "BLW",
+  "num": "14",
+  "title": "Parece suco, mas não é (sem áudio)",
+  "hook": "Parece suco, mas não é.",
+  "dur": 26,
+  "cover_t": 2.2,
+  "sound": "Sem áudio no arquivo. No TikTok: som da Biblioteca Comercial pop/eletrônico leve e animado, ~125 BPM (grade de 0,48 s), sem voz, entrando em 0 s. 1º corte forte em 0,96 s (o '?' vira '1%' com tremida); swipes do carrossel em 3,84 / 7,20 / 10,56 (SUCO vira CARNE) / 13,92 s; carimbos em 11,52 e 14,88 s; cartão final em 22,09 s. Escolher um som cujo drop caia perto de 1 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
