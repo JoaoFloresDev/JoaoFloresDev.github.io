@@ -372,5 +372,18 @@
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos (7,682 s) com crossfade de 30 ms, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,07 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-16-monte-o-prato-4-grupos",
+  "ref": "BLW-16",
+  "app": "BLW",
+  "num": "16",
+  "title": "Monte o prato em 4 peças (sem áudio)",
+  "hook": "Monte o prato em 4 peças",
+  "dur": 31,
+  "cover_t": 2.0,
+  "sound": "Sem áudio no projeto. No TikTok: pop leve/alegre da Biblioteca Comercial, 120-128 BPM, sem voz, entrando em 0 s. 1º corte forte em 0,96 s (as 4 peças se encaixam no prato: escolher som com batida/drop logo no início); depois as trocas seguem a grade de 0,48 s: peça 1 em 3,84 s (encaixe 4,80), peça 2 em 7,68 (8,64), peça 3 em 11,52 (12,48), peça 4 em 15,36 (16,32), prato completo 19,20, pergunta 24,01, cartão final 27,37-31,21 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
