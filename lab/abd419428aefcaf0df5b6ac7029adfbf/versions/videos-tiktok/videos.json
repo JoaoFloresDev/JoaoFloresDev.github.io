@@ -359,5 +359,18 @@
   "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 3,1 s (gancho -> '3 dicas'). Se trocar no TikTok: som leve/acústico ou pop fofo da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 3 s.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-21-pode-manga",
+  "ref": "BLW-21",
+  "app": "BLW",
+  "num": "21",
+  "title": "6 meses pode manga? (ep. 2)",
+  "hook": "Bebê de seis meses pode comer manga?",
+  "dur": 25,
+  "cover_t": 2.0,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos (7,682 s) com crossfade de 30 ms, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,07 s (nenhum som específico verificado como em alta hoje).",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
