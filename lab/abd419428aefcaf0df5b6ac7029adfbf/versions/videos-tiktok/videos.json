@@ -424,5 +424,18 @@
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,31 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-19-acucar-so-depois-2-anos",
+  "ref": "BLW-19",
+  "app": "BLW",
+  "num": "19",
+  "title": "Mascavo também é açúcar: nada até os 2 anos",
+  "hook": "Açúcar mascavo também é açúcar.",
+  "dur": 35,
+  "cover_t": 1.85,
+  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 2,03 s (gancho -> contagem '2 ANOS'). Se trocar no TikTok: pop fofo/leve da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 2 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
