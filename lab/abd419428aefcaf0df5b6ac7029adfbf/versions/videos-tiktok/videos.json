@@ -346,5 +346,18 @@
   "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/funk leve e alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'FAZ ISSO' em 1,44 s (alinhar um tempo forte/drop ali) e a troca para 'Bolinho de arroz e feijão' em 3,84 s. Nenhum som específico verificado como em alta hoje.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-17-recusou-oferece-de-novo",
+  "ref": "BLW-17",
+  "app": "BLW",
+  "num": "17",
+  "title": "Recusou a comida? Oferece de novo",
+  "hook": "Recusou a comida? Calma, oferece de novo.",
+  "dur": 30,
+  "cover_t": 3.0,
+  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 3,1 s (gancho -> '3 dicas'). Se trocar no TikTok: som leve/acústico ou pop fofo da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 3 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
