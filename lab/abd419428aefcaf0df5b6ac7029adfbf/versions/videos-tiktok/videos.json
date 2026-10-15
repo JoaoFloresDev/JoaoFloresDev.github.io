@@ -437,5 +437,18 @@
   "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 2,03 s (gancho -> contagem '2 ANOS'). Se trocar no TikTok: pop fofo/leve da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 2 s.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-20-nao-escorre-da-colher",
+  "ref": "BLW-20",
+  "app": "BLW",
+  "num": "20",
+  "title": "Escorre da colher? O ponto certo da comida",
+  "hook": "Escorre da colher? Ficou rala demais.",
+  "dur": 33,
+  "cover_t": 2.3,
+  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 2,66 s (gancho -> citação do Guia). Se trocar no TikTok: pop fofo/acústico da Biblioteca Comercial a 15-20% sob a voz, batida entrando até 3 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
