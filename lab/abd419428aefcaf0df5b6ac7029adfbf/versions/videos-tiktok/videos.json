@@ -177,7 +177,8 @@
   "cover_t": 2.3,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, pop leve ~125 BPM) cortada no 1º tempo forte (2,035 s), loop de 4 compassos x4 + o final natural da faixa, fade 0,7 s; música gerada por IA (o TikTok pode rotular se mantida). No TikTok, trocar por som da Biblioteca Comercial no estilo receita: pop/acústico alegre e leve, 115-128 BPM, sem voz, volume ~70%, entrando em 0 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-05-o-que-muda-no-prato",
@@ -190,7 +191,8 @@
   "cover_t": 3.0,
   "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM): intro muda cortada (entra no downbeat de 2,04 s, cheia desde o quadro 0), loop de 8 compassos [2,04-17,44 s] com crossfade de 50 ms, fade 1 s no fim, volume 0,3 sob a voz. A faixa é gerada por IA (Lyria): se o TikTok rotular, trocar por som leve/acústico em alta da Biblioteca Comercial, 15-20% sob a voz (nenhum som específico verificado como em alta).",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-11-uma-conta-abre",
@@ -220,7 +222,8 @@
   "cover_t": 2.05,
   "sound": "Trilha do kit (_kit/music/pop_124.mp3, gerada por Lyria, ~125 BPM) cortada em 1,95 s, já cheia em ~0,1 s, 8 compassos (2,03-17,39 s) em loop no compasso com crossfade de 40 ms, fade de 0,5 s no fim, volume 0,3 sob a voz. Faixa é música gerada por IA (o vídeo não tem imagem de IA). No TikTok, se trocar: som leve/acústico da Biblioteca Comercial a 15-20% sob a voz.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-03-o-que-e-blw",
@@ -233,7 +236,8 @@
   "cover_t": 2.35,
   "sound": "Trilha original do kit (_kit/music/pop_124.mp3, Lyria, pop leve 124 BPM) cortada em 1,8 s e estendida a 27,4 s com loop de 16 tempos no compasso, já entra cheia em ~0,2 s, fade 0,4 s no fim. No TikTok, se trocar: som acústico/lo-fi suave em alta da Biblioteca Comercial, sem drop forte, entrando em 0 s, 15-20% sob a voz (nenhum som específico verificado como em alta).",
   "ai_label": true,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-02-abacate-6-meses",
@@ -246,7 +250,8 @@
   "cover_t": 2.0,
   "sound": "trilha original no projeto (kit pop_124, Lyria, aparada a partir de 1,95 s e estendida em loop de 4 compassos ate 21,5 s). Som em alta: escolher no TikTok Creative Center > Musicas em alta (BR) um pop leve/quiz e alinhar o drop com o carimbo PODE em 2,21 s (nao verificado por mim qual som esta em alta hoje)",
   "ai_label": true,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-01-banana-casca",
@@ -259,6 +264,7 @@
   "cover_t": 3.15,
   "sound": "trocar a trilha por um som acustico/ukulele alegre em alta na aba Sons do TikTok (busca 'ukulele happy' / 'cute morning'), com o drop alinhado em ~2.2 s, quando a voz diz 'Nao tira toda a casca'",
   "ai_label": true,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  }
 ]
