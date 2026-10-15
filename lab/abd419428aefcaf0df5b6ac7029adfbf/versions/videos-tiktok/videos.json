@@ -450,5 +450,18 @@
   "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 2,66 s (gancho -> citação do Guia). Se trocar no TikTok: pop fofo/acústico da Biblioteca Comercial a 15-20% sob a voz, batida entrando até 3 s.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-26-agua-quando-comecar",
+  "ref": "BLW-26",
+  "app": "BLW",
+  "num": "26",
+  "title": "Água antes dos 6 meses?",
+  "hook": "Seu bebê precisa de água antes dos seis meses?",
+  "dur": 33,
+  "cover_t": 2.4,
+  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 4,4 s (carimbo NÃO PRECISA, impact). Se trocar no TikTok: pop fofo/acústico leve da Biblioteca Comercial a 15-20% sob a voz, com uma batida marcada perto de 4,4 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
