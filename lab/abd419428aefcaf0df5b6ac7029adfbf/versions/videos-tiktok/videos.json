@@ -5,10 +5,11 @@
   "num": "01",
   "title": "Apps privados",
   "hook": "“Emprestou o celular e foram direto no seu Instagram?”",
-  "status": "ok",
+  "status": "publicado",
   "dur": 23,
   "cover_t": 2.9,
-  "ref": "CLK-01"
+  "ref": "CLK-01",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-02-app-de-banco",
@@ -16,10 +17,11 @@
   "num": "02",
   "title": "App de banco",
   "hook": "“Roubaram seu celular desbloqueado?”",
-  "status": "ok",
+  "status": "publicado",
   "dur": 21,
   "cover_t": 4.5,
-  "ref": "CLK-02"
+  "ref": "CLK-02",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-03-sem-x-com",
@@ -27,10 +29,11 @@
   "num": "03",
   "title": "Sem Cloak × Com Cloak",
   "hook": "“Nunca empreste seu celular sem fazer isso.”",
-  "status": "wait",
+  "status": "publicado",
   "dur": 15,
   "cover_t": 1.92,
-  "ref": "CLK-03"
+  "ref": "CLK-03",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-01-calculadora",
@@ -38,10 +41,11 @@
   "num": "01",
   "title": "Isso NÃO é uma calculadora",
   "hook": "Senha na calculadora abre o cofre + senha falsa",
-  "status": "wait",
+  "status": "publicado",
   "dur": 16,
   "cover_t": 1.2,
-  "ref": "CALC-01"
+  "ref": "CALC-01",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-04-comenta",
@@ -62,10 +66,11 @@
   "num": "04",
   "title": "Acha o app em 3 segundos",
   "hook": "Desafio com contagem + loop: “Tem um app escondido nesse celular”",
-  "status": "wait",
+  "status": "publicado",
   "dur": 14,
   "cover_t": 0.7,
-  "ref": "CLK-04"
+  "ref": "CLK-04",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-05-em-casa",
@@ -73,10 +78,11 @@
   "num": "05",
   "title": "Só aparece em casa",
   "hook": "Loop aberto noturno: “Meu celular muda sozinho quando eu chego em casa”",
-  "status": "wait",
+  "status": "publicado",
   "dur": 19,
   "cover_t": 0.6,
-  "ref": "CLK-05"
+  "ref": "CLK-05",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-02-rg",
@@ -84,10 +90,11 @@
   "num": "02",
   "title": "Pare de deixar foto do RG na galeria",
   "hook": "Alerta vermelho/preto, carimbo EXPOSTO, documentos vão pro cofre",
-  "status": "wait",
+  "status": "publicado",
   "dur": 19,
   "cover_t": 2.3,
-  "ref": "CALC-02"
+  "ref": "CALC-02",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-06-lista",
@@ -95,10 +102,11 @@
   "num": "06",
   "title": "3 ajustes que todo iPhone devia ter",
   "hook": "Lista editorial creme/serifa, 2 dicas nativas + Cloak como nº 3",
-  "status": "wait",
+  "status": "publicado",
   "dur": 24,
   "cover_t": 0.8,
-  "ref": "CLK-06"
+  "ref": "CLK-06",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-07-curto-texto",
@@ -109,7 +117,8 @@
   "hook": "Curto: texto nativo, app some no 1º segundo",
   "dur": 7,
   "cover_t": 0.4,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-05-curto-texto",
@@ -120,7 +129,8 @@
   "hook": "Curto: texto nativo, digita e abre o cofre",
   "dur": 8,
   "cover_t": 1.7,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-06-curto-acao",
@@ -131,7 +141,8 @@
   "hook": "Curto: no meio da ação + senha falsa",
   "dur": 7,
   "cover_t": 0.0,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "calcplus-07-curto-pergunta",
@@ -142,7 +153,8 @@
   "hook": "Curto: pergunta/desafio sem voz no início",
   "dur": 8,
   "cover_t": 0.46,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-08-curto-acao",
@@ -153,7 +165,8 @@
   "hook": "Curto: no meio da ação, app de banco some",
   "dur": 8,
   "cover_t": 0.9,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "cloak-09-curto-pergunta",
@@ -164,7 +177,8 @@
   "hook": "Curto: pergunta + lupa, sem voz no início",
   "dur": 9,
   "cover_t": 0.6,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-06-panqueca-banana-aveia",
@@ -209,7 +223,8 @@
    "note": "alinhar o drop da faixa a 5.625 s (b12, toque no = e o cofre abre); se a faixa trocar a trilha, manter os SFX e baixar a beat.wav"
   },
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-15"
  },
  {
   "slug": "blw-04-pronto-pra-comer",
@@ -290,6 +305,19 @@
   "dur": 26,
   "cover_t": 2.2,
   "sound": "Sem áudio no arquivo. No TikTok: som da Biblioteca Comercial pop/eletrônico leve e animado, ~125 BPM (grade de 0,48 s), sem voz, entrando em 0 s. 1º corte forte em 0,96 s (o '?' vira '1%' com tremida); swipes do carrossel em 3,84 / 7,20 / 10,56 (SUCO vira CARNE) / 13,92 s; carimbos em 11,52 e 14,88 s; cartão final em 22,09 s. Escolher um som cujo drop caia perto de 1 s.",
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-07-palitos-polenta",
+  "ref": "BLW-07",
+  "app": "BLW",
+  "num": "07",
+  "title": "Palitos de polenta assada: 3 ingredientes (sem áudio)",
+  "hook": "Só 3 ingredientes",
+  "dur": 36,
+  "cover_t": 1.6,
+  "sound": "Sem áudio no projeto. No TikTok: som da Biblioteca Comercial pop/acústico alegre de receita, 120-128 BPM, sem voz, entrando em 0 s; os cortes seguem a grade de 0,48 s e o 1º corte forte é em 2,88 s (gancho -> ingredientes), depois troca de passo a cada 3,36 s (7,68 / 11,04 / 14,40 / 17,77 / 21,13 / 24,49 s), dica em 27,85 s e cartão final em 32,65 s",
   "ai_label": false,
   "status": "wait"
  }
