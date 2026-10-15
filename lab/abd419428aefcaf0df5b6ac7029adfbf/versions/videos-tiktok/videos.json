@@ -385,5 +385,18 @@
   "sound": "Sem áudio no projeto. No TikTok: pop leve/alegre da Biblioteca Comercial, 120-128 BPM, sem voz, entrando em 0 s. 1º corte forte em 0,96 s (as 4 peças se encaixam no prato: escolher som com batida/drop logo no início); depois as trocas seguem a grade de 0,48 s: peça 1 em 3,84 s (encaixe 4,80), peça 2 em 7,68 (8,64), peça 3 em 11,52 (12,48), peça 4 em 15,36 (16,32), prato completo 19,20, pergunta 24,01, cartão final 27,37-31,21 s.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-11-prato-frango-legumes",
+  "ref": "BLW-11",
+  "app": "BLW",
+  "num": "11",
+  "title": "Frango aos 6 meses? Monte o prato (sem áudio)",
+  "hook": "Frango aos 6 meses?",
+  "dur": 36,
+  "cover_t": 2.4,
+  "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/acústico alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'MONTE ASSIM' em 1,44 s (alinhar um tempo forte ali), o prato esvazia em 3,5 s e cada item cai no prato no tempo (tiras 17,3-18,7 s, palitos 21,6-23,0 s, PRONTO! em 26,4 s); nenhum som específico verificado como em alta hoje.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
