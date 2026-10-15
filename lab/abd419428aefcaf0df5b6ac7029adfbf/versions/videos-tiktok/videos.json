@@ -398,5 +398,31 @@
   "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/acústico alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'MONTE ASSIM' em 1,44 s (alinhar um tempo forte ali), o prato esvazia em 3,5 s e cada item cai no prato no tempo (tiras 17,3-18,7 s, palitos 21,6-23,0 s, PRONTO! em 26,4 s); nenhum som específico verificado como em alta hoje.",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-08-banana-assada-canela",
+  "ref": "BLW-08",
+  "app": "BLW",
+  "num": "08",
+  "title": "Banana assada com canela em 4 passos (sem áudio)",
+  "hook": "Banana assada em 4 passos",
+  "dur": 32,
+  "cover_t": 1.9,
+  "sound": "Sem áudio no projeto. No TikTok: som da Biblioteca Comercial pop/acústico alegre de receita, 120-128 BPM, sem voz, entrando em 0 s; o carimbo 'SEM AÇÚCAR' bate em 0,48 s e o 1º corte forte é em 2,88 s (gancho -> assadeira, o cronômetro voa pro canto); passos em 6,72 / 10,56 / 14,40 (forno: o cronômetro corre de 10 a 0 entre 14,9 e 18,1 s) / 19,20 s, dica em 23,05 s, cartão final em 27,85 s. Um som com tique-taque ou com drop perto de 14-19 s casa com o cronômetro correndo",
+  "ai_label": false,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-22-pode-brocolis",
+  "ref": "BLW-22",
+  "app": "BLW",
+  "num": "22",
+  "title": "6 meses pode brócolis? (ep. 3)",
+  "hook": "Bebê de seis meses pode comer brócolis?",
+  "dur": 25,
+  "cover_t": 2.1,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,31 s (nenhum som específico verificado como em alta hoje).",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
