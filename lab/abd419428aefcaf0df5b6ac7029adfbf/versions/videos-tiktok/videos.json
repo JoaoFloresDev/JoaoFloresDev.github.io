@@ -353,19 +353,6 @@
   "status_at": "2026-10-18"
  },
  {
-  "slug": "blw-17-recusou-oferece-de-novo",
-  "ref": "BLW-17",
-  "app": "BLW",
-  "num": "17",
-  "title": "Recusou a comida? Oferece de novo",
-  "hook": "Recusou a comida? Calma, oferece de novo.",
-  "dur": 30,
-  "cover_t": 3.0,
-  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 3,1 s (gancho -> '3 dicas'). Se trocar no TikTok: som leve/acústico ou pop fofo da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 3 s.",
-  "ai_label": false,
-  "status": "wait"
- },
- {
   "slug": "blw-21-pode-manga",
   "ref": "BLW-21",
   "app": "BLW",
@@ -475,5 +462,18 @@
   "ai_label": false,
   "status": "publicado",
   "status_at": "2026-10-18"
+ },
+ {
+  "slug": "blw-17-recusou-oferece-de-novo",
+  "ref": "BLW-17",
+  "app": "BLW",
+  "num": "17",
+  "title": "Recusou a comida? Oferece de novo",
+  "hook": "Recusou a comida? Calma, oferece de novo.",
+  "dur": 30,
+  "cover_t": 3.0,
+  "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 3,1 s (gancho -> '3 dicas'). Se trocar no TikTok: som leve/acústico ou pop fofo da Biblioteca Comercial a 15-20% sob a voz, com batida entrando até 3 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
