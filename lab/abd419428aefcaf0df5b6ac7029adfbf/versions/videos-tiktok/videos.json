@@ -293,7 +293,8 @@
   "cover_t": 1.7,
   "sound": "Sem áudio no projeto. No TikTok: pop/trend animado 120-128 BPM, sem voz (o ritmo visual segue a grade de 0,48 s). 1º corte forte em 3,36 s (gancho -> rodada 1); carimbos batem em 7,20 s, 15,84 s e 24,49 s — escolher um som com drop/batida forte perto de 3,4 s, ou alinhar o início do som para que um tempo forte caia em 7,2 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-14-parece-mas-nao-e",
@@ -306,7 +307,8 @@
   "cover_t": 2.2,
   "sound": "Sem áudio no arquivo. No TikTok: som da Biblioteca Comercial pop/eletrônico leve e animado, ~125 BPM (grade de 0,48 s), sem voz, entrando em 0 s. 1º corte forte em 0,96 s (o '?' vira '1%' com tremida); swipes do carrossel em 3,84 / 7,20 / 10,56 (SUCO vira CARNE) / 13,92 s; carimbos em 11,52 e 14,88 s; cartão final em 22,09 s. Escolher um som cujo drop caia perto de 1 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-07-palitos-polenta",
@@ -319,7 +321,8 @@
   "cover_t": 1.6,
   "sound": "Sem áudio no projeto. No TikTok: som da Biblioteca Comercial pop/acústico alegre de receita, 120-128 BPM, sem voz, entrando em 0 s; os cortes seguem a grade de 0,48 s e o 1º corte forte é em 2,88 s (gancho -> ingredientes), depois troca de passo a cada 3,36 s (7,68 / 11,04 / 14,40 / 17,77 / 21,13 / 24,49 s), dica em 27,85 s e cartão final em 32,65 s",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-15-um-dia-8-meses",
@@ -332,7 +335,8 @@
   "cover_t": 2.1,
   "sound": "Sem áudio no projeto. No TikTok: pop leve/alegre da Biblioteca Comercial, 120-128 BPM, sem voz, entrando em 0 s; os cortes seguem a grade de 0,48 s (125 BPM) e o 1º corte forte é em 3,36 s (gancho → 'Café da manhã'), com trocas de refeição em 6,72 / 10,08 / 16,32 / 19,68 / 23,52 / 26,88 / 30,24 e cartão final em 34,56 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-10-sobrou-arroz-feijao",
@@ -345,7 +349,8 @@
   "cover_t": 2.4,
   "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/funk leve e alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'FAZ ISSO' em 1,44 s (alinhar um tempo forte/drop ali) e a troca para 'Bolinho de arroz e feijão' em 3,84 s. Nenhum som específico verificado como em alta hoje.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-17-recusou-oferece-de-novo",
@@ -371,7 +376,8 @@
   "cover_t": 2.0,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos (7,682 s) com crossfade de 30 ms, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,07 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-16-monte-o-prato-4-grupos",
@@ -384,7 +390,8 @@
   "cover_t": 2.0,
   "sound": "Sem áudio no projeto. No TikTok: pop leve/alegre da Biblioteca Comercial, 120-128 BPM, sem voz, entrando em 0 s. 1º corte forte em 0,96 s (as 4 peças se encaixam no prato: escolher som com batida/drop logo no início); depois as trocas seguem a grade de 0,48 s: peça 1 em 3,84 s (encaixe 4,80), peça 2 em 7,68 (8,64), peça 3 em 11,52 (12,48), peça 4 em 15,36 (16,32), prato completo 19,20, pergunta 24,01, cartão final 27,37-31,21 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-11-prato-frango-legumes",
@@ -397,7 +404,8 @@
   "cover_t": 2.4,
   "sound": "Vídeo SEM ÁUDIO (sem trilha nem SFX no projeto). No TikTok: pop/acústico alegre de receita, 120-128 BPM (grade do vídeo = 125 BPM, batida 0,48 s), sem voz, entrando em 0 s; o 1º corte forte é o carimbo 'MONTE ASSIM' em 1,44 s (alinhar um tempo forte ali), o prato esvazia em 3,5 s e cada item cai no prato no tempo (tiras 17,3-18,7 s, palitos 21,6-23,0 s, PRONTO! em 26,4 s); nenhum som específico verificado como em alta hoje.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-08-banana-assada-canela",
@@ -410,7 +418,8 @@
   "cover_t": 1.9,
   "sound": "Sem áudio no projeto. No TikTok: som da Biblioteca Comercial pop/acústico alegre de receita, 120-128 BPM, sem voz, entrando em 0 s; o carimbo 'SEM AÇÚCAR' bate em 0,48 s e o 1º corte forte é em 2,88 s (gancho -> assadeira, o cronômetro voa pro canto); passos em 6,72 / 10,56 / 14,40 (forno: o cronômetro corre de 10 a 0 entre 14,9 e 18,1 s) / 19,20 s, dica em 23,05 s, cartão final em 27,85 s. Um som com tique-taque ou com drop perto de 14-19 s casa com o cronômetro correndo",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-22-pode-brocolis",
@@ -423,7 +432,8 @@
   "cover_t": 2.1,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (Lyria, ~125 BPM) cortada no 1º downbeat (2,035 s), loop de 16 tempos, fade 0,7 s no fim, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz da Biblioteca Comercial, 120-128 BPM, sem voz, a ~15-20% sob a narração, com o 1º tempo forte casado no carimbo PODE em 2,31 s (nenhum som específico verificado como em alta hoje).",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-19-acucar-so-depois-2-anos",
@@ -449,7 +459,8 @@
   "cover_t": 2.3,
   "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 2,66 s (gancho -> citação do Guia). Se trocar no TikTok: pop fofo/acústico da Biblioteca Comercial a 15-20% sob a voz, batida entrando até 3 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  },
  {
   "slug": "blw-26-agua-quando-comecar",
@@ -462,6 +473,7 @@
   "cover_t": 2.4,
   "sound": "Narrado (Thalita) sobre a trilha do kit _kit/music/pop_124.mp3 (Lyria, IA, ~125 BPM) a 0,3, cortada em 1,95 s e em loop de 32 tempos; 1º corte forte em 4,4 s (carimbo NÃO PRECISA, impact). Se trocar no TikTok: pop fofo/acústico leve da Biblioteca Comercial a 15-20% sob a voz, com uma batida marcada perto de 4,4 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-18"
  }
 ]
