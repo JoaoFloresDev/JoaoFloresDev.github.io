@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Meus Gastos</title>
+<title>Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -553,24 +553,21 @@ img,video{max-width:100%}
   .leak,.fnote{margin-left:0}
 }
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 19/10 00:40</span></div></header><div class="wrap"><p class="sub"></p><h1>Meus Gastos — Revisar a 45.4.0 do Meus Gastos — relatório com tudo que entrou + a análise de ASO dos 29 idiomas</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Relatório de versão no padrão da casa, três abas: **Resumo** (o que entra, o que decidir, como enviar) · **Prints** (os que vão com a versão: en-US, pt-BR, es-ES e es-MX — os outros 25 idiomas herdam o inglês) · **ASO** (a análise dos 29 locales no template GOLD; o &#x27;depois&#x27; dos 29 confere com a ASC).
-Link direto: https://claude.ai/artifact/EizrdTwvexCUiY17CjMs91
+<body><header class=top><div class=topin><a class=brand href="index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="index.html">Agora</a><a class="nav" href="business.html">Business Analysis</a><a class="nav" href="vendas.html">Seller</a><a class="nav" href="videos.html">Vídeos</a></nav><span class=stamp>atualizado 19/10 00:47</span></div></header><div class="wrap"><p class="sub"></p><h1>Lab — Auditoria de alavancas 27/09 — decidir as ações do relatório</h1><div class=card style="margin-top:14px"><p style="color:var(--tx);font-size:15px">Situação das 4 decisões em 14/10 (conferido na ASC): 1. Sunrise — semanal US$ 1,99 com trial de 3 dias no SEMANAL; anual US$ 9,99 → 12,99 a partir de 16/10 (não 14,99) — o trial no anual é o item #260. 2. Feito: a 1.4.0 está no ar. 3. Hair — sem como confirmar por API o que o premium destrava. 4. Hair — o trial continua no semanal (3 dias, 175 territórios); mover pro anual também é o item #260.
 
-O QUE ENTRA NA 45.4.0 (binário 45.4.0+42):
-1. Texto de ASO nos 29 idiomas. Keywords sem os termos que prometiam o que o app não faz (receita, carteira, poupança, banco) e sem 24 duplicatas; nome mudou em 2 idiomas, só ganhando palavra (alemão `Ausgaben Haushaltsbuch Budget`, japonês `家計簿(かけいぼ) - シンプル支出管理`); subtitle em 2 (alemão, coreano); japonês e chinês reconstruídos (2º e 6º países em impressão, keywords 51→99 e 47→89); `casal` fica no pt-BR por decisão sua.
-2. Descriptions corrigidas em 22 idiomas, só tirando o que era falso: o texto de chat colado no fim da description em inglês, &#x27;100% grátis&#x27; em 13 idiomas, promessa de notificação em 7, inglês solto no pt-BR.
-3. Funil de compra: cancelar a compra é registrado e não mostra mais erro (StoreKit 2); &#x27;iniciou compra&#x27; só conta quando a folha da Apple abre; toque sem resposta mostra mensagem em 32 idiomas.
-4. Analytics no padrão do lab: ativação só com gasto lançado pelo usuário, paywall com origem real, plano escolhido, valor e moeda da compra, fim do envio duplicado com nomes antigos, 19 parâmetros registrados no GA4.
-5. Pedido de avaliação nativo ao salvar um gasto, sem pré-pergunta; CFBundleIconName na raiz (sem ela o build nunca aparece na ASC).
+VEREDITO SOBRE O ASO (28/09, dados de 16 iterações): sua sensação está certa — 1 ganho real (BLW iter-03/05: 1,5→5,3 inst/dia no país-alvo, acima do controle), 2 prováveis mas grudados em outra mudança, 7 sem efeito, 2 pioraram (iPhotos -33%, College -32%), 4 impossíveis de medir; nenhuma teve checkpoint D7. Relatório: reports/2026-09-27_results-audit/aso_efficacy.md.
 
-SEIS POSIÇÕES DO TOP 50 CAEM DE PROPÓSITO, todas de termos que o app não entrega: alemão `monatliche bilanz` #1, `konto ausgaben` #29, `haushaltskonto` #41; indonésio `tabungan bulanan` #28, `buku kas` #43; hindi `सेविंग्स` #6. Nenhuma posição de termo que o app entrega sai; o pt-BR mantém as 47.
+Relatório completo: botão &quot;Abrir relatório&quot; (reports/2026-09-27_results-audit/REPORT.md).
 
-O QUE FALTA, E É SEU:
-1. whatsNew nos 29 idiomas (vazio — a Apple recusa o envio).
-2. Texto promocional: vazio nos 29 (16 perderam na herança; 14 desses diziam &#x27;100% grátis&#x27;).
-3. Age rating → pergunta de redes sociais (socialMedia) sem resposta.
-4. Testar no iPhone: abrir o paywall, iniciar compra e CANCELAR — não pode aparecer erro.
-5. Archive: você parou o anterior; a tag release/45.4.0 aponta pra antes das correções e tem que ser refeita. Depois anexar o build e enviar.</p></div><div class=btns style="margin-top:16px"><a class=btn href="versions/meus-gastos-45-4-0/index.html" target="_blank">Relatório da versão</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
+Onde está o dinheiro: US$ 2.306/30d, 91% de Calc+ e Cloak (congelados). Os outros 21 apps fazem US$ 210 sobre 2.565 instalações. Faltam US$ 1.904/mês pra meta; no melhor caso o portfólio atual chega a ~US$ 3.550 em dez/2027.
+
+Decisões (sim/não), com a recomendação:
+1. Sunrise — repricing antes de submeter (weekly 1,99 / yearly 14,99, trial só no anual)? SIM (0,29/2,99 é placeholder; D1 46%, Europa 60%).
+2. Sunrise — enviar a 1.4.0 com as 2 assinaturas pelo web UI? SIM, depois do 1 (build 12 VALID).
+3. Hair — premium = gate de valor (scanner ilimitado, recomendação, evolução) em vez de &#x27;sem anúncio&#x27;? SIM (3,5% iniciam compra vs 26% no BLW).
+4. Hair — mover o trial do semanal pro anual? SIM como hipótese (n pequeno); preços intocados.
+
+[detalhe completo no relatório/arquivo citado acima]</p></div><div class=btns style="margin-top:16px"><a class=btn href="md/reports__2026-09-27_results-audit__REPORT.html" target="_blank">Abrir relatório</a><a class=btn href="https://appstoreconnect.apple.com/apps" target="_blank">Abrir ASC</a></div></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
