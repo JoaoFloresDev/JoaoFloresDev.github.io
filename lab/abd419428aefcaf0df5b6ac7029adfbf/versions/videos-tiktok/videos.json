@@ -534,5 +534,18 @@
   "sound": "Trilha do kit pop_124 (Lyria, ~125 BPM) cortada em 1,95 s, volume 0,3 sob a voz; música gerada por IA (o TikTok pode rotular se mantida). Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz a ~15-20% sob a narração, com o 1º tempo forte no carimbo DEPENDE (4,38 s) ou no PODE (14,01 s).",
   "ai_label": true,
   "status": "wait"
+ },
+ {
+  "slug": "blw-49-abobora-garfo-ou-liquidificador",
+  "ref": "BLW-49",
+  "app": "BLW",
+  "num": "49",
+  "title": "Abóbora aos 6 meses: liquidificador ou garfo? (quiz, voz Thalita)",
+  "hook": "Abóbora pro seu bebê de seis meses: batida ou amassada?",
+  "dur": 21,
+  "cover_t": 0.45,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo NO GARFO! em 10,91 s; 1º corte forte de cena em 12,27 s (entra 'O que diz o Guia').",
+  "ai_label": true,
+  "status": "wait"
  }
 ]
