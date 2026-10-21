@@ -595,21 +595,6 @@
   "status_note": "óbvio; virou BLW-56 (certo ou errado: virou a cabeça, oferece mais ou para?)"
  },
  {
-  "slug": "blw-53-celular-na-hora-de-comer",
-  "ref": "BLW-53",
-  "app": "BLW",
-  "num": "53",
-  "title": "Celular ajuda o bebê a comer? (explicado)",
-  "hook": "O celular ajuda o seu bebê a comer?",
-  "dur": 20,
-  "cover_t": 1.5,
-  "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM a ~15-20% sob a narração; 1º tempo forte no carimbo PARECE QUE SIM (1,9 s) e o forte da revelação no ATRAPALHA (9,43 s).",
-  "ai_label": true,
-  "status": "wait",
-  "status_at": "2026-10-21",
-  "status_note": "refazendo com o tom 'O Ministério da Saúde adverte' (João, 21/10)"
- },
- {
   "slug": "blw-51-pode-bisnaguinha",
   "ref": "BLW-51",
   "app": "BLW",
@@ -636,5 +621,20 @@
   "status": "wait",
   "status_at": "2026-10-21",
   "status_note": "quiz entregava a resposta: a certa era a única específica ('2 a 3 colheres') contra uma genérica ('meio prato')"
+ },
+ {
+  "slug": "blw-53-celular-na-hora-de-comer",
+  "ref": "BLW-53",
+  "app": "BLW",
+  "num": "53",
+  "title": "O Ministério da Saúde adverte: celular na hora de comer",
+  "hook": "O Ministério da Saúde adverte: bebê com celular na hora de comer...",
+  "dur": 28,
+  "cover_t": 1.9,
+  "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: som de 'aviso/plantão' ou pop 120-128 BPM a ~15-20% sob a narração; 1º tempo forte no ADVERTE (1,31 s) e o do porquê no 'demais' (9,29 s).",
+  "ai_label": true,
+  "status": "wait",
+  "status_at": "2026-10-21",
+  "status_note": "refazendo com o tom 'O Ministério da Saúde adverte' (João, 21/10)"
  }
 ]
