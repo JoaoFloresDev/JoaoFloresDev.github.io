@@ -595,34 +595,6 @@
   "status_note": "óbvio; virou BLW-56 (certo ou errado: virou a cabeça, oferece mais ou para?)"
  },
  {
-  "slug": "blw-51-pode-bisnaguinha",
-  "ref": "BLW-51",
-  "app": "BLW",
-  "num": "51",
-  "title": "Bebê pode comer bisnaguinha? (ep. 7)",
-  "hook": "Seu bebê pode comer bisnaguinha?",
-  "dur": 22,
-  "cover_t": 1.5,
-  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada em 1,8 s) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo NÃO PODE em 11,75 s; 1º corte forte de cena em 1,93 s (sai o gancho, entra 'Parece só um pãozinho').",
-  "ai_label": true,
-  "status": "wait"
- },
- {
-  "slug": "blw-54-quanto-come-6-meses",
-  "ref": "BLW-54",
-  "app": "BLW",
-  "num": "54",
-  "title": "Quanto o bebê de 6 meses come no almoço? (quiz)",
-  "hook": "Seu bebê de seis meses: quanto ele come no almoço?",
-  "dur": 27,
-  "cover_t": 0.42,
-  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo '2 a 3' em 12,17 s; 1º corte forte de cena em 13,4 s (entra 'A porção cresce').",
-  "ai_label": true,
-  "status": "wait",
-  "status_at": "2026-10-21",
-  "status_note": "quiz entregava a resposta: a certa era a única específica ('2 a 3 colheres') contra uma genérica ('meio prato')"
- },
- {
   "slug": "blw-53-celular-na-hora-de-comer",
   "ref": "BLW-53",
   "app": "BLW",
@@ -636,5 +608,33 @@
   "status": "wait",
   "status_at": "2026-10-21",
   "status_note": "refazendo com o tom 'O Ministério da Saúde adverte' (João, 21/10)"
+ },
+ {
+  "slug": "blw-51-pode-bisnaguinha",
+  "ref": "BLW-51",
+  "app": "BLW",
+  "num": "51",
+  "title": "O Ministério da Saúde responde: bebê pode comer bisnaguinha? (ep. 7)",
+  "hook": "O Ministério da Saúde responde: seu bebê pode comer bisnaguinha?",
+  "dur": 29,
+  "cover_t": 2.0,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada em 1,8 s) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo NÃO PODE em 11,75 s; 1º corte forte de cena em 1,93 s (sai o gancho, entra 'Parece só um pãozinho').",
+  "ai_label": true,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-54-quanto-come-6-meses",
+  "ref": "BLW-54",
+  "app": "BLW",
+  "num": "54",
+  "title": "O Ministério da Saúde diz quanto o bebê de 6 meses come (quiz)",
+  "hook": "O Ministério da Saúde diz quanto seu bebê de 6 meses come. Você acerta?",
+  "dur": 29,
+  "cover_t": 0.45,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo '2 a 3' em 12,17 s; 1º corte forte de cena em 13,4 s (entra 'A porção cresce').",
+  "ai_label": true,
+  "status": "wait",
+  "status_at": "2026-10-21",
+  "status_note": "quiz entregava a resposta: a certa era a única específica ('2 a 3 colheres') contra uma genérica ('meio prato')"
  }
 ]
