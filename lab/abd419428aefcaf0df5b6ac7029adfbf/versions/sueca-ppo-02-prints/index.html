@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sueca Drink PPO-02 — prints que sobem · App Store Connect — Preview</title>
+<style>
+  :root {
+    --bg: #f5f5f7; --panel: #ffffff; --line: #d2d2d7; --line-soft: #e8e8ed;
+    --ink: #1d1d1f; --sub: #6e6e73; --blue: #0066cc; --blue-bg: #e8f1fd;
+    --shadow: rgba(0,0,0,.08); --green: #34c759; --yellow: #ff9f0a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font: 14px/1.45 -apple-system, "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink); background: var(--bg); height: 100vh;
+    display: grid; grid-template-rows: 48px 1fr;
+  }
+
+  /* Global top bar (ASC white header) */
+  .topbar {
+    background: var(--panel); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 12px; padding: 0 20px;
+  }
+  .topbar .wm { font-weight: 600; color: var(--ink); }
+  .topbar .wm span { color: var(--sub); font-weight: 400; }
+  .topbar .spacer { flex: 1; }
+  .topbar select, .topbar button {
+    background: var(--panel); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 7px; padding: 6px 11px; font-size: 13px; cursor: pointer;
+  }
+  .topbar button:hover, .topbar select:hover { background: #f5f5f7; }
+  .topbar .live { display: flex; align-items: center; gap: 6px; color: var(--sub); font-size: 12px; }
+  .topbar .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+  .topbar .dot.on { animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(52,199,89,.5)} 70%{box-shadow:0 0 0 7px rgba(52,199,89,0)} 100%{box-shadow:0 0 0 0 rgba(52,199,89,0)} }
+
+  /* Main scroll area */
+  .main { overflow-y: auto; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 26px 28px 80px; }
+
+  /* Version header */
+  .vhead { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .vhead .spacer-h { flex: 1; }
+  .vhead h1 { font-size: 26px; font-weight: 600; margin: 0; }
+  .status { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--sub); }
+  .status .s-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--yellow); }
+  .vsub { color: var(--sub); margin: 0 0 22px; font-size: 13px; }
+
+  /* Treatment tabs (PPO-style) */
+  .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: 24px; flex-wrap: wrap; }
+  .tab {
+    padding: 11px 18px; font-size: 14px; color: var(--sub); cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px; font-weight: 500;
+  }
+  .tab:hover { color: var(--ink); }
+  .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+  .tab .pill { font-size: 11px; color: var(--sub); margin-left: 7px; }
+
+  /* Media section card */
+  .card {
+    background: var(--panel); border: 1px solid var(--line-soft); border-radius: 14px;
+    padding: 22px 24px 26px; box-shadow: 0 1px 3px var(--shadow);
+  }
+  .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .card-top h2 { font-size: 17px; font-weight: 600; margin: 0; }
+  .langsel { display: flex; align-items: center; gap: 8px; }
+  .langsel label { color: var(--sub); font-size: 13px; }
+  .langsel select {
+    border: 1px solid var(--line); border-radius: 8px; padding: 7px 30px 7px 12px; font-size: 13px;
+    background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236e6e73' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 11px center;
+    -webkit-appearance: none; appearance: none; cursor: pointer; min-width: 190px;
+  }
+
+  /* Floating language picker */
+  .langfloat {
+    position: fixed; top: 62px; right: 26px; z-index: 30;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.14); padding: 9px 12px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .langfloat label { color: var(--sub); font-size: 12px; font-weight: 500; }
+  .langfloat select {
+    border: 1px solid var(--line); border-radius: 8px; padding: 7px 30px 7px 12px; font-size: 13px;
+    background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236e6e73' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 11px center;
+    -webkit-appearance: none; appearance: none; cursor: pointer; min-width: 170px;
+  }
+  .langfloat[hidden] { display: none; }
+
+  /* Device size pills */
+  .devbar { display: flex; gap: 8px; margin: 16px 0 20px; flex-wrap: wrap; }
+  .dev {
+    font-size: 13px; color: var(--sub); padding: 7px 14px; border-radius: 18px;
+    border: 1px solid var(--line); background: var(--panel);
+  }
+  .dev.active { color: var(--blue); border-color: var(--blue); background: var(--blue-bg); font-weight: 500; }
+  .reorder { color: var(--sub); font-size: 12px; margin: 0 0 14px; }
+
+  /* Screenshot strip (raw images, ASC style) */
+  .strip { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; }
+  .shot { flex: 0 0 auto; position: relative; cursor: grab; }
+  .shot.dragging { opacity: .35; }
+  .shot.dragover img { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .shot img {
+    height: 380px; display: block; border-radius: 14px; border: 1px solid var(--line);
+    box-shadow: 0 4px 14px var(--shadow); background: #f0f0f2; cursor: zoom-in;
+    transition: transform .12s ease;
+  }
+  .shot img:hover { transform: translateY(-2px); }
+  .shot .idx {
+    position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,.55); color: #fff;
+    font-size: 11px; font-weight: 600; border-radius: 6px; padding: 2px 7px; backdrop-filter: blur(2px);
+  }
+  .shot .fn { margin-top: 8px; font-size: 11px; color: var(--sub); text-align: center; max-width: 200px; word-break: break-all; }
+  .empty { color: var(--sub); padding: 70px 0; text-align: center; }
+
+  /* Lightbox */
+  .lb { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; align-items: center; justify-content: center; z-index: 50; cursor: zoom-out; }
+  .lb.on { display: flex; }
+  .lb img { max-width: 92vw; max-height: 92vh; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+</style>
+
+<style>
+/* Static report: one scrolling document instead of the live kit's fixed grid. */
+body{display:block;height:auto}
+.topbar{position:sticky;top:0;z-index:10;height:48px}
+.main{overflow:visible}
+.topbar .live,#liveBtn,#refreshBtn{display:none!important}
+.vr-tabs{position:sticky;top:48px;z-index:9;display:flex;gap:6px;align-items:center;background:var(--panel);border-bottom:1px solid var(--line);padding:8px 20px}
+.vr-tabs .vr-title{font-weight:600;margin-right:14px}
+.vr-tabs button{background:none;border:1px solid transparent;border-radius:8px;padding:6px 14px;font-size:14px;color:var(--sub);cursor:pointer}
+.vr-tabs button.on{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-bg);font-weight:600}
+.tab[hidden]{display:none}
+.vr{max-width:1200px;margin:0 auto;padding:8px 28px 0;color:var(--ink)}
+.vr h1{font-size:26px;margin:22px 0 6px}
+.vr .kicker{color:var(--sub);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-top:30px;font-weight:600}
+.vr .md{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 22px 14px;margin-top:10px;overflow-x:auto}
+.vr .md table{border-collapse:collapse;margin:10px 0}
+.vr .md th,.vr .md td{border:1px solid var(--line-soft);padding:6px 10px;vertical-align:top;text-align:left}
+.vr .md th{background:var(--bg)}
+.vr .md code{background:var(--bg);padding:1px 5px;border-radius:5px}
+.vr .md pre{background:var(--bg);padding:12px;border-radius:10px;overflow-x:auto}
+.vr .md h1{font-size:21px}.vr .md h2{font-size:18px;margin-top:24px}.vr .md h3{font-size:15px}
+.vr-end{padding-bottom:64px}
+/* Dark: same palette as the Lab Hub (tools/lab-hub/hub.py), so a report opened from
+   the site doesn't flash white. Follows the system, and data-theme forces either side. */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#0e1013;--panel:#1a1e25;--line:#39404d;--line-soft:#2a303b;
+  --ink:#f2f4f8;--sub:#aab3c2;--blue:#5b9bff;--blue-bg:#1d2a42;--shadow:rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--bg:#0e1013;--panel:#1a1e25;--line:#39404d;--line-soft:#2a303b;
+  --ink:#f2f4f8;--sub:#aab3c2;--blue:#5b9bff;--blue-bg:#1d2a42;--shadow:rgba(0,0,0,.5)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .topbar button:hover,
+  :root:not([data-theme="light"]) .topbar select:hover{background:var(--bg)}
+  :root:not([data-theme="light"]) .shot img,:root:not([data-theme="light"]) img{background:var(--bg)}}
+:root[data-theme="dark"] .topbar button:hover,:root[data-theme="dark"] .topbar select:hover{background:var(--bg)}
+:root[data-theme="dark"] img{background:var(--bg)}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="wm">App Store Connect <span>· Preview</span></span>
+    <span class="spacer"></span>
+    <select id="srcSel" title="App"></select>
+    <div class="live"><span class="dot on" id="dot"></span><span id="liveTxt">ao vivo</span></div>
+    <button id="liveBtn">pausar</button>
+    <button id="refreshBtn">atualizar</button>
+  </div>
+
+  <div class="langfloat" id="langFloat" hidden><label>Idioma</label><select id="langSel"></select></div>
+
+  <main class="main">
+    <div class="wrap" id="wrap"><div class="empty">Carregando…</div></div>
+  </main>
+
+  <div class="lb" id="lb"><img id="lbImg" alt=""></div>
+
+<script>window.STATIC_TREE = [{"id": "version", "name": "Sueca Drink PPO-02 — prints que sobem", "groups": [{"name": "A · iPhone 6.9\" (APP_IPHONE_67)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/066.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/067.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/068.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/069.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/070.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/071.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/072.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/073.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/074.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/075.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/076.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/077.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/078.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/079.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/080.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/081.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/082.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/083.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/084.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/085.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/086.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/087.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/088.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/089.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/090.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/091.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/092.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/093.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/094.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/095.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/096.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/097.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/098.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/099.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/100.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/101.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/102.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/103.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/104.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/105.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/106.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/107.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/108.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/109.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/110.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/111.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/112.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/113.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/114.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/115.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/116.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/117.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/118.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/119.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/120.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/121.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/122.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/123.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/124.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/125.jpg"}]}], "count": 60}, {"name": "A · iPhone 6.5\" (APP_IPHONE_65)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/006.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/007.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/008.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/009.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/010.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/011.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/012.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/013.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/014.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/015.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/016.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/017.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/018.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/019.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/020.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/021.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/022.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/023.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/024.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/025.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/026.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/027.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/028.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/029.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/030.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/031.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/032.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/033.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/034.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/035.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/036.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/037.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/038.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/039.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/040.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/041.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/042.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/043.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/044.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/045.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/046.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/047.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/048.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/049.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/050.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/051.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/052.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/053.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/054.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/055.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/056.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/057.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/058.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/059.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/060.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/061.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/062.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/063.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/064.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/065.jpg"}]}], "count": 60}, {"name": "A · iPhone 5.5\"", "locales": [{"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/001.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/002.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/003.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/004.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/005.jpg"}]}], "count": 5}, {"name": "B · iPhone 6.9\" (APP_IPHONE_67)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/191.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/192.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/193.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/194.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/195.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/196.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/197.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/198.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/199.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/200.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/201.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/202.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/203.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/204.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/205.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/206.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/207.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/208.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/209.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/210.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/211.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/212.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/213.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/214.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/215.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/216.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/217.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/218.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/219.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/220.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/221.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/222.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/223.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/224.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/225.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/226.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/227.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/228.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/229.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/230.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/231.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/232.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/233.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/234.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/235.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/236.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/237.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/238.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/239.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/240.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/241.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/242.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/243.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/244.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/245.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/246.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/247.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/248.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/249.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/250.jpg"}]}], "count": 60}, {"name": "B · iPhone 6.5\" (APP_IPHONE_65)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/131.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/132.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/133.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/134.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/135.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/136.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/137.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/138.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/139.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/140.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/141.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/142.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/143.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/144.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/145.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/146.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/147.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/148.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/149.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/150.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/151.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/152.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/153.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/154.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/155.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/156.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/157.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/158.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/159.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/160.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/161.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/162.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/163.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/164.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/165.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/166.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/167.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/168.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/169.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/170.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/171.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/172.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/173.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/174.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/175.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/176.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/177.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/178.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/179.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/180.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/181.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/182.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/183.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/184.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/185.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/186.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/187.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/188.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/189.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/190.jpg"}]}], "count": 60}, {"name": "B · iPhone 5.5\"", "locales": [{"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/126.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/127.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/128.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/129.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/130.jpg"}]}], "count": 5}, {"name": "C · iPhone 6.9\" (APP_IPHONE_67)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/316.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/317.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/318.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/319.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/320.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/321.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/322.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/323.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/324.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/325.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/326.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/327.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/328.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/329.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/330.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/331.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/332.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/333.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/334.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/335.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/336.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/337.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/338.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/339.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/340.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/341.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/342.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/343.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/344.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/345.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/346.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/347.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/348.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/349.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/350.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/351.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/352.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/353.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/354.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/355.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/356.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/357.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/358.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/359.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/360.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/361.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/362.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/363.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/364.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/365.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/366.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/367.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/368.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/369.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/370.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/371.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/372.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/373.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/374.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/375.jpg"}]}], "count": 60}, {"name": "C · iPhone 6.5\" (APP_IPHONE_65)", "locales": [{"code": "de-DE", "label": "de-DE", "flag": "DE", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/256.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/257.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/258.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/259.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/260.jpg"}]}, {"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/261.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/262.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/263.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/264.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/265.jpg"}]}, {"code": "es-ES", "label": "Spanish (Spain)", "flag": "ES", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/266.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/267.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/268.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/269.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/270.jpg"}]}, {"code": "es-MX", "label": "Spanish (Mexico)", "flag": "MX", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/271.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/272.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/273.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/274.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/275.jpg"}]}, {"code": "fr-FR", "label": "fr-FR", "flag": "FR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/276.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/277.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/278.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/279.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/280.jpg"}]}, {"code": "it", "label": "Italian", "flag": "IT", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/281.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/282.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/283.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/284.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/285.jpg"}]}, {"code": "ja", "label": "Japanese", "flag": "JP", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/286.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/287.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/288.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/289.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/290.jpg"}]}, {"code": "ko", "label": "Korean", "flag": "KR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/291.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/292.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/293.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/294.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/295.jpg"}]}, {"code": "nl-NL", "label": "nl-NL", "flag": "NL", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/296.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/297.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/298.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/299.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/300.jpg"}]}, {"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/301.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/302.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/303.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/304.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/305.jpg"}]}, {"code": "ru", "label": "Russian", "flag": "RU", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/306.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/307.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/308.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/309.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/310.jpg"}]}, {"code": "zh-Hans", "label": "Chinese (Simplified)", "flag": "ZH", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/311.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/312.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/313.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/314.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/315.jpg"}]}], "count": 60}, {"name": "C · iPhone 5.5\"", "locales": [{"code": "en-US", "label": "English (U.S.)", "flag": "US", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/251.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/252.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/253.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/254.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/255.jpg"}]}], "count": 5}, {"name": "Controle · iPhone 6.9\" (APP_IPHONE_67)", "locales": [{"code": "pt-BR", "label": "Portuguese (Brazil)", "flag": "BR", "shots": [{"name": "01.png", "file": "01.png", "dir": "", "url": "img/376.jpg"}, {"name": "02.png", "file": "02.png", "dir": "", "url": "img/377.jpg"}, {"name": "03.png", "file": "03.png", "dir": "", "url": "img/378.jpg"}, {"name": "04.png", "file": "04.png", "dir": "", "url": "img/379.jpg"}, {"name": "05.png", "file": "05.png", "dir": "", "url": "img/380.jpg"}]}], "count": 5}]}];</script>
+<script>
+let TREE = [];
+let srcIdx = 0;
+let curLang = null;          // single language applied to all sections
+let live = true, timer = null;
+let lastSig = null;          // signature of last-rendered tree (skip no-op re-renders)
+
+function deepLinkApp() { return new URLSearchParams(location.search).get("app"); }
+
+async function load(preserve = true) {
+  let data;
+  try { data = window.STATIC_TREE; }
+  catch (e) { return; }
+  // Skip re-render when the polled tree is identical — keeps horizontal
+  // scroll position from resetting every 4s.
+  const sig = JSON.stringify(data);
+  if (preserve && sig === lastSig) return;
+  lastSig = sig;
+  TREE = data;
+  if (!preserve) {
+    const want = deepLinkApp();
+    const idx = TREE.findIndex(s => s.id === want);
+    if (idx >= 0) srcIdx = idx;
+  }
+  buildSourceSelect();
+  const langs = allLangs();
+  // Prefer en-US as the initial language when present (falls back to first available).
+  if (!preserve || !langs.includes(curLang)) {
+    curLang = langs.includes("en-US") ? "en-US" : (langs[0] || null);
+  }
+  render();
+}
+
+function currentSrc() { return TREE[srcIdx] || { groups: [] }; }
+
+// Union of real locales across all groups (ignores "_all" flat folders),
+// in first-seen order. Falls back to ["_all"] when nothing is localized.
+function allLangs() {
+  const seen = new Set(), out = [];
+  currentSrc().groups.forEach(g => g.locales.forEach(l => {
+    if (l.code !== "_all" && !seen.has(l.code)) { seen.add(l.code); out.push(l.code); }
+  }));
+  return out.length ? out : ["_all"];
+}
+
+// Locale shown for a group given the selected language: exact match,
+// else the group's flat "_all" folder (shows in any language).
+function localeFor(g, code) {
+  return g.locales.find(l => l.code === code) || g.locales.find(l => l.code === "_all");
+}
+
+function langLabel(code) {
+  if (code === "_all") return "Todos";
+  for (const g of currentSrc().groups)
+    for (const l of g.locales) if (l.code === code) return l.label;
+  return code;
+}
+
+function buildSourceSelect() {
+  const s = document.getElementById("srcSel");
+  s.innerHTML = "";
+  TREE.forEach((src, i) => {
+    const o = document.createElement("option");
+    o.value = i; o.textContent = src.name; s.appendChild(o);
+  });
+  s.style.display = TREE.length > 1 ? "" : "none";
+  s.value = srcIdx;
+}
+
+function deviceLabel(shots) {
+  const f = shots.map(s => s.file.toLowerCase()).join(" ");
+  if (/69|6\.9/.test(f)) return 'iPhone 6.9" Display';
+  if (/67|6\.7/.test(f)) return 'iPhone 6.7" Display';
+  if (/65|6\.5/.test(f)) return 'iPhone 6.5" Display';
+  if (/ipad/.test(f)) return 'iPad Display';
+  return 'iPhone Display';
+}
+
+function render() {
+  const wrap = document.getElementById("wrap");
+  const src = currentSrc();
+  if (!src.groups.length) {
+    wrap.innerHTML = `<div class="empty">Sem imagens ainda.<br>Gere os prints — aparecem aqui no ao vivo.</div>`;
+    return;
+  }
+  const langs = allLangs();
+
+  // Floating language picker (lives outside .wrap so it isn't rebuilt away).
+  const float = document.getElementById("langFloat");
+  const ls = document.getElementById("langSel");
+  const onlyAll = langs.length === 1 && langs[0] === "_all";
+  float.hidden = onlyAll;
+  if (!onlyAll) {
+    ls.innerHTML = langs.map(c =>
+      `<option value="${c}" ${c === curLang ? "selected" : ""}>${langLabel(c)}</option>`).join("");
+    ls.onchange = e => { curLang = e.target.value; render(); };
+  }
+
+  // One section card per group (treatment), all stacked in a list.
+  const sections = src.groups.map(g => {
+    const l = localeFor(g, curLang);
+    let strip = `<div class="empty">Sem imagens nesse idioma.</div>`;
+    if (l && l.shots.length) {
+      strip = `<div class="strip">` + l.shots.map((s, i) =>
+        `<div class="shot" draggable="false" data-file="${s.file}" data-dir="${s.dir || ""}">
+           <img loading="lazy" src="${s.url}" alt="${s.name}" data-url="${s.url}">
+           <div class="idx">${i + 1}</div>
+           <div class="fn">${s.file}</div>
+         </div>`).join("") + `</div>`;
+    }
+    return `
+      <div class="card">
+        <div class="card-top">
+          <h2>${g.name}</h2>
+          <span class="dev active">${l ? deviceLabel(l.shots) : "iPhone"}</span>
+        </div>
+        <p class="reorder">${l ? l.shots.length : 0} capturas · clique pra ampliar</p>
+        ${strip}
+      </div>`;
+  }).join("");
+
+  wrap.innerHTML = `
+    <div class="vhead">
+      <h1>${src.name}</h1>
+      <span class="status"><span class="s-dot"></span>Relatório de versão</span>
+    </div>
+    <p class="vsub">${src.groups.length} conjunto(s) · prints da versão, estilo App Store Connect</p>
+    ${sections}`;
+
+  wrap.querySelectorAll(".shot img").forEach(im => im.onclick = () => openLb(im.dataset.url));
+  wireDrag();
+}
+
+// MARK: - Drag-to-reorder (persists via POST /api/reorder -> order.json)
+let dragging = false;
+
+function wireDrag() {
+  document.querySelectorAll(".strip").forEach(strip => {
+    let dragged = null;
+    strip.querySelectorAll(".shot").forEach(shot => {
+      shot.addEventListener("dragstart", () => {
+        dragged = shot; dragging = true;
+        shot.classList.add("dragging");
+      });
+      shot.addEventListener("dragend", async () => {
+        shot.classList.remove("dragging");
+        strip.querySelectorAll(".dragover").forEach(x => x.classList.remove("dragover"));
+        dragging = false;
+        await persistOrder(strip);
+      });
+      shot.addEventListener("dragover", e => {
+        e.preventDefault();
+        if (!dragged || dragged === shot || dragged.parentElement !== strip) return;
+        shot.classList.add("dragover");
+        const kids = [...strip.querySelectorAll(".shot")];
+        if (kids.indexOf(dragged) < kids.indexOf(shot)) shot.after(dragged);
+        else shot.before(dragged);
+      });
+      shot.addEventListener("dragleave", () => shot.classList.remove("dragover"));
+    });
+  });
+}
+
+async function persistOrder(strip) {
+  const shots = [...strip.querySelectorAll(".shot")];
+  const dir = shots[0] && shots[0].dataset.dir;
+  if (!dir) return;
+  // Only files that live in the SAME dir can be reordered together.
+  const order = shots.filter(s => s.dataset.dir === dir).map(s => s.dataset.file);
+  shots.forEach((s, i) => { const idx = s.querySelector(".idx"); if (idx) idx.textContent = i + 1; });
+  try {
+    await fetch("/api/reorder", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ app: currentSrc().id, dir, order }),
+    });
+  } catch (e) { /* server offline — order stays visual only */ }
+  lastSig = null;  // force next poll to re-render with the persisted order
+}
+
+function openLb(url) {
+  document.getElementById("lbImg").src = url;
+  document.getElementById("lb").classList.add("on");
+}
+
+document.getElementById("lb").onclick = () => document.getElementById("lb").classList.remove("on");
+document.getElementById("srcSel").onchange = e => { srcIdx = +e.target.value; pickDefault(); render(); };
+document.getElementById("refreshBtn").onclick = () => load(true);
+document.getElementById("liveBtn").onclick = () => {
+  live = !live;
+  document.getElementById("liveBtn").textContent = live ? "pausar" : "ao vivo";
+  document.getElementById("dot").classList.toggle("on", live);
+  document.getElementById("liveTxt").textContent = live ? "ao vivo" : "pausado";
+  if (live) startTimer(); else clearInterval(timer);
+};
+function startTimer() { return; clearInterval(timer); timer = setInterval(() => live && !dragging && load(true), 4000); }
+
+load(false);
+startTimer();
+</script>
+</body>
+</html>
