@@ -617,7 +617,9 @@
   "cover_t": 1.5,
   "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM a ~15-20% sob a narração; 1º tempo forte no carimbo PARECE QUE SIM (1,9 s) e o forte da revelação no ATRAPALHA (9,43 s).",
   "ai_label": true,
-  "status": "wait"
+  "status": "wait",
+  "status_at": "2026-10-21",
+  "status_note": "refazendo com o tom 'O Ministério da Saúde adverte' (João, 21/10)"
  },
  {
   "slug": "blw-51-pode-bisnaguinha",
