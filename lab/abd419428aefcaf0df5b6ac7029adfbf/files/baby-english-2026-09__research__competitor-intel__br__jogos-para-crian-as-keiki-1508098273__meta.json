@@ -1,0 +1,26 @@
+{
+  "trackId": 1508098273,
+  "trackName": "Jogos para Crianças - Keiki",
+  "sellerName": "BENIPOL LIMITED",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.78383,
+  "userRatingCount": 12491,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2020-05-17T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-14T08:56:31Z",
+  "version": "10.17.0",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN",
+    "FR",
+    "DE",
+    "PT",
+    "ES"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/jogos-para-crian%C3%A7as-keiki/id1508098273?uo=4",
+  "bundleId": "gen.tech.keiki.world",
+  "subtitle": "Aprender Ingles pre escolar",
+  "screenshotCount": 13
+}

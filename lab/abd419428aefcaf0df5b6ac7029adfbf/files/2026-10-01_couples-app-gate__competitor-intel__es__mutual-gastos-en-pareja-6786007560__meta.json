@@ -1,0 +1,22 @@
+{
+  "trackId": 6786007560,
+  "trackName": "Mutual: Gastos en Pareja",
+  "sellerName": "Yassine EL HARDOUF",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-07-14T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-24T09:45:43Z",
+  "version": "1.6",
+  "minimumOsVersion": "16.4",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/mutual-gastos-en-pareja/id6786007560?uo=4",
+  "bundleId": "com.elhardouf.mutual",
+  "subtitle": "Divide cuentas y ahorra juntos",
+  "screenshotCount": 7
+}

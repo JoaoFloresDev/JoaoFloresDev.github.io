@@ -1,0 +1,22 @@
+{
+  "trackId": 1394567278,
+  "trackName": "Unuhi: Bilingual Books",
+  "sellerName": "Unuhi Ltd",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.65123,
+  "userRatingCount": 3739,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2018-08-28T07:15:51Z",
+  "currentVersionReleaseDate": "2024-03-08T18:18:38Z",
+  "version": "3.2.0",
+  "minimumOsVersion": "11.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/unuhi-bilingual-books/id1394567278?uo=4",
+  "bundleId": "com.unuhi1",
+  "subtitle": "Kids' stories in two languages",
+  "screenshotCount": 21
+}

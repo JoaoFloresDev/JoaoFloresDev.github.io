@@ -1,0 +1,23 @@
+{
+  "trackId": 6759269293,
+  "trackName": "dividi - Controle Financeiro",
+  "sellerName": "Jonathan Givisiez",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.94444,
+  "userRatingCount": 18,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2026-03-17T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-24T05:47:38Z",
+  "version": "1.11.0",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN",
+    "PT"
+  ],
+  "contentAdvisoryRating": "+12",
+  "trackViewUrl": "https://apps.apple.com/br/app/dividi-controle-financeiro/id6759269293?uo=4",
+  "bundleId": "br.com.dividi",
+  "subtitle": "Gastos pessoais e a dois",
+  "screenshotCount": 9
+}

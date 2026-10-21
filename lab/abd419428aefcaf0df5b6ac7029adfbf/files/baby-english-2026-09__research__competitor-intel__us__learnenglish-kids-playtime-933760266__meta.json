@@ -1,0 +1,25 @@
+{
+  "trackId": 933760266,
+  "trackName": "LearnEnglish Kids: Playtime",
+  "sellerName": "British Council",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.16667,
+  "userRatingCount": 48,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2014-11-14T04:24:30Z",
+  "currentVersionReleaseDate": "2026-03-21T05:05:29Z",
+  "version": "4.10.13",
+  "minimumOsVersion": "12.0",
+  "languageCodesISO2A": [
+    "EN",
+    "FR",
+    "ZH",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/learnenglish-kids-playtime/id933760266?uo=4",
+  "bundleId": "com.BritishCouncil.playtime",
+  "subtitle": "English songs, stories & games",
+  "screenshotCount": 19
+}

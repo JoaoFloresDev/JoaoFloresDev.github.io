@@ -1,0 +1,28 @@
+{
+  "trackId": 1239522573,
+  "trackName": "Speech Blubs: Language Therapy",
+  "sellerName": "Blub Blub Inc.",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.62078,
+  "userRatingCount": 55930,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2017-06-07T08:41:53Z",
+  "currentVersionReleaseDate": "2026-09-14T07:10:09Z",
+  "version": "18.3.0",
+  "minimumOsVersion": "16.6",
+  "languageCodesISO2A": [
+    "EN",
+    "FR",
+    "DE",
+    "HE",
+    "IT",
+    "PT",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/speech-blubs-language-therapy/id1239522573?uo=4",
+  "bundleId": "org.blubblub.app.speechblubs",
+  "subtitle": "For Kids and Toddlers aged 1-8",
+  "screenshotCount": 20
+}

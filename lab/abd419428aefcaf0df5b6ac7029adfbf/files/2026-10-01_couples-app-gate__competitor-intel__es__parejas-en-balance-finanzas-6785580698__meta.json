@@ -1,0 +1,23 @@
+{
+  "trackId": 6785580698,
+  "trackName": "Parejas en Balance: Finanzas",
+  "sellerName": "RAFAEL GIL RAMIREZ",
+  "primaryGenreName": "Lifestyle",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-07-09T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-10T15:14:23Z",
+  "version": "1.4.9",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/parejas-en-balance-finanzas/id6785580698?uo=4",
+  "bundleId": "com.parejasenbalance.app",
+  "subtitle": "Finanzas compartidas en pareja",
+  "screenshotCount": 11
+}

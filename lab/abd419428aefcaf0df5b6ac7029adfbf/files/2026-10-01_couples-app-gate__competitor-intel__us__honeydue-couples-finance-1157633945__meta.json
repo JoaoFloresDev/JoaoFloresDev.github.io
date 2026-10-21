@@ -1,0 +1,25 @@
+{
+  "trackId": 1157633945,
+  "trackName": "Honeydue: Couples Finance",
+  "sellerName": "WalletIQ, Inc.",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.48657,
+  "userRatingCount": 10239,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2016-12-17T02:04:08Z",
+  "currentVersionReleaseDate": "2026-10-01T04:13:32Z",
+  "version": "2.84",
+  "minimumOsVersion": "16.0",
+  "languageCodesISO2A": [
+    "EN",
+    "FR",
+    "HI",
+    "ES"
+  ],
+  "contentAdvisoryRating": "17+",
+  "trackViewUrl": "https://apps.apple.com/us/app/honeydue-couples-finance/id1157633945?uo=4",
+  "bundleId": "co.walletiq.WalletIQ",
+  "subtitle": "Manage your money together",
+  "screenshotCount": 9
+}

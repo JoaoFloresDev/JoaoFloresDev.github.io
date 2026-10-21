@@ -1,0 +1,22 @@
+{
+  "trackId": 6782098628,
+  "trackName": "DUOVI: Finanzas en Pareja",
+  "sellerName": "Disruptive Consciousness LLC",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-07-08T07:00:00Z",
+  "currentVersionReleaseDate": "2026-08-19T22:52:50Z",
+  "version": "1.2.1",
+  "minimumOsVersion": "16.4",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/duovi-finanzas-en-pareja/id6782098628?uo=4",
+  "bundleId": "com.duovi.app",
+  "subtitle": "Gastos, presupuesto y ahorro",
+  "screenshotCount": 9
+}

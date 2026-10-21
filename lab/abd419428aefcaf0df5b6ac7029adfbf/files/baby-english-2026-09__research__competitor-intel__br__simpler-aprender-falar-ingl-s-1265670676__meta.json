@@ -1,0 +1,33 @@
+{
+  "trackId": 1265670676,
+  "trackName": "Simpler: aprender falar inglês",
+  "sellerName": "GUDVIZHN, TOO",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.84302,
+  "userRatingCount": 13702,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2017-10-27T09:46:57Z",
+  "currentVersionReleaseDate": "2026-08-18T10:55:42Z",
+  "version": "6.5.30",
+  "minimumOsVersion": "15.6",
+  "languageCodesISO2A": [
+    "EN",
+    "FR",
+    "ID",
+    "IT",
+    "JA",
+    "KO",
+    "PT",
+    "RU",
+    "ZH",
+    "ES",
+    "TR",
+    "VI"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/simpler-aprender-falar-ingl%C3%AAs/id1265670676?uo=4",
+  "bundleId": "com.viamobi.Simpler",
+  "subtitle": "Curso de inglês divertido",
+  "screenshotCount": 23
+}

@@ -1,0 +1,24 @@
+{
+  "trackId": 6798667582,
+  "trackName": "duofi: finanzas en pareja",
+  "sellerName": "Expert Vision Desenvolvimento de Tecnologias Ltda.",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-08-20T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-29T23:58:16Z",
+  "version": "1.0.3",
+  "minimumOsVersion": "15.1",
+  "languageCodesISO2A": [
+    "EN",
+    "PT",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/duofi-finanzas-en-pareja/id6798667582?uo=4",
+  "bundleId": "com.duofi-expertvision.app",
+  "subtitle": "Dinero en pareja, sin pelear",
+  "screenshotCount": 11
+}

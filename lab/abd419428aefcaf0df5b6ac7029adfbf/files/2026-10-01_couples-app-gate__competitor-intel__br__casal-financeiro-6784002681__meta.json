@@ -1,0 +1,22 @@
+{
+  "trackId": 6784002681,
+  "trackName": "Casal Financeiro",
+  "sellerName": "DPrimeira Informatica Ltda",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2026-06-30T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-22T18:56:22Z",
+  "version": "1.15.1",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/casal-financeiro/id6784002681?uo=4",
+  "bundleId": "app.casalfinanceiro",
+  "subtitle": "Juntos. Organizados. Livres.",
+  "screenshotCount": 9
+}

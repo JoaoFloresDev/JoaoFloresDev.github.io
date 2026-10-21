@@ -1,0 +1,519 @@
+
+### apachas|es n=7 1-3*=0 (0%) 4-5*=7
+  LOW: 
+  HIGH(pedidos): paywall/preco=1
+
+### balance-casal|br n=4 1-3*=3 (75%) 4-5*=1
+  LOW: parceiro precisa de conta/instalar=2  moeda/idioma/pais/PIX=1
+  * parceiro precisa de conta/instalar
+     3* [2026-08-28] 'Bom, mas poderia ser mais flexível': Adorei o App, tem recursos que preciso e não encontrei em nenhum outro. Mas não é possível cadastrar uma despesa com divisão diferente da configurada para a família e isso não me atende... Acho que poderia ser 
+     1* [2026-07-04] 'Não funciona': Convite não funciona
+  HIGH(pedidos): divisao desigual/%=1
+
+### balance-couples|us n=5 1-3*=3 (60%) 4-5*=2
+  LOW: parceiro precisa de conta/instalar=2  bug/crash=1  suporte/abandono=1  categorias/personalizar=1
+  * parceiro precisa de conta/instalar
+     1* [2025-06-24] 'Didn’t even get passed sign up': Another user left a review similar, but the invite link does not work so the app is rendered useless as soon as you try to sign up.
+     1* [2024-06-01] '«\xa0Invite link\xa0» not working no customer service': Wanted this to work to keep track of our budget . Husband received invite text but end result was error msg .
+  HIGH(pedidos): 
+
+### coupe|br n=3 1-3*=1 (33%) 4-5*=2
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=1
+
+### couplefinance|br n=4 1-3*=1 (25%) 4-5*=3
+  LOW: paywall/preco=1  parceiro precisa de conta/instalar=1  bug/crash=1
+  HIGH(pedidos): parceiro precisa de conta/instalar=2  paywall/preco=1  bug/crash=1
+
+### couplesplit|us n=2 1-3*=2 (100%) 4-5*=0
+  LOW: bug/crash=2  parceiro precisa de conta/instalar=1
+  * bug/crash
+     1* [2026-09-07] 'Waste of time': Waste of time, full of bugs and crashes
+     1* [2026-09-05] 'Sucks!': I want to use this app so badly. It does wonderful until I create an account and then it just crashes!
+  HIGH(pedidos): 
+
+### dividi|br n=8 1-3*=0 (0%) 4-5*=8
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=2  complexidade/confuso=2  paywall/preco=1  exportar/relatorio=1  categorias/personalizar=1
+
+### duofi|br n=1 1-3*=0 (0%) 4-5*=1
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=1
+
+### dvoi|br n=3 1-3*=0 (0%) 4-5*=3
+  LOW: 
+  HIGH(pedidos): exportar/relatorio=1
+
+### fairmony|us n=2 1-3*=0 (0%) 4-5*=2
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=1  complexidade/confuso=1  divisao desigual/%=1
+
+### halfway|us n=13 1-3*=0 (0%) 4-5*=13
+  LOW: 
+  HIGH(pedidos): bank connect=5  exportar/relatorio=3  divisao desigual/%=3  paywall/preco=2  sync entre os 2 celulares=2  recorrente/parcelado=2  limite de lancamentos=1  complexidade/confuso=1  categorias/personalizar=1
+
+### hearth|us n=2 1-3*=0 (0%) 4-5*=2
+  LOW: 
+  HIGH(pedidos): bank connect=1
+
+### honeydue|us n=500 1-3*=366 (73%) 4-5*=134
+  LOW: bank connect=149  suporte/abandono=130  categorias/personalizar=130  sync entre os 2 celulares=89  bug/crash=76  parceiro precisa de conta/instalar=48  login/senha/acesso=16  limite de lancamentos=11  perda de dados=9  exportar/relatorio=9  complexidade/confuso=8  paywall/preco=7  notificacao/lembrete=6  pagamento integrado=4  moeda/idioma/pais/PIX=3  divisao desigual/%=2  ads=1  calculo/saldo errado=1
+  * bank connect
+     1* [2026-06-10] 'Constant Bank Sync Issues': This app would be great if the connection to the bank didn’t fail every few days. You constantly need to check if your accounts are synced. If it breaks, sometime the re-sync option works. Other times you need 
+     1* [2026-04-13] 'No support': I really liked this app and used it all the time but it suddenly stopped being able to refresh my account a month ago. I tried emailing support twice and got no reply. I’ll update my review if they ever end up 
+     2* [2026-03-22] 'Poor integration quality: constant desync friction': The app crates a lot of friction due to banks constantly getting desynchronized with useless message “email us” appearing (I tried to email - no response), you have to remove affected banks every month or so an
+  * suporte/abandono
+     1* [2026-06-10] 'Constant Bank Sync Issues': This app would be great if the connection to the bank didn’t fail every few days. You constantly need to check if your accounts are synced. If it breaks, sometime the re-sync option works. Other times you need 
+     3* [2026-04-18] 'Too many glitches': When splitting categories it keeps reverting back to original category. Can’t edit comments. Customer service doesn’t respond to emails for help.
+     1* [2026-04-13] 'No support': I really liked this app and used it all the time but it suddenly stopped being able to refresh my account a month ago. I tried emailing support twice and got no reply. I’ll update my review if they ever end up 
+  * categorias/personalizar
+     1* [2026-06-10] 'Constant Bank Sync Issues': This app would be great if the connection to the bank didn’t fail every few days. You constantly need to check if your accounts are synced. If it breaks, sometime the re-sync option works. Other times you need 
+     3* [2026-04-18] 'Too many glitches': When splitting categories it keeps reverting back to original category. Can’t edit comments. Customer service doesn’t respond to emails for help.
+     2* [2026-03-19] 'Poor Customer Service': The app seems great, but I can’t use it properly. Every time I try to link my bank account, an error message pops up and tells me to email support. I’ve emailed them twice with no response. My only remaining op
+  * sync entre os 2 celulares
+     1* [2026-08-06] 'Useless': Quit syncing after a month or so of use. As others have mentioned, support is nonexistent. Don’t waste your time.
+     1* [2026-06-10] 'Constant Bank Sync Issues': This app would be great if the connection to the bank didn’t fail every few days. You constantly need to check if your accounts are synced. If it breaks, sometime the re-sync option works. Other times you need 
+     1* [2026-05-19] 'Always loses sync': Awful finance app. Only maintain sync with accounts for a week or two and then refuses to update. Truly useless, do not download.
+  * bug/crash
+     3* [2026-04-18] 'Too many glitches': When splitting categories it keeps reverting back to original category. Can’t edit comments. Customer service doesn’t respond to emails for help.
+     2* [2026-03-31] 'Broken & Missing Transactions': Honeydue is nice for couples who have different operating systems (iPhone vs Android). However, this application has always been buggy and very rigid. Most recently, I have not been able to view my September 20
+     2* [2026-03-19] 'Poor Customer Service': The app seems great, but I can’t use it properly. Every time I try to link my bank account, an error message pops up and tells me to email support. I’ve emailed them twice with no response. My only remaining op
+  * parceiro precisa de conta/instalar
+     2* [2026-07-15] 'Great App!  But I Can’t Get Support.': I really want to continue using Honeydue because I believe it has the features we need. Unfortunately, I’m locked out of my account because my two-factor authentication is tied to an old phone number that I no 
+     1* [2025-08-19] 'No Customer Support': I have emailed the “support” email listed in the app over the past 3 months and not once have I gotten a response. My boyfriend and I were uniting our finances through a couples app such as this one for financi
+     1* [2025-08-02] 'Lost total data after invitation Accept': My husband invited me through the email link and he added all the expenses before I accept the invitation. Once I accept the invitation on my dashboard everything was zero zero. While on my husband’s mobile it 
+  HIGH(pedidos): categorias/personalizar=43  bank connect=24  exportar/relatorio=14  paywall/preco=13  sync entre os 2 celulares=11  bug/crash=9  suporte/abandono=8  divisao desigual/%=8  limite de lancamentos=7  notificacao/lembrete=7  pagamento integrado=5  login/senha/acesso=2  complexidade/confuso=2  moeda/idioma/pais/PIX=2  ads=1  recorrente/parcelado=1
+
+### juntofinancas|br n=1 1-3*=1 (100%) 4-5*=0
+  LOW: paywall/preco=1
+  HIGH(pedidos): 
+
+### juntos|br n=44 1-3*=20 (45%) 4-5*=24
+  LOW: parceiro precisa de conta/instalar=8  bug/crash=7  paywall/preco=3  login/senha/acesso=2  suporte/abandono=2  perda de dados=1  exportar/relatorio=1  categorias/personalizar=1
+  * parceiro precisa de conta/instalar
+     1* [2026-05-18] 'PÓS TÉRMINO FREE APAGOU O HISTÓRICO': Baixei o app e estava usando normalmente até que vi que avaliação gratuita iria acabar, tudo bem. Fui entrar hoje para ver e simplesmente a conta da que havia criado para as despesas SUMIRAM ou seja, fiquei sem
+     3* [2026-02-12] 'Bom': Gostaria de deixar uma sugestão de ter uma opção de unir as despesas, do jeito que está parece que estou disputando com minha esposa quem pagou mais e aqui em casa juntamos e pagamos juntos
+     1* [2025-01-27] 'Não recebo o e-mail de cadastro': Eu e minha esposa baixamos o aplicativo e para utilizar precisa confirmar o cadastro. Já vai fazer dois dias e nada do e-mail chegar. Seria esse um apk para roubar dados??? Favor avaliarem. Se demorar até 5 dia
+  * bug/crash
+     3* [2025-08-22] 'App juntos': O app tranca demais durante o uso. Vários erros/bugs durante a inclusão de despesas.
+     1* [2025-05-29] 'Lançamento de despesa': Acabei de baixar e logo no lançamento da primeira despesa o aplicativo não deixou dando o erro: o valor pago por um usuário já é maior que o valor total da despesa. DETALHE: coloquei pra dividir em 50% e inform
+     1* [2025-01-04] 'Horrível mesmo pago': Achei péssimo. Paguei achei se seria mais rápido na versão paga, mas não. Lento demais e toda hora trava. Dinheiro jogado fora. Até parei de usar
+  * paywall/preco
+     1* [2026-05-18] 'PÓS TÉRMINO FREE APAGOU O HISTÓRICO': Baixei o app e estava usando normalmente até que vi que avaliação gratuita iria acabar, tudo bem. Fui entrar hoje para ver e simplesmente a conta da que havia criado para as despesas SUMIRAM ou seja, fiquei sem
+     1* [2025-05-29] 'Lançamento de despesa': Acabei de baixar e logo no lançamento da primeira despesa o aplicativo não deixou dando o erro: o valor pago por um usuário já é maior que o valor total da despesa. DETALHE: coloquei pra dividir em 50% e inform
+     1* [2025-01-04] 'Horrível mesmo pago': Achei péssimo. Paguei achei se seria mais rápido na versão paga, mas não. Lento demais e toda hora trava. Dinheiro jogado fora. Até parei de usar
+  * login/senha/acesso
+     1* [2025-01-27] 'Não recebo o e-mail de cadastro': Eu e minha esposa baixamos o aplicativo e para utilizar precisa confirmar o cadastro. Já vai fazer dois dias e nada do e-mail chegar. Seria esse um apk para roubar dados??? Favor avaliarem. Se demorar até 5 dia
+     2* [2022-10-01] 'não consigo adicionar meu parceiro': clico em “compartilhe com seu parceiro”, ele recebe um link por whatsapp e, quando clica, é direcionado para uma página de atualização cadastral que fica dizendo que as senhas digitadas não conferem - sendo que
+  * suporte/abandono
+     1* [2024-11-06] 'Péssimo': O suporte não é eficiente. Não tem cnpj e, caso você não goste do app, não tem reembolso.
+     1* [2023-12-03] 'Problema': O app está travando demais Se vou excluir a despesa ele trava Travou até quando fui mandar msg ao suporte
+  HIGH(pedidos): parceiro precisa de conta/instalar=7  exportar/relatorio=7  moeda/idioma/pais/PIX=4  suporte/abandono=2  divisao desigual/%=2  recorrente/parcelado=2  paywall/preco=1  perda de dados=1  bug/crash=1
+
+### manebo|br n=1 1-3*=0 (0%) 4-5*=1
+  LOW: 
+  HIGH(pedidos): categorias/personalizar=1  recorrente/parcelado=1
+
+### manebo|mx n=1 1-3*=0 (0%) 4-5*=1
+  LOW: 
+  HIGH(pedidos): 
+
+### monarch|us n=150 1-3*=59 (39%) 4-5*=91
+  LOW: categorias/personalizar=18  paywall/preco=12  bug/crash=9  bank connect=6  suporte/abandono=6  exportar/relatorio=6  sync entre os 2 celulares=3  parceiro precisa de conta/instalar=2  login/senha/acesso=2  notificacao/lembrete=2  divisao desigual/%=2  recorrente/parcelado=2  limite de lancamentos=1  complexidade/confuso=1
+  * categorias/personalizar
+     1* [2026-09-27] 'Let me sort in budget': I can’t believe they don’t allow you to adjust where you see what categories in your budget section. This is too expensive of a service to not allow this.
+     1* [2026-09-24] 'App wants extra signup even though they already billed me': I got the free trial period then the 100$annual program;however, the app would not let me retrieve my password and when I did get the code it said my new password could not be used. Have tried multiple ways to 
+     1* [2026-09-23] 'Cannot remove unused categories': Cannot remove unused categories
+  * paywall/preco
+     1* [2026-09-27] 'Let me sort in budget': I can’t believe they don’t allow you to adjust where you see what categories in your budget section. This is too expensive of a service to not allow this.
+     2* [2026-09-24] 'Cancellation was hard': You can’t cancel your subscription in app, you need to go to a browser to do it, and find the option in a big menu. Seems to be industry standard unfortunately, but I despise apps that get higher retention by m
+     1* [2026-09-20] 'Unresponsive and Scammy': I canceled within the trial period and they continue to try to charge me for an entire year. No obvious recourse, no customer service, nothing. Doesn’t matter how helpful the app is, or isn’t - the whole thing 
+  * bug/crash
+     2* [2026-09-05] 'Premium Price, Surprisingly Basic Problems': TL;DR: Monarch has some good ideas and is generally well designed, but for $15/month it gets several basic things wrong: the trial is too short, auto-categorization is unreliable, rule priority is opaque, and c
+     1* [2026-08-17] 'Not worth it': Paid for a year long subscription, wasn’t able to connect my credit card to the account. Not a user error considering the connection between monarch and the cc holder never connected even after logging in throu
+     2* [2026-08-09] 'Am I crazy? Buggy app and mobile experience': I feel crazy that no one else seems to be having this problem. Logging in and attempting to change account preferences are very difficult on mobile. Frequently met with blank, white pages or never-ending auth r
+  * bank connect
+     2* [2026-09-19] 'Good but connection issues': I like the app but the majority of my linked accounts don’t work anymore. A small number of them can be reconnected but who has time to spend 10 minutes and a bunch of frustration re-signing onto accounts.
+     1* [2026-09-18] 'Need to track CitiBank Manually': After using Monarch for 3 years. I was no longer able to connect my Citi Credit Card after I product change Citi Double Cash to Citi Custom Cash. After two weeks of waiting for customer support I was told to tr
+     1* [2026-08-28] 'Connection issues that don’t get fixed': Our bank has a known connection issue with all 3 connection platforms. It’s been a month and still broken. It makes the app worthless.
+  * suporte/abandono
+     1* [2026-09-24] 'App wants extra signup even though they already billed me': I got the free trial period then the 100$annual program;however, the app would not let me retrieve my password and when I did get the code it said my new password could not be used. Have tried multiple ways to 
+     1* [2026-09-20] 'Unresponsive and Scammy': I canceled within the trial period and they continue to try to charge me for an entire year. No obvious recourse, no customer service, nothing. Doesn’t matter how helpful the app is, or isn’t - the whole thing 
+     1* [2026-09-18] 'Need to track CitiBank Manually': After using Monarch for 3 years. I was no longer able to connect my Citi Credit Card after I product change Citi Double Cash to Citi Custom Cash. After two weeks of waiting for customer support I was told to tr
+  * exportar/relatorio
+     1* [2026-09-25] 'Flawed': the application is written to make you shove your transactions into their simplistic ontology. There is no sophisticated budgeting or scenario planning features, tax management, cash flow etc. not worth the mon
+     1* [2026-09-11] 'Unreliable, double expense transactions, 403b moved brokerages now amount is double in reports.': Unreliable, double expense transactions, 403b moved brokerages now amount is double in reports. Customer support asks for access and then does not use it to dig into the issue. They ask you to provide more deta
+     2* [2026-09-05] 'Premium Price, Surprisingly Basic Problems': TL;DR: Monarch has some good ideas and is generally well designed, but for $15/month it gets several basic things wrong: the trial is too short, auto-categorization is unreliable, rule priority is opaque, and c
+  HIGH(pedidos): categorias/personalizar=13  exportar/relatorio=9  paywall/preco=5  bank connect=5  complexidade/confuso=4  divisao desigual/%=3  widget/apple watch=2  pagamento integrado=2  ads=1  sync entre os 2 celulares=1  bug/crash=1  suporte/abandono=1  recorrente/parcelado=1
+
+### ossnossos|br n=16 1-3*=4 (25%) 4-5*=12
+  LOW: paywall/preco=1  exportar/relatorio=1
+  HIGH(pedidos): 
+
+### ourexpenses|us n=41 1-3*=6 (14%) 4-5*=35
+  LOW: bug/crash=2  ads=1  login/senha/acesso=1  bank connect=1  categorias/personalizar=1
+  * bug/crash
+     1* [2020-06-30] 'Glitchy': The app has started glitching out and doesn’t save budget changes.
+     1* [2018-10-02] 'Keeps freezing': This app keeps freezing.
+  HIGH(pedidos): categorias/personalizar=5  paywall/preco=4  exportar/relatorio=4  divisao desigual/%=2  limite de lancamentos=1  ads=1  sync entre os 2 celulares=1  parceiro precisa de conta/instalar=1  bank connect=1  recorrente/parcelado=1
+
+### pliit|br n=8 1-3*=1 (12%) 4-5*=7
+  LOW: parceiro precisa de conta/instalar=1  bug/crash=1
+  HIGH(pedidos): exportar/relatorio=2  categorias/personalizar=1
+
+### rachou|br n=7 1-3*=0 (0%) 4-5*=7
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=2  paywall/preco=1  moeda/idioma/pais/PIX=1  exportar/relatorio=1
+
+### settleup|us n=44 1-3*=21 (47%) 4-5*=23
+  LOW: paywall/preco=6  sync entre os 2 celulares=4  complexidade/confuso=4  bug/crash=4  ads=3  parceiro precisa de conta/instalar=2  exportar/relatorio=2  pagamento integrado=2  login/senha/acesso=1  categorias/personalizar=1
+  * paywall/preco
+     3* [2024-11-07] 'So so': The user interface could use improvement to make it easy to navigate. For example it take multiple clicks and it’s also not intuitive how to “settle up”. The add are also way to invasive. Lastly it’s way too ex
+     2* [2024-10-20] 'Free version not worth trying': I tried the free version of this app on a trip with three other people, and the app doesn’t even give you individualized debts. I ended up having to take all the expenses out of the app and put them in a spread
+     2* [2024-06-12] 'Just Suddenly Stopped Working': Worked great until it didn’t. With the free version, I was able to add and settle debts, just had to watch a few ads. Suddenly, I go to add some debts and it is giving me only a net summary of ALL debts, includ
+  * sync entre os 2 celulares
+     1* [2019-01-05] 'Disappointed': Doesn’t sync well with my iPhone. I don’t want to be linked with Facebook or google. I want my money refunded.
+     2* [2016-12-24] 'Trouble syncing': Good app when using between similar platform phones (iPhones/droids etc) but when trying to sync between an apple and a droid or google phone - not all of the payments or debts settled show up. Very frustrating
+     1* [2015-11-30] 'I wish it worked better': I want to like this app so much. The idea is great and the features sound really useful, but it's so inconsistent that it's basically useless. Only 1 time out of 50 does it actually sync (the rest of the time, 
+  * complexidade/confuso
+     3* [2026-05-16] 'A bit over-thought': I find settling up quite easy and this app makes it much more complicated. If you like that sort of thing, or don’t trust your own mathematics, then you might find it useful. It was not for me, but I can see ho
+     3* [2024-11-07] 'So so': The user interface could use improvement to make it easy to navigate. For example it take multiple clicks and it’s also not intuitive how to “settle up”. The add are also way to invasive. Lastly it’s way too ex
+     1* [2019-05-09] 'Update is horrible.': The old version was beautifully laid out and intuitive. The new version is clunky, poorly laid out and not intuitive at all. The visual references that made the original app so beautiful have been completely re
+  * bug/crash
+     2* [2025-01-18] 'Ui/UX issues and sometimes things don’t work with no reason given': Looks like classic ‘engineer UI’. Pure chaos. Took forever to add people, no error messages given for why scanning code or accepting invites didn’t work just noticed happened. Once setup and ignoring UI issues 
+     1* [2015-11-30] 'I wish it worked better': I want to like this app so much. The idea is great and the features sound really useful, but it's so inconsistent that it's basically useless. Only 1 time out of 50 does it actually sync (the rest of the time, 
+     3* [2015-10-19] 'No snapshots?': When I go to look at snapshots of someone else's receipts, it says "no snapshot." What gives?! Otherwise, useful app, if expensive for an app with a bug like that.
+  * ads
+     1* [2026-02-19] '2/2026 scam alert': I’ve been using this app for a while due to it having better privacy policies than other group expense apps and had no problems; I’d rate it 4/5 stars. Last night, I got an “ad” that was a “security review requ
+     2* [2024-06-12] 'Just Suddenly Stopped Working': Worked great until it didn’t. With the free version, I was able to add and settle debts, just had to watch a few ads. Suddenly, I go to add some debts and it is giving me only a net summary of ALL debts, includ
+     1* [2024-01-08] 'Advertisement Garbage': Used Splitwise for YEARS until they started prompting for payment and allowing only a set amount of daily entries, thought we’d give this one a shot. Was looking good until I realized within a week that this ap
+  * parceiro precisa de conta/instalar
+     2* [2025-01-18] 'Ui/UX issues and sometimes things don’t work with no reason given': Looks like classic ‘engineer UI’. Pure chaos. Took forever to add people, no error messages given for why scanning code or accepting invites didn’t work just noticed happened. Once setup and ignoring UI issues 
+     3* [2024-11-07] 'So so': The user interface could use improvement to make it easy to navigate. For example it take multiple clicks and it’s also not intuitive how to “settle up”. The add are also way to invasive. Lastly it’s way too ex
+  HIGH(pedidos): paywall/preco=8  exportar/relatorio=3  parceiro precisa de conta/instalar=2  categorias/personalizar=2  limite de lancamentos=1  ads=1  divisao desigual/%=1  recorrente/parcelado=1
+
+### splid|es n=300 1-3*=5 (1%) 4-5*=295
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=28  exportar/relatorio=15  paywall/preco=6  divisao desigual/%=3  limite de lancamentos=1  complexidade/confuso=1  bug/crash=1  moeda/idioma/pais/PIX=1  categorias/personalizar=1
+
+### splid|us n=200 1-3*=3 (1%) 4-5*=197
+  LOW: complexidade/confuso=2  exportar/relatorio=2
+  * complexidade/confuso
+     1* [2026-05-13] 'This App Overcomplicates Trips with Friends': If any of my friends choose to use this app on a trip again, I am not going. An excel doc to track expenses would work so much better. It’s over complicated and makes the entire trip planning experience so chal
+     3* [2026-01-31] 'Pretty Good, Could Improve': Love the concept, enjoy using it to keep track of who owes whom what since we don’t often repay the same day. Don’t like that you can only have one group, and it can be confusing to navigate
+  * exportar/relatorio
+     1* [2026-07-24] 'Calculations are WRONG!!!': My 3 friends & I used Splid for our trip to Barcelona. When we went to srttle up, the totals it gave us were TOTALLY WRONG!!! I did a spreadsheet with each person's expenditures & how it was divied up and it wa
+     1* [2026-05-13] 'This App Overcomplicates Trips with Friends': If any of my friends choose to use this app on a trip again, I am not going. An excel doc to track expenses would work so much better. It’s over complicated and makes the entire trip planning experience so chal
+  HIGH(pedidos): exportar/relatorio=16  moeda/idioma/pais/PIX=13  paywall/preco=11  parceiro precisa de conta/instalar=6  complexidade/confuso=5  ads=4  limite de lancamentos=3  categorias/personalizar=3  login/senha/acesso=1  bug/crash=1  suporte/abandono=1  divisao desigual/%=1
+
+### spliit|us n=3 1-3*=1 (33%) 4-5*=2
+  LOW: paywall/preco=1  ads=1
+  HIGH(pedidos): limite de lancamentos=1  ads=1
+
+### split-paytogether|us n=87 1-3*=27 (31%) 4-5*=60
+  LOW: paywall/preco=7  parceiro precisa de conta/instalar=5  bank connect=3  complexidade/confuso=3  pagamento integrado=3  login/senha/acesso=2  categorias/personalizar=2  calculo/saldo errado=1  suporte/abandono=1  exportar/relatorio=1  divisao desigual/%=1
+  * paywall/preco
+     2* [2026-09-18] 'One caveat :/': Apps great to split bills but there is a service fee now for the those paying the bill. Feels weird for my family and friends to be paying MORE just to use something they didn’t need to. If anything it’s for th
+     3* [2026-09-17] 'High fee': They charge high fees. I really enjoyed using this at the start but now I feel bad making others use because of the high fees.
+     2* [2026-09-16] 'Great way to pay - Doesn’t disclose the service fee': Here’s the scenario, You invite a group of your friends for dinner. You get a text that someone wanted to bring their cousin and their friends. It’s all good, you met them once. Y’all have dinner and it’s time 
+  * parceiro precisa de conta/instalar
+     1* [2026-09-23] 'Delayed deposit': I made a withdrawal on the 14th, and it said the funds would be in my account by the 21st at the latest. I contacted support, and they told me it would be in my account on the morning or evening of the 22nd. It
+     2* [2026-09-16] 'Great way to pay - Doesn’t disclose the service fee': Here’s the scenario, You invite a group of your friends for dinner. You get a text that someone wanted to bring their cousin and their friends. It’s all good, you met them once. Y’all have dinner and it’s time 
+     1* [2026-06-22] 'App not working': I’ve had the app for about a week now and cannot get past the verification page. It continue to send me codes, and I am unable to type in the code or select the numbers when it pops up to be added from the mess
+  * bank connect
+     1* [2026-07-14] 'Didn’t split, didn’t deposit': It didn’t split items correctly .. it did not reflect what was shown on receipt… i couldn’t link to my bank … I had to enter account and routing … waited 3-5 business days .. and still have not seen the money …
+     1* [2026-06-12] 'Lacking': This app creates more problems than it solves. The receipt scanning feature is highly inaccurate. Items are frequently misaligned, totals are incorrect, and in some cases the app completely rearranges the recei
+     1* [2026-06-05] 'No withdrawal??': I really want to love this app, in fact I love everything about it, but I haven’t received my first bank transfer from it even though it told me 3-5 business days. I submitted the withdrawal on May 29 and it’s 
+  * complexidade/confuso
+     2* [2026-09-19] 'High fees and complicated transfer process': Used this for a bill and it cost me over $20 in fees for collecting the money from the other people. You also have to create a Stripe account to get the money out of the app. I should just be able to transfer t
+     2* [2026-09-16] 'Great way to pay - Doesn’t disclose the service fee': Here’s the scenario, You invite a group of your friends for dinner. You get a text that someone wanted to bring their cousin and their friends. It’s all good, you met them once. Y’all have dinner and it’s time 
+     3* [2026-06-18] 'Suggestions': Was difficult to use for the first time. Should be a drop down to select group number and based on the group number you can select certain dishes to split evenly. Having a full, half, and third pay option is ha
+  * pagamento integrado
+     2* [2026-09-19] 'High fees and complicated transfer process': Used this for a bill and it cost me over $20 in fees for collecting the money from the other people. You also have to create a Stripe account to get the money out of the app. I should just be able to transfer t
+     2* [2026-09-08] 'Fees are too high': App was excellent, until they started charging fees. When you send a split the person that needs to pay you will be charge around 5% for the payment to be processed, which seems high. Something around 1-3% woul
+     3* [2026-06-18] 'Suggestions': Was difficult to use for the first time. Should be a drop down to select group number and based on the group number you can select certain dishes to split evenly. Having a full, half, and third pay option is ha
+  * login/senha/acesso
+     1* [2026-06-21] 'App issues already': It’s a dope concept but I can’t seem to get past the verification code page because the keypad becomes inactive.. wish I could enjoy the app like everyone else seems to be
+     1* [2026-06-20] 'Can’t sign up': Won’t send me the verification code needed to even sign up to use it. Tried a few different times, nothing.
+  HIGH(pedidos): paywall/preco=8  pagamento integrado=5  categorias/personalizar=2  parceiro precisa de conta/instalar=1  bank connect=1  complexidade/confuso=1  suporte/abandono=1  divisao desigual/%=1
+
+### splital|br n=2 1-3*=0 (0%) 4-5*=2
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=2  exportar/relatorio=1
+
+### splital|mx n=6 1-3*=0 (0%) 4-5*=6
+  LOW: 
+  HIGH(pedidos): parceiro precisa de conta/instalar=2  divisao desigual/%=1
+
+### splitpay-bills-in-two|us n=300 1-3*=63 (21%) 4-5*=237
+  LOW: bank connect=9  paywall/preco=8  categorias/personalizar=5  suporte/abandono=4  complexidade/confuso=3  exportar/relatorio=3  parceiro precisa de conta/instalar=2  login/senha/acesso=2  bug/crash=2  divisao desigual/%=2  sync entre os 2 celulares=1  perda de dados=1  notificacao/lembrete=1  recorrente/parcelado=1  pagamento integrado=1
+  * bank connect
+     1* [2026-08-31] 'A lot of fake reviews here! Doesn’t work': It keeps denying me even though I make 3x the rent and my bank that’s sync proves it yet it denies me to even use it and keeps denying me for the past 90 days. A lot of these reviews on here are fake!!! Actuall
+     1* [2026-06-12] 'Scam!': Horrible experience don’t download this app! They charged me and “paid my rent” all I got was NSF fees from them not having any funds complete scam! I had to call my bank and file a dispute to get my money back
+     1* [2026-06-06] 'Scam Setup': My reliable tenants who have been paying on time want to establish a good credit history to qualify for a mortgage. Split Pay takes advantage of their need and ruins their former on time pay history. My tenants
+  * paywall/preco
+     1* [2026-07-28] 'No longer an option to turn off credit reporting': I have been using split pay for a few months now with no issue. I love using them because it takes a load off of me from. I absolutely loved the option of no credit reporting because I do not need to credit his
+     1* [2026-07-04] 'No real metrics or scanning system': This app is a complete waste. I’m sure they are using AI to scan your account and transaction history. They keep denying based off my account and transactions history after my deposit hits?? I’m paying BILLS du
+     1* [2026-06-12] 'Scam!': Horrible experience don’t download this app! They charged me and “paid my rent” all I got was NSF fees from them not having any funds complete scam! I had to call my bank and file a dispute to get my money back
+  * categorias/personalizar
+     1* [2026-06-05] 'Great Until It Wasn’t': I used this app for over a year to help manage my rent payments, but my recent experience has completely changed my view of this company. After a temporary loss of income, I paid later than usual. That’s when t
+     1* [2026-03-26] 'Management changed portal to Bilt. I have had nothing but problems': I have been customer since 1/2026 no issues then came instructions on how to change system to BILT had to delete my account. No white glove treatment just plain AI. Annoying
+     1* [2026-03-03] 'Horrible': Things are great until they're not great. Customer care doesn't care. This app is run by AI and if a live person tells you they have flexible options don't trust anything said because they don't actually have c
+  * suporte/abandono
+     1* [2026-06-05] 'Great Until It Wasn’t': I used this app for over a year to help manage my rent payments, but my recent experience has completely changed my view of this company. After a temporary loss of income, I paid later than usual. That’s when t
+     2* [2026-03-11] 'Landlord hell': As a landlord who used this for about a year to collect payments, this is the worst service out there. They hold your money for 10+ days every time without fail. They give you arrival dates that are never corre
+     2* [2026-02-13] 'Confusing': Got approved. Attempted to use but transaction failed. I couldn’t get customer service so I gave up and deleted the app.
+  * complexidade/confuso
+     1* [2026-05-17] 'Literally the most confusing app ever': When I first moved into my unit I attempted to sign up for split pay but was ineligible, ok moved on now I’m trying to do it again, went and filled out the application again is was approved to cover my entire r
+     1* [2026-05-13] 'CONFUSION!': Initially I was relieved that I would be able to utilize this app. However it has caused me additional stress. After submitting the requested information my rent was not paid. I was advised to reconnect my acco
+     2* [2026-02-13] 'Confusing': Got approved. Attempted to use but transaction failed. I couldn’t get customer service so I gave up and deleted the app.
+  * exportar/relatorio
+     1* [2026-07-28] 'No longer an option to turn off credit reporting': I have been using split pay for a few months now with no issue. I love using them because it takes a load off of me from. I absolutely loved the option of no credit reporting because I do not need to credit his
+     1* [2026-06-05] 'Great Until It Wasn’t': I used this app for over a year to help manage my rent payments, but my recent experience has completely changed my view of this company. After a temporary loss of income, I paid later than usual. That’s when t
+     1* [2026-04-29] 'Civil Suit Pending': This institution engages in reckless business practices and should be avoided. I reached out to the support team, prior to making a payment in my resident portal, to ensure my account was active and in good sta
+  HIGH(pedidos): paywall/preco=39  categorias/personalizar=10  divisao desigual/%=8  suporte/abandono=7  exportar/relatorio=5  recorrente/parcelado=4  bank connect=3  complexidade/confuso=2  notificacao/lembrete=2  limite de lancamentos=1  ads=1  perda de dados=1
+
+### splitwise|br n=300 1-3*=152 (50%) 4-5*=148
+  LOW: limite de lancamentos=57  paywall/preco=54  parceiro precisa de conta/instalar=25  exportar/relatorio=10  bug/crash=7  complexidade/confuso=5  ads=4  moeda/idioma/pais/PIX=4  recorrente/parcelado=4  categorias/personalizar=3  login/senha/acesso=2  pagamento integrado=1
+  * limite de lancamentos
+     1* [2026-07-29] 'App com com compras dentro': O app é até bem funcional mas pra única função que ele serve que é adicionar despesas, tem limite diário e é preciso pagar, ou seja é mais fácil fazer manualmente.
+     3* [2026-07-27] 'Envelheceu mal': É um aplicativo muito útil e facilita muito algo que é muito complexo de fazer (ainda mais em grupos de muitas pessoas), mas o limite de lançamentos diários da conta básica é baixo. A sensação é que é uma press
+     1* [2026-04-27] 'App era bom. Ficou limitado': Ficou limitado demais depois que veio a opção pro. Enfim, migrei para outro app.
+  * paywall/preco
+     1* [2026-09-13] 'Ja era. Agora só pagando': Não da mais para usar a versão gratuita. Pagar mensalidade para um app de uso esporádico e simples é uma insanidade.
+     1* [2026-08-30] 'so funciona de pago': já era…
+     1* [2026-08-11] 'Expensive to use once a while': Changed to tricount to ridiculous policies in saving 3 expenses a day. Tricount also imports old Splitwise accounts.
+  * parceiro precisa de conta/instalar
+     2* [2026-09-11] 'Burocracia': Chato ter quer convidar a pessoa ora colocar na conta
+     3* [2026-07-27] 'Envelheceu mal': É um aplicativo muito útil e facilita muito algo que é muito complexo de fazer (ainda mais em grupos de muitas pessoas), mas o limite de lançamentos diários da conta básica é baixo. A sensação é que é uma press
+     2* [2026-07-09] 'Not user friendly': Nothing in the app is easy. Adding a friend is an odyssey, let alone changing the invite or adding to group.
+  * exportar/relatorio
+     1* [2025-08-16] 'Pouca utilidade sem PIX': O aplicativo não tem muito mais utilidade que uma calculadora e muito menos que uma planilha de excel. Caso incorporasse a função de Pix e cartão de crédito como o app cumbuca fazia, teria alguma utilidade.
+     3* [2025-07-13] 'Para ser bom!': Precisa ter um resumo planilhado!
+     1* [2024-05-31] 'Piorou muito': Já foi um bom app. Agora com essa necessidade de assinar o Pro deixou de ser interessante. Deveria ter um básico melhor. Até para aqueles que não usam com tanta frequência. De volta a planilha de Excel.
+  * bug/crash
+     1* [2026-03-21] 'Nao da pra excluir pessoas do grupo': Um lixo, muito bug, nao consigo excluir alguem do grupo ou sair do grupo. Horrivel
+     2* [2025-12-29] 'Piorou Muito': Essa nova versão ficou bugada. A cada despesa que vc adiciona vai para a tela de contato, preciso fechar o app para continuar
+     1* [2025-06-16] 'Bug grave': O app está com um bug gravíssimo. A aba saldos muda de um dia para outro, mesmo sem mudar despesas. Por causa disso, bagunça as contas completamente. Usei o app num evento com a família e só causou confusão.
+  * complexidade/confuso
+     3* [2025-12-18] 'Confuso': Achei um pouco confuso ao saber quanto cada um estava devendo. E pelo app, não consegui logar através do Google, apenas pelo navegador!
+     1* [2025-06-16] 'Bug grave': O app está com um bug gravíssimo. A aba saldos muda de um dia para outro, mesmo sem mudar despesas. Por causa disso, bagunça as contas completamente. Usei o app num evento com a família e só causou confusão.
+     3* [2024-08-04] 'Visualização confusa': O design do app é confuso, zero intuitivo
+  HIGH(pedidos): parceiro precisa de conta/instalar=37  exportar/relatorio=25  moeda/idioma/pais/PIX=18  paywall/preco=13  recorrente/parcelado=9  limite de lancamentos=7  categorias/personalizar=4  bug/crash=3  pagamento integrado=2  complexidade/confuso=1  suporte/abandono=1
+
+### splitwise|es n=200 1-3*=83 (41%) 4-5*=117
+  LOW: paywall/preco=39  limite de lancamentos=34  ads=8  parceiro precisa de conta/instalar=4  complexidade/confuso=4  login/senha/acesso=1  bug/crash=1  exportar/relatorio=1  pagamento integrado=1
+  * paywall/preco
+     1* [2026-09-18] 'Stop stupid subscription': I could pay once, but €50 per year??? This is insane
+     2* [2026-09-09] 'Cada vez peor': Un tanto limitada sin pagar, pero desde que te intentan meter los pagos por tarjeta hasta en la sopa es un peñazo usarla.
+     1* [2026-08-22] 'De app gratuita con anuncios a casi inutilizable': Llevo tiempo usando Splitwise y el cambio en la versión gratuita me parece lamentable. Antes, después de varios gastos, aparecía publicidad durante unos 10 segundos y después podías seguir añadiendo gastos. Era
+  * limite de lancamentos
+     1* [2026-09-17] 'límites': límites todos los días, app con ads y encima con limites de gastos diarios. tricount es MUCHO MEJOR, de nada
+     2* [2026-09-09] 'Cada vez peor': Un tanto limitada sin pagar, pero desde que te intentan meter los pagos por tarjeta hasta en la sopa es un peñazo usarla.
+     1* [2026-08-22] 'De app gratuita con anuncios a casi inutilizable': Llevo tiempo usando Splitwise y el cambio en la versión gratuita me parece lamentable. Antes, después de varios gastos, aparecía publicidad durante unos 10 segundos y después podías seguir añadiendo gastos. Era
+  * ads
+     1* [2026-09-17] 'límites': límites todos los días, app con ads y encima con limites de gastos diarios. tricount es MUCHO MEJOR, de nada
+     1* [2026-08-22] 'De app gratuita con anuncios a casi inutilizable': Llevo tiempo usando Splitwise y el cambio en la versión gratuita me parece lamentable. Antes, después de varios gastos, aparecía publicidad durante unos 10 segundos y después podías seguir añadiendo gastos. Era
+     1* [2026-07-12] 'Pésima última actualización': Se perdió el total sentido e entendimiento de la app. No recomiendo, cálculos confusos u mala organización de las simplificaciones. Han destrozado la aplicación con publicidad, límite de gastos y sistema de pag
+  * parceiro precisa de conta/instalar
+     3* [2025-06-01] 'Regulín, pero funciona.': A ver, la app funciona perfectamente y al final se cuadran bien los gastos sin tener que pagar un poco a cada uno. Pero a la vez, te da la información de ese “poco” que tendrías que pagar a cada persona que hay
+     1* [2025-04-17] 'La app se ha vuelto inútil': Una app interesante que se ha vuelto inútil por el límite de gastos diarios que hay en la cuenta gratuita.
+     1* [2025-01-04] 'Limite diario de gastos': De todas las cosas que se pueden hacer para incitar a la compra han elegido la única que hace la versión gratuita completamente inútil : limitar el número de gastos que se pueden registrar al día. No se si hay 
+  * complexidade/confuso
+     1* [2026-07-14] '.': Poco intuitiva,
+     1* [2026-07-12] 'Pésima última actualización': Se perdió el total sentido e entendimiento de la app. No recomiendo, cálculos confusos u mala organización de las simplificaciones. Han destrozado la aplicación con publicidad, límite de gastos y sistema de pag
+     1* [2026-06-21] 'Uso confuso': Es difícil de usar, es confusa a la hora de que todos pongan sus gastos y entender quien le debe cosas a quien.
+  HIGH(pedidos): parceiro precisa de conta/instalar=19  paywall/preco=9  limite de lancamentos=6  exportar/relatorio=6  categorias/personalizar=2  ads=1  complexidade/confuso=1  bug/crash=1  moeda/idioma/pais/PIX=1  divisao desigual/%=1
+
+### splitwise|mx n=200 1-3*=95 (47%) 4-5*=105
+  LOW: paywall/preco=62  limite de lancamentos=40  parceiro precisa de conta/instalar=9  ads=5  login/senha/acesso=4  complexidade/confuso=3  exportar/relatorio=3  bug/crash=2  bank connect=1  notificacao/lembrete=1  divisao desigual/%=1  pagamento integrado=1
+  * paywall/preco
+     3* [2026-09-27] 'Muy buena/ Precio Alto': Es una excelente aplicación, pero si tuviera un costo más adecuado todo mi círculo estaría dispuesto a pagarlo y lo usaríamos más,
+     1* [2026-08-02] 'Horrible': This app is genuinely awful, it over complicates everything, doesn’t actually manage any reconciliation, requires you to pay money to be able to pay via the app if currencies are unaligned and does weird things
+     1* [2026-04-08] 'Se traba y exige pago': Muy costoso el uso para lo que entrega
+  * limite de lancamentos
+     1* [2026-09-28] 'Muy limitada': Hay mejores opciones, como Monet
+     2* [2026-05-13] 'Good but limited': No multi-language support
+     1* [2025-10-21] 'Pésimas actualizaciones, cobro injustificado': La aplicación tenía una funcionalidad sencilla, intuitiva y rápida de utilizar. Ahora, con el pedir su cobro por el premium para todo, incluso para seguir realizando su función más básica (el contador y límite 
+  * parceiro precisa de conta/instalar
+     3* [2025-12-25] 'Puede mejorar': Deberían de poner gastos segmentados y no descontarlo del gran total
+     1* [2025-10-21] 'Pésimas actualizaciones, cobro injustificado': La aplicación tenía una funcionalidad sencilla, intuitiva y rápida de utilizar. Ahora, con el pedir su cobro por el premium para todo, incluso para seguir realizando su función más básica (el contador y límite 
+     1* [2025-08-12] 'Muy cara para solo hacer cuentas': No debería ser mensual. Es muy buena app! Pero muy cara
+  * ads
+     1* [2025-07-11] 'Put some ads': Okay, we get it. You need to make some money off this, but no one with half a grain of common sense would pay this much for this app. It's just absurd that it costs the same as Spotify. Put some ad banners unde
+     1* [2024-08-21] 'Muy buena la app, muy mala la suscripción': Es una app que uso 1 vez al año para viajes con amigos. Y la suscripción que quieres implementar es carísima para lo que ofrece. Busquen otra opción de capitalizar su app con publicidad o la gente la va a dejar
+     2* [2024-02-21] 'Nerfed App - Kind of Useless Now': I understand apps need to get monetized; however, it is too expensive for people outside the US. And all the limitations they added to the free version make it extremely annoying to use. If they’d make a cheape
+  * login/senha/acesso
+     1* [2026-08-02] 'Horrible': This app is genuinely awful, it over complicates everything, doesn’t actually manage any reconciliation, requires you to pay money to be able to pay via the app if currencies are unaligned and does weird things
+     1* [2025-07-25] 'It used to be good': Last time I used it, around 6 months ago, the app used to be the best in my opinion, easy to use, simple login, Dark mode, etc. Now it seems that the app was made to be hard and complicated. Even the ui aspects
+     1* [2024-09-09] 'The app is not good': You “can” make an account with Google, but you cannot use it to log into the app? You need to first open the browser, send a request to change your password and create a new password, why give the option to log
+  * complexidade/confuso
+     1* [2026-08-02] 'Horrible': This app is genuinely awful, it over complicates everything, doesn’t actually manage any reconciliation, requires you to pay money to be able to pay via the app if currencies are unaligned and does weird things
+     1* [2025-07-25] 'It used to be good': Last time I used it, around 6 months ago, the app used to be the best in my opinion, easy to use, simple login, Dark mode, etc. Now it seems that the app was made to be hard and complicated. Even the ui aspects
+     1* [2024-10-01] 'Pésimo': El diseño es confuso. De repente nos salían pagos que no entendíamos de qué eran… y al final tienes que pagar suscripción sí o sí porque hay un límite de gastos que puedes ingresar.
+  HIGH(pedidos): exportar/relatorio=31  parceiro precisa de conta/instalar=25  paywall/preco=4  limite de lancamentos=4  sync entre os 2 celulares=1  complexidade/confuso=1  suporte/abandono=1  moeda/idioma/pais/PIX=1
+
+### splitwise|us n=400 1-3*=232 (58%) 4-5*=168
+  LOW: paywall/preco=79  limite de lancamentos=53  complexidade/confuso=23  pagamento integrado=22  bank connect=19  ads=17  categorias/personalizar=15  exportar/relatorio=12  suporte/abandono=11  parceiro precisa de conta/instalar=10  bug/crash=7  notificacao/lembrete=6  login/senha/acesso=4  moeda/idioma/pais/PIX=3  divisao desigual/%=3  calculo/saldo errado=2  recorrente/parcelado=1
+  * paywall/preco
+     1* [2026-09-24] 'Tricks into upgrade': Makes you sign up for recurring charge without realizing it
+     1* [2026-09-22] 'No longer functional': We have used both the paid and unpaid versions at different times. When we didn't need the functionality of the pro version, we would occasionally use the unpaid version with fewer amenities. That version no lo
+     3* [2026-09-18] 'Pretty good, but subscription is out of control': It’s good at what it does. I’ll be straight about that. But it’s slowly getting worse and worse with the free version getting nerfed and the ads for Pro coming in more heavy handed. What makes it all worse is t
+  * limite de lancamentos
+     1* [2026-09-21] '3 expense limit per day is crazy - USE A FREE ALTERNATIVE': The free tier only allows you to enter 3 expenses each day. It also forces you to sit through an ad before entering each one. Lots of the basic features are locked behind the paid version. It’s $60 per year for
+     1* [2026-09-20] 'Once great app ruined by greed': Every time I use it, the app gets worse with constant limiting useful features and begging for upgrade to the paid version, which I will never do
+     1* [2026-09-17] 'Forced minimal transfers': I used to love splitwise, but they seem to have put a limit on how much of your money you can transfer to your own bank account. The whole point of this app to collect from friends on a big expense and then eas
+  * complexidade/confuso
+     3* [2026-09-25] 'Clunky': Difficult to use
+     1* [2026-09-21] 'annoying and complicated': i hate when my friends ask me to use this app. it’s so complicated and i don’t trust adding my bank details. i wish it was just through venmo automatically my friends pay me through the easiest way option via t
+     1* [2026-09-13] 'Terrible App Now': Splitwise used to be awesome but it’s become unusable. Causes so much group confusion when used. It’s like they don’t bother having a single employee try the app out to see how confusing and broken the actual e
+  * pagamento integrado
+     1* [2026-09-23] 'Basura Fuego': What a rip. Forced to use the system to settle up with friends, haven’t been reimbursed as yet. Tried to cancel and ZERO customer support. Why have a phone number if no one actually answers it? A little cc disp
+     1* [2026-09-21] 'annoying and complicated': i hate when my friends ask me to use this app. it’s so complicated and i don’t trust adding my bank details. i wish it was just through venmo automatically my friends pay me through the easiest way option via t
+     2* [2026-09-14] 'How you don’t have cash app or Zelle': Needs more payment options to have a quicker use of splitting fees
+  * bank connect
+     1* [2026-09-21] 'annoying and complicated': i hate when my friends ask me to use this app. it’s so complicated and i don’t trust adding my bank details. i wish it was just through venmo automatically my friends pay me through the easiest way option via t
+     1* [2026-09-17] 'Forced minimal transfers': I used to love splitwise, but they seem to have put a limit on how much of your money you can transfer to your own bank account. The whole point of this app to collect from friends on a big expense and then eas
+     1* [2026-08-20] 'No Venmo?': I don’t want to transfer my bank and personal details to another app. Where is the Venmo integration that is widely mentioned for splitwise
+  * ads
+     1* [2026-09-26] 'Hate new Splitwise experience': Used to use Splitwise for all my trips. Now I am considering switching because it has too many ads and the daily number of expenses I can put add is 5
+     1* [2026-09-21] '3 expense limit per day is crazy - USE A FREE ALTERNATIVE': The free tier only allows you to enter 3 expenses each day. It also forces you to sit through an ad before entering each one. Lots of the basic features are locked behind the paid version. It’s $60 per year for
+     3* [2026-09-18] 'Pretty good, but subscription is out of control': It’s good at what it does. I’ll be straight about that. But it’s slowly getting worse and worse with the free version getting nerfed and the ads for Pro coming in more heavy handed. What makes it all worse is t
+  HIGH(pedidos): paywall/preco=14  exportar/relatorio=14  moeda/idioma/pais/PIX=5  complexidade/confuso=4  divisao desigual/%=4  limite de lancamentos=3  bank connect=3  pagamento integrado=3  categorias/personalizar=2  ads=1  parceiro precisa de conta/instalar=1  login/senha/acesso=1  bug/crash=1  suporte/abandono=1  notificacao/lembrete=1
+
+### tandem|us n=300 1-3*=81 (27%) 4-5*=219
+  LOW: paywall/preco=28  suporte/abandono=19  categorias/personalizar=17  bug/crash=16  parceiro precisa de conta/instalar=14  bank connect=11  complexidade/confuso=4  login/senha/acesso=3  ads=2  exportar/relatorio=2  sync entre os 2 celulares=1  pagamento integrado=1
+  * paywall/preco
+     1* [2026-08-07] 'Waste of time': The app has you make an account and takes you to a paywall you can’t get passed. This app seemed great by the ads but you can’t even try it out without buying first?
+     1* [2026-06-17] 'No thanks': It has you sign up but then doesn’t let you delete the account when you don’t want to pay for it.
+     2* [2026-05-09] 'Good but buggy': In general, love the app and the way it works but it is very very buggy - and things that used to work, don’t anymore. I cannot unlock repeating splits, it mixes pending and non-pending charges for the same ite
+  * suporte/abandono
+     1* [2025-11-20] 'Great app but seemed abandoned': Such a great app for splitting cost but it seems like the developer has decided to park this project… bugs not getting fixed, no support team at all. I hope someone would take over this app and make it great ag
+     1* [2025-09-23] 'Horrible support glitchy app': Update: it’s been 4 months and I still haven’t been able to resolve any support issues, can’t get ANY response. Last patch was 7 months ago, clearly the creator of this app has abandoned it. Tried using this ap
+     1* [2025-08-12] 'Doesn’t work, support unresponsive': Setup accounts, both me and my girlfriend did, and we couldn’t get them to link. They both showed we needed to complete registration on both ends, which was already done. Reached out to support 4 times and no r
+  * categorias/personalizar
+     3* [2025-06-01] 'Great but needs some more features': This app would be perfect if it had a way to plan future bills like be able to customize the date under Manual entry for example I want to add my electric bill so when it comes I would like to be able to go int
+     1* [2025-05-20] 'No customer service': This app was great for a while for my boyfriend and I to split expenses. But then I started having issues with my connected bank accounts where they’re duplicated and I can’t delete them. Every time I try I get
+     1* [2025-05-16] 'Terrible customer service': Have been reaching out for days for help with customer service. There is no customization within the app for settling up custom amounts.
+  * bug/crash
+     1* [2026-06-06] 'Devs Stop Updating': Used this app religiously with my wife and now bugs stop our progress. Need to add new accounts now and the app doesn’t let me. Trying to look for alternatives. Good in practice but this app doesn’t have a prof
+     2* [2026-05-09] 'Good but buggy': In general, love the app and the way it works but it is very very buggy - and things that used to work, don’t anymore. I cannot unlock repeating splits, it mixes pending and non-pending charges for the same ite
+     1* [2025-11-20] 'Great app but seemed abandoned': Such a great app for splitting cost but it seems like the developer has decided to park this project… bugs not getting fixed, no support team at all. I hope someone would take over this app and make it great ag
+  * parceiro precisa de conta/instalar
+     1* [2026-08-07] 'Waste of time': The app has you make an account and takes you to a paywall you can’t get passed. This app seemed great by the ads but you can’t even try it out without buying first?
+     1* [2026-06-17] 'No thanks': It has you sign up but then doesn’t let you delete the account when you don’t want to pay for it.
+     2* [2025-08-06] 'Need Support Staff': This app has been great for myself and my fiance over the last few years living together. Lately though, we’ve noticed repeating split transactions that we’ve set up not actually repeating, and we’ve been unabl
+  * bank connect
+     1* [2026-04-08] 'Needs more work': Transactions does not show which card was used. Impossible to split items like Amazon orders where we use multiple cards. And everyone I move away from the Transaction tab (clicking on another tab, or briefly s
+     1* [2025-05-20] 'No customer service': This app was great for a while for my boyfriend and I to split expenses. But then I started having issues with my connected bank accounts where they’re duplicated and I can’t delete them. Every time I try I get
+     1* [2025-03-06] 'Android version??': I’ve had the app downloaded for two years now and have just been waiting for an android version to become available. I feel stuck in our finances since we aren’t married and do not have a joint bank account. I’
+  HIGH(pedidos): pagamento integrado=41  divisao desigual/%=26  paywall/preco=25  bank connect=23  categorias/personalizar=17  bug/crash=14  exportar/relatorio=12  recorrente/parcelado=6  complexidade/confuso=5  ads=3  sync entre os 2 celulares=1  parceiro precisa de conta/instalar=1  suporte/abandono=1
+
+### thirdwheel|us n=1 1-3*=0 (0%) 4-5*=1
+  LOW: 
+  HIGH(pedidos): 
+
+### tricount|br n=147 1-3*=61 (41%) 4-5*=86
+  LOW: exportar/relatorio=14  moeda/idioma/pais/PIX=11  parceiro precisa de conta/instalar=9  bug/crash=8  paywall/preco=4  calculo/saldo errado=4  complexidade/confuso=3  categorias/personalizar=2  sync entre os 2 celulares=1  divisao desigual/%=1  recorrente/parcelado=1
+  * exportar/relatorio
+     2* [2025-11-28] 'Bom mas bugado': O app é excelente, a interface é muito bonita e prática, a ainda conseguimos exportar do Splitwise, entregando o balanço dele está bugado. Percebi isso no primeiro dia de viajem e fiz as contas na mão pra ter c
+     1* [2025-04-21] 'PDF?': Retiraram a opção de compartilhar em PdF? Era Melhor parte do app, viajava em família e ficava perfeito para organização, agora não possui mais a opção de compartilhamento em PDF 🥲🥲🥲🥲
+     2* [2025-03-09] 'Falta edição de categorias e exportação de transações': Infelizmente, essas duas funcionalidades básicas não estão disponíveis no app.
+  * moeda/idioma/pais/PIX
+     1* [2026-03-12] 'Default Currency': Can’t change the default currency in my trip
+     1* [2024-12-07] 'Péssima atualização.': A atualização do app só fez piorar! Não tem mais como colocar em português. Não exporta mais PDF. Não tem mais como adicionar descrição quando cria uma nova conta. As despesas que apareciam como uma lista, de f
+     2* [2024-10-18] 'Não tem mais a opção português': O app é sensacional, muito útil. Mas desde que atualizou ele não tem mais a opção em português. Mudou o layout e tirou o idioma, isso é um pena, porque o app era muito funcional
+  * parceiro precisa de conta/instalar
+     1* [2026-04-01] 'Cobranças erradas nas divisões': Façam o teste, cadastrem várias despesas e 5 pessoas na ordem por quem pagou. Na tela onde o app mostra quem deve a quem, ele confunde a pessoa que deve com quem não deve e diz que você tem a receber de pessoas
+     2* [2025-11-28] 'Bom mas bugado': O app é excelente, a interface é muito bonita e prática, a ainda conseguimos exportar do Splitwise, entregando o balanço dele está bugado. Percebi isso no primeiro dia de viajem e fiz as contas na mão pra ter c
+     3* [2025-09-12] 'Erros de operação': Aparentemente o app está fazendo contas erradas. As vezes não aparece as pessoas que estão devendo, mesmo que no total de despesas o valor esteja correto. Então como alguém vai pagar se não aparece que ela deve
+  * bug/crash
+     2* [2025-11-28] 'Bom mas bugado': O app é excelente, a interface é muito bonita e prática, a ainda conseguimos exportar do Splitwise, entregando o balanço dele está bugado. Percebi isso no primeiro dia de viajem e fiz as contas na mão pra ter c
+     3* [2025-09-12] 'Erros de operação': Aparentemente o app está fazendo contas erradas. As vezes não aparece as pessoas que estão devendo, mesmo que no total de despesas o valor esteja correto. Então como alguém vai pagar se não aparece que ela deve
+     3* [2024-11-01] 'Com problemas': Adorava esse app porem tem acontecido bastante bugs na hora de mostrar quanto cada pessoa esta devendo. Não esta calculando corretamente o que cada pessoa esta devendo.
+  * paywall/preco
+     3* [2025-09-12] 'Erros de operação': Aparentemente o app está fazendo contas erradas. As vezes não aparece as pessoas que estão devendo, mesmo que no total de despesas o valor esteja correto. Então como alguém vai pagar se não aparece que ela deve
+     3* [2024-07-05] 'Dificuldade na divisão não igual de despesas': Antes, eu conseguia dividir quanto cada um pagaria, eu pagava 54% e meu parceiro 46%. Era fácil fazer isso. Agora ficou mais chato, poderiam colocar a opção de digitar quantas partes cada um vai pagar, em vez d
+     3* [2023-10-05] 'Aonde está o recurso premium?': Assinei a versão premium para usufruir da divisão desigual das despesas e não está disponível (ou não a encontro) no app
+  * calculo/saldo errado
+     3* [2025-09-12] 'Erros de operação': Aparentemente o app está fazendo contas erradas. As vezes não aparece as pessoas que estão devendo, mesmo que no total de despesas o valor esteja correto. Então como alguém vai pagar se não aparece que ela deve
+     3* [2024-11-01] 'Com problemas': Adorava esse app porem tem acontecido bastante bugs na hora de mostrar quanto cada pessoa esta devendo. Não esta calculando corretamente o que cada pessoa esta devendo.
+     2* [2021-02-27] 'Cálculo errado': O app não está fazendo o cálculo correto, mas tinha tudo para ser bom.
+  HIGH(pedidos): parceiro precisa de conta/instalar=21  exportar/relatorio=19  moeda/idioma/pais/PIX=15  paywall/preco=8  bug/crash=6  categorias/personalizar=3  recorrente/parcelado=3  pagamento integrado=3  perda de dados=2  suporte/abandono=2  sync entre os 2 celulares=1  bank connect=1  complexidade/confuso=1
+
+### tricount|es n=300 1-3*=130 (43%) 4-5*=170
+  LOW: parceiro precisa de conta/instalar=19  paywall/preco=14  bug/crash=11  categorias/personalizar=10  exportar/relatorio=7  sync entre os 2 celulares=5  divisao desigual/%=5  pagamento integrado=3  calculo/saldo errado=2  ads=1  login/senha/acesso=1  bank connect=1  complexidade/confuso=1  suporte/abandono=1  notificacao/lembrete=1  recorrente/parcelado=1
+  * parceiro precisa de conta/instalar
+     3* [2026-09-05] 'Opción familias': Habria que poner una opcion donde dividir por familia segun cantidad de miembros ya que hay que contar a los hijos pero por ellos pagan los padres. O por parejas si quieren pagar todo junto.
+     1* [2026-08-12] 'Pésimo balance de cuentas': El balance de montos que hace sobre los usuarios que pagan y deben es muy malo
+     2* [2026-06-20] 'Repartos': Si se pudiera poner filtros en los repartos sería una maravilla, por ejemplo si en el grupo está mi marido. Aunque contemos como 2 personas para dividir los gastos, en los pagos solo se le deba a la unidad fami
+  * paywall/preco
+     3* [2026-09-13] 'Mejoras': Está bien, pero al hacer un pago los demás debería poder h aceptarlo por que a veces no paraticipas en algún gasto y te pueden incluir sin tu permiso
+     3* [2026-09-05] 'Opción familias': Habria que poner una opcion donde dividir por familia segun cantidad de miembros ya que hay que contar a los hijos pero por ellos pagan los padres. O por parejas si quieren pagar todo junto.
+     2* [2026-06-07] 'No va bien': La app hace las divisiones bien pero a la hora de Vera quien y cuanto debes de pagar o quien y cuánto ha de pagarte, no hace la suma bien, se lo inventa prácticamente.
+  * bug/crash
+     3* [2026-04-11] 'Útil pero con errores': No te puedes fiar de los saldos pues en un viaje daba error y lo tuvimos que hacer a mano
+     1* [2025-11-25] 'Falla a veces en los cálculos': No se si influye que tenga un iphone viejo con un ios 15.8.5 que no se actualiza mas, pero me da muchos errores la aplicacion. En un grupo de cuatro personas. Paga uno y divide entre los cuatro. Hasta ahí bien.
+     1* [2025-10-20] 'Si usas la app, pierdes dinero': Poco intuitiva, no hay gastos personales una vez dicen que te han pagado, si editas los pagos no se actualizan, hace cálculos erróneos y al final acaba siendo de locos repartir el dinero en un grupo. Zero recom
+  * categorias/personalizar
+     3* [2026-01-05] 'Mejoras': De momento todo correcto, aunque si desde el menu de estadisticas pudiera parecer desglosado cada categoria, seria genial, por eso le doy 3 estrellas.
+     1* [2025-03-03] 'Nuevas actualizaciones han empeorado la app': Me resultaba muy útil poder ordenar los gastos por categoría en vez de únicamente por fecha. Ruego que vuelvan a incorporar esa funcionalidad
+     3* [2025-02-07] 'Necesita mejoras': Está bien pero necesita algunas mejoras básicas. Si haces un tricount del hogar por cada mes no puedes reutilizar las categorías personalizadas del mes anterior (las cuales una vez establecidas no puedes modifi
+  * exportar/relatorio
+     3* [2025-09-02] 'Podría mejorar': La app está bien para lo que se usa, dividir gastos entre personas y tal. Pero que quitaran la opción de premium y de poder exportar los datos fue un tremendo error…
+     1* [2025-08-26] 'Importación CSV': La importación de gastos de ficheros CSV es terrible, es imposible hacer que funcione y tienes que introducir a mano valores de otras apps.
+     3* [2025-01-12] 'Good but…': It was perfect when we were able to send an excel file. Really miss that and thinking about changing the app in case you don’t put that function back.
+  * sync entre os 2 celulares
+     1* [2026-09-13] 'Problemas': Estamos teniendo problemas los miembros de un grupo con la sincronización de los saldos. Aparecen cantidades distintas en IOS y Android. El soporte técnico no hace caso ni da solución. Llevamos así 2 meses
+     3* [2024-11-28] 'No se pueden eliminar participantes': Tengo un grupo con dos participantes a 0 y no aparece la opción de eliminarlos. Por lo demás está muy bien y muy cómoda
+     3* [2024-09-01] 'Errores': Lleva un tiempo desde que se actualizó con muchos de errores se sincronización entre usuarios entre otros, debe depurarse.
+  HIGH(pedidos): parceiro precisa de conta/instalar=20  exportar/relatorio=14  paywall/preco=10  categorias/personalizar=7  pagamento integrado=4  bug/crash=3  notificacao/lembrete=2  divisao desigual/%=2  sync entre os 2 celulares=1  bank connect=1  moeda/idioma/pais/PIX=1  widget/apple watch=1
+
+### tricount|mx n=63 1-3*=18 (28%) 4-5*=45
+  LOW: exportar/relatorio=4  parceiro precisa de conta/instalar=3  paywall/preco=2  sync entre os 2 celulares=2  bug/crash=2  limite de lancamentos=1  perda de dados=1  calculo/saldo errado=1
+  * exportar/relatorio
+     1* [2024-09-23] 'Quitaron funciones': Ya no se puede exportar la información, deja la app siendo inútil para muchos usuarios. Siempre me gustó esta app hasta la última actualización, ahora es súper mala :(
+     2* [2024-08-21] 'Actualización': Me encantaba la app pero muy mal que quitaron el export a CSV y PDF que teníamos con la suscripción Premium
+     1* [2020-11-11] 'Súper mala': Me mezcló mis gastos y se los sumó a otro participante. 0% de confianza en los cálculos de esta app me quedo con los cálculos en Excel a la antigua.
+  * parceiro precisa de conta/instalar
+     1* [2022-02-16] 'No se puede compartir': No hay manera de sincronizar o invitar a más participantes. Simplemente no les envía solicitud ni se comparte la hoja de gastos.
+     1* [2021-12-03] 'Error en división de cuentas': Al final no repartía los gastos como correspondía
+     1* [2016-11-27] 'Problemas al sincronizar': Muy útil, sin embargo marca siempre "error en sincronización" cuando la cuenta se comparte con otras personas duplicando gastos y pagos, y en ocasiones ni les permite abrir los tricount compartidos.
+  * paywall/preco
+     2* [2024-08-21] 'Actualización': Me encantaba la app pero muy mal que quitaron el export a CSV y PDF que teníamos con la suscripción Premium
+     3* [2022-12-24] 'Muy buena app': Pero me ha pasado que agrego un gasto y no lo detecta (no le suma a nadie) además de que no tiene la opción de ir pagando “por concepto” sino por persona Y me gustaría marcar algo como los vuelos “pagado” por X
+  * sync entre os 2 celulares
+     1* [2022-02-16] 'No se puede compartir': No hay manera de sincronizar o invitar a más participantes. Simplemente no les envía solicitud ni se comparte la hoja de gastos.
+     1* [2016-11-27] 'Problemas al sincronizar': Muy útil, sin embargo marca siempre "error en sincronización" cuando la cuenta se comparte con otras personas duplicando gastos y pagos, y en ocasiones ni les permite abrir los tricount compartidos.
+  * bug/crash
+     1* [2021-12-03] 'Error en división de cuentas': Al final no repartía los gastos como correspondía
+     1* [2016-11-27] 'Problemas al sincronizar': Muy útil, sin embargo marca siempre "error en sincronización" cuando la cuenta se comparte con otras personas duplicando gastos y pagos, y en ocasiones ni les permite abrir los tricount compartidos.
+  HIGH(pedidos): exportar/relatorio=18  paywall/preco=6  parceiro precisa de conta/instalar=5  sync entre os 2 celulares=1  bank connect=1  complexidade/confuso=1  bug/crash=1  suporte/abandono=1  moeda/idioma/pais/PIX=1  divisao desigual/%=1  pagamento integrado=1
+
+### tricount|us n=175 1-3*=51 (29%) 4-5*=124
+  LOW: paywall/preco=6  calculo/saldo errado=5  categorias/personalizar=4  ads=3  parceiro precisa de conta/instalar=3  complexidade/confuso=3  bug/crash=3  login/senha/acesso=2  sync entre os 2 celulares=1  perda de dados=1  suporte/abandono=1  moeda/idioma/pais/PIX=1  exportar/relatorio=1  pagamento integrado=1
+  * paywall/preco
+     1* [2024-12-10] 'The app does not do the one thing it needed to do, split costs between more people.': So from the first try, it calculates all wrong. I entered 8 people going on a trip with 2 cars. Person “A” pays for the insurances for all 8 people and person “B” pays for the gasoline but only for selected 4 p
+     2* [2024-08-27] 'Lot of grief': Optimized reimbursements as a default and no way to disable is annoying and there are use cases where I’d like to reimburse separately. There is a data discrepancy between iOS users and Android (just 1cent diff
+     1* [2023-04-08] 'Nuked by ads': The ads are super intrusive now. They pedal their subscription service at every corner, even going as far as to inconvenience you every time you try to add a charge or payment. The UX was excusable in the past 
+  * calculo/saldo errado
+     3* [2026-03-19] 'Not Accurate': The UX is great and worked fine in the beginning, but as it started growing with our household to keep expenses tracked between roommates we realized it’s not accurate at all! The Math is completely wrong and I
+     1* [2025-11-24] 'Expenses not tracking accurately between people': App includes the cost between people when it specifically shouldn’t and that person isn’t checked to be in the split. Very inaccurate for tracking who paid for what and who owes who. I’m unable trust this app a
+     1* [2024-05-25] 'Very inaccurate app.': This app just doesn’t work at all and very confusing.
+  * categorias/personalizar
+     1* [2024-10-12] 'Terrible': Do not use this app! I was asked to update the app in order to keep using it in the middle of my trip and it completely erased all of the data from a weeklong trip right in the middle of it. There was absolutel
+     2* [2024-08-27] 'Lot of grief': Optimized reimbursements as a default and no way to disable is annoying and there are use cases where I’d like to reimburse separately. There is a data discrepancy between iOS users and Android (just 1cent diff
+     3* [2024-07-25] 'Bring back category filtering': The new app retains the capability to tag your expenses in a certain category, but there’s no way to filter transactions based on it. The previous version of the app (pre-redesign) allows that, please bring it 
+  * ads
+     1* [2023-04-08] 'Nuked by ads': The ads are super intrusive now. They pedal their subscription service at every corner, even going as far as to inconvenience you every time you try to add a charge or payment. The UX was excusable in the past 
+     1* [2021-07-28] 'Drains battery': This app is full of ads and is always working in the background. It drains your battery
+     1* [2021-01-01] 'Ad aggressively pops up on page and I cannot accept my friend’s invitation': Title says it all
+  * parceiro precisa de conta/instalar
+     1* [2024-10-12] 'Terrible': Do not use this app! I was asked to update the app in order to keep using it in the middle of my trip and it completely erased all of the data from a weeklong trip right in the middle of it. There was absolutel
+     1* [2021-01-01] 'Ad aggressively pops up on page and I cannot accept my friend’s invitation': Title says it all
+     1* [2018-05-28] 'Installed because I had no choice': It seems like tricount does not accept online login any more and force you to download the app anyway. I don’t find it user friendly and it’s a long setup process for an app I will delete in 5 minutes
+  * complexidade/confuso
+     3* [2026-06-06] 'Almost Perfect': I loved everything about this app until I realized that it was NOT calculating the final figure correctly. If two people take a trip and person A pays $100 and person B pays $50, the app says person B owes pers
+     2* [2024-08-27] 'Lot of grief': Optimized reimbursements as a default and no way to disable is annoying and there are use cases where I’d like to reimburse separately. There is a data discrepancy between iOS users and Android (just 1cent diff
+     1* [2024-05-25] 'Very inaccurate app.': This app just doesn’t work at all and very confusing.
+  HIGH(pedidos): exportar/relatorio=20  paywall/preco=6  limite de lancamentos=6  moeda/idioma/pais/PIX=6  ads=5  categorias/personalizar=4  parceiro precisa de conta/instalar=3  bug/crash=3  sync entre os 2 celulares=2  divisao desigual/%=2  recorrente/parcelado=2  pagamento integrado=2  bank connect=1  perda de dados=1  complexidade/confuso=1  suporte/abandono=1  notificacao/lembrete=1  widget/apple watch=1

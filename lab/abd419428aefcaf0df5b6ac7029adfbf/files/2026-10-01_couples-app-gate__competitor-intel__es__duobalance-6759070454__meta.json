@@ -1,0 +1,23 @@
+{
+  "trackId": 6759070454,
+  "trackName": "DuoBalance",
+  "sellerName": "Jose Maria Ros Nicolas",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 5,
+  "userRatingCount": 3,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-02-11T08:00:00Z",
+  "currentVersionReleaseDate": "2026-03-10T01:39:09Z",
+  "version": "1.3",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/duobalance/id6759070454?uo=4",
+  "bundleId": "com.duobalance.app",
+  "subtitle": "Finanzas en pareja",
+  "screenshotCount": 14
+}

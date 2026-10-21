@@ -1,0 +1,33 @@
+App de finanças pessoais feito para casais. Controle financeiro a dois, com transparência, individualidade, gastos e receitas compartilhadas em um só lugar.
+
+Você e seu parceiro(a) ainda usam planilhas ou apps separados para controlar as finanças? O Couple.Finance é o primeiro aplicativo de finanças pessoais 100% focado em relacionamentos. Ele permite que vocês mesclem suas contas (ou não) e tenham visão total das finanças do casal — tudo com segurança e praticidade.
+
+Principais Recursos
+* Visão compartilhada de finanças – conecte suas contas e veja tudo em um só lugar
+* Orçamentos conjuntos e individuais – controle gastos por categoria
+* Alertas e notificações – saibam quando a uma conta está próxima do vencimento.
+* Transparência financeira – veja de forma unificada porém distinguível de quem é o gasto ou receita 
+* Quadro de recordes – Veja qual e quando foi seu maior gasto e maior receita.
+* Quadro de parcelas – Veja o quanto da sua receita já está comprometido com parcelas futuras.
+* Dashboard intuitivo – tudo fácil de acompanhar e usar no dia a dia
+* Saldo Inicial - Informe um valor para melhor controle dos valores a partir dai.
+* Previsão financeira – Um quadro financeiro poderoso para todo o ano com insights únicos e personalizados pra vocês.
+* Lembretes de contas a pagar – não esqueça de pagar mais nenhuma conta.
+
+Para casais que:
+* Moram juntos e querem mais controle do dinheiro
+* Estão começando a dividir despesas
+* Estão planejando um futuro a dois
+* Querem reduzir discussões sobre dinheiro 
+* Buscam um app de educação financeira para casais
+* Até para quem ainda está solteiro é bom.
+
+Uma vez que você conecta a sua conta a do seu parceiro(a) você obtém gráficos e resultados unificados de gastos e receitas. Quer ver só o seu? tranquilo basta mudar para o 'modo só eu'; quer ver as contas juntas? mude para o 'modo casal' facilmente.
+
+Não quer mais juntar as contas? 
+Fácil, desconecte as contas com um clique, e use o app só com os seus dados facilmente.
+
+Além disso, insights, gráficos e tudo que um app de finanças pessoais tem de melhor, e muito mais.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://couple.finance/policy.html

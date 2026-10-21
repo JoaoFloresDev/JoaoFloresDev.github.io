@@ -1,0 +1,22 @@
+{
+  "trackId": 1378467217,
+  "trackName": "Khan Academy Kids",
+  "sellerName": "Khan Academy",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.79734,
+  "userRatingCount": 130529,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2018-08-06T00:31:23Z",
+  "currentVersionReleaseDate": "2026-07-30T20:44:38Z",
+  "version": "9.0.1",
+  "minimumOsVersion": "12.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/khan-academy-kids/id1378467217?uo=4",
+  "bundleId": "org.khanacademy.Khan-Kids",
+  "subtitle": "Reading & Math Learning Games",
+  "screenshotCount": 20
+}

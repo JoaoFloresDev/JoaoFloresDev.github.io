@@ -1,0 +1,22 @@
+{
+  "trackId": 1161255926,
+  "trackName": "Our Expenses: Household Budget",
+  "sellerName": "Sebmos Ltd",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.79098,
+  "userRatingCount": 488,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2016-10-26T00:21:09Z",
+  "currentVersionReleaseDate": "2026-04-13T05:38:10Z",
+  "version": "7.1.0",
+  "minimumOsVersion": "26.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/our-expenses-household-budget/id1161255926?uo=4",
+  "bundleId": "com.sebmos.kitty",
+  "subtitle": "Household Budget Tracker",
+  "screenshotCount": 15
+}

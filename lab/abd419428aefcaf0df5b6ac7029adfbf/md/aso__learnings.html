@@ -1,0 +1,583 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="lab-stamp" content="2026-10-21T03:15">
+<script>
+// GitHub Pages caches pages for 10 min: if a newer publish exists, load it over the cache (João, 21/10/2026).
+(function(){try{var cur=document.querySelector('meta[name=lab-stamp]').content;if(!cur||location.protocol==="file:")return;
+var base=location.href.split("#")[0].replace(/[?&]v=\d+/,""),sep=base.indexOf("?")<0?"?":"&";
+fetch(base+sep+"v="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){
+var m=t.match(/name="lab-stamp" content="([^"]*)"/);if(m&&m[1]&&m[1]!==cur){location.replace(base+sep+"v="+Date.now()+location.hash)}
+}).catch(function(){})}catch(e){}})();
+</script>
+<meta name="robots" content="noindex,nofollow">
+<title>learnings.md</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#2b3340;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#ccd6e6;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.6) blur(10px);
+  -webkit-backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--bd-soft)}
+.topin{width:min(1680px,94vw);margin:0 auto;display:flex;align-items:center;gap:10px 22px;
+  flex-wrap:wrap;padding:11px 0}
+a.brand{display:flex;align-items:center;gap:9px;font-family:var(--f-disp);font-size:15px;
+  font-weight:800;letter-spacing:-.015em;color:var(--tx);white-space:nowrap}
+a.brand:hover{text-decoration:none}
+a.brand .mark{width:21px;height:21px;background-size:contain;background-repeat:no-repeat;
+  background-position:center;flex:none}
+.navs{display:flex;gap:4px;flex-wrap:wrap;min-width:0}
+a.nav{display:inline-flex;align-items:center;gap:5px;font-family:var(--f-disp);font-size:13px;font-weight:600;color:var(--mut);
+  padding:5px 11px;border-radius:999px;white-space:nowrap}
+a.nav:hover{color:var(--tx);background:var(--bd-soft);text-decoration:none}
+a.nav.on{color:var(--tx);background:var(--bd-soft)}
+.stamp{margin-left:auto;font-size:11.5px;color:var(--mut);white-space:nowrap}
+.ico.lab{display:inline-block;vertical-align:-5px;background-color:transparent;background-size:contain;
+  background-repeat:no-repeat;background-position:center;border-radius:0}
+/* O quadro é a primeira coisa que o João lê e estava no mesmo fundo do resto da
+   página; agora é um painel com fundo próprio (João, 02/10). */
+.board{margin:18px 0 10px;padding:16px 18px 18px;border-radius:var(--rad);
+  border:1px solid var(--bd-soft);box-shadow:var(--sh);
+  background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
+.boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+/* Quadro numa linha só, com scroll horizontal — nunca quebra em duas linhas
+   (João, 14/10: "scroll horizontal no quadro, sem quebrar em duas linhas").
+   Cada coluna mostra todos os cards, sem teto de altura. */
+.board .hrow{display:flex;flex-wrap:nowrap;gap:18px;overflow-x:auto;overflow-y:visible;
+  align-items:flex-start;padding:16px 18px 14px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.board .hcol{flex:0 0 300px;min-width:300px;scroll-snap-align:start}.board .hcol:last-child{margin-right:0}
+@media(max-width:600px){.board .hcol{flex-basis:82vw;min-width:82vw}}
+.board .hcol>.rows{max-height:none;overflow:visible;padding-right:0}
+.board .row{background:var(--cardup);border-color:var(--bdup);box-shadow:var(--sh)}
+.iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
+  padding:1px 8px;cursor:pointer;line-height:1.5}
+.iid:hover{color:var(--tx);border-color:var(--mut)}
+.iid.ok{color:var(--ok);border-color:var(--ok)}
+/* card que é link: o cartão inteiro abre o documento */
+a.card.lk{display:flex;flex-direction:column;color:var(--tx);text-decoration:none;
+  transition:border-color .16s ease,box-shadow .16s ease}
+a.card.lk:hover{border-color:var(--mut);box-shadow:var(--sh-up);text-decoration:none}
+a.card.lk>p{flex:1;margin:6px 0 10px}
+.lkmore{font-family:var(--f-disp);font-size:11px;font-weight:600;letter-spacing:.04em;
+  color:var(--mut)}
+a.card.lk:hover .lkmore{color:var(--tx)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
+/* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
+   fluxo normal o ícone do lab caía numa linha só pra ele. */
+.rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
+.rhead .ico{margin-right:0;width:20px;height:20px}
+.rwhen{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--mut);margin-right:4px}
+.rows>.rowwrap>.row,.rows>.row{display:flex;flex-direction:column}
+.board .hcol>h2{margin-top:0;border-top:0;padding-top:0}
+@media(max-width:620px){.stamp{margin-left:0;flex-basis:100%}}
+.wrap{width:min(1680px,94vw);margin:0 auto;padding:24px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:20px;margin-top:30px}section,.twrap{min-width:0}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+/* big numbers numa linha só, com scroll horizontal — nunca quebram em duas linhas (João, 14/10) */
+.tiles{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;margin:14px 0 6px;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.tiles>.tile{flex:0 0 auto;min-width:168px}
+a.tile{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(125,140,170,.14);color:var(--mut)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 188px;color:var(--tx)}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{margin:0}
+.rc{display:grid;grid-template-columns:34px 72px minmax(0,1fr);align-items:baseline;gap:10px;padding:7px 0;border-top:1px solid var(--bd-soft)}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li:before{background:var(--bd)}.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:var(--card);font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+
+/* ---------- camada de acabamento (01/10/2026) ----------
+   Tipografia com duas vozes (display para títulos e números, texto para leitura),
+   neutros com viés do azul da marca em vez de cinza puro, e profundidade por
+   sombra em vez de só borda. Nada aqui renomeia classe: é uma camada por cima. */
+:root{
+  --f-disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-text:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --bg:#eef1f7; --card:#ffffff; --tx:#0a0d14; --mut:#4b5567; --acc:#2b3340;
+  --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
+  --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
+  --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
+  --cardup:#ffffff; --bdup:#b9c3d4;
+  --boardtop:#e9edf5; --boardbot:#e3e8f1;
+  --bar:#2563eb; --bar2:#60a5fa;
+  --rad:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
+  --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
+  --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
+  --cardup:#1d2430; --bdup:#3d4859;
+  --boardtop:#0d1218; --boardbot:#090d13;
+  --bar:#5b9bff; --bar2:#9dc4ff;
+}}
+body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1{font-family:var(--f-disp);font-size:27px;font-weight:800;letter-spacing:-.02em;
+  text-wrap:balance;margin:0 0 2px}
+h1 .mark{display:inline-block;width:28px;height:28px;vertical-align:-5px;margin-right:11px;
+  background-size:contain;background-repeat:no-repeat;background-position:center}
+h2{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);border-top:1px solid var(--bd-soft);
+  padding-top:22px;margin:32px 0 14px}
+h3{font-family:var(--f-disp);letter-spacing:-.01em}
+.sub{font-size:13px;color:var(--mut)}
+code,.mono{font-family:var(--f-mono);font-size:12.5px}
+.card,table.t,a.tile,.row,.fcard,#md{box-shadow:var(--sh);border-color:var(--bd-soft)}
+.card,a.tile,.row,.fcard{border-radius:var(--rad)}
+a.tile,.row{transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
+a.tile:hover,a.row:hover{box-shadow:var(--sh-up);border-color:var(--bd);
+  transform:translateY(-1px)}
+/* O card do app é área de leitura, não botão: nada muda no hover. A regra antiga
+   trocava a sombra, e num card sem sombra isso aparecia como animação. */
+.fcard,.fcard:hover{transition:none!important;transform:none!important}
+/* big numbers: the first thing anyone reads on the page */
+.tiles{gap:12px;margin:18px 0 4px}
+a.tile{padding:13px 17px;min-width:148px}
+.tile .tl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--mut)}
+.tile .tv{font-family:var(--f-disp);font-size:25px;font-weight:800;letter-spacing:-.025em;
+  margin-top:3px}
+.tile .ts{font-size:11.5px;color:var(--mut)}
+.tile .tvd{font-family:var(--f-text);font-size:13px;font-weight:600;letter-spacing:0;white-space:nowrap}
+/* tables read as data, not as prose */
+table.t{border-radius:var(--rad);font-variant-numeric:tabular-nums}
+table.t th{font-family:var(--f-disp);font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--bd-soft);border-bottom:1px solid var(--bd)}
+table.t td{padding:9px 13px;border-bottom:1px solid var(--bd-soft)}
+table.t tbody tr:hover td,table.t tr:hover td{background:rgba(125,140,170,.06)}
+.twrap{border-radius:var(--rad)}
+/* buttons */
+.btn{font-family:var(--f-disp);font-weight:600;font-size:13.5px;padding:9px 18px;
+  border-radius:999px;box-shadow:var(--sh);transition:all .16s ease}
+.btn:hover{border-color:var(--acc);box-shadow:var(--sh-up);transform:translateY(-1px)}
+.pill,.st{font-family:var(--f-disp);font-weight:600;font-size:11.5px;letter-spacing:.02em}
+/* status colours carry meaning, so keep them out of the accent */
+.st.run,.st.appr{background:rgba(10,143,88,.14);color:var(--ok)}
+.st.crit{background:rgba(208,47,47,.14);color:var(--down)}
+.st.rev,.st.draft{background:rgba(180,83,9,.14);color:var(--warn)}
+/* the lanes strip and any scroller get a thin, rounded bar */
+.hrow,.twrap,.tiles{scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.hrow::-webkit-scrollbar,.twrap::-webkit-scrollbar,.tiles::-webkit-scrollbar{height:9px}
+.hrow::-webkit-scrollbar-track,
+.twrap::-webkit-scrollbar-track,
+.tiles::-webkit-scrollbar-track{background:transparent}
+.hrow::-webkit-scrollbar-thumb,
+.twrap::-webkit-scrollbar-thumb,
+.tiles::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
+  border:3px solid transparent;background-clip:content-box}
+.hrow::-webkit-scrollbar-thumb:hover,
+.twrap::-webkit-scrollbar-thumb:hover,
+.tiles::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+.hrow{background:transparent;border:0;padding:0;border-radius:0}
+.hcol{flex:0 0 clamp(280px,26vw,360px);min-width:0}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);
+  outline-offset:2px;border-radius:8px}
+.dirlist,.prlist{margin:10px 0 0;padding-left:18px;list-style:none}
+.dirlist>li,.prlist>li{position:relative;margin:0 0 7px;font-size:13.5px;line-height:1.5;
+  color:var(--tx)}
+.prlist>li{color:var(--mut);font-size:13px;margin-bottom:5px}
+.dirlist>li::before,.prlist>li::before{content:"";position:absolute;left:-14px;top:.62em;
+  width:5px;height:5px;border-radius:50%;background:var(--acc);opacity:.75}
+.prlist>li::before{background:var(--mut);opacity:.5}
+.dirp{display:none}
+.dapps{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  margin:14px 0 4px;align-items:start}
+.dapp{padding:14px 16px}
+.dah{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.dah b{font-family:var(--f-disp);font-size:14.5px;font-weight:700}
+.drank{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:6px;background:var(--acc);color:var(--card);font-size:11.5px;font-weight:700;flex:none}
+.st.d-dobrar{background:rgba(10,143,88,.16);color:var(--ok)}
+.st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
+.st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
+.st.d-congelar{background:rgba(125,140,170,.12);color:var(--mut)}
+.dapp .prlist{margin-top:6px}
+.dcall{color:var(--tx)!important;font-weight:600}
+.fcard[id]{scroll-margin-top:18px}
+.fdet{margin-top:10px;border-top:1px solid var(--bd-soft);padding-top:9px}
+.fdet>summary{cursor:pointer;list-style:none;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);
+  display:flex;align-items:center;gap:7px}
+.fdet>summary::-webkit-details-marker{display:none}
+.fdet>summary::before{content:"›";font-size:15px;transition:transform .15s}
+.fdet[open]>summary::before{transform:rotate(90deg)}
+.fdet>summary:hover{color:var(--acc)}
+.fdet table.t{font-size:12.5px}
+.fdet table.t td,.fdet table.t th{padding:6px 10px}
+.fgrid.one{grid-template-columns:1fr!important;gap:18px}
+/* Cada app é um painel com profundidade: a luz entra por cima, o corpo escurece
+   até a base e a borda clareia só na primeira linha. É o que separa um app do
+   outro sem precisar de moldura dura. */
+.fgrid.one>.fcard{position:relative;padding:0;overflow:hidden;border-radius:16px;
+  border:1px solid var(--bd-soft);
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 5%, var(--card)) 0%,
+    var(--card) 26%,
+    color-mix(in srgb, #000 7%, var(--card)) 100%);
+  box-shadow:0 1px 2px rgba(0,0,0,.05), 0 10px 26px -14px rgba(0,0,0,.28)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard{
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 9%, var(--card)) 0%,
+    var(--card) 30%,
+    #0a0c10 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -22px rgba(0,0,0,.9)}}
+.fgrid.one>.fcard::before{content:"";position:absolute;inset:0 0 auto;height:1px;
+  background:linear-gradient(90deg, transparent,
+    color-mix(in srgb, var(--acc) 45%, transparent), transparent)}
+.fgrid.one>.fcard>.fh{background:transparent;margin:0;padding:15px 18px 12px;
+  border-bottom:1px solid var(--bd-soft)}
+.fgrid.one>.fcard>.fstats{padding:12px 18px 0}
+.fgrid.one>.fcard>.fcols{padding:16px 18px 6px}
+.fgrid.one>.fcard>.fdet{margin:0;padding:13px 18px 16px;border-top:1px solid var(--bd-soft);
+  background:color-mix(in srgb, #000 4%, transparent)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard>.fdet{
+  background:rgba(0,0,0,.25)}}
+.fgrid.one>.fcard>.fh b{font-size:16px;letter-spacing:-.01em}
+.fgrid.one>.fcard>.fh>span{font-size:12.5px;color:var(--tx);opacity:.78;
+  font-variant-numeric:tabular-nums;font-weight:500}
+/* a luz no topo do painel, um pouco mais presente */
+.fgrid.one>.fcard::before{height:2px;
+  background:linear-gradient(90deg, transparent, var(--acc), transparent);opacity:.5}
+.fcard .fmeta{font-size:12px;color:var(--mut)}
+/* funil: rótulo legível, número com peso, barra com corpo */
+.fs{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:12px;
+  padding:5px 0}
+.fs .fl{font-size:12.5px;color:var(--tx)}
+.fs .fn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;min-width:74px;
+  text-align:right}
+.fb{height:9px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.fb i{display:block;height:100%;border-radius:999px}
+/* retenção com leitura imediata */
+.rrow{margin:0}
+.rc:first-child{border-top:0;padding-top:0}
+/* o rótulo é legenda; quem salta é o número, na cor da régua */
+.rc b{display:block;font-family:var(--f-disp);font-size:10px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0}
+.rc .rv{display:block;font-family:var(--f-disp);font-size:21px;font-weight:800;
+  letter-spacing:-.025em;line-height:1.15;margin:3px 0 2px;font-variant-numeric:tabular-nums}
+.rc>b{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.04em;
+  color:var(--mut)}
+.rc .rv{font-family:var(--f-disp);font-size:19px;font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums}
+.rc .rb{display:block;font-size:11.5px;color:var(--mut)}
+/* achados: mais ar e marcador claro */
+.fnds li{font-size:12.5px;line-height:1.5;padding:4px 0 4px 16px}
+.fnds li:before{width:6px;height:6px;top:.72em}
+/* o detalhe convida a abrir */
+.fdet>summary{font-size:11px;color:var(--acc);padding:3px 0}
+.fdet>summary:hover{opacity:.82}
+.fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;
+  align-items:start}
+@media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
+.fcol{min-width:0}
+.fcol>.fnds{margin-top:0}
+/* Régua de contexto do app: instalações, ativos, novos, crash-free. Antes isso
+   era uma linha de texto corrido ("187 downloads/30d · WATCH · crash-free
+   100%") que ninguém comparava entre cards; como números rotulados, dá pra
+   varrer a coluna de cima a baixo. */
+.fstats{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline}
+.fst{display:flex;align-items:baseline;gap:7px;min-width:0}
+.fstl{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut)}
+.fst b{font-family:var(--f-disp);font-size:15px;font-weight:700;letter-spacing:-.015em;
+  font-variant-numeric:tabular-nums}
+.fstd{font-size:12px;font-weight:600}
+.st.vd{background:rgba(125,140,170,.14);color:var(--mut)}
+.fh .noasc{font-size:11.5px;font-weight:400;color:var(--warn)}
+/* Cada metade do card diz o que é antes de mostrar número. */
+.fgrp{margin-bottom:16px}
+.fgrp:last-child{margin-bottom:0}
+.fgl{display:block;font-family:var(--f-disp);font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
+  padding-bottom:7px;margin-bottom:10px;border-bottom:1px solid var(--bd-soft)}
+.fcol>.fgrp>.fnds{margin-top:0}
+.instrl{list-style:none;margin:9px 0 0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:3px 0 3px 14px;
+  position:relative;overflow-wrap:anywhere}
+/* Coluna de leitura: linhas rotuladas, sem caixa. As caixas coloridas (funil
+   verde, ação amarela) e o bloco expansível empilhavam quatro objetos de forma
+   diferente num espaço estreito; rótulo à esquerda e texto à direita, separados
+   por uma régua fina, lê de cima a baixo sem nada competindo (João, 02/10). */
+.rline{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;
+  padding:12px 0;border-top:1px solid var(--bd-soft)}
+.rline:first-child{border-top:0;padding-top:0}
+.rlab{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);padding-top:2px}
+.rbody{min-width:0}
+.rbody>b{display:block;font-family:var(--f-disp);font-size:14px;font-weight:700;
+  letter-spacing:-.01em;line-height:1.35}
+.rnum{display:block;margin-top:3px;font-size:12px;font-weight:600;color:var(--tx);
+  font-variant-numeric:tabular-nums}
+.rbody>p{margin:5px 0 0;font-size:12.5px;line-height:1.55;color:var(--mut)}
+.rline.act .rlab{color:var(--tx)}
+.rline.mut .rlab,.rline.mut .instrl li{color:var(--mut)}
+.rbody>.fnds{margin:0}
+@media(max-width:1180px){.rline{grid-template-columns:1fr;gap:6px}
+  .rline .rlab{padding-top:0}}
+.instrl{list-style:none;margin:0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:2px 0 2px 14px;
+  position:relative;overflow-wrap:anywhere}
+.instrl li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;
+  border-radius:50%;background:var(--bd)}
+/* Os passos de loja vêm de outra fonte que os de dentro do app: barra em tom
+   mais surdo pra o olho ver onde a medição troca de sistema. */
+.fs .fb i.store{background:linear-gradient(90deg,
+  color-mix(in srgb, var(--bar) 45%, transparent),
+  color-mix(in srgb, var(--bar) 70%, transparent))}
+.fsub{display:block;font-size:10.5px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fsub.gap2{margin-top:14px}
+.lchip{font-size:10px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.fcols{position:relative}
+@media(min-width:821px){.fcols::before{content:"";position:absolute;top:0;bottom:0;
+  left:50%;width:1px;background:var(--bd-soft)}}
+.fdet .ascgrid{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+.fdetcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
+  align-items:start}
+@media(max-width:1100px){.fdetcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.fdetcols{grid-template-columns:1fr}}
+.fdetcols>div{min-width:0;display:flex;flex-direction:column;gap:14px}
+.rawbox{background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;
+  padding:11px 13px;min-width:0}
+.rawbox h4,.rawbox h3.team{margin:0 0 8px;font-family:var(--f-disp);font-size:10.5px;
+  font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.rawbox h3.team .chain{text-transform:none;letter-spacing:0;font-size:11px}
+.rawbox table.t{border:0;box-shadow:none;background:transparent}
+.rawbox table.t th{background:transparent;border-bottom:1px solid var(--bd)}
+.rawbox table.t td{border-bottom:1px solid var(--bd-soft)}
+.rawbox .twrap{border-radius:0}
+.rawbox .ascgrid{margin-bottom:0;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+.rawbox .ascgrid b{font-size:14px}
+.srct{float:right;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 7px;
+  border-radius:999px;background:var(--bd);color:var(--mut);text-transform:uppercase}
+.s-asc{background:rgba(125,140,170,.16);color:var(--tx)}
+.s-firebase{background:rgba(180,83,9,.14);color:var(--warn)}
+.noasc{background:rgba(180,83,9,.14);color:var(--warn);border-radius:999px;padding:1px 8px;
+  font-size:10.5px;font-weight:600}
+.convwhy{display:block;font-size:10.5px;color:var(--mut);margin-top:1px}
+.rawbox .rate{padding:1px 7px;border-radius:999px;font-size:12.5px}
+.featname{display:block;font-family:var(--f-mono);font-size:11.5px;margin-bottom:3px}
+.featbar{display:block;height:4px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.featbar i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg, color-mix(in srgb, var(--acc) 70%, transparent), var(--acc))}
+.legacyp{margin:8px 0 0;font-size:12px;color:var(--mut);line-height:1.7}
+.legacyp code{font-size:11px}
+.rawbox .ascgrid>div{background:var(--card)}
+.fdet{margin-top:14px;border-top:1px solid var(--bd);padding-top:12px}
+.fdet[open]>summary{margin-bottom:12px;color:var(--acc)}
+.t .thsub{font-size:9.5px;font-weight:600;letter-spacing:.03em;color:var(--mut);
+  text-transform:none}
+.t .rate{padding:1px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.t .rate.good{background:rgba(10,143,88,.16);color:var(--ok)}
+.t .rate.mid{background:rgba(180,83,9,.14);color:var(--warn)}
+.t .rate.low{background:rgba(208,47,47,.13);color:var(--down)}
+.thin{font-size:10.5px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.sbx{font-size:12px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 8px;cursor:help;white-space:nowrap}
+.sbxnote{font-size:11.5px;color:var(--warn);background:rgba(180,83,9,.10);
+  border:1px solid rgba(180,83,9,.25);border-radius:9px;padding:7px 10px;margin:0 0 10px}
+.actv{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;margin:0 0 10px;
+  padding:8px 11px;border-radius:10px;background:var(--bd-soft)}
+.actvt{font-family:var(--f-disp);font-size:10px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut)}
+.actv b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.actvw{flex-basis:100%;font-size:11px;color:var(--mut)}
+.fover{font-size:10.5px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
+  text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
+  vertical-align:2px}
+.ascspan{font-size:11px;color:var(--mut);margin:2px 0 7px}
+.ascgrid{display:grid;gap:7px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  margin-bottom:10px}
+.ascgrid>div{background:var(--bd-soft);border-radius:9px;padding:7px 10px;min-width:0}
+.ascgrid span{display:block;font-size:10px;color:var(--mut);text-transform:uppercase;
+  letter-spacing:.04em}
+.ascgrid b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(125,140,170,.3),var(--sh-up)}
+/* ---------- acabamento: luz e profundidade (01/10) ----------
+   Gradiente é usado onde tem função: a luz no topo dá direção à página, a barra
+   do funil ganha volume, e o cabeçalho de cada app se separa do conteúdo. Fundo
+   chapado em tudo o resto, para os números seguirem sendo o que salta. */
+body{background:
+  radial-gradient(1100px 420px at 12% -8%, color-mix(in srgb, var(--acc) 11%, transparent), transparent 70%),
+  radial-gradient(900px 360px at 88% -4%, color-mix(in srgb, var(--ok) 7%, transparent), transparent 72%),
+  var(--bg);
+  background-attachment:fixed}
+h1{background:linear-gradient(100deg, var(--tx) 30%, color-mix(in srgb, var(--acc) 72%, var(--tx)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .mark{-webkit-text-fill-color:initial;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA8CAYAAAAzF3kIAAAFaUlEQVR42u2bS4gcVRSGv1vdPT0zOEYXggY1kkgwohA0DoouDIpPCBpQSEQ3gg8Ek5WibhVEXAYhBHe6UBeKC0UhElSCEJPoQlATIj7wGWMYx8xM93SXm3PJT1Fdj+5b3bXIhaKq63Hr/vec85/HrYZ6Ngc07PgyYJedQ/aFWlRDcA0gBnrALcBPwDo7t9b2tWuRDbyZsTWAKXnmBQMTA3cDrwDP2rVWXSTRssGXba8JuP+AQ3Z8T1mAzQqANU1iHVMzbecBc8Cs3dcHloEzwD/2+0XgSWDVQM0CW+z507aPJwHQq+CKnFsLXAfcAFwDXAFcZEA9wDPAIvAN8Cew057ti8p27HhiqtlO/L4d2AucEFUrs3np9RO/t41bRR0wY1IAuAPYDdyVoPMVU1dn6qvXYgHjbLIaCZcQi8sobS+jMCMGbtZY7nHpc1lmux1IUy6WcXerdsS+3W9M5yWxaC+PA2492x8Ztw9/xOzsc+Bl4HBiQFWA3GPvnqoaXAu4Hpi237uBvxKkUAXAGLjN3jldZWTSFFdwYMBAQm9+4g6JqURVRCi+PVoxoCwp7rAxzFYFbq+8rCs+a1wgvxgwrpFCMIALgIOiMuOUYNK+t4WSoo8cLgd+sM5XxgxMAwI/qe8JJ0SjhmEbgD8mDE5NIgb+BTbb+GbybGoQuBVjyoPAJRL41iHrnwJOAZ8Yll6ZDqYE5NGaSE63ju2/tuyklPNviE6/IYlnv2Ly6A6hpjFwX1nH7/V5xwAjDw1uZcDA88jG37uvDNm0ZTaOy+z+UpFL6MjxcslQz99/3BLpXCk60eOX7OF3LeZ8pgIpqrQetpqLB7dU0On7SX8uxbwGOvMZA/iAXPtQOu0Hdtg75T1PyPmlEuq9BNyURzZOxKwuZEvgYFonaY+Yhh/YrkRVLa8/f88HgqFZJJmds/1TgQF66Z0GrhStcfL+h2QSlm3r5UixC8xr9JWmq7Ewki8LbJZrbkQHrX0cNYKIZJC+ZvOmVeQOmnTbdi0eYFo922+0cz3ARTkD6SSKPXHgkscxme2+DMxP8FfAzcCDwMfAgj0bZwimXXRtIpKXrhmgwqMCXBjQZyzSBHgHuBO4FPjS7u/I/X2xuV9l/HE0RB4Ysk3laFBfsvbIguu3RNLqbgC+kzzRlVl5+jQgwfSFPN4WFXUFpX4+8G1Kv3+blL1AXF5dNLbrq/YwgYjGiWQ22LlugWzAq+wCsNWqeFcDJ4H9wOu2vhHJBOY2H/a8GjiKUTexcUD5fxhzaZVdAPWSOpLCViFIZo1Jo4yde3fQFhcxM2y125PAOpvtkHa4KtHHsCXAaFRWd2KnHwWORbsSZs1nlR1ClQGz0qdVO94e0B96svGrSe8HNoPSq0gN4PvA1etOSiYwywSaZ9PHSmbdZbL5/aIVrUlUsPzLDwcGqcXj54skrVU1TzbzMrBQmb1PbE8Bm0IujzVKSnEa+NFmd6uBbAQaR9fKfydttaohIZebxAdA+1KKRqNsPis/UCARDyZBJ0x6I3AVsN4q3MeAW4ELTZJRIEnOAT+bNDdZxj8H/F6l3c0Av+UUjkItrKSd/2xUH1ekLdpeyaVRAVvHiVoMnP1MhdCfkcQpkxFVTOEuYRojfVHRzDHmSD7goSYrSllCyAXoEpUrlzKrTPizzDRQcRGATuJM5CM4jMJ7EwAUS8ZPxhi0QJYK0IO7FrjXjNqJA542d8CYJelJbL0Vn1uJckrPspATUl5J1Wsv+qeHpPGq1+Szrm/PykKSNrjE2a8Dk2wZTcgO1XUgrqptEuxk2WEzI3KJhHDqQDIuReOism4i2Uld2DM5jsLsXse/FVTiV84BPAewpu1/LVA2Mx2CXq4AAAAASUVORK5CYII=)}
+.brand .mark,.ico.lab{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA8CAYAAAAzF3kIAAAFaUlEQVR42u2bS4gcVRSGv1vdPT0zOEYXggY1kkgwohA0DoouDIpPCBpQSEQ3gg8Ek5WibhVEXAYhBHe6UBeKC0UhElSCEJPoQlATIj7wGWMYx8xM93SXm3PJT1Fdj+5b3bXIhaKq63Hr/vec85/HrYZ6Ngc07PgyYJedQ/aFWlRDcA0gBnrALcBPwDo7t9b2tWuRDbyZsTWAKXnmBQMTA3cDrwDP2rVWXSTRssGXba8JuP+AQ3Z8T1mAzQqANU1iHVMzbecBc8Cs3dcHloEzwD/2+0XgSWDVQM0CW+z507aPJwHQq+CKnFsLXAfcAFwDXAFcZEA9wDPAIvAN8Cew057ti8p27HhiqtlO/L4d2AucEFUrs3np9RO/t41bRR0wY1IAuAPYDdyVoPMVU1dn6qvXYgHjbLIaCZcQi8sobS+jMCMGbtZY7nHpc1lmux1IUy6WcXerdsS+3W9M5yWxaC+PA2492x8Ztw9/xOzsc+Bl4HBiQFWA3GPvnqoaXAu4Hpi237uBvxKkUAXAGLjN3jldZWTSFFdwYMBAQm9+4g6JqURVRCi+PVoxoCwp7rAxzFYFbq+8rCs+a1wgvxgwrpFCMIALgIOiMuOUYNK+t4WSoo8cLgd+sM5XxgxMAwI/qe8JJ0SjhmEbgD8mDE5NIgb+BTbb+GbybGoQuBVjyoPAJRL41iHrnwJOAZ8Yll6ZDqYE5NGaSE63ju2/tuyklPNviE6/IYlnv2Ly6A6hpjFwX1nH7/V5xwAjDw1uZcDA88jG37uvDNm0ZTaOy+z+UpFL6MjxcslQz99/3BLpXCk60eOX7OF3LeZ8pgIpqrQetpqLB7dU0On7SX8uxbwGOvMZA/iAXPtQOu0Hdtg75T1PyPmlEuq9BNyURzZOxKwuZEvgYFonaY+Yhh/YrkRVLa8/f88HgqFZJJmds/1TgQF66Z0GrhStcfL+h2QSlm3r5UixC8xr9JWmq7Ewki8LbJZrbkQHrX0cNYKIZJC+ZvOmVeQOmnTbdi0eYFo922+0cz3ARTkD6SSKPXHgkscxme2+DMxP8FfAzcCDwMfAgj0bZwimXXRtIpKXrhmgwqMCXBjQZyzSBHgHuBO4FPjS7u/I/X2xuV9l/HE0RB4Ysk3laFBfsvbIguu3RNLqbgC+kzzRlVl5+jQgwfSFPN4WFXUFpX4+8G1Kv3+blL1AXF5dNLbrq/YwgYjGiWQ22LlugWzAq+wCsNWqeFcDJ4H9wOu2vhHJBOY2H/a8GjiKUTexcUD5fxhzaZVdAPWSOpLCViFIZo1Jo4yde3fQFhcxM2y125PAOpvtkHa4KtHHsCXAaFRWd2KnHwWORbsSZs1nlR1ClQGz0qdVO94e0B96svGrSe8HNoPSq0gN4PvA1etOSiYwywSaZ9PHSmbdZbL5/aIVrUlUsPzLDwcGqcXj54skrVU1TzbzMrBQmb1PbE8Bm0IujzVKSnEa+NFmd6uBbAQaR9fKfydttaohIZebxAdA+1KKRqNsPis/UCARDyZBJ0x6I3AVsN4q3MeAW4ELTZJRIEnOAT+bNDdZxj8H/F6l3c0Av+UUjkItrKSd/2xUH1ekLdpeyaVRAVvHiVoMnP1MhdCfkcQpkxFVTOEuYRojfVHRzDHmSD7goSYrSllCyAXoEpUrlzKrTPizzDRQcRGATuJM5CM4jMJ7EwAUS8ZPxhi0QJYK0IO7FrjXjNqJA542d8CYJelJbL0Vn1uJckrPspATUl5J1Wsv+qeHpPGq1+Szrm/PykKSNrjE2a8Dk2wZTcgO1XUgrqptEuxk2WEzI3KJhHDqQDIuReOism4i2Uld2DM5jsLsXse/FVTiV84BPAewpu1/LVA2Mx2CXq4AAAAASUVORK5CYII=)}
+@media(prefers-color-scheme:dark){.brand .mark,.ico.lab{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAABICAYAAABIk43cAAAGkElEQVR42u2bWYgcVRSGv1PVjplo4sIQd4l7UB9iiINRERdQQUVRMIiCoBFFEDQRDb7og6KCby4ogiiiYlTwRSSBuDwEFCUIEgWTuKCoo7iPYybTXb8Pc2686XT19FbVndgHiqqp7q66/z3nnuU/d2AvEUmV6Hq1pBMkpexrEoBKOlbSBklfRfcq+xLQ1M9XSZrQrDzn9x6QtNyvk0EFYH4kdYdJsgZA1+o/qUp6UNJz/vdB4ZmDAiyVVPGztaJNSSN+/XAEsubXQcOftjOWStHmZ2Y1oFb32SiwEJgP7Oef7wD+MrM/w28k3QysBWZ8rGGiFgEZsDNMqJmpdLCSUjOr+YADsKXAWcAy4GTgSOAgYBRIAPnAJyX9DHwJfALc4qDSCCg+OakftAK0EE1Gf58n6SlJ29V7Cea8NVrXVrhm/SWJmdXcI64E7gBWxF+LTNmio+EjoyPN+V64dzCwAPi9VG1KuljSh9HsZ5JmIi30UjI/z0g6qdXQk3QT6F2bCyU9DawHxl2Dmc9+pZt3NBHzd1SAw9y6rBCw7v2qksaBzcCt0cdpQQAbmTvATe6grAjTTTxmrpL0t6TfJG2WtFHSr3VmVrRU/XxbIyfZlWZdo5nHyEngbGDMzJYBrwJVN6+yJPH3PSZpMZAVmjZKOlXSu+qfzPj5tVa0240HvkvSVGRSWZ8AB3Ne0TPAUVk1JumNBi9Tn8Gu70kFFAEd98wlmFCmwZCaj2U8T7tJGzG1Kuk64H3gRHdGlUJcfmcSYvuarsozv75ngMw2L6vKJO2QdHwjc07myHlTz5IeAh717CjkrIMm5uPbH7i5ET5rwXQf9pqy2iQxZ4BMOQG+BU4xs3/iWjeZA+i9OcXzoEri2j0GuDRYZ64Ze/FdlXQt8EjkiPYajs6PkDOroRlLSswsk7QE+NiZBEpK7HsJ1oB/3JS/DbiSOodkHk9fAA5wrapPa6/WhaOquqKuDuRCvcYS541u97p0Bhjpg+et+bjSLoqKYLEr3ZSzXTcj/mYh8IWzdwAfAN8B15TknAKRts3fe350rxNzrgFLzWyLpDRoNvUZuMOBvgGcb2YrgI8i0ygD6FvAmcDFwBa/V+1wKVSAJ3cj4zxTmucs+2XR/QWSfqpj9IpM5DfUVVUnSPqhi6wt/GZNfcjZL8yApBFn5S8vIT0Mad4vkg6POgIhTV0adQBmOnh2zRmVk3Y5KDObMTP5SzJ3VpdEcatI8zXgKTP7MRB5nqamZvYJcIH7kkqbbIj52OcDt+8RP+vaFeNzcLy9kOB1X3XLyuKxOODPgHOA1yPGshYxma0AvjCvAAjrdaJgAi34ga+jRpY1Ivmi6+slfdYBxzyRNIlRY8AhJdGh35nZzrwGlWd15pnQS94zWgm8AmxtcZlVm+W8C7zDRgkxdqrO5GgAWLOKVWpmO4B1wDpJB3pcXpQz1uBztiX9aGc2kJGWU6PZdRx6viNmNgm8m5MLZH4vAV5uBna6pIIbYCzipFsBrKiHa04syC2xGpEMiU/keuD5ZmD/YLZBTIGhJ4A9Gji03e0CDtg8PN0A/OoWGUiGz4G7gSvNbNpyWH9JmueL/+iobCqSXTjXzDaFZna7LRl3Ykd4iJrncXmzmVWbTmJw9ZLeKyGDClnRfd1s9ckjxr0vZc2K8nD/oxIyqDDjV0Sabv8h/zmuSrxZxcyqTTmoCNxGH0xScAYlYLmk0zy8JB0CloOresqpVqjUMLubgIlok0eR+XEFWOUDLGRyk7wZ8oT8L+DNaEBFa/dGSWMeUpJSwNaZ8jNRzCqa4D4EWFOkdpu6dD+/XVJdW5M0mde+KFKzsae8vwSWMeTFBwBPl5ST5+4KfbFDtqDTuLu61510a9WUvarYwuxGqyKJ8xDXp4FTgW88JcyKNmP8JWZmPzr7mBTsmQNbMQrc2UtnZS2acWhfTkt6FljVBZ/bTmP5e2BJo4Kk3fy5m3W8rgR6NTz7jELXbFT5jAIXRRlU2Hc0H3jcqZuivGawnCe8Hq1ETGQNeKe+/9op2FAyHcfs3t9m3bJ+yWIz+yaMlR7sJM+Ybf2N1IGzEjOcLFqrYQw7OqmOKi3mrWkfNZk0sKa0kNCzL8n/CmwlJ9lOJA36ZCQ+9jDWRsnQ7mBzPFnmXnlqgMFO+dizdjR7coMFH1LCowZ0O5ABp0v6IWc7wk4z277Hj/z/aMYGIG72kpbdCiwJPaK5CLehNx6CHYIdgh2CHYIdgh2CbUv+BfLxvASbQWLEAAAAAElFTkSuQmCC)}}
+h2{position:relative}
+h2::after{content:"";position:absolute;left:0;top:0;width:44px;height:2px;
+  background:linear-gradient(90deg, var(--acc), transparent)}
+h2:first-of-type::after,h1+h2::after,.sub+h2::after{display:none}
+a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, transparent),
+  color-mix(in srgb, var(--acc) 5%, var(--card)))}
+.fb i,.fs .fb i{background:linear-gradient(90deg,var(--bar),var(--bar2))}
+.fgrid.one>.fcard>.fh{background:linear-gradient(180deg,
+  color-mix(in srgb, var(--acc) 7%, var(--card)), var(--bd-soft))}
+.ascgrid b,.tile .tv{background:linear-gradient(180deg, var(--tx), color-mix(in srgb, var(--tx) 72%, var(--mut)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ---------- celular (14/10) ----------
+   No iPhone a página nunca rola de lado: grade cede a largura pros filhos, tabela
+   rola dentro do .twrap, o menu rola dentro da própria faixa. Quadro e big numbers
+   seguem numa linha só com rolagem horizontal, em qualquer largura (João, 14/10). */
+.cols>*,.cols2>*,.grid>*,.grid4>*,.dapps>*,.fgrid>*{min-width:0}
+.board .hrow,.tiles{flex-wrap:nowrap!important;overflow-x:auto}
+#md table{display:block;max-width:100%;overflow-x:auto}
+#md p,#md li,#md :not(pre)>code{overflow-wrap:anywhere}
+img,video{max-width:100%}
+@media(max-width:860px){
+  .topin{width:calc(100vw - 28px)}
+}
+@media(max-width:620px){
+  .topin{gap:4px 12px;padding:8px 0 4px}
+  .stamp{order:2;margin-left:auto;flex-basis:auto;font-size:11px}
+  .navs{order:3;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;margin:0 -14px;padding:0 14px 4px;gap:2px}
+  .navs::-webkit-scrollbar{display:none}
+  a.nav{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-size:14px}
+  a.brand{min-height:44px}
+  body{font-size:15px}
+  h1{font-size:24px}
+  .sub,.card p,.row,.dirp,.prw,.nots li,.dirlist>li{font-size:14px}
+  table.t td,table.t th{font-size:13.5px}
+  table.t td:first-child,table.t th:first-child{min-width:148px}
+  #md{padding:16px 14px}
+  .board{padding:12px 0 14px;margin-left:0;margin-right:0}
+  .boardh{padding:0 14px}
+  .board .hrow{padding:12px 14px 12px;scroll-padding:0 14px}
+  a.more,.btn{display:inline-flex;align-items:center;min-height:44px}
+  .row{min-height:44px}
+  .del{min-width:44px;min-height:44px;opacity:.7}
+  .iid{position:relative}
+  .iid::after{content:"";position:absolute;inset:-12px -8px}
+  .fdet>summary,details>summary{min-height:44px}
+  .fs{grid-template-columns:minmax(0,118px) minmax(0,1fr) auto}
+  .leak,.fnote{margin-left:0}
+}
+</style></head>
+<body><header class=top><div class=topin><a class=brand href="../index.html"><span class=mark></span>GambitStudio</a><nav class=navs><a class="nav" href="../index.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" width="28" height="28" loading="lazy" alt="Lucario" title="Lucario: dono da aba LAB">LAB</a><a class="nav" href="../business.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" width="28" height="28" loading="lazy" alt="Mewtwo" title="Mewtwo: a mente mais poderosa: entende os números">Business Analysis</a><a class="nav" href="../vendas.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" width="28" height="28" loading="lazy" alt="Kyogre" title="Kyogre: o oceano inteiro de dados">Seller</a><a class="nav" href="../videos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" width="28" height="28" loading="lazy" alt="Moltres" title="Moltres: fogo que se espalha: vídeos que pegam">Vídeos</a><a class="nav" href="../servidor.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" width="28" height="28" loading="lazy" alt="Darkrai" title="Darkrai: não deixa ninguém dormir: segura o Mac acordado pra você usar o Claude de longe">Servidor</a></nav><span class=stamp>atualizado 21/10 03:15</span></div></header><div class="wrap"><style>.dh{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:4px 0 18px}.dh-back{font:600 14px -apple-system,system-ui,sans-serif;padding:8px 16px;border-radius:999px;border:0;background:#111;color:#fff;cursor:pointer}.dh-mon{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border:1px solid var(--bd);border-radius:14px;background:var(--card)}.dh-mon>div{display:flex;flex-direction:column}.dh-mon b{font-size:16px}.dh-mon span{font-size:12.5px;color:var(--mut);max-width:34ch}</style><div class=dh><button class=dh-back type=button onclick="history.back()">← voltar</button></div><p class="sub"><code>_GambitStudio/aso/learnings.md</code></p><div id="md"><div class=mdpart data-i="0"></div></div><script>const RAWS=["# ASO Cross-Project Learnings \u2014 GambitStudio\n\nPadr\u00f5es e aprendizados que **se transferem entre apps** do portf\u00f3lio. L\u00ea este doc ANTES de come\u00e7ar iter-01 de qualquer app novo via `/start-aso-pipeline`.\n\nCada aprendizado tem: **regra \u2192 motivo \u2192 como aplicar**.\n\n---\n\n## \ud83c\udfaf Filtro quadrante pra candidates (substitui pop\u226530+diff\u226450 do README antigo)\n\n**Regra:** filtra candidates do Astro por quadrante, n\u00e3o por threshold simples.\n\n| Quadrante | Take? |\n|---|---|\n| diff \u2264 20 (qualquer pop) | \u2705 SIM \u2014 diff baixo = ranqueia com 1 download |\n| diff 21-40, pop \u2265 10 | \u2705 SIM \u2014 sweet spot |\n| diff 41-60, pop \u2265 25 OU j\u00e1 tem rank hist\u00f3rico | \u2705 SIM \u2014 aposta moderada |\n| diff 41-60, pop < 25 | \ud83e\udd14 S\u00f3 se j\u00e1 rankeia OU competitor-validated |\n| diff > 60 | \u274c Skip keywords. Talvez no name (peso 7\u00d7) |\n\n**Motivo:** pop\u226530 \u00e9 raro em pt-BR niche (s\u00f3 2/485 termos no Dispensado bateram). Diff baixo \u00e9 mais valioso que pop alto pra app cold-start porque rankeamento \u00e9 proporcional a (relevance \u00d7 engagement); cold-start = engagement fraco \u2192 precisa de relevance f\u00e1cil.\n\n**Como aplicar:** no step 8 do skill `/start-aso-pipeline`, aplica esse filtro antes de propor a shortlist final.\n\n---\n\n## \ud83d\udc80 Dead weight cl\u00e1ssico em keywords field\n\nAntes de propor keywords novas, **VERIFICAR e REMOVER** esse padr\u00e3o de waste:\n\n1. **Stopwords pt-BR/EN**: `de`, `da`, `do`, `e`, `o`, `a`, `the`, `a`, `an`, `and`. Apple ignora. **3-10 chars desperdi\u00e7ados.**\n2. **Duplicatas literais**: mesma palavra listada 2x (acontece em apps mal-mantidos). Apple ignora a 2\u00aa.\n3. **Palavras truncadas**: `unive` (corte de `universidade`), `applic` (corte de `application`). N\u00e3o existem, gastam chars.\n4. **Capitaliza\u00e7\u00e3o inconsistente**: `Contador` capitalizado quando deveria ser `contador`. Apple deveria ser case-insensitive mas Astro confirma que **case-mismatch faz pop ir pra zero**. SEMPRE lowercase.\n5. **Duplicatas com name/subtitle**: `controle` no keywords sendo que `Controle` j\u00e1 est\u00e1 no name. Peso 7\u00d7 via name + 1\u00d7 via keywords = wasted 1\u00d7. **Removido do keywords sem perda.**\n6. **Singular/plural duplicado**: `falta` E `faltas` no mesmo campo. Apple n\u00e3o diferencia em pt-BR \u2014 gasta chars sem ganho.\n\n**Como aplicar:** `validate_proposed.sh` automatiza detec\u00e7\u00e3o desses 6 padr\u00f5es. Rodar antes de qualquer deploy.\n\n---\n\n## \ud83d\udd04 Apple comp\u00f5e 2/3-grams automaticamente\n\n**Regra:** se `controle` + `faltas` est\u00e3o em qualquer campo, Apple **automaticamente comp\u00f5e** \"controle de faltas\" no \u00edndice. N\u00c3O listar o composto separado se as palavras j\u00e1 existem solo.\n\n**Motivo:** Apple's tokenizer compose multi-word queries from individual tokens distributed across name+subtitle+keywords. Adding \"controle de faltas\" as one token wastes ~15 chars when the same compound match comes free.\n\n**Como aplicar:** dropar 2-grams compostos do keywords field se as constituintes j\u00e1 est\u00e3o l\u00e1. Exce\u00e7\u00f5es: phrases que s\u00e3o VERY exact-match dependent (\"caderno digital\" pop 53 \u2014 vale como composto expl\u00edcito).\n\n---\n\n## \ud83c\udf0d CJK locales precisam de press\u00e3o pra max char\n\n**Regra:** locales ja/ko/zh-Hans naturalmente caem em 40-50 chars de keywords se voc\u00ea s\u00f3 traduzir o pt-BR. Apple aceita 100 chars **gr\u00e1femes**, e CJK = 1 grafeme = 1 char.\n\n**Motivo:** Cada hiragana/hangul/hanzi \u00e9 1 grafeme. Voc\u00ea cabe 30+ tokens em CJK vs 10-15 em Latin. Subutilizar \u00e9 deixar ASO na mesa.\n\n**Como aplicar:** ver memory [feedback-aso-max-chars]. SEMPRE chamar `python3 -c \"print(len(open('keywords.txt').read()))\"` pra confirmar \u2014 `wc -c` mente em UTF-8.\n\n---\n\n## \ud83c\udfeb University brand names = sweet spot escondido pra apps estudantis\n\n**Regra:** pra apps que servem audience estudante BR, nomes de uni (UNIP, PUC, USP) costumam ter **pop alto E diff baixo** \u2014 porque concorrentes n\u00e3o pensam em listar.\n\n**Dados Dispensado:** `unip` pop=56 diff=15 \u2b50, `puc` pop=48 diff=21 \u2b50, `usp` pop=8 diff=13.\n\n**Risco:** usu\u00e1rio busca \"UNIP\" pode querer s\u00f3 o app oficial UNIP. Convers\u00e3o pode ser menor. Mas com diff t\u00e3o baixo, vale a aposta.\n\n**Como aplicar:** se app \u00e9 student-targeted BR, incluir top 5-10 uni brands em candidates do Astro. Vale pra apps de outras categorias tamb\u00e9m (banco brand pra finance app, hospital brand pra sa\u00fade, etc).\n\n---\n\n## \u2705 Subtitle: keywords > slogan\n\n**Regra:** subtitle (peso 3\u00d7) \u00e9 vehicle de ASO, n\u00e3o marketing fluff. Trocar adjetivos (\"Simplificada\", \"Easy\", \"Best\") por **heads de pop alto** do cluster B.\n\n**Dados Dispensado:** subtitle anterior `Gest\u00e3o Academica Simplificada` (3 palavras pop=5, 1 typo) \u2192 `Agenda, Notas, Planner Escolar` (3 heads pop\u226560 + modifier). **Estimativa +50% impressions.**\n\n**Como aplicar:** identificar top 3-4 high-pop terms N\u00c3O presentes no name e packear no subtitle. Bonus: termo modifier como \"Escolar\"/\"Pro\"/\"Free\" no fim.\n\n---\n\n## \ud83d\udc1b Typos silenciosos em produ\u00e7\u00e3o\n\n**Regra:** typos em campos ASO (especialmente subtitle) podem ficar anos sem ser notados porque o app funciona normalmente.\n\n**Dados Dispensado:** `Academica` (sem acento) estava no subtitle h\u00e1 ANOS. Apple indexa `Academica` e `Acad\u00eamica` como termos diferentes \u2014 perdendo a forma correta + acentuada que tem volume maior em buscas reais.\n\n**Como aplicar:** `validate_proposed.sh` deveria ter regra pra detectar palavras pt-BR comuns sem acento (`Academica`, `Frequencia`, `Periodo`, `Calculo`). TODO futuro.\n\n---\n\n## \ud83c\udfad Storyboard vs runtime override\n\n**Regra:** apps Brasileiros legados frequentemente t\u00eam Base.storyboard em pt-BR + c\u00f3digo sobrescrevendo via `.text = .localizedKey` em runtime. Storyboard \u00e9 apenas design-time fallback.\n\n**Como detectar:**\n1. Roda app em locale n\u00e3o-pt (alem\u00e3o por exemplo)\n2. Se N\u00c3O v\u00ea texto pt-BR vazando \u2192 c\u00f3digo override funciona, ignora storyboard\n3. Se V\u00ca pt-BR \u2192 storyboard precisa tradu\u00e7\u00f5es por locale\n\n**Como aplicar:** N\u00c3O mexer no storyboard ANTES de verificar. Maioria dos apps GambitStudio t\u00eam runtime override e a \"tradu\u00e7\u00e3o\" do storyboard \u00e9 trabalho desnecess\u00e1rio.\n\n---\n\n## \ud83d\udeab Bigrams via cross-product N\u00c3O\n\n**Regra:** ver memory [feedback-aso-no-exhaustive-bigrams]. Cada candidate precisa de raz\u00e3o de busca traceable. 50 intent-filtered > 500 exhaustive.\n\n**Dados Dispensado:** tentei 248 bigrams via 15 heads \u00d7 18 modifiers \u2192 gerou lixo (`mochila prova`, `hor\u00e1rio nota`). User pediu corte.\n\n---\n\n## \ud83d\udee0 fastlane deliver pode dar no-op silencioso\n\n**Regra:** `fastlane deliver` com vers\u00e3o em `DEVELOPER_REJECTED` \u00e0s vezes \"exit success\" sem realmente atualizar. SEMPRE verificar p\u00f3s-deploy via ASC API.\n\n**Motivo desconhecido** \u2014 provavelmente fastlane espera `PREPARE_FOR_SUBMISSION` exclusivamente. TODO: investigar `metadata_strategy` do fastlane.\n\n**Como aplicar:** ap\u00f3s `deploy.sh`, rodar `verify_current.sh` ou direct API check. Se metadata n\u00e3o bateu, fazer PATCH direto via API (script `sync_current_from_asc.py` tem o padr\u00e3o).\n\n---\n\n## \ud83d\udcd0 PPO out of scope pra apps <30 dl/dia\n\n**Regra:** Apple's PPO experiments precisam de N convers\u00f5es/bra\u00e7o pra signific\u00e2ncia. Pra apps low-volume (<30 dl/dia totais \u00f7 4 bra\u00e7os = ~7/dia/bra\u00e7o), atingir 1.500 convers\u00f5es/bra\u00e7o (lift m\u00e9dio 10-15%) leva \u22656 meses.\n\n**Como aplicar:** pra apps <30 dl/dia, PPO \u00e9 desperd\u00edcio de bandwidth. Focar 100% em ASO text. Reabrir PPO quando volume >30 dl/dia sustentado por 14d.\n\n---\n\n## \ud83c\udfa8 Release notes style (global rule)\n\nVer skill `release-notes-style`. **3 linhas curtas, benefit-led, em-dash pra \u00eanfase, sem exclama\u00e7\u00e3o no fim, sem clich\u00ea \"bug fixes and performance improvements\".**\n\n---\n\n## \ud83d\udcc2 1 folder por iter, mesmo paralelo\n\n**Regra:** quando paralelizar subtitle+keywords numa iter (cold-start exception), **UMA folder** com `\"approach\": \"parallel\"` no `meta.json` + `proposed/metadata/<locale>/` contendo ambos arquivos. NUNCA criar duas folders.\n\n**Slug da folder usa o campo prim\u00e1rio** (geralmente `keywords` porque \u00e9 o de maior volume de testagem). O `meta.json` declara escopo completo.\n\n**Como aplicar:** ver `Apps/recovery/ios/CollegeSchoolControl/Dispensado/aso-pipeline/iterations/2026-05-22_iter-01-text-pt-BR-keywords/meta.json` como refer\u00eancia can\u00f4nica.\n\n---\n\n## \u23f1 Cad\u00eancia: 4 semanas por iter, checkpoints 7/14/21/28\n\n**Regra:** cada iter dura 4 semanas. Checkpoints a Day 7 (early signal/rollback), Day 14 (tend\u00eancia), Day 21 (rascunho pr\u00f3xima iter), Day 28 (decision).\n\n**Motivo:** Apple review come 1-2 dias + ASO reindex 1-2 dias = 14-17 dias \u00fateis de dados em janela de 21. 4 semanas d\u00e1 margem confort\u00e1vel.\n\n**Rollback trigger:** downloads/dia \u2193 \u226530% sustentado por 7d.\n\n**SUPERADO em 01/10/2026 (reforma da camada de ASO):** D7 = s\u00f3 status de re-index (sem veredito, sem rollback), D14 = 1\u00aa leitura, D28 = fechamento \u2014 o \u00fanico n\u00famero com m\u00e9todo d\u00e1 9 d at\u00e9 o 1\u00ba pico e 14-25 d at\u00e9 o potencial cheio (`reference/research-2026-10-aso-deep.md` achado 13). Rollback s\u00f3 a partir do D14. Detalhe no playbook \u00a72 e \u00a77.\n\n---\n\n## \ud83d\udd27 Templates de scripts n\u00e3o acompanham edits\n\n**Regra:** quando algum script (`verify_current.sh`, `validate_proposed.sh`, etc) for melhorado em algum app, **copiar manualmente** pro `aso-pipeline-template/scripts/`. Sem auto-sync.\n\n**Por qu\u00ea:** apps maduros t\u00eam pipelines customizados \u2014 sync autom\u00e1tico quebraria deliberate customizations.\n\n---\n\n## \ud83d\udccb Backlog de melhorias futuras (cross-project)\n\n- [ ] `verify_current.sh --pull`: flag que sincroniza local com ASC ao inv\u00e9s de s\u00f3 diff\n- [ ] `validate_proposed.sh`: regra pra detectar pt-BR sem acento (heuristic)\n- [ ] `deploy.sh`: investigar e arrumar fastlane no-op em DEVELOPER_REJECTED state. Poss\u00edvel solu\u00e7\u00e3o: substituir fastlane deliver por chamada API direta (j\u00e1 temos o padr\u00e3o em `sync_current_from_asc.py`)\n- [ ] Pre-commit hook que roda `verify_current.sh --strict` antes de qualquer commit que toque `current/metadata/`\n- [ ] Dashboard cross-app: roda `pull_analytics.py` em todos os apps do portf\u00f3lio + tabela comparativa\n- [ ] `init.sh` do template: detectar se Dispensado existe; se n\u00e3o, usar scripts pr\u00f3prios da template (atualmente o init.sh assume Dispensado existir)\n\n---\n\n**\u00daltima atualiza\u00e7\u00e3o:** 2026-05-27 (sess\u00e3o pesquisa Padel pr\u00e9-launch)\n**Pr\u00f3xima revis\u00e3o:** ap\u00f3s iter-01 fechar (Day 28 = 2026-06-19)\n\n---\n\n## \ud83c\udd95 LEARNINGS PR\u00c9-LAUNCH (sess\u00e3o Padel \u2014 2026-05-27)\n\n### \ud83c\udfaf App novo (0 ratings) deve focar em 4-5 termos pra ganhar TOP 4, N\u00c3O dispersar em 20+\n\n**Regra:** com 0 ratings, app cold-start ganha **boost de novidade ~30 dias** mas n\u00e3o tem engagement signal. Precisa de **relevance m\u00e1xima em poucos termos** que cabem em Name (peso 7\u00d7). Dispersar em 20 long-tails compostos \u00e9 desperd\u00edcio \u2014 todos v\u00e3o rankear top 30 mas zero traz install.\n\n**Motivo:** Apple ranking = `relevance \u00d7 engagement`. Cold-start tem engagement = 0 \u2192 precisa maximizar relevance. Termos com **pop > 5** com **diff < 15** s\u00e3o \u00fanicos vi\u00e1veis pra TOP 4 sem downloads.\n\n**Como aplicar:** identificar **4-5 termos com pop \u2265 6** (acima do floor de medi\u00e7\u00e3o) e diff \u2264 15. Coloca os 2-3 mais valiosos no NAME. Resto distribui em Subtitle + Keywords field.\n\n**Exemplo (padel IT):** `padel watch` pop 44/diff 13 + `padel score` pop 17/diff 7 + `americano padel` pop 8/diff 5 = 3 sweet spots reais. Esses 3 sozinhos > somat\u00f3rio de 20 termos com pop 5 (floor).\n\n---\n\n### \ud83d\udca1 Pop = 5 no Astro \u00e9 FLOOR (ru\u00eddo de medi\u00e7\u00e3o), N\u00c3O volume real\n\n**Regra:** Astro popularity score floor \u00e9 5 \u2014 significa \"abaixo do threshold de medi\u00e7\u00e3o\". N\u00c3O significa \"popularidade 5\". Otimizar pra pop=5 = otimizar pra ru\u00eddo.\n\n**Como aplicar:** filtrar candidates por **pop \u2265 6**. Tudo com pop=5 \u00e9 \"gra\u00e7a da combina\u00e7\u00e3o autom\u00e1tica\" \u2014 pega via produto cartesiano se outras palavras-base est\u00e3o no metadata, mas n\u00e3o vale otimizar dedicado.\n\n**Dados:** sess\u00e3o padel rodou 200+ keywords nos 5 mercados (BR/AR/ES/MX/IT). Apenas ~15% retornaram pop > 5. Floor \u00e9 a regra, sweet spot \u00e9 exce\u00e7\u00e3o.\n\n---\n\n### \ud83c\udfaf Inten\u00e7\u00e3o de busca > volume bruto \u2014 keyword desalinhada destr\u00f3i o app\n\n**Regra:** keyword com pop alta mas inten\u00e7\u00e3o desalinhada com o app gera **install + uninstall + rating 1 estrela**. Apple penaliza retention ruim cortando ranking. Pior que n\u00e3o rankear.\n\n**Teste mental:** \"se eu busco essa palavra e vou pra primeira p\u00e1gina, o tipo de app que estou esperando \u00e9 o nosso?\"\n\n**Categorias cl\u00e1ssicas de desalinhamento pra evitar:**\n| Termo | Quem busca quer | N\u00c3O casa com |\n|-------|-----------------|--------------|\n| coach, drills, training, t\u00e9cnica, treino | Aulas/tutoriais | Scoreboard/tracker |\n| partner, pareja, parceiro | Matchmaking | Scoreboard local |\n| club, pista, quadra, cancha, reserva | Booking de quadra | Tracker pessoal |\n| ranking oficial, wpt, atp, premier | Ver torneio na TV | App pessoal |\n| brand competitor (playtomic, padelio) | Esse app espec\u00edfico | Substituto |\n| brand equipamento (bullpadel, head) | Comprar raquete | Tracker |\n\n**Como aplicar:** descartar candidatos por inten\u00e7\u00e3o ANTES de avaliar pop/diff. Convers\u00e3o tap\u2192install passa de ~10-15% (com lixo) pra ~30-40% (puro).\n\n---\n\n### \ud83e\udd16 Apple combina palavras de TODOS os campos automaticamente \u2014 long-tail composto = desperd\u00edcio\n\n**Regra (refinamento da \"Apple comp\u00f5e 2/3-grams automaticamente\"):**\n- Apple tokeniza Name + Subtitle + Keywords field como **pool \u00fanico**\n- Gera **todas as combina\u00e7\u00f5es cartesianas** pra rankeamento de queries multi-palavra\n- Listar `\"padel scoreboard\"` no keywords field = 16 chars desperdi\u00e7ados quando `padel` (em name) + `scoreboard` (em kw) j\u00e1 cobrem\n\n**Como aplicar:** keywords field deve ter **apenas palavras \u00fanicas, single-word, n\u00e3o-presentes em name/subtitle**. Cada palavra cobre dezenas de combos via cartesiano.\n\n**Exemplo padel BR:**\n- Name: `Padel Placar Watch e Stats`\n- Subtitle: `Marcador, partidas, Americano`\n- Keywords field CORRETO: `score,scoreboard,tracker,contador,pontos,torneio,historico,jogo,set,game,pulso,vencedor`\n- Apple gera automaticamente: `padel score`, `padel scoreboard`, `padel tracker`, `marcador score`, `placar contador`, `watch jogo`, `padel scoreboard pontos`, etc.\n\n---\n\n### \ud83d\udeab \"Apple Watch\" \u00e9 proibido em Name/Subtitle \u2014 usar s\u00f3 \"Watch\"\n\n**Regra:** palavra \"Apple\" \u00e9 trademark restrito da Apple \u2014 App Review rejeita Name/Subtitle que use \"Apple Watch\" diretamente. \"Watch\" sozinho \u00e9 permitido.\n\n**Como aplicar:** sempre `Watch` solo (ou em PT `Pulso`, ES `Mu\u00f1eca`, IT `Polso` como sin\u00f4nimos sem\u00e2nticos).\n\n**Bonus:** `apple watch` no keywords field tamb\u00e9m \u00e9 desencorajado (pode causar reject). Usar `watch` solo l\u00e1 tamb\u00e9m.\n\n---\n\n### \u26a0\ufe0f Brand keyword de competidor: convers\u00e3o ~1% + risco de Apple Review derrubar\n\n**Regra:** listar `playtomic`, `padelio`, etc no keywords field tem 2 problemas:\n1. **Convers\u00e3o baix\u00edssima** (~1%): quem busca a marca quer A marca, n\u00e3o substituto\n2. **Risco trademark**: Apple \u00e0s vezes derruba se o titular reclama (Padelio \u00e9 PT em ES; Playtomic \u00e9 Playtomic SL)\n\n**Como aplicar:** s\u00f3 usar brand keyword se for **gen\u00e9rica do esporte** (ex: `americano` \u00e9 formato, n\u00e3o brand) OU se o competidor for **inexistente** no app store target.\n\n---\n\n### \ud83d\udcca Padel \u00e9 mercado GLOBAL \u2014 IT > ES > BR > AR > MX em volume mensur\u00e1vel\n\n**Dados sess\u00e3o 2026-05-27:**\n| Mercado | `padel` pop | Sweet spot \u00fanico (pop>5) |\n|---------|------------:|--------------------------|\n| \ud83c\uddee\ud83c\uddf9 IT | 55 (diff 43) | `padel watch` **44**/13, `padel score` **17**/7 \u2014 JOIAS |\n| \ud83c\uddea\ud83c\uddf8 ES | 56 (diff 42) | `padel club` 20/11, `playtomic` 68/23 (brand), `padelio` 44/8 (brand) |\n| \ud83c\udde7\ud83c\uddf7 BR | 44 (diff **9**) | `padel` 44/9 (head term acess\u00edvel, \u00fanico mercado), `padel watch` 9/5 |\n| \ud83c\udde6\ud83c\uddf7 AR | 54 (diff 19) | head term acess\u00edvel |\n| \ud83c\uddf2\ud83c\uddfd MX | 50 (diff 23) | head term acess\u00edvel |\n\n**Insight contraintuitivo:** IT tem **mais valor agregado** (volume pop somada ~152) que BR (~94) ou AR (~74), apesar do head term ter diff alta. As JOIAS `padel watch 44` + `padel score 17` s\u00e3o \u00fanicas no mundo padel.\n\n**Como aplicar:** se app racket sport for multi-locale, priorizar IT pelo `padel watch` 44. BR ganha pelo acesso ao head term. AR \u00e9 defensivo cultural.\n\n---\n\n## \ud83d\udd27 GAP IDENTIFICADO: skill `/research-aso-keywords` pr\u00e9-launch\n\n**Problema:** `/start-aso-pipeline` s\u00f3 funciona post-launch. Pesquisa keyword pr\u00e9-launch \u00e9 manual via MCP Astro (`add_app`, `add_keywords`, `search_app_store`).\n\n**Skill proposta:** automatizar fluxo:\n1. Receber: nicho/categoria + mercados-alvo\n2. Buscar top apps por nicho via `search_app_store` em cada mercado\n3. Adicionar app concorrente l\u00edder ao Astro tracking\n4. Gerar batch de 100+ keywords candidatas (head + varia\u00e7\u00f5es por idioma + brand + inten\u00e7\u00e3o)\n5. Adicionar em batch e coletar pop/diff\n6. Filtrar por inten\u00e7\u00e3o alinhada (input do usu\u00e1rio descreve o que app faz)\n7. Output: tabela tipo \"TOP 4 alvos por mercado\" + Name/Subtitle/Keywords field sugeridos\n\n**TODO:** criar como skill futura quando der largura. Por enquanto, o playbook est\u00e1 nesse learnings.md.\n\n---\n\n## Armadilha do diff baixo = FALSO sweet spot (Walk, 2026-06-13)\n\n**Diff baixo N\u00c3O \u00e9 sweet spot se a inten\u00e7\u00e3o da query n\u00e3o bate com o app.** Difficulty mede competi\u00e7\u00e3o; palavra gen\u00e9rica/poliss\u00eamica tem diff baixo justamente porque os apps do nicho n\u00e3o disputam ela.\n\nCaso real: app Walk (ped\u00f4metro), pt-BR. `contador` veio pop=38 **diff=21** \u2014 parecia o \u00fanico quase-sweet-spot do nicho. Mas `contador` solo em pt-BR = **contabilidade / contador gen\u00e9rico**; quem busca n\u00e3o quer app de passos. Diff baixo porque ped\u00f4metros n\u00e3o competem ali. Valor como alvo solo: zero. S\u00f3 serve de feeder de composi\u00e7\u00e3o (`contador de passos`, `contador de calorias`).\n\n**Regra:** SEMPRE cruzar diff baixo com o teste de inten\u00e7\u00e3o (\"se eu busco isso, espero achar nosso tipo de app?\") ANTES de marcar \ud83e\udd47. Palavra poliss\u00eamica entra no m\u00e1ximo como feeder de bigram, nunca como alvo isolado celebrado. (Jo\u00e3o pegou esse erro num report de Walk \u2014 incorporado no SKILL.md research-aso-keywords.)\n\n---\n\n## Copy de screenshot = superf\u00edcie de KEYWORD, n\u00e3o s\u00f3 convers\u00e3o (WTMP, jul/2026)\n\n**Captions de screenshot s\u00e3o INDEXADAS pela Apple (desde jun/2025).** Antes de escrever os headlines dos prints, o passo de pesquisa \u00e9 OBRIGAT\u00d3RIO e tem 2 partes:\n\n1. **Estudar a copy dos concorrentes** \u2014 baixar os prints dos top 3-5 do nicho (`itunes.apple.com/lookup?id=X` \u2192 `screenshotUrls`, trocar `392x696bb` por resolu\u00e7\u00e3o maior, Read na imagem) e LER as captions. No nicho anti-furto os l\u00edderes usam **a keyword literal como caption** (\"Don't Touch My phone!\", \"Who Unlocked My Phone?\", \"Multi-scene Anti-theft\", \"Break-Ins Alarm\") \u2014 indexa\u00e7\u00e3o > emo\u00e7\u00e3o. Isso mostra qual vocabul\u00e1rio o mercado j\u00e1 valida.\n2. **Auditar cada headline contra o keyword field DO LOCALE** \u2014 cada caption deve ancorar \u22651 termo do name/subtitle/keywords daquele idioma (ex-WTMP: \"SCREAMS / the second it's moved\" tinha ZERO keyword \u2192 trocado por \"ALARM /...\" que indexa `alarm`/`motion alarm`; pt \"DISPARA\"\u2192\"ALARME\" indexa `alarme de movimento`). Exce\u00e7\u00e3o consciente: 1 caption pode ser puro diferencial sem kw (ex \"GUARDS / even with the screen off\") \u2014 mas \u00e9 decis\u00e3o, n\u00e3o descuido.\n\n**Regra pr\u00e1tica:** headline localizado N\u00c3O \u00e9 tradu\u00e7\u00e3o \u2014 \u00e9 re-ancoragem no keyword field daquele mercado. E como os headers s\u00e3o trocados por edi\u00e7\u00e3o de imagem (fundo s\u00f3lido + `scripts/ai/headline.py`), revisar a tabela de headlines \u00d7 locale \u00d7 keyword ANTES de gerar os N idiomas.\n\n---\n\n## Astro MCP acess\u00edvel por endpoint HTTP local quando n\u00e3o est\u00e1 conectado como tool (27/07/2026)\nSe o Astro MCP n\u00e3o aparece nas ferramentas da sess\u00e3o (conector claude.ai n\u00e3o-autenticado em sess\u00e3o headless), mas o Jo\u00e3o sobe o server local, d\u00e1 pra falar direto via **JSON-RPC MCP streamable-HTTP**: `POST http://127.0.0.1:8089/mcp` \u2192 `initialize` (pega `Mcp-Session-Id` do header) \u2192 `tools/call`. Cliente Python stdlib de refer\u00eancia: `scratchpad/astro.py` (init + call por urllib). Server = `astro-mcp-server`.\n- **Stores rastreadas nessa inst\u00e2ncia:** `ar, br, de, es, fr, it, mx, us` (N\u00c3O tem ja/ko/zh/ru \u2014 pra esses, minerar App Store p\u00fablica via `itunes.apple.com/search?country=`).\n- **Fluxo de research:** `add_app`(temporary) \u2192 `add_keywords`(appName, keywords[], store) [ele busca popularity/difficulty] \u2192 `get_app_keywords`(appName, store) l\u00ea de volta. `extract_competitors_keywords` s\u00f3 funciona em keyword J\u00c1 rastreada.\n- **Achado WTMP/anti-furto:** popularity \u00e9 **piso (5)** em de/fr/it/es (nicho low-volume fora do ingl\u00eas) \u2192 otimizar por **difficulty baixa** (termos ganh\u00e1veis), n\u00e3o por popularity. Ex diffs baixas: de `diebstahlalarm`(7)/`wer war an meinem handy`(10,s\u00f3 4 apps); fr `selfie intrus`(5)/`ne touche pas mon telephone`(7); it `anti furto`(5)/`chi ha toccato il mio telefono`(9); es `quien uso mi celular`(5)/`alarma antirrobo`(7).\n\n## Termos em INGL\u00caS ranque\u00e1veis em stores BR/ES (03/08/2026, soninho/Sunrise)\n\"sunrise alarm clock\": US 17/15, BR 26/15, ES 27/13 \u2014 o usu\u00e1rio latino digita o termo em ingl\u00eas e o campo \u00e9 fraco nos 3 mercados. Regra: pra nichos com vocabul\u00e1rio \"de produto\" em ingl\u00eas (alarm, tracker, widget), SEMPRE rodar get_keyword_suggestions com store=br/es al\u00e9m de us \u2014 a brecha pode ser o termo ingl\u00eas no mercado local, com diff menor que o head local (despertador 62/46). Name pode manter a frase inglesa exata nos 3 locales + head local no subtitle.\nAnti-armadilha: \"smart alarm\" parecia \u00f3bvio e era pop 7/diff 51 \u2014 nome de categoria n\u00e3o \u00e9 demanda; validar TODO termo de name no Astro antes.\n\n## 2026-08-18 \u2014 Walk iter-03: \"pop-5 vaidade\" \u00e9 r\u00e9gua errada pra cold-start (feedback Jo\u00e3o)\nComposi\u00e7\u00e3o pop-5 com inten\u00e7\u00e3o exata e rank \u2264 #30 (ex. `caminhada di\u00e1ria` #10, `gr\u00e1fico de passos` #10) N\u00c3O se descarta ao reescrever keywords field \u2014 se protege e se tenta DOMINAR (top 3, onde o TTR mora). Pra app pequeno, ser dono de um termo alinhado, mesmo pouco popular, move downloads mais que ficar OUT em head pop-60 inganh\u00e1vel. Pop=5 \u00e9 piso de medi\u00e7\u00e3o do Astro, n\u00e3o prova de zero busca. Cortar primeiro: sin\u00f4nimo redundante de eixo j\u00e1 coberto em peso maior (`perder peso` vs `emagrecer` no subtitle), feature-term OUT (`bateria`), filler (`kcal`).\n\n## 2026-08-26 \u2014 `POST /v1/appStoreVersions` N\u00c3O herda o promotionalText (Hair Schedule iter-01)\nVers\u00e3o criada s\u00f3 pra carregar metadata (LEARNING #36 do LEARNINGS.md) herda **description e keywords** da vers\u00e3o live, mas **N\u00c3O o `promotionalText`** \u2014 os 3 locales da 1.1.0 nasceram com o campo `null` enquanto a 1.0 READY_FOR_SALE tinha 101/109/113 chars. Ningu\u00e9m apagou nada: j\u00e1 nasceu vazio. Publicar assim apagaria silenciosamente a linha promocional das fichas.\n**Regra:** toda vers\u00e3o criada por `POST /v1/appStoreVersions` \u2192 conferir `promotionalText` nos 3 locales ANTES de qualquer PATCH, e restaurar de `current/metadata/<locale>/promotional_text.txt` (ou da pr\u00f3pria vers\u00e3o READY_FOR_SALE via API). Vale para qualquer campo do `appStoreVersionLocalizations` que a itera\u00e7\u00e3o n\u00e3o pretende tocar: **listar os campos herdados e comparar com a vers\u00e3o live, em vez de assumir que \"n\u00e3o mexi, ent\u00e3o est\u00e1 igual\"** \u2014 \"vazio\" e \"inalterado\" n\u00e3o s\u00e3o a mesma coisa numa vers\u00e3o rec\u00e9m-criada.\n**Corol\u00e1rio de auditoria:** o `deploy.sh` da pipeline sincroniza `current/` com o `proposed/` no momento do deploy, ent\u00e3o **depois do deploy o `current/` n\u00e3o serve de baseline pr\u00e9-deploy**. Refer\u00eancias confi\u00e1veis para auditar depois: o `backup_pre_deploy_*.tgz` da itera\u00e7\u00e3o, o commit anterior ao deploy, e a vers\u00e3o READY_FOR_SALE na API \u2014 as tr\u00eas batem byte-a-byte. Rodar a checagem de regress\u00e3o de token ANTES do sync, ou tirar snapshot do estado live em `research/`.\n\n## Astro MCP pode devolver o keyword set de OUTRO app no get_app_keywords (2026-09-01, checkpoint Philos)\nDurante o checkpoint D14 do Philos, `get_app_keywords` devolveu DUAS vezes o set do Km Caminhada (outro app trackeado). Qualquer script/checkpoint que compare rankings DEVE validar que o payload cont\u00e9m termos do app esperado antes de usar (ex.: interse\u00e7\u00e3o com os tokens do name/subtitle > 0). Sem essa valida\u00e7\u00e3o, um checkpoint compara o app contra os rankings de outro e o veredito sai lixo com cara de dado.\n\n## 2026-10-01 \u2014 Reforma da camada de ASO: o que a auditoria de 41 itera\u00e7\u00f5es ensinou (lab)\nAuditoria completa em `_GambitStudio/reports/2026-10-01_aso-layer-audit/` (FAILURES F01-F38 + DESIGN). Os quatro que viraram regra de processo, n\u00e3o s\u00f3 de agente:\n- **O report \"App Store Search Terms\" da ASC n\u00e3o existe** (156 tipos de report em 22 apps, nenhum de search terms; medido). O extractor procurava, o cron apontava pra path morto e o playbook o citava como 2\u00aa fonte de volume. A fonte oficial \u00e9 a Apple Ads Platform API `search-term-popularity` (`pipeline-template/scripts/volume.py`), com tr\u00eas estados: `apple-official` \u00b7 `apple-below-cutoff` (teto, n\u00e3o zero \u2014 a maioria da cauda do lab cai aqui) \u00b7 `not-verified`.\n- **O suggest de keywords da Apple ignora o pa\u00eds** (BR = MX = DE, medido): descoberta, nunca volume. E a popularidade trata `or\u00e7amento` e `orcamento` como queries distintas \u2014 a consulta vai nas duas grafias, mesmo com o campo escrito sem acento.\n- **A heran\u00e7a de vers\u00e3o virou check, n\u00e3o lembrete.** O \"promo n\u00e3o herda\" j\u00e1 estava aqui desde 26/08 (Hair) e aconteceu de novo em 30/09 em 16 locales, junto com whatsNew vazio em 29 e a pergunta `socialMedia` do age rating sem resposta \u2014 e o deploy saiu \"232/232\". Agora: `version_diff.py` live\u2192editable antes do 1\u00ba PATCH, restaura\u00e7\u00e3o s\u00f3 do texto que passa no `listing_check.py`, e o gate G (`--only submittable`) decide `staged` \u00d7 `blocked`.\n- **Invent\u00e1rio de feature por alcance, n\u00e3o por declara\u00e7\u00e3o.** O fit-checker aprovava feature porque a classe existia; `PeriodSelector` declarado e nunca instanciado sustentava claim de listing. `scripts/aso/reachability.py`: sem cadeia de chamada a partir de uma tela = `unreachable`, e o listing-writer s\u00f3 promete o que \u00e9 `reachable`.\n\n"];</script><script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script>document.querySelectorAll("#md .mdpart").forEach(function(el){var R=RAWS[+el.dataset.i]||"";el.innerHTML=window.marked?marked.parse(R):"<pre>"+R.replace(/</g,"&lt;")+"</pre>";});document.querySelectorAll("#md h1,#md h2,#md h3").forEach(function(h){if(h.id)return;h.id=h.textContent.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");});if(location.hash){var t=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(t)t.scrollIntoView();}</script></div><script>
+// chip #N: copia a referência do item pra conversa. clipboard pode ser negado
+// (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".iid"); if(!b) return;
+  e.preventDefault();
+  var t=b.dataset.ref||b.textContent, done=function(ok){
+    var old=b.textContent; b.textContent=ok?"copiado":t; b.classList.toggle("ok",ok);
+    setTimeout(function(){b.textContent=t;b.classList.remove("ok");},1100);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});
+  } else {
+    var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); var ok=false; try{ok=document.execCommand("copy");}catch(err){}
+    document.body.removeChild(ta); done(ok);
+  }
+});
+</script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

@@ -1,0 +1,22 @@
+{
+  "trackId": 6756631261,
+  "trackName": "Couple Finance Gastos do Casal",
+  "sellerName": "Rafael Pereira Marques dos Santos",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.4,
+  "userRatingCount": 5,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2026-01-29T08:00:00Z",
+  "currentVersionReleaseDate": "2026-08-03T01:33:13Z",
+  "version": "1.2.08",
+  "minimumOsVersion": "15.1",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/couple-finance-gastos-do-casal/id6756631261?uo=4",
+  "bundleId": "com.fieldesigner.CoupleFinance",
+  "subtitle": "App de finanças para casais",
+  "screenshotCount": 15
+}

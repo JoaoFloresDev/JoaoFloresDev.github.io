@@ -1,0 +1,24 @@
+{
+  "trackId": 6802032903,
+  "trackName": "Soroka: gastos en familia",
+  "sellerName": "OLEKSII BABCHENKO",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-08-24T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-30T19:44:46Z",
+  "version": "1.0.12",
+  "minimumOsVersion": "16.4",
+  "languageCodesISO2A": [
+    "EN",
+    "ES",
+    "UK"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/soroka-gastos-en-familia/id6802032903?uo=4",
+  "bundleId": "com.soroka.money",
+  "subtitle": "Lista de la compra y tickets",
+  "screenshotCount": 7
+}

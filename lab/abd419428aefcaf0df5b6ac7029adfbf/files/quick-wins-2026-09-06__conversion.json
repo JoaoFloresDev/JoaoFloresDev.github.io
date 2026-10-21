@@ -1,0 +1,1735 @@
+{
+ "generated_at": "2026-09-07T02:39:21+00:00",
+ "item": "i4 — onde a pagina da loja esta vazando dinheiro",
+ "fonte_funil": "ASC App Analytics (relatorios r14 engajamento + r4 downloads) ja coletados em dashboard.json 2026-09-06T02:13Z. NAO existe API publica de Analytics fora desses relatorios; nenhum numero foi inventado.",
+ "aviso_censura": "Os relatorios DETAILED da Apple suprimem qualquer combinacao de dimensoes com <5 eventos. Por isso page_views e first_downloads sao PISOS em app de baixo volume (funnel_measured_pct diz quanto do Sales Report o funil enxergou). A metrica usada no ranking, inst_per_impression_pct, usa como numerador a instalacao do SALES REPORT (exata) e como denominador as impressoes (grandes, pouco censuradas).",
+ "par_teto": {
+  "valor_pct": 9.28,
+  "de": "College (341 inst / 3.676 imp)"
+ },
+ "par_conservador": {
+  "valor_pct": 4.99,
+  "de": "Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)"
+ },
+ "apps": [
+  {
+   "app_id": "1479873340",
+   "name": "Secret Gallery Vault Photo",
+   "downloads_30d": 2863,
+   "revenue_usd_30d": 1187.51,
+   "arpd_iap_usd": 0.415,
+   "cvr_page": 53.4,
+   "impressions": 54049,
+   "page_views": 2153,
+   "page_view_rate_pct": 3.98,
+   "installs_in_funnel_window": 2699,
+   "inst_per_impression_pct": 4.99,
+   "funnel_measured_pct": 67.0,
+   "ratings": {
+    "us": {
+     "count": 939,
+     "avg": 4.38
+    },
+    "br": {
+     "count": 2734,
+     "avg": 4.52
+    },
+    "es": {
+     "count": 111,
+     "avg": 4.51
+    },
+    "mx": {
+     "count": 960,
+     "avg": 4.56
+    },
+    "total": 4744,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [],
+    "delta_7d": 22
+   },
+   "negative_reviews_1_2_total": 56,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "2026-07-03 1* MEX: \"No agarra la contraseña\" — Eh intentado ingresar a la app y no me deja la contraseña que le puse",
+   "experiments": [
+    {
+     "id": "36fd9af1-daf6-483b-9c17-7786cee6a329",
+     "name": "Headlines A/B 2026-05-10",
+     "state": "STOPPED",
+     "start_date": "2026-05-11",
+     "running": false,
+     "note": "encerrado (start 2026-05-11)"
+    },
+    {
+     "id": "7be3e3be-5966-44f4-a083-01b87d79d8d2",
+     "name": "Ordem de telas 2026-08-28",
+     "state": "APPROVED",
+     "start_date": "2026-08-28",
+     "running": true,
+     "note": "RODANDO ha 9 dias (started=None mas startDate=2026-08-28, LEARNINGS #39b); termina 2026-11-26; ~13512 impressoes/semana no app"
+    },
+    {
+     "id": "d08346c8-bb90-42a2-b1a0-d91a4d47aea7",
+     "name": "Vault Green A/B 2026-06-17",
+     "state": "STOPPED",
+     "start_date": "2026-06-18",
+     "running": false,
+     "note": "encerrado (start 2026-06-18)"
+    },
+    {
+     "id": "03b478b1-c2e6-452f-99b5-c18e0a9f88f2",
+     "name": "icon test",
+     "state": "STOPPED",
+     "start_date": "2026-06-02",
+     "running": false,
+     "note": "encerrado (start 2026-06-02)"
+    },
+    {
+     "id": "400b4193-8766-407f-b8c6-78edd392fd35",
+     "name": "teste1",
+     "state": "STOPPED",
+     "start_date": "2022-06-16",
+     "running": false,
+     "note": "encerrado (start 2022-06-16)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_67 en-US IDENTICO (mesmos 5 sourceFileChecksum) desde a versao 1.1.8 de 2024-03-12 — 18 meses; a live iOS e a 1.4.0 de 2025-10-04. Nomes dos arquivos ainda sao export cru do Figma: 'Frame 1.png', 'Frame 2.png', 'Group 1742 (1).png', 'Frame 11.png', 'Frame 1.png'. A partir da 1.1.7 (2024-02-03) o set era outro ('Group 1679/1680/1681.png', so 3).",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_65": 4,
+     "APP_IPHONE_55": 5
+    },
+    "locales_total": 12,
+    "locales_com_prints": 4,
+    "obs": "so en-US/es-ES/es-MX/pt-BR tem set proprio (os outros 8 locales herdam). O 6.5\" carrega um set DIFERENTE e mais novo (01_calculator/02_gallery/03_hideapps/04_settings, 4 prints) enquanto o 6.7\" — o display type dos iPhones modernos — segue com os Figma frames de 2024. es-ES tem 4 prints no 6.7\" contra 5 no en-US."
+   },
+   "money_left_on_table_usd": 1021.47,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 4.99% (=2699 instalacoes Sales Report / 54049 impressoes, janela 2026-08-03..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +2461 instalacoes/30d sobre as 2863 atuais; x ARPD 0.415 US$/instalacao = US$ 1021.47/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. Este app E o par conservador, por isso o valor conservador sai 0 — o unico par acima dele no portfolio e o College. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "alta",
+   "evidence": "funil: dashboard.json>apps[1479873340].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=54049 pv=2153 inst_janela=2699; ratings: itunes.apple.com/lookup?id=1479873340&country=us|br|es|mx -> {'us': 939, 'br': 2734, 'es': 111, 'mx': 960}; reviews: GET /v1/apps/1479873340/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=56 sem_resposta=0; experimentos: GET /v1/apps/1479873340/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6755939574",
+   "name": "Cloak: Hide & Lock Apps Vault",
+   "downloads_30d": 2996,
+   "revenue_usd_30d": 518.1,
+   "arpd_iap_usd": 0.173,
+   "cvr_page": 30.8,
+   "impressions": 48263,
+   "page_views": 1935,
+   "page_view_rate_pct": 4.01,
+   "installs_in_funnel_window": 2108,
+   "inst_per_impression_pct": 4.37,
+   "funnel_measured_pct": 54.3,
+   "ratings": {
+    "us": {
+     "count": 7,
+     "avg": 3.57
+    },
+    "br": {
+     "count": 15,
+     "avg": 4.53
+    },
+    "es": {
+     "count": 1,
+     "avg": 5
+    },
+    "mx": {
+     "count": 5,
+     "avg": 3.8
+    },
+    "total": 28,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 3
+   },
+   "negative_reviews_1_2_total": 2,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "2026-08-14 1* CHN: \"不实用\" — 花钱",
+   "experiments": [
+    {
+     "id": "a18ae80f-0b82-4e9e-89cf-8a31d214abb9",
+     "name": "Cloak BG & Font 2026-08-03",
+     "state": "STOPPED",
+     "start_date": "2026-08-03",
+     "running": false,
+     "note": "encerrado (start 2026-08-03)"
+    },
+    {
+     "id": "da08b315-438b-402d-b480-bbcbd8170d36",
+     "name": "Cloak Dark vs Purple 2026-06-16",
+     "state": "STOPPED",
+     "start_date": "2026-06-16",
+     "running": false,
+     "note": "encerrado (start 2026-06-16)"
+    },
+    {
+     "id": "514d5f53-3c8a-4cc6-8479-9d88f71672e2",
+     "name": "Cloak Dark vs Purple 2026-06-17",
+     "state": "STOPPED",
+     "start_date": "2026-06-17",
+     "running": false,
+     "note": "encerrado (start 2026-06-17)"
+    },
+    {
+     "id": "8f680ca1-2f20-4734-b700-ce8935690780",
+     "name": "Cloak Panorama 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-10",
+     "running": false,
+     "note": "encerrado (start 2026-08-10)"
+    },
+    {
+     "id": "a1673cf0-9e4c-4346-a124-ff3f3b2c3859",
+     "name": "Cloak Screen Order 21L 2026-08-28",
+     "state": "APPROVED",
+     "start_date": "2026-08-28",
+     "running": true,
+     "note": "RODANDO ha 9 dias (started=None mas startDate=2026-08-28, LEARNINGS #39b); termina 2026-11-26; ~16088 impressoes/semana no app"
+    },
+    {
+     "id": "90b2f8b3-3845-4977-9a50-809b63a16d82",
+     "name": "Headlines A/B 2026-05-10",
+     "state": "STOPPED",
+     "start_date": "2026-05-11",
+     "running": false,
+     "note": "encerrado (start 2026-05-11)"
+    },
+    {
+     "id": "9a8279c0-0bd2-4ab2-886a-76024c7bd425",
+     "name": "Screen Ordering A/B 2026-05-23",
+     "state": "STOPPED",
+     "start_date": "2026-05-24",
+     "running": false,
+     "note": "encerrado (start 2026-05-24)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_65 en-US trocado na versao live 9.6 (2026-05-25); a anterior ja tinha checksums diferentes",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 21,
+    "locales_com_prints": 3
+   },
+   "money_left_on_table_usd": 582.36,
+   "money_left_on_table_usd_par_conservador": 73.54,
+   "math": "inst/impressao atual 4.37% (=2108 instalacoes Sales Report / 48263 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +3366 instalacoes/30d sobre as 2996 atuais; x ARPD 0.173 US$/instalacao = US$ 582.36/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 73.54/mes. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "alta",
+   "evidence": "funil: dashboard.json>apps[6755939574].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=48263 pv=1935 inst_janela=2108; ratings: itunes.apple.com/lookup?id=6755939574&country=us|br|es|mx -> {'us': 7, 'br': 15, 'es': 1, 'mx': 5}; reviews: GET /v1/apps/6755939574/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=2 sem_resposta=0; experimentos: GET /v1/apps/6755939574/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1517929511",
+   "name": "iPhotos • Photo Collage editor",
+   "downloads_30d": 165,
+   "revenue_usd_30d": 67.87,
+   "arpd_iap_usd": 0.411,
+   "cvr_page": 9.3,
+   "impressions": 5271,
+   "page_views": 22,
+   "page_view_rate_pct": 0.42,
+   "installs_in_funnel_window": 119,
+   "inst_per_impression_pct": 2.26,
+   "funnel_measured_pct": 21.8,
+   "ratings": {
+    "us": {
+     "count": 450,
+     "avg": 4.02
+    },
+    "br": {
+     "count": 23,
+     "avg": 4.87
+    },
+    "es": {
+     "count": 13,
+     "avg": 4.46
+    },
+    "mx": {
+     "count": 20,
+     "avg": 4.55
+    },
+    "total": 506,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": 9,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "2025-04-28 1* USA: \"App keeps crashing when using, removed!\" — App kept crashing when trying to start a new grid and select photos to add. Highly disappointed!",
+   "experiments": [
+    {
+     "id": "4df33205-b7f1-4e0d-b4f1-c6d808cd628c",
+     "name": "iPhotos Headlines 2026-06-17",
+     "state": "STOPPED",
+     "start_date": "2026-06-26",
+     "running": false,
+     "note": "encerrado (start 2026-06-26)"
+    },
+    {
+     "id": "9c84690e-703a-42be-8751-2fa2a5f8e101",
+     "name": "iPhotos Panorama 2026-08-08",
+     "state": "STOPPED",
+     "start_date": "2026-08-08",
+     "running": false,
+     "note": "encerrado (start 2026-08-08)"
+    },
+    {
+     "id": "99c4b459-11b1-4248-be68-d23a0e79f169",
+     "name": "iPhotos Screen Order 2026-08-28",
+     "state": "APPROVED",
+     "start_date": "2026-08-28",
+     "running": true,
+     "note": "RODANDO ha 9 dias (started=None mas startDate=2026-08-28, LEARNINGS #39b); termina 2026-11-26; ~1757 impressoes/semana no app — volume baixo demais pra significancia; ocupa o unico slot de PPO do app ate la"
+    },
+    {
+     "id": "564cde89-8566-4d9d-85ba-ae1e7812b685",
+     "name": "iPhotos Wine BG 2026-06-26",
+     "state": "STOPPED",
+     "start_date": "2026-06-26",
+     "running": false,
+     "note": "encerrado (start 2026-06-26)"
+    },
+    {
+     "id": "66304d5d-6618-4ebc-a92c-4faf23f81ebb",
+     "name": "teste",
+     "state": "COMPLETED",
+     "start_date": "2023-11-06",
+     "running": false,
+     "note": "encerrado (start 2023-11-06)"
+    },
+    {
+     "id": "0f5b83b5-4bf8-4028-b74c-3c2468916c09",
+     "name": "teste2",
+     "state": "STOPPED",
+     "start_date": "2024-08-14",
+     "running": false,
+     "note": "encerrado (start 2024-08-14)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_67 en-US trocado na versao live 1.9.0 (2026-08-25); a anterior ja tinha checksums diferentes",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_55": 5
+    },
+    "locales_total": 13,
+    "locales_com_prints": 5
+   },
+   "money_left_on_table_usd": 210.65,
+   "money_left_on_table_usd_par_conservador": 81.92,
+   "math": "inst/impressao atual 2.26% (=119 instalacoes Sales Report / 5271 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +513 instalacoes/30d sobre as 165 atuais; x ARPD 0.411 US$/instalacao = US$ 210.65/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 81.92/mes. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "alta",
+   "evidence": "funil: dashboard.json>apps[1517929511].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=5271 pv=22 inst_janela=119; ratings: itunes.apple.com/lookup?id=1517929511&country=us|br|es|mx -> {'us': 450, 'br': 23, 'es': 13, 'mx': 20}; reviews: GET /v1/apps/1517929511/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=9 sem_resposta=0; experimentos: GET /v1/apps/1517929511/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6758321287",
+   "name": "BLW Baby Led Weaning Tracker",
+   "downloads_30d": 189,
+   "revenue_usd_30d": 92.67,
+   "arpd_iap_usd": 0.49,
+   "cvr_page": null,
+   "impressions": 2342,
+   "page_views": 44,
+   "page_view_rate_pct": 1.88,
+   "installs_in_funnel_window": 143,
+   "inst_per_impression_pct": 6.11,
+   "funnel_measured_pct": 7.7,
+   "ratings": {
+    "us": {
+     "count": 3,
+     "avg": 5
+    },
+    "br": {
+     "count": 1,
+     "avg": 5
+    },
+    "es": {
+     "count": 1,
+     "avg": 2
+    },
+    "mx": {
+     "count": 1,
+     "avg": 5
+    },
+    "total": 6,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": null,
+     "name": "BLW Headlines 2026-05-12",
+     "state": "STOPPED",
+     "start_date": "2026-05-13",
+     "running": false,
+     "note": "encerrado (start 2026-05-13)"
+    },
+    {
+     "id": null,
+     "name": "BLW Panorama 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-10",
+     "running": false,
+     "note": "encerrado (start 2026-08-10)"
+    },
+    {
+     "id": null,
+     "name": "Nano vs Standard 2026-06-21",
+     "state": "STOPPED",
+     "start_date": "2026-06-23",
+     "running": false,
+     "note": "encerrado (start 2026-06-23)"
+    }
+   ],
+   "screenshots_age": "versao live 1.5.3 de 2026-08-28 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 39,
+    "locales_com_prints": 39
+   },
+   "money_left_on_table_usd": 48.05,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 6.11% (=143 instalacoes Sales Report / 2342 impressoes, janela 2026-08-03..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +98 instalacoes/30d sobre as 189 atuais; x ARPD 0.49 US$/instalacao = US$ 48.05/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[6758321287].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=2342 pv=44 inst_janela=143; ratings: itunes.apple.com/lookup?id=6758321287&country=us|br|es|mx -> {'us': 3, 'br': 1, 'es': 1, 'mx': 1}; reviews: GET /v1/apps/6758321287/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6758321287/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1491372792",
+   "name": "Sueca Games • Never Have",
+   "downloads_30d": 130,
+   "revenue_usd_30d": 6.44,
+   "arpd_iap_usd": 0.05,
+   "cvr_page": null,
+   "impressions": 6297,
+   "page_views": 126,
+   "page_view_rate_pct": 2.0,
+   "installs_in_funnel_window": 119,
+   "inst_per_impression_pct": 1.89,
+   "funnel_measured_pct": 53.8,
+   "ratings": {
+    "us": {
+     "count": 4,
+     "avg": 5
+    },
+    "br": {
+     "count": 155,
+     "avg": 4.66
+    },
+    "es": {
+     "count": 1,
+     "avg": 5
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 160,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [
+     "us",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": "d7356554-40d4-4b5e-abc9-b714db8483bf",
+     "name": "Headlines A/B 2026-05-10",
+     "state": "STOPPED",
+     "start_date": "2026-05-11",
+     "running": false,
+     "note": "encerrado (start 2026-05-11)"
+    },
+    {
+     "id": "05341886-0aed-4c26-9ffa-fc0fc48c03ee",
+     "name": "Nano Banana A/B 2026-06-21",
+     "state": "STOPPED",
+     "start_date": "2026-06-23",
+     "running": false,
+     "note": "encerrado (start 2026-06-23)"
+    },
+    {
+     "id": "8ab8e4bd-514d-4ba7-9ba9-dee2097aa8fd",
+     "name": "Panorama ordem das telas 2026-08-28",
+     "state": "STOPPED",
+     "start_date": "2026-08-30",
+     "running": false,
+     "note": "encerrado (start 2026-08-30)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_67 en-US trocado na versao live 41.0.0 (2026-09-01); a anterior ja tinha checksums diferentes",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_55": 5
+    },
+    "locales_total": 12,
+    "locales_com_prints": 12
+   },
+   "money_left_on_table_usd": 25.42,
+   "money_left_on_table_usd_par_conservador": 10.66,
+   "math": "inst/impressao atual 1.89% (=119 instalacoes Sales Report / 6297 impressoes, janela 2026-08-03..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +508 instalacoes/30d sobre as 130 atuais; x ARPD 0.05 US$/instalacao = US$ 25.42/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 10.66/mes. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[1491372792].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=6297 pv=126 inst_janela=119; ratings: itunes.apple.com/lookup?id=1491372792&country=us|br|es|mx -> {'us': 4, 'br': 155, 'es': 1, 'mx': 0}; reviews: GET /v1/apps/1491372792/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1491372792/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6771595616",
+   "name": "Hair Schedule: Care Routine",
+   "downloads_30d": 307,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 4044,
+   "page_views": 273,
+   "page_view_rate_pct": 6.75,
+   "installs_in_funnel_window": 210,
+   "inst_per_impression_pct": 5.19,
+   "funnel_measured_pct": 58.1,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 1,
+     "avg": 5
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 1,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": null,
+     "name": "Hair Panorama 2026-08-08",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    }
+   ],
+   "screenshots_age": "versao live 1.1.0 de 2026-08-25 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 39,
+    "locales_com_prints": 39
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 5.19% (=210 instalacoes Sales Report / 4044 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +242 instalacoes/30d sobre as 307 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[6771595616].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=4044 pv=273 inst_janela=210; ratings: itunes.apple.com/lookup?id=6771595616&country=us|br|es|mx -> {'us': 0, 'br': 1, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6771595616/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6771595616/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1508371263",
+   "name": "Controle de faltas • College",
+   "downloads_30d": 269,
+   "revenue_usd_30d": 40.04,
+   "arpd_iap_usd": 0.149,
+   "cvr_page": null,
+   "impressions": 3676,
+   "page_views": 312,
+   "page_view_rate_pct": 8.49,
+   "installs_in_funnel_window": 341,
+   "inst_per_impression_pct": 9.28,
+   "funnel_measured_pct": 57.2,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 51,
+     "avg": 4.73
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 1,
+     "avg": 5
+    },
+    "total": 52,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [
+     "us",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": 2,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "2026-08-11 2* BRA: \"Desapontado\" — O app era maravilhoso até imporem o limite de 3 disciplinas. Deveriam colocar propagandas ao invés disso, tornou o app inutilizável…",
+   "experiments": [
+    {
+     "id": null,
+     "name": "Dispensado A/B 2026-05-10",
+     "state": "STOPPED",
+     "start_date": "2026-05-11",
+     "running": false,
+     "note": "encerrado (start 2026-05-11)"
+    },
+    {
+     "id": null,
+     "name": "Panorama AI 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    },
+    {
+     "id": null,
+     "name": "teste",
+     "state": "COMPLETED",
+     "start_date": "2024-08-09",
+     "running": false,
+     "note": "encerrado (start 2024-08-09)"
+    }
+   ],
+   "screenshots_age": "versao live 1.7.0 de 2026-08-30 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_65": 5,
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 11,
+    "locales_com_prints": 11
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 9.28% (=341 instalacoes Sales Report / 3676 impressoes, janela 2026-08-03..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +0 instalacoes/30d sobre as 269 atuais; x ARPD 0.149 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. Ressalva do ARPD: receita_30d/instalacoes_30d atribui a instalacao NOVA receita que em boa parte vem da base antiga (renovacao) — o US$ e teto, nao previsao.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[1508371263].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=3676 pv=312 inst_janela=341; ratings: itunes.apple.com/lookup?id=1508371263&country=us|br|es|mx -> {'us': 0, 'br': 51, 'es': 0, 'mx': 1}; reviews: GET /v1/apps/1508371263/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=2 sem_resposta=0; experimentos: GET /v1/apps/1508371263/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6756285965",
+   "name": "Walk: Steps & Calorie Tracker",
+   "downloads_30d": 200,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": 20.4,
+   "impressions": 4565,
+   "page_views": 73,
+   "page_view_rate_pct": 1.6,
+   "installs_in_funnel_window": 148,
+   "inst_per_impression_pct": 3.24,
+   "funnel_measured_pct": 26.4,
+   "ratings": {
+    "us": {
+     "count": 1,
+     "avg": 5
+    },
+    "br": {
+     "count": 1,
+     "avg": 5
+    },
+    "es": {
+     "count": 2,
+     "avg": 5
+    },
+    "mx": {
+     "count": 1,
+     "avg": 5
+    },
+    "total": 5,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": "cf75dc6e-41eb-4501-87c1-f1ea46fb5930",
+     "name": "Headlines A/B 2026-05-12",
+     "state": "STOPPED",
+     "start_date": "2026-05-13",
+     "running": false,
+     "note": "encerrado (start 2026-05-13)"
+    },
+    {
+     "id": "c59dfed8-53ec-4645-a6a8-42d09db30113",
+     "name": "Nano Cinematic 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-07",
+     "running": false,
+     "note": "encerrado (start 2026-08-07)"
+    },
+    {
+     "id": "3e8dfa21-c699-458a-b83b-fe24a7a141d7",
+     "name": "Ordem das telas 2026-08-28",
+     "state": "APPROVED",
+     "start_date": "2026-08-28",
+     "running": true,
+     "note": "RODANDO ha 9 dias (started=None mas startDate=2026-08-28, LEARNINGS #39b); termina 2026-11-26; ~1522 impressoes/semana no app — volume baixo demais pra significancia; ocupa o unico slot de PPO do app ate la"
+    },
+    {
+     "id": "e3c85531-a359-4169-874f-a5ffb935ff10",
+     "name": "Panorama AI A/B 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    },
+    {
+     "id": "af9a6e91-346b-4665-85ae-fbe8323c3338",
+     "name": "Walk Copy A/B 2026-06-22",
+     "state": "STOPPED",
+     "start_date": "2026-06-24",
+     "running": false,
+     "note": "encerrado (start 2026-06-24)"
+    }
+   ],
+   "screenshots_age": "versao live 7.3.0 de 2026-08-07 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 41,
+    "locales_com_prints": 41
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 3.24% (=148 instalacoes Sales Report / 4565 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +373 instalacoes/30d sobre as 200 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[6756285965].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=4565 pv=73 inst_janela=148; ratings: itunes.apple.com/lookup?id=6756285965&country=us|br|es|mx -> {'us': 1, 'br': 1, 'es': 2, 'mx': 1}; reviews: GET /v1/apps/6756285965/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6756285965/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6502218501",
+   "name": "My Expenses: Personal Finances",
+   "downloads_30d": 150,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": 0.0,
+   "impressions": 5704,
+   "page_views": 81,
+   "page_view_rate_pct": 1.42,
+   "installs_in_funnel_window": 195,
+   "inst_per_impression_pct": 3.42,
+   "funnel_measured_pct": 9.2,
+   "ratings": {
+    "us": {
+     "count": 1,
+     "avg": 5
+    },
+    "br": {
+     "count": 18,
+     "avg": 4.94
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 19,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": "0090efd3-af95-4b87-9067-e47ac9ecd8be",
+     "name": "Panorama 2026-08-08",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    },
+    {
+     "id": "54cd6b97-810f-48af-a054-274103e56594",
+     "name": "Panorama 2026-08-10 v2",
+     "state": "STOPPED",
+     "start_date": "2026-08-11",
+     "running": false,
+     "note": "encerrado (start 2026-08-11)"
+    },
+    {
+     "id": "9570de85-a8a3-4601-a2c6-2a56c6936a0d",
+     "name": "Panorama v3 ordem 2026-08-28",
+     "state": "APPROVED",
+     "start_date": "2026-08-29",
+     "running": true,
+     "note": "RODANDO ha 8 dias (started=None mas startDate=2026-08-29, LEARNINGS #39b); termina 2026-11-27; ~951 impressoes/semana no app — volume baixo demais pra significancia; ocupa o unico slot de PPO do app ate la"
+    },
+    {
+     "id": "80ef219b-d119-4b31-9cfa-f5cb2222ee5f",
+     "name": "teste2",
+     "state": "COMPLETED",
+     "start_date": "2025-11-05",
+     "running": false,
+     "note": "encerrado (start 2025-11-05)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_67 en-US IDENTICO desde a versao 45.2.0 (2026-05-29) — live e 45.3.1 (2026-08-16)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_65": 5,
+     "APP_IPHONE_55": 3
+    },
+    "locales_total": 29,
+    "locales_com_prints": 4
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 3.42% (=195 instalacoes Sales Report / 5704 impressoes, janela 2026-07-06..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +257 instalacoes/30d sobre as 150 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "media",
+   "evidence": "funil: dashboard.json>apps[6502218501].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=5704 pv=81 inst_janela=195; ratings: itunes.apple.com/lookup?id=6502218501&country=us|br|es|mx -> {'us': 1, 'br': 18, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6502218501/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6502218501/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6758740138",
+   "name": "Sunrise Alarm Clock: Wake Up",
+   "downloads_30d": 131,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": 0.0,
+   "impressions": 1280,
+   "page_views": 11,
+   "page_view_rate_pct": 0.86,
+   "installs_in_funnel_window": 81,
+   "inst_per_impression_pct": 6.33,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 1,
+     "avg": 5
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 1,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": "295b96b8-1777-4d45-a464-c4d24308e531",
+     "name": "Soninho Bold Print 2026-06-26",
+     "state": "STOPPED",
+     "start_date": "2026-06-27",
+     "running": false,
+     "note": "encerrado (start 2026-06-27)"
+    },
+    {
+     "id": "1ce3cdfa-a1cd-4f7e-9cab-5e30278415e5",
+     "name": "Sunrise Code Prints v2 2026-09-02",
+     "state": "APPROVED",
+     "start_date": "2026-09-02",
+     "running": true,
+     "note": "RODANDO ha 4 dias (started=None mas startDate=2026-09-02, LEARNINGS #39b); termina 2026-12-01; ~427 impressoes/semana no app — volume baixo demais pra significancia; ocupa o unico slot de PPO do app ate la"
+    }
+   ],
+   "screenshots_age": "unknown — nao varrido",
+   "screenshot_sets": null,
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 6.33% (=81 instalacoes Sales Report / 1280 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +61 instalacoes/30d sobre as 131 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6758740138].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=1280 pv=11 inst_janela=81; ratings: itunes.apple.com/lookup?id=6758740138&country=us|br|es|mx -> {'us': 0, 'br': 1, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6758740138/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6758740138/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1502280869",
+   "name": "Neon Glow Draw: Light Painting",
+   "downloads_30d": 82,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 6106,
+   "page_views": 11,
+   "page_view_rate_pct": 0.18,
+   "installs_in_funnel_window": 78,
+   "inst_per_impression_pct": 1.28,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 14,
+     "avg": 4.43
+    },
+    "br": {
+     "count": 6,
+     "avg": 5
+    },
+    "es": {
+     "count": 1,
+     "avg": 1
+    },
+    "mx": {
+     "count": 1,
+     "avg": 5
+    },
+    "total": 22,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": 4,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "2024-08-25 1* USA: \"Camera won’t turn around\" — Even after I paid the $1.99 I still had no luck switching to front camera what a shame now I’m out of $2 😡",
+   "experiments": [
+    {
+     "id": null,
+     "name": "Magic Art Headlines 2026-05-11",
+     "state": "STOPPED",
+     "start_date": "2026-05-12",
+     "running": false,
+     "note": "encerrado (start 2026-05-12)"
+    },
+    {
+     "id": null,
+     "name": "Nano Real Scenes 2026-08-06",
+     "state": "STOPPED",
+     "start_date": "2026-08-11",
+     "running": false,
+     "note": "encerrado (start 2026-08-11)"
+    },
+    {
+     "id": null,
+     "name": "Neon AR Redesign 2026-06-17",
+     "state": "STOPPED",
+     "start_date": "2026-06-20",
+     "running": false,
+     "note": "encerrado (start 2026-06-20)"
+    }
+   ],
+   "screenshots_age": "set APP_IPHONE_67 en-US IDENTICO desde a versao 27 (2026-09-03) — live e 28 (2026-09-04)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 39,
+    "locales_com_prints": 8
+   },
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "inst/impressao atual 1.28% (=78 instalacoes Sales Report / 6106 impressoes, janela 2026-08-03..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +512 instalacoes/30d sobre as 82 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD desconhecido: IAP=0 mas o app SERVE AdMob (LEARNINGS #80) e o Sales Report nao enxerga anuncio — dinheiro perdido nao calculavel",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1502280869].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=6106 pv=11 inst_janela=78; ratings: itunes.apple.com/lookup?id=1502280869&country=us|br|es|mx -> {'us': 14, 'br': 6, 'es': 1, 'mx': 1}; reviews: GET /v1/apps/1502280869/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=4 sem_resposta=0; experimentos: GET /v1/apps/1502280869/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6771598930",
+   "name": "Philos: Philosophy & Stoicism",
+   "downloads_30d": 70,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 1459,
+   "page_views": 30,
+   "page_view_rate_pct": 2.06,
+   "installs_in_funnel_window": 45,
+   "inst_per_impression_pct": 3.08,
+   "funnel_measured_pct": 11.1,
+   "ratings": {
+    "us": {
+     "count": 6,
+     "avg": 5
+    },
+    "br": {
+     "count": 0,
+     "avg": 0
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 6,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 1.0.3 de 2026-09-02 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 4,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 3.08% (=45 instalacoes Sales Report / 1459 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +141 instalacoes/30d sobre as 70 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6771598930].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=1459 pv=30 inst_janela=45; ratings: itunes.apple.com/lookup?id=6771598930&country=us|br|es|mx -> {'us': 6, 'br': 0, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6771598930/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6771598930/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1486427751",
+   "name": "Truco Marcador • Conta Tento",
+   "downloads_30d": 66,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 1482,
+   "page_views": 12,
+   "page_view_rate_pct": 0.81,
+   "installs_in_funnel_window": 42,
+   "inst_per_impression_pct": 2.83,
+   "funnel_measured_pct": 14.3,
+   "ratings": {
+    "us": {
+     "count": 9,
+     "avg": 4.78
+    },
+    "br": {
+     "count": 448,
+     "avg": 4.73
+    },
+    "es": {
+     "count": 2,
+     "avg": 5
+    },
+    "mx": {
+     "count": 1,
+     "avg": 5
+    },
+    "total": 460,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [
+     "us",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 51 de 2026-09-03 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5,
+     "APP_IPHONE_65": 5,
+     "APP_IPHONE_55": 5
+    },
+    "locales_total": 7,
+    "locales_com_prints": 7
+   },
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "inst/impressao atual 2.83% (=42 instalacoes Sales Report / 1482 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +150 instalacoes/30d sobre as 66 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD desconhecido: IAP=0 mas o app SERVE AdMob (LEARNINGS #80) e o Sales Report nao enxerga anuncio — dinheiro perdido nao calculavel",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1486427751].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=1482 pv=12 inst_janela=42; ratings: itunes.apple.com/lookup?id=1486427751&country=us|br|es|mx -> {'us': 9, 'br': 448, 'es': 2, 'mx': 1}; reviews: GET /v1/apps/1486427751/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1486427751/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6761505951",
+   "name": "Bible Pills: Verses & Prayer",
+   "downloads_30d": 25,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 2553,
+   "page_views": 5,
+   "page_view_rate_pct": 0.2,
+   "installs_in_funnel_window": 20,
+   "inst_per_impression_pct": 0.78,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 1,
+     "avg": 5
+    },
+    "br": {
+     "count": 2,
+     "avg": 5
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 3,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": null,
+     "name": "Bible Panorama 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    },
+    {
+     "id": null,
+     "name": "Headlines A/B 2026-05-14",
+     "state": "STOPPED",
+     "start_date": "2026-05-15",
+     "running": false,
+     "note": "encerrado (start 2026-05-15)"
+    }
+   ],
+   "screenshots_age": "versao live 1.2.0 de 2026-05-20 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 4,
+    "locales_com_prints": 4
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 0.78% (=20 instalacoes Sales Report / 2553 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +272 instalacoes/30d sobre as 25 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6761505951].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=2553 pv=5 inst_janela=20; ratings: itunes.apple.com/lookup?id=6761505951&country=us|br|es|mx -> {'us': 1, 'br': 2, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6761505951/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6761505951/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6772795048",
+   "name": "Peptide Tracker: GLP-1 & Dose",
+   "downloads_30d": 24,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 434,
+   "page_views": 0,
+   "page_view_rate_pct": 0.0,
+   "installs_in_funnel_window": 15,
+   "inst_per_impression_pct": 3.46,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 0,
+     "avg": 0
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 0,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 1.1.3 de 2026-09-04 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 10,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 3.46% (=15 instalacoes Sales Report / 434 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +40 instalacoes/30d sobre as 24 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$. AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6772795048].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=434 pv=0 inst_janela=15; ratings: itunes.apple.com/lookup?id=6772795048&country=us|br|es|mx -> {'us': 0, 'br': 0, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6772795048/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6772795048/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6759974641",
+   "name": "English for Devs - Devlingo",
+   "downloads_30d": 23,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 231,
+   "page_views": 6,
+   "page_view_rate_pct": 2.6,
+   "installs_in_funnel_window": 17,
+   "inst_per_impression_pct": 7.36,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 2,
+     "avg": 5
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 2,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 1
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [
+    {
+     "id": null,
+     "name": "Devlingo Headlines 2026-05-14",
+     "state": "STOPPED",
+     "start_date": "2026-05-14",
+     "running": false,
+     "note": "encerrado (start 2026-05-14)"
+    },
+    {
+     "id": null,
+     "name": "Panorama A/B 2026-08-07",
+     "state": "STOPPED",
+     "start_date": "2026-08-09",
+     "running": false,
+     "note": "encerrado (start 2026-08-09)"
+    },
+    {
+     "id": null,
+     "name": "Solid BG A/B 2026-06-27 2026-06-27",
+     "state": "STOPPED",
+     "start_date": "2026-07-01",
+     "running": false,
+     "note": "encerrado (start 2026-07-01)"
+    }
+   ],
+   "screenshots_age": "versao live 1.9.0 de 2026-09-02 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 7,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 7.36% (=17 instalacoes Sales Report / 231 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +6 instalacoes/30d sobre as 23 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$. AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6759974641].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=231 pv=6 inst_janela=17; ratings: itunes.apple.com/lookup?id=6759974641&country=us|br|es|mx -> {'us': 0, 'br': 2, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6759974641/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6759974641/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1479692515",
+   "name": "Rocket Pocket: Aim & Launch",
+   "downloads_30d": 11,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 1357,
+   "page_views": 7,
+   "page_view_rate_pct": 0.52,
+   "installs_in_funnel_window": 10,
+   "inst_per_impression_pct": 0.74,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 78,
+     "avg": 4.27
+    },
+    "es": {
+     "count": 1,
+     "avg": 5
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 79,
+    "below_25_gate": false,
+    "lojas_abaixo_de_25": [
+     "us",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 12.0.1 de 2026-09-02 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_55": 2,
+     "APP_IPHONE_67": 3
+    },
+    "locales_total": 8,
+    "locales_com_prints": 8
+   },
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "inst/impressao atual 0.74% (=10 instalacoes Sales Report / 1357 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +127 instalacoes/30d sobre as 11 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD desconhecido: IAP=0 mas o app SERVE AdMob (LEARNINGS #80) e o Sales Report nao enxerga anuncio — dinheiro perdido nao calculavel AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1479692515].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=1357 pv=7 inst_janela=10; ratings: itunes.apple.com/lookup?id=1479692515&country=us|br|es|mx -> {'us': 0, 'br': 78, 'es': 1, 'mx': 0}; reviews: GET /v1/apps/1479692515/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1479692515/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6767075189",
+   "name": "SafeDoc: Document Vault & PDF",
+   "downloads_30d": 6,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 571,
+   "page_views": 5,
+   "page_view_rate_pct": 0.88,
+   "installs_in_funnel_window": 5,
+   "inst_per_impression_pct": 0.88,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 0,
+     "avg": 0
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 0,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 1.0 de 2026-05-06 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_67": 4
+    },
+    "locales_total": 9,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 0.88% (=5 instalacoes Sales Report / 571 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +57 instalacoes/30d sobre as 6 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$. AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6767075189].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=571 pv=5 inst_janela=5; ratings: itunes.apple.com/lookup?id=6767075189&country=us|br|es|mx -> {'us': 0, 'br': 0, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/6767075189/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6767075189/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1512222153",
+   "name": "My Way - Saúde e Alimentação",
+   "downloads_30d": 5,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 1288,
+   "page_views": 15,
+   "page_view_rate_pct": 1.16,
+   "installs_in_funnel_window": 4,
+   "inst_per_impression_pct": 0.31,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 0,
+     "avg": 0
+    },
+    "br": {
+     "count": 3,
+     "avg": 5
+    },
+    "es": {
+     "count": 0,
+     "avg": 0
+    },
+    "mx": {
+     "count": 0,
+     "avg": 0
+    },
+    "total": 3,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 1.0.3 de 2022-04-05 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_55": 4,
+     "APP_IPHONE_65": 5
+    },
+    "locales_total": 2,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 0.31% (=4 instalacoes Sales Report / 1288 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +145 instalacoes/30d sobre as 5 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$. AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1512222153].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=1288 pv=15 inst_janela=4; ratings: itunes.apple.com/lookup?id=1512222153&country=us|br|es|mx -> {'us': 0, 'br': 3, 'es': 0, 'mx': 0}; reviews: GET /v1/apps/1512222153/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1512222153/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1510650044",
+   "name": "Cronos • Task and Time Manager",
+   "downloads_30d": 5,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": 344,
+   "page_views": 0,
+   "page_view_rate_pct": 0.0,
+   "installs_in_funnel_window": 4,
+   "inst_per_impression_pct": 1.16,
+   "funnel_measured_pct": 0.0,
+   "ratings": {
+    "us": {
+     "count": 6,
+     "avg": 5
+    },
+    "br": {
+     "count": 15,
+     "avg": 4.73
+    },
+    "es": {
+     "count": 4,
+     "avg": 3
+    },
+    "mx": {
+     "count": 9,
+     "avg": 4.44
+    },
+    "total": 34,
+    "below_25_gate": true,
+    "lojas_abaixo_de_25": [
+     "us",
+     "br",
+     "es",
+     "mx"
+    ],
+    "delta_7d": 0
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "versao live 1.2.0 de 2026-09-02 (walkback de checksum nao feito — idade dos PNGs e no maximo essa)",
+   "screenshot_sets": {
+    "locale_amostra": "en-US",
+    "iphone_sets": {
+     "APP_IPHONE_55": 5,
+     "APP_IPHONE_67": 5
+    },
+    "locales_total": 3,
+    "locales_com_prints": null
+   },
+   "money_left_on_table_usd": 0.0,
+   "money_left_on_table_usd_par_conservador": 0.0,
+   "math": "inst/impressao atual 1.16% (=4 instalacoes Sales Report / 344 impressoes, janela 2026-08-10..2026-08-30). No par-teto 9.28% [College (341 inst / 3.676 imp)] seriam +35 instalacoes/30d sobre as 5 atuais; x ARPD 0.0 US$/instalacao = US$ 0.0/mes. No par conservador 4.99% [Calc+ (2.699 inst / 54.049 imp, o melhor acima de 20k impressoes)] = US$ 0.0/mes. ARPD IAP = 0: o ganho seria em INSTALACOES, nao em US$. AMOSTRA BAIXA (n<20 instalacoes ou <1000 impressoes) — direcional, nao conclusivo.",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1510650044].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=344 pv=0 inst_janela=4; ratings: itunes.apple.com/lookup?id=1510650044&country=us|br|es|mx -> {'us': 6, 'br': 15, 'es': 4, 'mx': 9}; reviews: GET /v1/apps/1510650044/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1510650044/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1501575436",
+   "name": "Libras 3D",
+   "downloads_30d": 0,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": null,
+   "page_views": null,
+   "page_view_rate_pct": null,
+   "installs_in_funnel_window": null,
+   "inst_per_impression_pct": null,
+   "funnel_measured_pct": null,
+   "ratings": {
+    "us": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "br": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "es": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "mx": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "total": null,
+    "below_25_gate": "unknown",
+    "lojas_abaixo_de_25": [],
+    "delta_7d": null
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "unknown — nao varrido",
+   "screenshot_sets": null,
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "sem funil na ASC Analytics — impressoes desconhecidas, conta impossivel",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1501575436].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=None pv=None inst_janela=None; ratings: itunes.apple.com/lookup?id=1501575436&country=us|br|es|mx -> {'us': None, 'br': None, 'es': None, 'mx': None}; reviews: GET /v1/apps/1501575436/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1501575436/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "6793906680",
+   "name": "Who Touched My Phone: WTMP",
+   "downloads_30d": 0,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": null,
+   "page_views": null,
+   "page_view_rate_pct": null,
+   "installs_in_funnel_window": null,
+   "inst_per_impression_pct": null,
+   "funnel_measured_pct": null,
+   "ratings": {
+    "us": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "br": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "es": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "mx": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "total": null,
+    "below_25_gate": "unknown",
+    "lojas_abaixo_de_25": [],
+    "delta_7d": null
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "unknown — nao varrido",
+   "screenshot_sets": null,
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "sem funil na ASC Analytics — impressoes desconhecidas, conta impossivel",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[6793906680].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=None pv=None inst_janela=None; ratings: itunes.apple.com/lookup?id=6793906680&country=us|br|es|mx -> {'us': None, 'br': None, 'es': None, 'mx': None}; reviews: GET /v1/apps/6793906680/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/6793906680/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  },
+  {
+   "app_id": "1524664358",
+   "name": "Medic! App",
+   "downloads_30d": 0,
+   "revenue_usd_30d": 0.0,
+   "arpd_iap_usd": 0.0,
+   "cvr_page": null,
+   "impressions": null,
+   "page_views": null,
+   "page_view_rate_pct": null,
+   "installs_in_funnel_window": null,
+   "inst_per_impression_pct": null,
+   "funnel_measured_pct": null,
+   "ratings": {
+    "us": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "br": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "es": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "mx": {
+     "count": null,
+     "avg": null,
+     "error": "resultCount=0 (não disponível nessa loja)"
+    },
+    "total": null,
+    "below_25_gate": "unknown",
+    "lojas_abaixo_de_25": [],
+    "delta_7d": null
+   },
+   "negative_reviews_1_2_total": null,
+   "negative_reviews_unanswered": 0,
+   "worst_review": "nenhuma avaliacao 1-2* na loja",
+   "experiments": [],
+   "screenshots_age": "unknown — nao varrido",
+   "screenshot_sets": null,
+   "money_left_on_table_usd": null,
+   "money_left_on_table_usd_par_conservador": null,
+   "math": "sem funil na ASC Analytics — impressoes desconhecidas, conta impossivel",
+   "priority": "baixa",
+   "evidence": "funil: dashboard.json>apps[1524664358].funnel (ASC App Analytics r14+r4, piso de privacidade 5) imp=None pv=None inst_janela=None; ratings: itunes.apple.com/lookup?id=1524664358&country=us|br|es|mx -> {'us': None, 'br': None, 'es': None, 'mx': None}; reviews: GET /v1/apps/1524664358/customerReviews?filter[rating]=1,2&limit=200&include=response -> total=None sem_resposta=0; experimentos: GET /v1/apps/1524664358/appStoreVersionExperimentsV2; prints: GET /v1/appStoreVersions/{live IOS}/appStoreVersionLocalizations -> appScreenshotSets"
+  }
+ ]
+}

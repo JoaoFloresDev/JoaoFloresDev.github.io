@@ -1,0 +1,22 @@
+{
+  "trackId": 1622398024,
+  "trackName": "Despesas do Casal · Balance",
+  "sellerName": "WELLCODE SRL SEMPLIFICATA",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.42307,
+  "userRatingCount": 26,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2022-07-04T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-30T23:21:42Z",
+  "version": "4.2.0",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/despesas-do-casal-balance/id1622398024?uo=4",
+  "bundleId": "it.wellcode.balance",
+  "subtitle": "Orçamento e gastos familiares",
+  "screenshotCount": 23
+}

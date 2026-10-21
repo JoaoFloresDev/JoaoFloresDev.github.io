@@ -1,0 +1,4286 @@
+{
+ "generated_at": "2026-10-14T12:29:41",
+ "pedido": "João 14/10/2026 — ASO se mede por impressão, não por download",
+ "metodo": {
+  "primaria": "impressões de busca/dia nos territórios cujo campo mudou, antes × depois (até 28 d), contra mediana de apps quietos quando a API cobre as duas janelas",
+  "fontes": [
+   "r14 Standard DAILY via API (06/09-12/10, todos os apps) — cache em _GambitStudio/cache/analytics_r14/",
+   "arquivos crus salvos nas iterações (Meus Gastos r14 até 23/08; Hair r15 16/08-10/09; iPhotos r15 16-24/08; BLW r15 até 17/08; Sunrise r15 01/08-27/09)",
+   "r15 semanal: antes da auditoria de 27/09, depois da API (31/08-28/09)",
+   "instalações: Sales Report Product Type 1* (cache _GambitStudio/cache/sales, desde 30/06)",
+   "posições: Astro get_app_keywords hoje vs snapshot de pesquisa da iteração"
+  ],
+  "banda_de_ruido": "|p80| do desvio de 69 janelas de apps quietos (14 d × 14 d, set/2026) = 26 pp (p10 −21, p90 +35)",
+  "limites": [
+   "instâncias do App Analytics expiram em ~35 dias: impressão diária só existe de 06/09 em diante, o resto vem de arquivo salvo",
+   "r15 Detailed corta combinação < 5 eventos: nível diferente do r14, só se compara r15 com r15"
+  ]
+ },
+ "iteracoes_medidas": [
+  {
+   "id": "sunrise_iter01",
+   "app": "Sunrise Alarm Clock: Wake Up",
+   "app_id": "6758740138",
+   "iteration": "2026-09-27_iter-01-text-en-US-keywords",
+   "carrier": "1.4.0",
+   "live_at_real": "2026-10-01",
+   "fields": "keywords en-US/pt-BR/es-ES/es-MX",
+   "targets": [
+    "US",
+    "BR",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 76.7,
+    "depois_dia": 45.1,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": -41.2
+   },
+   "imp_outros": {
+    "antes_dia": 131.2,
+    "depois_dia": 135.5,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": 3.3
+   },
+   "imp_total": {
+    "antes_dia": 208.0,
+    "depois_dia": 180.6,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": -13.1
+   },
+   "controle": {
+    "apps": [
+     [
+      "Cloak: Hide & Lock Apps Vault",
+      20.5
+     ],
+     [
+      "Walk: Steps & Calorie Tracker",
+      24.4
+     ],
+     [
+      "Bible Pills: Verses & Prayer",
+      -8.6
+     ],
+     [
+      "Rocket Pocket: Aim & Launch",
+      -0.9
+     ],
+     [
+      "SafeDoc: Document Vault & PDF",
+      -39.3
+     ],
+     [
+      "BLW Baby Led Weaning Tracker",
+      3.7
+     ],
+     [
+      "My Way - Saúde e Alimentação",
+      -25.2
+     ]
+    ],
+    "mediana_delta_pct": -0.9,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-09-03",
+     "2026-09-30"
+    ],
+    "janela_depois": [
+     "2026-10-02",
+     "2026-10-13"
+    ],
+    "alvo_antes": 50,
+    "alvo_depois": 16,
+    "alvo_dia": [
+     1.79,
+     1.33
+    ],
+    "total_antes": 217,
+    "total_depois": 76,
+    "total_dia": [
+     7.75,
+     6.33
+    ],
+    "rr_alvo_ic95": [
+     0.43,
+     1.31
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO (preliminar D12)",
+   "por_que": "Impressão de busca no alvo −41% (US −53%, BR −41%) contra −3% da mediana de 11 apps quietos; top-30 US 8→4 e MX 13→7. Não é isolável do texto: a mesma 1.4.0 trouxe prints novos em 39 idiomas + paywall/assinaturas (quarantine_override), o BR caiu −41% com o campo pt-BR só GANHANDO o token 'anti', e o de-DE intocado também perdeu posição. O en-US tirou 'routine' e 'tracker'. Veredito formal do script no D14 (16/10).",
+   "posicoes": {
+    "us": {
+     "n": 68,
+     "top10": [
+      2,
+      1
+     ],
+     "top30": [
+      8,
+      4
+     ],
+     "pop_top10": [
+      10,
+      5
+     ],
+     "lost": [
+      [
+       "sunrise clock",
+       7,
+       22,
+       5
+      ],
+      [
+       "heavy sleepers",
+       15,
+       1000,
+       5
+      ],
+      [
+       "wake up light",
+       18,
+       121,
+       5
+      ],
+      [
+       "heavy sleeper",
+       24,
+       87,
+       5
+      ],
+      [
+       "gentle wake up",
+       27,
+       78,
+       5
+      ],
+      [
+       "alarm clock for heavy sleepers",
+       30,
+       78,
+       6
+      ]
+     ],
+     "won": [
+      [
+       "sunrise lamp",
+       36,
+       16,
+       5
+      ]
+     ]
+    },
+    "br": {
+     "n": 68,
+     "top10": [
+      4,
+      4
+     ],
+     "top30": [
+      12,
+      11
+     ],
+     "pop_top10": [
+      41,
+      41
+     ],
+     "lost": [
+      [
+       "relogio despertador",
+       20,
+       43,
+       58
+      ],
+      [
+       "despertador sono pesado",
+       30,
+       47,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "anti soneca",
+       1000,
+       3,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 62,
+     "top10": [
+      6,
+      6
+     ],
+     "top30": [
+      13,
+      10
+     ],
+     "pop_top10": [
+      52,
+      52
+     ],
+     "lost": [
+      [
+       "alarma con mision",
+       17,
+       31,
+       5
+      ],
+      [
+       "despertador con mision",
+       18,
+       32,
+       5
+      ],
+      [
+       "alarma con luz",
+       20,
+       1000,
+       5
+      ]
+     ],
+     "won": []
+    },
+    "mx": {
+     "n": 62,
+     "top10": [
+      1,
+      0
+     ],
+     "top30": [
+      13,
+      7
+     ],
+     "pop_top10": [
+      5,
+      0
+     ],
+     "lost": [
+      [
+       "despertar temprano",
+       11,
+       26,
+       5
+      ],
+      [
+       "sunrise",
+       11,
+       24,
+       5
+      ],
+      [
+       "alarma sueño pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "alarma sueno pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "despertador sueño pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "despertador amanecer",
+       12,
+       23,
+       5
+      ],
+      [
+       "alarma amanecer",
+       18,
+       31,
+       5
+      ],
+      [
+       "sunrise alarm",
+       20,
+       48,
+       5
+      ],
+      [
+       "despertador con mision",
+       21,
+       42,
+       5
+      ],
+      [
+       "reloj despertador fuerte",
+       24,
+       44,
+       5
+      ],
+      [
+       "alarma con mision",
+       25,
+       47,
+       5
+      ],
+      [
+       "despertador dormilon",
+       26,
+       57,
+       5
+      ]
+     ],
+     "won": []
+    },
+    "fr": {
+     "n": 105,
+     "top10": [
+      11,
+      15
+     ],
+     "top30": [
+      19,
+      23
+     ],
+     "pop_top10": [
+      77,
+      97
+     ],
+     "lost": [],
+     "won": [
+      [
+       "sunrise alarm",
+       26,
+       15,
+       9
+      ],
+      [
+       "réveil léger",
+       1000,
+       3,
+       5
+      ],
+      [
+       "réveil sommeil léger",
+       1000,
+       2,
+       5
+      ],
+      [
+       "sommeil léger",
+       1000,
+       4,
+       5
+      ],
+      [
+       "réveil défis",
+       1000,
+       19,
+       5
+      ]
+     ]
+    },
+    "de": {
+     "n": 88,
+     "top10": [
+      8,
+      7
+     ],
+     "top30": [
+      23,
+      18
+     ],
+     "pop_top10": [
+      62,
+      35
+     ],
+     "lost": [
+      [
+       "tiefschlafer",
+       13,
+       28,
+       5
+      ],
+      [
+       "sunrise alarm",
+       14,
+       55,
+       9
+      ],
+      [
+       "sunrise",
+       18,
+       1000,
+       36
+      ],
+      [
+       "wecker für tiefschläfer",
+       23,
+       37,
+       5
+      ],
+      [
+       "wake up light",
+       24,
+       85,
+       5
+      ],
+      [
+       "wecker licht",
+       29,
+       42,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "licht wecker",
+       28,
+       12,
+       5
+      ],
+      [
+       "lichtwecker",
+       54,
+       13,
+       6
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "sunrise_iter02",
+   "app": "Sunrise Alarm Clock: Wake Up",
+   "app_id": "6758740138",
+   "iteration": "2026-09-28_iter-02-text-fr-FR-keywords",
+   "carrier": "1.4.0",
+   "live_at_real": "2026-10-01",
+   "fields": "keywords fr-FR (de-DE controle intocado)",
+   "targets": [
+    "FR"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 7.8,
+    "depois_dia": 5.9,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": -23.9
+   },
+   "imp_outros": {
+    "antes_dia": 200.2,
+    "depois_dia": 174.7,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": -12.7
+   },
+   "imp_total": {
+    "antes_dia": 208.0,
+    "depois_dia": 180.6,
+    "dias_antes": 25,
+    "dias_depois": 11,
+    "delta_pct": -13.1
+   },
+   "controle": {
+    "apps": [
+     [
+      "Cloak: Hide & Lock Apps Vault",
+      20.5
+     ],
+     [
+      "Walk: Steps & Calorie Tracker",
+      24.4
+     ],
+     [
+      "Bible Pills: Verses & Prayer",
+      -8.6
+     ],
+     [
+      "Rocket Pocket: Aim & Launch",
+      -0.9
+     ],
+     [
+      "SafeDoc: Document Vault & PDF",
+      -39.3
+     ],
+     [
+      "BLW Baby Led Weaning Tracker",
+      3.7
+     ],
+     [
+      "My Way - Saúde e Alimentação",
+      -25.2
+     ]
+    ],
+    "mediana_delta_pct": -0.9,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-09-03",
+     "2026-09-30"
+    ],
+    "janela_depois": [
+     "2026-10-02",
+     "2026-10-13"
+    ],
+    "alvo_antes": 31,
+    "alvo_depois": 2,
+    "alvo_dia": [
+     1.11,
+     0.17
+    ],
+    "total_antes": 217,
+    "total_depois": 76,
+    "total_dia": [
+     7.75,
+     6.33
+    ],
+    "rr_alvo_ic95": [
+     0.04,
+     0.63
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO (não moveu)",
+   "por_que": "Ganhou 4 composições no top 10 FR (réveil sommeil léger #2, réveil léger #3, sommeil léger #4), TODAS pop 5; impressão FR 7,8 → 5,9/dia (−24%, volume pequeno). Posição sem volume = impressão zero.",
+   "posicoes": {
+    "us": {
+     "n": 68,
+     "top10": [
+      2,
+      1
+     ],
+     "top30": [
+      8,
+      4
+     ],
+     "pop_top10": [
+      10,
+      5
+     ],
+     "lost": [
+      [
+       "sunrise clock",
+       7,
+       22,
+       5
+      ],
+      [
+       "heavy sleepers",
+       15,
+       1000,
+       5
+      ],
+      [
+       "wake up light",
+       18,
+       121,
+       5
+      ],
+      [
+       "heavy sleeper",
+       24,
+       87,
+       5
+      ],
+      [
+       "gentle wake up",
+       27,
+       78,
+       5
+      ],
+      [
+       "alarm clock for heavy sleepers",
+       30,
+       78,
+       6
+      ]
+     ],
+     "won": [
+      [
+       "sunrise lamp",
+       36,
+       16,
+       5
+      ]
+     ]
+    },
+    "br": {
+     "n": 68,
+     "top10": [
+      4,
+      4
+     ],
+     "top30": [
+      12,
+      11
+     ],
+     "pop_top10": [
+      41,
+      41
+     ],
+     "lost": [
+      [
+       "relogio despertador",
+       20,
+       43,
+       58
+      ],
+      [
+       "despertador sono pesado",
+       30,
+       47,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "anti soneca",
+       1000,
+       3,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 62,
+     "top10": [
+      6,
+      6
+     ],
+     "top30": [
+      13,
+      10
+     ],
+     "pop_top10": [
+      52,
+      52
+     ],
+     "lost": [
+      [
+       "alarma con mision",
+       17,
+       31,
+       5
+      ],
+      [
+       "despertador con mision",
+       18,
+       32,
+       5
+      ],
+      [
+       "alarma con luz",
+       20,
+       1000,
+       5
+      ]
+     ],
+     "won": []
+    },
+    "mx": {
+     "n": 62,
+     "top10": [
+      1,
+      0
+     ],
+     "top30": [
+      13,
+      7
+     ],
+     "pop_top10": [
+      5,
+      0
+     ],
+     "lost": [
+      [
+       "despertar temprano",
+       11,
+       26,
+       5
+      ],
+      [
+       "sunrise",
+       11,
+       24,
+       5
+      ],
+      [
+       "alarma sueño pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "alarma sueno pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "despertador sueño pesado",
+       11,
+       24,
+       5
+      ],
+      [
+       "despertador amanecer",
+       12,
+       23,
+       5
+      ],
+      [
+       "alarma amanecer",
+       18,
+       31,
+       5
+      ],
+      [
+       "sunrise alarm",
+       20,
+       48,
+       5
+      ],
+      [
+       "despertador con mision",
+       21,
+       42,
+       5
+      ],
+      [
+       "reloj despertador fuerte",
+       24,
+       44,
+       5
+      ],
+      [
+       "alarma con mision",
+       25,
+       47,
+       5
+      ],
+      [
+       "despertador dormilon",
+       26,
+       57,
+       5
+      ]
+     ],
+     "won": []
+    },
+    "fr": {
+     "n": 105,
+     "top10": [
+      11,
+      15
+     ],
+     "top30": [
+      19,
+      23
+     ],
+     "pop_top10": [
+      77,
+      97
+     ],
+     "lost": [],
+     "won": [
+      [
+       "sunrise alarm",
+       26,
+       15,
+       9
+      ],
+      [
+       "réveil léger",
+       1000,
+       3,
+       5
+      ],
+      [
+       "réveil sommeil léger",
+       1000,
+       2,
+       5
+      ],
+      [
+       "sommeil léger",
+       1000,
+       4,
+       5
+      ],
+      [
+       "réveil défis",
+       1000,
+       19,
+       5
+      ]
+     ]
+    },
+    "de": {
+     "n": 88,
+     "top10": [
+      8,
+      7
+     ],
+     "top30": [
+      23,
+      18
+     ],
+     "pop_top10": [
+      62,
+      35
+     ],
+     "lost": [
+      [
+       "tiefschlafer",
+       13,
+       28,
+       5
+      ],
+      [
+       "sunrise alarm",
+       14,
+       55,
+       9
+      ],
+      [
+       "sunrise",
+       18,
+       1000,
+       36
+      ],
+      [
+       "wecker für tiefschläfer",
+       23,
+       37,
+       5
+      ],
+      [
+       "wake up light",
+       24,
+       85,
+       5
+      ],
+      [
+       "wecker licht",
+       29,
+       42,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "licht wecker",
+       28,
+       12,
+       5
+      ],
+      [
+       "lichtwecker",
+       54,
+       13,
+       6
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "college_iter02",
+   "app": "Controle de faltas e presença",
+   "app_id": "1508371263",
+   "iteration": "2026-09-11_iter-02-name-pt-BR-en-US",
+   "carrier": "1.8.0",
+   "live_at_real": "2026-09-13",
+   "fields": "name + keywords pt-BR/en-US",
+   "targets": [
+    "BR",
+    "US"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 44.1,
+    "depois_dia": 53.1,
+    "dias_antes": 7,
+    "dias_depois": 28,
+    "delta_pct": 20.4
+   },
+   "imp_outros": {
+    "antes_dia": 68.6,
+    "depois_dia": 91.0,
+    "dias_antes": 7,
+    "dias_depois": 28,
+    "delta_pct": 32.7
+   },
+   "imp_total": {
+    "antes_dia": 112.7,
+    "depois_dia": 144.1,
+    "dias_antes": 7,
+    "dias_depois": 28,
+    "delta_pct": 27.9
+   },
+   "controle": {
+    "apps": [
+     [
+      "Cloak: Hide & Lock Apps Vault",
+      8.0
+     ],
+     [
+      "Bible Pills: Verses & Prayer",
+      6.5
+     ],
+     [
+      "SafeDoc: Document Vault & PDF",
+      -31.6
+     ],
+     [
+      "My Way - Saúde e Alimentação",
+      -10.7
+     ]
+    ],
+    "mediana_delta_pct": -2.1,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-16",
+     "2026-09-12"
+    ],
+    "janela_depois": [
+     "2026-09-14",
+     "2026-10-11"
+    ],
+    "alvo_antes": 136,
+    "alvo_depois": 108,
+    "alvo_dia": [
+     4.86,
+     3.86
+    ],
+    "total_antes": 191,
+    "total_depois": 245,
+    "total_dia": [
+     6.82,
+     8.75
+    ],
+    "rr_alvo_ic95": [
+     0.62,
+     1.02
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "INCONCLUSIVO",
+   "por_que": "Só 7 dias de 'antes' na API; r14 alvo +20% vs controle −2% (dentro da banda de ±25 pp), r15 semanal 625 → 626-677 (+4%). Alvos de posição não bateram: 'controle de presença' #4→#7 (alvo top 2), 'attendance tracker' fora do top 250 (alvo top 20), 'college' #2→#4. Name trocado nos dois locales; 1.8.0 (premium vitalício) no mesmo build.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 761,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      638,
+      595
+     ],
+     [
+      "09-07",
+      625,
+      559
+     ],
+     [
+      "09-14",
+      626,
+      611
+     ],
+     [
+      "09-21",
+      633,
+      625
+     ],
+     [
+      "09-28",
+      677,
+      677
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   }
+  },
+  {
+   "id": "hair_iter01",
+   "app": "Hair Schedule: Care Routine",
+   "app_id": "6771595616",
+   "iteration": "2026-08-25_iter-01-text-en-US-keywords",
+   "carrier": "1.1.0",
+   "live_at_real": "2026-08-31",
+   "fields": "keywords en/pt/es (manutenção, nenhum token removido)",
+   "targets": [
+    "US",
+    "BR",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r15 (Detailed) diário: disco 16/08-10/09 + API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 160.6,
+    "depois_dia": 208.0,
+    "dias_antes": 15,
+    "dias_depois": 28,
+    "delta_pct": 29.5
+   },
+   "imp_outros": {
+    "antes_dia": 2.8,
+    "depois_dia": 11.2,
+    "dias_antes": 15,
+    "dias_depois": 28,
+    "delta_pct": 300.5
+   },
+   "imp_total": {
+    "antes_dia": 163.4,
+    "depois_dia": 219.2,
+    "dias_antes": 15,
+    "dias_depois": 28,
+    "delta_pct": 34.2
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-03",
+     "2026-08-30"
+    ],
+    "janela_depois": [
+     "2026-09-01",
+     "2026-09-28"
+    ],
+    "alvo_antes": 244,
+    "alvo_depois": 303,
+    "alvo_dia": [
+     8.71,
+     10.82
+    ],
+    "total_antes": 288,
+    "total_depois": 419,
+    "total_dia": [
+     10.29,
+     14.96
+    ],
+    "rr_alvo_ic95": [
+     1.05,
+     1.47
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU CERTO (provável)",
+   "por_que": "Alvo +30% (BR +19%, US ×3 sobre base baixa), sustentado 5 semanas no r15 semanal (1.407 → 1.718-2.075). Iteração ADITIVA: 1 token por locale, nada removido, name/subtitle intocados. Subiu em termos com volume: 'rotina' (pop 56) fora → #22, 'cabelo' (51) #55 → #13. Ressalva: a 1.1.0 trouxe 39 idiomas, assinaturas e prompt de review (outros países ×4 — esses não contam).",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 1407,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      1799,
+      1799
+     ],
+     [
+      "09-07",
+      2075,
+      2058
+     ],
+     [
+      "09-14",
+      1718,
+      1711
+     ],
+     [
+      "09-21",
+      2000,
+      1984
+     ],
+     [
+      "09-28",
+      1727,
+      1727
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "br": {
+     "n": 88,
+     "top10": [
+      39,
+      43
+     ],
+     "top30": [
+      45,
+      51
+     ],
+     "pop_gt5_n": 4,
+     "pop_gt5_top10": [
+      1,
+      1
+     ],
+     "pop_weight_top10": [
+      250,
+      270
+     ],
+     "lost": [
+      [
+       "frizz",
+       4,
+       25,
+       5
+      ],
+      [
+       "tratamento",
+       18,
+       37,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "rotina",
+       1000,
+       22,
+       56
+      ],
+      [
+       "cabelo",
+       55,
+       13,
+       51
+      ],
+      [
+       "calendario capilar",
+       46,
+       6,
+       5
+      ],
+      [
+       "hidratação",
+       101,
+       24,
+       5
+      ],
+      [
+       "cuidados capilares",
+       1000,
+       4,
+       5
+      ],
+      [
+       "cuidado capilar",
+       1000,
+       7,
+       5
+      ],
+      [
+       "cabelo cuidados",
+       1000,
+       8,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 80,
+     "top10": [
+      24,
+      27
+     ],
+     "top30": [
+      30,
+      34
+     ],
+     "pop_gt5_n": 5,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      120,
+      135
+     ],
+     "lost": [],
+     "won": [
+      [
+       "capilar",
+       21,
+       6,
+       5
+      ],
+      [
+       "rizado",
+       29,
+       17,
+       5
+      ],
+      [
+       "pelo liso",
+       42,
+       21,
+       5
+      ],
+      [
+       "cronograma",
+       61,
+       18,
+       5
+      ],
+      [
+       "calendario capilar",
+       1000,
+       2,
+       5
+      ]
+     ]
+    },
+    "mx": {
+     "n": 80,
+     "top10": [
+      25,
+      9
+     ],
+     "top30": [
+      30,
+      10
+     ],
+     "pop_gt5_n": 2,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      125,
+      45
+     ],
+     "lost": [
+      [
+       "nutrición capilar",
+       1,
+       1000,
+       5
+      ],
+      [
+       "reconstrucción capilar",
+       1,
+       1000,
+       5
+      ],
+      [
+       "hidratación nutrición reconstrucción",
+       1,
+       1000,
+       5
+      ],
+      [
+       "rutina pelo rizado",
+       1,
+       1000,
+       5
+      ],
+      [
+       "grasa capilar",
+       1,
+       1000,
+       5
+      ],
+      [
+       "cronograma cabello",
+       2,
+       1000,
+       5
+      ],
+      [
+       "hidratación capilar",
+       2,
+       1000,
+       5
+      ],
+      [
+       "pelo ondulado",
+       2,
+       1000,
+       5
+      ],
+      [
+       "cabello ondulado",
+       2,
+       1000,
+       5
+      ],
+      [
+       "cabello crespo",
+       2,
+       1000,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "mascarilla capilar",
+       1000,
+       1,
+       5
+      ]
+     ]
+    },
+    "us": {
+     "n": 99,
+     "top10": [
+      15,
+      3
+     ],
+     "top30": [
+      28,
+      12
+     ],
+     "pop_gt5_n": 12,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      75,
+      15
+     ],
+     "lost": [
+      [
+       "frizz",
+       30,
+       134,
+       22
+      ],
+      [
+       "hair nutrition",
+       1,
+       31,
+       5
+      ],
+      [
+       "hair care schedule",
+       2,
+       32,
+       5
+      ],
+      [
+       "hair hydration",
+       2,
+       25,
+       5
+      ],
+      [
+       "hair dryness",
+       3,
+       31,
+       5
+      ],
+      [
+       "curly hair schedule",
+       3,
+       22,
+       5
+      ],
+      [
+       "wavy hair routine",
+       4,
+       24,
+       5
+      ],
+      [
+       "protein treatment",
+       5,
+       73,
+       5
+      ],
+      [
+       "hair repair",
+       7,
+       36,
+       5
+      ],
+      [
+       "hair protein",
+       8,
+       79,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "porosity",
+       50,
+       28,
+       5
+      ],
+      [
+       "coily",
+       1000,
+       25,
+       5
+      ]
+     ]
+    }
+   },
+   "pop_gt5_moves": [
+    [
+     "br",
+     "rotina",
+     56,
+     1000,
+     22
+    ],
+    [
+     "br",
+     "cabelo",
+     51,
+     55,
+     13
+    ],
+    [
+     "us",
+     "frizz",
+     22,
+     30,
+     134
+    ]
+   ]
+  },
+  {
+   "id": "mg_iter03",
+   "app": "My Expenses: Personal Finances",
+   "app_id": "6502218501",
+   "iteration": "2026-08-24_iter-03-text-pt-BR-keywords",
+   "carrier": "45.3.1",
+   "live_at_real": "2026-08-28",
+   "fields": "keywords pt-BR + de-DE",
+   "targets": [
+    "BR",
+    "DE"
+   ],
+   "imp_fonte": "r14 (Standard) diário: disco até 23/08 + API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 90.4,
+    "depois_dia": 66.3,
+    "delta_pct": -26.7,
+    "dias_antes": 20,
+    "dias_depois": 17,
+    "por_pais": {
+     "BR": [
+      64.0,
+      37.8,
+      -41
+     ],
+     "DE": [
+      26.4,
+      28.5,
+      8
+     ]
+    }
+   },
+   "imp_outros": {
+    "antes_dia": 323.0,
+    "depois_dia": 316.9,
+    "dias_antes": 24,
+    "dias_depois": 20,
+    "delta_pct": -1.9
+   },
+   "imp_total": {
+    "antes_dia": 470.7,
+    "depois_dia": 382.9,
+    "dias_antes": 24,
+    "dias_depois": 20,
+    "delta_pct": -18.6
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-07-31",
+     "2026-08-27"
+    ],
+    "janela_depois": [
+     "2026-08-29",
+     "2026-09-25"
+    ],
+    "alvo_antes": 71,
+    "alvo_depois": 65,
+    "alvo_dia": [
+     2.54,
+     2.32
+    ],
+    "total_antes": 136,
+    "total_depois": 172,
+    "total_dia": [
+     4.86,
+     6.14
+    ],
+    "rr_alvo_ic95": [
+     0.65,
+     1.28
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO",
+   "por_que": "BR −41% (64 → 38/dia), DE +8%; ganhos de posição BR foram todos pop 5 (top-10 11→16, pop>5 no top 10: 0→0) e 'finanças do casal' #4→#18. Tirou 4 palavras vivas (minhas, fatura, cartão, dívidas) por MISMATCH/sem ranking rastreado. Ressalva: o BR já caía (jul 85 → ago 63/dia) e há um buraco de 24/08 a 05/09 sem dado.",
+   "imp_nota": "disco r14 até 23/08 com linhas WEEKLY/MONTHLY misturadas sem coluna de granularidade: segundas e dia 1 excluídos dos dois lados; tendência anterior BR jul 85,2 → ago 63,3/dia (−26%)",
+   "posicoes": {
+    "br": {
+     "n": 237,
+     "top10": [
+      11,
+      16
+     ],
+     "top30": [
+      16,
+      22
+     ],
+     "pop_gt5_n": 65,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      55,
+      80
+     ],
+     "lost": [
+      [
+       "financas do casal",
+       4,
+       18,
+       5
+      ],
+      [
+       "despesas do casal",
+       26,
+       42,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "contas compartilhadas",
+       26,
+       5,
+       5
+      ],
+      [
+       "contas despesas",
+       56,
+       29,
+       5
+      ],
+      [
+       "diário gastos",
+       74,
+       18,
+       5
+      ],
+      [
+       "gastos contas",
+       87,
+       3,
+       5
+      ],
+      [
+       "extrato de gastos",
+       1000,
+       8,
+       5
+      ],
+      [
+       "extrato gastos",
+       1000,
+       6,
+       5
+      ],
+      [
+       "despesas fixas",
+       1000,
+       3,
+       5
+      ],
+      [
+       "categorias de gastos",
+       1000,
+       2,
+       5
+      ]
+     ]
+    },
+    "de": {
+     "n": 65,
+     "top10": [
+      0,
+      1
+     ],
+     "top30": [
+      2,
+      4
+     ],
+     "pop_gt5_n": 34,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      0,
+      5
+     ],
+     "lost": [],
+     "won": [
+      [
+       "ausgabenkontrolle",
+       1000,
+       7,
+       5
+      ]
+     ]
+    }
+   },
+   "pop_gt5_moves": []
+  },
+  {
+   "id": "iphotos_iter01",
+   "app": "iPhotos • Photo Collage editor",
+   "app_id": "1517929511",
+   "iteration": "2026-08-25_iter-01-text-en-US-keywords",
+   "carrier": "1.9.0",
+   "live_at_real": "2026-08-27",
+   "fields": "subtitle + keywords en-US/pt-BR/pt-PT/es-ES/es-MX",
+   "targets": [
+    "US",
+    "BR",
+    "PT",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r15 (Detailed) diário: disco 16-24/08 + API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 43.4,
+    "depois_dia": 46.6,
+    "dias_antes": 9,
+    "dias_depois": 19,
+    "delta_pct": 7.3
+   },
+   "imp_outros": {
+    "antes_dia": 57.8,
+    "depois_dia": 68.3,
+    "dias_antes": 9,
+    "dias_depois": 19,
+    "delta_pct": 18.1
+   },
+   "imp_total": {
+    "antes_dia": 101.2,
+    "depois_dia": 114.9,
+    "dias_antes": 9,
+    "dias_depois": 19,
+    "delta_pct": 13.5
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-07-30",
+     "2026-08-26"
+    ],
+    "janela_depois": [
+     "2026-08-28",
+     "2026-09-24"
+    ],
+    "alvo_antes": 93,
+    "alvo_depois": 62,
+    "alvo_dia": [
+     3.32,
+     2.21
+    ],
+    "total_antes": 150,
+    "total_depois": 146,
+    "total_dia": [
+     5.36,
+     5.21
+    ],
+    "rr_alvo_ic95": [
+     0.48,
+     0.92
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO (não moveu)",
+   "por_que": "Alvo +7% com só 9 dias de antes (r15); r15 semanal total 1.612 → 1.569 → 1.235 (−3% a −23%). Nenhum termo rastreado entrou no top 30 dos EUA (0→0). Subtitle reescrito pra 'panorama/carrossel/scrapbook'. PPO de ordem 28/08-08/09 e release de feature na janela.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 1612,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      1569,
+      1505
+     ],
+     [
+      "09-07",
+      1462,
+      1400
+     ],
+     [
+      "09-14",
+      1442,
+      1413
+     ],
+     [
+      "09-21",
+      1405,
+      1382
+     ],
+     [
+      "09-28",
+      1235,
+      1203
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "us": {
+     "n": 55,
+     "top10": [
+      0,
+      0
+     ],
+     "top30": [
+      0,
+      0
+     ],
+     "pop_gt5_n": 37,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      0,
+      0
+     ],
+     "lost": [],
+     "won": []
+    },
+    "br": {
+     "n": 41,
+     "top10": [
+      1,
+      1
+     ],
+     "top30": [
+      1,
+      2
+     ],
+     "pop_gt5_n": 15,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      5,
+      5
+     ],
+     "lost": [],
+     "won": [
+      [
+       "foto panorama",
+       1000,
+       14,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 35,
+     "top10": [
+      1,
+      1
+     ],
+     "top30": [
+      1,
+      1
+     ],
+     "pop_gt5_n": 22,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      5,
+      5
+     ],
+     "lost": [],
+     "won": []
+    },
+    "mx": {
+     "n": 35,
+     "top10": [
+      1,
+      1
+     ],
+     "top30": [
+      1,
+      1
+     ],
+     "pop_gt5_n": 17,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      5,
+      5
+     ],
+     "lost": [],
+     "won": []
+    }
+   },
+   "pop_gt5_moves": []
+  },
+  {
+   "id": "blw_iter03_05",
+   "app": "BLW Baby Led Weaning Tracker",
+   "app_id": "6758321287",
+   "iteration": "2026-08-19_iter-05-text-pt-BR-keywords",
+   "carrier": "1.5.2",
+   "live_at_real": "2026-08-20",
+   "fields": "keywords 4 locales + subtitle/description pt-BR",
+   "targets": [
+    "BR",
+    "US",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r15 (Detailed) diário: disco até 17/08 + API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": 34.6,
+    "depois_dia": 54.8,
+    "dias_antes": 26,
+    "dias_depois": 12,
+    "delta_pct": 58.6
+   },
+   "imp_outros": {
+    "antes_dia": 0.9,
+    "depois_dia": 32.9,
+    "dias_antes": 26,
+    "dias_depois": 12,
+    "delta_pct": 3466.0
+   },
+   "imp_total": {
+    "antes_dia": 35.5,
+    "depois_dia": 87.8,
+    "dias_antes": 26,
+    "dias_depois": 12,
+    "delta_pct": 147.2
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-07-23",
+     "2026-08-19"
+    ],
+    "janela_depois": [
+     "2026-08-21",
+     "2026-09-17"
+    ],
+    "alvo_antes": 42,
+    "alvo_depois": 137,
+    "alvo_dia": [
+     1.5,
+     4.89
+    ],
+    "total_antes": 83,
+    "total_depois": 307,
+    "total_dia": [
+     2.96,
+     10.96
+    ],
+    "rr_alvo_ic95": [
+     2.31,
+     4.61
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU CERTO (provável)",
+   "por_que": "Alvo +59% (r15, 34,6 → 54,8/dia); r15 semanal 646 → 819-1.008; instalações no alvo 1,47 → 5,30/dia nos 10 dias limpos antes da 1.5.3 (auditoria 27/09). Ganhou termo com volume: 'blw ideas' ES (pop 54) fora → #9 e US (39) fora → #18, 'introdução alimentar' (40) #36 → #19; top-10 BR 25 → 47. Name/subtitle intocados; cortes eram dup/MISMATCH. Ressalva: 1.5.3 (39 idiomas + prints) em 31/08 dentro da janela 'depois' da impressão.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 646,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      929,
+      929
+     ],
+     [
+      "09-07",
+      1008,
+      1008
+     ],
+     [
+      "09-14",
+      902,
+      902
+     ],
+     [
+      "09-21",
+      819,
+      814
+     ],
+     [
+      "09-28",
+      853,
+      853
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "br": {
+     "n": 202,
+     "top10": [
+      25,
+      47
+     ],
+     "top30": [
+      43,
+      69
+     ],
+     "pop_gt5_n": 34,
+     "pop_gt5_top10": [
+      0,
+      3
+     ],
+     "pop_weight_top10": [
+      125,
+      250
+     ],
+     "lost": [
+      [
+       "blw tracker",
+       5,
+       40,
+       5
+      ],
+      [
+       "baby first foods",
+       23,
+       1000,
+       5
+      ],
+      [
+       "baby foods tracker",
+       28,
+       1000,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "introducao alimentar",
+       36,
+       19,
+       40
+      ],
+      [
+       "solid start",
+       31,
+       13,
+       8
+      ],
+      [
+       "blw meals",
+       24,
+       13,
+       6
+      ],
+      [
+       "introdução alimentar",
+       30,
+       17,
+       5
+      ],
+      [
+       "primeiro alimento",
+       1000,
+       2,
+       5
+      ],
+      [
+       "6 meses diário",
+       1000,
+       3,
+       5
+      ],
+      [
+       "bebê 6 meses",
+       1000,
+       21,
+       5
+      ],
+      [
+       "primeira papinha",
+       1000,
+       2,
+       5
+      ],
+      [
+       "alergia alimentar bebê",
+       1000,
+       8,
+       5
+      ],
+      [
+       "bebê 7 meses",
+       1000,
+       18,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 116,
+     "top10": [
+      15,
+      19
+     ],
+     "top30": [
+      30,
+      34
+     ],
+     "pop_gt5_n": 18,
+     "pop_gt5_top10": [
+      2,
+      5
+     ],
+     "pop_weight_top10": [
+      78,
+      161
+     ],
+     "lost": [
+      [
+       "bebé come solo",
+       11,
+       1000,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "blw ideas",
+       1000,
+       9,
+       54
+      ],
+      [
+       "bebé 6 meses",
+       1000,
+       19,
+       5
+      ],
+      [
+       "comida bebé 6 meses",
+       1000,
+       12,
+       5
+      ],
+      [
+       "alimentación complementaria 6 meses",
+       1000,
+       1,
+       5
+      ],
+      [
+       "blw 6 meses",
+       1000,
+       1,
+       5
+      ],
+      [
+       "papillas 6 meses",
+       1000,
+       2,
+       5
+      ],
+      [
+       "recetas bebé 6 meses",
+       1000,
+       4,
+       5
+      ]
+     ]
+    },
+    "us": {
+     "n": 204,
+     "top10": [
+      8,
+      10
+     ],
+     "top30": [
+      23,
+      29
+     ],
+     "pop_gt5_n": 59,
+     "pop_gt5_top10": [
+      1,
+      1
+     ],
+     "pop_weight_top10": [
+      49,
+      56
+     ],
+     "lost": [
+      [
+       "starting solids",
+       18,
+       60,
+       29
+      ]
+     ],
+     "won": [
+      [
+       "blw ideas",
+       1000,
+       18,
+       39
+      ],
+      [
+       "baby led weaning family meals",
+       24,
+       13,
+       5
+      ],
+      [
+       "weaning food",
+       30,
+       17,
+       5
+      ],
+      [
+       "weaning guide",
+       35,
+       7,
+       5
+      ],
+      [
+       "baby led feeding",
+       36,
+       10,
+       5
+      ],
+      [
+       "weaning recipes",
+       42,
+       21,
+       5
+      ],
+      [
+       "baby meal log",
+       57,
+       29,
+       5
+      ],
+      [
+       "blw food tracker",
+       60,
+       27,
+       5
+      ],
+      [
+       "starting solids guide",
+       1000,
+       25,
+       5
+      ]
+     ]
+    }
+   },
+   "pop_gt5_moves": [
+    [
+     "es",
+     "blw ideas",
+     54,
+     1000,
+     9
+    ],
+    [
+     "br",
+     "introducao alimentar",
+     40,
+     36,
+     19
+    ],
+    [
+     "us",
+     "blw ideas",
+     39,
+     1000,
+     18
+    ],
+    [
+     "us",
+     "starting solids",
+     29,
+     18,
+     60
+    ],
+    [
+     "us",
+     "baby weaning",
+     26,
+     24,
+     31
+    ],
+    [
+     "us",
+     "blw",
+     19,
+     28,
+     35
+    ],
+    [
+     "br",
+     "weaning",
+     16,
+     13,
+     6
+    ],
+    [
+     "es",
+     "weaning",
+     16,
+     13,
+     4
+    ],
+    [
+     "us",
+     "baby led weaning",
+     9,
+     17,
+     24
+    ],
+    [
+     "br",
+     "solid start",
+     8,
+     31,
+     13
+    ],
+    [
+     "br",
+     "baby led weaning app",
+     7,
+     16,
+     10
+    ],
+    [
+     "es",
+     "alimentacion complementaria",
+     7,
+     8,
+     2
+    ],
+    [
+     "es",
+     "baby led weaning app",
+     7,
+     15,
+     10
+    ],
+    [
+     "es",
+     "baby led weaning",
+     7,
+     20,
+     14
+    ],
+    [
+     "br",
+     "blw meals",
+     6,
+     24,
+     13
+    ],
+    [
+     "es",
+     "blw meals",
+     6,
+     22,
+     16
+    ]
+   ]
+  },
+  {
+   "id": "walk_iter03",
+   "app": "Walk: Steps & Calorie Tracker",
+   "app_id": "6756285965",
+   "iteration": "2026-08-18_iter-03-text-pt-BR-keywords",
+   "carrier": "7.3.0",
+   "live_at_real": "2026-08-30",
+   "fields": "subtitle en-US + keywords pt/en/es/mx",
+   "targets": [
+    "US",
+    "BR",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 77.1,
+    "dias_antes": 0,
+    "dias_depois": 22,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 256.5,
+    "dias_antes": 0,
+    "dias_depois": 22,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 333.6,
+    "dias_antes": 0,
+    "dias_depois": 22,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-02",
+     "2026-08-29"
+    ],
+    "janela_depois": [
+     "2026-08-31",
+     "2026-09-27"
+    ],
+    "alvo_antes": 40,
+    "alvo_depois": 50,
+    "alvo_dia": [
+     1.43,
+     1.79
+    ],
+    "total_antes": 162,
+    "total_depois": 272,
+    "total_dia": [
+     5.79,
+     9.71
+    ],
+    "rr_alvo_ic95": [
+     0.82,
+     1.89
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "INCONCLUSIVO",
+   "por_que": "Sem 'antes' por território (instâncias expiraram). Depois do live o alvo ficou flat (r14 494-605/semana); o total subiu de 1.567 para 1.764-2.546/semana, mas veio da Índia (fora dos 4 locales) = não é do texto. Posição: 'pedômetro' (pop 32) #56→#22 e 'km caminhada' (48) #11→#6 no BR, mas 'pasos' (46) #22→#162 no MX.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 1567,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      1764,
+      1764
+     ],
+     [
+      "09-07",
+      1489,
+      1489
+     ],
+     [
+      "09-14",
+      1826,
+      1826
+     ],
+     [
+      "09-21",
+      2142,
+      2127
+     ],
+     [
+      "09-28",
+      2546,
+      2539
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "br": {
+     "n": 126,
+     "top10": [
+      6,
+      11
+     ],
+     "top30": [
+      16,
+      21
+     ],
+     "pop_gt5_n": 28,
+     "pop_gt5_top10": [
+      0,
+      1
+     ],
+     "pop_weight_top10": [
+      30,
+      98
+     ],
+     "lost": [
+      [
+       "monitorar passos",
+       26,
+       64,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "pedometro",
+       56,
+       22,
+       32
+      ],
+      [
+       "pedômetro caminhada",
+       32,
+       21,
+       5
+      ],
+      [
+       "caminhada km",
+       157,
+       27,
+       5
+      ],
+      [
+       "passos distância calorias",
+       1000,
+       15,
+       5
+      ],
+      [
+       "distância e calorias",
+       1000,
+       13,
+       5
+      ],
+      [
+       "contador de passos diarios",
+       1000,
+       25,
+       5
+      ]
+     ]
+    },
+    "es": {
+     "n": 33,
+     "top10": [
+      2,
+      3
+     ],
+     "top30": [
+      3,
+      4
+     ],
+     "pop_gt5_n": 13,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      10,
+      15
+     ],
+     "lost": [],
+     "won": [
+      [
+       "andar bajar peso",
+       1000,
+       7,
+       5
+      ]
+     ]
+    },
+    "mx": {
+     "n": 45,
+     "top10": [
+      3,
+      4
+     ],
+     "top30": [
+      6,
+      5
+     ],
+     "pop_gt5_n": 13,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      15,
+      20
+     ],
+     "lost": [
+      [
+       "pasos",
+       22,
+       162,
+       46
+      ]
+     ],
+     "won": [
+      [
+       "pasos quemados",
+       1000,
+       8,
+       5
+      ]
+     ]
+    },
+    "us": {
+     "n": 45,
+     "top10": [
+      1,
+      2
+     ],
+     "top30": [
+      2,
+      3
+     ],
+     "pop_gt5_n": 15,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      5,
+      10
+     ],
+     "lost": [],
+     "won": [
+      [
+       "fat burning walk",
+       1000,
+       11,
+       5
+      ]
+     ]
+    }
+   },
+   "pop_gt5_moves": [
+    [
+     "br",
+     "km caminhada",
+     48,
+     11,
+     6
+    ],
+    [
+     "mx",
+     "pasos",
+     46,
+     22,
+     162
+    ],
+    [
+     "br",
+     "pedometro",
+     32,
+     56,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "philos_iter01",
+   "app": "Philos: Philosophy & Stoicism",
+   "app_id": "6771598930",
+   "iteration": "2026-08-18_iter-01-text-en-US-keywords",
+   "carrier": "1.0.1",
+   "live_at_real": "2026-08-20",
+   "fields": "subtitle + keywords en/pt/es/mx",
+   "targets": [
+    "US",
+    "BR",
+    "ES",
+    "MX"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 42.2,
+    "dias_antes": 0,
+    "dias_depois": 12,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 24.4,
+    "dias_antes": 0,
+    "dias_depois": 12,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 66.7,
+    "dias_antes": 0,
+    "dias_depois": 12,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-07-23",
+     "2026-08-19"
+    ],
+    "janela_depois": [
+     "2026-08-21",
+     "2026-09-17"
+    ],
+    "alvo_antes": 42,
+    "alvo_depois": 38,
+    "alvo_dia": [
+     1.5,
+     1.36
+    ],
+    "total_antes": 66,
+    "total_depois": 60,
+    "total_dia": [
+     2.36,
+     2.14
+    ],
+    "rr_alvo_ic95": [
+     0.58,
+     1.4
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO",
+   "por_que": "r15 semanal 535 → 276-402 (−38% na média de 4 semanas). Subtitle reescrito ('Daily Stoic Wisdom & Quotes' → 'Stoic Quotes: Seneca, Socrates') + 6 tokens tirados (life, focus, mindfulness, zen, camus, reflection). As apostas afundaram: seneca #107→#193, socrates #46→#222 (D14).",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 535,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      357,
+      350
+     ],
+     [
+      "09-07",
+      297,
+      297
+     ],
+     [
+      "09-14",
+      313,
+      313
+     ],
+     [
+      "09-21",
+      276,
+      276
+     ],
+     [
+      "09-28",
+      402,
+      397
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   }
+  },
+  {
+   "id": "truco_iter01",
+   "app": "Truco Marcador • Conta Tento",
+   "app_id": "1486427751",
+   "iteration": "2026-09-01_iter-01-text",
+   "carrier": "49",
+   "live_at_real": "2026-09-02",
+   "fields": "keywords pt/es/mx/en",
+   "targets": [
+    "BR",
+    "AR",
+    "MX",
+    "UY",
+    "ES"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 111.4,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 32.4,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 143.7,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-05",
+     "2026-09-01"
+    ],
+    "janela_depois": [
+     "2026-09-03",
+     "2026-09-30"
+    ],
+    "alvo_antes": 44,
+    "alvo_depois": 95,
+    "alvo_dia": [
+     1.57,
+     3.39
+    ],
+    "total_antes": 55,
+    "total_depois": 114,
+    "total_dia": [
+     1.96,
+     4.07
+    ],
+    "rr_alvo_ic95": [
+     1.51,
+     3.09
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "INCONCLUSIVO (sinal +)",
+   "por_que": "r15 semanal ~500 → 685-920 (+60% média 07-28/09); 'marcador de truco' (pop 65) #45→#31; instalações alvo 44 → 95. Campo limpo (dups/truncados saíram), name/subtitle intocados. Mas a v50 (mão de onze) e a v51 (prints novos) saíram nos dias 02-03/09: print mexe em conversão, e conversão mexe em ranking.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 500,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      1460,
+      1314
+     ],
+     [
+      "09-07",
+      792,
+      732
+     ],
+     [
+      "09-14",
+      920,
+      854
+     ],
+     [
+      "09-21",
+      801,
+      740
+     ],
+     [
+      "09-28",
+      685,
+      654
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "br": {
+     "n": 28,
+     "top10": [
+      2,
+      2
+     ],
+     "top30": [
+      7,
+      5
+     ],
+     "pop_gt5_n": 16,
+     "pop_gt5_top10": [
+      0,
+      1
+     ],
+     "pop_weight_top10": [
+      10,
+      28
+     ],
+     "lost": [
+      [
+       "tento",
+       10,
+       37,
+       5
+      ],
+      [
+       "marcador de pontos truco",
+       19,
+       39,
+       5
+      ]
+     ],
+     "won": []
+    }
+   },
+   "pop_gt5_moves": []
+  },
+  {
+   "id": "foguetinho_iter01",
+   "app": "Rocket Pocket: Aim & Launch",
+   "app_id": "1479692515",
+   "iteration": "2026-09-02_iter-01-text",
+   "carrier": "12.0.1",
+   "live_at_real": "2026-09-02",
+   "fields": "keywords pt-BR",
+   "targets": [
+    "BR"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 19.4,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 90.8,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 110.2,
+    "dias_antes": 0,
+    "dias_depois": 25,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-05",
+     "2026-09-01"
+    ],
+    "janela_depois": [
+     "2026-09-03",
+     "2026-09-30"
+    ],
+    "alvo_antes": 7,
+    "alvo_depois": 6,
+    "alvo_dia": [
+     0.25,
+     0.21
+    ],
+    "total_antes": 12,
+    "total_depois": 16,
+    "total_dia": [
+     0.43,
+     0.57
+    ],
+    "rr_alvo_ic95": [
+     0.29,
+     2.55
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO (não moveu)",
+   "por_que": "r15 semanal ~490 → 319-557 (−7% média, −35% na última semana). Ganhou 3 composições pop 5 no top 10 BR ('jogo de lançar foguete' #3, 'lançar foguete' #4) e nenhuma impressão.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 489,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      557,
+      542
+     ],
+     [
+      "09-07",
+      448,
+      434
+     ],
+     [
+      "09-14",
+      516,
+      502
+     ],
+     [
+      "09-21",
+      448,
+      448
+     ],
+     [
+      "09-28",
+      319,
+      319
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "br": {
+     "n": 32,
+     "top10": [
+      6,
+      8
+     ],
+     "top30": [
+      6,
+      9
+     ],
+     "pop_gt5_n": 4,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      30,
+      40
+     ],
+     "lost": [],
+     "won": [
+      [
+       "arcade brasileiro",
+       1000,
+       13,
+       5
+      ],
+      [
+       "lançar foguete",
+       1000,
+       4,
+       5
+      ],
+      [
+       "jogo de lançar foguete",
+       1000,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "pop_gt5_moves": []
+  },
+  {
+   "id": "peptide_iter01",
+   "app": "Peptide Tracker: GLP-1 & Dose",
+   "app_id": "6772795048",
+   "iteration": "2026-09-03_iter-01-text",
+   "carrier": "1.1.2",
+   "live_at_real": "2026-09-03",
+   "fields": "name/subtitle/kw/promo/description en-US (GLP-1)",
+   "targets": [
+    "US"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 8.7,
+    "dias_antes": 0,
+    "dias_depois": 26,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 30.9,
+    "dias_antes": 0,
+    "dias_depois": 26,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 39.6,
+    "dias_antes": 0,
+    "dias_depois": 26,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-08-06",
+     "2026-09-02"
+    ],
+    "janela_depois": [
+     "2026-09-04",
+     "2026-10-01"
+    ],
+    "alvo_antes": 2,
+    "alvo_depois": 6,
+    "alvo_dia": [
+     0.07,
+     0.21
+    ],
+    "total_antes": 20,
+    "total_depois": 41,
+    "total_dia": [
+     0.71,
+     1.46
+    ],
+    "rr_alvo_ic95": [
+     0.61,
+     14.86
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO (não moveu)",
+   "por_que": "r15 semanal ~158 → 142-185 (+4%). Name + subtitle reposicionados para GLP-1 (ozempic/mounjaro pop 22-25, líderes com 1,8-30 mil ratings) num app com 0 ratings: não rankeou volume.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 158,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      151,
+      151
+     ],
+     [
+      "09-07",
+      185,
+      185
+     ],
+     [
+      "09-14",
+      181,
+      164
+     ],
+     [
+      "09-21",
+      164,
+      151
+     ],
+     [
+      "09-28",
+      142,
+      142
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   }
+  },
+  {
+   "id": "neon_iter02",
+   "app": "Neon Glow Draw: Light Painting",
+   "app_id": "1502280869",
+   "iteration": "2026-08-25_iter-02-text-keywords (+ 2026-09-02 AirDraw/iter-02)",
+   "carrier": "24 / 25",
+   "live_at_real": "2026-08-26",
+   "fields": "name pt/es + subtitle + kw + description + promo em 8 locales, 3 deploys encadeados",
+   "targets": [
+    "US",
+    "BR",
+    "PT",
+    "ES",
+    "MX",
+    "GB",
+    "AU",
+    "CA"
+   ],
+   "imp_fonte": "r14 (Standard) diário: API 06/09-12/10",
+   "imp_alvo": {
+    "antes_dia": null,
+    "depois_dia": 85.4,
+    "dias_antes": 0,
+    "dias_depois": 18,
+    "delta_pct": null
+   },
+   "imp_outros": {
+    "antes_dia": null,
+    "depois_dia": 174.3,
+    "dias_antes": 0,
+    "dias_depois": 18,
+    "delta_pct": null
+   },
+   "imp_total": {
+    "antes_dia": null,
+    "depois_dia": 259.7,
+    "dias_antes": 0,
+    "dias_depois": 18,
+    "delta_pct": null
+   },
+   "controle": {
+    "apps": [],
+    "mediana_delta_pct": null,
+    "nota": "controle = apps do lab sem versão nova na janela inteira, mesma série r14; só existe quando a API cobre as duas janelas (06/09+)"
+   },
+   "installs_1star": {
+    "janela_antes": [
+     "2026-07-29",
+     "2026-08-25"
+    ],
+    "janela_depois": [
+     "2026-08-27",
+     "2026-09-23"
+    ],
+    "alvo_antes": 22,
+    "alvo_depois": 33,
+    "alvo_dia": [
+     0.79,
+     1.18
+    ],
+    "total_antes": 75,
+    "total_depois": 86,
+    "total_dia": [
+     2.68,
+     3.07
+    ],
+    "rr_alvo_ic95": [
+     0.87,
+     2.57
+    ],
+    "cobertura_cache": "cache de Sales Report a partir de 2026-06-30"
+   },
+   "veredito": "DEU ERRADO",
+   "por_que": "r15 semanal 1.559 → 910-1.465 (−36% na última semana). Name trocado 'Light Art 3D' → 'Light Painting': 'light art' #2→#123, 'light art 3d' #2→#66, 'neon art' #7→#18; top-10 BR/ES/MX 18→16 / 21→17 / 31→25. Ganhou 'light painting' (pop 9) fora → #14. Seis releases em 16 dias.",
+   "imp_r15_semanal": {
+    "antes_sem_auditoria_27_09": 1559,
+    "depois_semanas_api": [
+     [
+      "08-31",
+      1465,
+      1406
+     ],
+     [
+      "09-07",
+      1115,
+      1106
+     ],
+     [
+      "09-14",
+      993,
+      977
+     ],
+     [
+      "09-21",
+      910,
+      826
+     ],
+     [
+      "09-28",
+      961,
+      931
+     ]
+    ],
+    "fonte": "r15 Detailed semanal: 'antes' da auditoria de 27/09 (instâncias já expiradas), 'depois' da API em 14/10"
+   },
+   "posicoes": {
+    "us": {
+     "n": 233,
+     "top10": [
+      12,
+      12
+     ],
+     "top30": [
+      24,
+      23
+     ],
+     "pop_gt5_n": 97,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      60,
+      60
+     ],
+     "lost": [
+      [
+       "light art",
+       2,
+       123,
+       5
+      ],
+      [
+       "light art 3d",
+       2,
+       66,
+       5
+      ],
+      [
+       "3d neon",
+       5,
+       23,
+       5
+      ],
+      [
+       "neon art",
+       7,
+       18,
+       5
+      ],
+      [
+       "neon sign maker",
+       21,
+       1000,
+       5
+      ],
+      [
+       "sparkle drawing",
+       28,
+       1000,
+       5
+      ],
+      [
+       "draw 3d art",
+       30,
+       1000,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "glow draw",
+       28,
+       15,
+       9
+      ],
+      [
+       "light painting",
+       1000,
+       14,
+       9
+      ],
+      [
+       "light painting camera",
+       17,
+       6,
+       5
+      ],
+      [
+       "neon paint",
+       23,
+       8,
+       5
+      ],
+      [
+       "glow drawing",
+       38,
+       25,
+       5
+      ],
+      [
+       "glow paint",
+       54,
+       8,
+       5
+      ],
+      [
+       "light paint",
+       72,
+       12,
+       5
+      ],
+      [
+       "glow effects",
+       1000,
+       27,
+       5
+      ]
+     ]
+    },
+    "br": {
+     "n": 79,
+     "top10": [
+      18,
+      16
+     ],
+     "top30": [
+      24,
+      20
+     ],
+     "pop_gt5_n": 12,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      90,
+      80
+     ],
+     "lost": [
+      [
+       "neon art",
+       6,
+       20,
+       5
+      ],
+      [
+       "glow draw",
+       14,
+       60,
+       5
+      ],
+      [
+       "video neon",
+       17,
+       73,
+       5
+      ],
+      [
+       "desenhar 3d",
+       22,
+       1000,
+       5
+      ],
+      [
+       "desenho 3d",
+       27,
+       1000,
+       5
+      ],
+      [
+       "luz neon",
+       27,
+       1000,
+       5
+      ]
+     ],
+     "won": []
+    },
+    "es": {
+     "n": 67,
+     "top10": [
+      21,
+      17
+     ],
+     "top30": [
+      26,
+      23
+     ],
+     "pop_gt5_n": 12,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      105,
+      85
+     ],
+     "lost": [
+      [
+       "dibujo realidad aumentada",
+       7,
+       1000,
+       5
+      ],
+      [
+       "luz neon",
+       10,
+       35,
+       5
+      ],
+      [
+       "brillante",
+       17,
+       39,
+       5
+      ],
+      [
+       "video neon",
+       18,
+       58,
+       5
+      ]
+     ],
+     "won": [
+      [
+       "brillo",
+       76,
+       16,
+       8
+      ]
+     ]
+    },
+    "mx": {
+     "n": 82,
+     "top10": [
+      31,
+      25
+     ],
+     "top30": [
+      38,
+      31
+     ],
+     "pop_gt5_n": 7,
+     "pop_gt5_top10": [
+      0,
+      0
+     ],
+     "pop_weight_top10": [
+      155,
+      125
+     ],
+     "lost": [
+      [
+       "neon ar drawing",
+       1,
+       18,
+       5
+      ],
+      [
+       "neon art",
+       4,
+       21,
+       5
+      ],
+      [
+       "video neon",
+       7,
+       68,
+       5
+      ],
+      [
+       "brillo",
+       11,
+       128,
+       5
+      ],
+      [
+       "luz neon",
+       13,
+       33,
+       5
+      ],
+      [
+       "brillante",
+       16,
+       159,
+       5
+      ],
+      [
+       "light painting",
+       17,
+       1000,
+       5
+      ],
+      [
+       "dibujo 3d",
+       18,
+       89,
+       5
+      ],
+      [
+       "show de luces",
+       26,
+       1000,
+       5
+      ]
+     ],
+     "won": []
+    }
+   },
+   "pop_gt5_moves": [
+    [
+     "us",
+     "glow draw",
+     9,
+     28,
+     15
+    ],
+    [
+     "us",
+     "light painting",
+     9,
+     1000,
+     14
+    ],
+    [
+     "es",
+     "brillo",
+     8,
+     76,
+     16
+    ]
+   ]
+  }
+ ],
+ "iteracoes_sem_impressao_maio": [
+  {
+   "id": "college_iter01",
+   "app": "Controle de faltas",
+   "live": "2026-05-23",
+   "veredito": "INCONCLUSIVO",
+   "por_que": "sem impressão (App Analytics só existe a partir de 17/08); instalações BR −32% com férias de faculdade (auditoria 27/09)"
+  },
+  {
+   "id": "mg_iter01",
+   "app": "Meus Gastos",
+   "live": "2026-05-24",
+   "veredito": "INCONCLUSIVO",
+   "por_que": "viveu 6 dias, superada pela iter-02; sem impressão"
+  },
+  {
+   "id": "mg_iter02",
+   "app": "Meus Gastos",
+   "live": "2026-05-30",
+   "veredito": "INCONCLUSIVO (sinal +)",
+   "por_que": "sem impressão; instalações BR +91% com n=26 e widget novo na mesma versão (auditoria 27/09)"
+  },
+  {
+   "id": "blw_iter01",
+   "app": "BLW",
+   "live": "2026-05-23",
+   "veredito": "INCONCLUSIVO",
+   "por_que": "sem impressão; instalações −3% (auditoria)"
+  },
+  {
+   "id": "sueca_iter01",
+   "app": "Sueca",
+   "live": "2026-05-24",
+   "veredito": "INCONCLUSIVO",
+   "por_que": "sem impressão; instalações −3% com 30 dias corridos (auditoria)"
+  },
+  {
+   "id": "neon_iter01_maio",
+   "app": "Neon",
+   "live": "2026-05-26",
+   "veredito": "INCONCLUSIVO",
+   "por_que": "sem impressão; instalações US 13→13 (auditoria)"
+  }
+ ],
+ "nao_foram_ao_ar_ou_status_errado": [
+  {
+   "id": "sueca_iter02",
+   "app": "Sueca",
+   "estado": "NUNCA FOI AO AR — meta diz live 02/09, mas a 41.0.0 no ar tem as keywords antigas (GET 14/10: 'group games,kings cup,brincadeira de beber,...'); a proposta estava na 42.0.0 REJECTED"
+  },
+  {
+   "id": "college_iter02",
+   "app": "Controle de faltas",
+   "estado": "meta diz staged, mas está NO AR desde 13/09 (1.8.0; keywords live = hipótese)"
+  },
+  {
+   "id": "truco_iter02",
+   "app": "Truco",
+   "estado": "v52 REJECTED"
+  },
+  {
+   "id": "cronos_iter01",
+   "app": "Cronos",
+   "estado": "sem meta.json; keywords da 1.4.0 são as antigas (auditoria 27/09)"
+  },
+  {
+   "id": "iphotos_iter02",
+   "app": "iPhotos",
+   "estado": "staged na 1.10.0 PREPARE_FOR_SUBMISSION"
+  },
+  {
+   "id": "mg_iter04",
+   "app": "Meus Gastos",
+   "estado": "staged na 45.4.0 iOS PREPARE_FOR_SUBMISSION"
+  },
+  {
+   "id": "hair_iter02_03",
+   "app": "Hair",
+   "estado": "proposta/draft, não aplicadas (keywords 1.1.0 = 1.2.0, GET 14/10)"
+  },
+  {
+   "id": "cloak_iter01",
+   "app": "Cloak (congelado)",
+   "estado": "research desde 23/05"
+  },
+  {
+   "id": "calc_iter01",
+   "app": "Calc+ (congelado)",
+   "estado": "draft desde 22/07"
+  },
+  {
+   "id": "walk_iter01_02",
+   "app": "Walk",
+   "estado": "research / sem meta"
+  },
+  {
+   "id": "blw_iter02",
+   "app": "BLW",
+   "estado": "abandonada"
+  }
+ ],
+ "sunrise": {
+  "app": "Sunrise Alarm Clock: Wake Up",
+  "app_id": "6758740138",
+  "carrier": "1.4.0",
+  "live_at": "2026-10-01 (Sales: 1º dia de updates 7*; ASC 02/10 00:12Z)",
+  "iteracoes": [
+   "2026-09-27_iter-01-text-en-US-keywords",
+   "2026-09-28_iter-02-text-fr-FR-keywords"
+  ],
+  "fonte": "App Store Discovery and Engagement Standard (r14), DAILY, Source Type = App Store search, por território; API GET em 14/10/2026",
+  "janela_antes": [
+   "2026-09-06",
+   "2026-09-30"
+  ],
+  "janela_depois": [
+   "2026-10-02",
+   "2026-10-12"
+  ],
+  "resumo": {
+   "alvo_us_br_es_mx": [
+    76.7,
+    45.1
+   ],
+   "us": [
+    25.0,
+    11.7
+   ],
+   "br": [
+    42.9,
+    25.4
+   ],
+   "fr": [
+    7.8,
+    5.9
+   ],
+   "de_intocado": [
+    10.6,
+    10.9
+   ],
+   "total": [
+    208.0,
+    180.6
+   ],
+   "controle_apps": 11,
+   "controle_mediana_delta_pct": -3.2
+  },
+  "nota": "controle_indice_mediana = mediana, entre apps do lab sem versão nova na janela, do dia ÷ média do próprio app em 06-30/09 × 100. Veredito formal do script no D14 (16/10).",
+  "serie_diaria": [
+   {
+    "date": "2026-09-06",
+    "fase": "antes",
+    "busca_total": 186,
+    "busca_alvo_us_br_es_mx": 62,
+    "busca_us": 13,
+    "busca_br": 43,
+    "busca_es": 5,
+    "busca_mx": 1,
+    "busca_fr": 9,
+    "busca_de": 6,
+    "busca_outros": 109,
+    "controle_indice_mediana": 107.5,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 6
+   },
+   {
+    "date": "2026-09-07",
+    "fase": "antes",
+    "busca_total": 193,
+    "busca_alvo_us_br_es_mx": 66,
+    "busca_us": 18,
+    "busca_br": 35,
+    "busca_es": 7,
+    "busca_mx": 6,
+    "busca_fr": 10,
+    "busca_de": 7,
+    "busca_outros": 110,
+    "controle_indice_mediana": 103.7,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 4
+   },
+   {
+    "date": "2026-09-08",
+    "fase": "antes",
+    "busca_total": 184,
+    "busca_alvo_us_br_es_mx": 88,
+    "busca_us": 14,
+    "busca_br": 68,
+    "busca_es": 3,
+    "busca_mx": 3,
+    "busca_fr": 3,
+    "busca_de": 13,
+    "busca_outros": 80,
+    "controle_indice_mediana": 97.0,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 2
+   },
+   {
+    "date": "2026-09-09",
+    "fase": "antes",
+    "busca_total": 166,
+    "busca_alvo_us_br_es_mx": 61,
+    "busca_us": 19,
+    "busca_br": 40,
+    "busca_es": 2,
+    "busca_mx": 0,
+    "busca_fr": 6,
+    "busca_de": 10,
+    "busca_outros": 89,
+    "controle_indice_mediana": 89.0,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 11
+   },
+   {
+    "date": "2026-09-10",
+    "fase": "antes",
+    "busca_total": 179,
+    "busca_alvo_us_br_es_mx": 70,
+    "busca_us": 12,
+    "busca_br": 47,
+    "busca_es": 8,
+    "busca_mx": 3,
+    "busca_fr": 6,
+    "busca_de": 3,
+    "busca_outros": 100,
+    "controle_indice_mediana": 83.9,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 4
+   },
+   {
+    "date": "2026-09-11",
+    "fase": "antes",
+    "busca_total": 182,
+    "busca_alvo_us_br_es_mx": 77,
+    "busca_us": 14,
+    "busca_br": 53,
+    "busca_es": 7,
+    "busca_mx": 3,
+    "busca_fr": 9,
+    "busca_de": 3,
+    "busca_outros": 93,
+    "controle_indice_mediana": 94.4,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 6
+   },
+   {
+    "date": "2026-09-12",
+    "fase": "antes",
+    "busca_total": 188,
+    "busca_alvo_us_br_es_mx": 78,
+    "busca_us": 21,
+    "busca_br": 51,
+    "busca_es": 5,
+    "busca_mx": 1,
+    "busca_fr": 4,
+    "busca_de": 8,
+    "busca_outros": 98,
+    "controle_indice_mediana": 98.3,
+    "installs_1star_alvo": 5,
+    "installs_1star_total": 10
+   },
+   {
+    "date": "2026-09-13",
+    "fase": "antes",
+    "busca_total": 245,
+    "busca_alvo_us_br_es_mx": 108,
+    "busca_us": 48,
+    "busca_br": 45,
+    "busca_es": 15,
+    "busca_mx": 0,
+    "busca_fr": 4,
+    "busca_de": 4,
+    "busca_outros": 129,
+    "controle_indice_mediana": 102.2,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 18
+   },
+   {
+    "date": "2026-09-14",
+    "fase": "antes",
+    "busca_total": 226,
+    "busca_alvo_us_br_es_mx": 127,
+    "busca_us": 49,
+    "busca_br": 62,
+    "busca_es": 9,
+    "busca_mx": 7,
+    "busca_fr": 9,
+    "busca_de": 13,
+    "busca_outros": 77,
+    "controle_indice_mediana": 98.3,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 10
+   },
+   {
+    "date": "2026-09-15",
+    "fase": "antes",
+    "busca_total": 231,
+    "busca_alvo_us_br_es_mx": 105,
+    "busca_us": 51,
+    "busca_br": 49,
+    "busca_es": 4,
+    "busca_mx": 1,
+    "busca_fr": 14,
+    "busca_de": 4,
+    "busca_outros": 108,
+    "controle_indice_mediana": 96.2,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 9
+   },
+   {
+    "date": "2026-09-16",
+    "fase": "antes",
+    "busca_total": 212,
+    "busca_alvo_us_br_es_mx": 76,
+    "busca_us": 22,
+    "busca_br": 49,
+    "busca_es": 3,
+    "busca_mx": 2,
+    "busca_fr": 4,
+    "busca_de": 7,
+    "busca_outros": 125,
+    "controle_indice_mediana": 105.9,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 13
+   },
+   {
+    "date": "2026-09-17",
+    "fase": "antes",
+    "busca_total": 252,
+    "busca_alvo_us_br_es_mx": 101,
+    "busca_us": 25,
+    "busca_br": 60,
+    "busca_es": 13,
+    "busca_mx": 3,
+    "busca_fr": 6,
+    "busca_de": 11,
+    "busca_outros": 134,
+    "controle_indice_mediana": 99.4,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 5
+   },
+   {
+    "date": "2026-09-18",
+    "fase": "antes",
+    "busca_total": 152,
+    "busca_alvo_us_br_es_mx": 55,
+    "busca_us": 12,
+    "busca_br": 40,
+    "busca_es": 1,
+    "busca_mx": 2,
+    "busca_fr": 3,
+    "busca_de": 1,
+    "busca_outros": 93,
+    "controle_indice_mediana": 97.0,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 7
+   },
+   {
+    "date": "2026-09-19",
+    "fase": "antes",
+    "busca_total": 161,
+    "busca_alvo_us_br_es_mx": 47,
+    "busca_us": 18,
+    "busca_br": 29,
+    "busca_es": 0,
+    "busca_mx": 0,
+    "busca_fr": 8,
+    "busca_de": 3,
+    "busca_outros": 103,
+    "controle_indice_mediana": 98.4,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 6
+   },
+   {
+    "date": "2026-09-20",
+    "fase": "antes",
+    "busca_total": 243,
+    "busca_alvo_us_br_es_mx": 65,
+    "busca_us": 15,
+    "busca_br": 32,
+    "busca_es": 17,
+    "busca_mx": 1,
+    "busca_fr": 25,
+    "busca_de": 12,
+    "busca_outros": 141,
+    "controle_indice_mediana": 105.9,
+    "installs_1star_alvo": 5,
+    "installs_1star_total": 12
+   },
+   {
+    "date": "2026-09-21",
+    "fase": "antes",
+    "busca_total": 259,
+    "busca_alvo_us_br_es_mx": 101,
+    "busca_us": 31,
+    "busca_br": 60,
+    "busca_es": 10,
+    "busca_mx": 0,
+    "busca_fr": 13,
+    "busca_de": 21,
+    "busca_outros": 124,
+    "controle_indice_mediana": 102.8,
+    "installs_1star_alvo": 3,
+    "installs_1star_total": 13
+   },
+   {
+    "date": "2026-09-22",
+    "fase": "antes",
+    "busca_total": 244,
+    "busca_alvo_us_br_es_mx": 85,
+    "busca_us": 28,
+    "busca_br": 49,
+    "busca_es": 7,
+    "busca_mx": 1,
+    "busca_fr": 1,
+    "busca_de": 33,
+    "busca_outros": 125,
+    "controle_indice_mediana": 96.7,
+    "installs_1star_alvo": 7,
+    "installs_1star_total": 18
+   },
+   {
+    "date": "2026-09-23",
+    "fase": "antes",
+    "busca_total": 220,
+    "busca_alvo_us_br_es_mx": 65,
+    "busca_us": 20,
+    "busca_br": 35,
+    "busca_es": 8,
+    "busca_mx": 2,
+    "busca_fr": 10,
+    "busca_de": 5,
+    "busca_outros": 140,
+    "controle_indice_mediana": 96.2,
+    "installs_1star_alvo": 4,
+    "installs_1star_total": 10
+   },
+   {
+    "date": "2026-09-24",
+    "fase": "antes",
+    "busca_total": 242,
+    "busca_alvo_us_br_es_mx": 80,
+    "busca_us": 36,
+    "busca_br": 29,
+    "busca_es": 12,
+    "busca_mx": 3,
+    "busca_fr": 4,
+    "busca_de": 30,
+    "busca_outros": 128,
+    "controle_indice_mediana": 100.3,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 10
+   },
+   {
+    "date": "2026-09-25",
+    "fase": "antes",
+    "busca_total": 223,
+    "busca_alvo_us_br_es_mx": 76,
+    "busca_us": 38,
+    "busca_br": 31,
+    "busca_es": 3,
+    "busca_mx": 4,
+    "busca_fr": 7,
+    "busca_de": 8,
+    "busca_outros": 132,
+    "controle_indice_mediana": 85.4,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 4
+   },
+   {
+    "date": "2026-09-26",
+    "fase": "antes",
+    "busca_total": 176,
+    "busca_alvo_us_br_es_mx": 61,
+    "busca_us": 30,
+    "busca_br": 26,
+    "busca_es": 4,
+    "busca_mx": 1,
+    "busca_fr": 8,
+    "busca_de": 9,
+    "busca_outros": 98,
+    "controle_indice_mediana": 108.9,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 5
+   },
+   {
+    "date": "2026-09-27",
+    "fase": "antes",
+    "busca_total": 226,
+    "busca_alvo_us_br_es_mx": 85,
+    "busca_us": 41,
+    "busca_br": 36,
+    "busca_es": 4,
+    "busca_mx": 4,
+    "busca_fr": 6,
+    "busca_de": 11,
+    "busca_outros": 124,
+    "controle_indice_mediana": 102.1,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 6
+   },
+   {
+    "date": "2026-09-28",
+    "fase": "antes",
+    "busca_total": 229,
+    "busca_alvo_us_br_es_mx": 86,
+    "busca_us": 33,
+    "busca_br": 44,
+    "busca_es": 4,
+    "busca_mx": 5,
+    "busca_fr": 11,
+    "busca_de": 15,
+    "busca_outros": 117,
+    "controle_indice_mediana": 96.2,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 4
+   },
+   {
+    "date": "2026-09-29",
+    "fase": "antes",
+    "busca_total": 185,
+    "busca_alvo_us_br_es_mx": 43,
+    "busca_us": 8,
+    "busca_br": 27,
+    "busca_es": 3,
+    "busca_mx": 5,
+    "busca_fr": 5,
+    "busca_de": 18,
+    "busca_outros": 119,
+    "controle_indice_mediana": 100.0,
+    "installs_1star_alvo": 3,
+    "installs_1star_total": 12
+   },
+   {
+    "date": "2026-09-30",
+    "fase": "antes",
+    "busca_total": 195,
+    "busca_alvo_us_br_es_mx": 50,
+    "busca_us": 10,
+    "busca_br": 33,
+    "busca_es": 3,
+    "busca_mx": 4,
+    "busca_fr": 9,
+    "busca_de": 9,
+    "busca_outros": 127,
+    "controle_indice_mediana": 94.4,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 3
+   },
+   {
+    "date": "2026-10-01",
+    "fase": "live",
+    "busca_total": 251,
+    "busca_alvo_us_br_es_mx": 77,
+    "busca_us": 30,
+    "busca_br": 39,
+    "busca_es": 5,
+    "busca_mx": 3,
+    "busca_fr": 13,
+    "busca_de": 17,
+    "busca_outros": 144,
+    "controle_indice_mediana": 96.2,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 9
+   },
+   {
+    "date": "2026-10-02",
+    "fase": "depois",
+    "busca_total": 187,
+    "busca_alvo_us_br_es_mx": 50,
+    "busca_us": 11,
+    "busca_br": 37,
+    "busca_es": 0,
+    "busca_mx": 2,
+    "busca_fr": 7,
+    "busca_de": 12,
+    "busca_outros": 118,
+    "controle_indice_mediana": 91.8,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 7
+   },
+   {
+    "date": "2026-10-03",
+    "fase": "depois",
+    "busca_total": 156,
+    "busca_alvo_us_br_es_mx": 45,
+    "busca_us": 15,
+    "busca_br": 15,
+    "busca_es": 11,
+    "busca_mx": 4,
+    "busca_fr": 2,
+    "busca_de": 20,
+    "busca_outros": 89,
+    "controle_indice_mediana": 96.1,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 2
+   },
+   {
+    "date": "2026-10-04",
+    "fase": "depois",
+    "busca_total": 187,
+    "busca_alvo_us_br_es_mx": 62,
+    "busca_us": 20,
+    "busca_br": 33,
+    "busca_es": 6,
+    "busca_mx": 3,
+    "busca_fr": 2,
+    "busca_de": 11,
+    "busca_outros": 112,
+    "controle_indice_mediana": 100.2,
+    "installs_1star_alvo": 1,
+    "installs_1star_total": 5
+   },
+   {
+    "date": "2026-10-05",
+    "fase": "depois",
+    "busca_total": 217,
+    "busca_alvo_us_br_es_mx": 74,
+    "busca_us": 23,
+    "busca_br": 34,
+    "busca_es": 9,
+    "busca_mx": 8,
+    "busca_fr": 3,
+    "busca_de": 5,
+    "busca_outros": 135,
+    "controle_indice_mediana": 101.9,
+    "installs_1star_alvo": 4,
+    "installs_1star_total": 11
+   },
+   {
+    "date": "2026-10-06",
+    "fase": "depois",
+    "busca_total": 198,
+    "busca_alvo_us_br_es_mx": 57,
+    "busca_us": 7,
+    "busca_br": 40,
+    "busca_es": 6,
+    "busca_mx": 4,
+    "busca_fr": 7,
+    "busca_de": 4,
+    "busca_outros": 130,
+    "controle_indice_mediana": 97.1,
+    "installs_1star_alvo": 3,
+    "installs_1star_total": 9
+   },
+   {
+    "date": "2026-10-07",
+    "fase": "depois",
+    "busca_total": 201,
+    "busca_alvo_us_br_es_mx": 46,
+    "busca_us": 16,
+    "busca_br": 20,
+    "busca_es": 9,
+    "busca_mx": 1,
+    "busca_fr": 9,
+    "busca_de": 12,
+    "busca_outros": 134,
+    "controle_indice_mediana": 94.7,
+    "installs_1star_alvo": 4,
+    "installs_1star_total": 12
+   },
+   {
+    "date": "2026-10-08",
+    "fase": "depois",
+    "busca_total": 199,
+    "busca_alvo_us_br_es_mx": 46,
+    "busca_us": 6,
+    "busca_br": 32,
+    "busca_es": 7,
+    "busca_mx": 1,
+    "busca_fr": 6,
+    "busca_de": 10,
+    "busca_outros": 137,
+    "controle_indice_mediana": 102.7,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 6
+   },
+   {
+    "date": "2026-10-09",
+    "fase": "depois",
+    "busca_total": 137,
+    "busca_alvo_us_br_es_mx": 21,
+    "busca_us": 6,
+    "busca_br": 9,
+    "busca_es": 4,
+    "busca_mx": 2,
+    "busca_fr": 3,
+    "busca_de": 1,
+    "busca_outros": 112,
+    "controle_indice_mediana": 92.5,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 3
+   },
+   {
+    "date": "2026-10-10",
+    "fase": "depois",
+    "busca_total": 151,
+    "busca_alvo_us_br_es_mx": 27,
+    "busca_us": 2,
+    "busca_br": 21,
+    "busca_es": 2,
+    "busca_mx": 2,
+    "busca_fr": 8,
+    "busca_de": 17,
+    "busca_outros": 99,
+    "controle_indice_mediana": 101.2,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 4
+   },
+   {
+    "date": "2026-10-11",
+    "fase": "depois",
+    "busca_total": 189,
+    "busca_alvo_us_br_es_mx": 31,
+    "busca_us": 10,
+    "busca_br": 19,
+    "busca_es": 0,
+    "busca_mx": 2,
+    "busca_fr": 15,
+    "busca_de": 13,
+    "busca_outros": 130,
+    "controle_indice_mediana": 92.7,
+    "installs_1star_alvo": 0,
+    "installs_1star_total": 7
+   },
+   {
+    "date": "2026-10-12",
+    "fase": "depois",
+    "busca_total": 165,
+    "busca_alvo_us_br_es_mx": 37,
+    "busca_us": 13,
+    "busca_br": 19,
+    "busca_es": 5,
+    "busca_mx": 0,
+    "busca_fr": 3,
+    "busca_de": 15,
+    "busca_outros": 110,
+    "controle_indice_mediana": 101.5,
+    "installs_1star_alvo": 2,
+    "installs_1star_total": 3
+   }
+  ]
+ }
+}

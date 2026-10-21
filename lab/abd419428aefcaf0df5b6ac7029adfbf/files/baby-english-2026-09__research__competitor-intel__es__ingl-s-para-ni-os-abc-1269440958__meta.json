@@ -1,0 +1,22 @@
+{
+  "trackId": 1269440958,
+  "trackName": "Inglés para Niños - ABC",
+  "sellerName": "VKIDS VIETNAM LIMITED COMPANY",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.2973,
+  "userRatingCount": 74,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2017-08-09T23:48:57Z",
+  "currentVersionReleaseDate": "2026-08-11T03:36:33Z",
+  "version": "3.2",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/ingl%C3%A9s-para-ni%C3%B1os-abc/id1269440958?uo=4",
+  "bundleId": "com.vkids.ios.smartkidsenglish.lite",
+  "subtitle": "Juegos Educativos en Inglés 2+",
+  "screenshotCount": 23
+}

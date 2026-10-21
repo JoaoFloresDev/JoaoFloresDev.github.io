@@ -1,0 +1,387 @@
+{
+ "generated_at": "2026-09-07T02:34:20Z",
+ "scope": "11 apps com trafego e receita ~zero (item i2 do work order quick-wins-2026-09-06)",
+ "benchmark": {
+  "arpd_usd_per_install": 0.1729,
+  "source": "Cloak: Hide & Lock Apps Vault — 2996 instalacoes novas e US$518,10 em 30d (dashboard.json, gerado 2026-09-06). Escolhido em vez do Calc+ (US$0,4148/inst) por ser o MENOR dos dois e por rodar a mesma stack de paywall (StoreKit 2 + assinatura semanal) que os apps deste lote.",
+  "why_not_calc_plus": "Calc+ e vault de fotos com 1.187 USD/mes; usar o ARPD dele inflaria a estimativa em 2,4x."
+ },
+ "totals": {
+  "installs_30d": 1208,
+  "revenue_30d_usd": 6.44,
+  "monthly_upside_usd": 202.42,
+  "installs_behind_hours": 828,
+  "installs_behind_days": 130,
+  "installs_behind_weeks": 250,
+  "note": "O enunciado do work order somou 1.037 (+130 do Sueca = 1.167); a soma real dos 11 no dashboard.json e 1.208."
+ },
+ "apps": [
+  {
+   "app_id": "6771595616",
+   "name": "Hair Schedule: Care Routine",
+   "dir": "Apps/intermediate/Cronogram-Capilar",
+   "downloads_30d": 307,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "ios-native/CronogramaCapilar/Presentation/Root/RootView.swift:20 (.premiumPaywall source:.setupFlow, pos-quiz) + Presentation/Profile/ProfileView.swift:58 (source:.profile)",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "com.gambitstudio.cronogramaCapilar.premium.week",
+     "state": "APPROVED",
+     "price_usa": "0.99",
+     "price_bra": "6.90",
+     "trial": null
+    },
+    {
+     "product_id": "com.gambitstudio.cronogramaCapilar.premium.year",
+     "state": "APPROVED",
+     "price_usa": "9.99",
+     "price_bra": "59.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-08-25"
+    }
+   ],
+   "ads": {
+    "sdk": "GoogleMobileAds SPM 13.8.0",
+    "serving": true,
+    "evidence": "AdsManager.swift:59 InterstitialAd.load(with:request:) + AdBannerSlot() montado em HomeView.swift:26, CalendarView.swift:25, TutorialsView.swift:44. MAS AdsConfig.swift:16 liveInterstitialUnitID=\"\" -> resolve() devolve nil em Release: SO O BANNER serve. E o applicationID/unit sao emprestados do AdMob app do Eisenhower (comentario AdsConfig.swift:8-11), entao a receita de banner e reportada sob OUTRO app."
+   },
+   "monthly_upside_usd": 53.08,
+   "upside_math": "307 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$53.08",
+   "effort": "horas",
+   "next_action": "Subir o preco na ASC (semanal US$0,99 -> US$4,99, faixa do Cloak) e tirar o trial de 3 dias do anual OU levar pra 7 dias. Nao precisa de build: preco e intro offer sao PATCH na ASC. Depois medir 14d.",
+   "evidence": "GET /v1/apps/6771595616/subscriptionGroups?include=subscriptions -> 2 subs APPROVED; GET /v1/subscriptions/6805067557/prices?filter[territory]=USA,BRA -> USA customerPrice 0.99, BRA 6.9; GET .../introductoryOffers -> yearly THREE_DAYS/FREE_TRIAL start 2026-08-25. firebase.json prop 551648425: paywall_shown 123 users, purchase_started 4 users, purchase_abandoned 3, in_app_purchase 1. dashboard.json daily 28/08-04/09: revenue_usd 0.0 em TODOS os dias. Paywall confirmado no tag publicado: git show release/6:ios-native/.../RootView.swift -> linha 20 premiumPaywall (tag de 2026-08-31, mesma data do live 1.1.0). Monetizacao NAO existia em release/1.0.4 (git ls-tree: nenhum arquivo Paywall/Premium) -> so ~6 dos 30 dias tiveram paywall no ar."
+  },
+  {
+   "app_id": "6756285965",
+   "name": "Walk: Steps & Calorie Tracker",
+   "dir": "Apps/intermediate/stepsSwiftUI",
+   "downloads_30d": 200,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "mockSteps/mockSteps/Scenes/Root/RootView.swift:131 (fullScreenCover) + Scenes/Settings/SettingsView.swift:95 + Components/PremiumGate.swift:31 (gate por metrica/intervalo em HomeView.swift:104,154)",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "mockApp.mockSteps.weekly",
+     "state": "APPROVED",
+     "price_usa": "0.99",
+     "price_bra": "6.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-08-28"
+    },
+    {
+     "product_id": "mockApp.mockSteps.yearly",
+     "state": "APPROVED",
+     "price_usa": "9.99",
+     "price_bra": "59.90",
+     "trial": null
+    }
+   ],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep GoogleMobileAds|GADInterstitial|AdMob em mockSteps/project.yml e mockSteps.xcodeproj/project.pbxproj -> 0 ocorrencias. App sem SDK de anuncio."
+   },
+   "monthly_upside_usd": 34.58,
+   "upside_math": "200 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$34.58",
+   "effort": "horas",
+   "next_action": "Subir o semanal de US$0,99 pra US$4,99 na ASC (PATCH, sem build) e medir 14d. O funil ja converte: 12 de 76 tocam comprar; o ticket e que e quase zero.",
+   "evidence": "GET /v1/apps/6756285965/subscriptionGroups?include=subscriptions -> 2 subs APPROVED, productIds batem com AppConstants.swift:17,21. GET /v1/subscriptions/6780320148/prices -> USA 0.99, BRA 6.9. firebase.json prop 551130312: paywall_shown 76 users, premium_gate_hit 6, purchase_started 12 users, purchase_success 3 users. dashboard.json daily 28/08-04/09 revenue_usd 0.0 todos os dias -> os 3 purchase_success sao INICIO DE TRIAL de 3 dias, nenhum virou cobranca. Paywall existe desde release/1.2.0 (2026-05-24) e esta no tag publicado release/7.3.0-b15 (grep PaywallView -> 2 hits em RootView.swift). Cross-check do upside pelo funil proprio: 3 trials/104 usuarios GA4 = 2,9%; em 200 instalacoes = 5,8 trials; a US$4,99/sem, 40% de conversao e 3 semanas de vida = 5,8x0,40x4,99x3x0,85 = US$29,5/mes, dentro de 15% do benchmark."
+  },
+  {
+   "app_id": "6502218501",
+   "name": "My Expenses: Personal Finances",
+   "dir": "Apps/intermediate/Controle-de-gastos",
+   "downloads_30d": 150,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "meus_gastos/lib/main.dart:145 (ProModal logo apos onboarding) + controllers/Settings/SettingsScreen.dart:623 + controllers/Login/LoginButtonScrean.dart:112",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "monthly.pro",
+     "state": "APPROVED",
+     "price_usa": "1.99",
+     "price_bra": "12.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-08-18"
+    },
+    {
+     "product_id": "yearly.pro",
+     "state": "APPROVED",
+     "price_usa": "9.99",
+     "price_bra": "59.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-08-18"
+    }
+   ],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep google_mobile_ads em meus_gastos/pubspec.yaml e pubspec.lock -> 0 ocorrencias. So in_app_purchase ^3.2.0 (pubspec.yaml:35)."
+   },
+   "monthly_upside_usd": 25.93,
+   "upside_math": "150 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$25.93",
+   "effort": "horas",
+   "next_action": "Duas coisas de horas: (1) subir o mensal de US$1,99 pra ~US$4,99 na ASC; (2) instrumentar purchase_success/purchase_failed — hoje o app so loga paywall_view e purchase_start (nomes legados), entao ninguem sabe se algum dos 8 que tocaram comprar concluiu.",
+   "evidence": "GET /v1/apps/6502218501/subscriptionGroups?include=subscriptions -> monthly.pro e yearly.pro APPROVED, batem com ProModal.dart:34-35. GET /v1/subscriptions/6736405049/prices -> USA 1.99 (startDate 2025-06-18), BRA 12.9. firebase.json prop 472020975: paywall_view 66 users, purchase_start 8 users, e NENHUM evento de sucesso na taxonomia (lista completa de eventos nao tem purchase_success) -> LEARNINGS #55, o codigo nao e capaz de dizer se converteu. dashboard.json daily 28/08-04/09 revenue_usd 0.0. Paywall reachable: main.dart:137 comentario 'Onboarding -> paywall -> home' + push CupertinoPageRoute(ProModal) em :145."
+  },
+  {
+   "app_id": "6758740138",
+   "name": "Sunrise Alarm Clock: Wake Up",
+   "dir": "Apps/intermediate/soninho_ios",
+   "downloads_30d": 131,
+   "revenue_30d_usd": 0.0,
+   "blocker": "no_product_no_paywall",
+   "paywall_in_code": {
+    "present": false,
+    "path": "soninho/soninho/Presentation/Paywall/ existe mas esta VAZIA (so um subdir Components/ tambem vazio). Ha um PurchaseService StoreKit 2 pronto em soninho/Data/Services/PurchaseService.swift:30 injetado em soninhoApp.swift:15, mas nenhuma tela e nenhum gate o consomem.",
+    "reachable": false
+   },
+   "asc_products": [],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "nenhum SDK de anuncio no projeto (sem Podfile, sem GoogleMobileAds no Package.resolved)."
+   },
+   "monthly_upside_usd": 22.65,
+   "upside_math": "131 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$22.65",
+   "effort": "semanas",
+   "next_action": "Construir a tela de paywall (PaywallKit) e criar o 1o grupo de assinaturas na ASC. Atencao: o 1o grupo SO entra em review junto de uma versao nova pelo web UI (LEARNINGS #44/#51) — o caminho e semanas, nao dias.",
+   "evidence": "GET /v1/apps/6758740138/inAppPurchasesV2 -> data [] ; GET /v1/apps/6758740138/subscriptionGroups?include=subscriptions -> data [], included []. ls soninho/Presentation/Paywall -> so 'Components' vazio. AppConstants.swift:32-33 declara soninho_monthly_1590 e soninho_annual_9990 — dois productIds que NAO existem na ASC. grep isPremiumUser: so StorageService (persistencia), nenhum gate de feature. firebase.json prop 549968658 (stream do Sunrise): nenhum evento de paywall/purchase na lista."
+  },
+  {
+   "app_id": "1491372792",
+   "name": "Sueca Games - Never Have",
+   "dir": "Apps/recovery/ios/SuecaDrink",
+   "downloads_30d": 130,
+   "revenue_30d_usd": 6.44,
+   "blocker": "ads_linked_but_silent",
+   "paywall_in_code": {
+    "present": true,
+    "path": "sueca/Calculadora/Scenes/HomeScreen/HomeViewController.swift:519 (showPremiumUpgrade, source home_button) + :425 (auto_prompt, so depois de check30DaysPassed()) + Scenes/Sueca/CardsViewController.swift:65",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "noads.joker",
+     "state": "APPROVED",
+     "type": "NON_CONSUMABLE",
+     "price_usa": "unknown"
+    },
+    {
+     "product_id": "sueca.pro.monthly",
+     "state": "MISSING_METADATA",
+     "price_usa": "3.99",
+     "price_bra": "24.90",
+     "note": "orfa: nenhum arquivo .swift do app cita sueca.pro.monthly"
+    }
+   ],
+   "ads": {
+    "sdk": "Google-Mobile-Ads-SDK 11.12.0 (Podfile.lock:3)",
+    "serving": false,
+    "evidence": "AppDelegate.swift:23 chama GADMobileAds.sharedInstance().start(), e ViewController.swift:17 declara 'var bannerView: GADBannerView?' — mas o adUnitID NUNCA e atribuido, .load() NUNCA e chamado e a view nunca e adicionada (grep de bannerView|adUnitID|.load(|GADRequest no arquivo, com comentarios removidos: so a declaracao e os 5 delegates). Pior: adViewDidReceiveAd/adViewWillPresentScreen sao assinaturas do SDK v7 — o SDK 11 nunca as chama. Ou seja o app paga o custo do SDK (peso + advertising no age rating) e serve ZERO anuncio. Confirma LEARNINGS #80."
+   },
+   "monthly_upside_usd": 16.04,
+   "upside_math": "130 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$22.48 - US$6.44 ja faturado = US$16.04",
+   "effort": "dias",
+   "next_action": "Decidir entre os dois estados sadios e sair do pior: (a) ligar o banner de verdade (atribuir adUnitID, chamar load(Request()), migrar os 5 delegates v7 pra v11) ou (b) remover o pod e o advertising do age rating. E, de horas: mover o auto_prompt de 30 dias (HomeViewController.swift:423 check30DaysPassed) pro aha-moment — hoje quase ninguem chega la.",
+   "evidence": "grep Google-Mobile-Ads-SDK sueca/Podfile.lock -> '11.12.0'. Info.plist:23-24 GADApplicationIdentifier ca-app-pub-8858389345934911~9506680852. GET /v1/apps/1491372792/inAppPurchasesV2 -> noads.joker APPROVED; subscriptionGroups -> sueca.pro.monthly MISSING_METADATA. HomeViewController.swift:338,342 button4Game/button5Game setLocked(!isPremiumUser) -> o premium tranca 2 jogos de verdade, nao so anuncio. dashboard.json: revenue_usd 6.44 em 30d. firebase.json prop 552891433: coverage 0,5% (1 new_user medido de 130 instalacoes) -> o funil de compra do Sueca e cego."
+  },
+  {
+   "app_id": "1502280869",
+   "name": "Neon Glow Draw: Light Painting",
+   "dir": "Apps/recovery/ios/AirDraw",
+   "downloads_30d": 82,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "AirDraw/AirDraw/ViewController.swift:956 openPro: -> PaywallPresenter.present(over:) (IBAction ligado em Base.lproj/Main.storyboard:50) + ViewController.swift:1157 gate de export HD; a tela e ARDrawPaywallContent em Subscription/AirDrawPaywall.swift:34, apresentada por PaywallPresenter (Subscription/AirDrawOnboarding.swift:259)",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "ardraw.pro.weekly",
+     "state": "APPROVED",
+     "price_usa": "0.99",
+     "price_bra": "6.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-07-28"
+    },
+    {
+     "product_id": "ardraw.pro.yearly",
+     "state": "APPROVED",
+     "price_usa": "9.99",
+     "price_bra": "59.90",
+     "trial": "THREE_DAYS FREE_TRIAL desde 2026-07-28"
+    },
+    {
+     "product_id": "NoAds.DIA",
+     "state": "APPROVED",
+     "type": "NON_CONSUMABLE",
+     "price_usa": "unknown",
+     "note": "legado, mantido so pra honrar quem ja comprou"
+    }
+   ],
+   "ads": {
+    "sdk": "Google-Mobile-Ads-SDK 11.13.0 (Podfile.lock:63)",
+    "serving": true,
+    "evidence": "ViewController.swift:574 GADInterstitialAd.load(...) com GADRequest() e :930 ad.present(fromRootViewController:) em maybeShowInterstitial(), guardado por UserDefaults NoAds.DIA == nil e throttle de 120s. AppDelegate.swift:22 GADMobileAds.start(). Serve interstitial de verdade — receita invisivel no Sales Report (LEARNINGS #80)."
+   },
+   "monthly_upside_usd": 14.18,
+   "upside_math": "82 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$14.18",
+   "effort": "horas",
+   "next_action": "Subir o semanal de US$0,99 pra US$4,99 e alongar o trial de 3 pra 7 dias na ASC. O funil ja e o melhor do lote (55 veem, 12 tocam assinar, 3 comecam) — o que nao existe e ticket.",
+   "evidence": "GET /v1/apps/1502280869/subscriptionGroups?include=subscriptions -> ardraw.pro.weekly/yearly APPROVED; inAppPurchasesV2 -> NoAds.DIA APPROVED. GET .../prices -> USA 0.99 / 9.99. GET .../introductoryOffers -> THREE_DAYS FREE_TRIAL start 2026-07-28 nos dois. firebase.json prop 549907534 (coverage 85,5%): premium_block 24 users, paywall_view 55 users, paywall_subscribe_tap 12, purchase_started 6, purchase_success 3 users, purchase_cancel 8. dashboard.json daily 28/08-04/09 revenue_usd 0.0 -> os 3 sucessos sao trial de 3 dias que nao viraram cobranca. Paywall no tag publicado: git show release/28:AirDraw/AirDraw/ViewController.swift -> PaywallPresenter nas linhas 946 e 1147. Armadilha de vocabulario evitada (LEARNINGS #80): grep por 'AirDrawPaywall' devolve so o comentario de cabecalho — o tipo se chama ARDrawPaywallContent."
+  },
+  {
+   "app_id": "6771598930",
+   "name": "Philos: Philosophy & Stoicism",
+   "dir": "Apps/recovery/flutter/philos_app",
+   "downloads_30d": 70,
+   "revenue_30d_usd": 0.0,
+   "blocker": "intentionally_free",
+   "paywall_in_code": {
+    "present": false,
+    "path": "lib/core/utils/feature_flags.dart:5 premiumEnabled = false; :12 hasPremiumAccess() retorna true quando o flag esta off. Nenhum arquivo .dart de paywall/purchase.",
+    "reachable": false
+   },
+   "asc_products": [],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep in_app_purchase|google_mobile_ads|purchases_flutter em pubspec.yaml e pubspec.lock -> 0 ocorrencias."
+   },
+   "monthly_upside_usd": 12.1,
+   "upside_math": "70 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$12.10",
+   "effort": "semanas",
+   "next_action": "Nada agora — decisao consciente (RULES: apps sempre gratis na v1) e o app tem 3 dias de v1.0.3 na loja. Reavaliar quando passar de ~150 instalacoes/mes ou 3 meses de vida.",
+   "evidence": "GET /v1/apps/6771598930/inAppPurchasesV2 -> data []; subscriptionGroups -> data []. feature_flags.dart:4-12 com o cabecalho '// === Monetization ===' e premiumEnabled = false — mesmo padrao do Bible e do Peptide, ou seja escolha do lab, nao esquecimento. pubspec.yaml:4 version 1.0.3+6, live 1.0.3 desde 2026-09-03 (dashboard.json). firebase.json prop 552891433: 0 eventos, coverage 0,0% — instrumentado agora (LEARNINGS #81), sem janela de dados ainda."
+  },
+  {
+   "app_id": "1486427751",
+   "name": "Truco Marcador - Conta Tento",
+   "dir": "Apps/recovery/ios/TrucoMarcador",
+   "downloads_30d": 66,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "'Truco marcador'/Calculadora/Purchase/Purchase/PurchaseViewController.swift:9; alcancado por botao 'Versao Premium' em Calculadora/View/Base.lproj/Main.storyboard:1174 (segue 'show' me6-z9-q6U -> placeholder da Purchase.storyboard), dentro do OptionsViewController, que por sua vez vem do segue 'optionsSeg' disparado em Control/TrucoViewController.swift:319 e :635",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "NoAds",
+     "state": "APPROVED",
+     "type": "NON_CONSUMABLE",
+     "price_usa": "unknown"
+    }
+   ],
+   "ads": {
+    "sdk": "Google-Mobile-Ads-SDK 7.69.0 (Podfile.lock:2)",
+    "serving": true,
+    "evidence": "TrucoViewController.swift:104 GADInterstitial(adUnitID: 'ca-app-pub-8858389345934911/1816921732'), :106 interstitial.load(GADRequest()), :270 recarga, mais banner em :936 addBannerViewToView. Vocabulario v7 (GADInterstitial, sem sufixo Ad) — buscar o nome v8+ devolveria zero e faria concluir 'nao serve' (LEARNINGS #80). MESMO ad unit do Foguetinho -> receita de anuncio nao e atribuivel por app."
+   },
+   "monthly_upside_usd": 11.41,
+   "upside_math": "66 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$11.41",
+   "effort": "horas",
+   "next_action": "Base ativa e o ativo aqui (2.899 updates e 460 avaliacoes contra 66 instalacoes novas): rever o preco do NoAds e onde ele e oferecido. O lever maior — medir a receita de AdMob — depende do Joao vincular AdMob<->Firebase no console (LEARNINGS #80), sem build.",
+   "evidence": "GET /v1/apps/1486427751/inAppPurchasesV2 -> NoAds APPROVED; subscriptionGroups -> data []. dashboard.json: downloads 66, updates 2899, ratings total 460, revenue_usd 0.0. Preco do NoAds NAO lido: GET /v1/inAppPurchasePrices/{id}?include=inAppPurchasePricePoint -> 403 FORBIDDEN_ERROR (o iapPriceSchedule lista 1 manualPrice em USA, mas o price point nao abre com esta chave) -> campo price_usa fica 'unknown', nao 0. Risco a verificar em device: Purchase.storyboard traz customModule='Calculator_Notes' (copia do Calc+) enquanto o app e Truco_Marcador; como customModuleProvider='target' isso deve resolver no build, mas nao foi executado nesta investigacao."
+  },
+  {
+   "app_id": "6761505951",
+   "name": "Bible Pills: Verses & Prayer",
+   "dir": "Apps/recovery/flutter/bible_repo",
+   "downloads_30d": 25,
+   "revenue_30d_usd": 0.0,
+   "blocker": "intentionally_free",
+   "paywall_in_code": {
+    "present": false,
+    "path": "bible_pills/bible_pills/lib/core/utils/feature_flags.dart:5 premiumEnabled = false; :12 hasPremiumAccess() -> true. Nenhum .dart de paywall/purchase.",
+    "reachable": false
+   },
+   "asc_products": [],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep in_app_purchase|google_mobile_ads|purchases_flutter em pubspec.yaml e pubspec.lock -> 0 ocorrencias."
+   },
+   "monthly_upside_usd": 4.32,
+   "upside_math": "25 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$4.32",
+   "effort": "semanas",
+   "next_action": "Nada de monetizacao agora — 25 instalacoes/mes nao pagam o custo de montar o 1o grupo de assinaturas (que exige versao nova + web UI). O gargalo do Bible e trafego, nao monetizacao.",
+   "evidence": "GET /v1/apps/6761505951/inAppPurchasesV2 -> data []; subscriptionGroups -> data []. feature_flags.dart:4-5 '// === Monetization ===' + premiumEnabled = false. dashboard.json: live 1.2.0 de 2026-05-23, downloads 25, updates 0. firebase.json untracked: 'sem Firebase Analytics no app' -> funil cego."
+  },
+  {
+   "app_id": "6772795048",
+   "name": "Peptide Tracker: GLP-1 & Dose",
+   "dir": "Apps/recovery/ios/PeptideCalc",
+   "downloads_30d": 24,
+   "revenue_30d_usd": 0.0,
+   "blocker": "intentionally_free",
+   "paywall_in_code": {
+    "present": false,
+    "path": "PeptideCalc/Core/Utils/FeatureFlags.swift:19-23 — hasPremiumAccess() com o comentario 'v1 always returns true so every feature is free' e 'In v2, gate on PurchaseService.shared.isPremium'. Nao existe PurchaseService nem tela de paywall no projeto.",
+    "reachable": false
+   },
+   "asc_products": [],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep GoogleMobileAds em project.yml -> 0 ocorrencias; nenhum Podfile."
+   },
+   "monthly_upside_usd": 4.15,
+   "upside_math": "24 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$4.15",
+   "effort": "semanas",
+   "next_action": "Nada agora — a decisao esta escrita no codigo e o app tem 24 instalacoes/mes. Nicho GLP-1 tem disposicao a pagar acima da media, entao vale reavaliar se o ASO destravar volume.",
+   "evidence": "GET /v1/apps/6772795048/inAppPurchasesV2 -> data []; subscriptionGroups -> data []. FeatureFlags.swift:19-23 (comentario literal 'v1 always returns true so every feature is free'). dashboard.json: live 1.1.3 de 2026-09-05, downloads 24. firebase.json prop 552706000: coverage 20,6%, nenhum evento de paywall na lista."
+  },
+  {
+   "app_id": "6759974641",
+   "name": "English for Devs - Devlingo",
+   "dir": "Apps/recovery/ios/DevLingoRepo",
+   "downloads_30d": 23,
+   "revenue_30d_usd": 0.0,
+   "blocker": "product_live_not_converting",
+   "paywall_in_code": {
+    "present": true,
+    "path": "DevLingo/DevLingo/App/DevLingoApp.swift:84 (PaywallView(source:)) + Presentation/Profile/ProfileView.swift:73 + Presentation/Categories/CategoriesView.swift:35 (source 'category_locked')",
+    "reachable": true
+   },
+   "asc_products": [
+    {
+     "product_id": "monthly.devlingo.pro",
+     "state": "APPROVED",
+     "price_usa": "1.99",
+     "price_bra": "12.90",
+     "trial": null
+    },
+    {
+     "product_id": "yearly.devlingo.pro",
+     "state": "APPROVED",
+     "price_usa": "7.99",
+     "price_bra": "49.90",
+     "trial": null
+    }
+   ],
+   "ads": {
+    "sdk": null,
+    "serving": false,
+    "evidence": "grep GoogleMobileAds|GADInterstitial em DevLingo/project.yml -> 0 ocorrencias."
+   },
+   "monthly_upside_usd": 3.98,
+   "upside_math": "23 inst/mes x US$0,1729/inst (ARPD do Cloak, 518,10/2996) = US$3.98",
+   "effort": "horas",
+   "next_action": "O paywall converte (1 de 12 que viram compraram) — o problema e volume: 23 instalacoes/mes. Nao mexer no preco; o trabalho util aqui e ASO/trafego, nao monetizacao.",
+   "evidence": "GET /v1/apps/6759974641/subscriptionGroups?include=subscriptions -> monthly/yearly.devlingo.pro APPROVED, batem com AppConstants.swift:19-20. GET .../prices -> USA 1.99 / 7.99. GET .../introductoryOffers -> data [] nos dois (sem trial). FeatureFlags.swift:13 premiumEnabled = true. firebase.json prop 549968658 stream do DevLingo (coverage 92,4%): paywall_shown 12 users, purchase_started 3, purchase_success 1 user, purchase_failed 1. dashboard.json daily 28/08-04/09 revenue_usd 0.0 — 1 compra sem trial e sem proceeds no Sales Report fica em aberto (possivel compra de teste/TestFlight); nao afirmo a causa."
+  }
+ ]
+}

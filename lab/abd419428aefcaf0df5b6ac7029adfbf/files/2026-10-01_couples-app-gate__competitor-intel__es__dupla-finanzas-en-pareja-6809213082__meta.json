@@ -1,0 +1,23 @@
+{
+  "trackId": 6809213082,
+  "trackName": "dupla - Finanzas en pareja",
+  "sellerName": "CGIS LLC",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-09-13T07:00:00Z",
+  "currentVersionReleaseDate": "2026-09-27T01:52:27Z",
+  "version": "1.2.5",
+  "minimumOsVersion": "16.4",
+  "languageCodesISO2A": [
+    "EN",
+    "ES"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/dupla-finanzas-en-pareja/id6809213082?uo=4",
+  "bundleId": "money.dupla.app",
+  "subtitle": "Divide gastos y salda cuentas",
+  "screenshotCount": 10
+}

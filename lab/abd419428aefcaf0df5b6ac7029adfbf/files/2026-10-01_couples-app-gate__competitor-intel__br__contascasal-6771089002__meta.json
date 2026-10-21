@@ -1,0 +1,22 @@
+{
+  "trackId": 6771089002,
+  "trackName": "ContasCasal",
+  "sellerName": "JRX Sistemas LTDA",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 5,
+  "userRatingCount": 1,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2026-05-22T07:00:00Z",
+  "currentVersionReleaseDate": "2026-08-18T18:23:24Z",
+  "version": "1.1.5",
+  "minimumOsVersion": "17.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/contascasal/id6771089002?uo=4",
+  "bundleId": "JRX-Sistemas.ContasDiarias",
+  "subtitle": "Finanças do casal, juntos",
+  "screenshotCount": 11
+}

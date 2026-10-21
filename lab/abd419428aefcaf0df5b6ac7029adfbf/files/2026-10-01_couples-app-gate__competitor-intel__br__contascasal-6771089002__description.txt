@@ -1,0 +1,21 @@
+ContasCasal é o app para casais organizarem as finanças da casa juntos — no iPhone de cada um, com os mesmos dados na nuvem.
+
+• Contas a pagar (pontuais ou mensais) e lembretes
+• Entradas de dinheiro e extrato completo
+• Casa compartilhada: convite por código ou link no WhatsApp
+• Resumo com saldo, gráficos por categoria e sugestões
+• Acerto do mês: quem pagou, quem deve e transferências sugeridas
+• Metas por categoria com alertas de orçamento
+• Sincronização automática; modo offline com reenvio ao voltar online
+• Widget e Atividade ao Vivo “Vence hoje”
+• Notificações quando o parceiro registra ou altera contas
+• Exportação em CSV e PDF
+• Planos gratuitos com limites; planos pagos via assinatura Apple (Intermediário e Top)
+
+Menos planilha, mais clareza para vocês dois.
+
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Política de Privacidade: https://www.jrxsistemas.com.br/privacidade/contasCasal
+
+Assinaturas auto-renováveis: planos Intermediário e Top (mensal, trimestral, semestral e anual). O pagamento é cobrado na conta Apple ID; renovação automática até cancelar em Ajustes → Apple ID → Assinaturas.

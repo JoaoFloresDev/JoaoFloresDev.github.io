@@ -1,0 +1,33 @@
+{
+  "trackId": 6502218501,
+  "trackName": "Meus Gastos: Contas e Despesas",
+  "sellerName": "Joao Victor Flores da Costa",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 4.94444,
+  "userRatingCount": 18,
+  "price": 0.0,
+  "formattedPrice": "Grátis",
+  "releaseDate": "2024-05-14T07:00:00Z",
+  "currentVersionReleaseDate": "2026-08-28T20:04:50Z",
+  "version": "45.3.1",
+  "minimumOsVersion": "13.0",
+  "languageCodesISO2A": [
+    "AR",
+    "EN",
+    "FR",
+    "DE",
+    "ID",
+    "IT",
+    "JA",
+    "KO",
+    "PT",
+    "ZH",
+    "ES",
+    "TR"
+  ],
+  "contentAdvisoryRating": "+4",
+  "trackViewUrl": "https://apps.apple.com/br/app/meus-gastos-contas-e-despesas/id6502218501?uo=4",
+  "bundleId": "com.gambit.meusgastos",
+  "subtitle": "Finanças do casal e pessoais",
+  "screenshotCount": 14
+}

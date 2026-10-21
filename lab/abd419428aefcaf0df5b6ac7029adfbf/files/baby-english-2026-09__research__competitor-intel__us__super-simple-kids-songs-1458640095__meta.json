@@ -1,0 +1,28 @@
+{
+  "trackId": 1458640095,
+  "trackName": "Super Simple - Kids Songs",
+  "sellerName": "Skyship Entertainment Company",
+  "primaryGenreName": "Education",
+  "averageUserRating": 4.54344,
+  "userRatingCount": 10912,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2019-10-02T07:00:00Z",
+  "currentVersionReleaseDate": "2026-08-05T09:42:46Z",
+  "version": "2.7.2",
+  "minimumOsVersion": "15.6",
+  "languageCodesISO2A": [
+    "EN",
+    "DE",
+    "JA",
+    "KO",
+    "RU",
+    "ES",
+    "ZH"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/super-simple-kids-songs/id1458640095?uo=4",
+  "bundleId": "com.Skyship.SuperSimple",
+  "subtitle": "Nursery Rhymes,Early Learning",
+  "screenshotCount": 33
+}

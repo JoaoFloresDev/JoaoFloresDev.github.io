@@ -1,0 +1,22 @@
+{
+  "trackId": 1218953380,
+  "trackName": "Pinna: Audio stories for kids",
+  "sellerName": "Pinna LLC",
+  "primaryGenreName": "Education",
+  "averageUserRating": 3.99353,
+  "userRatingCount": 309,
+  "price": 0.0,
+  "formattedPrice": "Free",
+  "releaseDate": "2017-10-02T04:20:52Z",
+  "currentVersionReleaseDate": "2026-07-07T21:01:10Z",
+  "version": "3.0.7",
+  "minimumOsVersion": "16.6",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/us/app/pinna-audio-stories-for-kids/id1218953380?uo=4",
+  "bundleId": "fm.pinna.app",
+  "subtitle": "Kids podcasts and audiobooks",
+  "screenshotCount": 10
+}

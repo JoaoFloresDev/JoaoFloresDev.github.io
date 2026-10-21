@@ -1,0 +1,60 @@
+Splitwise is the easiest way to share expenses with friends and family and stop stressing about “who owes who”. Millions of people around the world use Splitwise to organize group bills for households, trips, and more. Our mission is to reduce the stress and awkwardness that money places on our most important relationships.
+ 
+Splitwise is great for:
+- Roommates splitting rent and apartment bills
+- Group trips around the world
+- Splitting a vacation house for skiing or at the beach
+- Weddings and bachelor/bachelorette parties
+- Couples sharing relationship costs
+- Friends and co-workers who go out to lunch or dinner together frequently
+- Loans and IOUS between friends 
+- And so much more
+ 
+Splitwise is simple to use:
+- Create groups or private friendships for any splitting situation
+- Add expenses, IOUs, or informal debts in any currency, with support for offline entry
+- Expenses are backed up online so everyone can log in, view their balances, and add expenses
+- Keep track of who should pay next, or settle up by recording cash payments or using our integrations
+ 
+We also have powerful features that can handle almost any money sharing situation. Here are some of our industry-leading features:
+- Multi-platform support for smartphones and web
+- Simplify debts into the easiest repayment plan
+- Expense categorization
+- Calculate group totals
+- Export to CSV
+- Comment directly on expenses
+- Split expenses equally or unequally by percentages, shares, or exact amounts
+- Add informal debts and IOUs
+- Create bills that reccur monthly, weekly, yearly, fortnightly
+- Add multiple payers on a single expense
+- See total balances with a person across multiple groups and private expenses
+- Custom user avatars
+- Cover photos for groups 
+- Activity feed and push notifications help you stay on top of changes
+- View your edit history for changes to an expense
+- Any deleted group or bill can be restored easily
+- World-class customer support
+- Pay back using our integrated payments: Venmo and PayPal (US only), Paytm (India only)
+- 100+ currencies and growing
+- 7+ supported languages
+
+Endorsements:
+“Makes it easy to split everything from your dinner bill to rent.” - NY Times
+"Fundamental for tracking finances. As good as WhatsApp for containing awkwardness." – The Financial Times
+“I never fight with roommates over bills because of this genius expense-splitting app”- Business Insider
+“The Single Best App You Can Download for Group Trips of Any Kind” - Thrillist
+“Life Changing! I don’t review many things, but this app has seriously improved my quality of life. It has saved my sanity when it comes to splitting utilities, mortgage, groceries, dog expenses...the list goes on. No more saving receipts, making spreadsheets, and manually calculating each month. So handy for group trips/weekends, too! THANK YOU!!” – Courtney via the App Store
+
+We offer in-app purchases for “Splitwise Pro”, the benefits of which are described below. The subscription amount will be charged to your App Store account and will vary by plan and country. You’ll see the total price before completing your first payment. If you don’t choose to purchase “Splitwise Pro”, you can continue using Splitwise for free.
+
+Premium Subscription Service “Splitwise Pro”:
+1. Store high-resolution receipts in the cloud (10GB cloud storage)
+2. OCR integration for scanning and itemizing receipts
+3. Backups to JSON, downloadable from our website
+4. Convert expenses to different currencies using our Open Exchange Rates integration
+5. Access to “spending by category” budgeting tools and other charts
+6. Search full expense history
+
+“Splitwise Pro” subscriptions purchased in-app renew monthly or yearly depending on your plan. Plan pricing may vary by country. To avoid renewal, you must turn off auto-renew at least 24 hours before your subscription ends. You can turn off auto-renew at any time by visiting the App Store.
+
+Terms of Service and Privacy Policy: https://www.splitwise.com/terms

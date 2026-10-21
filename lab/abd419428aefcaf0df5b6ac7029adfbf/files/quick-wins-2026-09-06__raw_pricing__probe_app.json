@@ -1,0 +1,1 @@
+{"data": {"type": "apps", "id": "1479873340", "attributes": {"name": "Secret Gallery Vault Photo", "bundleId": "com.joao.CalculatorNotes", "sku": "CalculatorNotes"}, "links": {"self": "https://api.appstoreconnect.apple.com/v1/apps/1479873340"}}, "links": {"self": "https://api.appstoreconnect.apple.com/v1/apps/1479873340?fields%5Bapps%5D=name%2CbundleId%2Csku"}}

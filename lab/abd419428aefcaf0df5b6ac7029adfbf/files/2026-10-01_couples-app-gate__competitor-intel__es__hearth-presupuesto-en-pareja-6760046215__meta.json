@@ -1,0 +1,22 @@
+{
+  "trackId": 6760046215,
+  "trackName": "Hearth: Presupuesto en Pareja",
+  "sellerName": "Marcin Brzuzy",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-03-12T07:00:00Z",
+  "currentVersionReleaseDate": "2026-08-22T21:34:08Z",
+  "version": "1.8.0",
+  "minimumOsVersion": "15.1",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/hearth-presupuesto-en-pareja/id6760046215?uo=4",
+  "bundleId": "com.hearthbudget.app",
+  "subtitle": "Presupuesto en sobres para dos",
+  "screenshotCount": 7
+}

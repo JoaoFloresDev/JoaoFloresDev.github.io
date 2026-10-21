@@ -1,0 +1,47 @@
+As contas da casa, divididas sem planilha.
+
+O Continhas Casal é para duas pessoas que dividem as despesas e cansaram de fazer isso no papel, no bloco de notas ou naquela planilha que só um dos dois sabe mexer.
+
+Cada um lança o que pagou. O app soma tudo, mostra quanto ficou para cada um na proporção que vocês combinarem, e no fim do mês diz uma coisa só: quem transfere quanto para quem.
+
+
+O QUE ELE FAZ
+
+— Divide na proporção de vocês
+Meio a meio, 60/40, 70/30 — você escolhe, e a conta sai certa todo mês sem ninguém refazer nada.
+
+— Fixos e parcelados entram sozinhos
+Aluguel, luz, internet, uma compra em 12x. Cadastre uma vez e eles aparecem em todo mês novo, na data certa. Conta de valor que muda todo mês entra sem valor, e o app cobra o número quando você marcar como paga.
+
+— Um acerto por mês, não trinta conversas
+No fim do mês o app fecha a conta e diz quem paga quanto para quem. Mês acertado fica travado, para ninguém mexer no que já foi combinado.
+
+— Adiantamento é conta à parte
+Você pagou a fatura dela, ela pagou o seu dentista. Isso não é gasto da casa: volta inteiro, e fica fora do total e do acerto.
+
+— Categorias e tetos
+Mercado, comida de rua, o que vocês quiserem. Dá para pôr um teto por categoria e ver quando o mês está indo longe demais.
+
+— Avisos no celular
+O fixo que vence em três dias, o gasto que o seu par acabou de lançar, o mês que foi acertado. Você escolhe quais quer receber.
+
+— Calculadora onde se digita valor
+A conta dividida por dois, a soma de três itens. Sem sair do app e sem perder o formulário meio preenchido.
+
+— Pergunte à IA
+"Quanto gastamos com mercado este ano?" — a resposta sai do histórico de vocês. A janela diz, antes de você mandar, o que é enviado.
+
+
+COMO COMEÇA
+
+Crie sua conta, dê um nome ao espaço do casal e convide seu par pelo WhatsApp ou por e-mail. Quem aceitar entra no mesmo espaço, com o login dele — os gastos ficam separados por pessoa, e cada um vê o que o outro lançou.
+
+
+O QUE ELE NÃO É
+
+Não conecta no seu banco, não lê extrato e não pede sua senha bancária. O que entra aqui é o que vocês digitam, e nada além disso. Não há anúncio, não há venda de dado, e não há perfil de consumo sendo montado do outro lado.
+
+Você apaga sua conta quando quiser, dentro do próprio app, sem pedir a ninguém.
+
+
+Funciona também no navegador, com a mesma conta.

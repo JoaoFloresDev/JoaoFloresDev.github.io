@@ -1,0 +1,38 @@
+dupla es la app de finanzas para parejas. Una sola vida financiera para los dos, en dos apps completamente personales: cada uno con su cuenta, su estilo y su idioma, sobre el mismo registro compartido.
+
+LO MÍO Y LO NUESTRO
+Cada gasto va a una de dos listas. Los «Nuestros» aparecen en los dos teléfonos al instante, ya divididos. Los «Míos» nunca salen del tuyo. La privacidad es simétrica: ninguno puede ver los gastos personales del otro.
+
+DIVIDAN COMO DIVIDEN EN LA VIDA REAL
+• Mitad y mitad
+• Según ingresos: cada uno aporta en proporción a lo que gana
+• Un porcentaje fijo que eligen ustedes
+• Todo en común: sin deudas, solo seguimiento
+Para un gasto puntual lo cambias en el momento: 50/50, lo pago yo, lo paga mi pareja. dupla hace la cuenta y recuerda cómo se dividió cada gasto.
+
+UN BALANCE SIEMPRE AL DÍA
+Quién le debe cuánto a quién, calculado sobre todo lo compartido. Saldar es un solo toque, y el historial se conserva.
+
+PESOS Y DÓLARES
+Registra cada gasto en la moneda en que lo pagaste. Se guarda el tipo de cambio del día, así el balance no se mueve cuando el dólar sí. Y puedes ver toda la app en pesos o en dólares con un toque.
+
+FUNCIONA SIN CONEXIÓN
+Anota el gasto en el metro o en el supermercado sin señal. Se guarda en tu teléfono y se sincroniza solo cuando vuelve la conexión, en el orden en que lo registraste.
+
+TRES TOQUES Y LISTO
+Monto, lista, categoría. Listo. Fecha, nota, foto del recibo y etiquetas si quieres, sin que se interpongan.
+
+MÁS QUE UN REGISTRO DE GASTOS
+• Presupuestos personales y compartidos con límite mensual
+• Una meta de ahorro en pareja
+• Listas compartidas para el supermercado, los deseos y los viajes
+• Gastos recurrentes: alquiler, servicios y suscripciones se cargan solos cada mes
+• Estadísticas del mes por categoría y por etiqueta
+
+DOS APPS, UNA REALIDAD
+Se emparejan una sola vez con un código. Cada uno usa su propio teléfono, aunque sean de plataformas distintas. Cada uno elige su tema (hay trece), su idioma y su moneda. Lo compartido se sincroniza solo.
+
+TUS DATOS, TUS REGLAS
+Sin credenciales bancarias ni lectura de movimientos: los gastos los registras tú. Exporta todo a CSV cuando quieras y elimina tu cuenta desde la misma app.
+
+Empieza por tu cuenta e invita a tu pareja cuando quieras.

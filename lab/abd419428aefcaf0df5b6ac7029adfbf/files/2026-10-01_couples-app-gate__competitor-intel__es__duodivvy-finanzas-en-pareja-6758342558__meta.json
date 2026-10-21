@@ -1,0 +1,22 @@
+{
+  "trackId": 6758342558,
+  "trackName": "DuoDivvy - Finanzas en Pareja",
+  "sellerName": "DuoDivvy",
+  "primaryGenreName": "Finance",
+  "averageUserRating": 0,
+  "userRatingCount": 0,
+  "price": 0.0,
+  "formattedPrice": "Gratis",
+  "releaseDate": "2026-03-18T07:00:00Z",
+  "currentVersionReleaseDate": "2026-03-18T20:06:37Z",
+  "version": "1.0",
+  "minimumOsVersion": "15.0",
+  "languageCodesISO2A": [
+    "EN"
+  ],
+  "contentAdvisoryRating": "4+",
+  "trackViewUrl": "https://apps.apple.com/es/app/duodivvy-finanzas-en-pareja/id6758342558?uo=4",
+  "bundleId": "com.duodivvy.app",
+  "subtitle": "Divide gastos de forma justa",
+  "screenshotCount": 15
+}
