@@ -566,20 +566,6 @@
   "status_note": "voz OpenAI (gpt-4o-mini-tts coral) reprovada: nunca mais"
  },
  {
-  "slug": "blw-55-tempero-mito-ou-verdade",
-  "ref": "BLW-55",
-  "app": "BLW",
-  "num": "55",
-  "title": "Comida de bebê é sem tempero? (mito ou verdade)",
-  "hook": "A comida do seu bebê tem que ser sem tempero?",
-  "dur": 21,
-  "cover_t": 1.7,
-  "sound": "Trilha do kit pop_124 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM a ~15-20% sob a narração, com tempo forte no carimbo MITO! (8,13 s); 1º corte forte em 3,27 s (entra o tempero pronto, tela dividida).",
-  "ai_label": true,
-  "status": "ok",
-  "status_at": "2026-10-21"
- },
- {
   "slug": "blw-52-fome-ou-ja-chega",
   "ref": "BLW-52",
   "app": "BLW",
@@ -636,5 +622,19 @@
   "status": "wait",
   "status_at": "2026-10-21",
   "status_note": "quiz entregava a resposta: a certa era a única específica ('2 a 3 colheres') contra uma genérica ('meio prato')"
+ },
+ {
+  "slug": "blw-55-tempero-mito-ou-verdade",
+  "ref": "BLW-55",
+  "app": "BLW",
+  "num": "55",
+  "title": "O Ministério da Saúde responde: comida de bebê é sem tempero?",
+  "hook": "O Ministério da Saúde responde: comida de bebê é sem tempero?",
+  "dur": 28,
+  "cover_t": 2.0,
+  "sound": "Trilha do kit pop_124 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM a ~15-20% sob a narração, com tempo forte no carimbo MITO! (8,13 s); 1º corte forte em 3,27 s (entra o tempero pronto, tela dividida).",
+  "ai_label": true,
+  "status": "ok",
+  "status_at": "2026-10-21"
  }
 ]
