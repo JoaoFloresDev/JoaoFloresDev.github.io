@@ -589,7 +589,9 @@
   "cover_t": 1.6,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM, ~15-20% sob a narração; 1º corte forte em 5,02 s (carimbo JÁ CHEGA!), depois 8,87 s (FOME!) e 11,63 s.",
   "ai_label": false,
-  "status": "wait"
+  "status": "rejeitado",
+  "status_at": "2026-10-21",
+  "status_note": "óbvio; virou BLW-56 (certo ou errado: virou a cabeça, oferece mais ou para?)"
  },
  {
   "slug": "blw-53-celular-na-hora-de-comer",
