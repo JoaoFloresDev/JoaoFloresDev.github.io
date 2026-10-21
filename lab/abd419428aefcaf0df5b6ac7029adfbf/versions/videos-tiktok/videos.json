@@ -636,5 +636,18 @@
   "ai_label": true,
   "status": "ok",
   "status_at": "2026-10-21"
+ },
+ {
+  "slug": "blw-56-virou-a-cabeca",
+  "ref": "BLW-56",
+  "app": "BLW",
+  "num": "56",
+  "title": "O Ministério da Saúde responde: virou a cabeça, oferece mais ou para?",
+  "hook": "O Ministério da Saúde responde: ofereceu e seu bebê virou a cabeça. Oferece mais ou para?",
+  "dur": 29,
+  "cover_t": 5.3,
+  "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM, ~15-20% sob a narração; 1º corte forte em 7,02 s (carimbo PARA!), depois 12,59 s (OFERECE!) e 17,23 s (PARA!).",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
