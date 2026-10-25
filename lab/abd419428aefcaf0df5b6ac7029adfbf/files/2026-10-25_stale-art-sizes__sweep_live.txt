@@ -1,0 +1,1188 @@
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ar-SA     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ca        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  cs        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  da        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  de-DE     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  el        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  en-AU     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  en-CA     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  en-GB     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  en-US     SINGLE      6.9"=5
+Who Touched My Phone: WTMP    1.0 [LIVE]                  es-ES     SINGLE      6.9"=5
+Who Touched My Phone: WTMP    1.0 [LIVE]                  es-MX     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  fi        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  fr-CA     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  fr-FR     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  he        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  hi        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  hr        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  hu        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  id        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  it        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ja        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ko        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ms        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  nl-NL     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  no        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  pl        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  pt-BR     SINGLE      6.9"=5
+Who Touched My Phone: WTMP    1.0 [LIVE]                  pt-PT     NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ro        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  ru        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  sk        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  sv        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  th        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  tr        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  uk        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  vi        NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  zh-Hans   NO_SETS     
+Who Touched My Phone: WTMP    1.0 [LIVE]                  zh-Hant   NO_SETS     
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ar-SA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /cs        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /de-DE     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /el        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ca        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /da        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /en-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /en-AU     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /en-GB     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /es-MX     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /es-ES     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /en-US     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /fi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /fr-FR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /fr-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /he        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /hi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /hr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /hu        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /it        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /id        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ja        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ko        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ms        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /nl-NL     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /no        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /pl        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /pt-BR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /pt-PT     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ro        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /ru        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /sk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /sv        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /th        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /tr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /uk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /zh-Hans   SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /vi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment A /zh-Hant   SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ar-SA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ca        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /cs        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /da        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /de-DE     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /el        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /en-AU     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /en-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /en-GB     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /en-US     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /es-ES     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /es-MX     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /fi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /fr-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /fr-FR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /he        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /hi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /hr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /hu        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /id        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /it        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ja        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ko        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ms        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /nl-NL     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /no        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /pl        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /pt-BR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /pt-PT     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ro        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /ru        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /sk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /sv        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /th        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /uk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /tr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /vi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /zh-Hans   SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment B /zh-Hant   SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ar-SA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ca        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /cs        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /da        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /de-DE     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /el        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /en-AU     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /en-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /en-GB     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /en-US     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /es-ES     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /es-MX     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /fi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /fr-CA     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /fr-FR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /he        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /hi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /hr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /hu        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /id        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /it        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ja        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ko        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ms        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /nl-NL     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /no        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /pl        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /pt-BR     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /pt-PT     SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ro        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /ru        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /sk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /sv        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /th        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /tr        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /uk        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /vi        SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /zh-Hans   SAME        
+Who Touched My Phone: WTMP    PPO WTMP panorama A-B-C     Treatment C /zh-Hant   SAME        
+Sueca Games • Never Have      41.0.0 [LIVE]               de-DE     SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               en-US     SAME        6.9"=5 5.5"=5 iPad 13"=3 iPad 12.9"=3
+Sueca Games • Never Have      41.0.0 [LIVE]               es-ES     SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               es-MX     SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               fr-FR     SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               it        SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               ja        SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               ko        SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               nl-NL     SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               pt-BR     SAME        6.9"=5 iPad 13"=3 iPad 12.9"=3
+Sueca Games • Never Have      41.0.0 [LIVE]               ru        SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               zh-Hans   SINGLE      6.9"=5
+Sueca Games • Never Have      41.0.0 [LIVE]               en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões), iPad 12.9" (já estava há ≥6 versões) · iPhone: 6.9" (subido nesta versão)
+Sueca Games • Never Have      41.0.0 [LIVE]               pt-BR     IPAD_OLDER  iPad 12.9" (já estava há ≥6 versões), iPad 13" (já estava há ≥6 versões) · iPhone: 6.9" (subido nesta versão)
+Sueca Games • Never Have      41.0.0 [LIVE]               de-DE     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               de-DE     MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               de-DE     MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               es-ES     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               es-ES     MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               es-ES     MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               es-MX     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               es-MX     MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               es-MX     MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               fr-FR     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               fr-FR     MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               fr-FR     MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               it        MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               it        MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               it        MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               ja        MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               ja        MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               ja        MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               ko        MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               ko        MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               ko        MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               nl-NL     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               nl-NL     MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               nl-NL     MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               pt-BR     MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               ru        MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               ru        MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               ru        MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               zh-Hans   MISSING     5.5" → 6.9"
+Sueca Games • Never Have      41.0.0 [LIVE]               zh-Hans   MISSING     iPad 13" → idioma principal (en-US)
+Sueca Games • Never Have      41.0.0 [LIVE]               zh-Hans   MISSING     iPad 12.9" → idioma principal (en-US)
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /de-DE     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /fr-FR     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /es-MX     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /es-ES     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /it        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /ko        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /nl-NL     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /ja        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /ru        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment A /zh-Hans   SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /es-ES     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /de-DE     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /es-MX     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /fr-FR     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /it        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /nl-NL     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /ja        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /ru        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /ko        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment B /zh-Hans   SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /de-DE     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /fr-FR     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /es-MX     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /es-ES     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /it        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /ja        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /ko        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /nl-NL     SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /ru        SAME        
+Sueca Games • Never Have      PPO Sueca panorama A-B-C    Treatment C /zh-Hans   SAME        
+Neon Glow Draw: Light Painti  28 [LIVE]                   ar-SA     NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   ca        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   cs        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   da        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   de-DE     NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   el        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-AU     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-CA     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-GB     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-US     SAME        6.9"=5 6.5"=5 iPad 13"=3 iPad 12.9"=3
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-ES     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-MX     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   fi        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   fr-CA     NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   fr-FR     NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   he        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   hi        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   hr        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   hu        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   id        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   it        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   ja        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   ko        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   ms        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   nl-NL     NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   no        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   pl        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-BR     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-PT     SAME        6.9"=5 6.5"=5
+Neon Glow Draw: Light Painti  28 [LIVE]                   ro        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   ru        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   sk        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   sv        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   th        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   tr        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   uk        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   vi        NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   zh-Hans   NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   zh-Hant   NO_SETS     
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões), iPad 12.9" (já estava há ≥6 versões) · iPhone: 6.9" (há 1 versão(ões))
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-AU     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-AU     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-CA     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-CA     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-GB     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   en-GB     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-ES     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-ES     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-MX     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   es-MX     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-BR     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-PT     MISSING     iPad 13" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  28 [LIVE]                   pt-PT     MISSING     iPad 12.9" → idioma principal (en-US)
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /da        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ar-SA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /el        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /cs        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ca        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /de-DE     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /en-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /en-AU     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /en-GB     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /es-ES     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /es-MX     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /fi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /fr-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /fr-FR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /he        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /hi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /hr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /hu        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /id        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /it        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ja        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ko        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ms        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /nl-NL     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /no        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /pl        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /pt-PT     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /pt-BR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ro        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /ru        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /sk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /sv        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /th        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /tr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /uk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /vi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /zh-Hans   SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment A /zh-Hant   SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ar-SA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ca        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /cs        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /da        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /de-DE     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /el        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /en-AU     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /en-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /en-GB     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /es-ES     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /es-MX     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /fi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /fr-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /fr-FR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /he        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /hi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /hr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /hu        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /id        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /it        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ja        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ko        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ms        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /nl-NL     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /no        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /pl        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /pt-BR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ro        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /pt-PT     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /ru        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /sk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /sv        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /th        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /tr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /uk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /vi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /zh-Hans   SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment B /zh-Hant   SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ar-SA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ca        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /cs        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /da        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /de-DE     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /el        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /en-AU     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /en-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /en-GB     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /es-ES     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /es-MX     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /fi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /fr-CA     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /fr-FR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /he        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /hi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /hr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /hu        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /id        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /it        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ja        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ko        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ms        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /nl-NL     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /no        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /pl        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /pt-BR     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ro        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /pt-PT     SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /ru        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /sk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /sv        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /th        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /tr        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /vi        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /uk        SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /zh-Hans   SAME        
+Neon Glow Draw: Light Painti  PPO Neon Prints A-B-F 20    Treatment F /zh-Hant   SAME        
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ar-SA     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ca        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                cs        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                da        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                de-DE     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                el        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                en-AU     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                en-CA     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                en-GB     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                en-US     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                es-ES     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                es-MX     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                fi        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                fr-CA     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                fr-FR     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                he        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                hi        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                hr        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                hu        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                id        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                it        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ja        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ko        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ms        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                nl-NL     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                no        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                pl        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                pt-BR     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                pt-PT     SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ro        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                ru        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                sk        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                sv        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                th        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                tr        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                uk        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                vi        SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                zh-Hans   SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  1.4.0 [LIVE]                zh-Hant   SAME        6.9"=5 6.5"=5
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ar-SA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ca        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /el        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /da        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /de-DE     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /cs        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /en-AU     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /en-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /en-US     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /en-GB     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /es-ES     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /es-MX     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /fi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /fr-FR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /he        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /fr-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /hr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /hi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /hu        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /id        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ja        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /it        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ko        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ms        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /nl-NL     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /no        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /pl        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /pt-BR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /pt-PT     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ro        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /ru        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /sk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /sv        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /th        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /tr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /uk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /vi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /zh-Hans   SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment A /zh-Hant   SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ar-SA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ca        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /cs        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /da        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /de-DE     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /el        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /en-AU     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /en-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /en-GB     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /en-US     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /es-ES     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /es-MX     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /fi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /fr-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /fr-FR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /he        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /hi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /hr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /hu        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /id        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /it        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ja        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ko        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ms        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /nl-NL     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /no        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /pl        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /pt-BR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /pt-PT     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ro        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /ru        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /sk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /sv        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /th        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /tr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /uk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /vi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /zh-Hans   SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment B /zh-Hant   SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ar-SA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ca        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /cs        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /da        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /de-DE     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /el        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /en-AU     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /en-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /en-GB     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /en-US     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /es-ES     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /es-MX     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /fi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /fr-CA     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /fr-FR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /he        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /hi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /hr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /hu        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /id        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /it        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ja        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ko        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ms        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /nl-NL     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /no        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /pl        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /pt-BR     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /pt-PT     SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ro        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /ru        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /sk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /sv        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /th        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /tr        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /uk        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /vi        SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /zh-Hans   SAME        
+Sunrise Alarm Clock: Wake Up  PPO Sunrise Prints A-B-C    Treatment C /zh-Hant   SAME        
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ar-SA     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ca        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                cs        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                da        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                de-DE     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                el        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                en-AU     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                en-CA     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                en-GB     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                en-US     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                es-ES     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                es-MX     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                fi        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                fr-CA     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                fr-FR     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                he        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                hi        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                hr        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                hu        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                id        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                it        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ja        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ko        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ms        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                nl-NL     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                no        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                pl        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                pt-BR     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                pt-PT     SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ro        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                ru        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                sk        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                sv        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                th        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                tr        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                uk        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                vi        SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                zh-Hans   SINGLE      6.9"=5
+Hair Schedule: Care Routine   1.2.0 [LIVE]                zh-Hant   SINGLE      6.9"=5
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /cs        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ca        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ar-SA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /el        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /de-DE     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /da        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /en-AU     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /en-US     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /en-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /en-GB     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /es-ES     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /es-MX     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /fr-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /fi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /fr-FR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /he        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /hr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /hi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /hu        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /id        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /it        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ja        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ko        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ms        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /nl-NL     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /no        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /pl        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /pt-BR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /pt-PT     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ro        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /ru        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /sk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /sv        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /th        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /uk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /tr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /vi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /zh-Hans   SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment A /zh-Hant   SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ar-SA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ca        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /cs        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /da        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /de-DE     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /el        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /en-AU     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /en-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /en-GB     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /en-US     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /es-ES     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /es-MX     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /fi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /fr-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /fr-FR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /he        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /hi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /hr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /hu        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /id        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /it        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ja        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ko        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ms        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /nl-NL     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /no        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /pl        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /pt-BR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /pt-PT     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ro        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /ru        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /sk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /sv        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /th        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /tr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /uk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /vi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /zh-Hans   SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment B /zh-Hant   SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ar-SA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ca        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /cs        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /de-DE     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /da        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /el        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /en-AU     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /en-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /en-GB     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /en-US     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /es-ES     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /es-MX     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /fi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /fr-CA     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /fr-FR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /he        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /hi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /hr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /hu        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /id        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /it        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ja        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ko        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ms        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /nl-NL     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /no        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /pl        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /pt-BR     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /pt-PT     SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ro        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /ru        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /sk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /sv        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /th        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /tr        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /uk        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /vi        SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /zh-Hans   SINGLE      
+Hair Schedule: Care Routine   PPO Hair Prints A-B-C 20    Treatment C /zh-Hant   SINGLE      
+My Expenses: Personal Financ  45.3.1 [LIVE]               ar-SA     NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               cs        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               da        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               de-DE     NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               el        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               en-US     STALE       desatualizado: 5.5" · arte nova: 6.9", 6.5" (histórico de versões (checksum herdado))
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-ES     SINGLE      6.5"=4
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-MX     SINGLE      6.5"=4
+My Expenses: Personal Financ  45.3.1 [LIVE]               fi        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               fr-FR     NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               he        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               hi        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               hu        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               id        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               it        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               ja        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               ko        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               ms        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               nl-NL     NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               no        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               pl        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               pt-BR     STALE       desatualizado: 6.5", 5.5" · arte nova: 6.9" (empate no histórico: referência o maior tamanho)
+My Expenses: Personal Financ  45.3.1 [LIVE]               ru        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               sv        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               th        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               tr        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               uk        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               vi        NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               zh-Hans   NO_SETS     
+My Expenses: Personal Financ  45.3.1 [LIVE]               en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões), iPad 12.9" (já estava há ≥6 versões) · iPhone: 6.9" (há 1 versão(ões)), 6.5" (há 1 versão(ões))
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-ES     MISSING     6.9" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-ES     MISSING     5.5" → 6.5"
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-ES     MISSING     iPad 13" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-ES     MISSING     iPad 12.9" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-MX     MISSING     6.9" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-MX     MISSING     5.5" → 6.5"
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-MX     MISSING     iPad 13" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               es-MX     MISSING     iPad 12.9" → idioma principal (en-US)
+My Expenses: Personal Financ  45.3.1 [LIVE]               pt-BR     MISSING     iPad 12.9" → idioma principal (en-US)
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/ar-SA     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/cs        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/da        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/de-DE     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/el        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/es-ES     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/es-MX     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/fr-FR     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/fi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/he        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/hi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/hu        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/id        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/it        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/ja        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/ms        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/ko        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/nl-NL     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/no        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/pl        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/ru        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/sv        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/th        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/tr        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/uk        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/vi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    escuro cidad/zh-Hans   SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/ar-SA     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/cs        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/da        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/de-DE     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/el        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13", iPad 12.9" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/es-ES     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/es-MX     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/fi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/fr-FR     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/he        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/hi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/hu        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/id        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/it        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/ja        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/ko        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/ms        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/nl-NL     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/no        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/pl        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/ru        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/sv        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/th        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/tr        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/uk        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/vi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    claro colori/zh-Hans   SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/ar-SA     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/cs        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/da        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/de-DE     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/el        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/en-US     PPO_IPAD_INHERITED  herdado da página padrão: iPad 12.9", iPad 13" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/es-ES     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/es-MX     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/fi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/fr-FR     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/he        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/hi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/hu        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/id        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/it        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/ja        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/ko        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/ms        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/nl-NL     SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/pl        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/no        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/pt-BR     PPO_IPAD_INHERITED  herdado da página padrão: iPad 13" 
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/ru        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/sv        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/th        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/tr        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/uk        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/vi        SAME        
+My Expenses: Personal Financ  PPO Estilo visual 2026-1    azul minimal/zh-Hans   SAME        
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                de-DE     SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                en-US     STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                es-ES     STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                es-MX     STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                fr-FR     SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                it        SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ja        SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ko        SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                pt-BR     STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                pt-PT     SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ru        SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                tr        SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                zh-Hans   SINGLE      6.9"=5
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões) · iPhone: 6.9" (subido nesta versão)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                de-DE     MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                de-DE     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                es-ES     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                es-MX     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                fr-FR     MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                fr-FR     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                it        MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                it        MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ja        MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ja        MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ko        MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ko        MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                pt-PT     MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                pt-PT     MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ru        MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                ru        MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                tr        MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                tr        MISSING     iPad 13" → idioma principal (en-US)
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                zh-Hans   MISSING     5.5" → 6.9"
+iPhotos • Photo Collage edit  1.9.0 [LIVE]                zh-Hans   MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ar-SA     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  de-DE     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  en-US     SINGLE      6.5"=5 iPad 13"=3
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  es-ES     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  es-MX     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  fr-FR     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  hi        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  id        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  it        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ja        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ko        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  nl-NL     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  pl        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  pt-BR     SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ru        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  sv        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  th        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  tr        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  vi        SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  zh-Hans   SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  zh-Hant   SINGLE      6.5"=5
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  en-US     IPAD_OLDER  iPad 13" (já estava há 4 versão(ões)) · iPhone: 6.5" (subido nesta versão)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ar-SA     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  de-DE     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  es-ES     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  es-MX     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  fr-FR     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  hi        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  id        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  it        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ja        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ko        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  nl-NL     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  pl        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  ru        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  sv        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  th        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  tr        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  vi        MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  zh-Hans   MISSING     iPad 13" → idioma principal (en-US)
+Cloak: Hide & Lock Apps Vaul  9.6 [LIVE]                  zh-Hant   MISSING     iPad 13" → idioma principal (en-US)
+Cronos • Task and Time Manag  1.4.0 [LIVE]                de-DE     SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                en-US     SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                es-ES     SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                fr-FR     SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                it        SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                ja        SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                ko        SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                pt-BR     SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                ru        SAME        6.9"=5 5.5"=5 iPad 13"=5
+Cronos • Task and Time Manag  1.4.0 [LIVE]                zh-Hans   SAME        6.9"=5 5.5"=5 iPad 13"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                de-DE     SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                en-US     SAME        6.9"=5 6.5"=5 iPad 13"=4 iPad 12.9"=4
+Controle de faltas e presenç  1.8.0 [LIVE]                es-ES     SAME        6.9"=5 6.5"=5 iPad 13"=3 iPad 12.9"=3
+Controle de faltas e presenç  1.8.0 [LIVE]                es-MX     SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-CA     SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-FR     SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                ja        SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                ko        SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-BR     SAME        6.9"=5 6.5"=5 5.5"=5 iPad 13"=4 iPad 12.9"=4
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-PT     SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                zh-Hans   SAME        6.9"=5 6.5"=5
+Controle de faltas e presenç  1.8.0 [LIVE]                en-US     IPAD_OLDER  iPad 12.9" (já estava há ≥6 versões), iPad 13" (já estava há ≥6 versões) · iPhone: 6.9" (há 4 versão(ões))
+Controle de faltas e presenç  1.8.0 [LIVE]                es-ES     IPAD_OLDER  iPad 12.9" (já estava há ≥6 versões), iPad 13" (já estava há ≥6 versões) · iPhone: 6.9" (há 4 versão(ões))
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-BR     IPAD_OLDER  iPad 12.9" (já estava há ≥6 versões), iPad 13" (já estava há ≥6 versões) · iPhone: 6.9" (há 5 versão(ões))
+Controle de faltas e presenç  1.8.0 [LIVE]                de-DE     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                de-DE     MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                de-DE     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                en-US     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                es-ES     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                es-MX     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                es-MX     MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                es-MX     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-CA     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-CA     MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-CA     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-FR     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-FR     MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                fr-FR     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                ja        MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                ja        MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                ja        MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                ko        MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                ko        MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                ko        MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-PT     MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-PT     MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                pt-PT     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                zh-Hans   MISSING     5.5" → 6.5"
+Controle de faltas e presenç  1.8.0 [LIVE]                zh-Hans   MISSING     iPad 13" → idioma principal (pt-BR)
+Controle de faltas e presenç  1.8.0 [LIVE]                zh-Hans   MISSING     iPad 12.9" → idioma principal (pt-BR)
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ar-SA     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                bn-BD     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ca        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                cs        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                da        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                de-DE     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                el        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                en-AU     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                en-CA     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                en-GB     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                en-US     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                es-ES     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                es-MX     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                fi        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                fr-CA     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                fr-FR     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                he        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                hi        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                hr        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                hu        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                id        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                it        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ja        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ko        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ms        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                nl-NL     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                no        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                pa-IN     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                pl        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                pt-BR     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                pt-PT     SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ro        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                ru        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                sk        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                sv        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                th        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                tr        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                uk        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                vi        SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                zh-Hans   SINGLE      6.9"=5
+Walk: Steps & Calorie Tracke  7.3.0 [LIVE]                zh-Hant   SINGLE      6.9"=5
+Secret Calculator Vault Phot  1.4.0 [LIVE]                de-DE     NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                en-US     STALE       desatualizado: 6.9", 5.5", iPad 12.9" · arte nova: 6.5" (histórico de versões (checksum herdado))
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-ES     STALE       desatualizado: 6.9", 5.5" · arte nova: 6.5" (histórico de versões (checksum herdado))
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-MX     STALE       desatualizado: 6.9", 5.5" · arte nova: 6.5" (histórico de versões (checksum herdado))
+Secret Calculator Vault Phot  1.4.0 [LIVE]                fr-CA     NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                fr-FR     NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                id        NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                it        NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                pt-BR     STALE       desatualizado: 6.9", 5.5" · arte nova: 6.5" (histórico de versões (checksum herdado))
+Secret Calculator Vault Phot  1.4.0 [LIVE]                pt-PT     NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                sv        NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                tr        NO_SETS     
+Secret Calculator Vault Phot  1.4.0 [LIVE]                en-US     IPAD_OLDER  iPad 12.9" (já estava há ≥6 versões), iPad 13" (já estava há 5 versão(ões)) · iPhone: 6.5" (subido nesta versão)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-ES     MISSING     iPad 13" → idioma principal (en-US)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-ES     MISSING     iPad 12.9" → idioma principal (en-US)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-MX     MISSING     iPad 13" → idioma principal (en-US)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                es-MX     MISSING     iPad 12.9" → idioma principal (en-US)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+Secret Calculator Vault Phot  1.4.0 [LIVE]                pt-BR     MISSING     iPad 12.9" → idioma principal (en-US)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-AU     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   en-CA     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   en-GB     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   en-US     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   es-ES     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   es-MX     SAME        6.9"=5 6.5"=5 5.5"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   pt-BR     SAME        6.9"=5 6.5"=5 5.5"=5 iPad 13"=5 iPad 12.9"=5
+Truco Marcador • Conta Tento  51 [LIVE]                   pt-BR     IPAD_OLDER  iPad 13" (já estava há ≥6 versões), iPad 12.9" (já estava há ≥6 versões) · iPhone: 6.9" (subido nesta versão)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-AU     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-AU     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-CA     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-CA     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-GB     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-GB     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-US     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   en-US     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   es-ES     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   es-ES     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   es-MX     MISSING     iPad 13" → idioma principal (pt-BR)
+Truco Marcador • Conta Tento  51 [LIVE]                   es-MX     MISSING     iPad 12.9" → idioma principal (pt-BR)
+Bible Pills: Verses & Prayer  1.2.0 [LIVE]                en-US     SINGLE      6.5"=5
+Bible Pills: Verses & Prayer  1.2.0 [LIVE]                es-ES     SINGLE      6.5"=5
+Bible Pills: Verses & Prayer  1.2.0 [LIVE]                es-MX     SINGLE      6.5"=5
+Bible Pills: Verses & Prayer  1.2.0 [LIVE]                pt-BR     SINGLE      6.5"=5
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               de-DE     SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               en-US     STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-ES     SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-MX     SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ja        STALE       desatualizado: 5.5" · arte nova: 6.9" (histórico de versões (checksum herdado))
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ko        SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               pt-BR     SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               zh-Hans   SINGLE      6.9"=3
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões), iPad 12.9" (já estava há ≥6 versões) · iPhone: 6.9" (há 1 versão(ões))
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               de-DE     MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               de-DE     MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               de-DE     MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-ES     MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-ES     MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-ES     MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-MX     MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-MX     MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               es-MX     MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ja        MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ja        MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ko        MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ko        MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               ko        MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               pt-BR     MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               pt-BR     MISSING     iPad 12.9" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               zh-Hans   MISSING     5.5" → 6.9"
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               zh-Hans   MISSING     iPad 13" → idioma principal (en-US)
+Rocket Pocket: Aim & Launch   12.0.1 [LIVE]               zh-Hans   MISSING     iPad 12.9" → idioma principal (en-US)
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  de-DE     SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  en-US     SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  es-ES     SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  es-MX     SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  fr-FR     SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  it        SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  ja        SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  ko        SINGLE      6.9"=4
+SafeDoc: Document Vault & PD  1.0 [LIVE]                  pt-BR     SINGLE      6.9"=4
+English for Devs - Devlingo   1.9.0 [LIVE]                de-DE     NO_SETS     
+English for Devs - Devlingo   1.9.0 [LIVE]                en-US     SINGLE      6.5"=5
+English for Devs - Devlingo   1.9.0 [LIVE]                es-ES     SINGLE      6.5"=5
+English for Devs - Devlingo   1.9.0 [LIVE]                es-MX     SINGLE      6.5"=5
+English for Devs - Devlingo   1.9.0 [LIVE]                fr-FR     NO_SETS     
+English for Devs - Devlingo   1.9.0 [LIVE]                it        NO_SETS     
+English for Devs - Devlingo   1.9.0 [LIVE]                pt-BR     SINGLE      6.5"=5
+Philos: Philosophy & Stoicis  1.0.3 [LIVE]                en-US     SINGLE      6.9"=5
+Philos: Philosophy & Stoicis  1.0.3 [LIVE]                es-ES     SINGLE      6.9"=5
+Philos: Philosophy & Stoicis  1.0.3 [LIVE]                es-MX     SINGLE      6.9"=5
+Philos: Philosophy & Stoicis  1.0.3 [LIVE]                pt-BR     SINGLE      6.9"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ar-SA     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ca        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                cs        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                da        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                de-DE     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                el        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-AU     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-CA     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-GB     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-US     SINGLE      6.5"=5 iPad 13"=3
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                es-ES     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                es-MX     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fi        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fr-CA     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fr-FR     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                he        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hi        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hr        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hu        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                id        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                it        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ja        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ko        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ms        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                nl-NL     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                no        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pl        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pt-BR     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pt-PT     SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ro        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ru        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                sk        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                sv        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                th        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                tr        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                uk        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                vi        SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                zh-Hans   SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                zh-Hant   SINGLE      6.5"=5
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-US     IPAD_OLDER  iPad 13" (já estava há ≥6 versões) · iPhone: 6.5" (subido nesta versão)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ar-SA     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ca        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                cs        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                da        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                de-DE     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                el        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-AU     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-CA     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                en-GB     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                es-ES     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                es-MX     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fi        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fr-CA     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                fr-FR     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                he        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hi        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hr        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                hu        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                id        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                it        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ja        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ko        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ms        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                nl-NL     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                no        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pl        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pt-BR     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                pt-PT     MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ro        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                ru        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                sk        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                sv        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                th        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                tr        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                uk        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                vi        MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                zh-Hans   MISSING     iPad 13" → idioma principal (en-US)
+BLW Baby Led Weaning Tracker  1.5.3 [LIVE]                zh-Hant   MISSING     iPad 13" → idioma principal (en-US)
+My Way - Saúde e Alimentação  1.0.3 [LIVE]                en-US     STALE       desatualizado: 5.5" · arte nova: 6.5" (empate no histórico: referência o maior tamanho)
+My Way - Saúde e Alimentação  1.0.3 [LIVE]                pt-BR     SAME        6.5"=5 5.5"=5
+
+IPAD_OLDER 13, MISSING 197, NO_SETS 103, PPO_IPAD_INHERITED 15, SAME 537, SINGLE 308, STALE 13
