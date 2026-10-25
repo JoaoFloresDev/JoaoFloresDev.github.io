@@ -1,6 +1,7 @@
 <!doctype html><html><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="lab-stamp" content="2026-10-25T03:21">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel=manifest href="../manifest.webmanifest"><link rel=apple-touch-icon href="../apple-touch-icon.png"><link rel=icon type="image/svg+xml" href="../favicon.svg"><link rel=icon type="image/png" sizes="32x32" href="../favicon-32.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Lab"><meta name="application-name" content="GambitStudio Lab"><meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#07090d" media="(prefers-color-scheme: dark)">
+<meta name="lab-stamp" content="2026-10-25T03:23">
 <script>
 // GitHub Pages caches pages for 10 min: if a newer publish exists, load it over the cache (João, 21/10/2026).
 (function(){try{var cur=document.querySelector('meta[name=lab-stamp]').content;if(!cur||location.protocol==="file:")return;
@@ -588,8 +589,60 @@ img,video{max-width:100%}
   .tiles>.tile,a.tile{min-width:0!important;padding:10px 12px}
   .tile .tv{font-size:clamp(17px,5.4vw,22px)!important;white-space:normal}
 }
+
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a.brand .mark{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%3E%0A%3Cdefs%3E%0A%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%234f8bff%22/%3E%3Cstop%20offset%3D%22.45%22%20stop-color%3D%22%231557e0%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a2a78%22/%3E%0A%20%3C/linearGradient%3E%0A%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%22.28%22%20cy%3D%22.18%22%20r%3D%22.75%22%3E%0A%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%22.30%22/%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22/%3E%0A%20%3C/radialGradient%3E%0A%20%3CradialGradient%20id%3D%22floor%22%20cx%3D%22.5%22%20cy%3D%22.98%22%20r%3D%22.6%22%3E%0A%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23020b2a%22%20stop-opacity%3D%22.45%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23020b2a%22%20stop-opacity%3D%220%22/%3E%0A%20%3C/radialGradient%3E%0A%20%3Cmask%20id%3D%22eye%22%3E%3Crect%20x%3D%22-100%22%20y%3D%22-100%22%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2215.1%22%20cy%3D%2212.3%22%20r%3D%221.15%22%20fill%3D%22%23000%22/%3E%3C/mask%3E%0A%20%3Cfilter%20id%3D%22sh%22%20x%3D%22-30%25%22%20y%3D%22-30%25%22%20width%3D%22160%25%22%20height%3D%22160%25%22%3E%0A%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%221.152%22%20stdDeviation%3D%221.792%22%20flood-color%3D%22%23000%22%20flood-opacity%3D%22.32%22/%3E%0A%20%3C/filter%3E%0A%20%3CclipPath%20id%3D%22clip%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214.08%22/%3E%3C/clipPath%3E%0A%3C/defs%3E%0A%3Cg%20clip-path%3D%22url%28%23clip%29%22%3E%0A%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22url%28%23bg%29%22/%3E%0A%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22url%28%23floor%29%22/%3E%0A%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22url%28%23glow%29%22/%3E%0A%20%3Cg%3E%0A%20%20%3Cg%20transform%3D%22translate%2832.0%2C32.768%29%20scale%281.6654275092936803%29%20translate%28-17.6%2C-17.05%29%22%20fill%3D%22%23fff%22%20mask%3D%22url%28%23eye%29%22%3E%3Cpath%20d%3D%22M26%2030.5H9.2c-.5%200-.9-.4-.9-.9v-1.3c0-3.3%201.6-6.4%204.2-8.4l1.1-.8-1-1.7-2.4%201.9c-.6.5-1.5.4-2-.2l-.8-1c-.5-.6-.4-1.5.2-2L17%208.6c.6-.5%201.3-.8%202.1-.9l-.5-3.1c-.1-.6.6-1%201-.6l2.6%202.5c2.9%202.8%204.6%206.6%204.7%2010.6l.2%2012.4c0%20.5-.4.9-.9.9z%22/%3E%3Cpath%20d%3D%22M22.2%206.6l-3.3-.4%201.6-2.6z%22/%3E%3C/g%3E%0A%20%3C/g%3E%0A%3C/g%3E%3C/svg%3E")!important;width:26px;height:26px;border-radius:7px;
+  box-shadow:0 1px 2px rgba(0,0,0,.14),0 3px 10px -4px rgba(0,0,0,.25)}
+.mtitle,.hback,.tabbar{display:none}
+a.nav.on{background:color-mix(in srgb,var(--bar) 13%,transparent);color:var(--tx);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--bar) 22%,transparent)}
+a.nav .flw-mon{transition:transform .18s ease}
+a.nav:hover .flw-mon{transform:translateY(-1px) scale(1.06)}
+/* dono da seção: legenda calma ao lado do título, não mais um segundo título em caixa alta */
+h2 .ownb,h3 .ownb{text-transform:none;letter-spacing:0;font-family:var(--f-text);font-size:12.5px;font-weight:500;vertical-align:middle}
+h2 .ownb .ownp b,h3 .ownb .ownp b{font-weight:700}
+div.own{border-color:var(--bd-soft);box-shadow:var(--sh);border-radius:var(--rad)}
+@media(max-width:620px){
+  header.top{border-bottom:1px solid var(--bd-soft)}
+  header.top .navs{display:none!important}
+  .topin{gap:10px;padding:0 0 0 env(safe-area-inset-left,0px);min-height:52px}
+  a.brand{min-width:0;min-height:44px;justify-content:flex-start;flex:none}
+  a.brand .mark{width:30px;height:30px;border-radius:8px}
+  .mtitle{display:block;flex:1;min-width:0;font:800 18px/1.25 var(--f-disp);letter-spacing:-.02em;
+    color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .2s ease}
+  html.has-h1 .mtitle{opacity:0}
+  html.has-h1.past-h1 .mtitle{opacity:1}
+  .hback{display:flex;align-items:center;justify-content:center;flex:none;width:34px;min-height:44px;
+    margin-left:-6px;margin-right:-4px;color:var(--bar)}
+  .tabbar{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:fixed;z-index:70;left:0;right:0;bottom:0;
+    padding:4px max(4px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(4px,env(safe-area-inset-left,0px));
+    background:color-mix(in srgb,var(--card) 82%,transparent);
+    -webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px);
+    border-top:1px solid var(--bd-soft);box-shadow:0 -10px 30px -16px rgba(0,0,0,.22)}
+  a.tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;min-width:44px;
+    color:var(--mut);font:700 10.5px/1.15 var(--f-disp);letter-spacing:.01em;-webkit-user-select:none;user-select:none;
+    -webkit-touch-callout:none}
+  a.tab:hover{text-decoration:none}
+  a.tab .ti{display:flex;align-items:center;justify-content:center;width:54px;height:32px;border-radius:999px;
+    transition:background .18s ease}
+  a.tab .ti img{width:30px;height:30px;object-fit:contain;opacity:.6;filter:saturate(.5);
+    transition:opacity .18s ease,filter .18s ease,transform .18s ease}
+  a.tab .tl{white-space:nowrap}
+  a.tab.on{color:var(--bar)}
+  a.tab.on .ti{background:color-mix(in srgb,var(--bar) 15%,transparent)}
+  a.tab.on .ti img{opacity:1;filter:none;transform:scale(1.07)}
+  a.tab:active .ti{transform:scale(.94)}
+  .wrap{padding-top:18px;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+  .mstamp{margin:-6px 0 12px}
+  .card,a.tile,.row,.fcard,div.own,.board,table.t,.twrap,#md{border-radius:16px}
+  h1{font-size:26px;line-height:1.2}
+  h2{margin-top:28px}
+}
+@media(prefers-color-scheme:dark){
+  .tabbar{background:color-mix(in srgb,var(--card) 78%,transparent);box-shadow:0 -10px 30px -16px rgba(0,0,0,.7)}
+}
 </style></head>
-<body><header class=top><div class=topin><a class=brand href="../index.html" aria-label="GambitStudio"><span class=mark></span><span class=bname>GambitStudio</span></a><nav class=navs><a class="nav" href="../index.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" width="28" height="28" loading="lazy" alt="Lucario" title="Lucario: dono da aba LAB">LAB</a><a class="nav" href="../fluxos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png" width="28" height="28" loading="lazy" alt="Lapras" title="Lapras: leva todo mundo na travessia: mostra os fluxos e quem está rodando agora">Fluxos</a><a class="nav" href="../business.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" width="28" height="28" loading="lazy" alt="Mewtwo" title="Mewtwo: a mente mais poderosa: entende os números">Business Analysis</a><a class="nav" href="../vendas.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" width="28" height="28" loading="lazy" alt="Kyogre" title="Kyogre: o oceano inteiro de dados">Seller</a><a class="nav" href="../videos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" width="28" height="28" loading="lazy" alt="Moltres" title="Moltres: fogo que se espalha: vídeos que pegam">Vídeos</a><a class="nav" href="../servidor.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" width="28" height="28" loading="lazy" alt="Darkrai" title="Darkrai: não deixa ninguém dormir: segura o Mac acordado pra você usar o Claude de longe">Servidor</a></nav><span class=stamp>atualizado 25/10 03:21</span></div></header><div class="wrap"><div class=mstamp>atualizado 25/10 03:21</div><h1>sunrise-1-4-0</h1><ul><li><a href="../dir/versions__sunrise-1-4-0__img.html">img/</a></li></ul></div><script>
+<body><header class=top><div class=topin><a class=hback href="../index.html" aria-label="voltar" onclick="if(history.length>1){history.back();return false}"><svg viewBox="0 0 12 20" width="12" height="20" aria-hidden="true"><path d="M10 2 2 10l8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class=brand href="../index.html" aria-label="GambitStudio"><span class=mark></span><span class=bname>GambitStudio</span></a><span class=mtitle>sunrise-1-4-0</span><nav class=navs><a class="nav" href="../index.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" width="28" height="28" loading="lazy" alt="Lucario" title="Lucario: dono da aba LAB">LAB</a><a class="nav" href="../fluxos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png" width="28" height="28" loading="lazy" alt="Lapras" title="Lapras: leva todo mundo na travessia: mostra os fluxos e quem está rodando agora">Fluxos</a><a class="nav" href="../business.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" width="28" height="28" loading="lazy" alt="Mewtwo" title="Mewtwo: a mente mais poderosa: entende os números">Business Analysis</a><a class="nav" href="../vendas.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" width="28" height="28" loading="lazy" alt="Kyogre" title="Kyogre: o oceano inteiro de dados">Seller</a><a class="nav" href="../videos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" width="28" height="28" loading="lazy" alt="Moltres" title="Moltres: fogo que se espalha: vídeos que pegam">Vídeos</a><a class="nav" href="../servidor.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" width="28" height="28" loading="lazy" alt="Darkrai" title="Darkrai: não deixa ninguém dormir: segura o Mac acordado pra você usar o Claude de longe">Servidor</a></nav><span class=stamp>atualizado 25/10 03:23</span></div></header><nav class=tabbar aria-label="abas"><a class="tab" href="../index.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" width="28" height="28" loading="lazy" alt="Lucario" title="Lucario: dono da aba LAB"></span><span class=tl>LAB</span></a><a class="tab" href="../fluxos.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png" width="28" height="28" loading="lazy" alt="Lapras" title="Lapras: leva todo mundo na travessia: mostra os fluxos e quem está rodando agora"></span><span class=tl>Fluxos</span></a><a class="tab" href="../business.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" width="28" height="28" loading="lazy" alt="Mewtwo" title="Mewtwo: a mente mais poderosa: entende os números"></span><span class=tl>Business</span></a><a class="tab" href="../vendas.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" width="28" height="28" loading="lazy" alt="Kyogre" title="Kyogre: o oceano inteiro de dados"></span><span class=tl>Seller</span></a><a class="tab" href="../videos.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" width="28" height="28" loading="lazy" alt="Moltres" title="Moltres: fogo que se espalha: vídeos que pegam"></span><span class=tl>Vídeos</span></a><a class="tab" href="../servidor.html"><span class=ti><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" width="28" height="28" loading="lazy" alt="Darkrai" title="Darkrai: não deixa ninguém dormir: segura o Mac acordado pra você usar o Claude de longe"></span><span class=tl>Servidor</span></a></nav><div class="wrap"><div class=mstamp>atualizado 25/10 03:23</div><h1>sunrise-1-4-0</h1><ul><li><a href="../dir/versions__sunrise-1-4-0__img.html">img/</a></li></ul></div><script>
 // chip #N: copia a referência do item pra conversa. clipboard pode ser negado
 // (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
 document.addEventListener("click",function(e){
@@ -610,4 +663,14 @@ document.addEventListener("click",function(e){
 // aba ativa sempre à vista na faixa do menu do celular
 (function(){var n=document.querySelector(".navs"),on=n&&n.querySelector("a.nav.on");
 if(on&&n.scrollWidth>n.clientWidth){n.scrollLeft=Math.max(0,on.offsetLeft-n.offsetLeft-(n.clientWidth-on.offsetWidth)/2);}})();
+// título no header do celular aparece quando o título grande da página sai de vista (padrão iOS)
+(function(){var h=document.querySelector(".wrap h1");if(!h||!window.IntersectionObserver)return;
+var r=document.documentElement;r.classList.add("has-h1");new IntersectionObserver(function(es){
+r.classList.toggle("past-h1",!es[0].isIntersecting);},{rootMargin:"-52px 0px 0px 0px"}).observe(h);})();
+// app instalado no iPhone: link interno com target=_blank abriria a folha do Safari com a URL no topo;
+// dentro do app ele abre no lugar (no Mac/navegador continua abrindo em aba nova).
+(function(){var sa=window.navigator.standalone||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches);
+if(!sa)return;document.documentElement.classList.add("standalone");
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[target]");
+if(!a||a.origin!==location.origin)return;e.preventDefault();location.href=a.href;});})();
 </script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>

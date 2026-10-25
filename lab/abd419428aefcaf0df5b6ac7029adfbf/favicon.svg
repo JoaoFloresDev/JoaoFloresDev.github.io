@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#4f8bff"/><stop offset=".45" stop-color="#1557e0"/><stop offset="1" stop-color="#0a2a78"/>
+ </linearGradient>
+ <radialGradient id="glow" cx=".28" cy=".18" r=".75">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/><stop offset=".55" stop-color="#ffffff" stop-opacity="0"/>
+ </radialGradient>
+ <radialGradient id="floor" cx=".5" cy=".98" r=".6">
+  <stop offset="0" stop-color="#020b2a" stop-opacity=".45"/><stop offset="1" stop-color="#020b2a" stop-opacity="0"/>
+ </radialGradient>
+ <mask id="eye"><rect x="-100" y="-100" width="300" height="300" fill="#fff"/><circle cx="15.1" cy="12.3" r="1.15" fill="#000"/></mask>
+ <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="1.152" stdDeviation="1.792" flood-color="#000" flood-opacity=".32"/>
+ </filter>
+ <clipPath id="clip"><rect width="64" height="64" rx="14.08"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+ <rect width="64" height="64" fill="url(#bg)"/>
+ <rect width="64" height="64" fill="url(#floor)"/>
+ <rect width="64" height="64" fill="url(#glow)"/>
+ <g>
+  <g transform="translate(32.0,32.768) scale(1.6654275092936803) translate(-17.6,-17.05)" fill="#fff" mask="url(#eye)"><path d="M26 30.5H9.2c-.5 0-.9-.4-.9-.9v-1.3c0-3.3 1.6-6.4 4.2-8.4l1.1-.8-1-1.7-2.4 1.9c-.6.5-1.5.4-2-.2l-.8-1c-.5-.6-.4-1.5.2-2L17 8.6c.6-.5 1.3-.8 2.1-.9l-.5-3.1c-.1-.6.6-1 1-.6l2.6 2.5c2.9 2.8 4.6 6.6 4.7 10.6l.2 12.4c0 .5-.4.9-.9.9z"/><path d="M22.2 6.6l-3.3-.4 1.6-2.6z"/></g>
+ </g>
+</g></svg>
