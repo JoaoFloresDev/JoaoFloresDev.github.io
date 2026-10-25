@@ -591,8 +591,8 @@
   "cover_t": 1.9,
   "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: som de 'aviso/plantão' ou pop 120-128 BPM a ~15-20% sob a narração; 1º tempo forte no ADVERTE (1,31 s) e o do porquê no 'demais' (9,29 s).",
   "ai_label": true,
-  "status": "wait",
-  "status_at": "2026-10-21",
+  "status": "publicado",
+  "status_at": "2026-10-24",
   "status_note": "refazendo com o tom 'O Ministério da Saúde adverte' (João, 21/10)"
  },
  {
@@ -606,7 +606,8 @@
   "cover_t": 2.0,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada em 1,8 s) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo NÃO PODE em 11,75 s; 1º corte forte de cena em 1,93 s (sai o gancho, entra 'Parece só um pãozinho').",
   "ai_label": true,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-24"
  },
  {
   "slug": "blw-54-quanto-come-6-meses",
@@ -619,8 +620,8 @@
   "cover_t": 0.45,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM sem voz, ~15-20% sob a narração, tempo forte no carimbo '2 a 3' em 12,17 s; 1º corte forte de cena em 13,4 s (entra 'A porção cresce').",
   "ai_label": true,
-  "status": "wait",
-  "status_at": "2026-10-21",
+  "status": "publicado",
+  "status_at": "2026-10-24",
   "status_note": "quiz entregava a resposta: a certa era a única específica ('2 a 3 colheres') contra uma genérica ('meio prato')"
  },
  {
@@ -634,8 +635,8 @@
   "cover_t": 2.0,
   "sound": "Trilha do kit pop_124 (loop_track.py, intro muda cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM a ~15-20% sob a narração, com tempo forte no carimbo MITO! (8,13 s); 1º corte forte em 3,27 s (entra o tempero pronto, tela dividida).",
   "ai_label": true,
-  "status": "ok",
-  "status_at": "2026-10-21"
+  "status": "publicado",
+  "status_at": "2026-10-24"
  },
  {
   "slug": "blw-56-virou-a-cabeca",
@@ -648,6 +649,7 @@
   "cover_t": 5.3,
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop leve/quiz 120-128 BPM, ~15-20% sob a narração; 1º corte forte em 7,02 s (carimbo PARA!), depois 12,59 s (OFERECE!) e 17,23 s (PARA!).",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-10-24"
  }
 ]
