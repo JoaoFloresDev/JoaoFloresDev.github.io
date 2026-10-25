@@ -690,5 +690,18 @@
   "sound": "Trilha do kit _kit/music/pop_124.mp3 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM, ~15-20% sob a narração; 1º corte forte em 10,48 s (carimbo RESPEITA!).",
   "ai_label": false,
   "status": "wait"
+ },
+ {
+  "slug": "blw-59-gelatina-ou-petit-suisse",
+  "ref": "BLW-59",
+  "app": "BLW",
+  "num": "59",
+  "title": "O Ministério da Saúde responde: gelatina zero ou petit suisse? (desafio)",
+  "hook": "O Ministério da Saúde responde: no lanche do seu bebê, gelatina zero ou petit suisse?",
+  "dur": 28,
+  "cover_t": 4.7,
+  "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop/quiz 120-128 BPM; 1º corte forte em 9,06 s (carimbo NENHUM DOS DOIS), contagem em 7,56 / 8,14 / 8,71 s.",
+  "ai_label": true,
+  "status": "wait"
  }
 ]
