@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T22:55:51.797401+00:00",
+  "generated": "2026-10-25T19:44:05.922754+00:00",
   "territories": [
     "USA",
     "BRA",
@@ -5809,14 +5809,6 @@
       "errors": []
     },
     {
-      "app_id": "1524664358",
-      "name": "Medic! App",
-      "bundle_id": "com.medicapp.app",
-      "subscriptions": [],
-      "iaps": [],
-      "errors": []
-    },
-    {
       "app_id": "6502218501",
       "name": "My Expenses: Personal Finances",
       "bundle_id": "com.gambit.meusgastos",
@@ -9856,14 +9848,6 @@
           }
         }
       ],
-      "errors": []
-    },
-    {
-      "app_id": "6772795048",
-      "name": "Peptide Tracker: GLP-1 & Dose",
-      "bundle_id": "com.gambitstudio.peptidecalc",
-      "subscriptions": [],
-      "iaps": [],
       "errors": []
     },
     {
