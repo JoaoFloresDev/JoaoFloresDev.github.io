@@ -703,5 +703,18 @@
   "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop/quiz 120-128 BPM; 1º corte forte em 9,06 s (carimbo NENHUM DOS DOIS), contagem em 7,56 / 8,14 / 8,71 s.",
   "ai_label": true,
   "status": "wait"
+ },
+ {
+  "slug": "blw-61-adverte-cafe-com-leite",
+  "ref": "BLW-61",
+  "app": "BLW",
+  "num": "61",
+  "title": "O Ministério da Saúde adverte: café com leite da vó",
+  "hook": "O Ministério da Saúde adverte: o golinho de café com leite que a vó dá pro seu bebê...",
+  "dur": 28,
+  "cover_t": 3.0,
+  "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: som de 'aviso/plantão' ou pop 120-128 BPM a ~15-20% sob a narração; 1º tempo forte no ADVERTE (1,29 s) e o da resposta em 6,93 s.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
