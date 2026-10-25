@@ -193,7 +193,7 @@
   "case": "2153 pt-BR 65-55",
   "label": "same",
   "status": "SAME",
-  "reordered": true,
+  "reordered": false,
   "positions": [
    [
     1,
@@ -221,9 +221,9 @@
    ],
    [
     5,
-    3,
-    0.1199,
-    0.2422
+    5,
+    0.1118,
+    0.2656
    ]
   ]
  },
