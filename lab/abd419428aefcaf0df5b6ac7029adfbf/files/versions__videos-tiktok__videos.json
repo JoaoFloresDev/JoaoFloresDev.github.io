@@ -651,5 +651,18 @@
   "ai_label": false,
   "status": "publicado",
   "status_at": "2026-10-24"
+ },
+ {
+  "slug": "blw-58-papinha-de-potinho",
+  "ref": "BLW-58",
+  "app": "BLW",
+  "num": "58",
+  "title": "O Ministério da Saúde responde: papinha de potinho resolve?",
+  "hook": "O Ministério da Saúde responde: no seu dia corrido, papinha de potinho resolve?",
+  "dur": 27,
+  "cover_t": 2.7,
+  "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM a ~15-20%; 1o corte forte em 8,05 s (carimbo EVITE), depois 9,25 s (divisoria varre pra direita) e 13,42 s (varre pra esquerda, potinho de casa).",
+  "ai_label": true,
+  "status": "wait"
  }
 ]
