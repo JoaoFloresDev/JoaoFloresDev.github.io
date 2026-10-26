@@ -736,32 +736,6 @@
   "status": "wait"
  },
  {
-  "slug": "blw-64-acha-o-erro-prato",
-  "ref": "BLW-64",
-  "app": "BLW",
-  "num": "64",
-  "title": "O Ministério da Saúde responde: acha o erro no prato do bebê (desafio)",
-  "hook": "O Ministério da Saúde responde: tem um erro no prato do seu bebê. Você acha em três segundos?",
-  "dur": 26,
-  "cover_t": 3.5,
-  "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: som de quiz/suspense 120-128 BPM a ~15-20%; contagem em 6,40 / 7,07 / 7,90 s, 'acabou' em 8,44 s, 1º corte forte na revelação em 10,27 s.",
-  "ai_label": true,
-  "status": "wait"
- },
- {
-  "slug": "blw-63-sobrou-comida-3-regras",
-  "ref": "BLW-63",
-  "app": "BLW",
-  "num": "63",
-  "title": "O Ministério da Saúde responde: sobrou comida, guarda pro jantar? (3 regras)",
-  "hook": "O Ministério da Saúde responde: seu bebê deixou metade no prato. Dá pra guardar pro jantar?",
-  "dur": 28,
-  "cover_t": 5.1,
-  "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM a ~15-20% sob a narração; corte forte no 'NÃO VOLTA' (6,98 s) e nas entradas das regras 2 (9,4 s) e 3 (13,9 s).",
-  "ai_label": true,
-  "status": "wait"
- },
- {
   "slug": "blw-66-calor-agua-ou-coco",
   "ref": "BLW-66",
   "app": "BLW",
@@ -784,6 +758,32 @@
   "dur": 23,
   "cover_t": 2.45,
   "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Hit no 'germes' (5,17 s) e punch no 'Mexe' (11,15 s).",
+  "ai_label": true,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-63-sobrou-comida-3-regras",
+  "ref": "BLW-63",
+  "app": "BLW Baby",
+  "num": "63",
+  "title": "Sobrou comida no prato? Não guarda",
+  "hook": "Sobrou comida no prato do seu bebê? Não guarda.",
+  "dur": 24,
+  "cover_t": 1.9,
+  "sound": "Trilha do kit pop_124 a 0,3 sob a voz. Se trocar no TikTok: pop leve 120-128 BPM a ~15-20%; impactos em 2,3 s (NÃO GUARDA), 6,7 s (carimbo NÃO VOLTA) e 14,2 s (3 DIAS).",
+  "ai_label": true,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-64-acha-o-erro-prato",
+  "ref": "BLW-64",
+  "app": "BLW Baby",
+  "num": "64",
+  "title": "Esse prato tem um erro",
+  "hook": "Seu bebê come assim? Esse prato tem um erro.",
+  "dur": 23,
+  "cover_t": 2.8,
+  "sound": "Trilha make_beat 128 BPM a 0,3. Revelacao (impact) em 3,07 s; troca pro prato certo em 5,34 s; CTA em 14,25 s.",
   "ai_label": true,
   "status": "wait"
  }
