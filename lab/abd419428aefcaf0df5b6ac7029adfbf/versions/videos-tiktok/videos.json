@@ -723,19 +723,6 @@
   "status_at": "2026-10-25"
  },
  {
-  "slug": "blw-62-sopra-ou-mexe",
-  "ref": "BLW-62",
-  "app": "BLW",
-  "num": "62",
-  "title": "O Ministério da Saúde responde: comida quente, sopra ou mexe?",
-  "hook": "O Ministério da Saúde responde: a comida do seu bebê tá quente. Você sopra, ou mexe?",
-  "dur": 28,
-  "cover_t": 5.1,
-  "sound": "Trilha do kit pop_124 (loop_track.py, intro cortada) a 0,3 sob a voz. Se trocar no TikTok: pop calmo 120-128 BPM a ~15-20% sob a narração; tempo forte no 'Peraí' (8,0 s, congela o quadro) e na resposta 'mexe' (10,78 s).",
-  "ai_label": true,
-  "status": "wait"
- },
- {
   "slug": "blw-65-sem-dente-comeca-ou-espera",
   "ref": "BLW-65",
   "app": "BLW",
@@ -784,6 +771,19 @@
   "dur": 29,
   "cover_t": 2.0,
   "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Se trocar no TikTok: pop/quiz 120-128 BPM a ~15-20%; 1º corte forte em 8,28 s (carimbo É A ÁGUA), depois 11,47 s (cartão B à frente) e 16,07 s (NO CALORÃO, MAIS ÁGUA).",
+  "ai_label": true,
+  "status": "wait"
+ },
+ {
+  "slug": "blw-62-sopra-ou-mexe",
+  "ref": "BLW-62",
+  "app": "BLW Baby",
+  "num": "62",
+  "title": "Não sopre a comida do seu bebê",
+  "hook": "Não sopre a comida do seu bebê. Entenda o porquê.",
+  "dur": 23,
+  "cover_t": 2.45,
+  "sound": "Trilha do kit pop_124 (loop_track.py) a 0,3 sob a voz. Hit no 'germes' (5,17 s) e punch no 'Mexe' (11,15 s).",
   "ai_label": true,
   "status": "wait"
  }
