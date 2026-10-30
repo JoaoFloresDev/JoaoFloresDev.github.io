@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T23:09:47.513820+00:00",
+  "generated": "2026-10-30T20:19:58.642371+00:00",
   "territories": [
     "USA",
     "BRA",
@@ -14524,6 +14524,15 @@
         }
       ],
       "errors": []
+    }
+  ],
+  "stale": true,
+  "stale_reason": "1 app(s) com leitura falha: Cloak: Hide & Lock Apps Vault (iap prices applocker.yearly.pro: 404)",
+  "auth_errors": [
+    {
+      "source": "asc pricing",
+      "status": "404",
+      "why": "Cloak: Hide & Lock Apps Vault: iap prices applocker.yearly.pro: 404"
     }
   ]
 }
