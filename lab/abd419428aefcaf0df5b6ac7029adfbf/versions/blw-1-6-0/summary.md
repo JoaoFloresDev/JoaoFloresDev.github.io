@@ -13,6 +13,12 @@
   - selo de risco de engasgo e nota de segurança em cada alimento
   - textos de alergênicos: introdução precoce, 2 h de observação, sinais de emergência
   - espanhol corrigido (ano/año, acentos)
+- **Dados de alimentos alinhados às fontes oficiais** (sem commit ainda)
+  - mel: idade 1 → 2 anos (botulismo antes de 1 ano, SBP/CDC; Ministério da Saúde: nada de açúcar, mel incluído, até 2 anos)
+  - tapioca: 9 → 6 meses, com aviso de que nenhuma fonte oficial fixa idade e do risco de engasgo da massa grudenta (CDC)
+  - pão de queijo pronto: ultraprocessado, evitar até 2 anos (MS); o caseiro segue após 1 ano
+  - queijo: sai "cubos só depois de 2 anos"; fica ralado, derretido ou fatia fina (CDC, sem idade)
+  - salsicha/embutidos: 1 → 2 anos (ultraprocessado, MS)
 - **Seção Segurança nas Dicas** (`1c7b560`)
   - engasgo × reflexo de gag, com primeiros socorros
   - montagem segura, formatos por idade, alimentos a evitar
