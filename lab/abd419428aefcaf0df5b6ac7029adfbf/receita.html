@@ -1,0 +1,739 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel=manifest href="manifest.webmanifest"><link rel=apple-touch-icon href="apple-touch-icon.png"><link rel=icon type="image/svg+xml" href="favicon.svg"><link rel=icon type="image/png" sizes="32x32" href="favicon-32.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Lab"><meta name="application-name" content="GambitStudio Lab"><meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#07090d" media="(prefers-color-scheme: dark)">
+<script>function hardRefresh(){var y=window.scrollY,r=document.querySelector('.hrow'),rx=r?r.scrollLeft:0;try{localStorage.clear()}catch(e){}try{sessionStorage.clear()}catch(e){}try{sessionStorage.setItem('hr-y',y);sessionStorage.setItem('hrow',rx)}catch(e){}document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n)document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'});var go=function(){var u=new URL(location.href);u.searchParams.set('r',Date.now());location.replace(u.toString())};if(window.caches&&caches.keys){caches.keys().then(function(k){return Promise.all(k.map(function(x){return caches.delete(x)}))}).then(go,go)}else{go()}return false}addEventListener('load',function(){try{var y=sessionStorage.getItem('hr-y');if(y!==null){sessionStorage.removeItem('hr-y');scrollTo(0,parseInt(y))}}catch(e){}});</script>
+<style>a.hback2{flex:none;display:inline-flex;align-items:center;min-height:36px;padding:0 12px;margin-right:6px;border:1.5px solid #2f80ed;border-radius:8px;color:#2f80ed;font-weight:600;font-size:13px;text-decoration:none}a.hback2:hover{background:color-mix(in srgb,#2f80ed 10%,transparent);text-decoration:none}</style>
+<meta name="lab-stamp" content="2026-11-02T18:13">
+<script>
+// GitHub Pages caches pages for 10 min: if a newer publish exists, load it over the cache (João, 21/10/2026).
+(function(){try{var cur=document.querySelector('meta[name=lab-stamp]').content;if(!cur||location.protocol==="file:")return;
+var base=location.href.split("#")[0].replace(/[?&]v=\d+/,""),sep=base.indexOf("?")<0?"?":"&";
+fetch(base+sep+"v="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){
+var m=t.match(/name="lab-stamp" content="([^"]*)"/);if(m&&m[1]&&m[1]!==cur){location.replace(base+sep+"v="+Date.now()+location.hash)}
+}).catch(function(){})}catch(e){}})();
+</script>
+<meta name="robots" content="noindex,nofollow">
+<title>Receita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f4f5f8;--card:#fff;--tx:#0e1015;--mut:#4a5160;--acc:#2b3340;--ok:#0d9668;--down:#c22;--bd:#c9cfda;--hl:#fff7e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1013;--card:#1a1e25;--tx:#f2f4f8;--mut:#aab3c2;--acc:#ccd6e6;--bd:#39404d;--hl:#2a2717}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,system-ui,sans-serif}
+header.top{position:sticky;top:0;z-index:50;padding-top:env(safe-area-inset-top,0px);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.6) blur(10px);
+  -webkit-backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--bd-soft)}
+.topin{width:min(1680px,94vw);margin:0 auto;display:flex;align-items:center;gap:10px 22px;
+  flex-wrap:wrap;padding:11px 0}
+a.brand{display:flex;align-items:center;gap:9px;font-family:var(--f-disp);font-size:15px;
+  font-weight:800;letter-spacing:-.015em;color:var(--tx);white-space:nowrap}
+a.brand:hover{text-decoration:none}
+a.brand .mark{width:21px;height:21px;background-size:contain;background-repeat:no-repeat;
+  background-position:center;flex:none}
+.navs{display:flex;gap:4px;flex-wrap:wrap;min-width:0}
+a.nav{display:inline-flex;align-items:center;gap:5px;font-family:var(--f-disp);font-size:13px;font-weight:600;color:var(--mut);
+  padding:5px 11px;border-radius:999px;white-space:nowrap}
+a.nav:hover{color:var(--tx);background:var(--bd-soft);text-decoration:none}
+a.nav.on{color:var(--tx);background:var(--bd-soft)}
+.stamp{margin-left:auto;font-size:11.5px;color:var(--mut);white-space:nowrap}
+.mstamp{display:none}
+.ico.lab{display:inline-block;vertical-align:-5px;background-color:transparent;background-size:contain;
+  background-repeat:no-repeat;background-position:center;border-radius:0}
+/* O quadro é a primeira coisa que o João lê e estava no mesmo fundo do resto da
+   página; agora é um painel com fundo próprio (João, 02/10). */
+.board{margin:18px 0 10px;padding:16px 18px 18px;border-radius:var(--rad);
+  border:1px solid var(--bd-soft);box-shadow:var(--sh);
+  background:linear-gradient(180deg,var(--boardtop),var(--boardbot))}
+.boardh h2{margin:0 0 12px;border-top:0;padding-top:0}
+/* Quadro numa linha só, com scroll horizontal — nunca quebra em duas linhas
+   (João, 14/10: "scroll horizontal no quadro, sem quebrar em duas linhas").
+   Cada coluna mostra todos os cards, sem teto de altura. */
+.board .hrow{display:flex;flex-wrap:nowrap;gap:18px;overflow-x:auto;overflow-y:visible;
+  align-items:flex-start;padding:16px 18px 14px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.board .hcol{flex:0 0 300px;min-width:300px;scroll-snap-align:start}.board .hcol:last-child{margin-right:0}
+@media(max-width:600px){.board .hcol{flex-basis:82vw;min-width:82vw}}
+.board .hcol>.rows{max-height:none;overflow:visible;padding-right:0}
+.board .row{background:var(--cardup);border-color:var(--bdup);box-shadow:var(--sh)}
+.iid{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  color:var(--mut);background:var(--bd-soft);border:1px solid var(--bd);border-radius:999px;
+  padding:1px 8px;cursor:pointer;line-height:1.5}
+.iid:hover{color:var(--tx);border-color:var(--mut)}
+.iid.ok{color:var(--ok);border-color:var(--ok)}
+/* card que é link: o cartão inteiro abre o documento */
+a.card.lk{display:flex;flex-direction:column;color:var(--tx);text-decoration:none;
+  transition:border-color .16s ease,box-shadow .16s ease}
+a.card.lk:hover{border-color:var(--mut);box-shadow:var(--sh-up);text-decoration:none}
+a.card.lk>p{flex:1;margin:6px 0 10px}
+.lkmore{font-family:var(--f-disp);font-size:11px;font-weight:600;letter-spacing:.04em;
+  color:var(--mut)}
+a.card.lk:hover .lkmore{color:var(--tx)}
+a.more{align-self:flex-start;margin-top:10px;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:600;color:var(--mut);border:1px solid var(--bd);border-radius:999px;padding:3px 11px}
+a.more:hover{color:var(--tx);border-color:var(--mut);text-decoration:none}
+/* Cabeçalho do card: ícone · nome · chip do número, em colunas fixas. Em
+   fluxo normal o ícone do lab caía numa linha só pra ele. */
+.rhead{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px}
+.rhead .ico{margin-right:0;width:20px;height:20px}
+.rwhen{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--mut);margin-right:4px}
+.rows>.rowwrap>.row,.rows>.row{display:flex;flex-direction:column}
+.board .hcol>h2{margin-top:0;border-top:0;padding-top:0}
+.wrap{width:min(1680px,94vw);margin:0 auto;padding:24px 0 80px}@media(max-width:860px){.wrap{width:calc(100vw - 28px)}}.ico{width:20px;height:20px;border-radius:5px;vertical-align:-5px;margin-right:7px;background:var(--bd);object-fit:cover}.ico.big{width:30px;height:30px;border-radius:7px;vertical-align:-9px}h2{border-top:1px solid var(--bd);padding-top:20px;margin-top:30px}section,.twrap{min-width:0}h2:first-of-type{border-top:0;padding-top:0}h1+h2,.sub+h2{border-top:0;padding-top:0}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:34px 0 12px}
+.sub{color:var(--mut);margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card b{font-size:14.5px}.card p{margin:5px 0 0;color:var(--mut);font-size:13.5px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.up{background:var(--ok)}.dn{background:var(--down)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{background:rgba(125,125,125,.13);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.pill{display:inline-block;background:rgba(125,125,125,.12);border-radius:99px;padding:1px 10px;margin:2px 3px 2px 0;font-size:12.5px}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+table.t td,table.t th{padding:7px 12px;border-bottom:1px solid var(--bd);font-size:13.5px;text-align:left;vertical-align:top}
+table.t th{color:var(--mut);font-weight:600}table.t tr:last-child td{border-bottom:0}
+.twrap{overflow-x:auto;border-radius:12px}
+.imgs{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.imgs img{width:100%;border-radius:8px;border:1px solid var(--bd)}
+#md{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px 26px}
+#md pre{overflow-x:auto;background:rgba(125,125,125,.1);padding:10px;border-radius:8px}
+#md table{border-collapse:collapse}#md td,#md th{border:1px solid var(--bd);padding:4px 9px;font-size:13.5px}
+#md img{max-width:100%}
+.hcol .row{flex-direction:column;align-items:flex-start;gap:4px}.hcol .row b{white-space:normal}.hcol .row span{width:100%}.hcol .row em{display:none}.hcol .row.done b{font-size:12px}.hrow{display:flex;gap:20px;overflow-x:auto;align-items:flex-start;padding:16px 28px 12px;margin:18px 0 26px;background:rgba(125,125,125,.07);border:1px solid var(--bd);border-radius:16px;scroll-padding:0 28px}.hcol{flex:0 0 340px;min-width:340px}.hcol:last-child{margin-right:28px}.hcol h2{margin-top:0}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 20px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:start}@media(max-width:900px){.cols2{grid-template-columns:1fr}}h3.team{margin:18px 0 8px;font-size:15px;font-weight:600}h3.team .chain{display:block;color:var(--mut);font-weight:400;font-size:12.5px;margin-top:2px}.card .step{display:inline-block;min-width:18px;height:18px;line-height:18px;text-align:center;border-radius:9px;background:var(--bd);color:var(--mut);font-size:11px;font-weight:600;margin-right:6px}.grid4{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}@media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid4{grid-template-columns:1fr}}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font-size:14.5px}
+a.row:hover{border-color:var(--acc);text-decoration:none}
+.row span{flex:1;color:var(--mut)}.row em{color:var(--mut);font-style:normal;font-size:18px}
+.row.done b{color:var(--mut);font-weight:500;font-size:12.5px}.row.done span b{color:var(--tx)}.row.done span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.hdr h1{margin:0}.hdr .sub{margin:2px 0 0}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 22px;font-size:14.5px;color:var(--acc)}
+.btn:hover{border-color:var(--acc);text-decoration:none}
+/* big numbers numa linha só, com scroll horizontal — nunca quebram em duas linhas (João, 14/10) */
+.tiles{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;margin:14px 0 6px;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.tiles>.tile{flex:0 0 auto;min-width:168px}
+a.tile{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;color:var(--tx);min-width:128px}
+a.tile:hover{border-color:var(--acc);text-decoration:none}
+.tile .tl{font-size:12px;color:var(--mut);white-space:nowrap}
+.tile .tv{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.tile .ts{font-size:11.5px;color:var(--mut);margin-top:1px;white-space:nowrap}
+.tv.up{color:var(--ok);background:none}.tv.dn{color:var(--down);background:none}
+.vd{font-size:15px;font-weight:700;margin-right:10px;white-space:nowrap}
+.vd.s{color:var(--ok)}.vd.w{color:#c9930a}.vd.k{color:var(--down)}
+.shots{display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.shots img{height:210px;border-radius:10px;border:1px solid var(--bd);flex:0 0 auto}
+.gallery img{height:460px;max-height:72vh}
+.st{display:inline-block;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap;vertical-align:1px}
+.st.run{background:rgba(13,150,104,.16);color:var(--ok)}
+.st.appr{background:rgba(201,147,10,.16);color:#c9930a}
+.st.rev{background:rgba(125,140,170,.14);color:var(--mut)}
+.st.draft{background:rgba(139,92,246,.15);color:#8b5cf6}
+.st.mut{background:rgba(125,125,125,.16);color:var(--mut)}
+.st.crit{background:rgba(200,34,34,.15);color:var(--down)}
+.rowwrap{position:relative}
+.rowwrap .row{padding-right:38px}
+.delf{position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;margin:0}
+.del{background:none;border:none;color:var(--mut);font-size:17px;line-height:1;padding:6px 12px;cursor:pointer;border-radius:8px;opacity:.45}
+.rowwrap:hover .del{opacity:1}
+.del:hover{color:var(--down);background:rgba(200,34,34,.08)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:12px;margin-top:12px}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.fcard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px}
+.fcard .fh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.fcard .fh b{font-size:14.5px}.fcard .fh span{font-size:12.5px;color:var(--mut);white-space:nowrap}
+.fs{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:13px}
+.fs .fl{flex:0 0 188px;color:var(--tx)}
+.fs .fb{flex:1;height:13px}
+.fs .fb i{display:block;height:100%;background:var(--acc);border-radius:3px;min-width:2px}
+.fs .fb i.alt{background:var(--ok)}
+.fs .fn{flex:0 0 auto;font-variant-numeric:tabular-nums;font-size:12.5px}
+.fs.tot .fl,.fs.tot .fn{font-weight:700}
+.leak{margin:0 0 5px 176px;font-size:12px;color:var(--down)}
+.leak b{font-variant-numeric:tabular-nums}
+.fdiv{margin:9px 0 3px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.fmeta{font-size:12.5px;color:var(--mut);margin:-3px 0 9px}
+.rrow{margin:0}
+.rc{display:grid;grid-template-columns:34px 72px minmax(0,1fr);align-items:baseline;gap:10px;padding:7px 0;border-top:1px solid var(--bd-soft)}
+.rc b{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.rc .rv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25}
+.rc .rb{display:block;font-size:11px;color:var(--mut)}
+.fnds{list-style:none;margin:10px 0 0;padding:0}
+.fnds li{position:relative;padding:2px 0 2px 16px;font-size:13px;color:var(--tx)}
+.fnds li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
+.fnds li:before{background:var(--bd)}.fnds li.crit:before{background:var(--down)}.fnds li.warn:before{background:#c9930a}.fnds li.ok:before{background:var(--ok)}
+.nxt .nxl{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nxt b{font-size:14px}.nxt p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.fh .st{margin-left:8px}
+.dirbox{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px 24px;margin:20px 0 8px}
+.dirlab{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+.dirh{font-size:19px;line-height:1.35;margin:4px 0 12px;text-transform:none;letter-spacing:0;color:var(--tx)}
+.dirp{margin:0 0 9px;font-size:14px;line-height:1.6;color:var(--tx)}
+.prio{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--bd)}
+.prn{flex:0 0 26px;height:26px;line-height:26px;text-align:center;border-radius:13px;background:var(--acc);color:var(--card);font-weight:700;font-size:13px}
+.prc{flex:1;min-width:0}
+.prt{font-size:15px;font-weight:600;margin-bottom:3px}
+.prw{margin:0 0 5px;font-size:13.5px;color:var(--tx)}
+.pre{margin:0 0 4px;font-size:13px;color:var(--mut);line-height:1.55}
+.pre b{color:var(--tx);font-weight:600}
+.prp{margin:4px 0 0;font-size:13px;color:var(--tx);border-left:2px solid var(--acc);padding-left:9px}
+.vgrid{display:flex;flex-direction:column;gap:6px}
+.vrow{display:flex;align-items:baseline;gap:9px;font-size:13.5px;flex-wrap:wrap}
+.vrow .st{flex:0 0 auto;margin:0}
+.vrow b{flex:0 0 auto;min-width:118px}
+.vrow span:last-child{flex:1;min-width:220px;color:var(--mut)}
+.nots{margin:0;padding-left:18px}
+.nots li{font-size:13.5px;color:var(--tx);margin-bottom:5px;line-height:1.55}
+.dirfoot{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+@media(max-width:700px){.vrow b{min-width:0}}
+.fnote{font-size:11.5px;color:var(--mut);margin:4px 0 0 176px;line-height:1.35}
+
+/* ---------- camada de acabamento (01/10/2026) ----------
+   Tipografia com duas vozes (display para títulos e números, texto para leitura),
+   neutros com viés do azul da marca em vez de cinza puro, e profundidade por
+   sombra em vez de só borda. Nada aqui renomeia classe: é uma camada por cima. */
+:root{
+  --f-disp:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-text:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --bg:#eef1f7; --card:#ffffff; --tx:#0a0d14; --mut:#4b5567; --acc:#2b3340;
+  --bd:#cbd3e0; --bd-soft:#dfe5ee; --ok:#07804e; --down:#c42121; --warn:#9a4408;
+  --sh:0 1px 2px rgba(16,19,26,.05),0 2px 8px rgba(16,19,26,.04);
+  --sh-up:0 2px 6px rgba(16,19,26,.07),0 10px 24px rgba(16,19,26,.07);
+  --cardup:#ffffff; --bdup:#b9c3d4;
+  --boardtop:#e9edf5; --boardbot:#e3e8f1;
+  --bar:#2563eb; --bar2:#60a5fa;
+  --rad:14px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#07090d; --card:#141922; --tx:#f7f9fc; --mut:#b2bdd0; --acc:#ccd6e6;
+  --bd:#333c4c; --bd-soft:#232a36; --ok:#55e39d; --down:#ff8585; --warn:#ffbb55;
+  --sh:0 1px 2px rgba(0,0,0,.4); --sh-up:0 6px 22px rgba(0,0,0,.5);
+  --cardup:#1d2430; --bdup:#3d4859;
+  --boardtop:#0d1218; --boardbot:#090d13;
+  --bar:#5b9bff; --bar2:#9dc4ff;
+}}
+body{font-family:var(--f-text);font-size:14.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1{font-family:var(--f-disp);font-size:27px;font-weight:800;letter-spacing:-.02em;
+  text-wrap:balance;margin:0 0 2px}
+h1 .mark{display:inline-block;width:28px;height:28px;vertical-align:-5px;margin-right:11px;
+  background-size:contain;background-repeat:no-repeat;background-position:center}
+h2{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);border-top:1px solid var(--bd-soft);
+  padding-top:22px;margin:32px 0 14px}
+h3{font-family:var(--f-disp);letter-spacing:-.01em}
+.sub{font-size:13px;color:var(--mut)}
+code,.mono{font-family:var(--f-mono);font-size:12.5px}
+.card,table.t,a.tile,.row,.fcard,#md{box-shadow:var(--sh);border-color:var(--bd-soft)}
+.card,a.tile,.row,.fcard{border-radius:var(--rad)}
+a.tile,.row{transition:box-shadow .16s ease,border-color .16s ease,transform .16s ease}
+a.tile:hover,a.row:hover{box-shadow:var(--sh-up);border-color:var(--bd);
+  transform:translateY(-1px)}
+/* O card do app é área de leitura, não botão: nada muda no hover. A regra antiga
+   trocava a sombra, e num card sem sombra isso aparecia como animação. */
+.fcard,.fcard:hover{transition:none!important;transform:none!important}
+/* big numbers: the first thing anyone reads on the page */
+.tiles{gap:12px;margin:18px 0 4px}
+a.tile{padding:13px 17px;min-width:148px}
+.tile .tl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--mut)}
+.tile .tv{font-family:var(--f-disp);font-size:25px;font-weight:800;letter-spacing:-.025em;
+  margin-top:3px}
+.tile .ts{font-size:11.5px;color:var(--mut)}
+.tile .tvd{font-family:var(--f-text);font-size:13px;font-weight:600;letter-spacing:0;white-space:nowrap}
+/* tables read as data, not as prose */
+table.t{border-radius:var(--rad);font-variant-numeric:tabular-nums}
+table.t th{font-family:var(--f-disp);font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--bd-soft);border-bottom:1px solid var(--bd)}
+table.t td{padding:9px 13px;border-bottom:1px solid var(--bd-soft)}
+table.t tbody tr:hover td,table.t tr:hover td{background:rgba(125,140,170,.06)}
+.twrap{border-radius:var(--rad)}
+/* buttons */
+.btn{font-family:var(--f-disp);font-weight:600;font-size:13.5px;padding:9px 18px;
+  border-radius:999px;box-shadow:var(--sh);transition:all .16s ease}
+.btn:hover{border-color:var(--acc);box-shadow:var(--sh-up);transform:translateY(-1px)}
+.pill,.st{font-family:var(--f-disp);font-weight:600;font-size:11.5px;letter-spacing:.02em}
+/* status colours carry meaning, so keep them out of the accent */
+.st.run,.st.appr{background:rgba(10,143,88,.14);color:var(--ok)}
+.st.crit{background:rgba(208,47,47,.14);color:var(--down)}
+.st.rev,.st.draft{background:rgba(180,83,9,.14);color:var(--warn)}
+/* the lanes strip and any scroller get a thin, rounded bar */
+.hrow,.twrap,.tiles{scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.hrow::-webkit-scrollbar,.twrap::-webkit-scrollbar,.tiles::-webkit-scrollbar{height:9px}
+.hrow::-webkit-scrollbar-track,
+.twrap::-webkit-scrollbar-track,
+.tiles::-webkit-scrollbar-track{background:transparent}
+.hrow::-webkit-scrollbar-thumb,
+.twrap::-webkit-scrollbar-thumb,
+.tiles::-webkit-scrollbar-thumb{background:var(--bd);border-radius:999px;
+  border:3px solid transparent;background-clip:content-box}
+.hrow::-webkit-scrollbar-thumb:hover,
+.twrap::-webkit-scrollbar-thumb:hover,
+.tiles::-webkit-scrollbar-thumb:hover{background:var(--mut);background-clip:content-box}
+.hrow{background:transparent;border:0;padding:0;border-radius:0}
+.hcol{flex:0 0 clamp(280px,26vw,360px);min-width:0}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);
+  outline-offset:2px;border-radius:8px}
+.dirlist,.prlist{margin:10px 0 0;padding-left:18px;list-style:none}
+.dirlist>li,.prlist>li{position:relative;margin:0 0 7px;font-size:13.5px;line-height:1.5;
+  color:var(--tx)}
+.prlist>li{color:var(--mut);font-size:13px;margin-bottom:5px}
+.dirlist>li::before,.prlist>li::before{content:"";position:absolute;left:-14px;top:.62em;
+  width:5px;height:5px;border-radius:50%;background:var(--acc);opacity:.75}
+.prlist>li::before{background:var(--mut);opacity:.5}
+.dirp{display:none}
+.dapps{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  margin:14px 0 4px;align-items:start}
+.dapp{padding:14px 16px}
+.dah{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.dah b{font-family:var(--f-disp);font-size:14.5px;font-weight:700}
+.drank{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:6px;background:var(--acc);color:var(--card);font-size:11.5px;font-weight:700;flex:none}
+.st.d-dobrar{background:rgba(10,143,88,.16);color:var(--ok)}
+.st.d-consertar{background:rgba(180,83,9,.16);color:var(--warn)}
+.st.d-manter{background:rgba(125,140,170,.16);color:var(--mut)}
+.st.d-congelar{background:rgba(125,140,170,.12);color:var(--mut)}
+.dapp .prlist{margin-top:6px}
+.dcall{color:var(--tx)!important;font-weight:600}
+.fcard[id]{scroll-margin-top:18px}
+.fdet{margin-top:10px;border-top:1px solid var(--bd-soft);padding-top:9px}
+.fdet>summary{cursor:pointer;list-style:none;font-family:var(--f-disp);font-size:11.5px;
+  font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);
+  display:flex;align-items:center;gap:7px}
+.fdet>summary::-webkit-details-marker{display:none}
+.fdet>summary::before{content:"›";font-size:15px;transition:transform .15s}
+.fdet[open]>summary::before{transform:rotate(90deg)}
+.fdet>summary:hover{color:var(--acc)}
+.fdet table.t{font-size:12.5px}
+.fdet table.t td,.fdet table.t th{padding:6px 10px}
+.fgrid.one{grid-template-columns:1fr!important;gap:18px}
+/* Cada app é um painel com profundidade: a luz entra por cima, o corpo escurece
+   até a base e a borda clareia só na primeira linha. É o que separa um app do
+   outro sem precisar de moldura dura. */
+.fgrid.one>.fcard{position:relative;padding:0;overflow:hidden;border-radius:16px;
+  border:1px solid var(--bd-soft);
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 5%, var(--card)) 0%,
+    var(--card) 26%,
+    color-mix(in srgb, #000 7%, var(--card)) 100%);
+  box-shadow:0 1px 2px rgba(0,0,0,.05), 0 10px 26px -14px rgba(0,0,0,.28)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard{
+  background:linear-gradient(180deg,
+    color-mix(in srgb, var(--acc) 9%, var(--card)) 0%,
+    var(--card) 30%,
+    #0a0c10 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -22px rgba(0,0,0,.9)}}
+.fgrid.one>.fcard::before{content:"";position:absolute;inset:0 0 auto;height:1px;
+  background:linear-gradient(90deg, transparent,
+    color-mix(in srgb, var(--acc) 45%, transparent), transparent)}
+.fgrid.one>.fcard>.fh{background:transparent;margin:0;padding:15px 18px 12px;
+  border-bottom:1px solid var(--bd-soft)}
+.fgrid.one>.fcard>.fstats{padding:12px 18px 0}
+.fgrid.one>.fcard>.fcols{padding:16px 18px 6px}
+.fgrid.one>.fcard>.fdet{margin:0;padding:13px 18px 16px;border-top:1px solid var(--bd-soft);
+  background:color-mix(in srgb, #000 4%, transparent)}
+@media(prefers-color-scheme:dark){.fgrid.one>.fcard>.fdet{
+  background:rgba(0,0,0,.25)}}
+.fgrid.one>.fcard>.fh b{font-size:16px;letter-spacing:-.01em}
+.fgrid.one>.fcard>.fh>span{font-size:12.5px;color:var(--tx);opacity:.78;
+  font-variant-numeric:tabular-nums;font-weight:500}
+/* a luz no topo do painel, um pouco mais presente */
+.fgrid.one>.fcard::before{height:2px;
+  background:linear-gradient(90deg, transparent, var(--acc), transparent);opacity:.5}
+.fcard .fmeta{font-size:12px;color:var(--mut)}
+/* funil: rótulo legível, número com peso, barra com corpo */
+.fs{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:12px;
+  padding:5px 0}
+.fs .fl{font-size:12.5px;color:var(--tx)}
+.fs .fn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;min-width:74px;
+  text-align:right}
+.fb{height:9px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.fb i{display:block;height:100%;border-radius:999px}
+/* retenção com leitura imediata */
+.rrow{margin:0}
+.rc:first-child{border-top:0;padding-top:0}
+/* o rótulo é legenda; quem salta é o número, na cor da régua */
+.rc b{display:block;font-family:var(--f-disp);font-size:10px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0}
+.rc .rv{display:block;font-family:var(--f-disp);font-size:21px;font-weight:800;
+  letter-spacing:-.025em;line-height:1.15;margin:3px 0 2px;font-variant-numeric:tabular-nums}
+.rc>b{font-family:var(--f-disp);font-size:12px;font-weight:700;letter-spacing:.04em;
+  color:var(--mut)}
+.rc .rv{font-family:var(--f-disp);font-size:19px;font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums}
+.rc .rb{display:block;font-size:11.5px;color:var(--mut)}
+/* achados: mais ar e marcador claro */
+.fnds li{font-size:12.5px;line-height:1.5;padding:4px 0 4px 16px}
+.fnds li:before{width:6px;height:6px;top:.72em}
+/* o detalhe convida a abrir */
+.fdet>summary{font-size:11px;color:var(--acc);padding:3px 0}
+.fdet>summary:hover{opacity:.82}
+.fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;
+  align-items:start}
+@media(max-width:820px){.fcols{grid-template-columns:1fr;gap:12px}}
+.fcol{min-width:0}
+.fcol>.fnds{margin-top:0}
+/* Régua de contexto do app: instalações, ativos, novos, crash-free. Antes isso
+   era uma linha de texto corrido ("187 downloads/30d · WATCH · crash-free
+   100%") que ninguém comparava entre cards; como números rotulados, dá pra
+   varrer a coluna de cima a baixo. */
+.fstats{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline}
+.fst{display:flex;align-items:baseline;gap:7px;min-width:0}
+.fstl{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mut)}
+.fst b{font-family:var(--f-disp);font-size:15px;font-weight:700;letter-spacing:-.015em;
+  font-variant-numeric:tabular-nums}
+.fstd{font-size:12px;font-weight:600}
+.st.vd{background:rgba(125,140,170,.14);color:var(--mut)}
+.fh .noasc{font-size:11.5px;font-weight:400;color:var(--warn)}
+/* Cada metade do card diz o que é antes de mostrar número. */
+.fgrp{margin-bottom:16px}
+.fgrp:last-child{margin-bottom:0}
+.fgl{display:block;font-family:var(--f-disp);font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mut);
+  padding-bottom:7px;margin-bottom:10px;border-bottom:1px solid var(--bd-soft)}
+.fcol>.fgrp>.fnds{margin-top:0}
+.instrl{list-style:none;margin:9px 0 0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:3px 0 3px 14px;
+  position:relative;overflow-wrap:anywhere}
+/* Coluna de leitura: linhas rotuladas, sem caixa. As caixas coloridas (funil
+   verde, ação amarela) e o bloco expansível empilhavam quatro objetos de forma
+   diferente num espaço estreito; rótulo à esquerda e texto à direita, separados
+   por uma régua fina, lê de cima a baixo sem nada competindo (João, 02/10). */
+.rline{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;
+  padding:12px 0;border-top:1px solid var(--bd-soft)}
+.rline:first-child{border-top:0;padding-top:0}
+.rlab{font-family:var(--f-disp);font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);padding-top:2px}
+.rbody{min-width:0}
+.rbody>b{display:block;font-family:var(--f-disp);font-size:14px;font-weight:700;
+  letter-spacing:-.01em;line-height:1.35}
+.rnum{display:block;margin-top:3px;font-size:12px;font-weight:600;color:var(--tx);
+  font-variant-numeric:tabular-nums}
+.rbody>p{margin:5px 0 0;font-size:12.5px;line-height:1.55;color:var(--mut)}
+.rline.act .rlab{color:var(--tx)}
+.rline.mut .rlab,.rline.mut .instrl li{color:var(--mut)}
+.rbody>.fnds{margin:0}
+@media(max-width:1180px){.rline{grid-template-columns:1fr;gap:6px}
+  .rline .rlab{padding-top:0}}
+.instrl{list-style:none;margin:0;padding:0}
+.instrl li{font-size:12.5px;line-height:1.55;color:var(--mut);padding:2px 0 2px 14px;
+  position:relative;overflow-wrap:anywhere}
+.instrl li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;
+  border-radius:50%;background:var(--bd)}
+/* Os passos de loja vêm de outra fonte que os de dentro do app: barra em tom
+   mais surdo pra o olho ver onde a medição troca de sistema. */
+.fs .fb i.store{background:linear-gradient(90deg,
+  color-mix(in srgb, var(--bar) 45%, transparent),
+  color-mix(in srgb, var(--bar) 70%, transparent))}
+.fsub{display:block;font-size:10.5px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fsub.gap2{margin-top:14px}
+.lchip{font-size:10px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.fcols{position:relative}
+@media(min-width:821px){.fcols::before{content:"";position:absolute;top:0;bottom:0;
+  left:50%;width:1px;background:var(--bd-soft)}}
+.fdet .ascgrid{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+.fdetcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
+  align-items:start}
+@media(max-width:1100px){.fdetcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.fdetcols{grid-template-columns:1fr}}
+.fdetcols>div{min-width:0;display:flex;flex-direction:column;gap:14px}
+.rawbox{background:var(--bg);border:1px solid var(--bd-soft);border-radius:11px;
+  padding:11px 13px;min-width:0}
+.rawbox h4,.rawbox h3.team{margin:0 0 8px;font-family:var(--f-disp);font-size:10.5px;
+  font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.rawbox h3.team .chain{text-transform:none;letter-spacing:0;font-size:11px}
+.rawbox table.t{border:0;box-shadow:none;background:transparent}
+.rawbox table.t th{background:transparent;border-bottom:1px solid var(--bd)}
+.rawbox table.t td{border-bottom:1px solid var(--bd-soft)}
+.rawbox .twrap{border-radius:0}
+.rawbox .ascgrid{margin-bottom:0;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+.rawbox .ascgrid b{font-size:14px}
+.srct{float:right;font-size:9px;font-weight:700;letter-spacing:.06em;padding:2px 7px;
+  border-radius:999px;background:var(--bd);color:var(--mut);text-transform:uppercase}
+.s-asc{background:rgba(125,140,170,.16);color:var(--tx)}
+.s-firebase{background:rgba(180,83,9,.14);color:var(--warn)}
+.noasc{background:rgba(180,83,9,.14);color:var(--warn);border-radius:999px;padding:1px 8px;
+  font-size:10.5px;font-weight:600}
+.convwhy{display:block;font-size:10.5px;color:var(--mut);margin-top:1px}
+.rawbox .rate{padding:1px 7px;border-radius:999px;font-size:12.5px}
+.featname{display:block;font-family:var(--f-mono);font-size:11.5px;margin-bottom:3px}
+.featbar{display:block;height:4px;border-radius:999px;background:var(--bd-soft);overflow:hidden}
+.featbar i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg, color-mix(in srgb, var(--acc) 70%, transparent), var(--acc))}
+.legacyp{margin:8px 0 0;font-size:12px;color:var(--mut);line-height:1.7}
+.legacyp code{font-size:11px}
+.rawbox .ascgrid>div{background:var(--card)}
+.fdet{margin-top:14px;border-top:1px solid var(--bd);padding-top:12px}
+.fdet[open]>summary{margin-bottom:12px;color:var(--acc)}
+.t .thsub{font-size:9.5px;font-weight:600;letter-spacing:.03em;color:var(--mut);
+  text-transform:none}
+.t .rate{padding:1px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.t .rate.good{background:rgba(10,143,88,.16);color:var(--ok)}
+.t .rate.mid{background:rgba(180,83,9,.14);color:var(--warn)}
+.t .rate.low{background:rgba(208,47,47,.13);color:var(--down)}
+.thin{font-size:10.5px;color:var(--mut);background:var(--bd-soft);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.sbx{font-size:12px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 8px;cursor:help;white-space:nowrap}
+.sbxnote{font-size:11.5px;color:var(--warn);background:rgba(180,83,9,.10);
+  border:1px solid rgba(180,83,9,.25);border-radius:9px;padding:7px 10px;margin:0 0 10px}
+.actv{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;margin:0 0 10px;
+  padding:8px 11px;border-radius:10px;background:var(--bd-soft)}
+.actvt{font-family:var(--f-disp);font-size:10px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut)}
+.actv b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.actvw{flex-basis:100%;font-size:11px;color:var(--mut)}
+.fover{font-size:10.5px;color:var(--warn);background:rgba(180,83,9,.12);border-radius:999px;
+  padding:1px 7px;cursor:help;white-space:nowrap}
+.hspan{display:inline-block;margin-left:10px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
+  text-transform:none;color:var(--mut);background:var(--bd-soft);padding:2px 9px;border-radius:999px;
+  vertical-align:2px}
+.ascspan{font-size:11px;color:var(--mut);margin:2px 0 7px}
+.ascgrid{display:grid;gap:7px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  margin-bottom:10px}
+.ascgrid>div{background:var(--bd-soft);border-radius:9px;padding:7px 10px;min-width:0}
+.ascgrid span{display:block;font-size:10px;color:var(--mut);text-transform:uppercase;
+  letter-spacing:.04em}
+.ascgrid b{font-family:var(--f-disp);font-size:15px;font-variant-numeric:tabular-nums}
+.fcard[id]:target{border-color:var(--acc);box-shadow:0 0 0 2px rgba(125,140,170,.3),var(--sh-up)}
+/* ---------- acabamento: luz e profundidade (01/10) ----------
+   Gradiente é usado onde tem função: a luz no topo dá direção à página, a barra
+   do funil ganha volume, e o cabeçalho de cada app se separa do conteúdo. Fundo
+   chapado em tudo o resto, para os números seguirem sendo o que salta. */
+body{background:
+  radial-gradient(1100px 420px at 12% -8%, color-mix(in srgb, var(--acc) 11%, transparent), transparent 70%),
+  radial-gradient(900px 360px at 88% -4%, color-mix(in srgb, var(--ok) 7%, transparent), transparent 72%),
+  var(--bg);
+  background-attachment:fixed}
+h1{background:linear-gradient(100deg, var(--tx) 30%, color-mix(in srgb, var(--acc) 72%, var(--tx)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .mark{-webkit-text-fill-color:initial;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA8CAYAAAAzF3kIAAAFaUlEQVR42u2bS4gcVRSGv1vdPT0zOEYXggY1kkgwohA0DoouDIpPCBpQSEQ3gg8Ek5WibhVEXAYhBHe6UBeKC0UhElSCEJPoQlATIj7wGWMYx8xM93SXm3PJT1Fdj+5b3bXIhaKq63Hr/vec85/HrYZ6Ngc07PgyYJedQ/aFWlRDcA0gBnrALcBPwDo7t9b2tWuRDbyZsTWAKXnmBQMTA3cDrwDP2rVWXSTRssGXba8JuP+AQ3Z8T1mAzQqANU1iHVMzbecBc8Cs3dcHloEzwD/2+0XgSWDVQM0CW+z507aPJwHQq+CKnFsLXAfcAFwDXAFcZEA9wDPAIvAN8Cew057ti8p27HhiqtlO/L4d2AucEFUrs3np9RO/t41bRR0wY1IAuAPYDdyVoPMVU1dn6qvXYgHjbLIaCZcQi8sobS+jMCMGbtZY7nHpc1lmux1IUy6WcXerdsS+3W9M5yWxaC+PA2492x8Ztw9/xOzsc+Bl4HBiQFWA3GPvnqoaXAu4Hpi237uBvxKkUAXAGLjN3jldZWTSFFdwYMBAQm9+4g6JqURVRCi+PVoxoCwp7rAxzFYFbq+8rCs+a1wgvxgwrpFCMIALgIOiMuOUYNK+t4WSoo8cLgd+sM5XxgxMAwI/qe8JJ0SjhmEbgD8mDE5NIgb+BTbb+GbybGoQuBVjyoPAJRL41iHrnwJOAZ8Yll6ZDqYE5NGaSE63ju2/tuyklPNviE6/IYlnv2Ly6A6hpjFwX1nH7/V5xwAjDw1uZcDA88jG37uvDNm0ZTaOy+z+UpFL6MjxcslQz99/3BLpXCk60eOX7OF3LeZ8pgIpqrQetpqLB7dU0On7SX8uxbwGOvMZA/iAXPtQOu0Hdtg75T1PyPmlEuq9BNyURzZOxKwuZEvgYFonaY+Yhh/YrkRVLa8/f88HgqFZJJmds/1TgQF66Z0GrhStcfL+h2QSlm3r5UixC8xr9JWmq7Ewki8LbJZrbkQHrX0cNYKIZJC+ZvOmVeQOmnTbdi0eYFo922+0cz3ARTkD6SSKPXHgkscxme2+DMxP8FfAzcCDwMfAgj0bZwimXXRtIpKXrhmgwqMCXBjQZyzSBHgHuBO4FPjS7u/I/X2xuV9l/HE0RB4Ysk3laFBfsvbIguu3RNLqbgC+kzzRlVl5+jQgwfSFPN4WFXUFpX4+8G1Kv3+blL1AXF5dNLbrq/YwgYjGiWQ22LlugWzAq+wCsNWqeFcDJ4H9wOu2vhHJBOY2H/a8GjiKUTexcUD5fxhzaZVdAPWSOpLCViFIZo1Jo4yde3fQFhcxM2y125PAOpvtkHa4KtHHsCXAaFRWd2KnHwWORbsSZs1nlR1ClQGz0qdVO94e0B96svGrSe8HNoPSq0gN4PvA1etOSiYwywSaZ9PHSmbdZbL5/aIVrUlUsPzLDwcGqcXj54skrVU1TzbzMrBQmb1PbE8Bm0IujzVKSnEa+NFmd6uBbAQaR9fKfydttaohIZebxAdA+1KKRqNsPis/UCARDyZBJ0x6I3AVsN4q3MeAW4ELTZJRIEnOAT+bNDdZxj8H/F6l3c0Av+UUjkItrKSd/2xUH1ekLdpeyaVRAVvHiVoMnP1MhdCfkcQpkxFVTOEuYRojfVHRzDHmSD7goSYrSllCyAXoEpUrlzKrTPizzDRQcRGATuJM5CM4jMJ7EwAUS8ZPxhi0QJYK0IO7FrjXjNqJA542d8CYJelJbL0Vn1uJckrPspATUl5J1Wsv+qeHpPGq1+Szrm/PykKSNrjE2a8Dk2wZTcgO1XUgrqptEuxk2WEzI3KJhHDqQDIuReOism4i2Uld2DM5jsLsXse/FVTiV84BPAewpu1/LVA2Mx2CXq4AAAAASUVORK5CYII=)}
+.brand .mark,.ico.lab{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA8CAYAAAAzF3kIAAAFaUlEQVR42u2bS4gcVRSGv1vdPT0zOEYXggY1kkgwohA0DoouDIpPCBpQSEQ3gg8Ek5WibhVEXAYhBHe6UBeKC0UhElSCEJPoQlATIj7wGWMYx8xM93SXm3PJT1Fdj+5b3bXIhaKq63Hr/vec85/HrYZ6Ngc07PgyYJedQ/aFWlRDcA0gBnrALcBPwDo7t9b2tWuRDbyZsTWAKXnmBQMTA3cDrwDP2rVWXSTRssGXba8JuP+AQ3Z8T1mAzQqANU1iHVMzbecBc8Cs3dcHloEzwD/2+0XgSWDVQM0CW+z507aPJwHQq+CKnFsLXAfcAFwDXAFcZEA9wDPAIvAN8Cew057ti8p27HhiqtlO/L4d2AucEFUrs3np9RO/t41bRR0wY1IAuAPYDdyVoPMVU1dn6qvXYgHjbLIaCZcQi8sobS+jMCMGbtZY7nHpc1lmux1IUy6WcXerdsS+3W9M5yWxaC+PA2492x8Ztw9/xOzsc+Bl4HBiQFWA3GPvnqoaXAu4Hpi237uBvxKkUAXAGLjN3jldZWTSFFdwYMBAQm9+4g6JqURVRCi+PVoxoCwp7rAxzFYFbq+8rCs+a1wgvxgwrpFCMIALgIOiMuOUYNK+t4WSoo8cLgd+sM5XxgxMAwI/qe8JJ0SjhmEbgD8mDE5NIgb+BTbb+GbybGoQuBVjyoPAJRL41iHrnwJOAZ8Yll6ZDqYE5NGaSE63ju2/tuyklPNviE6/IYlnv2Ly6A6hpjFwX1nH7/V5xwAjDw1uZcDA88jG37uvDNm0ZTaOy+z+UpFL6MjxcslQz99/3BLpXCk60eOX7OF3LeZ8pgIpqrQetpqLB7dU0On7SX8uxbwGOvMZA/iAXPtQOu0Hdtg75T1PyPmlEuq9BNyURzZOxKwuZEvgYFonaY+Yhh/YrkRVLa8/f88HgqFZJJmds/1TgQF66Z0GrhStcfL+h2QSlm3r5UixC8xr9JWmq7Ewki8LbJZrbkQHrX0cNYKIZJC+ZvOmVeQOmnTbdi0eYFo922+0cz3ARTkD6SSKPXHgkscxme2+DMxP8FfAzcCDwMfAgj0bZwimXXRtIpKXrhmgwqMCXBjQZyzSBHgHuBO4FPjS7u/I/X2xuV9l/HE0RB4Ysk3laFBfsvbIguu3RNLqbgC+kzzRlVl5+jQgwfSFPN4WFXUFpX4+8G1Kv3+blL1AXF5dNLbrq/YwgYjGiWQ22LlugWzAq+wCsNWqeFcDJ4H9wOu2vhHJBOY2H/a8GjiKUTexcUD5fxhzaZVdAPWSOpLCViFIZo1Jo4yde3fQFhcxM2y125PAOpvtkHa4KtHHsCXAaFRWd2KnHwWORbsSZs1nlR1ClQGz0qdVO94e0B96svGrSe8HNoPSq0gN4PvA1etOSiYwywSaZ9PHSmbdZbL5/aIVrUlUsPzLDwcGqcXj54skrVU1TzbzMrBQmb1PbE8Bm0IujzVKSnEa+NFmd6uBbAQaR9fKfydttaohIZebxAdA+1KKRqNsPis/UCARDyZBJ0x6I3AVsN4q3MeAW4ELTZJRIEnOAT+bNDdZxj8H/F6l3c0Av+UUjkItrKSd/2xUH1ekLdpeyaVRAVvHiVoMnP1MhdCfkcQpkxFVTOEuYRojfVHRzDHmSD7goSYrSllCyAXoEpUrlzKrTPizzDRQcRGATuJM5CM4jMJ7EwAUS8ZPxhi0QJYK0IO7FrjXjNqJA542d8CYJelJbL0Vn1uJckrPspATUl5J1Wsv+qeHpPGq1+Szrm/PykKSNrjE2a8Dk2wZTcgO1XUgrqptEuxk2WEzI3KJhHDqQDIuReOism4i2Uld2DM5jsLsXse/FVTiV84BPAewpu1/LVA2Mx2CXq4AAAAASUVORK5CYII=)}
+@media(prefers-color-scheme:dark){.brand .mark,.ico.lab{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAABICAYAAABIk43cAAAGkElEQVR42u2bWYgcVRSGv1PVjplo4sIQd4l7UB9iiINRERdQQUVRMIiCoBFFEDQRDb7og6KCby4ogiiiYlTwRSSBuDwEFCUIEgWTuKCoo7iPYybTXb8Pc2686XT19FbVndgHiqqp7q66/z3nnuU/d2AvEUmV6Hq1pBMkpexrEoBKOlbSBklfRfcq+xLQ1M9XSZrQrDzn9x6QtNyvk0EFYH4kdYdJsgZA1+o/qUp6UNJz/vdB4ZmDAiyVVPGztaJNSSN+/XAEsubXQcOftjOWStHmZ2Y1oFb32SiwEJgP7Oef7wD+MrM/w28k3QysBWZ8rGGiFgEZsDNMqJmpdLCSUjOr+YADsKXAWcAy4GTgSOAgYBRIAPnAJyX9DHwJfALc4qDSCCg+OakftAK0EE1Gf58n6SlJ29V7Cea8NVrXVrhm/SWJmdXcI64E7gBWxF+LTNmio+EjoyPN+V64dzCwAPi9VG1KuljSh9HsZ5JmIi30UjI/z0g6qdXQk3QT6F2bCyU9DawHxl2Dmc9+pZt3NBHzd1SAw9y6rBCw7v2qksaBzcCt0cdpQQAbmTvATe6grAjTTTxmrpL0t6TfJG2WtFHSr3VmVrRU/XxbIyfZlWZdo5nHyEngbGDMzJYBrwJVN6+yJPH3PSZpMZAVmjZKOlXSu+qfzPj5tVa0240HvkvSVGRSWZ8AB3Ne0TPAUVk1JumNBi9Tn8Gu70kFFAEd98wlmFCmwZCaj2U8T7tJGzG1Kuk64H3gRHdGlUJcfmcSYvuarsozv75ngMw2L6vKJO2QdHwjc07myHlTz5IeAh717CjkrIMm5uPbH7i5ET5rwXQf9pqy2iQxZ4BMOQG+BU4xs3/iWjeZA+i9OcXzoEri2j0GuDRYZ64Ze/FdlXQt8EjkiPYajs6PkDOroRlLSswsk7QE+NiZBEpK7HsJ1oB/3JS/DbiSOodkHk9fAA5wrapPa6/WhaOquqKuDuRCvcYS541u97p0Bhjpg+et+bjSLoqKYLEr3ZSzXTcj/mYh8IWzdwAfAN8B15TknAKRts3fe350rxNzrgFLzWyLpDRoNvUZuMOBvgGcb2YrgI8i0ygD6FvAmcDFwBa/V+1wKVSAJ3cj4zxTmucs+2XR/QWSfqpj9IpM5DfUVVUnSPqhi6wt/GZNfcjZL8yApBFn5S8vIT0Mad4vkg6POgIhTV0adQBmOnh2zRmVk3Y5KDObMTP5SzJ3VpdEcatI8zXgKTP7MRB5nqamZvYJcIH7kkqbbIj52OcDt+8RP+vaFeNzcLy9kOB1X3XLyuKxOODPgHOA1yPGshYxma0AvjCvAAjrdaJgAi34ga+jRpY1Ivmi6+slfdYBxzyRNIlRY8AhJdGh35nZzrwGlWd15pnQS94zWgm8AmxtcZlVm+W8C7zDRgkxdqrO5GgAWLOKVWpmO4B1wDpJB3pcXpQz1uBztiX9aGc2kJGWU6PZdRx6viNmNgm8m5MLZH4vAV5uBna6pIIbYCzipFsBrKiHa04syC2xGpEMiU/keuD5ZmD/YLZBTIGhJ4A9Gji03e0CDtg8PN0A/OoWGUiGz4G7gSvNbNpyWH9JmueL/+iobCqSXTjXzDaFZna7LRl3Ykd4iJrncXmzmVWbTmJw9ZLeKyGDClnRfd1s9ckjxr0vZc2K8nD/oxIyqDDjV0Sabv8h/zmuSrxZxcyqTTmoCNxGH0xScAYlYLmk0zy8JB0CloOresqpVqjUMLubgIlok0eR+XEFWOUDLGRyk7wZ8oT8L+DNaEBFa/dGSWMeUpJSwNaZ8jNRzCqa4D4EWFOkdpu6dD+/XVJdW5M0mde+KFKzsae8vwSWMeTFBwBPl5ST5+4KfbFDtqDTuLu61510a9WUvarYwuxGqyKJ8xDXp4FTgW88JcyKNmP8JWZmPzr7mBTsmQNbMQrc2UtnZS2acWhfTkt6FljVBZ/bTmP5e2BJo4Kk3fy5m3W8rgR6NTz7jELXbFT5jAIXRRlU2Hc0H3jcqZuivGawnCe8Hq1ETGQNeKe+/9op2FAyHcfs3t9m3bJ+yWIz+yaMlR7sJM+Ybf2N1IGzEjOcLFqrYQw7OqmOKi3mrWkfNZk0sKa0kNCzL8n/CmwlJ9lOJA36ZCQ+9jDWRsnQ7mBzPFnmXnlqgMFO+dizdjR7coMFH1LCowZ0O5ABp0v6IWc7wk4z277Hj/z/aMYGIG72kpbdCiwJPaK5CLehNx6CHYIdgh2CHYIdgh2CbUv+BfLxvASbQWLEAAAAAElFTkSuQmCC)}}
+h2{position:relative}
+h2::after{content:"";position:absolute;left:0;top:0;width:44px;height:2px;
+  background:linear-gradient(90deg, var(--acc), transparent)}
+h2:first-of-type::after,h1+h2::after,.sub+h2::after{display:none}
+a.tile{background:linear-gradient(170deg, color-mix(in srgb, var(--card) 100%, transparent),
+  color-mix(in srgb, var(--acc) 5%, var(--card)))}
+.fb i,.fs .fb i{background:linear-gradient(90deg,var(--bar),var(--bar2))}
+.fgrid.one>.fcard>.fh{background:linear-gradient(180deg,
+  color-mix(in srgb, var(--acc) 7%, var(--card)), var(--bd-soft))}
+.ascgrid b,.tile .tv{background:linear-gradient(180deg, var(--tx), color-mix(in srgb, var(--tx) 72%, var(--mut)));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ---------- celular (14/10) ----------
+   No iPhone a página nunca rola de lado: grade cede a largura pros filhos, tabela
+   rola dentro do .twrap, o menu rola dentro da própria faixa. Quadro e big numbers
+   seguem numa linha só com rolagem horizontal, em qualquer largura (João, 14/10). */
+.cols>*,.cols2>*,.grid>*,.grid4>*,.dapps>*,.fgrid>*{min-width:0}
+.board .hrow,.tiles{flex-wrap:nowrap!important;overflow-x:auto}
+#md table{display:block;max-width:100%;overflow-x:auto}
+#md p,#md li,#md :not(pre)>code{overflow-wrap:anywhere}
+img,video{max-width:100%}
+@media(max-width:860px){
+  .topin{width:calc(100vw - 28px)}
+}
+@media(max-width:620px){
+  /* header do celular (24/10): UMA linha de 52 px — cavalo + abas que rolam de
+     lado com encaixe; a data sai do header fixo e vira a 1ª linha da página. */
+  .topin{flex-wrap:nowrap;gap:2px;padding:4px 0;
+    padding-left:env(safe-area-inset-left,0px)}
+  a.brand{flex:none;min-width:44px;min-height:44px;justify-content:center;gap:0}
+  a.brand .mark{width:24px;height:24px}
+  a.brand .bname{display:none}
+  .stamp{display:none}
+  .navs{flex:1 1 auto;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;overscroll-behavior-x:contain;
+    margin-right:-14px;padding:0 max(14px,env(safe-area-inset-right,0px)) 0 2px;gap:2px;
+    -webkit-ma[redigido]:linear-gradient(90deg,#000 calc(100% - 28px),transparent);
+    ma[redigido]:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+  .navs::-webkit-scrollbar{display:none}
+  a.nav{flex:none;scroll-snap-align:start;min-height:44px;padding:0 12px;gap:6px;font-size:14px}
+  a.nav .flw-mon{width:24px;height:24px}
+  .mstamp{display:block;margin:-10px 0 10px;font-size:11.5px;color:var(--mut)}
+  .mstamp+style+h2,.mstamp+h2{margin-top:6px}
+  div.own{padding:6px 12px;margin:0 0 12px;gap:10px}
+  div.own img.flw-mon{width:40px;height:40px}
+  details.pk-legend{padding:0 14px;margin-bottom:12px}
+  details.pk-legend>summary{min-height:44px;padding:11px 0}
+  body{font-size:15px;overflow-wrap:break-word}
+  h1{font-size:24px}
+  .sub,.card p,.row,.dirp,.prw,.nots li,.dirlist>li{font-size:14px}
+  table.t td,table.t th{font-size:13.5px}
+  table.t td:first-child,table.t th:first-child{min-width:148px}
+  #md{padding:16px 14px}
+  .board{padding:12px 0 14px;margin-left:0;margin-right:0}
+  .boardh{padding:0 14px}
+  .board .hrow{padding:12px 14px 12px;scroll-padding:0 14px}
+  a.more,.btn{display:inline-flex;align-items:center;min-height:44px}
+  .row{min-height:44px}
+  .del{min-width:44px;min-height:44px;opacity:.7}
+  .iid{position:relative}
+  .iid::after{content:"";position:absolute;inset:-12px -8px}
+  .fdet>summary,details>summary{min-height:44px}
+  .fs{grid-template-columns:minmax(0,118px) minmax(0,1fr) auto}
+  .leak,.fnote{margin-left:0}
+  /* quadro no celular: rolagem lateral, como quadro (João 14/10, e de novo 25/10: "deixa como quadro que eu
+     consigo fazer scroll horizontal, ficou muito extenso na vertical" — o empilhamento de 25/10 saiu).
+     Fazer abre o quadro, com o item em trabalho no topo; Backlog fica por último. */
+  .board .hcol{order:3}.board .hcol.k-do{order:1}.board .hcol.k-wait{order:2}.board .hcol.k-backlog{order:4}
+  .row.working .vwork{flex-wrap:wrap}
+  .row .sub{white-space:normal}
+  /* big numbers em grade de 2 no celular: nada cortado */
+  .tiles{display:grid!important;grid-template-columns:1fr 1fr;overflow-x:visible!important}
+  .tiles>.tile,a.tile{min-width:0!important;padding:10px 12px}
+  .tile .tv{font-size:clamp(17px,5.4vw,22px)!important;white-space:normal}
+}
+
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a.nav.on{background:color-mix(in srgb,var(--bar) 13%,transparent);color:var(--tx);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--bar) 22%,transparent)}
+a.nav .flw-mon{transition:transform .18s ease}
+a.nav:hover .flw-mon{transform:translateY(-1px) scale(1.06)}
+/* dono da seção: legenda calma ao lado do título, não mais um segundo título em caixa alta */
+h2 .ownb,h3 .ownb{text-transform:none;letter-spacing:0;font-family:var(--f-text);font-size:12.5px;font-weight:500;vertical-align:middle}
+h2 .ownb .ownp b,h3 .ownb .ownp b{font-weight:700}
+div.own{border-color:var(--bd-soft);box-shadow:var(--sh);border-radius:var(--rad)}
+h1+div.own{margin-top:12px}
+/* big numbers que não são link (Seller) ganham o mesmo cartão dos da home */
+.tiles>div.tile{background:linear-gradient(170deg,var(--card),color-mix(in srgb,var(--acc) 5%,var(--card)));
+  border:1px solid var(--bd-soft);border-radius:var(--rad);padding:13px 17px;box-shadow:var(--sh);min-width:148px}
+@media(max-width:620px){
+  .mstamp{margin:-6px 0 12px}
+  .card,a.tile,.tiles>div.tile,.row,.fcard,div.own,.board,table.t,.twrap,#md{border-radius:16px}
+  .tiles>div.tile{min-width:0;padding:10px 12px}
+  h1{font-size:26px;line-height:1.2}
+  h2{margin-top:28px}
+}
+</style></head>
+<body><header class=top><div class=topin><a class=brand href="index.html" aria-label="atualizar" onclick="return hardRefresh()"><span class=mark></span><span class=bname>GambitStudio</span></a><nav class=navs><a class="nav" href="agora.html">Agora</a><a class="nav" href="index.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" width="28" height="28" loading="lazy" alt="Lucario" title="Lucario: dono da aba LAB">LAB</a><a class="nav" href="fluxos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png" width="28" height="28" loading="lazy" alt="Lapras" title="Lapras: leva todo mundo na travessia: mostra os fluxos e quem está rodando agora">Fluxos</a><a class="nav" href="business.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" width="28" height="28" loading="lazy" alt="Mewtwo" title="Mewtwo: a mente mais poderosa: entende os números">Business</a><a class="nav" href="vendas.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" width="28" height="28" loading="lazy" alt="Kyogre" title="Kyogre: o oceano inteiro de dados">Seller</a><a class="nav on" href="receita.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png" width="28" height="28" loading="lazy" alt="Kangaskhan" title="Kangaskhan: bolsa cheia: vendas, instalações e receita">Receita</a><a class="nav" href="videos.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" width="28" height="28" loading="lazy" alt="Moltres" title="Moltres: fogo que se espalha: vídeos que pegam">Vídeos</a><a class="nav" href="dados.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png" width="28" height="28" loading="lazy" alt="Mudkip" title="Mudkip: nadadeira que sente a corrente: junta tudo que a loja, o Astro e o GA4 contam de cada app">Dados</a><a class="nav" href="servidor.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" width="28" height="28" loading="lazy" alt="Darkrai" title="Darkrai: não deixa ninguém dormir: segura o Mac acordado pra você usar o Claude de longe">Servidor</a></nav><span class=stamp>atualizado 02/11 18:13</span><style>
+.lsd{position:relative;flex:none;z-index:120;font:600 13px/1.3 -apple-system,system-ui,sans-serif}
+.lsd-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:0 6px;
+  border:0;background:none;color:inherit;font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lsd-dot{display:inline-block;flex:0 0 12px;width:12px;height:12px;border-radius:50%;background:#94a3b8}
+.lsd-num{font-variant-numeric:tabular-nums;min-width:8px}
+.lsd[data-s=wait] .lsd-num{display:none}
+.lsd[data-s=work] .lsd-btn .lsd-dot,.lsd-it.live .lsd-dot{background:#2563eb;animation:lsdpulse 1.6s infinite}
+.lsd[data-s=work] .lsd-num{color:#3b82f6}
+.lsd[data-s=stale] .lsd-btn .lsd-dot,.lsd-it.stale .lsd-dot{background:#facc15;animation:none}
+.lsd[data-s=stale] .lsd-num{color:#ca8a04}
+@keyframes lsdpulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.65)}70%{box-shadow:0 0 0 8px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
+.lsd-pop{position:absolute;right:0;top:calc(100% + 6px);width:min(380px,calc(100vw - 32px));padding:14px;border-radius:16px;
+  border:1px solid #cbd5e1;background:#fff;color:#0e1015;box-shadow:0 10px 30px rgba(0,0,0,.18);font-weight:400;font-size:14px;
+  max-height:calc(100vh - 90px);overflow-y:auto;overscroll-behavior:contain}
+.lsd-pop[hidden]{display:none}
+.lsd-h{font-weight:700;font-size:15px;margin:0 0 10px}
+.lsd-list{display:flex;flex-direction:column;gap:6px}
+.lsd-it{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;
+  color:inherit!important;text-decoration:none!important;min-height:44px}
+a.lsd-it:hover{border-color:#60a5fa}
+.lsd-it .lsd-dot{margin-top:4px;flex-basis:10px;width:10px;height:10px}
+.lsd-it.live{background:#eff6ff;border-color:#bfdbfe}.lsd-it.stale{background:#fefce8;border-color:#fde047}
+.lsd-b{display:flex;flex-direction:column;gap:2px;min-width:0}
+.lsd-b b{font-weight:600;overflow-wrap:anywhere}.lsd-n{color:#475569;overflow-wrap:anywhere}
+.lsd-w{font-size:12.5px;color:#64748b}.lsd-it.stale .lsd-w{color:#a16207;font-weight:600}
+.lsd-empty{color:#475569}
+.lsd-ft{margin-top:10px;padding-top:8px;border-top:1px solid #e2e8f0;font-size:12px;color:#64748b}
+.lsd-turns{margin-top:10px;font-size:13px;color:#334155}.lsd-turns[hidden]{display:none}
+@media(prefers-color-scheme:dark){
+  .lsd-dot{background:#64748b}
+  .lsd-pop{background:#1a1e25;color:#f2f4f8;border-color:#39404d}
+  .lsd-it{background:#222833;border-color:#39404d}.lsd-it.live{background:#172554;border-color:#1e40af}
+  .lsd-it.stale{background:#3a3108;border-color:#a16207}
+  .lsd-n{color:#cbd5e1}.lsd-w,.lsd-ft,.lsd-empty{color:#aab3c2}.lsd-turns{color:#cbd5e1}.lsd-it.stale .lsd-w{color:#fde047}.lsd-ft{border-color:#39404d}
+}
+header.top .lsd{margin-left:auto}header.top .stamp+.lsd{margin-left:0}
+.lsd-float{position:fixed;top:4px;right:8px}
+@media(max-width:620px){
+  header.top a.brand{order:0}header.top .lsd{order:1;margin-left:2px}header.top .navs{order:2}
+  .lsd-pop{position:fixed;left:16px;right:auto;width:calc(100vw - 32px);top:calc(env(safe-area-inset-top,0px) + 58px)}
+}
+</style><div class="lsd lsd-hdr" data-s="work" data-stamp="2026-11-02T18:13"><button type=button class=lsd-btn aria-expanded=false aria-label="Claude trabalhando em 21"><span class=lsd-dot></span><span class=lsd-num>21</span></button><div class=lsd-pop hidden><div class=lsd-h></div><div class=lsd-list></div><div class=lsd-turns hidden></div><div class=lsd-ft></div></div><a class=lsd-home href="index.html" hidden></a><script type="application/json" class=lsd-data>{"entries": [{"src": "validation", "label": "Onira · prints da loja (lançamento)", "note": "prints com as telas novas · pronto até o prompt · falta crédito da OpenAI (#295) pra gerar", "at": "2026-11-02T18:02:32-03:00", "eta": null, "maxage": null, "href": "/versions/onira-loja/"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: 4 upcoming apps", "at": "2026-11-02T20:21:21+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Ho-Oh (seo)", "note": "SEO do site: layout novo, landing de cada app, idiomas (agente de layout)", "at": "2026-11-02T20:26:04+00:00", "eta": 90, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO: Hair (12-20 páginas), Sunrise, Walk", "at": "2026-11-02T20:26:04+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "seo-page-writer-fun", "note": "SEO: Truco, Sueca, Neon, iPhotos, Philos, Bible", "at": "2026-11-02T20:26:05+00:00", "eta": 60, "maxage": 120, "href": "/fluxos"}, {"src": "flow", "label": "opportunities", "note": "Pesquisa de 8 ideias novas de app pela busca do Google", "at": "2026-11-02T20:26:05+00:00", "eta": 60, "maxage": 120, "href": "/fluxos"}, {"src": "flow", "label": "Quilava (ppo-checkpoint)", "note": "Testes A/B: todos os dados da App Store no card", "at": "2026-11-02T20:26:06+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-ppo-novo"}, {"src": "flow", "label": "Moltres (videos)", "note": "5 vídeos novos do BLW (BLW-67 a 71)", "at": "2026-11-02T20:26:06+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-videos"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: Spanish", "at": "2026-11-02T20:34:21+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: German", "at": "2026-11-02T20:34:23+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: French", "at": "2026-11-02T20:34:25+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: Italian", "at": "2026-11-02T20:34:27+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: Japanese", "at": "2026-11-02T20:34:29+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO em es: 15-30 páginas nativas", "at": "2026-11-02T20:34:42+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO em de: 15-30 páginas nativas", "at": "2026-11-02T20:34:43+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO em fr: 15-30 páginas nativas", "at": "2026-11-02T20:34:44+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO em it: 15-30 páginas nativas", "at": "2026-11-02T20:34:45+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer)", "note": "SEO em ja: 15-30 páginas nativas", "at": "2026-11-02T20:34:46+00:00", "eta": 75, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: opportunities 1-4", "at": "2026-11-02T21:10:46+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "Noctowl (seo-page-writer) · Workspace", "note": "SEO pages: opportunities 5-8", "at": "2026-11-02T21:10:52+00:00", "eta": 60, "maxage": 120, "href": "/fluxos#f-seo"}, {"src": "flow", "label": "general-purpose · Workspace", "note": "Refresh all lab data", "at": "2026-11-02T21:13:21+00:00", "eta": 60, "maxage": 120, "href": "/fluxos"}], "updated": "2026-11-02T21:14:46+00:00"}</script></div><script>(function(){if(window.labLive)return;var RU="https://firestore.googleapis.com/v1/projects/gambitstudio-lab/databases/(default)/documents/agora/_rev",LU="https://firestore.googleapis.com/v1/projects/gambitstudio-lab/databases/(default)/documents/agora/_live";var subs=[],live=null,rev=null,seen='',okAt=0,failAt=0,timer=0,busy=false,fast=false;function per(){return fast||document.getElementById('ag-open')?3000:10000}function emit(ch){for(var i=0;i<subs.length;i++){try{subs[i](live,{okAt:okAt,failAt:failAt,rev:rev,changed:ch})}catch(e){}}}function sched(ms){clearTimeout(timer);timer=setTimeout(pull,ms==null?per():ms)}function get(u){return fetch(u+'?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(j){var s=((j.fields||{}).json||{}).stringValue||'';return s?JSON.parse(s):null})}function pull(){if(busy)return;if(document.hidden){sched();return}busy=true;var ch=false;get(RU).then(function(r){rev=r||{};okAt=Date.now();if(r&&r.live&&r.live!==seen){return get(LU).then(function(l){if(l){live=l;seen=r.live;ch=true}})}}).catch(function(){failAt=Date.now()}).then(function(){busy=false;emit(ch);sched()})}function base(){var a=document.querySelector('.lsd-home');return((a&&a.getAttribute('href'))||'index.html').replace(/index\.html$/,'')}function route(h){if(!h)return null;if(/^https?:/.test(h))return h;var lh=location.hostname;if(lh==='localhost'||lh==='127.0.0.1')return h;var p=h.split('#'),path=p[0],fr=p[1]?'#'+p[1]:'',m,b=base();if(path==='/'||path==='')return b+'index.html'+fr;if((m=path.match(/^\/versions\/([^\/?#]+)/)))return b+'versions/'+m[1]+'/index.html'+fr;if((m=path.match(/^\/item\?i=(\d+)/)))return b+'item-'+m[1]+'.html';if(/^\/[a-z0-9_-]+$/.test(path))return b+path.slice(1)+'.html'+fr;return null}window.labLive={on:function(f){subs.push(f);if(okAt||failAt){try{f(live,{okAt:okAt,failAt:failAt,rev:rev,changed:true})}catch(e){}}},pull:function(){sched(0)},fast:function(v){fast=!!v;sched(0)},get:function(){return live},rev:function(){return rev},route:route,meta:function(){return{okAt:okAt,failAt:failAt}}};var q=window.labLiveQ||[];window.labLiveQ={push:function(f){window.labLive.on(f)}};for(var i=0;i<q.length;i++)window.labLive.on(q[i]);document.addEventListener('visibilitychange',function(){if(!document.hidden)sched(0)});addEventListener('pageshow',function(){sched(0)});sched(0)})();</script><script>(function(){function lsdStatus(i,now){var t=Date.parse(i.at);if(!t)return'live';var age=(now-t)/60000;if(i.maxage&&age>i.maxage)return'gone';var lim=i.eta?i.eta+15:45;return age>lim?'stale':'live'};var R=document.querySelector('.lsd'),PS=R&&R.dataset.stamp,want=false,lastScroll=0,LK='lsd-restore';function lsdBase(){var a=R&&R.querySelector('.lsd-home');return((a&&a.getAttribute('href'))||'index.html').replace(/index\.html$/,'')}function isLocal(){var h=location.hostname;return h==='localhost'||h==='127.0.0.1'||location.protocol==='file:'}addEventListener('scroll',function(){lastScroll=Date.now()},{passive:true});function busy(){var ae=document.activeElement,sel=window.getSelection?String(getSelection()):'';return document.hidden||!!document.querySelector('.lsd-pop:not([hidden])')||(ae&&/^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName))||sel.length>0||Date.now()-lastScroll<8000}function reloadNow(){if(!want||busy())return;try{sessionStorage.setItem(LK,JSON.stringify({p:location.pathname,y:scrollY,o:[].map.call(document.querySelectorAll('details'),function(d){return d.open?1:0})}))}catch(e){}location.reload()}function check(){if(isLocal()||!PS||document.hidden)return;fetch(lsdBase()+'stamp.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&j.stamp&&j.stamp>PS){want=true;reloadNow()}}).catch(function(){})}try{var sv=JSON.parse(sessionStorage.getItem(LK)||'null');sessionStorage.removeItem(LK);if(sv&&sv.p===location.pathname){var ds=document.querySelectorAll('details');(sv.o||[]).forEach(function(v,i){if(ds[i])ds[i].open=!!v});scrollTo(0,sv.y||0)}}catch(e){}setInterval(check,60000);setInterval(reloadNow,4000);document.addEventListener('visibilitychange',function(){if(!document.hidden)check()});var live=null,liveAt=0,okAt=0,revAt=0;function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}function hm(t){var d=new Date(t);return('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}function route(r,h){if(!h)return null;return window.labLive?window.labLive.route(h):null}function paint(r){var now=Date.now(),d=live;if(!d){try{d=JSON.parse(r.querySelector('.lsd-data').textContent)}catch(e){d={entries:[]}}}var rows=[],nl=0,ns=0;(d.entries||[]).forEach(function(e){var s=lsdStatus({at:e.at,eta:e.eta||0,maxage:e.maxage||0},now);if(s==='gone')return;if(s==='live')nl++;else ns++;var t=Date.parse(e.at),w='';if(s==='stale')w=t?'parado? sem notícia desde '+hm(t):'parado?';else if(t)w='desde '+hm(t)+(e.eta?' · até ~'+hm(t+e.eta*60000):'');var href=route(r,e.href),tag=href?'a':'div';rows.push({s:s,h:'<'+tag+' class="lsd-it '+s+'"'+(href?' hr'+'ef="'+esc(href)+'"':'')+'><span class=lsd-dot></span><span class=lsd-b><b>'+esc(e.label)+'</b>'+(e.note?'<span class=lsd-n>'+esc(e.note)+'</span>':'')+'<span class=lsd-w>'+esc(w)+'</span></span></'+tag+'>'})});rows.sort(function(a,b){return a.s===b.s?0:a.s==='live'?-1:1});var st=nl?'work':ns?'stale':'wait',n=nl?nl:ns?ns:'';r.dataset.s=st;r.querySelector('.lsd-num').textContent=n;var lab=st==='work'?'Claude trabalhando em '+n:st==='stale'?n+' sem notícia':'Nada em andamento';r.querySelector('.lsd-btn').setAttribute('aria-label',lab);r.querySelector('.lsd-h').textContent=st==='work'?'Trabalhando agora · '+nl:st==='stale'?'Parado? · '+ns:'Nada em andamento agora';r.querySelector('.lsd-list').innerHTML=rows.length?rows.map(function(x){return x.h}).join(''):'<div class=lsd-empty>Nenhuma tarefa aberta pelo Claude.</div>';var tu=d.turns||{},parts=[];if(tu.joao)parts.push('esperando você '+tu.joao);if(tu.apple)parts.push('com a Apple '+tu.apple);if(tu.running)parts.push('rodando '+tu.running);var tl=r.querySelector('.lsd-turns');if(tl){tl.textContent=parts.join(' · ');tl.hidden=!parts.length}var ft=r.querySelector('.lsd-ft');if(okAt){var a=Math.round((now-okAt)/1000);ft.textContent='ao vivo · lido há '+(a<5?'instantes':a+' s')+(revAt?' · Mac '+hm(revAt):'')}else{var sp=Date.parse(r.dataset.stamp);ft.textContent='sem conexão ao vivo · dados do site'+(sp?' de '+hm(sp):'')}}function all(){document.querySelectorAll('.lsd').forEach(paint)}function sub(L,m){if(L&&L.status){live=L.status;liveAt=Date.parse(L.updated||'')||0}okAt=m&&m.okAt||0;revAt=m&&m.rev&&Date.parse(m.rev.updated||'')||0;all()}(window.labLiveQ=window.labLiveQ||[]).push(sub);all();setInterval(all,5000);document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lsd-btn');document.querySelectorAll('.lsd').forEach(function(r){var p=r.querySelector('.lsd-pop'),btn=r.querySelector('.lsd-btn');if(b&&r.contains(b)){var open=p.hidden;p.hidden=!open;btn.setAttribute('aria-expanded',open);if(open){paint(r);if(window.labLive)window.labLive.pull()}}else if(!r.contains(e.target)){p.hidden=true;btn.setAttribute('aria-expanded','false')}})});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lsd-pop').forEach(function(p){p.hidden=true})});})();</script></div></header><div class="wrap"><div class=mstamp>atualizado 02/11 18:13</div><style>.own{display:flex;align-items:center;gap:12px;margin:6px 0 16px;padding:10px 14px;border:1px solid var(--bd);border-radius:12px;background:var(--card);font-size:13.5px;color:var(--mut)}.own b{color:var(--tx)}.own img,.ownb img{object-fit:contain}.ownb{display:inline-flex;gap:2px;vertical-align:middle;margin-left:8px}b.gd{color:#b8975a!important}b.sd{color:#5fa898!important}.ownb img{width:44px;height:44px}.ownb{flex-wrap:wrap;gap:6px 14px;font-size:12.5px;font-weight:400;color:var(--mut)}.ownp{display:inline-flex;align-items:center;gap:4px}.ownp b{color:var(--tx);font-weight:600}.own a,.ownp a{color:var(--mut)}.own a:hover,.ownp a:hover{text-decoration:none;color:var(--tx)}a.mon-link{display:inline-flex}</style><style>:root{--rc-s1:#2a78d6;--rc-s2:#eb6834;--rc-s3:#1baf7a;--rc-band:rgba(42,120,214,.13);--rc-grid:#dfe5ee}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--rc-s1:#3987e5;--rc-s2:#d95926;--rc-s3:#199e70;--rc-band:rgba(57,135,229,.2);--rc-grid:#262d39}}
+:root[data-theme="dark"]{--rc-s1:#3987e5;--rc-s2:#d95926;--rc-s3:#199e70;--rc-band:rgba(57,135,229,.2);--rc-grid:#262d39}
+.rc{max-width:1100px}.rc .sub{margin:2px 0 14px;color:var(--mut);font-size:13px}
+.rc h2{margin:30px 0 10px}
+.rc .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:12px 0 6px}
+.rc .kpi{background:var(--card);border:1px solid var(--bd-soft,var(--bd));border-radius:14px;padding:12px 14px;box-shadow:var(--sh,none);min-width:0}
+.rc .kpi .kl{font-size:12px;color:var(--mut);font-weight:600}
+.rc .kpi .kv{font-family:var(--f-disp,inherit);font-size:26px;font-weight:800;line-height:1.2;margin:2px 0;font-variant-numeric:tabular-nums;color:var(--tx)}
+.rc .kpi .ks{font-size:12.5px;color:var(--mut);line-height:1.35}
+.rc .kpi.hl{border-color:color-mix(in srgb,var(--rc-s1) 45%,var(--bd))}
+.rc .chart{background:var(--card);border:1px solid var(--bd-soft,var(--bd));border-radius:14px;padding:12px 14px 8px;box-shadow:var(--sh,none);margin:0 0 12px;min-width:0}
+.rc .chart h3{font-size:14px;margin:0 0 6px;font-weight:700;color:var(--tx)}
+.rc .legend{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0 0 6px;padding:0;list-style:none;font-size:12.5px;color:var(--mut)}
+.rc .legend li{display:flex;align-items:center;gap:6px}
+.rc .sw{display:inline-block;width:12px;height:12px;border-radius:3px}
+.rc .sw.ln{height:0;border-top:2px dashed var(--tx);border-radius:0;width:16px}
+.rc .sw.bd{background:var(--rc-band);border:1px solid color-mix(in srgb,var(--rc-s1) 35%,transparent)}
+.rc svg{display:block;width:100%;height:auto;overflow:visible}
+.rc svg text{font-family:var(--f-text,system-ui);font-size:11.5px;fill:var(--mut)}
+.rc svg text.v{fill:var(--tx);font-weight:600}
+.rc svg .gl{stroke:var(--rc-grid);stroke-width:1}
+.rc svg .s1{fill:var(--rc-s1)}.rc svg .s2{fill:var(--rc-s2)}.rc svg .s3{fill:var(--rc-s3)}
+.rc svg .l1{stroke:var(--rc-s1)}.rc svg .l2{stroke:var(--rc-s2)}.rc svg .l3{stroke:var(--rc-s3)}
+.rc svg .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.rc svg .band{fill:var(--rc-band)}
+.rc svg .base{fill:none;stroke:var(--tx);stroke-width:2;stroke-dasharray:5 4}
+.rc svg .hit{fill:transparent}.rc svg .hit:hover{fill:color-mix(in srgb,var(--tx) 7%,transparent)}
+.rc svg .gap{stroke:var(--card);stroke-width:1}
+.rc .w{display:none}@media(min-width:700px){.rc .w{display:block}.rc .n{display:none}}
+.rc .mults{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.rc .mult{border:1px solid var(--bd-soft,var(--bd));border-radius:12px;padding:8px 10px 6px;min-width:0}
+.rc .mult .ml{font-size:12.5px;color:var(--mut);font-weight:600}
+.rc .mult .mv{font-family:var(--f-disp,inherit);font-size:22px;font-weight:800;color:var(--tx);line-height:1.2;font-variant-numeric:tabular-nums}
+.rc .mult .md{font-size:12px;color:var(--mut)}
+.rc .xr{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:2px}
+.rc table.sc{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.rc table.sc th,.rc table.sc td{padding:8px 8px;border-top:1px solid var(--bd-soft,var(--bd));text-align:right}
+.rc table.sc th:first-child,.rc table.sc td:first-child{text-align:left;color:var(--mut);font-weight:600}
+.rc table.sc thead th{border-top:0;color:var(--mut);font-size:12.5px}
+.rc table.sc .b{font-weight:800;color:var(--tx)}
+.rc .levers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.rc .lever{background:var(--card);border:1px solid var(--bd-soft,var(--bd));border-left:4px solid var(--ok);border-radius:14px;padding:12px 14px;min-width:0}
+.rc .lever .lv{font-family:var(--f-disp,inherit);font-size:24px;font-weight:800;color:var(--ok);line-height:1.2}
+.rc .lever .lw{font-weight:700;color:var(--tx);font-size:14px;margin:2px 0}
+.rc .lever .ly{font-size:12.5px;color:var(--mut)}
+.rc ul.risks{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.rc ul.risks li{background:var(--card);border:1px solid var(--bd-soft,var(--bd));border-left:4px solid var(--warn,#9a4408);border-radius:12px;padding:9px 12px;font-size:13.5px}
+.rc ul.risks b{color:var(--tx)}.rc ul.risks span{display:block;color:var(--mut);font-size:12.5px}
+.rc .foot{margin-top:22px;font-size:12px;color:var(--mut)}
+@media(max-width:600px){.rc .kpi .kv{font-size:23px}.rc .chart{padding:10px 10px 6px}}</style><div class=rc><h1>Receita</h1><div class=own><a class=mon-link href="md/claude__skills__refresh-lab-data__SKILL.html"><img class=flw-mon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png" width="56" height="56" loading="lazy" alt="Kangaskhan" title="Kangaskhan: bolsa cheia: vendas, instalações e receita"></a><span><b class=sd>Kangaskhan</b> · vendas, instalações e receita</span></div><p class=sub>dados de 02/11/2026 · US$ = proceeds (já sem a parte da Apple) · R$ a 5,44</p><div class=kpis><div class="kpi "><div class=kl>Receita out/26</div><div class=kv>US$ 2.701</div><div class=ks>R$ 14,7 mil</div></div><div class="kpi "><div class=kl>Recorrente real</div><div class=kv>US$ 2,0 mil/mês</div><div class=ks>out/26 tem US$ 926 de anual à vista</div></div><div class="kpi "><div class=kl>Crescimento mai → out</div><div class=kv>×2,3</div><div class=ks>US$ 1.165 → 2.701</div></div><div class="kpi hl"><div class=kl>Platô (cenário base)</div><div class=kv>US$ 3,8 mil</div><div class=ks>R$ 20,8 mil · 90% em ~40 meses</div></div><div class="kpi "><div class=kl>Assinantes pagantes</div><div class=kv>828</div><div class=ks>em 01/11/2026</div></div></div><h2>Receita por mês + projeção</h2><div class=chart><h3>Real até out/26 · projeção 36 meses deixando como está</h3><ul class=legend><li><span class=sw style="background:var(--rc-s1)"></span>renovação</li><li><span class=sw style="background:var(--rc-s2)"></span>nova</li><li><span class=sw style="background:var(--rc-s3)"></span>IAP</li><li><span class="sw ln"></span>projeção base</li><li><span class="sw bd"></span>faixa baixo–alto</li></ul><div class=n><svg viewBox="0 0 360 300" role=img aria-label="Receita por mês e projeção"><line class=gl x1="34" x2="320" y1="274.0" y2="274.0"/><text x="28" y="278.0" text-anchor=end>0</text><line class=gl x1="34" x2="320" y1="222.8" y2="222.8"/><text x="28" y="226.8" text-anchor=end>1k</text><line class=gl x1="34" x2="320" y1="171.6" y2="171.6"/><text x="28" y="175.6" text-anchor=end>2k</text><line class=gl x1="34" x2="320" y1="120.4" y2="120.4"/><text x="28" y="124.4" text-anchor=end>3k</text><line class=gl x1="34" x2="320" y1="69.2" y2="69.2"/><text x="28" y="73.2" text-anchor=end>4k</text><line class=gl x1="34" x2="320" y1="18.0" y2="18.0"/><text x="28" y="22.0" text-anchor=end>5k</text><rect class="s1 gap" x="34.8" y="252.2" width="4.3" height="21.8" rx="1"/><rect class="s2 gap" x="34.8" y="234.5" width="4.3" height="17.7" rx="1"/><rect class="s3 gap" x="34.8" y="233.7" width="4.3" height="0.8" rx="1"/><rect class=hit x="34.0" y="18" width="6.0" height="256"><title>nov/25 · total US$ 787 · renovação 425 · nova 346 · IAP 15</title></rect><rect class="s1 gap" x="40.8" y="251.6" width="4.3" height="22.4" rx="1"/><rect class="s2 gap" x="40.8" y="228.6" width="4.3" height="23.0" rx="1"/><rect class="s3 gap" x="40.8" y="228.2" width="4.3" height="0.5" rx="1"/><rect class=hit x="40.0" y="18" width="6.0" height="256"><title>dez/25 · total US$ 894 · renovação 437 · nova 449 · IAP 8</title></rect><rect class="s1 gap" x="46.8" y="248.0" width="4.3" height="26.0" rx="1"/><rect class="s2 gap" x="46.8" y="227.9" width="4.3" height="20.1" rx="1"/><rect class="s3 gap" x="46.8" y="227.5" width="4.3" height="0.5" rx="1"/><rect class=hit x="45.9" y="18" width="6.0" height="256"><title>jan/26 · total US$ 908 · renovação 508 · nova 392 · IAP 8</title></rect><rect class="s1 gap" x="52.7" y="245.9" width="4.3" height="28.1" rx="1"/><rect class="s2 gap" x="52.7" y="226.6" width="4.3" height="19.2" rx="1"/><rect class="s3 gap" x="52.7" y="224.6" width="4.3" height="2.0" rx="1"/><rect class=hit x="51.9" y="18" width="6.0" height="256"><title>fev/26 · total US$ 964 · renovação 549 · nova 376 · IAP 39</title></rect><rect class="s1 gap" x="58.7" y="237.7" width="4.3" height="36.3" rx="1"/><rect class="s2 gap" x="58.7" y="201.3" width="4.3" height="36.4" rx="1"/><rect class="s3 gap" x="58.7" y="200.2" width="4.3" height="1.1" rx="1"/><rect class=hit x="57.8" y="18" width="6.0" height="256"><title>mar/26 · total US$ 1.442 · renovação 709 · nova 711 · IAP 22</title></rect><rect class="s1 gap" x="64.6" y="242.9" width="4.3" height="31.1" rx="1"/><rect class="s2 gap" x="64.6" y="217.3" width="4.3" height="25.6" rx="1"/><rect class="s3 gap" x="64.6" y="216.5" width="4.3" height="0.8" rx="1"/><rect class=hit x="63.8" y="18" width="6.0" height="256"><title>abr/26 · total US$ 1.124 · renovação 608 · nova 500 · IAP 16</title></rect><rect class="s1 gap" x="70.6" y="239.9" width="4.3" height="34.1" rx="1"/><rect class="s2 gap" x="70.6" y="214.8" width="4.3" height="25.1" rx="1"/><rect class="s3 gap" x="70.6" y="214.4" width="4.3" height="0.5" rx="1"/><rect class=hit x="69.8" y="18" width="6.0" height="256"><title>mai/26 · total US$ 1.165 · renovação 666 · nova 490 · IAP 8</title></rect><rect class="s1 gap" x="76.5" y="233.6" width="4.3" height="40.4" rx="1"/><rect class="s2 gap" x="76.5" y="202.8" width="4.3" height="30.7" rx="1"/><rect class="s3 gap" x="76.5" y="200.4" width="4.3" height="2.5" rx="1"/><rect class=hit x="75.7" y="18" width="6.0" height="256"><title>jun/26 · total US$ 1.438 · renovação 790 · nova 600 · IAP 48</title></rect><rect class="s1 gap" x="82.5" y="222.8" width="4.3" height="51.2" rx="1"/><rect class="s2 gap" x="82.5" y="195.3" width="4.3" height="27.5" rx="1"/><rect class=hit x="81.7" y="18" width="6.0" height="256"><title>jul/26 · total US$ 1.537 · renovação 1.000 · nova 537 · IAP 0</title></rect><rect class="s1 gap" x="88.5" y="208.9" width="4.3" height="65.1" rx="1"/><rect class="s2 gap" x="88.5" y="184.8" width="4.3" height="24.2" rx="1"/><rect class="s3 gap" x="88.5" y="181.6" width="4.3" height="3.2" rx="1"/><rect class=hit x="87.6" y="18" width="6.0" height="256"><title>ago/26 · total US$ 1.805 · renovação 1.271 · nova 472 · IAP 62</title></rect><rect class="s1 gap" x="94.4" y="186.2" width="4.3" height="87.8" rx="1"/><rect class="s2 gap" x="94.4" y="153.5" width="4.3" height="32.7" rx="1"/><rect class=hit x="93.6" y="18" width="6.0" height="256"><title>set/26 · total US$ 2.353 · renovação 1.714 · nova 639 · IAP 0</title></rect><rect class="s1 gap" x="100.4" y="191.9" width="4.3" height="82.1" rx="1"/><rect class="s2 gap" x="100.4" y="136.1" width="4.3" height="55.8" rx="1"/><rect class="s3 gap" x="100.4" y="135.7" width="4.3" height="0.5" rx="1"/><rect class=hit x="99.5" y="18" width="6.0" height="256"><title>out/26 · total US$ 2.701 · renovação 1.604 · nova 1.089 · IAP 7</title></rect><polygon class=band points="102.5,135.7 108.5,127.9 114.4,126.7 120.4,126.7 126.4,127.9 132.3,107.5 138.3,125.4 144.2,124.0 150.2,116.7 156.1,119.4 162.1,119.3 168.1,95.9 174.0,94.1 180.0,94.4 185.9,93.5 191.9,93.5 197.9,94.4 203.8,79.3 209.8,92.5 215.7,91.6 221.7,86.6 227.6,88.4 233.6,88.3 239.6,71.4 245.5,70.4 251.5,70.7 257.4,70.1 263.4,70.1 269.4,70.7 275.3,59.6 281.3,69.4 287.2,68.8 293.2,65.2 299.1,66.5 305.1,66.5 311.1,54.2 317.0,53.7 317.0,147.0 311.1,146.4 305.1,152.2 299.1,151.9 293.2,151.5 287.2,152.7 281.3,152.9 275.3,147.5 269.4,153.4 263.4,153.1 257.4,153.1 251.5,153.4 245.5,146.9 239.6,146.5 233.6,156.5 227.6,156.2 221.7,155.5 215.7,157.8 209.8,158.2 203.8,149.3 197.9,159.2 191.9,158.6 185.9,158.6 180.0,159.2 174.0,147.1 168.1,147.4 162.1,165.3 156.1,165.1 150.2,163.4 144.2,168.3 138.3,169.2 132.3,154.6 126.4,171.1 120.4,170.1 114.4,170.1 108.5,171.1 102.5,135.7"/><polyline class=base points="102.5,135.7 108.5,144.3 114.4,143.1 120.4,143.1 126.4,144.3 132.3,125.2 138.3,141.9 144.2,140.7 150.2,134.3 156.1,136.7 162.1,136.7 168.1,115.3 174.0,114.1 180.0,119.7 185.9,118.9 191.9,118.9 197.9,119.7 203.8,106.6 209.8,118.2 215.7,117.5 221.7,113.6 227.6,115.0 233.6,115.1 239.6,100.9 245.5,100.5 251.5,104.4 257.4,103.8 263.4,103.8 269.4,104.4 275.3,95.3 281.3,103.4 287.2,103.0 293.2,100.5 299.1,101.4 305.1,101.6 311.1,92.1 317.0,92.1"/><rect class=hit x="105.5" y="18" width="6.0" height="256"><title>nov/26 · base US$ 2.534 · faixa 2.010–2.853</title></rect><rect class=hit x="111.5" y="18" width="6.0" height="256"><title>dez/26 · base US$ 2.557 · faixa 2.030–2.877</title></rect><rect class=hit x="117.4" y="18" width="6.0" height="256"><title>jan/27 · base US$ 2.557 · faixa 2.030–2.877</title></rect><rect class=hit x="123.4" y="18" width="6.0" height="256"><title>fev/27 · base US$ 2.534 · faixa 2.010–2.853</title></rect><rect class=hit x="129.3" y="18" width="6.0" height="256"><title>mar/27 · base US$ 2.906 · faixa 2.333–3.251</title></rect><rect class=hit x="135.3" y="18" width="6.0" height="256"><title>abr/27 · base US$ 2.580 · faixa 2.047–2.903</title></rect><rect class=hit x="141.2" y="18" width="6.0" height="256"><title>mai/27 · base US$ 2.603 · faixa 2.064–2.929</title></rect><rect class=hit x="147.2" y="18" width="6.0" height="256"><title>jun/27 · base US$ 2.728 · faixa 2.160–3.072</title></rect><rect class=hit x="153.2" y="18" width="6.0" height="256"><title>jul/27 · base US$ 2.682 · faixa 2.126–3.019</title></rect><rect class=hit x="159.1" y="18" width="6.0" height="256"><title>ago/27 · base US$ 2.682 · faixa 2.123–3.022</title></rect><rect class=hit x="165.1" y="18" width="6.0" height="256"><title>set/27 · base US$ 3.100 · faixa 2.472–3.479</title></rect><rect class=hit x="171.0" y="18" width="6.0" height="256"><title>out/27 · base US$ 3.124 · faixa 2.479–3.514</title></rect><rect class=hit x="177.0" y="18" width="6.0" height="256"><title>nov/27 · base US$ 3.013 · faixa 2.242–3.508</title></rect><rect class=hit x="183.0" y="18" width="6.0" height="256"><title>dez/27 · base US$ 3.029 · faixa 2.254–3.526</title></rect><rect class=hit x="188.9" y="18" width="6.0" height="256"><title>jan/28 · base US$ 3.029 · faixa 2.254–3.526</title></rect><rect class=hit x="194.9" y="18" width="6.0" height="256"><title>fev/28 · base US$ 3.013 · faixa 2.242–3.508</title></rect><rect class=hit x="200.8" y="18" width="6.0" height="256"><title>mar/28 · base US$ 3.270 · faixa 2.435–3.803</title></rect><rect class=hit x="206.8" y="18" width="6.0" height="256"><title>abr/28 · base US$ 3.043 · faixa 2.261–3.544</title></rect><rect class=hit x="212.8" y="18" width="6.0" height="256"><title>mai/28 · base US$ 3.056 · faixa 2.269–3.562</title></rect><rect class=hit x="218.7" y="18" width="6.0" height="256"><title>jun/28 · base US$ 3.133 · faixa 2.315–3.661</title></rect><rect class=hit x="224.7" y="18" width="6.0" height="256"><title>jul/28 · base US$ 3.106 · faixa 2.300–3.625</title></rect><rect class=hit x="230.6" y="18" width="6.0" height="256"><title>ago/28 · base US$ 3.103 · faixa 2.294–3.626</title></rect><rect class=hit x="236.6" y="18" width="6.0" height="256"><title>set/28 · base US$ 3.381 · faixa 2.491–3.957</title></rect><rect class=hit x="242.5" y="18" width="6.0" height="256"><title>out/28 · base US$ 3.388 · faixa 2.482–3.976</title></rect><rect class=hit x="248.5" y="18" width="6.0" height="256"><title>nov/28 · base US$ 3.313 · faixa 2.355–3.970</title></rect><rect class=hit x="254.5" y="18" width="6.0" height="256"><title>dez/28 · base US$ 3.324 · faixa 2.362–3.983</title></rect><rect class=hit x="260.4" y="18" width="6.0" height="256"><title>jan/29 · base US$ 3.324 · faixa 2.362–3.983</title></rect><rect class=hit x="266.4" y="18" width="6.0" height="256"><title>fev/29 · base US$ 3.313 · faixa 2.355–3.970</title></rect><rect class=hit x="272.3" y="18" width="6.0" height="256"><title>mar/29 · base US$ 3.490 · faixa 2.471–4.188</title></rect><rect class=hit x="278.3" y="18" width="6.0" height="256"><title>abr/29 · base US$ 3.332 · faixa 2.366–3.996</title></rect><rect class=hit x="284.2" y="18" width="6.0" height="256"><title>mai/29 · base US$ 3.340 · faixa 2.369–4.008</title></rect><rect class=hit x="290.2" y="18" width="6.0" height="256"><title>jun/29 · base US$ 3.388 · faixa 2.392–4.078</title></rect><rect class=hit x="296.2" y="18" width="6.0" height="256"><title>jul/29 · base US$ 3.371 · faixa 2.385–4.053</title></rect><rect class=hit x="302.1" y="18" width="6.0" height="256"><title>ago/29 · base US$ 3.368 · faixa 2.379–4.052</title></rect><rect class=hit x="308.1" y="18" width="6.0" height="256"><title>set/29 · base US$ 3.553 · faixa 2.492–4.292</title></rect><rect class=hit x="314.0" y="18" width="6.0" height="256"><title>out/29 · base US$ 3.552 · faixa 2.481–4.302</title></rect><line class=gl x1="105.5" x2="105.5" y1="12" y2="274" style="stroke-dasharray:3 3"/><text x="101.5" y="12" text-anchor=end>real</text><text x="109.5" y="12">projeção</text><text class=v x="102.5" y="129.7" text-anchor=end>2,7k</text><text class=v x="324.0" y="57.7">4,3k</text><text class=v x="324.0" y="96.1">3,6k</text><text class=v x="324.0" y="151.0">2,5k</text><text x="37.0" y="292" text-anchor=middle>nov/25</text><text x="72.7" y="292" text-anchor=middle>mai/26</text><text x="108.5" y="292" text-anchor=middle>nov/26</text><text x="144.2" y="292" text-anchor=middle>mai/27</text><text x="180.0" y="292" text-anchor=middle>nov/27</text><text x="215.7" y="292" text-anchor=middle>mai/28</text><text x="251.5" y="292" text-anchor=middle>nov/28</text><text x="287.2" y="292" text-anchor=middle>mai/29</text><text x="2" y="12">US$/mês</text></svg></div><div class=w><svg viewBox="0 0 880 330" role=img aria-label="Receita por mês e projeção"><line class=gl x1="34" x2="834" y1="304.0" y2="304.0"/><text x="28" y="308.0" text-anchor=end>0</text><line class=gl x1="34" x2="834" y1="246.8" y2="246.8"/><text x="28" y="250.8" text-anchor=end>1k</text><line class=gl x1="34" x2="834" y1="189.6" y2="189.6"/><text x="28" y="193.6" text-anchor=end>2k</text><line class=gl x1="34" x2="834" y1="132.4" y2="132.4"/><text x="28" y="136.4" text-anchor=end>3k</text><line class=gl x1="34" x2="834" y1="75.2" y2="75.2"/><text x="28" y="79.2" text-anchor=end>4k</text><line class=gl x1="34" x2="834" y1="18.0" y2="18.0"/><text x="28" y="22.0" text-anchor=end>5k</text><rect class="s1 gap" x="36.3" y="279.7" width="12.0" height="24.3" rx="1"/><rect class="s2 gap" x="36.3" y="259.9" width="12.0" height="19.8" rx="1"/><rect class="s3 gap" x="36.3" y="259.0" width="12.0" height="0.9" rx="1"/><rect class=hit x="34.0" y="18" width="16.7" height="286"><title>nov/25 · total US$ 787 · renovação 425 · nova 346 · IAP 15</title></rect><rect class="s1 gap" x="53.0" y="279.0" width="12.0" height="25.0" rx="1"/><rect class="s2 gap" x="53.0" y="253.3" width="12.0" height="25.7" rx="1"/><rect class="s3 gap" x="53.0" y="252.9" width="12.0" height="0.5" rx="1"/><rect class=hit x="50.7" y="18" width="16.7" height="286"><title>dez/25 · total US$ 894 · renovação 437 · nova 449 · IAP 8</title></rect><rect class="s1 gap" x="69.7" y="275.0" width="12.0" height="29.0" rx="1"/><rect class="s2 gap" x="69.7" y="252.5" width="12.0" height="22.4" rx="1"/><rect class="s3 gap" x="69.7" y="252.1" width="12.0" height="0.5" rx="1"/><rect class=hit x="67.3" y="18" width="16.7" height="286"><title>jan/26 · total US$ 908 · renovação 508 · nova 392 · IAP 8</title></rect><rect class="s1 gap" x="86.3" y="272.6" width="12.0" height="31.4" rx="1"/><rect class="s2 gap" x="86.3" y="251.1" width="12.0" height="21.5" rx="1"/><rect class="s3 gap" x="86.3" y="248.8" width="12.0" height="2.2" rx="1"/><rect class=hit x="84.0" y="18" width="16.7" height="286"><title>fev/26 · total US$ 964 · renovação 549 · nova 376 · IAP 39</title></rect><rect class="s1 gap" x="103.0" y="263.4" width="12.0" height="40.6" rx="1"/><rect class="s2 gap" x="103.0" y="222.8" width="12.0" height="40.7" rx="1"/><rect class="s3 gap" x="103.0" y="221.5" width="12.0" height="1.2" rx="1"/><rect class=hit x="100.7" y="18" width="16.7" height="286"><title>mar/26 · total US$ 1.442 · renovação 709 · nova 711 · IAP 22</title></rect><rect class="s1 gap" x="119.7" y="269.2" width="12.0" height="34.8" rx="1"/><rect class="s2 gap" x="119.7" y="240.6" width="12.0" height="28.6" rx="1"/><rect class="s3 gap" x="119.7" y="239.7" width="12.0" height="0.9" rx="1"/><rect class=hit x="117.3" y="18" width="16.7" height="286"><title>abr/26 · total US$ 1.124 · renovação 608 · nova 500 · IAP 16</title></rect><rect class="s1 gap" x="136.3" y="265.9" width="12.0" height="38.1" rx="1"/><rect class="s2 gap" x="136.3" y="237.8" width="12.0" height="28.0" rx="1"/><rect class="s3 gap" x="136.3" y="237.4" width="12.0" height="0.5" rx="1"/><rect class=hit x="134.0" y="18" width="16.7" height="286"><title>mai/26 · total US$ 1.165 · renovação 666 · nova 490 · IAP 8</title></rect><rect class="s1 gap" x="153.0" y="258.8" width="12.0" height="45.2" rx="1"/><rect class="s2 gap" x="153.0" y="224.5" width="12.0" height="34.3" rx="1"/><rect class="s3 gap" x="153.0" y="221.8" width="12.0" height="2.7" rx="1"/><rect class=hit x="150.7" y="18" width="16.7" height="286"><title>jun/26 · total US$ 1.438 · renovação 790 · nova 600 · IAP 48</title></rect><rect class="s1 gap" x="169.7" y="246.8" width="12.0" height="57.2" rx="1"/><rect class="s2 gap" x="169.7" y="216.1" width="12.0" height="30.7" rx="1"/><rect class=hit x="167.3" y="18" width="16.7" height="286"><title>jul/26 · total US$ 1.537 · renovação 1.000 · nova 537 · IAP 0</title></rect><rect class="s1 gap" x="186.3" y="231.3" width="12.0" height="72.7" rx="1"/><rect class="s2 gap" x="186.3" y="204.3" width="12.0" height="27.0" rx="1"/><rect class="s3 gap" x="186.3" y="200.8" width="12.0" height="3.5" rx="1"/><rect class=hit x="184.0" y="18" width="16.7" height="286"><title>ago/26 · total US$ 1.805 · renovação 1.271 · nova 472 · IAP 62</title></rect><rect class="s1 gap" x="203.0" y="205.9" width="12.0" height="98.1" rx="1"/><rect class="s2 gap" x="203.0" y="169.4" width="12.0" height="36.5" rx="1"/><rect class=hit x="200.7" y="18" width="16.7" height="286"><title>set/26 · total US$ 2.353 · renovação 1.714 · nova 639 · IAP 0</title></rect><rect class="s1 gap" x="219.7" y="212.2" width="12.0" height="91.8" rx="1"/><rect class="s2 gap" x="219.7" y="149.9" width="12.0" height="62.3" rx="1"/><rect class="s3 gap" x="219.7" y="149.5" width="12.0" height="0.5" rx="1"/><rect class=hit x="217.3" y="18" width="16.7" height="286"><title>out/26 · total US$ 2.701 · renovação 1.604 · nova 1.089 · IAP 7</title></rect><polygon class=band points="225.7,149.5 242.3,140.8 259.0,139.4 275.7,139.4 292.3,140.8 309.0,118.0 325.7,137.9 342.3,136.5 359.0,128.3 375.7,131.3 392.3,131.1 409.0,105.0 425.7,103.0 442.3,103.3 459.0,102.3 475.7,102.3 492.3,103.3 509.0,86.5 525.7,101.3 542.3,100.3 559.0,94.6 575.7,96.7 592.3,96.6 609.0,77.7 625.7,76.6 642.3,76.9 659.0,76.2 675.7,76.2 692.3,76.9 709.0,64.4 725.7,75.4 742.3,74.7 759.0,70.7 775.7,72.2 792.3,72.2 809.0,58.5 825.7,57.9 825.7,162.1 809.0,161.5 792.3,167.9 775.7,167.6 759.0,167.2 742.3,168.5 725.7,168.7 709.0,162.7 692.3,169.3 675.7,168.9 659.0,168.9 642.3,169.3 625.7,162.0 609.0,161.5 592.3,172.8 575.7,172.4 559.0,171.6 542.3,174.2 525.7,174.7 509.0,164.7 492.3,175.8 475.7,175.1 459.0,175.1 442.3,175.8 425.7,162.2 409.0,162.6 392.3,182.6 375.7,182.4 359.0,180.4 342.3,185.9 325.7,186.9 309.0,170.6 292.3,189.0 275.7,187.9 259.0,187.9 242.3,189.0 225.7,149.5"/><polyline class=base points="225.7,149.5 242.3,159.1 259.0,157.7 275.7,157.7 292.3,159.1 309.0,137.8 325.7,156.4 342.3,155.1 359.0,148.0 375.7,150.6 392.3,150.6 409.0,126.7 425.7,125.3 442.3,131.7 459.0,130.7 475.7,130.7 492.3,131.7 509.0,117.0 525.7,129.9 542.3,129.2 559.0,124.8 575.7,126.3 592.3,126.5 609.0,110.6 625.7,110.2 642.3,114.5 659.0,113.9 675.7,113.9 692.3,114.5 709.0,104.4 725.7,113.4 742.3,113.0 759.0,110.2 775.7,111.2 792.3,111.4 809.0,100.8 825.7,100.8"/><rect class=hit x="234.0" y="18" width="16.7" height="286"><title>nov/26 · base US$ 2.534 · faixa 2.010–2.853</title></rect><rect class=hit x="250.7" y="18" width="16.7" height="286"><title>dez/26 · base US$ 2.557 · faixa 2.030–2.877</title></rect><rect class=hit x="267.3" y="18" width="16.7" height="286"><title>jan/27 · base US$ 2.557 · faixa 2.030–2.877</title></rect><rect class=hit x="284.0" y="18" width="16.7" height="286"><title>fev/27 · base US$ 2.534 · faixa 2.010–2.853</title></rect><rect class=hit x="300.7" y="18" width="16.7" height="286"><title>mar/27 · base US$ 2.906 · faixa 2.333–3.251</title></rect><rect class=hit x="317.3" y="18" width="16.7" height="286"><title>abr/27 · base US$ 2.580 · faixa 2.047–2.903</title></rect><rect class=hit x="334.0" y="18" width="16.7" height="286"><title>mai/27 · base US$ 2.603 · faixa 2.064–2.929</title></rect><rect class=hit x="350.7" y="18" width="16.7" height="286"><title>jun/27 · base US$ 2.728 · faixa 2.160–3.072</title></rect><rect class=hit x="367.3" y="18" width="16.7" height="286"><title>jul/27 · base US$ 2.682 · faixa 2.126–3.019</title></rect><rect class=hit x="384.0" y="18" width="16.7" height="286"><title>ago/27 · base US$ 2.682 · faixa 2.123–3.022</title></rect><rect class=hit x="400.7" y="18" width="16.7" height="286"><title>set/27 · base US$ 3.100 · faixa 2.472–3.479</title></rect><rect class=hit x="417.3" y="18" width="16.7" height="286"><title>out/27 · base US$ 3.124 · faixa 2.479–3.514</title></rect><rect class=hit x="434.0" y="18" width="16.7" height="286"><title>nov/27 · base US$ 3.013 · faixa 2.242–3.508</title></rect><rect class=hit x="450.7" y="18" width="16.7" height="286"><title>dez/27 · base US$ 3.029 · faixa 2.254–3.526</title></rect><rect class=hit x="467.3" y="18" width="16.7" height="286"><title>jan/28 · base US$ 3.029 · faixa 2.254–3.526</title></rect><rect class=hit x="484.0" y="18" width="16.7" height="286"><title>fev/28 · base US$ 3.013 · faixa 2.242–3.508</title></rect><rect class=hit x="500.7" y="18" width="16.7" height="286"><title>mar/28 · base US$ 3.270 · faixa 2.435–3.803</title></rect><rect class=hit x="517.3" y="18" width="16.7" height="286"><title>abr/28 · base US$ 3.043 · faixa 2.261–3.544</title></rect><rect class=hit x="534.0" y="18" width="16.7" height="286"><title>mai/28 · base US$ 3.056 · faixa 2.269–3.562</title></rect><rect class=hit x="550.7" y="18" width="16.7" height="286"><title>jun/28 · base US$ 3.133 · faixa 2.315–3.661</title></rect><rect class=hit x="567.3" y="18" width="16.7" height="286"><title>jul/28 · base US$ 3.106 · faixa 2.300–3.625</title></rect><rect class=hit x="584.0" y="18" width="16.7" height="286"><title>ago/28 · base US$ 3.103 · faixa 2.294–3.626</title></rect><rect class=hit x="600.7" y="18" width="16.7" height="286"><title>set/28 · base US$ 3.381 · faixa 2.491–3.957</title></rect><rect class=hit x="617.3" y="18" width="16.7" height="286"><title>out/28 · base US$ 3.388 · faixa 2.482–3.976</title></rect><rect class=hit x="634.0" y="18" width="16.7" height="286"><title>nov/28 · base US$ 3.313 · faixa 2.355–3.970</title></rect><rect class=hit x="650.7" y="18" width="16.7" height="286"><title>dez/28 · base US$ 3.324 · faixa 2.362–3.983</title></rect><rect class=hit x="667.3" y="18" width="16.7" height="286"><title>jan/29 · base US$ 3.324 · faixa 2.362–3.983</title></rect><rect class=hit x="684.0" y="18" width="16.7" height="286"><title>fev/29 · base US$ 3.313 · faixa 2.355–3.970</title></rect><rect class=hit x="700.7" y="18" width="16.7" height="286"><title>mar/29 · base US$ 3.490 · faixa 2.471–4.188</title></rect><rect class=hit x="717.3" y="18" width="16.7" height="286"><title>abr/29 · base US$ 3.332 · faixa 2.366–3.996</title></rect><rect class=hit x="734.0" y="18" width="16.7" height="286"><title>mai/29 · base US$ 3.340 · faixa 2.369–4.008</title></rect><rect class=hit x="750.7" y="18" width="16.7" height="286"><title>jun/29 · base US$ 3.388 · faixa 2.392–4.078</title></rect><rect class=hit x="767.3" y="18" width="16.7" height="286"><title>jul/29 · base US$ 3.371 · faixa 2.385–4.053</title></rect><rect class=hit x="784.0" y="18" width="16.7" height="286"><title>ago/29 · base US$ 3.368 · faixa 2.379–4.052</title></rect><rect class=hit x="800.7" y="18" width="16.7" height="286"><title>set/29 · base US$ 3.553 · faixa 2.492–4.292</title></rect><rect class=hit x="817.3" y="18" width="16.7" height="286"><title>out/29 · base US$ 3.552 · faixa 2.481–4.302</title></rect><line class=gl x1="234.0" x2="234.0" y1="12" y2="304" style="stroke-dasharray:3 3"/><text x="230.0" y="12" text-anchor=end>real</text><text x="238.0" y="12">projeção</text><text class=v x="225.7" y="143.5" text-anchor=end>2,7k</text><text class=v x="838.0" y="61.9">4,3k</text><text class=v x="838.0" y="104.8">3,6k</text><text class=v x="838.0" y="166.1">2,5k</text><text x="42.3" y="322" text-anchor=middle>nov/25</text><text x="142.3" y="322" text-anchor=middle>mai/26</text><text x="242.3" y="322" text-anchor=middle>nov/26</text><text x="342.3" y="322" text-anchor=middle>mai/27</text><text x="442.3" y="322" text-anchor=middle>nov/27</text><text x="542.3" y="322" text-anchor=middle>mai/28</text><text x="642.3" y="322" text-anchor=middle>nov/28</text><text x="742.3" y="322" text-anchor=middle>mai/29</text><text x="2" y="12">US$/mês</text></svg></div></div><h2>Por app</h2><div class=chart><h3>Receita por app</h3><ul class=legend><li><span class=sw style="background:var(--rc-s1)"></span>Calc+</li><li><span class=sw style="background:var(--rc-s2)"></span>Cloak</li><li><span class=sw style="background:var(--rc-s3)"></span>outros</li></ul><div class=n><svg viewBox="0 0 360 230" role=img aria-label="Receita por app"><line class=gl x1="34" x2="352" y1="206.0" y2="206.0"/><text x="28" y="210.0" text-anchor=end>0</text><line class=gl x1="34" x2="352" y1="144.0" y2="144.0"/><text x="28" y="148.0" text-anchor=end>1k</text><line class=gl x1="34" x2="352" y1="82.0" y2="82.0"/><text x="28" y="86.0" text-anchor=end>2k</text><line class=gl x1="34" x2="352" y1="20.0" y2="20.0"/><text x="28" y="24.0" text-anchor=end>3k</text><rect class="s1 gap" x="38.5" y="159.3" width="17.5" height="46.7" rx="1"/><rect class="s3 gap" x="38.5" y="157.2" width="17.5" height="2.1" rx="1"/><text class=v x="47.2" y="152.2" text-anchor=middle>0,8k</text><text x="47.2" y="223" text-anchor=middle>nov</text><rect class=hit x="34.0" y="20" width="26.5" height="186"><title>nov/25 · Calc+ US$ 753 · Cloak 0 · outros 34</title></rect><rect class="s1 gap" x="65.0" y="151.9" width="17.5" height="54.1" rx="1"/><rect class="s3 gap" x="65.0" y="150.6" width="17.5" height="1.3" rx="1"/><rect class=hit x="60.5" y="20" width="26.5" height="186"><title>dez/25 · Calc+ US$ 873 · Cloak 0 · outros 20</title></rect><rect class="s1 gap" x="91.5" y="152.0" width="17.5" height="54.0" rx="1"/><rect class="s2 gap" x="91.5" y="151.5" width="17.5" height="0.5" rx="1"/><rect class="s3 gap" x="91.5" y="149.7" width="17.5" height="1.8" rx="1"/><text x="100.2" y="223" text-anchor=middle>jan</text><rect class=hit x="87.0" y="20" width="26.5" height="186"><title>jan/26 · Calc+ US$ 870 · Cloak 8 · outros 29</title></rect><rect class="s1 gap" x="118.0" y="149.3" width="17.5" height="56.7" rx="1"/><rect class="s3 gap" x="118.0" y="146.2" width="17.5" height="3.1" rx="1"/><rect class=hit x="113.5" y="20" width="26.5" height="186"><title>fev/26 · Calc+ US$ 914 · Cloak 0 · outros 50</title></rect><rect class="s1 gap" x="144.5" y="119.6" width="17.5" height="86.4" rx="1"/><rect class="s3 gap" x="144.5" y="116.6" width="17.5" height="3.0" rx="1"/><text x="153.2" y="223" text-anchor=middle>mar</text><rect class=hit x="140.0" y="20" width="26.5" height="186"><title>mar/26 · Calc+ US$ 1.394 · Cloak 0 · outros 48</title></rect><rect class="s1 gap" x="171.0" y="142.8" width="17.5" height="63.2" rx="1"/><rect class="s2 gap" x="171.0" y="138.9" width="17.5" height="3.8" rx="1"/><rect class="s3 gap" x="171.0" y="136.3" width="17.5" height="2.6" rx="1"/><rect class=hit x="166.5" y="20" width="26.5" height="186"><title>abr/26 · Calc+ US$ 1.020 · Cloak 61 · outros 42</title></rect><rect class="s1 gap" x="197.5" y="141.0" width="17.5" height="65.0" rx="1"/><rect class="s2 gap" x="197.5" y="134.9" width="17.5" height="6.1" rx="1"/><rect class="s3 gap" x="197.5" y="133.8" width="17.5" height="1.2" rx="1"/><text class=v x="206.2" y="128.8" text-anchor=middle>1,2k</text><text x="206.2" y="223" text-anchor=middle>mai</text><rect class=hit x="193.0" y="20" width="26.5" height="186"><title>mai/26 · Calc+ US$ 1.048 · Cloak 98 · outros 19</title></rect><rect class="s1 gap" x="224.0" y="139.7" width="17.5" height="66.3" rx="1"/><rect class="s2 gap" x="224.0" y="120.7" width="17.5" height="19.0" rx="1"/><rect class="s3 gap" x="224.0" y="116.8" width="17.5" height="3.9" rx="1"/><rect class=hit x="219.5" y="20" width="26.5" height="186"><title>jun/26 · Calc+ US$ 1.069 · Cloak 306 · outros 63</title></rect><rect class="s1 gap" x="250.5" y="138.2" width="17.5" height="67.8" rx="1"/><rect class="s2 gap" x="250.5" y="117.9" width="17.5" height="20.3" rx="1"/><rect class="s3 gap" x="250.5" y="110.7" width="17.5" height="7.2" rx="1"/><text x="259.2" y="223" text-anchor=middle>jul</text><rect class=hit x="246.0" y="20" width="26.5" height="186"><title>jul/26 · Calc+ US$ 1.094 · Cloak 327 · outros 116</title></rect><rect class="s1 gap" x="277.0" y="138.1" width="17.5" height="67.9" rx="1"/><rect class="s2 gap" x="277.0" y="107.1" width="17.5" height="31.0" rx="1"/><rect class="s3 gap" x="277.0" y="94.1" width="17.5" height="13.0" rx="1"/><rect class=hit x="272.5" y="20" width="26.5" height="186"><title>ago/26 · Calc+ US$ 1.096 · Cloak 500 · outros 209</title></rect><rect class="s1 gap" x="303.5" y="115.8" width="17.5" height="90.2" rx="1"/><rect class="s2 gap" x="303.5" y="74.5" width="17.5" height="41.3" rx="1"/><rect class="s3 gap" x="303.5" y="60.1" width="17.5" height="14.4" rx="1"/><text x="312.2" y="223" text-anchor=middle>set</text><rect class=hit x="299.0" y="20" width="26.5" height="186"><title>set/26 · Calc+ US$ 1.455 · Cloak 666 · outros 232</title></rect><rect class="s1 gap" x="330.0" y="115.2" width="17.5" height="90.8" rx="1"/><rect class="s2 gap" x="330.0" y="52.0" width="17.5" height="63.2" rx="1"/><rect class="s3 gap" x="330.0" y="38.6" width="17.5" height="13.4" rx="1"/><text class=v x="338.8" y="33.6" text-anchor=middle>2,7k</text><rect class=hit x="325.5" y="20" width="26.5" height="186"><title>out/26 · Calc+ US$ 1.465 · Cloak 1.020 · outros 216</title></rect><text x="2" y="12">US$/mês</text></svg></div><div class=w><svg viewBox="0 0 880 240" role=img aria-label="Receita por app"><line class=gl x1="34" x2="872" y1="216.0" y2="216.0"/><text x="28" y="220.0" text-anchor=end>0</text><line class=gl x1="34" x2="872" y1="150.7" y2="150.7"/><text x="28" y="154.7" text-anchor=end>1k</text><line class=gl x1="34" x2="872" y1="85.3" y2="85.3"/><text x="28" y="89.3" text-anchor=end>2k</text><line class=gl x1="34" x2="872" y1="20.0" y2="20.0"/><text x="28" y="24.0" text-anchor=end>3k</text><rect class="s1 gap" x="45.9" y="166.8" width="46.1" height="49.2" rx="1"/><rect class="s3 gap" x="45.9" y="164.6" width="46.1" height="2.2" rx="1"/><text class=v x="68.9" y="159.6" text-anchor=middle>0,8k</text><text x="68.9" y="233" text-anchor=middle>nov/25</text><rect class=hit x="34.0" y="20" width="69.8" height="196"><title>nov/25 · Calc+ US$ 753 · Cloak 0 · outros 34</title></rect><rect class="s1 gap" x="115.7" y="158.9" width="46.1" height="57.1" rx="1"/><rect class="s3 gap" x="115.7" y="157.6" width="46.1" height="1.3" rx="1"/><text x="138.8" y="233" text-anchor=middle>dez/25</text><rect class=hit x="103.8" y="20" width="69.8" height="196"><title>dez/25 · Calc+ US$ 873 · Cloak 0 · outros 20</title></rect><rect class="s1 gap" x="185.5" y="159.1" width="46.1" height="56.9" rx="1"/><rect class="s2 gap" x="185.5" y="158.6" width="46.1" height="0.5" rx="1"/><rect class="s3 gap" x="185.5" y="156.7" width="46.1" height="1.9" rx="1"/><text x="208.6" y="233" text-anchor=middle>jan/26</text><rect class=hit x="173.7" y="20" width="69.8" height="196"><title>jan/26 · Calc+ US$ 870 · Cloak 8 · outros 29</title></rect><rect class="s1 gap" x="255.4" y="156.3" width="46.1" height="59.7" rx="1"/><rect class="s3 gap" x="255.4" y="153.0" width="46.1" height="3.3" rx="1"/><text x="278.4" y="233" text-anchor=middle>fev/26</text><rect class=hit x="243.5" y="20" width="69.8" height="196"><title>fev/26 · Calc+ US$ 914 · Cloak 0 · outros 50</title></rect><rect class="s1 gap" x="325.2" y="124.9" width="46.1" height="91.1" rx="1"/><rect class="s3 gap" x="325.2" y="121.8" width="46.1" height="3.1" rx="1"/><text x="348.2" y="233" text-anchor=middle>mar/26</text><rect class=hit x="313.3" y="20" width="69.8" height="196"><title>mar/26 · Calc+ US$ 1.394 · Cloak 0 · outros 48</title></rect><rect class="s1 gap" x="395.0" y="149.4" width="46.1" height="66.6" rx="1"/><rect class="s2 gap" x="395.0" y="145.3" width="46.1" height="4.0" rx="1"/><rect class="s3 gap" x="395.0" y="142.6" width="46.1" height="2.7" rx="1"/><text x="418.1" y="233" text-anchor=middle>abr/26</text><rect class=hit x="383.2" y="20" width="69.8" height="196"><title>abr/26 · Calc+ US$ 1.020 · Cloak 61 · outros 42</title></rect><rect class="s1 gap" x="464.9" y="147.5" width="46.1" height="68.5" rx="1"/><rect class="s2 gap" x="464.9" y="141.1" width="46.1" height="6.4" rx="1"/><rect class="s3 gap" x="464.9" y="139.9" width="46.1" height="1.2" rx="1"/><text class=v x="487.9" y="134.9" text-anchor=middle>1,2k</text><text x="487.9" y="233" text-anchor=middle>mai/26</text><rect class=hit x="453.0" y="20" width="69.8" height="196"><title>mai/26 · Calc+ US$ 1.048 · Cloak 98 · outros 19</title></rect><rect class="s1 gap" x="534.7" y="146.1" width="46.1" height="69.9" rx="1"/><rect class="s2 gap" x="534.7" y="126.2" width="46.1" height="20.0" rx="1"/><rect class="s3 gap" x="534.7" y="122.1" width="46.1" height="4.1" rx="1"/><text x="557.8" y="233" text-anchor=middle>jun/26</text><rect class=hit x="522.8" y="20" width="69.8" height="196"><title>jun/26 · Calc+ US$ 1.069 · Cloak 306 · outros 63</title></rect><rect class="s1 gap" x="604.5" y="144.5" width="46.1" height="71.5" rx="1"/><rect class="s2 gap" x="604.5" y="123.1" width="46.1" height="21.4" rx="1"/><rect class="s3 gap" x="604.5" y="115.6" width="46.1" height="7.6" rx="1"/><text x="627.6" y="233" text-anchor=middle>jul/26</text><rect class=hit x="592.7" y="20" width="69.8" height="196"><title>jul/26 · Calc+ US$ 1.094 · Cloak 327 · outros 116</title></rect><rect class="s1 gap" x="674.4" y="144.4" width="46.1" height="71.6" rx="1"/><rect class="s2 gap" x="674.4" y="111.7" width="46.1" height="32.7" rx="1"/><rect class="s3 gap" x="674.4" y="98.1" width="46.1" height="13.7" rx="1"/><text x="697.4" y="233" text-anchor=middle>ago/26</text><rect class=hit x="662.5" y="20" width="69.8" height="196"><title>ago/26 · Calc+ US$ 1.096 · Cloak 500 · outros 209</title></rect><rect class="s1 gap" x="744.2" y="120.9" width="46.1" height="95.1" rx="1"/><rect class="s2 gap" x="744.2" y="77.4" width="46.1" height="43.5" rx="1"/><rect class="s3 gap" x="744.2" y="62.3" width="46.1" height="15.2" rx="1"/><text x="767.2" y="233" text-anchor=middle>set/26</text><rect class=hit x="732.3" y="20" width="69.8" height="196"><title>set/26 · Calc+ US$ 1.455 · Cloak 666 · outros 232</title></rect><rect class="s1 gap" x="814.0" y="120.3" width="46.1" height="95.7" rx="1"/><rect class="s2 gap" x="814.0" y="53.7" width="46.1" height="66.6" rx="1"/><rect class="s3 gap" x="814.0" y="39.6" width="46.1" height="14.1" rx="1"/><text class=v x="837.1" y="34.6" text-anchor=middle>2,7k</text><text x="837.1" y="233" text-anchor=middle>out/26</text><rect class=hit x="802.2" y="20" width="69.8" height="196"><title>out/26 · Calc+ US$ 1.465 · Cloak 1.020 · outros 216</title></rect><text x="2" y="12">US$/mês</text></svg></div></div><div class=chart><h3>Instalações novas por mês (só 1*, sem update)</h3><ul class=legend><li><span class=sw style="background:var(--rc-s1)"></span>Calc+</li><li><span class=sw style="background:var(--rc-s2)"></span>Cloak</li></ul><div class=n><svg viewBox="0 0 360 190" role=img aria-label="Instalações por mês"><line class=gl x1="34" x2="302" y1="166.0" y2="166.0"/><text x="28" y="170.0" text-anchor=end>0</text><line class=gl x1="34" x2="302" y1="136.8" y2="136.8"/><text x="28" y="140.8" text-anchor=end>1k</text><line class=gl x1="34" x2="302" y1="107.6" y2="107.6"/><text x="28" y="111.6" text-anchor=end>2k</text><line class=gl x1="34" x2="302" y1="78.4" y2="78.4"/><text x="28" y="82.4" text-anchor=end>3k</text><line class=gl x1="34" x2="302" y1="49.2" y2="49.2"/><text x="28" y="53.2" text-anchor=end>4k</text><line class=gl x1="34" x2="302" y1="20.0" y2="20.0"/><text x="28" y="24.0" text-anchor=end>5k</text><polyline class="ln l1" points="45.2,106.0 67.5,98.3 89.8,94.2 112.2,104.7 134.5,93.6 156.8,98.2 179.2,81.8 201.5,83.4 223.8,77.6 246.2,80.4 268.5,75.7 290.8,72.0"/><circle cx="290.8" cy="72.0" r="4" class="s1" stroke="var(--card)" stroke-width="2"/><polyline class="ln l2" points="45.2,166.0 67.5,163.4 89.8,162.5 112.2,162.4 134.5,160.3 156.8,155.3 179.2,135.9 201.5,120.2 223.8,108.8 246.2,78.3 268.5,66.2 290.8,35.2"/><circle cx="290.8" cy="35.2" r="4" class="s2" stroke="var(--card)" stroke-width="2"/><text class=v x="310.0" y="39.2">Cloak 4,5k</text><text class=v x="310.0" y="76.0">Calc+ 3,2k</text><text x="45.2" y="183" text-anchor=middle>nov</text><rect class=hit x="34.0" y="20" width="22.3" height="146"><title>nov/25 · instalações Calc+ 2.054 · Cloak 0</title></rect><rect class=hit x="56.3" y="20" width="22.3" height="146"><title>dez/25 · instalações Calc+ 2.317 · Cloak 90</title></rect><text x="89.8" y="183" text-anchor=middle>jan</text><rect class=hit x="78.7" y="20" width="22.3" height="146"><title>jan/26 · instalações Calc+ 2.458 · Cloak 120</title></rect><rect class=hit x="101.0" y="20" width="22.3" height="146"><title>fev/26 · instalações Calc+ 2.098 · Cloak 124</title></rect><text x="134.5" y="183" text-anchor=middle>mar</text><rect class=hit x="123.3" y="20" width="22.3" height="146"><title>mar/26 · instalações Calc+ 2.480 · Cloak 196</title></rect><rect class=hit x="145.7" y="20" width="22.3" height="146"><title>abr/26 · instalações Calc+ 2.321 · Cloak 367</title></rect><text x="179.2" y="183" text-anchor=middle>mai</text><rect class=hit x="168.0" y="20" width="22.3" height="146"><title>mai/26 · instalações Calc+ 2.884 · Cloak 1.032</title></rect><rect class=hit x="190.3" y="20" width="22.3" height="146"><title>jun/26 · instalações Calc+ 2.828 · Cloak 1.570</title></rect><text x="223.8" y="183" text-anchor=middle>jul</text><rect class=hit x="212.7" y="20" width="22.3" height="146"><title>jul/26 · instalações Calc+ 3.027 · Cloak 1.958</title></rect><rect class=hit x="235.0" y="20" width="22.3" height="146"><title>ago/26 · instalações Calc+ 2.932 · Cloak 3.003</title></rect><text x="268.5" y="183" text-anchor=middle>set</text><rect class=hit x="257.3" y="20" width="22.3" height="146"><title>set/26 · instalações Calc+ 3.093 · Cloak 3.417</title></rect><rect class=hit x="279.7" y="20" width="22.3" height="146"><title>out/26 · instalações Calc+ 3.219 · Cloak 4.478</title></rect><text x="2" y="12">instalações/mês</text></svg></div><div class=w><svg viewBox="0 0 880 200" role=img aria-label="Instalações por mês"><line class=gl x1="34" x2="810" y1="176.0" y2="176.0"/><text x="28" y="180.0" text-anchor=end>0</text><line class=gl x1="34" x2="810" y1="144.8" y2="144.8"/><text x="28" y="148.8" text-anchor=end>1k</text><line class=gl x1="34" x2="810" y1="113.6" y2="113.6"/><text x="28" y="117.6" text-anchor=end>2k</text><line class=gl x1="34" x2="810" y1="82.4" y2="82.4"/><text x="28" y="86.4" text-anchor=end>3k</text><line class=gl x1="34" x2="810" y1="51.2" y2="51.2"/><text x="28" y="55.2" text-anchor=end>4k</text><line class=gl x1="34" x2="810" y1="20.0" y2="20.0"/><text x="28" y="24.0" text-anchor=end>5k</text><polyline class="ln l1" points="66.3,111.9 131.0,103.7 195.7,99.3 260.3,110.5 325.0,98.6 389.7,103.6 454.3,86.0 519.0,87.8 583.7,81.6 648.3,84.5 713.0,79.5 777.7,75.6"/><circle cx="777.7" cy="75.6" r="4" class="s1" stroke="var(--card)" stroke-width="2"/><polyline class="ln l2" points="66.3,176.0 131.0,173.2 195.7,172.3 260.3,172.1 325.0,169.9 389.7,164.5 454.3,143.8 519.0,127.0 583.7,114.9 648.3,82.3 713.0,69.4 777.7,36.3"/><circle cx="777.7" cy="36.3" r="4" class="s2" stroke="var(--card)" stroke-width="2"/><text class=v x="818.0" y="40.3">Cloak 4,5k</text><text class=v x="818.0" y="79.6">Calc+ 3,2k</text><text x="66.3" y="193" text-anchor=middle>nov/25</text><rect class=hit x="34.0" y="20" width="64.7" height="156"><title>nov/25 · instalações Calc+ 2.054 · Cloak 0</title></rect><text x="131.0" y="193" text-anchor=middle>dez/25</text><rect class=hit x="98.7" y="20" width="64.7" height="156"><title>dez/25 · instalações Calc+ 2.317 · Cloak 90</title></rect><text x="195.7" y="193" text-anchor=middle>jan/26</text><rect class=hit x="163.3" y="20" width="64.7" height="156"><title>jan/26 · instalações Calc+ 2.458 · Cloak 120</title></rect><text x="260.3" y="193" text-anchor=middle>fev/26</text><rect class=hit x="228.0" y="20" width="64.7" height="156"><title>fev/26 · instalações Calc+ 2.098 · Cloak 124</title></rect><text x="325.0" y="193" text-anchor=middle>mar/26</text><rect class=hit x="292.7" y="20" width="64.7" height="156"><title>mar/26 · instalações Calc+ 2.480 · Cloak 196</title></rect><text x="389.7" y="193" text-anchor=middle>abr/26</text><rect class=hit x="357.3" y="20" width="64.7" height="156"><title>abr/26 · instalações Calc+ 2.321 · Cloak 367</title></rect><text x="454.3" y="193" text-anchor=middle>mai/26</text><rect class=hit x="422.0" y="20" width="64.7" height="156"><title>mai/26 · instalações Calc+ 2.884 · Cloak 1.032</title></rect><text x="519.0" y="193" text-anchor=middle>jun/26</text><rect class=hit x="486.7" y="20" width="64.7" height="156"><title>jun/26 · instalações Calc+ 2.828 · Cloak 1.570</title></rect><text x="583.7" y="193" text-anchor=middle>jul/26</text><rect class=hit x="551.3" y="20" width="64.7" height="156"><title>jul/26 · instalações Calc+ 3.027 · Cloak 1.958</title></rect><text x="648.3" y="193" text-anchor=middle>ago/26</text><rect class=hit x="616.0" y="20" width="64.7" height="156"><title>ago/26 · instalações Calc+ 2.932 · Cloak 3.003</title></rect><text x="713.0" y="193" text-anchor=middle>set/26</text><rect class=hit x="680.7" y="20" width="64.7" height="156"><title>set/26 · instalações Calc+ 3.093 · Cloak 3.417</title></rect><text x="777.7" y="193" text-anchor=middle>out/26</text><rect class=hit x="745.3" y="20" width="64.7" height="156"><title>out/26 · instalações Calc+ 3.219 · Cloak 4.478</title></rect><text x="2" y="12">instalações/mês</text></svg></div></div><h2>Assinantes pagantes por plano</h2><div class=chart><div class=mults><div class=mult><div class=ml>Calc+ mensal</div><div class=mv>234</div><div class=md>+24 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,15.3 21.7,12.5 39.4,9.7 55.4,9.1 73.1,9.1 90.3,9.7 108.0,10.4 125.1,12.1 133.7,10.6 142.9,9.1 151.4,9.9 160.6,10.2 169.1,10.4 177.7,9.9 181.7,10.2 185.7,10.6 189.7,9.3 193.7,10.4 195.4,10.2 196.0,10.2 196.0,60" class="s1" opacity=".16"/><polyline class="ln l1" points="4.0,15.3 21.7,12.5 39.4,9.7 55.4,9.1 73.1,9.1 90.3,9.7 108.0,10.4 125.1,12.1 133.7,10.6 142.9,9.1 151.4,9.9 160.6,10.2 169.1,10.4 177.7,9.9 181.7,10.2 185.7,10.6 189.7,9.3 193.7,10.4 195.4,10.2 196.0,10.2"/><circle cx="196.0" cy="10.2" r="3.5" class="s1"/><circle cx="4.0" cy="15.3" r="6" class=hit><title>30/11/2025 · 210 pagantes</title></circle><circle cx="21.7" cy="12.5" r="6" class=hit><title>31/12/2025 · 223 pagantes</title></circle><circle cx="39.4" cy="9.7" r="6" class=hit><title>31/01/2026 · 236 pagantes</title></circle><circle cx="55.4" cy="9.1" r="6" class=hit><title>28/02/2026 · 239 pagantes</title></circle><circle cx="73.1" cy="9.1" r="6" class=hit><title>31/03/2026 · 239 pagantes</title></circle><circle cx="90.3" cy="9.7" r="6" class=hit><title>30/04/2026 · 236 pagantes</title></circle><circle cx="108.0" cy="10.4" r="6" class=hit><title>31/05/2026 · 233 pagantes</title></circle><circle cx="125.1" cy="12.1" r="6" class=hit><title>30/06/2026 · 225 pagantes</title></circle><circle cx="133.7" cy="10.6" r="6" class=hit><title>15/07/2026 · 232 pagantes</title></circle><circle cx="142.9" cy="9.1" r="6" class=hit><title>31/07/2026 · 239 pagantes</title></circle><circle cx="151.4" cy="9.9" r="6" class=hit><title>15/08/2026 · 235 pagantes</title></circle><circle cx="160.6" cy="10.2" r="6" class=hit><title>31/08/2026 · 234 pagantes</title></circle><circle cx="169.1" cy="10.4" r="6" class=hit><title>15/09/2026 · 233 pagantes</title></circle><circle cx="177.7" cy="9.9" r="6" class=hit><title>30/09/2026 · 235 pagantes</title></circle><circle cx="181.7" cy="10.2" r="6" class=hit><title>07/10/2026 · 234 pagantes</title></circle><circle cx="185.7" cy="10.6" r="6" class=hit><title>14/10/2026 · 232 pagantes</title></circle><circle cx="189.7" cy="9.3" r="6" class=hit><title>21/10/2026 · 238 pagantes</title></circle><circle cx="193.7" cy="10.4" r="6" class=hit><title>28/10/2026 · 233 pagantes</title></circle><circle cx="195.4" cy="10.2" r="6" class=hit><title>31/10/2026 · 234 pagantes</title></circle><circle cx="196.0" cy="10.2" r="6" class=hit><title>01/11/2026 · 234 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div><div class=mult><div class=ml>Calc+ anual</div><div class=mv>362</div><div class=md>+163 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,32.0 21.7,29.9 39.4,27.9 55.4,26.5 73.1,22.3 90.3,20.8 108.0,18.4 125.1,16.4 133.7,16.3 142.9,15.6 151.4,14.4 160.6,13.2 169.1,11.9 177.7,11.1 181.7,11.1 185.7,10.9 189.7,10.6 193.7,9.8 195.4,9.4 196.0,9.1 196.0,60" class="s1" opacity=".16"/><polyline class="ln l1" points="4.0,32.0 21.7,29.9 39.4,27.9 55.4,26.5 73.1,22.3 90.3,20.8 108.0,18.4 125.1,16.4 133.7,16.3 142.9,15.6 151.4,14.4 160.6,13.2 169.1,11.9 177.7,11.1 181.7,11.1 185.7,10.9 189.7,10.6 193.7,9.8 195.4,9.4 196.0,9.1"/><circle cx="196.0" cy="9.1" r="3.5" class="s1"/><circle cx="4.0" cy="32.0" r="6" class=hit><title>30/11/2025 · 199 pagantes</title></circle><circle cx="21.7" cy="29.9" r="6" class=hit><title>31/12/2025 · 214 pagantes</title></circle><circle cx="39.4" cy="27.9" r="6" class=hit><title>31/01/2026 · 228 pagantes</title></circle><circle cx="55.4" cy="26.5" r="6" class=hit><title>28/02/2026 · 238 pagantes</title></circle><circle cx="73.1" cy="22.3" r="6" class=hit><title>31/03/2026 · 268 pagantes</title></circle><circle cx="90.3" cy="20.8" r="6" class=hit><title>30/04/2026 · 279 pagantes</title></circle><circle cx="108.0" cy="18.4" r="6" class=hit><title>31/05/2026 · 296 pagantes</title></circle><circle cx="125.1" cy="16.4" r="6" class=hit><title>30/06/2026 · 310 pagantes</title></circle><circle cx="133.7" cy="16.3" r="6" class=hit><title>15/07/2026 · 311 pagantes</title></circle><circle cx="142.9" cy="15.6" r="6" class=hit><title>31/07/2026 · 316 pagantes</title></circle><circle cx="151.4" cy="14.4" r="6" class=hit><title>15/08/2026 · 324 pagantes</title></circle><circle cx="160.6" cy="13.2" r="6" class=hit><title>31/08/2026 · 333 pagantes</title></circle><circle cx="169.1" cy="11.9" r="6" class=hit><title>15/09/2026 · 342 pagantes</title></circle><circle cx="177.7" cy="11.1" r="6" class=hit><title>30/09/2026 · 348 pagantes</title></circle><circle cx="181.7" cy="11.1" r="6" class=hit><title>07/10/2026 · 348 pagantes</title></circle><circle cx="185.7" cy="10.9" r="6" class=hit><title>14/10/2026 · 349 pagantes</title></circle><circle cx="189.7" cy="10.6" r="6" class=hit><title>21/10/2026 · 351 pagantes</title></circle><circle cx="193.7" cy="9.8" r="6" class=hit><title>28/10/2026 · 357 pagantes</title></circle><circle cx="195.4" cy="9.4" r="6" class=hit><title>31/10/2026 · 360 pagantes</title></circle><circle cx="196.0" cy="9.1" r="6" class=hit><title>01/11/2026 · 362 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div><div class=mult><div class=ml>Cloak semanal</div><div class=mv>35</div><div class=md>+35 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,60.0 21.7,60.0 39.4,60.0 55.4,60.0 73.1,60.0 90.3,60.0 108.0,60.0 125.1,38.8 133.7,27.5 142.9,16.2 151.4,19.0 160.6,16.2 169.1,21.8 177.7,23.2 181.7,24.6 185.7,9.1 189.7,13.3 193.7,9.1 195.4,11.9 196.0,10.5 196.0,60" class="s2" opacity=".16"/><polyline class="ln l2" points="4.0,60.0 21.7,60.0 39.4,60.0 55.4,60.0 73.1,60.0 90.3,60.0 108.0,60.0 125.1,38.8 133.7,27.5 142.9,16.2 151.4,19.0 160.6,16.2 169.1,21.8 177.7,23.2 181.7,24.6 185.7,9.1 189.7,13.3 193.7,9.1 195.4,11.9 196.0,10.5"/><circle cx="196.0" cy="10.5" r="3.5" class="s2"/><circle cx="4.0" cy="60.0" r="6" class=hit><title>30/11/2025 · 0 pagantes</title></circle><circle cx="21.7" cy="60.0" r="6" class=hit><title>31/12/2025 · 0 pagantes</title></circle><circle cx="39.4" cy="60.0" r="6" class=hit><title>31/01/2026 · 0 pagantes</title></circle><circle cx="55.4" cy="60.0" r="6" class=hit><title>28/02/2026 · 0 pagantes</title></circle><circle cx="73.1" cy="60.0" r="6" class=hit><title>31/03/2026 · 0 pagantes</title></circle><circle cx="90.3" cy="60.0" r="6" class=hit><title>30/04/2026 · 0 pagantes</title></circle><circle cx="108.0" cy="60.0" r="6" class=hit><title>31/05/2026 · 0 pagantes</title></circle><circle cx="125.1" cy="38.8" r="6" class=hit><title>30/06/2026 · 15 pagantes</title></circle><circle cx="133.7" cy="27.5" r="6" class=hit><title>15/07/2026 · 23 pagantes</title></circle><circle cx="142.9" cy="16.2" r="6" class=hit><title>31/07/2026 · 31 pagantes</title></circle><circle cx="151.4" cy="19.0" r="6" class=hit><title>15/08/2026 · 29 pagantes</title></circle><circle cx="160.6" cy="16.2" r="6" class=hit><title>31/08/2026 · 31 pagantes</title></circle><circle cx="169.1" cy="21.8" r="6" class=hit><title>15/09/2026 · 27 pagantes</title></circle><circle cx="177.7" cy="23.2" r="6" class=hit><title>30/09/2026 · 26 pagantes</title></circle><circle cx="181.7" cy="24.6" r="6" class=hit><title>07/10/2026 · 25 pagantes</title></circle><circle cx="185.7" cy="9.1" r="6" class=hit><title>14/10/2026 · 36 pagantes</title></circle><circle cx="189.7" cy="13.3" r="6" class=hit><title>21/10/2026 · 33 pagantes</title></circle><circle cx="193.7" cy="9.1" r="6" class=hit><title>28/10/2026 · 36 pagantes</title></circle><circle cx="195.4" cy="11.9" r="6" class=hit><title>31/10/2026 · 34 pagantes</title></circle><circle cx="196.0" cy="10.5" r="6" class=hit><title>01/11/2026 · 35 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div><div class=mult><div class=ml>Cloak anual</div><div class=mv>95</div><div class=md>+95 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,60.0 21.7,60.0 39.4,60.0 55.4,60.0 73.1,60.0 90.3,58.9 108.0,56.8 125.1,49.8 133.7,47.7 142.9,45.5 151.4,43.4 160.6,39.1 169.1,34.3 177.7,27.3 181.7,22.0 185.7,19.8 189.7,15.5 193.7,11.2 195.4,10.2 196.0,9.1 196.0,60" class="s2" opacity=".16"/><polyline class="ln l2" points="4.0,60.0 21.7,60.0 39.4,60.0 55.4,60.0 73.1,60.0 90.3,58.9 108.0,56.8 125.1,49.8 133.7,47.7 142.9,45.5 151.4,43.4 160.6,39.1 169.1,34.3 177.7,27.3 181.7,22.0 185.7,19.8 189.7,15.5 193.7,11.2 195.4,10.2 196.0,9.1"/><circle cx="196.0" cy="9.1" r="3.5" class="s2"/><circle cx="4.0" cy="60.0" r="6" class=hit><title>30/11/2025 · 0 pagantes</title></circle><circle cx="21.7" cy="60.0" r="6" class=hit><title>31/12/2025 · 0 pagantes</title></circle><circle cx="39.4" cy="60.0" r="6" class=hit><title>31/01/2026 · 0 pagantes</title></circle><circle cx="55.4" cy="60.0" r="6" class=hit><title>28/02/2026 · 0 pagantes</title></circle><circle cx="73.1" cy="60.0" r="6" class=hit><title>31/03/2026 · 0 pagantes</title></circle><circle cx="90.3" cy="58.9" r="6" class=hit><title>30/04/2026 · 2 pagantes</title></circle><circle cx="108.0" cy="56.8" r="6" class=hit><title>31/05/2026 · 6 pagantes</title></circle><circle cx="125.1" cy="49.8" r="6" class=hit><title>30/06/2026 · 19 pagantes</title></circle><circle cx="133.7" cy="47.7" r="6" class=hit><title>15/07/2026 · 23 pagantes</title></circle><circle cx="142.9" cy="45.5" r="6" class=hit><title>31/07/2026 · 27 pagantes</title></circle><circle cx="151.4" cy="43.4" r="6" class=hit><title>15/08/2026 · 31 pagantes</title></circle><circle cx="160.6" cy="39.1" r="6" class=hit><title>31/08/2026 · 39 pagantes</title></circle><circle cx="169.1" cy="34.3" r="6" class=hit><title>15/09/2026 · 48 pagantes</title></circle><circle cx="177.7" cy="27.3" r="6" class=hit><title>30/09/2026 · 61 pagantes</title></circle><circle cx="181.7" cy="22.0" r="6" class=hit><title>07/10/2026 · 71 pagantes</title></circle><circle cx="185.7" cy="19.8" r="6" class=hit><title>14/10/2026 · 75 pagantes</title></circle><circle cx="189.7" cy="15.5" r="6" class=hit><title>21/10/2026 · 83 pagantes</title></circle><circle cx="193.7" cy="11.2" r="6" class=hit><title>28/10/2026 · 91 pagantes</title></circle><circle cx="195.4" cy="10.2" r="6" class=hit><title>31/10/2026 · 93 pagantes</title></circle><circle cx="196.0" cy="9.1" r="6" class=hit><title>01/11/2026 · 95 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div><div class=mult><div class=ml>Outros anual</div><div class=mv>75</div><div class=md>+68 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,55.2 21.7,55.2 39.4,53.9 55.4,53.9 73.1,52.5 90.3,51.2 108.0,51.2 125.1,50.5 133.7,45.7 142.9,42.4 151.4,39.0 160.6,35.6 169.1,26.1 177.7,19.3 181.7,15.2 185.7,13.2 189.7,11.8 193.7,10.4 195.4,9.8 196.0,9.1 196.0,60" class="s3" opacity=".16"/><polyline class="ln l3" points="4.0,55.2 21.7,55.2 39.4,53.9 55.4,53.9 73.1,52.5 90.3,51.2 108.0,51.2 125.1,50.5 133.7,45.7 142.9,42.4 151.4,39.0 160.6,35.6 169.1,26.1 177.7,19.3 181.7,15.2 185.7,13.2 189.7,11.8 193.7,10.4 195.4,9.8 196.0,9.1"/><circle cx="196.0" cy="9.1" r="3.5" class="s3"/><circle cx="4.0" cy="55.2" r="6" class=hit><title>30/11/2025 · 7 pagantes</title></circle><circle cx="21.7" cy="55.2" r="6" class=hit><title>31/12/2025 · 7 pagantes</title></circle><circle cx="39.4" cy="53.9" r="6" class=hit><title>31/01/2026 · 9 pagantes</title></circle><circle cx="55.4" cy="53.9" r="6" class=hit><title>28/02/2026 · 9 pagantes</title></circle><circle cx="73.1" cy="52.5" r="6" class=hit><title>31/03/2026 · 11 pagantes</title></circle><circle cx="90.3" cy="51.2" r="6" class=hit><title>30/04/2026 · 13 pagantes</title></circle><circle cx="108.0" cy="51.2" r="6" class=hit><title>31/05/2026 · 13 pagantes</title></circle><circle cx="125.1" cy="50.5" r="6" class=hit><title>30/06/2026 · 14 pagantes</title></circle><circle cx="133.7" cy="45.7" r="6" class=hit><title>15/07/2026 · 21 pagantes</title></circle><circle cx="142.9" cy="42.4" r="6" class=hit><title>31/07/2026 · 26 pagantes</title></circle><circle cx="151.4" cy="39.0" r="6" class=hit><title>15/08/2026 · 31 pagantes</title></circle><circle cx="160.6" cy="35.6" r="6" class=hit><title>31/08/2026 · 36 pagantes</title></circle><circle cx="169.1" cy="26.1" r="6" class=hit><title>15/09/2026 · 50 pagantes</title></circle><circle cx="177.7" cy="19.3" r="6" class=hit><title>30/09/2026 · 60 pagantes</title></circle><circle cx="181.7" cy="15.2" r="6" class=hit><title>07/10/2026 · 66 pagantes</title></circle><circle cx="185.7" cy="13.2" r="6" class=hit><title>14/10/2026 · 69 pagantes</title></circle><circle cx="189.7" cy="11.8" r="6" class=hit><title>21/10/2026 · 71 pagantes</title></circle><circle cx="193.7" cy="10.4" r="6" class=hit><title>28/10/2026 · 73 pagantes</title></circle><circle cx="195.4" cy="9.8" r="6" class=hit><title>31/10/2026 · 74 pagantes</title></circle><circle cx="196.0" cy="9.1" r="6" class=hit><title>01/11/2026 · 75 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div><div class=mult><div class=ml>Outros sem. + mensal</div><div class=mv>23</div><div class=md>+16 desde nov/25</div><svg viewBox="0 0 200 64" role=img aria-label="assinantes ao longo do tempo"><line class=gl x1="4" x2="196" y1="60" y2="60"/><polygon points="4.0,60 4.0,44.5 21.7,51.1 39.4,48.9 55.4,44.5 73.1,53.4 90.3,51.1 108.0,46.7 125.1,51.1 133.7,46.7 142.9,46.7 151.4,44.5 160.6,44.5 169.1,35.7 177.7,24.6 181.7,24.6 185.7,22.4 189.7,13.5 193.7,9.1 195.4,9.1 196.0,9.1 196.0,60" class="s3" opacity=".16"/><polyline class="ln l3" points="4.0,44.5 21.7,51.1 39.4,48.9 55.4,44.5 73.1,53.4 90.3,51.1 108.0,46.7 125.1,51.1 133.7,46.7 142.9,46.7 151.4,44.5 160.6,44.5 169.1,35.7 177.7,24.6 181.7,24.6 185.7,22.4 189.7,13.5 193.7,9.1 195.4,9.1 196.0,9.1"/><circle cx="196.0" cy="9.1" r="3.5" class="s3"/><circle cx="4.0" cy="44.5" r="6" class=hit><title>30/11/2025 · 7 pagantes</title></circle><circle cx="21.7" cy="51.1" r="6" class=hit><title>31/12/2025 · 4 pagantes</title></circle><circle cx="39.4" cy="48.9" r="6" class=hit><title>31/01/2026 · 5 pagantes</title></circle><circle cx="55.4" cy="44.5" r="6" class=hit><title>28/02/2026 · 7 pagantes</title></circle><circle cx="73.1" cy="53.4" r="6" class=hit><title>31/03/2026 · 3 pagantes</title></circle><circle cx="90.3" cy="51.1" r="6" class=hit><title>30/04/2026 · 4 pagantes</title></circle><circle cx="108.0" cy="46.7" r="6" class=hit><title>31/05/2026 · 6 pagantes</title></circle><circle cx="125.1" cy="51.1" r="6" class=hit><title>30/06/2026 · 4 pagantes</title></circle><circle cx="133.7" cy="46.7" r="6" class=hit><title>15/07/2026 · 6 pagantes</title></circle><circle cx="142.9" cy="46.7" r="6" class=hit><title>31/07/2026 · 6 pagantes</title></circle><circle cx="151.4" cy="44.5" r="6" class=hit><title>15/08/2026 · 7 pagantes</title></circle><circle cx="160.6" cy="44.5" r="6" class=hit><title>31/08/2026 · 7 pagantes</title></circle><circle cx="169.1" cy="35.7" r="6" class=hit><title>15/09/2026 · 11 pagantes</title></circle><circle cx="177.7" cy="24.6" r="6" class=hit><title>30/09/2026 · 16 pagantes</title></circle><circle cx="181.7" cy="24.6" r="6" class=hit><title>07/10/2026 · 16 pagantes</title></circle><circle cx="185.7" cy="22.4" r="6" class=hit><title>14/10/2026 · 17 pagantes</title></circle><circle cx="189.7" cy="13.5" r="6" class=hit><title>21/10/2026 · 21 pagantes</title></circle><circle cx="193.7" cy="9.1" r="6" class=hit><title>28/10/2026 · 23 pagantes</title></circle><circle cx="195.4" cy="9.1" r="6" class=hit><title>31/10/2026 · 23 pagantes</title></circle><circle cx="196.0" cy="9.1" r="6" class=hit><title>01/11/2026 · 23 pagantes</title></circle></svg><div class=xr><span>nov/25</span><span>nov/26</span></div></div></div></div><h2>Cenários</h2><div class=chart><h3>US$/mês · ano 1 = nov/26–out/27</h3><table class=sc><thead><tr><th></th><th>Baixo</th><th class=b>Base</th><th>Alto</th></tr></thead><tbody><tr><td>Platô US$</td><td>2,5 mil</td><td class=b>3,8 mil</td><td>5,1 mil</td></tr><tr><td>Platô R$</td><td>13,5 mil</td><td class=b>20,8 mil</td><td>27,7 mil</td></tr><tr><td>Média ano 1</td><td>2.157</td><td class=b>2.716</td><td>3.054</td></tr><tr><td>Média ano 2</td><td>2.320</td><td class=b>3.130</td><td>3.652</td></tr><tr><td>Média ano 3</td><td>2.397</td><td class=b>3.389</td><td>4.073</td></tr><tr><td>Até 90% do platô</td><td>~16 meses</td><td class=b>~40 meses</td><td>&gt; 60 meses</td></tr></tbody></table></div><h2>O que mais sobe o teto</h2><div class=levers><div class=lever><div class=lv>+US$ 460/mês</div><div class=lw>Cloak +10 anuais novos/mês</div><div class=ly>hoje 1 anual a cada ~140 instalações</div></div><div class=lever><div class=lv>+US$ 475/mês</div><div class=lw>Renovação anual Cloak 60% → 70%</div><div class=ly>só se mede a partir de abr/27</div></div><div class=lever><div class=lv>+US$ 245/mês</div><div class=lw>+10% no preço do anual novo</div><div class=ly>anual = ~64% do platô · só pra cima</div></div></div><h2>Riscos / ressalvas</h2><ul class=risks><li><b>Instalações do Cloak ×4,3 em 6 meses</b><span>com o app congelado; se voltar ao nível de ago/set → cenário baixo</span></li><li><b>Renovação anual do Cloak = premissa</b><span>1º vencimento só em abr/27</span></li><li><b>Aumentos de preço de 01/10 e 14/10</b><span>ainda sem efeito medível; medir em dez</span></li><li><b>Sales Report = proceeds estimados</b><span>o pago (Finance Reports) pode diferir alguns %</span></li></ul><p class=foot>Sales Report ASC + eventos de assinatura · 02/11/2026 · não atualiza no /refresh-lab-data · <a href="md/reports__2026-11-02_receita-projecao__REPORT.html">relatório</a></p></div></div><script>
+// chip #N: copia a referência do item pra conversa, com contexto (data-copy: "#9 · quadro de tarefas · app · título — ").
+// clipboard pode ser negado (http, permissão), então cai pra seleção manual em vez de mentir "copiado".
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".iid"); if(!b) return;
+  e.preventDefault();
+  var lab=b.getAttribute("data-label")||b.textContent; b.setAttribute("data-label",lab);
+  var t=b.dataset.copy||b.dataset.ref||lab, done=function(ok){
+    b.textContent=ok?"copiado":lab; b.classList.toggle("ok",ok);
+    setTimeout(function(){b.textContent=lab;b.classList.remove("ok");},1100);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});
+  } else {
+    var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta);
+    ta.select(); var ok=false; try{ok=document.execCommand("copy");}catch(err){}
+    document.body.removeChild(ta); done(ok);
+  }
+});
+// aba ativa sempre à vista na faixa do menu do celular
+(function(){var n=document.querySelector(".navs"),on=n&&n.querySelector("a.nav.on");
+if(on&&n.scrollWidth>n.clientWidth){n.scrollLeft=Math.max(0,on.offsetLeft-n.offsetLeft-(n.clientWidth-on.offsetWidth)/2);}})();
+// título no header do celular aparece quando o título grande da página sai de vista (padrão iOS)
+(function(){var h=document.querySelector(".wrap h1");if(!h||!window.IntersectionObserver)return;
+var r=document.documentElement;r.classList.add("has-h1");new IntersectionObserver(function(es){
+r.classList.toggle("past-h1",!es[0].isIntersecting);},{rootMargin:"-52px 0px 0px 0px"}).observe(h);
+setTimeout(function(){r.classList.add("ready")},400);})();
+// app instalado no iPhone: link interno com target=_blank abriria a folha do Safari com a URL no topo;
+// dentro do app ele abre no lugar (no Mac/navegador continua abrindo em aba nova).
+(function(){var sa=window.navigator.standalone||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches);
+if(!sa)return;document.documentElement.classList.add("standalone");
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[target]");
+if(!a||a.origin!==location.origin)return;e.preventDefault();location.href=a.href;});})();
+</script><script>(function(){try{var k="lh.scroll:"+location.pathname;var v=sessionStorage.getItem(k);if(v!==null){sessionStorage.removeItem(k);window.scrollTo(0,parseInt(v,10)||0);}document.addEventListener("submit",function(e){var f=e.target;if(f&&f.method&&f.method.toLowerCase()==="post"){sessionStorage.setItem(k,String(window.scrollY));}},true);}catch(e){}})();</script></body></html>
