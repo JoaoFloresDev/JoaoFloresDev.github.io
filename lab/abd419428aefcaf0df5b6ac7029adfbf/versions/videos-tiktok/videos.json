@@ -796,5 +796,18 @@
   "status": "publicado",
   "status_at": "2026-10-31",
   "status_note": "João 31/10: publiquei os que tem"
+ },
+ {
+  "slug": "blw-68-verdade-ou-mito-rajada",
+  "ref": "BLW-68",
+  "app": "BLW Baby",
+  "num": "68",
+  "title": "Feijão na fralda é normal? Verdade ou mito (sem áudio)",
+  "hook": "FEIJÃO NA FRALDA É NORMAL?",
+  "dur": 14,
+  "cover_t": 1.0,
+  "sound": "Trilha make_beat 125 BPM a 0,7 + SFX. Se trocar no TikTok: som 120-128 BPM com tempo forte em 1,44 / 3,84 / 6,24 (o mais forte) / 8,64 s — os carimbos.",
+  "ai_label": false,
+  "status": "wait"
  }
 ]
