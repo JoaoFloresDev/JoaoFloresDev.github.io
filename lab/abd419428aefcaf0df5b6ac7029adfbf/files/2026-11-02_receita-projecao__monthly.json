@@ -1,0 +1,397 @@
+{
+ "months": [
+  "2025-11",
+  "2025-12",
+  "2026-01",
+  "2026-02",
+  "2026-03",
+  "2026-04",
+  "2026-05",
+  "2026-06",
+  "2026-07",
+  "2026-08",
+  "2026-09",
+  "2026-10"
+ ],
+ "m": {
+  "2025-11": {
+   "usd": {
+    "Calc+|nova|1 Month": 105.49538154451653,
+    "Calc+|renov|1 Month": 338.9019137727575,
+    "Outros|iap|-": 15.33029137104605,
+    "Calc+|renov|1 Year": 79.33042827958788,
+    "Outros|renov|1 Month": 6.867051372207151,
+    "Calc+|nova|1 Year": 229.2517039190346,
+    "Outros|nova|1 Month": 3.671364313531239,
+    "Outros|nova|1 Year": 7.827213941151546
+   },
+   "units": {
+    "Calc+|nova|1 Month": 42.0,
+    "Calc+|renov|1 Month": 170.0,
+    "inst|Outros": 803.0,
+    "inst|Calc+": 2054.0,
+    "Outros|iap|-": 2.0,
+    "Calc+|renov|1 Year": 9.0,
+    "Outros|renov|1 Month": 5.0,
+    "Calc+|nova|1 Year": 13.0,
+    "Outros|nova|1 Month": 2.0,
+    "Outros|nova|1 Year": 1.0
+   }
+  },
+  "2025-12": {
+   "usd": {
+    "Calc+|renov|1 Month": 399.05617736463194,
+    "Calc+|nova|1 Month": 72.61509571207037,
+    "Calc+|nova|1 Year": 369.97266252630425,
+    "Outros|renov|1 Month": 6.059294714553744,
+    "Calc+|renov|1 Year": 31.59032339731478,
+    "Outros|iap|-": 7.511200867581145,
+    "Outros|nova|1 Year": 6.79
+   },
+   "units": {
+    "inst|Calc+": 2317.0,
+    "Calc+|renov|1 Month": 194.0,
+    "inst|Outros": 1057.0,
+    "inst|Cloak": 90.0,
+    "Calc+|nova|1 Month": 30.0,
+    "Calc+|nova|1 Year": 20.0,
+    "Outros|renov|1 Month": 4.0,
+    "Calc+|renov|1 Year": 4.0,
+    "Outros|iap|-": 1.0,
+    "Outros|nova|1 Year": 1.0
+   }
+  },
+  "2026-01": {
+   "usd": {
+    "Calc+|renov|1 Month": 421.80692737395924,
+    "Calc+|nova|1 Month": 99.62516065084517,
+    "Cloak|nova|1 Month": 8.276795489948151,
+    "Calc+|nova|1 Year": 268.87443766406807,
+    "Outros|renov|1 Month": 6.114118968953571,
+    "Calc+|renov|1 Year": 79.9361482627615,
+    "Outros|nova|1 Year": 13.58,
+    "Outros|iap|-": 7.6648965341965525,
+    "Outros|nova|1 Month": 1.9812999103786837
+   },
+   "units": {
+    "Calc+|renov|1 Month": 199.0,
+    "inst|Calc+": 2458.0,
+    "inst|Outros": 1503.0,
+    "Calc+|nova|1 Month": 40.0,
+    "Cloak|nova|1 Month": 2.0,
+    "inst|Cloak": 120.0,
+    "Calc+|nova|1 Year": 15.0,
+    "Outros|renov|1 Month": 4.0,
+    "Calc+|renov|1 Year": 9.0,
+    "Outros|nova|1 Year": 2.0,
+    "Outros|iap|-": 2.0,
+    "Outros|nova|1 Month": 1.0
+   }
+  },
+  "2026-02": {
+   "usd": {
+    "Calc+|nova|1 Month": 71.28741486840875,
+    "Calc+|renov|1 Month": 469.24908930138724,
+    "Calc+|renov|1 Year": 73.60216550464948,
+    "Calc+|nova|1 Year": 299.7214034127691,
+    "Outros|renov|1 Month": 6.18568516369059,
+    "Outros|nova|1 Month": 4.79,
+    "Outros|iap|-": 39.327634845841054
+   },
+   "units": {
+    "Calc+|nova|1 Month": 29.0,
+    "inst|Outros": 1267.0,
+    "Calc+|renov|1 Month": 214.0,
+    "inst|Calc+": 2098.0,
+    "Calc+|renov|1 Year": 6.0,
+    "inst|Cloak": 124.0,
+    "Calc+|nova|1 Year": 16.0,
+    "Outros|renov|1 Month": 4.0,
+    "Outros|nova|1 Month": 3.0,
+    "Outros|iap|-": 5.0
+   }
+  },
+  "2026-03": {
+   "usd": {
+    "Calc+|nova|1 Year": 601.5911693540102,
+    "Calc+|renov|1 Month": 470.78300477280936,
+    "Calc+|nova|1 Month": 93.95821737995354,
+    "Outros|renov|1 Year": 6.253066569636423,
+    "Calc+|renov|1 Year": 227.4254215433599,
+    "Outros|nova|1 Year": 15.280000000000001,
+    "Outros|iap|-": 21.83117432143261,
+    "Outros|renov|1 Month": 4.79
+   },
+   "units": {
+    "inst|Outros": 1292.0,
+    "Calc+|nova|1 Year": 34.0,
+    "Calc+|renov|1 Month": 217.0,
+    "inst|Calc+": 2480.0,
+    "inst|Cloak": 196.0,
+    "Calc+|nova|1 Month": 28.0,
+    "Outros|renov|1 Year": 1.0,
+    "Calc+|renov|1 Year": 21.0,
+    "Outros|nova|1 Year": 2.0,
+    "Outros|iap|-": 4.0,
+    "Outros|renov|1 Month": 3.0
+   }
+  },
+  "2026-04": {
+   "usd": {
+    "Cloak|nova|1 Month": 17.843989593257206,
+    "Calc+|renov|1 Month": 501.9229008206245,
+    "Cloak|nova|1 Year": 43.55390847932283,
+    "Outros|nova|1 Year": 19.55105788812362,
+    "Calc+|renov|1 Year": 102.60871667489982,
+    "Calc+|nova|1 Year": 318.8917813979674,
+    "Calc+|nova|1 Month": 96.70815134253161,
+    "Outros|renov|1 Month": 3.0999999999999996,
+    "Outros|iap|-": 16.051280900773772,
+    "Outros|nova|1 Month": 3.38
+   },
+   "units": {
+    "inst|Outros": 1020.0,
+    "Cloak|nova|1 Month": 5.0,
+    "Calc+|renov|1 Month": 217.0,
+    "inst|Calc+": 2321.0,
+    "Cloak|nova|1 Year": 2.0,
+    "inst|Cloak": 367.0,
+    "Outros|nova|1 Year": 2.0,
+    "Calc+|renov|1 Year": 7.0,
+    "Calc+|nova|1 Year": 17.0,
+    "Calc+|nova|1 Month": 21.0,
+    "Outros|renov|1 Month": 2.0,
+    "Outros|iap|-": 2.0,
+    "Outros|nova|1 Month": 2.0
+   }
+  },
+  "2026-05": {
+   "usd": {
+    "Calc+|renov|1 Month": 530.2509074501945,
+    "Calc+|renov|1 Year": 114.8448704011667,
+    "Calc+|nova|1 Month": 84.68638372467407,
+    "Outros|nova|1 Month": 3.472454638583636,
+    "Outros|renov|1 Month": 6.9122691831670755,
+    "Calc+|nova|1 Year": 318.6405967185938,
+    "Cloak|nova|1 Year": 67.12035581102123,
+    "Outros|iap|-": 8.210253087620833,
+    "Cloak|nova|1 Month": 16.391648482770236,
+    "Cloak|renov|1 Month": 14.381851506300201
+   },
+   "units": {
+    "inst|Outros": 968.0,
+    "inst|Calc+": 2884.0,
+    "Calc+|renov|1 Month": 218.0,
+    "inst|Cloak": 1032.0,
+    "Calc+|renov|1 Year": 8.0,
+    "Calc+|nova|1 Month": 18.0,
+    "Outros|nova|1 Month": 2.0,
+    "Outros|renov|1 Month": 4.0,
+    "Calc+|nova|1 Year": 16.0,
+    "Cloak|nova|1 Year": 4.0,
+    "Outros|iap|-": 1.0,
+    "Cloak|nova|1 Month": 4.0,
+    "Cloak|renov|1 Month": 4.0
+   }
+  },
+  "2026-06": {
+   "usd": {
+    "Cloak|nova|1 Year": 158.65736497267997,
+    "Calc+|nova|1 Month": 58.76985926794957,
+    "Outros|nova|?": 0.0,
+    "Calc+|renov|1 Month": 536.6919310384314,
+    "Calc+|renov|1 Year": 99.73892473633532,
+    "Calc+|nova|1 Year": 374.23789740203887,
+    "Cloak|nova|?": 0.0,
+    "Outros|renov|1 Month": 6.390875298724483,
+    "Cloak|renov|1 Month": 13.793983449120777,
+    "Cloak|renov|7 Days": 56.464350937876524,
+    "Cloak|renov|1 Year": 76.73998756700692,
+    "Outros|iap|-": 47.94658284442449,
+    "Calc+|iap|-": 0.0,
+    "Outros|nova|1 Year": 8.49
+   },
+   "units": {
+    "inst|Calc+": 2828.0,
+    "inst|Outros": 1031.0,
+    "Cloak|nova|1 Year": 9.0,
+    "inst|Cloak": 1570.0,
+    "Calc+|nova|1 Month": 13.0,
+    "Calc+|renov|1 Month": 215.0,
+    "Calc+|renov|1 Year": 7.0,
+    "Calc+|nova|1 Year": 19.0,
+    "Outros|renov|1 Month": 4.0,
+    "Cloak|renov|1 Month": 4.0,
+    "Cloak|renov|7 Days": 48.0,
+    "Cloak|renov|1 Year": 4.0,
+    "Outros|iap|-": 6.0,
+    "Calc+|iap|-": 1.0,
+    "Outros|nova|1 Year": 1.0
+   }
+  },
+  "2026-07": {
+   "usd": {
+    "Outros|nova|?": 0.0,
+    "Calc+|nova|1 Year": 285.7546552173158,
+    "Cloak|renov|7 Days": 163.43307451438764,
+    "Calc+|renov|1 Month": 549.5197055456439,
+    "Outros|renov|7 Days": 4.610511530405636,
+    "Outros|renov|1 Year": 89.57526500081408,
+    "Cloak|nova|?": 0.0,
+    "Calc+|nova|1 Month": 113.36475469337947,
+    "Outros|renov|?": 0.0,
+    "Calc+|renov|1 Year": 145.56752385466172,
+    "Cloak|renov|1 Month": 7.378860474814193,
+    "Outros|renov|1 Month": 6.377017137501607,
+    "Outros|nova|1 Year": 8.152016087598183,
+    "Outros|nova|7 Days": 6.955255765202818,
+    "Cloak|nova|1 Year": 122.74955219895602,
+    "Cloak|renov|1 Year": 33.70356743225834
+   },
+   "units": {
+    "inst|Calc+": 3027.0,
+    "inst|Outros": 1418.0,
+    "Calc+|nova|1 Year": 15.0,
+    "Cloak|renov|7 Days": 107.0,
+    "Calc+|renov|1 Month": 217.0,
+    "inst|Cloak": 1958.0,
+    "Outros|renov|7 Days": 3.0,
+    "Outros|renov|1 Year": 13.0,
+    "Calc+|nova|1 Month": 25.0,
+    "Calc+|renov|1 Year": 11.0,
+    "Cloak|renov|1 Month": 2.0,
+    "Outros|renov|1 Month": 4.0,
+    "Outros|nova|1 Year": 1.0,
+    "Outros|nova|7 Days": 4.0,
+    "Cloak|nova|1 Year": 7.0,
+    "Cloak|renov|1 Year": 2.0
+   }
+  },
+  "2026-08": {
+   "usd": {
+    "Outros|renov|1 Year": 119.07603816126931,
+    "Calc+|renov|1 Month": 571.9003528748342,
+    "Cloak|nova|?": 0.0,
+    "Outros|nova|?": 0.0,
+    "Cloak|renov|1 Year": 214.4928109511915,
+    "Calc+|renov|1 Year": 53.170533262011695,
+    "Cloak|renov|7 Days": 271.1610348101883,
+    "Cloak|nova|7 Days": 0.0,
+    "Calc+|nova|1 Year": 377.5596421843232,
+    "Calc+|nova|1 Month": 92.87111133786857,
+    "Cloak|renov|1 Month": 14.51796832512661,
+    "Outros|renov|7 Days": 19.823268752218215,
+    "Outros|renov|1 Month": 6.401399367033053,
+    "Outros|iap|-": 61.98178869027495,
+    "Outros|nova|7 Days": 1.69
+   },
+   "units": {
+    "inst|Outros": 1946.0,
+    "Outros|renov|1 Year": 11.0,
+    "inst|Calc+": 2932.0,
+    "Calc+|renov|1 Month": 216.0,
+    "inst|Cloak": 3003.0,
+    "Cloak|renov|1 Year": 12.0,
+    "Calc+|renov|1 Year": 4.0,
+    "Cloak|renov|7 Days": 143.0,
+    "Calc+|nova|1 Year": 19.0,
+    "Calc+|nova|1 Month": 20.0,
+    "Cloak|renov|1 Month": 4.0,
+    "Outros|renov|7 Days": 13.0,
+    "Outros|renov|1 Month": 4.0,
+    "Outros|iap|-": 8.0,
+    "Outros|nova|7 Days": 1.0
+   }
+  },
+  "2026-09": {
+   "usd": {
+    "Calc+|renov|1 Month": 583.7320318642,
+    "Outros|renov|1 Year": 160.9092544159642,
+    "Cloak|renov|7 Days": 270.2422763793438,
+    "Outros|nova|?": 0.0,
+    "Outros|renov|7 Days": 31.78064048555065,
+    "Outros|renov|1 Month": 9.567638350045472,
+    "Cloak|renov|1 Year": 381.3647157589228,
+    "Cloak|nova|?": 0.0,
+    "Calc+|nova|1 Year": 498.5372239898143,
+    "Calc+|nova|1 Month": 110.70493849774857,
+    "Cloak|renov|1 Month": 14.535468035379708,
+    "Calc+|renov|1 Year": 262.2607899122776,
+    "Outros|iap|-": 0.0,
+    "Outros|nova|7 Days": 5.271622587754335,
+    "Outros|nova|1 Year": 24.39575046566431
+   },
+   "units": {
+    "inst|Cloak": 3417.0,
+    "inst|Outros": 2679.0,
+    "Calc+|renov|1 Month": 213.0,
+    "Outros|renov|1 Year": 21.0,
+    "Cloak|renov|7 Days": 122.0,
+    "Outros|renov|7 Days": 30.0,
+    "Outros|renov|1 Month": 6.0,
+    "Cloak|renov|1 Year": 22.0,
+    "inst|Calc+": 3093.0,
+    "Calc+|nova|1 Year": 25.0,
+    "Calc+|nova|1 Month": 24.0,
+    "Cloak|renov|1 Month": 4.0,
+    "Calc+|renov|1 Year": 25.0,
+    "Outros|iap|-": 0.0,
+    "Outros|nova|7 Days": 3.0,
+    "Outros|nova|1 Year": 3.0
+   }
+  },
+  "2026-10": {
+   "usd": {
+    "Calc+|renov|1 Month": 600.4203068122937,
+    "Outros|nova|?": 0.0,
+    "Cloak|renov|7 Days": 445.78029532132325,
+    "Cloak|nova|?": 0.0,
+    "Outros|renov|7 Days": 67.01088190681148,
+    "Outros|nova|1 Year": 55.175269553360756,
+    "Cloak|nova|1 Year": 526.4801234830333,
+    "Outros|renov|1 Year": 74.09662910432081,
+    "Calc+|renov|1 Year": 358.62034135399927,
+    "Calc+|nova|1 Month": 105.03718045699924,
+    "Cloak|renov|1 Month": 14.401926892168241,
+    "Outros|iap|-": 7.2019826420369775,
+    "Outros|nova|7 Days": 1.8739726226011244,
+    "Calc+|nova|1 Year": 400.4895814624388,
+    "Outros|renov|1 Month": 10.848609897618566,
+    "Cloak|renov|1 Year": 33.23976680465114
+   },
+   "units": {
+    "inst|Cloak": 4478.0,
+    "inst|Calc+": 3219.0,
+    "inst|Outros": 2616.0,
+    "Calc+|renov|1 Month": 217.0,
+    "Cloak|renov|7 Days": 145.0,
+    "Outros|renov|7 Days": 52.0,
+    "Outros|nova|1 Year": 7.0,
+    "Cloak|nova|1 Year": 30.0,
+    "Outros|renov|1 Year": 8.0,
+    "Calc+|renov|1 Year": 22.0,
+    "Calc+|nova|1 Month": 20.0,
+    "Cloak|renov|1 Month": 4.0,
+    "Outros|iap|-": 1.0,
+    "Outros|nova|7 Days": 1.0,
+    "Calc+|nova|1 Year": 20.0,
+    "Outros|renov|1 Month": 7.0,
+    "Cloak|renov|1 Year": 2.0
+   }
+  }
+ },
+ "fx": {
+  "2025-11": 5.339755,
+  "2025-12": 5.449195238095238,
+  "2026-01": 5.339928571428571,
+  "2026-02": 5.20372,
+  "2026-03": 5.234231818181818,
+  "2026-04": 5.025815,
+  "2026-05": 4.98523,
+  "2026-06": 5.12195,
+  "2026-07": 5.119256521739131,
+  "2026-08": 5.148138095238095,
+  "2026-09": 5.1445,
+  "2026-10": 5.127204545454545
+ }
+}
