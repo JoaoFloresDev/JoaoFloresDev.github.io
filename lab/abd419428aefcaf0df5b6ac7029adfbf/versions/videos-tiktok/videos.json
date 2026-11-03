@@ -808,7 +808,8 @@
   "cover_t": 1.0,
   "sound": "Trilha make_beat 125 BPM a 0,7 + SFX. Se trocar no TikTok: som 120-128 BPM com tempo forte em 1,44 / 3,84 / 6,24 (o mais forte) / 8,64 s — os carimbos.",
   "ai_label": false,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-11-03"
  },
  {
   "slug": "blw-71-pov-caldinho-feijao",
@@ -820,6 +821,7 @@
   "dur": 21,
   "cover_t": 2.08,
   "ai_label": true,
-  "status": "wait"
+  "status": "publicado",
+  "status_at": "2026-11-03"
  }
 ]
