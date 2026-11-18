@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T19:41:27.074301+00:00",
+  "generated": "2026-11-18T20:05:45.791237+00:00",
   "territories": [
     "USA",
     "BRA",
@@ -13,6 +13,22 @@
     "NGA"
   ],
   "apps": [
+    {
+      "app_id": "1524665155",
+      "name": "App Zilor Test",
+      "bundle_id": "com.brit.macmagazines",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "6758320652",
+      "name": "BLW Baby",
+      "bundle_id": "com.gambit.blw",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
     {
       "app_id": "6758321287",
       "name": "BLW Baby Led Weaning Tracker",
@@ -1321,7 +1337,7 @@
           "group": "BLW Pro",
           "name": "BLW Pro Weekly (no trial)",
           "product_id": "com.bemestar.poc.pro.weekly.notrial",
-          "state": "READY_TO_SUBMIT",
+          "state": "MISSING_METADATA",
           "period": "ONE_WEEK",
           "group_level": 1,
           "prices": {
@@ -2691,9 +2707,33 @@
       "errors": []
     },
     {
+      "app_id": "6758313214",
+      "name": "Baby Led Weaning BLW Tracker",
+      "bundle_id": "com.bemstar.POC",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
       "app_id": "6761505951",
       "name": "Bible Pills: Verses & Prayer",
       "bundle_id": "com.gambitstudio.biblePills",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1478906209",
+      "name": "BioCamp",
+      "bundle_id": "Games.-IOSJSONTutorial.BioCamp",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "6767074428",
+      "name": "Calculator Document Vault",
+      "bundle_id": "com.gambitstudio.calcdocs",
       "subscriptions": [],
       "iaps": [],
       "errors": []
@@ -4176,47 +4216,13 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "29900.0",
-              "proceeds": "21357.14"
-            },
-            "DEU": {
-              "customer_price": "8.0",
-              "proceeds": "5.71"
-            },
-            "ESP": {
-              "customer_price": "8.0",
-              "proceeds": "5.61"
-            },
-            "GBR": {
-              "customer_price": "7.0",
-              "proceeds": "4.94"
-            },
-            "IND": {
-              "customer_price": "699.0",
-              "proceeds": "503.52"
-            },
-            "MEX": {
-              "customer_price": "149.0",
-              "proceeds": "109.18"
-            },
-            "NGA": {
-              "customer_price": "9900.0",
-              "proceeds": "7827.91"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.0",
-              "proceeds": "5.95"
             }
           }
         }
       ],
-      "errors": []
+      "errors": [
+        "iap prices NoAds.College: 200"
+      ]
     },
     {
       "app_id": "1510650044",
@@ -4234,46 +4240,65 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "39900.0",
-              "proceeds": "28500.0"
-            },
-            "DEU": {
-              "customer_price": "8.99",
-              "proceeds": "6.42"
-            },
-            "ESP": {
-              "customer_price": "8.99",
-              "proceeds": "6.3"
-            },
-            "GBR": {
-              "customer_price": "7.99",
-              "proceeds": "5.64"
-            },
-            "IND": {
-              "customer_price": "799.0",
-              "proceeds": "575.55"
-            },
-            "MEX": {
-              "customer_price": "179.0",
-              "proceeds": "131.16"
-            },
-            "NGA": {
-              "customer_price": "12900.0",
-              "proceeds": "10200.0"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.99",
-              "proceeds": "6.79"
             }
           }
         }
       ],
+      "errors": [
+        "iap prices NoAds.Cronos: 200"
+      ]
+    },
+    {
+      "app_id": "6773923471",
+      "name": "Daily Posture: Stretch & Sit",
+      "bundle_id": "com.gambitstudio.postura",
+      "subscriptions": [
+        {
+          "id": "6773964139",
+          "group": "Postura PRO",
+          "name": "Postura PRO Monthly",
+          "product_id": "postura.pro.monthly",
+          "state": "MISSING_METADATA",
+          "period": "ONE_MONTH",
+          "group_level": 1,
+          "prices": {
+            "USA": {
+              "customer_price": "9.99",
+              "proceeds": "8.49",
+              "start_date": "",
+              "preserved": false
+            }
+          },
+          "intro_offers": []
+        },
+        {
+          "id": "6773964338",
+          "group": "Postura PRO",
+          "name": "Postura PRO Yearly",
+          "product_id": "postura.pro.yearly",
+          "state": "MISSING_METADATA",
+          "period": "ONE_YEAR",
+          "group_level": 1,
+          "prices": {
+            "USA": {
+              "customer_price": "69.99",
+              "proceeds": "59.49",
+              "start_date": "",
+              "preserved": false
+            }
+          },
+          "intro_offers": []
+        }
+      ],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1489680860",
+      "name": "Emotion emoji",
+      "bundle_id": "joaoFlores.Sorria",
+      "subscriptions": [],
+      "iaps": [],
       "errors": []
     },
     {
@@ -4426,6 +4451,62 @@
           "intro_offers": []
         }
       ],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1504169451",
+      "name": "Faltômetro",
+      "bundle_id": "joaoFlores.Faltometro",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "6759074078",
+      "name": "Fasting: Intermittent Timer",
+      "bundle_id": "innovatet.App",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "6759020404",
+      "name": "Fasting: Intermittent Timer",
+      "bundle_id": "com.efremidze.Alarm222",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1476006882",
+      "name": "Flap Rugby",
+      "bundle_id": "Games.FlatRugby",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1480726447",
+      "name": "Flappy Rugby",
+      "bundle_id": "com.joaoFlores.FlappyRugby",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1469303956",
+      "name": "Foguetinho Rankeado",
+      "bundle_id": "Games.Rocket",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1479688462",
+      "name": "GameCenterTutorials",
+      "bundle_id": "teste.Ranking",
+      "subscriptions": [],
       "iaps": [],
       "errors": []
     },
@@ -5805,6 +5886,30 @@
           "intro_offers": []
         }
       ],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "6759017626",
+      "name": "Jejum",
+      "bundle_id": "com.gambitstudio.jejum",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1503519508",
+      "name": "Lop Dancing",
+      "bundle_id": "joaoflores.lop",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1524664358",
+      "name": "Medic! App",
+      "bundle_id": "com.medicapp.app",
+      "subscriptions": [],
       "iaps": [],
       "errors": []
     },
@@ -9808,52 +9913,26 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "39900.0",
-              "proceeds": "28500.0"
-            },
-            "DEU": {
-              "customer_price": "8.99",
-              "proceeds": "6.42"
-            },
-            "ESP": {
-              "customer_price": "8.99",
-              "proceeds": "6.3"
-            },
-            "GBR": {
-              "customer_price": "7.99",
-              "proceeds": "5.64"
-            },
-            "IND": {
-              "customer_price": "799.0",
-              "proceeds": "575.55"
-            },
-            "MEX": {
-              "customer_price": "179.0",
-              "proceeds": "131.16"
-            },
-            "NGA": {
-              "customer_price": "12900.0",
-              "proceeds": "10200.0"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.99",
-              "proceeds": "6.79"
             }
           }
         }
       ],
-      "errors": []
+      "errors": [
+        "iap prices NoAds.DIA: 200"
+      ]
     },
     {
       "app_id": "6771598930",
       "name": "Philos: Philosophy & Stoicism",
       "bundle_id": "com.gambitstudio.philos",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1525440196",
+      "name": "Rogger Burguers - Lençóis Pta",
+      "bundle_id": "joaoFlores.Burger",
       "subscriptions": [],
       "iaps": [],
       "errors": []
@@ -10023,51 +10102,12 @@
           "productId": "NoAds.Calc",
           "inAppPurchaseType": "NON_CONSUMABLE",
           "state": "APPROVED",
-          "prices": {
-            "BRA": {
-              "customer_price": "129.9",
-              "proceeds": "106.55"
-            },
-            "COL": {
-              "customer_price": "99900.0",
-              "proceeds": "71357.14"
-            },
-            "DEU": {
-              "customer_price": "22.99",
-              "proceeds": "16.42"
-            },
-            "ESP": {
-              "customer_price": "22.99",
-              "proceeds": "16.11"
-            },
-            "GBR": {
-              "customer_price": "19.99",
-              "proceeds": "14.12"
-            },
-            "IND": {
-              "customer_price": "1999.0",
-              "proceeds": "1439.96"
-            },
-            "MEX": {
-              "customer_price": "399.0",
-              "proceeds": "292.37"
-            },
-            "NGA": {
-              "customer_price": "29900.0",
-              "proceeds": "23641.86"
-            },
-            "TUR": {
-              "customer_price": "999.99",
-              "proceeds": "672.91"
-            },
-            "USA": {
-              "customer_price": "19.99",
-              "proceeds": "16.99"
-            }
-          }
+          "prices": {}
         }
       ],
-      "errors": []
+      "errors": [
+        "iap prices NoAds.Calc: 200"
+      ]
     },
     {
       "app_id": "1491372792",
@@ -10158,47 +10198,13 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "39900.0",
-              "proceeds": "28500.0"
-            },
-            "DEU": {
-              "customer_price": "8.99",
-              "proceeds": "6.42"
-            },
-            "ESP": {
-              "customer_price": "8.99",
-              "proceeds": "6.3"
-            },
-            "GBR": {
-              "customer_price": "7.99",
-              "proceeds": "5.64"
-            },
-            "IND": {
-              "customer_price": "799.0",
-              "proceeds": "575.55"
-            },
-            "MEX": {
-              "customer_price": "179.0",
-              "proceeds": "131.16"
-            },
-            "NGA": {
-              "customer_price": "12900.0",
-              "proceeds": "10200.0"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.99",
-              "proceeds": "6.79"
             }
           }
         }
       ],
-      "errors": []
+      "errors": [
+        "iap prices noads.joker: 200"
+      ]
     },
     {
       "app_id": "6758740138",
@@ -11580,6 +11586,44 @@
       "errors": []
     },
     {
+      "app_id": "1504391681",
+      "name": "Timer Poker Blind",
+      "bundle_id": "joaoFlores.TimerPokerBlind",
+      "subscriptions": [],
+      "iaps": [
+        {
+          "id": "1511348755",
+          "name": "aeae",
+          "productId": "joaoFlores.TimerPokerBlind.aeae",
+          "inAppPurchaseType": "NON_CONSUMABLE",
+          "state": "MISSING_METADATA",
+          "prices": {
+            "BRA": {
+              "customer_price": "6.9",
+              "proceeds": "5.66"
+            }
+          }
+        },
+        {
+          "id": "1511351296",
+          "name": "popo",
+          "productId": "joaoFlores.TimerPokerBlind.popo",
+          "inAppPurchaseType": "NON_CONSUMABLE",
+          "state": "MISSING_METADATA",
+          "prices": {
+            "BRA": {
+              "customer_price": "19.9",
+              "proceeds": "16.32"
+            }
+          }
+        }
+      ],
+      "errors": [
+        "iap prices joaoFlores.TimerPokerBlind.aeae: 200",
+        "iap prices joaoFlores.TimerPokerBlind.popo: 200"
+      ]
+    },
+    {
       "app_id": "1486427751",
       "name": "Truco Marcador • Conta Tento",
       "bundle_id": "joaoFlores.TrucoContador",
@@ -11595,46 +11639,28 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "39900.0",
-              "proceeds": "28500.0"
-            },
-            "DEU": {
-              "customer_price": "8.99",
-              "proceeds": "6.42"
-            },
-            "ESP": {
-              "customer_price": "8.99",
-              "proceeds": "6.3"
-            },
-            "GBR": {
-              "customer_price": "7.99",
-              "proceeds": "5.64"
-            },
-            "IND": {
-              "customer_price": "799.0",
-              "proceeds": "575.55"
-            },
-            "MEX": {
-              "customer_price": "179.0",
-              "proceeds": "131.16"
-            },
-            "NGA": {
-              "customer_price": "12900.0",
-              "proceeds": "10200.0"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.99",
-              "proceeds": "6.79"
             }
           }
         }
       ],
+      "errors": [
+        "iap prices NoAds: 200"
+      ]
+    },
+    {
+      "app_id": "1491035471",
+      "name": "Tudo Nosso",
+      "bundle_id": "joaoFlores.TudoNosso",
+      "subscriptions": [],
+      "iaps": [],
+      "errors": []
+    },
+    {
+      "app_id": "1491096700",
+      "name": "Tudo Nosso",
+      "bundle_id": "joaoFlores.TudoNossoApp",
+      "subscriptions": [],
+      "iaps": [],
       "errors": []
     },
     {
@@ -14483,56 +14509,70 @@
             "BRA": {
               "customer_price": "49.9",
               "proceeds": "40.93"
-            },
-            "COL": {
-              "customer_price": "39900.0",
-              "proceeds": "28500.0"
-            },
-            "DEU": {
-              "customer_price": "8.99",
-              "proceeds": "6.42"
-            },
-            "ESP": {
-              "customer_price": "8.99",
-              "proceeds": "6.3"
-            },
-            "GBR": {
-              "customer_price": "7.99",
-              "proceeds": "5.64"
-            },
-            "IND": {
-              "customer_price": "799.0",
-              "proceeds": "575.55"
-            },
-            "MEX": {
-              "customer_price": "179.0",
-              "proceeds": "131.16"
-            },
-            "NGA": {
-              "customer_price": "12900.0",
-              "proceeds": "10200.0"
-            },
-            "TUR": {
-              "customer_price": "399.99",
-              "proceeds": "269.16"
-            },
-            "USA": {
-              "customer_price": "7.99",
-              "proceeds": "6.79"
             }
           }
         }
       ],
+      "errors": [
+        "iap prices NoAds.iPhotos: 200"
+      ]
+    },
+    {
+      "app_id": "6774381177",
+      "name": "padel score points",
+      "bundle_id": "com.gambitstudio.padelscore",
+      "subscriptions": [],
+      "iaps": [],
       "errors": []
     }
   ],
   "stale": true,
-  "stale_reason": "1 app(s) com leitura falha: Cloak: Hide & Lock Apps Vault (iap prices applocker.yearly.pro: 404)",
+  "stale_reason": "9 app(s) com leitura falha: Cloak: Hide & Lock Apps Vault (iap prices applocker.yearly.pro: 404), Controle de faltas e presença (iap prices NoAds.College: 200), Cronos • Task and Time Manager (iap prices NoAds.Cronos: 200), Neon Glow Draw: Light Painting (iap prices NoAds.DIA: 200), Secret Calculator Vault Photo (iap prices NoAds.Calc: 200)",
   "auth_errors": [
     {
       "source": "asc pricing",
       "status": "404",
       "why": "Cloak: Hide & Lock Apps Vault: iap prices applocker.yearly.pro: 404"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Controle de faltas e presença: iap prices NoAds.College: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Cronos • Task and Time Manager: iap prices NoAds.Cronos: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Neon Glow Draw: Light Painting: iap prices NoAds.DIA: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Secret Calculator Vault Photo: iap prices NoAds.Calc: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Sueca Games • Never Have: iap prices noads.joker: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Timer Poker Blind: iap prices joaoFlores.TimerPokerBlind.aeae: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "Truco Marcador • Conta Tento: iap prices NoAds: 200"
+    },
+    {
+      "source": "asc pricing",
+      "status": "200",
+      "why": "iPhotos • Photo Collage editor: iap prices NoAds.iPhotos: 200"
     }
   ]
 }
