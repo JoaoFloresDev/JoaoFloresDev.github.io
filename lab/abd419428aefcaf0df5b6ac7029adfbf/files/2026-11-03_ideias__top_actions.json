@@ -1,0 +1,97 @@
+{
+ "generated_at": "2026-11-03",
+ "rule": "Nada chega na loja sem o João pedir (archive, versão, metadata); estas ações preparam e medem. Ordem = impacto esperado × custo × o que pode ser feito sem tocar nos apps congelados.",
+ "actions": [
+  {
+   "order": 1,
+   "channel": "Web-to-app: SEO do site + Smart App Banner",
+   "title": "Fechar a indexação das 960 páginas e medir web→loja com link de campanha",
+   "why": "É o único canal com curva subindo (161 → 942 impressões/dia em 4 dias) e o que o caso Vaultaire/Rasty descreve como motor de um app do nosso nicho; 140 páginas estão 'descoberta/desconhecida' e 697 nem foram inspecionadas.",
+   "tied_to": [
+    "sources: Reddit 1x94hrl (bishare.app)",
+    "sources: Starter Story dvAaO_WKegU",
+    "sites/gambitstudiotech/research/readings/2026-11-03.json"
+   ],
+   "steps": [
+    "Sitemap + links internos das 94 indexadas pras 65 'descoberta' e 75 'desconhecida'; pedir inspeção das 697 pendentes pelo sc_report",
+    "Trocar os CTAs de loja por link de campanha ct=seo-<app> (App Analytics > Campanhas) e conferir o Smart App Banner nas páginas de guia",
+    "Leitura D7/D14 pelo /seo-leitura"
+   ],
+   "expected": "Estimativa: 1.500-3.000 impressões/dia em 28 dias e CTR de 0,4% → ≥ 1% com títulos ajustados; primeiras instalações com fonte web mensuráveis (hoje 6 cliques/28d).",
+   "measure": "Search Console (impressões, cliques, CTR por página) + App Analytics fonte 'web referrer' (datasource r179) e campanha ct=seo-* por app, D14 e D28."
+  },
+  {
+   "order": 2,
+   "channel": "Canal 'dark' no YouTube: tutoriais evergreen",
+   "title": "4 tutoriais long-form pt-BR pra Cloak e Calc+ (título = a busca) + 1 Short de cada",
+   "why": "Demanda evergreen medida no YouTube ('como esconder fotos no iPhone' 334 mil / 204 mil views; 'how to lock apps' 3,1 mi) e dois casos de app crescendo por série no YouTube (Voicy 12 mil inscritos); não mexe nos apps congelados; reaproveita a pipeline de vídeo. É o canal que o João pediu pra avaliar; a evidência de instalação ainda é fraca, por isso é um teste de 4 semanas e não um plano.",
+   "tied_to": [
+    "channels: rank 2",
+    "sources: Starter Story c6c1gf97Y5k",
+    "sources: medição própria YouTube"
+   ],
+   "steps": [
+    "Roteiros pela cadeia de vídeo (video-copywriter) no formato 'passo nativo do iOS → onde ele falha → o app'",
+    "Capturas reais no simulador do pool; TTS Thalita; 2-4 min; descrição com link de campanha ct=yt-<app> e comentário fixado",
+    "Publicar 1 por semana; Short = corte de 20 s do mesmo vídeo"
+   ],
+   "expected": "Estimativa: 2 dos 4 vídeos passando de 1.000 views em 28 dias vindas de busca; 30+ instalações atribuídas (Cloak BR hoje 4,9/dia). Se nenhum passar de 300 views em 28 dias, o canal sai da lista.",
+   "measure": "YouTube Studio (views por fonte de tráfego 'busca do YouTube' e 'Google') + App Analytics campanha ct=yt-* D14/D28 + instalações BR diárias do Cloak/Calc+ vs baseline."
+  },
+  {
+   "order": 3,
+   "channel": "Cross-promotion entre os nossos apps",
+   "title": "Card 'Do mesmo estúdio' em WTMP e iPhotos apontando pra Cloak e Calc+",
+   "why": "Os 9 apps WATCH geram ~1.900 instalações/30d que hoje não conhecem os 2 apps que pagam; custo zero e não toca os congelados (eles são só o destino).",
+   "tied_to": [
+    "channels: rank 4",
+    "sources: IH portfólio 30 apps (Max Artemov)"
+   ],
+   "steps": [
+    "Card no Settings template + no fim do onboarding (depois do valor, nunca antes), evento feature_used{target}",
+    "Link de campanha ct=xpromo-<origem> pra página do destino",
+    "Entra na próxima versão de cada emissor (WTMP e iPhotos primeiro)"
+   ],
+   "expected": "Estimativa: 2-5% de toque sobre ~320 instalações/30d dos dois emissores → 7-16 toques e 3-8 instalações/mês no começo; o ganho real é estrutural, replicado nos 9 WATCH.",
+   "measure": "feature_used por app emissor (GA4) e instalações da campanha ct=xpromo-* no App Analytics do Cloak/Calc+, D28."
+  },
+  {
+   "order": 4,
+   "channel": "Reddit e comunidades de nicho",
+   "title": "3 posts de utilidade em 2 semanas (BLW, WTMP, Walk), 1 por sub, com link de campanha",
+   "why": "Três casos lidos conseguiram os primeiros 100-300 usuários assim (Voicy, 'solo dev nobody using my app', Bookmash) com custo zero; a regra de 1 post por sub por trimestre evita a moderação.",
+   "tied_to": [
+    "channels: rank 6",
+    "sources: IH 'solo dev here nobody using my app'",
+    "sources: Reddit 1x3v0r8"
+   ],
+   "steps": [
+    "BLW em r/BabyLedWeaning: tabela 'pode/não pode por idade' como texto + app como fonte",
+    "WTMP em r/ios: o fluxo anti-roubo em 5 passos",
+    "Walk em r/walking: a métrica que o app mostra e os outros não",
+    "Responder todos os comentários por 7 dias"
+   ],
+   "expected": "Estimativa: 50-150 cliques por post; 15-40 instalações no total em 14 dias; feedback de produto de graça (o caso do Toll rendeu 131 comentários).",
+   "measure": "Cliques no link curto + instalações ct=reddit-* no App Analytics em D14; remoções por moderador = 0."
+  },
+  {
+   "order": 5,
+   "channel": "Paywall sem trial (teste de produto)",
+   "title": "Flag 50/50 trial vs pago direto no Hair 1.2.0",
+   "why": "Dois posts com painel mostram assinatura subindo ao tirar o trial (38 → 69 em 3 semanas; app de transcrição com 0 trials e US$ 7,6 mil/28d), o RevenueCat 2026 dá hard paywall 11% vs 2% freemium, e o próprio João viu trial curto converter. Hair tem a versão 1.2.0 em preparação e 507 instalações/30d pra ler em 28 dias.",
+   "tied_to": [
+    "channels: rank 7",
+    "sources: Reddit 1xcq29t",
+    "sources: Reddit 1x3uagl",
+    "sources: RevenueCat 2026"
+   ],
+   "steps": [
+    "Remote Config 'paywall_trial' (on/off) lido antes do paywall soft; mesma oferta e preço nos dois braços",
+    "paywall_shown/purchase_started/purchase_success com parâmetro variant",
+    "Ler em 28 dias com subscription_events.py (trial→pago, pagos por instalação, refund)"
+   ],
+   "expected": "Estimativa: receita por instalação 1,2-1,5x no braço sem trial se o padrão dos posts se repetir; se cair, volta pro trial sem versão nova (flag).",
+   "measure": "Pagos por instalação e receita por instalação por braço, n ≥ 100 instalações por braço, D28; refund e churn de 30 dias como guarda."
+  }
+ ]
+}

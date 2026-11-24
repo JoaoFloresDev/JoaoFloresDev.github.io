@@ -1,0 +1,466 @@
+{
+ "generated_at": "2026-11-03",
+ "context": "19 apps na loja; US$ 2.594/30d (91% Calc+ e Cloak, congelados: só preço e PPO); 10.021 instalações/30d; sem mídia paga, sem cupom; nunca 'sem anúncios', nunca streak, só prompt nativo de avaliação. Score 1-5 = chance de mover instalação/receita neste estúdio nos próximos 90 dias, dado o que foi lido; 'estimativa' marca número sem fonte.",
+ "channels": [
+  {
+   "rank": 1,
+   "name": "Web-to-app: SEO do site + Smart App Banner",
+   "status": "em andamento",
+   "score": 4,
+   "what": "Páginas de guia no gambitstudiotech.com pra cada busca que leva à App Store (7 idiomas, ~960 páginas desde 29/10), com Smart App Banner e link de campanha pra loja.",
+   "evidence": [
+    {
+     "claim": "bishare.app, dev solo, sem ads nem backlinks: 167 mil impressões, 3,98 mil cliques, CTR 2,4%, posição 11 em 3 meses (ago-out/2026), de ~0 pra ~8 mil impressões/dia",
+     "url": "https://reddit.com/r/AppBusiness/comments/1x94hrl/solo_dev_no_ads_no_backlinks_to_speak_of_what_3/"
+    },
+    {
+     "claim": "Rasty/Vaultaire (cofre, mesmo nicho do Calc+): agentes escrevem 1 página por keyword de App Store; 'converte a 10%'; US$ 41 mil/mês",
+     "url": "https://www.youtube.com/watch?v=dvAaO_WKegU"
+    },
+    {
+     "claim": "Kourosh/Voicy: 200 posts de SEO → US$ 18 mil/mês",
+     "url": "https://www.youtube.com/watch?v=c6c1gf97Y5k"
+    },
+    {
+     "claim": "Nosso Search Console (leitura 03/11): 1.759 impressões e 6 cliques em 28 dias nas 960 páginas; 161 → 717 → 868 → 942 impressões/dia em 30/10-02/11; 94 páginas 'indexada', 65 'descoberta, não indexada', 75 'desconhecida', 697 ainda não inspecionadas",
+     "url": "sites/gambitstudiotech/research/readings/2026-11-03.json"
+    },
+    {
+     "claim": "Smart banner: +15-35% instalações em A/B (AppsFlyer/FOX), compra 5,65x maior vs web mobile (Branch) — números de fornecedor",
+     "url": "https://www.branch.io/resources/blog/10-stats-on-the-effectiveness-of-smart-banners/"
+    }
+   ],
+   "fit": "É o canal que já está subindo e o único com curva medida; serve pra todos os apps, inclusive os congelados (não exige versão). Calc+/Cloak têm os termos com mais busca ('esconder fotos', 'bloquear app').",
+   "cost": "US$ 0 além da hospedagem; ~2 h/semana de leitura (seo-checkpoint) + ondas de páginas quando a leitura pedir.",
+   "first_step": "Semana 1: pedir indexação das 65 'descoberta, não indexada' + 75 'desconhecida' (sitemap + links internos a partir das 94 indexadas) e colocar link de campanha (ct=seo-<app>) nos CTAs. Sucesso em 14-28 dias: ≥ 1.500 impressões/dia e CTR ≥ 1% (hoje 0,4%); instalações com fonte 'web referrer' no App Analytics (r179) acima do piso atual."
+  },
+  {
+   "rank": 2,
+   "name": "Canal 'dark' no YouTube: tutoriais evergreen (long-form 2-4 min) + cortes em Shorts",
+   "status": "não testado",
+   "score": 3,
+   "what": "Canal sem rosto, voz TTS (pipeline de vídeo já existe), respondendo buscas do YouTube/Google ('como bloquear aplicativos no iPhone', 'como esconder fotos no iPhone', 'calculadora secreta'); o app aparece como a solução e o link de campanha fica na descrição e no comentário fixado. Shorts são o corte do mesmo vídeo; o long-form é o que o Google indexa e dura anos.",
+   "evidence": [
+    {
+     "claim": "Demanda medida 03/11: 'how to lock apps on iphone' 3,1 mi / 850 mil / 606 mil views; 'hide apps iphone' 1,5 mi (Apple Support) / 485 mil; 'como esconder fotos no iphone' 334 mil / 204 mil / 103 mil; 'secret calculator app' 368 mil (TV, 8 meses); 'cronograma capilar' 455 mil / 411 mil; 'introdução alimentar 6 meses' 394 mil / 347 mil (acumulado)",
+     "url": "https://www.youtube.com/results?search_query=how+to+lock+apps+on+iphone"
+    },
+    {
+     "claim": "Kourosh/Voicy: 12 mil inscritos no YouTube com UMA série; app a US$ 18 mil/mês",
+     "url": "https://www.youtube.com/watch?v=c6c1gf97Y5k"
+    },
+    {
+     "claim": "Frederick (US$ 10 mil/mês) mantém canal próprio no YouTube como parte do playbook",
+     "url": "https://www.youtube.com/watch?v=g9J_-5w9Nrs"
+    },
+    {
+     "claim": "Ranking de canais 2026: review paga no YouTube custa US$ 100-300 por ~50-200 instalações (opinião de 1 dev); Shorts são indexados pelo Google, TikTok só busca interna",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    },
+    {
+     "claim": "Não achei caso indie com instalação atribuída a canal faceless; a busca só traz guias de fornecedor e 1 anedota (DBLI, 40 mil downloads, sem dado primário)",
+     "url": "https://stackinfluence.com/blog/faceless-youtube-channel-ideas"
+    }
+   ],
+   "fit": "Cloak e Calc+ (congelados) são os melhores candidatos porque o canal não mexe no app, e os termos têm demanda em pt-BR e en. Diferença do TikTok: busca com intenção ('como faço X') em vez de feed; vídeo de 2-4 min explicando o passo nativo do iOS e onde ele falha (sem senha própria, álbum oculto visível) e o app como resposta. Risco: a Apple Support já ocupa o topo em en; em pt-BR os líderes são canais de 2-5 anos.",
+   "cost": "US$ 0-20/mês (TTS já é do pipeline); ~4-6 h por vídeo long-form com a pipeline atual (roteiro + capturas reais + render); estimativa.",
+   "first_step": "Semana 1: 4 vídeos pt-BR (2 Cloak: 'como bloquear aplicativos no iPhone sem Tempo de Uso', 'esconder apps'; 2 Calc+: 'como esconder fotos no iPhone de verdade', 'calculadora secreta: como funciona'), 2-4 min, título = a busca exata, link de campanha ct=yt-<app> na descrição, 1 Short por vídeo. Métrica em 28 dias: ≥ 2 vídeos com > 1.000 views vindas de 'busca do YouTube' (YouTube Studio > fonte de tráfego) e ≥ 30 instalações no App Analytics com a campanha; Cloak BR hoje = 4,9 instalações/dia (baseline do EXPERIMENTOS.md)."
+  },
+  {
+   "rank": 3,
+   "name": "ASO: nome keyword-first e proteção de ranking",
+   "status": "em andamento",
+   "score": 4,
+   "what": "Iterações de texto (name/subtitle/keywords) já rodam pelo /start-aso-pipeline; o dado novo é o peso do nome.",
+   "evidence": [
+    {
+     "claim": "5.347 buscas na loja US (out/2026): 54,5% dos #1 têm a keyword inteira no nome; keyword no início do nome = 48,7% de #1 contra 12,1% quando vem depois (~4x); app com menos avaliações vence o maior em 78% dos pares quando tem a keyword no nome",
+     "url": "https://asotool.dev/app-name-keywords"
+    },
+    {
+     "claim": "Vaultaire: ASO virou ~60% dos downloads; Japão virou fonte grande de tráfego",
+     "url": "https://www.indiehackers.com/post/tech/how-rasty-turek-built-vaultaire-in-three-weeks-and-grew-it-to-40k-month-1BjFvs2akwfIVjMGYO54"
+    },
+    {
+     "claim": "Ranking 2026 de canais: ASO é o tier 1 que move instalação",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    },
+    {
+     "claim": "Nossa medição de 13 iterações (14/10): só subiu impressão quem ganhou termo com volume (pop 39-65) sem mexer em name/subtitle; 0 de 5 reescritas de name/subtitle subiram",
+     "url": "LEARNINGS #114"
+    }
+   ],
+   "fit": "Os WATCH já têm nome keyword-first (Hair Schedule, Walk, Sunrise Alarm Clock, My Expenses, Who Touched My Phone). O que o estudo acrescenta é o teste pros 7 KILL antes de aposentar (Philos, Cronos, Devlingo, Bible Pills, Neon, SafeDoc, My Way): nome que diz o que faz, keyword vencível na frente. Congelados: só PPO e preço.",
+   "cost": "US$ 0; 1 iteração = ~1 dia de agentes + 28 dias de leitura.",
+   "first_step": "Rodar o aso-fit-checker/serp-analyst só na pergunta 'o nome começa com a keyword vencível?' nos 7 KILL e nos 3 WATCH com < 25 ratings; aplicar em 2 apps (exige versão) e medir posição D0 vs D7 do próprio termo (regra do estudo) + impressões D28 (impressions.py)."
+  },
+  {
+   "rank": 4,
+   "name": "Cross-promotion entre os nossos apps (in-app)",
+   "status": "não testado",
+   "score": 3,
+   "what": "Card/linha em Settings e no fim do onboarding dos apps não congelados apontando pro app irmão com link de campanha; o destino principal são os que pagam (Calc+ e Cloak).",
+   "evidence": [
+    {
+     "claim": "Não há benchmark público de % de instalação por cross-promo; BoomBit diz que o menu opcional de jogos gera 85% das instalações cruzadas dele (1 empresa, jogos)",
+     "url": "https://blog.playio.co/mobile-game-cross-promotion"
+    },
+    {
+     "claim": "Apple lista as superfícies oficiais: custom product pages, in-app events, bundles, e o provider token próprio em links de campanha",
+     "url": "https://trysonar.app/blog/app-cross-promotion"
+    },
+    {
+     "claim": "Portfólio de 30 apps a ~US$ 730/app (Max Artemov): resiliência vem da rede de apps",
+     "url": "https://www.indiehackers.com/post/tech/from-failed-app-to-30-app-portfolio-making-22k-mo-in-less-than-a-year-myy3U7K9evxGOVOHti8s"
+    }
+   ],
+   "fit": "Calc+/Cloak não podem receber o card (congelados), mas podem ser o DESTINO: WTMP (172 dl/30d, anti-roubo) → Cloak; iPhotos (151) e SafeDoc → Calc+; BLW ↔ Hair (público feminino BR). Volume pequeno: os 9 WATCH somam ~1.900 instalações/30d; a 2-5% de clique → 40-95 toques/mês (estimativa).",
+   "cost": "US$ 0; ~2 h por app (card no Settings template + evento feature_used) + versão nova de cada app emissor.",
+   "first_step": "Na próxima versão de WTMP e iPhotos: card 'Do mesmo estúdio' com link de campanha ct=xpromo-<origem>; medir em 28 dias toques (feature_used) e instalações da campanha no App Analytics do destino. Sucesso: ≥ 20 instalações/mês atribuídas somando os dois."
+  },
+  {
+   "rank": 5,
+   "name": "Localização: mais lojas com prints nativos (foco ja-JP, de-DE, ko)",
+   "status": "em andamento (metadata em 36-39 lojas na maioria; prints nativos só em parte)",
+   "score": 3,
+   "what": "Cobrir as lojas de maior instalação com metadata E prints no idioma; a regra do lab já exige todo idioma × tamanho em arte nova.",
+   "evidence": [
+    {
+     "claim": "Vaultaire: Japão virou fonte grande de tráfego da loja",
+     "url": "https://www.indiehackers.com/post/tech/how-rasty-turek-built-vaultaire-in-three-weeks-and-grew-it-to-40k-month-1BjFvs2akwfIVjMGYO54"
+    },
+    {
+     "claim": "Caso Sonar: 35 lojas localizadas, downloads 19 → 90/mês, mas perdeu 21 rankings top-10",
+     "url": "https://trysonar.app/blog/ai-agent-app-store-localization-case-study.md"
+    },
+    {
+     "claim": "AppsOps (fornecedor): 25-40% de lift com ~6 idiomas; prints localizados batem só texto em 10-30%; US$ 80-320 por locale",
+     "url": "https://appsops.store/blog/why-app-store-localization-matters"
+    }
+   ],
+   "fit": "Calc+ e Cloak podem ganhar prints localizados por PPO (permitido); os PPOs de 39 idiomas já fazem isso. O gap provável está nos apps de recovery com < 10 lojas e nos prints só em en/pt/es. Risco medido: localizar keyword sem proteção derruba ranking (caso Sonar; nosso #108 sobre grafia nativa).",
+   "cost": "US$ 0 (tradução é do lab); ~1 dia por app pra cobrir lojas faltantes; ~US$ 1 por panorama localizada por código.",
+   "first_step": "Rodar sweep_screenshot_sets.py + top_locales.py nos 9 WATCH e listar (app, loja com instalação, sem set próprio); cobrir os 3 maiores gaps. Medir em 28 dias impressões e instalações 1* por território (pull_analytics.py)."
+  },
+  {
+   "rank": 6,
+   "name": "Reddit e comunidades de nicho (1 post bom por sub por trimestre)",
+   "status": "não testado (só leitura)",
+   "score": 3,
+   "what": "Post de utilidade/feedback no subreddit do nicho do app (não em sub de maker), com o app como contexto; e comentário em threads 'share what you're building'.",
+   "evidence": [
+    {
+     "claim": "Kourosh/Voicy: primeiros 300 usuários no Reddit, postando o mesmo ângulo 5-6 vezes até ser bloqueado",
+     "url": "https://www.youtube.com/watch?v=c6c1gf97Y5k"
+    },
+    {
+     "claim": "120+ downloads de um dia pro outro com um comentário num thread 'share your app'",
+     "url": "https://www.indiehackers.com/post/solo-dev-here-nobody-using-my-app-how-do-you-actually-do-marketing-4e4bfad079"
+    },
+    {
+     "claim": "Dev que levou 1 ano construindo: o Reddit mostrou em dias o que faltava (trial, demo, explicação)",
+     "url": "https://reddit.com/r/indiehackers/comments/1x3v0r8/i_spent_a_year_building_my_product_reddit_showed/"
+    },
+    {
+     "claim": "131 comentários → onboarding 15 → 4 telas, preço e nome refeitos (números antes/depois no post)",
+     "url": "https://reddit.com/r/AppBusiness/comments/1x9dlyt/update_you_told_me_why_my_app_had_0_paying_users/"
+    },
+    {
+     "claim": "Regra de um dev em 2026: 1 post por sub por trimestre; Show HN ~50:1 view→install no melhor caso",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    }
+   ],
+   "fit": "Bom pra BLW (r/BabyLedWeaning, r/beyondthebump em en; grupos de IA no BR), WTMP (r/iphone, r/ios), Hair (r/curlyhair; em pt-BR o público está no Instagram/YouTube, não no Reddit). Calc+/Cloak: o tema 'esconder' puxa moderação; só responder perguntas existentes.",
+   "cost": "US$ 0; ~1 h por post + 30 min/semana de respostas; conta precisa de karma antes (regra dos subs).",
+   "first_step": "3 posts em 2 semanas (BLW em r/BabyLedWeaning com a tabela 'pode/não pode'; WTMP em r/ios com o fluxo anti-roubo; Walk em r/walking), cada um com link de campanha ct=reddit-<app>. Sucesso: ≥ 50 cliques e ≥ 15 instalações atribuídas em 14 dias, 0 remoção por mod."
+  },
+  {
+   "rank": 7,
+   "name": "Paywall sem trial nos apps não congelados (teste de produto, não canal)",
+   "status": "não testado (hoje trial no plano-herói em todos)",
+   "score": 3,
+   "what": "Flag remota 50/50: paywall soft com trial (atual) vs pago direto; mesma oferta, mesmo preço.",
+   "evidence": [
+    {
+     "claim": "Trocar trial por pago: assinaturas ativas de ~38 pra 69 em 3 semanas (RevenueCat, jul-out/2026)",
+     "url": "https://reddit.com/r/AppBusiness/comments/1xcq29t/god_bless_the_man_who_suggested_to_remove_free/"
+    },
+    {
+     "claim": "App de transcrição: US$ 7.591/28d, 258 assinaturas, 0 trials ativos",
+     "url": "https://reddit.com/r/AppBusiness/comments/1x3uagl/my_offline_transcription_app_made_76k_in_the_last/"
+    },
+    {
+     "claim": "RevenueCat 2026: hard paywall converte 11% vs 2% do freemium; 60% das conversões na 1ª semana; Utilities download→trial 6,5%",
+     "url": "https://www.revenuecat.com/state-of-subscription-apps"
+    },
+    {
+     "claim": "Dado do próprio João (28/09): trial de 3 dias e paywall no início converteram",
+     "url": "memory: user_trial_and_onboarding_insight"
+    }
+   ],
+   "fit": "Hair Schedule (507 dl/30d, US$ 34), BLW (331 dl, US$ 68) e Walk (288 dl) têm volume pra ler em 28 dias; Calc+/Cloak não (versão). Sem desconto e sem 'sem anúncios' (regras).",
+   "cost": "US$ 0; ~3 h (Remote Config + evento paywall_shown com variante) + versão.",
+   "first_step": "Hair 1.2.0 (já em preparação) com flag trial_on/off 50/50; ler em 28 dias trial→pago, pagos por instalação e refund pelo subscription_events.py. Sucesso: receita por instalação ≥ 1,3x no braço sem trial com n ≥ 100 por braço."
+  },
+  {
+   "rank": 8,
+   "name": "Featuring (nomination) + In-App Events",
+   "status": "nomination já roda no release (nominate.py); sem leitura registrada; in-app event nunca feito",
+   "score": 2,
+   "what": "Pedir destaque editorial a cada versão com ângulo (privacidade, pt-BR, sazonal) e criar eventos na página do app em datas reais.",
+   "evidence": [
+    {
+     "claim": "Apple mede impressões, visitas e downloads do evento; Phiture cita ~50% mais impressões durante o evento e Tilting Point 12x impressões em 4 jogos destacados — autodeclarado",
+     "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/in-app-events/"
+    },
+    {
+     "claim": "Ranking 2026: editorial é tier 1 mas 'raro pra indie'; pitch por ângulo (privacidade, acessibilidade, iPad)",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    },
+    {
+     "claim": "Evento exige deep link pro conteúdo (409 sem deepLink) — nossa tentativa no Cronos",
+     "url": "LEARNINGS #94"
+    }
+   ],
+   "fit": "Hair tem o gatilho sazonal real ('cronograma de verão', dez-fev no BR); Sunrise (horário de verão não existe mais no BR; en: DST em março/novembro); BLW (Semana do Aleitamento, agosto). Calc+/Cloak: evento exige deep link no binário live — conferir CFBundleURLTypes antes de prometer.",
+   "cost": "US$ 0; ~2 h por evento (arte 1080x1920 + texto em todos os idiomas) + review.",
+   "first_step": "1 evento do Hair 'Cronograma de verão' agendado pra 1ª semana de dezembro (deep link pro template), e nomination com o mesmo ângulo. Medir pelo painel de eventos: impressões do evento e downloads atribuídos em 14 dias; sucesso = ≥ 10% das instalações do período vindas do evento."
+  },
+  {
+   "rank": 9,
+   "name": "Selo e vitrine 'Made for iPhone Duo'",
+   "status": "não testado",
+   "score": 2,
+   "what": "Recompilar com Xcode 27.1, subir prints Duo e ganhar o selo na página + chance de entrar na seleção editorial de apps Duo.",
+   "evidence": [
+    {
+     "claim": "Apple: prints Duo dão selo na página; a partir de abril/2027 são obrigatórios em todo envio",
+     "url": "https://developer.apple.com/news/?id=kkphp5qo"
+    },
+    {
+     "claim": "Apple newsroom 22/10: seleção editorial Duo com indie (Deck-Man) citado",
+     "url": "https://www.apple.com.cn/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/"
+    },
+    {
+     "claim": "Devs relatam review quase instantâneo pra apps com suporte a Duo",
+     "url": "https://reddit.com/r/iOSProgramming/comments/1xebl5j/apple_is_instantly_reviewing_apps_supporting_duo/"
+    }
+   ],
+   "fit": "Só apps que podem gerar versão (recovery/intermediate com aval). Base instalada do Duo ainda pequena (lançado 23/10); o ganho é editorial e o selo em busca, não volume. Vira obrigatório em abril/2027 de qualquer jeito.",
+   "cost": "US$ 0; ~1 dia por app (layout nas 2 poses + prints 1398x2034 e 2007x2853) — o kit de prints precisa dos tamanhos novos.",
+   "first_step": "1 app (WTMP ou Hair, os WATCH com versão prevista): build Xcode 27.1, prints Duo pelo kit, submeter; registrar se entrou na vitrine e comparar impressões D14 vs D-14."
+  },
+  {
+   "rank": 10,
+   "name": "Pinterest (Hair e BLW)",
+   "status": "não testado",
+   "score": 2,
+   "what": "Pins verticais com o conteúdo do app (receitas BLW por idade, passo a passo do cronograma) apontando pra página do app no site (que tem o Smart Banner) ou pra loja.",
+   "evidence": [
+    {
+     "claim": "640 mi usuários mensais (+11%), 'resto do mundo' 377 mi (+15%) — sem quebra por país/gênero",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001506293/000150629326000104/pins-20260630.htm"
+    },
+    {
+     "claim": "Nenhum caso indie de app com instalação vinda do Pinterest encontrado; só um estudo de fornecedor antigo sobre o próprio app do Pinterest",
+     "url": "https://www.casestudies.com/company/yozio/case-study/pinterest-fuels-mobile-app-growth-with-yozio"
+    }
+   ],
+   "fit": "Nichos visuais e femininos (Hair, BLW) combinam; Calc+/Cloak não. Pins apontando pras páginas de guia do site juntam dois canais (Pinterest → SEO page → banner).",
+   "cost": "US$ 0; ~2 h/semana pra 10 pins (arte do app já existe).",
+   "first_step": "20 pins (10 BLW receitas por idade, 10 Hair etapas do cronograma) apontando pras páginas do site com ct=pin-<app>; em 28 dias: cliques no Pinterest Analytics e instalações da campanha. Sucesso: ≥ 200 cliques e ≥ 10 instalações."
+  },
+  {
+   "rank": 11,
+   "name": "UGC / micro-criadores (pago, por peça)",
+   "status": "não testado (depende de reabrir gasto)",
+   "score": 2,
+   "what": "Pagar criadores pequenos por vídeo usando o app; postar na conta deles e/ou na nossa.",
+   "evidence": [
+    {
+     "claim": "Payout (US$ 185 mil/mês): influenciador foi o canal mais forte, dezenas de milhões de views",
+     "url": "https://www.indiehackers.com/post/tech/growing-a-portfolio-of-mobile-apps-to-185k-mo-hZ4hqICtByIljkiJECQv"
+    },
+    {
+     "claim": "Nicole: 4 apps a US$ 150 mil/mês com 200+ criadores UGC e 400-500 mi views/mês",
+     "url": "https://www.youtube.com/watch?v=B0MQF4eGsik"
+    },
+    {
+     "claim": "Tomer/Cal Buddy: influenciador local foi o motor de US$ 80 mil/mês em 12 meses",
+     "url": "https://www.youtube.com/watch?v=GQ27QVp3SzQ"
+    },
+    {
+     "claim": "Preço: US$ 50-150 por vídeo (< 50 mil seguidores), direitos +50-100%; troca por produto ~US$ 10",
+     "url": "https://www.getroster.com/blog/from-500-ugc-videos-to-0-how-ugc-brands-are-scaling-micro-creator-content-in-2026/"
+    }
+   ],
+   "fit": "É gasto de marketing; o João fechou mídia paga (Meta/ASA) e cupom. Se reabrir, o único app com margem pra pagar é o Calc+ (US$ 0,45 por download). Nosso TikTok orgânico mostrou que o vídeo sem rosto não segura (9,9% assistido); criador com rosto é a variável não testada.",
+   "cost": "Estimativa: 5 vídeos × US$ 100 = US$ 500 por teste; ~4 h de brief e revisão.",
+   "first_step": "Só com aval: 3 criadoras BR de maternidade (BLW) por troca de assinatura + US$ 50, vídeo 'pode ou não pode' com o app; medir instalações BR do BLW em 7 dias vs baseline (hoje ~11/dia) e views por criadora."
+  },
+  {
+   "rank": 13,
+   "name": "Comprar app pequeno no nicho de cofre/privacidade",
+   "status": "não testado",
+   "score": 2,
+   "what": "Adquirir app já publicado com receita, no nicho onde o lab sabe crescer (ASO + PPO), e aplicar o playbook.",
+   "evidence": [
+    {
+     "claim": "Pacote de 6 apps utilitários iOS à venda por US$ 1,1 mi a 3,0x lucro / 1,9x receita",
+     "url": "https://app.acquire.com/public/d7j55mqshz-six-ios-apps-for-printing-scanning-fax-call-recording-vpn-with-strong-recurring-revenue"
+    },
+    {
+     "claim": "Guias de 2024-25 citam 2,5-2,9x lucro como média do mercado",
+     "url": "https://adapty.io/blog/markdown/how-to-buy-a-mobile-app.md"
+    },
+    {
+     "claim": "Dono de 6 apps orgânicos (US$ 250 mil+/ano) perguntando preço — oferta existe",
+     "url": "https://reddit.com/r/AppBusiness/comments/1x0qkpi/6_mobile_apps_making_250k_a_year_organically_how/"
+    }
+   ],
+   "fit": "Só faz sentido pra app que já rankeia num termo do Calc+/Cloak (cofre, app lock) com receita que o lab consiga dobrar; a 3x lucro, um app de US$ 300/mês custa ~US$ 10 mil (estimativa) — acima do caixa atual da ME.",
+   "cost": "US$ 5-20 mil por app pequeno (estimativa); due diligence 8 h.",
+   "first_step": "Sem compra: 1 h/mês varrendo acquire.com e Flippa por 'photo vault' / 'app lock' com receita declarada e salvar na pasta do relatório; só proposta se aparecer app abaixo de 2x lucro com ratings > 500."
+  },
+  {
+   "rank": 14,
+   "name": "Build in public (X / Threads / LinkedIn)",
+   "status": "não testado",
+   "score": 2,
+   "what": "Postar números e bastidores do lab pra atrair usuários/parceiros.",
+   "evidence": [
+    {
+     "claim": "0 → 13 mil seguidores no X em 200 dias custou 11.897 posts em um mês (quase tudo resposta)",
+     "url": "https://reddit.com/r/indiehackers/comments/1xaw9cq/how_i_grew_from_0_to_13k_followers_on_x_in_200/"
+    },
+    {
+     "claim": "Sem audiência, X rende 50-200 views por tweet (opinião de 1 dev)",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    },
+    {
+     "claim": "'Ganhadores de dinheiro com IA' do Threads não existem sem canal de distribuição (comentário no HN)",
+     "url": "https://news.ycombinator.com/item?id=50293459"
+    }
+   ],
+   "fit": "O público de maker não é o usuário do Calc+/Cloak/BLW; traria devs, não instalações. O custo (dezenas de posts/dia) não cabe com CLT.",
+   "cost": "US$ 0; 1-2 h/dia pra ter efeito, segundo os casos.",
+   "first_step": "Não começar agora. Se quiser testar barato: 1 post/semana no LinkedIn com um número do lab por 8 semanas; medir visitas ao site vindas de linkedin.com no Search Console/analytics."
+  },
+  {
+   "rank": 15,
+   "name": "Apple Search Ads (nome de concorrente)",
+   "status": "descartado pelo João (sem campanha paga, 21/10)",
+   "score": 2,
+   "what": "Lance em termos de marca dos líderes do nicho.",
+   "evidence": [
+    {
+     "claim": "Frederick: ASA em nomes de concorrentes levou a ~US$ 5 mil/mês",
+     "url": "https://www.youtube.com/watch?v=oM74DZlgc-k"
+    },
+    {
+     "claim": "App novo com US$ 294 em ASA: 57 downloads, 0 pagantes",
+     "url": "https://reddit.com/r/AppBusiness/comments/1x2f3wf/5_days_on_the_app_store_294_on_apple_ads_57/"
+    },
+    {
+     "claim": "Apple adiciona mais slots de anúncio na busca em 2026 (menos orgânico)",
+     "url": "https://ads.apple.com/app-store/help/ad-placements/0082-search-results"
+    }
+   ],
+   "fit": "É o canal pago que mais aparece nos casos do Starter Story; só o Calc+ (US$ 0,45/download) teria margem. Registrado pra quando o João quiser reavaliar; sem ação.",
+   "cost": "Estimativa: US$ 1,5-5 por instalação em BR/US (AppsOps cita US$ 1,50-5,00).",
+   "first_step": "Nenhum. Se reabrir: US$ 150 em 14 dias no Calc+ BR em 3 termos de concorrente, parar se CPI > US$ 1,5."
+  },
+  {
+   "rank": 16,
+   "name": "TikTok / Reels orgânico",
+   "status": "testado: fraco",
+   "score": 1,
+   "what": "Vídeos curtos sem rosto (HyperFrames + TTS) em 3 contas.",
+   "evidence": [
+    {
+     "claim": "Nosso resultado: 55 vídeos publicados entre 15/10 e 03/11/2026 (33 BLW + 7 BLW Baby em @bebepodecomer; 9 Cloak + 6 Calc+ em @calculadorasecreta.app)",
+     "url": "_GambitStudio/reports/versions/videos-tiktok/videos.json"
+    },
+    {
+     "claim": "Leitura BLW 20/10 (11 vídeos): 98-421 views (mediana 196), 2.696 views no total, 65 likes, 10 salvos, 12 seguidores, 0 comentários, 0 compartilhamentos; % médio assistido mediana 9,9% (5,1-19,6%); conclusão mediana 1,4%",
+     "url": "Apps/intermediate/blw/video-pipeline/research/analytics/2026-10-20_tiktok.json"
+    },
+    {
+     "claim": "Cloak: baseline BR 4,9 instalações/dia (máx 10 em 28d); resultado do experimento 01 ficou sem preencher",
+     "url": "Apps/important/AppLock/social/EXPERIMENTOS.md"
+    },
+    {
+     "claim": "Reddit 22/10: pico de TikTok deu 556 downloads num dia e US$ 0",
+     "url": "https://reddit.com/r/AppBusiness/comments/1xemgt5/why_nobody_cares_about_your_app_on_tiktok/"
+    },
+    {
+     "claim": "Dev com 400 vídeos postados em 6 meses e app sem receita",
+     "url": "https://reddit.com/r/AppBusiness/comments/1xh9abi/my_androidios_app_doesnt_bring_me_money_6_months/"
+    },
+    {
+     "claim": "Contra-exemplo: Vadim (US$ 11 mil/mês) cresceu por UMA conta nova no Instagram com rotina de UGC",
+     "url": "https://www.youtube.com/watch?v=8lngErZl3f8"
+    }
+   ],
+   "fit": "Feed sem intenção de busca; vídeo sem rosto não segura (regras R13-R16 do playbook nasceram disso). Mesmo quando dá view, dá download sem receita (caso do Reddit). Parado por decisão do João.",
+   "cost": "Já pago: pipeline pronta; ~1-2 h por vídeo.",
+   "first_step": "Nenhum. Reaproveitar os 55 vídeos como Shorts dos tutoriais do canal 2 (canal dark), não como posts avulsos."
+  },
+  {
+   "rank": 17,
+   "name": "Product Hunt",
+   "status": "não testado",
+   "score": 1,
+   "what": "Lançar um app na página do dia.",
+   "evidence": [
+    {
+     "claim": "10.111 lançamentos destacados em 757 dias: mediana 150 votos; 4.673 solo; 6.972 com vídeo",
+     "url": "https://reddit.com/r/indiehackers/comments/1wywitl/i_have_every_featured_product_hunt_launch_from/"
+    },
+    {
+     "claim": "Tier 2 'sinal, não dinheiro' (ranking 2026); nenhum dado de download pra app mobile encontrado",
+     "url": "https://dev.to/snake_sun/i-researched-10-ios-distribution-channels-for-2026-here-is-what-indie-devs-should-skip-58gj"
+    }
+   ],
+   "fit": "Público de maker/SaaS, não de usuário de cofre ou de mãe de bebê. Só serviria como backlink pro site.",
+   "cost": "US$ 0; ~1 dia de preparo.",
+   "first_step": "Não fazer; se for, só pelo backlink (listar no launchdirectories.com junto)."
+  },
+  {
+   "rank": 18,
+   "name": "Newsletters (patrocínio ou própria)",
+   "status": "não testado",
+   "score": 1,
+   "what": "Comprar espaço em newsletter de nicho ou montar lista própria pelo site.",
+   "evidence": [
+    {
+     "claim": "CPC médio ~US$ 5 em patrocínios re-contratados (Paved); CPM de US$ 50 (< 5 mil assinantes) a US$ 10 mil+",
+     "url": "https://www.paved.com/help/articles/10291875-a-publisher-s-guide-to-newsletter-sponsorship-pricing"
+    },
+    {
+     "claim": "Nenhum dado de custo por instalação pra app indie encontrado",
+     "url": "https://dupple.com/learn/newsletter-advertising-cost-2026"
+    }
+   ],
+   "fit": "A US$ 5 por clique, a conta não fecha pra app de US$ 0,07-0,45 por download. Lista própria já existe no site ('Me avise' dos apps em breve) — só pra lançamento.",
+   "cost": "US$ 250-1.000 por inserção (estimativa pelas faixas acima).",
+   "first_step": "Nenhum pago. Usar a lista 'Me avise' do site no dia de lançamento do próximo app (envio só com pedido do João)."
+  },
+  {
+   "rank": 19,
+   "name": "App bundles / Bundles and Suites",
+   "status": "não testado",
+   "score": 1,
+   "what": "Vender vários apps num pacote na loja.",
+   "evidence": [
+    {
+     "claim": "Bundle de apps grátis exige a MESMA assinatura destravando todos; pago e grátis não se misturam; Bundles and Suites (iOS 27) por formulário, com durações iguais",
+     "url": "https://developer.apple.com/app-store/app-bundles/"
+    }
+   ],
+   "fit": "Nossas assinaturas são por app e os dois que pagam estão congelados; exigiria produto compartilhado e versão em todos. Sem caso indie com resultado.",
+   "cost": "Várias versões + revisão de produtos na ASC.",
+   "first_step": "Nenhum em 2026."
+  }
+ ]
+}
