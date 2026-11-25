@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T19:10:05.527357+00:00",
+  "generated": "2026-11-25T14:23:44.611466+00:00",
   "territories": [
     "USA",
     "BRA",
@@ -9925,14 +9925,6 @@
       "app_id": "6771598930",
       "name": "Philos: Philosophy & Stoicism",
       "bundle_id": "com.gambitstudio.philos",
-      "subscriptions": [],
-      "iaps": [],
-      "errors": []
-    },
-    {
-      "app_id": "1525440196",
-      "name": "Rogger Burguers - Lençóis Pta",
-      "bundle_id": "joaoFlores.Burger",
       "subscriptions": [],
       "iaps": [],
       "errors": []
